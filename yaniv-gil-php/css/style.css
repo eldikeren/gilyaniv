@@ -1319,6 +1319,9 @@ footer::before {
     body {
         font-size: 1rem; /* Adjusted for mobile */
     }
+    .header { position: sticky; top: 0; }
+    .nav, nav { overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; gap: 8px !important; }
+    .nav a { padding: 8px 12px !important; }
     
     .hero h1 {
         font-size: 3rem; /* Adjusted for mobile */
