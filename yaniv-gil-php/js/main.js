@@ -36,14 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-    }
+    // Support multiple headers (each page has its own header)
+    document.querySelectorAll('#nav-toggle').forEach((toggle) => {
+        const header = toggle.closest('header');
+        const menu = header ? header.querySelector('#nav-menu') : null;
+        if (menu) {
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
+        }
+    });
     
     // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-link');
