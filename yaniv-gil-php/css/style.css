@@ -2299,43 +2299,50 @@ footer::before {
 
 /* Responsive Navigation - COMPLETELY REDESIGNED */
 @media (max-width: 768px) {
+    .header {
+        position: sticky !important;
+        top: 0 !important;
+        padding: 8px 0 !important;
+    }
+
     .header-content {
         flex-direction: column !important;
-        gap: 20px !important;
-        padding: 15px 20px !important;
+        gap: 10px !important;
+        padding: 10px 14px !important;
+        align-items: stretch !important;
     }
     
     .nav, nav {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 12px !important;
-        padding: 12px 18px !important;
-        max-width: 95% !important;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(20, 20, 20, 0.98)) !important;
-        border-radius: 20px !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        border: 3px solid rgba(192, 192, 192, 0.6) !important;
-        box-shadow: 
-            0 12px 40px rgba(0, 0, 0, 0.8),
-            0 0 0 1px rgba(192, 192, 192, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 6px !important;
+        padding: 6px 10px !important;
+        max-width: 100% !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        white-space: nowrap !important;
     }
     
     .nav a {
-        font-size: 13px !important;
-        padding: 10px 16px !important;
+        font-size: 12px !important;
+        padding: 8px 12px !important;
         white-space: nowrap !important;
         color: #ffffff !important;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.4) !important;
+        text-shadow: none !important;
         font-weight: 700 !important;
-        background: linear-gradient(135deg, rgba(192, 192, 192, 0.15), rgba(255, 255, 255, 0.1)) !important;
-        border: 2px solid rgba(192, 192, 192, 0.4) !important;
-        border-radius: 12px !important;
-        backdrop-filter: blur(15px) !important;
-        -webkit-backdrop-filter: blur(15px) !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(192, 192, 192, 0.35) !important;
+        border-radius: 10px !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        transition: all 0.2s ease !important;
     }
     
     .nav a:hover {
