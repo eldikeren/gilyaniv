@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for scroll animations
-    const animatedElements = document.querySelectorAll('.service-card, .article-card, .stat-item');
+    const animatedElements = document.querySelectorAll('.service-card, .article-card, .about-content, .contact-content, .stat-item');
     animatedElements.forEach(el => {
         observer.observe(el);
     });
