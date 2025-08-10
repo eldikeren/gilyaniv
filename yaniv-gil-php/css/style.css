@@ -163,6 +163,9 @@ body {
     margin: 0 auto !important;
 }
 
+/* Hamburger toggle hidden on desktop */
+.nav-toggle { display: none; }
+
 nav:hover {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(30, 30, 30, 0.98)) !important;
     border-color: rgba(192, 192, 192, 0.8) !important;
@@ -2312,33 +2315,43 @@ footer::before {
         align-items: stretch !important;
     }
     
-    .nav, nav {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        gap: 6px !important;
-        padding: 6px 10px !important;
-        max-width: 100% !important;
-        background: transparent !important;
-        border-radius: 0 !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        white-space: nowrap !important;
+    /* Show hamburger and collapse nav */
+    .nav-toggle { 
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 44px; height: 40px; margin-right: auto; margin-left: 8px;
+        border: 2px solid rgba(192,192,192,0.5); border-radius: 12px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+        cursor: pointer; color: #fff;
     }
+    .nav-toggle span{display:block;width:22px;height:2px;background:#fff;margin:3px 0;transition:all .3s ease;}
+    .nav-toggle.active span:nth-child(1){ transform: translateY(5px) rotate(45deg);} 
+    .nav-toggle.active span:nth-child(2){ opacity:0;} 
+    .nav-toggle.active span:nth-child(3){ transform: translateY(-5px) rotate(-45deg);} 
+
+    .nav, nav { 
+        display: none !important; 
+        flex-wrap: wrap !important; 
+        justify-content: center !important; 
+        gap: 10px !important; 
+        padding: 14px !important; 
+        max-width: 100% !important; 
+        background: linear-gradient(135deg, rgba(0,0,0,0.98), rgba(20,20,20,0.98)) !important; 
+        border-radius: 16px !important; 
+        border: 2px solid rgba(192,192,192,0.35) !important; 
+        box-shadow: 0 12px 32px rgba(0,0,0,0.5) !important;
+    }
+    .nav.active { display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)); }
     
     .nav a {
-        font-size: 12px !important;
-        padding: 8px 12px !important;
-        white-space: nowrap !important;
+        font-size: 13px !important;
+        padding: 12px 14px !important;
         color: #ffffff !important;
         text-shadow: none !important;
         font-weight: 700 !important;
         background: rgba(255, 255, 255, 0.08) !important;
         border: 1px solid rgba(192, 192, 192, 0.35) !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
         box-shadow: none !important;
