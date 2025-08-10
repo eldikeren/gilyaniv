@@ -48,14 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Close mobile menu when clicking on a link
+    // Close mobile menu when clicking on a link (scoped per header to avoid globals)
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            if (navMenu && navToggle) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
+            const currentHeader = this.closest('header');
+            if (!currentHeader) return;
+            const currentMenu = currentHeader.querySelector('#nav-menu, .nav#nav-menu, #nav-menu.nav, nav.nav');
+            const currentToggle = currentHeader.querySelector('.nav-toggle');
+            if (currentMenu) currentMenu.classList.remove('active');
+            if (currentToggle) currentToggle.classList.remove('active');
         });
     });
     
@@ -219,16 +221,15 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
     
-    // Form validation and submission
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    // Form validation and submission (robust across pages)
+    const contactForms = document.querySelectorAll('#contactForm, #contact-form, .contact-form form');
+    contactForms.forEach((form) => {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Basic form validation
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const message = this.querySelector('textarea[name="message"]').value;
+            const name = this.querySelector('input[name="name"]')?.value?.trim();
+            const email = this.querySelector('input[name="email"]')?.value?.trim();
+            const message = this.querySelector('textarea[name="message"]')?.value?.trim();
             
             if (!name || !email || !message) {
                 showNotification('אנא מלא את כל השדות הנדרשים', 'error');
@@ -240,21 +241,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'שולח...';
-            submitBtn.disabled = true;
+            const submitBtn = this.querySelector('button[type="submit"], .cta-button[type="submit"], .submit-btn[type="submit"]') || this.querySelector('button, .cta-button, .submit-btn');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.textContent = 'שולח...';
+                submitBtn.disabled = true;
+            }
             
-            // Simulate form submission (replace with actual form handling)
             setTimeout(() => {
                 showNotification('ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.', 'success');
                 this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
+                if (submitBtn) {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            }, 1200);
         });
-    }
+    });
     
     // Email validation function
     function isValidEmail(email) {
