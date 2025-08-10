@@ -2333,7 +2333,7 @@ footer::before {
         border: 2px solid rgba(192,192,192,0.35) !important; 
         box-shadow: 0 12px 32px rgba(0,0,0,0.5) !important;
     }
-    .nav.active { display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    header .nav.active { display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)); }
     
     .nav a {
         font-size: 13px !important;

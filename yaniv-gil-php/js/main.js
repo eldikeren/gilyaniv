@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile Navigation Toggle
     // Support multiple headers (each page has its own header)
-    document.querySelectorAll('#nav-toggle').forEach((toggle) => {
+    document.querySelectorAll('.nav-toggle').forEach((toggle) => {
         const header = toggle.closest('header');
-        const menu = header ? header.querySelector('#nav-menu') : null;
+        const menu = header ? header.querySelector('#nav-menu, .nav#nav-menu, #nav-menu.nav') : null;
         if (menu) {
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('active');
