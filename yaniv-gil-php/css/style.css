@@ -436,7 +436,8 @@ section {
 
 /* Reduce gap before office section on homepage */
 .office-section { padding-top: 8px; }
-.office-section.home-compact { padding-top: 0; margin-top: 0; }
+.office-section.home-compact { padding-top: 0; margin-top: -8px; }
+.office-section .section-header { margin: 12px 0 24px; }
 
 .section-header {
     text-align: center;
