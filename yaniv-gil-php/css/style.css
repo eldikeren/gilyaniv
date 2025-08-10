@@ -430,12 +430,13 @@ section {
 }
 
 /* Compact spacing for home sections to reduce large gaps between consecutive sections */
-.services.home-compact { padding-bottom: 8px; }
+.services.home-compact { padding-bottom: 0; }
 .about.home-compact { padding-top: 16px; padding-bottom: 16px; }
 .about.home-compact .section-header { margin-bottom: 16px; }
 
 /* Reduce gap before office section on homepage */
 .office-section { padding-top: 8px; }
+.office-section.home-compact { padding-top: 0; margin-top: 0; }
 
 .section-header {
     text-align: center;
