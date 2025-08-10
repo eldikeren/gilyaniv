@@ -49,6 +49,11 @@ body {
     max-width: 100vw;
 }
 
+/* Basic SEO accessibility tweaks */
+img { height: auto; }
+img[loading="lazy"] { content-visibility: auto; }
+a { outline-offset: 2px; }
+
 /* Container for symmetric layout */
 .container {
     max-width: var(--container-max-width);

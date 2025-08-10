@@ -3,6 +3,14 @@
   "rewrites": [
     { "source": "/", "destination": "/yaniv-gil-php/index.html" },
     { "source": "/(.*)", "destination": "/yaniv-gil-php/$1" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
   ]
 }
 
