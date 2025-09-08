@@ -50,6 +50,23 @@ html{ direction:rtl; }
 .team-approach{ display:grid; gap:var(--gutter); grid-template-columns:1.2fr .8fr; }
 @media (max-width:980px){ .team-approach{ grid-template-columns:1fr; } }
 
+/* ===== /about.html ===== */
+.about-hero{
+  color:#fff;
+  background:
+    radial-gradient(1200px 420px at 80% -10%, rgba(255,255,255,.12), transparent 60%),
+    linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary) 100%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-block:36px;
+}
+.about-wrap{ padding-block:28px; }
+.about-grid{ display:grid; gap:var(--gutter); grid-template-columns:1fr; }
+.about-section{ margin-bottom:32px; }
+.about-section h2{ margin:0 0 16px; color:var(--primary); }
+.about-section h3{ margin:0 0 12px; color:var(--primary-dark); }
+.about-values{ display:grid; gap:var(--gutter); grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:980px){ .about-values{ grid-template-columns:1fr; } }
+
 /* ===== /contact.html ===== */
 .contact-hero{
   color:#fff;

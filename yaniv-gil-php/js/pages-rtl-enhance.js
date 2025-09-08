@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const isAttorneys = /\/attorneys\.html(\?|$)/.test(location.pathname);
   const isContact   = /\/contact\.html(\?|$)/.test(location.pathname);
+  const isAbout     = /\/about\.html(\?|$)/.test(location.pathname);
 
   /* ===== /attorneys.html ===== */
   if (isAttorneys) {
@@ -180,6 +181,56 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>`;
       left.prepend(cta);
+      main.appendChild(wrap);
+    }
+  }
+
+  /* ===== /about.html ===== */
+  if (isAbout) {
+    const main = document.querySelector('main') || document.body;
+    const firstH1 = main.querySelector('h1, h2');
+    if (firstH1 && !document.querySelector('.about-hero')) {
+      const hero = document.createElement('section');
+      hero.className='about-hero';
+      const lead = (firstH1.nextElementSibling && /^p$/i.test(firstH1.nextElementSibling.tagName)) ? firstH1.nextElementSibling.textContent : 'משרד עורכי דין יניב גיל - מקצועיות, אמינות ומצוינות';
+      hero.innerHTML = `<div class="container"><div class="section-header"><h1>${firstH1.textContent}</h1><p>${lead}</p></div></div>`;
+      main.insertBefore(hero, main.firstChild);
+      if (firstH1.nextElementSibling && /^p$/i.test(firstH1.nextElementSibling.tagName)) firstH1.nextElementSibling.remove();
+      firstH1.remove();
+    }
+
+    // Wrap content sections in cards
+    if (!document.querySelector('.about-wrap')) {
+      const wrap = document.createElement('section');
+      wrap.className = 'about-wrap';
+      wrap.innerHTML = `<div class="container about-grid"></div>`;
+      const grid = wrap.querySelector('.about-grid');
+
+      // Find all H2 sections and wrap them in cards
+      const sections = [...main.querySelectorAll('h2')];
+      sections.forEach((h2, index) => {
+        const card = document.createElement('article');
+        card.className = 'card about-section';
+        
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        
+        // Collect content until next H2 or end
+        let content = h2.outerHTML;
+        let next = h2.nextElementSibling;
+        while (next && next.tagName !== 'H2') {
+          content += next.outerHTML;
+          const temp = next.nextElementSibling;
+          next.remove();
+          next = temp;
+        }
+        
+        body.innerHTML = content;
+        card.appendChild(body);
+        grid.appendChild(card);
+        h2.remove();
+      });
+
       main.appendChild(wrap);
     }
   }
