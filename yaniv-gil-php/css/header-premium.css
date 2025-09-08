@@ -1,32 +1,28 @@
-/* ===== Collapsing header (RTL) ===== */
+/* ===== Sticky, floating, shrinking header ===== */
 :root{
   --primary:#0a3d62; --primary-dark:#072a45;
   --ink:#0b0d12; --muted:#4b5563; --border:#e6e7eb;
   --surface:#fff; --glass:rgba(255,255,255,.92);
   --shadow:0 10px 28px rgba(0,0,0,.07);
-  --h-top:40px;             /* height of top strip (expanded) */
-  --h-top-compact:0px;      /* collapsed height (hide strip) */
-  --y-pad:16px;             /* main bar vertical padding expanded */
-  --y-pad-compact:8px;      /* padding when compact */
-  --logo-mark:48px;         /* expanded square mark height */
-  --logo-mark-compact:36px; /* compact mark height */
-  --logo-text-max:220px;    /* max width of wordmark */
 }
 
 html[dir="rtl"] .site-header{ direction:rtl; }
+
+/* make the header sticky & "floating" with glass blur */
 .site-header{
-  position:sticky; top:0; z-index:1000; contain:paint;
-  backdrop-filter:saturate(120%) blur(6px);
-  transition:box-shadow .22s ease, background-color .22s ease;
-}
-.site-header::before{
-  content:""; position:absolute; inset:0;
-  background:var(--glass);
-  pointer-events:none; z-index:-1;
+  position: sticky; top: 0; z-index: 4000;  /* above hero/video */
+  background: var(--glass);
+  -webkit-backdrop-filter: saturate(120%) blur(8px);
+  backdrop-filter: saturate(120%) blur(8px);           /* needs translucent bg */
+  transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease;
 }
 
-/* top strip */
-.header-top{ height:var(--h-top); border-bottom:1px solid var(--border); background:transparent; }
+.header-top{
+  height: 40px;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  transition: height .22s ease, opacity .22s ease;
+}
 .header-top-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:100%; }
 .secondary-nav ul{ display:flex; gap:16px; margin:0; padding:0; list-style:none; }
 .secondary-nav a{ color:var(--muted); font-size:14px; text-decoration:none; }
@@ -34,22 +30,15 @@ html[dir="rtl"] .site-header{ direction:rtl; }
 
 /* main bar */
 .header-main{ background:transparent; }
-.header-main-inner{
-  display:flex; align-items:center; justify-content:space-between; gap:20px;
-  padding-block:var(--y-pad);
-  transition:padding .22s ease;
+.header-main .container.header-main-inner{
+  padding-block: 16px;
+  transition: padding .22s ease;
 }
 
-/* logo */
+/* Logo scaling */
 .logo{ display:flex; align-items:center; gap:10px; text-decoration:none; }
-.logo-mark{
-  height:var(--logo-mark); width:auto; display:block;
-  transition:height .22s ease, transform .22s ease;
-}
-.logo-text{
-  max-width:var(--logo-text-max); height:auto; display:block; margin-top:2px;
-  transition:opacity .22s ease;
-}
+.logo .logo-mark{ height: 48px; width: auto; transition: height .22s ease, transform .22s ease; }
+.logo .logo-text{ max-width: 220px; height: auto; transition: opacity .22s ease; }
 
 /* nav */
 .primary-nav > ul{ display:flex; gap:26px; margin:0; padding:0; list-style:none; }
@@ -62,28 +51,30 @@ html[dir="rtl"] .site-header{ direction:rtl; }
 }
 .primary-nav a:hover::after{ width:100%; }
 
-/* mega menu */
-.has-mega{ position:relative; }
-.mega-toggle{
-  background:none; border:none; color:var(--ink); font-weight:500; text-decoration:none; 
-  padding:8px 0; position:relative; cursor:pointer; font-size:inherit; font-family:inherit;
+/* ===== Mega menu: always on top, never clipped ===== */
+.header-main, .site-header, .header-top { overflow: visible; }   /* avoid clipping the panel */
+.primary-nav > ul{ display:flex; gap: 26px; list-style:none; margin:0; padding:0; }
+.primary-nav a, .mega-toggle{
+  display:inline-block; padding: 8px 0; text-decoration:none; font: inherit; background:none; border:0; cursor:pointer;
 }
-.mega-toggle:hover::after{ width:100%; }
-.mega-toggle::after{
-  content:""; position:absolute; inset-inline-end:0; bottom:0; height:2px; width:0;
-  background:var(--primary); transition:width .22s ease;
-}
+
+.has-mega{ position: relative; } /* positioning context for the panel */
 .mega-panel{
-  position:absolute; inset-inline-end:0; top:calc(100% + 10px); display:none; min-width:720px;
-  background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow);
-  padding:24px; z-index:1000;
+  position: absolute; top: calc(100% + 10px); inset-inline-end: 0; /* RTL right align */
+  width: min(86vw, 880px);
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08);
+  padding: 16px; display: none; z-index: 5000;  /* above header and hero */
 }
-.has-mega.open > .mega-panel{ display:block; }
+.has-mega.open > .mega-panel{ display: block; }
 .mega-panel .grid{ gap:18px; }
 .mega-panel ul{ list-style:none; margin:0; padding:0; }
 .mega-panel li{ margin:6px 0; }
 .mega-panel a{ color:var(--ink); text-decoration:none; padding:4px 0; display:block; }
 .mega-panel a:hover{ color:var(--primary); text-decoration:underline; }
+
+/* Don't let the next section cover the menu (hero/video often has higher z) */
+.home-hero, .home-hero video{ z-index: 0; position: relative; }
 
 /* hamburger (mobile) */
 .hamburger{ display:none; width:44px; height:44px; border:1px solid var(--border); border-radius:10px; background:#fff; }
@@ -93,37 +84,27 @@ html[dir="rtl"] .site-header{ direction:rtl; }
 .hamburger::before{ margin-top:-14px; }
 .hamburger::after{ margin-top:10px; }
 
-@media (max-width:960px){
-  .secondary-nav{ display:none; }
-  .hamburger{ display:block; }
-  .primary-nav{ position:fixed; top:0; right:0; height:100dvh; width:min(85vw,360px);
-    background:#fff; border-inline-start:1px solid var(--border); transform:translateX(100%); transition:transform .25s ease;
-    padding:24px; box-shadow:var(--shadow); z-index:1100; overflow:auto; }
-  body.nav-open .primary-nav{ transform:translateX(0); }
-  .primary-nav > ul{ flex-direction:column; gap:14px; }
-  /* Mega panels become inline lists in the drawer */
-  .mega-panel{ position:static; display:block; border:none; box-shadow:none; padding:0; min-width:auto; }
-  .has-mega.open > .mega-panel{ display:block; }
+/* ===== Mobile drawer (if you want the hamburger to open a side panel) ===== */
+@media (max-width: 960px){
+  .secondary-nav{ display:none; }              /* hide top strip items on mobile */
+  .hamburger{ display:block; width:44px; height:44px; border:1px solid var(--border); border-radius:10px; background:#fff; }
+  #primary-nav.primary-nav{
+    position: fixed; top: 0; right: 0; height: 100dvh; width: min(85vw, 360px);
+    background: #fff; border-inline-start: 1px solid var(--border);
+    transform: translateX(100%); transition: transform .25s ease; padding: 24px; z-index: 4500; overflow:auto;
+  }
+  body.nav-open #primary-nav{ transform: translateX(0); }
+  .primary-nav > ul{ flex-direction: column; gap: 14px; }
 }
 
-/* ===== compact state on scroll ===== */
-.site-header.is-compact{
-  box-shadow:var(--shadow);
-}
+/* Compact state toggled by JS */
+.site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
 .site-header.is-compact .header-top{
-  height:var(--h-top-compact); border-bottom:0; overflow:hidden; transition:height .22s ease;
+  height: 0; opacity: 0; border-bottom: 0; overflow: hidden;  /* collapse top strip */
 }
-.site-header.is-compact .header-main-inner{
-  padding-block:var(--y-pad-compact);
-}
-.site-header.is-compact .logo-mark{
-  height:var(--logo-mark-compact);
-}
-.site-header.is-compact .logo-text{
-  opacity:.0; /* optional: hide long wordmark when compact; remove if you want it visible */
-}
+.site-header.is-compact .container.header-main-inner{ padding-block: 8px; }
+.site-header.is-compact .logo .logo-mark{ height: 36px; }
+.site-header.is-compact .logo .logo-text{ opacity: 0; } /* optional; delete if you want it visible */
 
-/* Reduced motion: skip fancy transitions */
-@media (prefers-reduced-motion: reduce){
-  .site-header, .header-main-inner, .logo-mark, .logo-text, .primary-nav a::after, .site-header.is-compact .header-top{ transition:none !important; }
-}
+/* ===== Sentinel must have a size so IntersectionObserver can see it ===== */
+#headerSentinel{ height: 1px; }
