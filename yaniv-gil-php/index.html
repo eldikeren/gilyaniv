@@ -13,498 +13,445 @@
     <meta name="twitter:title" content="משרד עו״ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
     <meta name="twitter:description" content="ייעוץ וייצוג משפטי מקצועי עם ניסיון של למעלה מ-15 שנה.">
     <meta name="twitter:image" content="images/logo.png">
-            <link rel="stylesheet" href="css/style.css?v=2025-01-30-2">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #000000, #0a0a0a);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out;
-        }
-        .loading-content {
-            text-align: center;
-            color: #d4af37;
-        }
-        .loading-logo {
-            margin-bottom: 20px;
-        }
-        .loading-logo picture,
-        .loading-logo img {
-            display: inline-block;
-            max-width: 280px;
-            width: 80vw;
-            height: auto;
-            filter: drop-shadow(0 6px 16px rgba(212, 175, 55, 0.4));
-        }
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(212, 175, 55, 0.3);
-            border-top: 3px solid #d4af37;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-    <!-- Premium Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <picture>
-                    <source srcset="images/Yaniv-Gil-Law-Office-Notary_text.avif" type="image/avif">
-                    <img src="images/logo.png" alt="Yaniv Gil Law Office & Notary">
-                </picture>
-            </div>
-            <div class="loading-spinner"></div>
-            <p>טוען את האתר...</p>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-                                   <div class="logo">
-                           <img src="images/logo.png" alt="לוגו משרד עו"ד יניב גיל" class="logo-img">
-                           <div class="brand-logo-text">
-                               <h1>יניב גיל</h1>
-                               <p>משרד עו"ד ונוטריון</p>
-                           </div>
-                       </div>
-            <div class="nav-toggle"><span></span><span></span><span></span></div>
-            <nav class="nav" id="nav-menu">
-                <a href="index.html" class="nav-link">דף הבית</a>
-                <a href="about.html" class="nav-link">אודות</a>
-                <a href="practice-areas.html" class="nav-link">תחומי התמחות</a>
-                <a href="attorneys.html" class="nav-link">עורכי דין</a>
-                <a href="articles.html" class="nav-link">מאמרים</a>
-                <a href="media.html" class="nav-link">תקשורת</a>
-                <a href="#testimonials" class="nav-link">ביקורות לקוחות</a>
-                <a href="contact.html" class="nav-link">צור קשר</a>
-            </nav>
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+    <header class="site-header" role="banner" aria-label="כותרת האתר">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <nav class="secondary-nav" aria-label="תפריט משני">
+            <ul>
+              <li><a href="articles.html">מאמרים</a></li>
+              <li><a href="media.html">תקשורת</a></li>
+              <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
+              <li><a href="about.html">אודות המשרד</a></li>
+            </ul>
+          </nav>
+          <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
+            <label class="visually-hidden" for="q">חיפוש באתר</label>
+            <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
+            <button type="submit" class="button small">חפש</button>
+            <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
+          </form>
         </div>
+      </div>
+
+      <div class="header-main">
+        <div class="container header-main-inner">
+          <div class="logo">
+            <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
+              <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" width="160" height="48">
+            </a>
+          </div>
+
+          <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
+            <ul>
+              <li>
+                <a href="attorneys.html">עורכי דין</a>
+              </li>
+              <li class="has-mega">
+                <button class="mega-toggle" aria-haspopup="true" aria-expanded="false">תחומי התמחות</button>
+                <div class="mega-panel" role="region" aria-label="תחומי התמחות">
+                  <div class="grid cols-3">
+                    <ul>
+                      <li><a href="practice-areas.html#family">דיני משפחה</a></li>
+                      <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
+                      <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
+                      <li><a href="practice-areas.html#real-estate">מקרקעין</a></li>
+                      <li><a href="practice-areas.html#commercial">משפט מסחרי</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="practice-areas.html#labor">דיני עבודה</a></li>
+                      <li><a href="practice-areas.html#inheritance">דיני ירושה</a></li>
+                      <li><a href="practice-areas.html#contracts">דיני חוזים</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="articles.html">מאמרים</a>
+              </li>
+              <li>
+                <a href="media.html">תקשורת</a>
+              </li>
+              <li>
+                <a href="contact.html">צור קשר</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <h1>העורך דין הנכון</h1>
-            <p>עושה את כל ההבדל</p>
-            <p>לעו"ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
-            <a href="contact.html" class="hero-btn">התקשר עכשיו</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services home-compact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">תחומי התמחות</h2>
-                <p class="section-subtitle">אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה בהליכים משפטיים מורכבים</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
+    <main id="main">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>העורך דין הנכון עושה את כל ההבדל</h1>
+                        <p class="hero-subtitle">לעו״ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
+                        <div class="hero-actions">
+                            <a href="contact.html" class="button primary large">התקשר עכשיו</a>
+                            <a href="about.html" class="button large">למד עוד על המשרד</a>
+                        </div>
                     </div>
-                    <h3>פשיטת רגל</h3>
-                    <p>ייעוץ וליווי מקיף בהליכי חדלות פירעון ופשיטת רגל. אנו עוזרים לכם להתחיל מחדש ולשקם את המצב הכלכלי</p>
-                    <a href="practice-areas.html#bankruptcy" class="service-btn">קרא עוד</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-4.7 6.28c-.29.38-.29.9 0 1.28.29.38.79.62 1.31.62H14v5h6z"/>
-                        </svg>
+                    <div class="hero-image">
+                        <img src="images/yaniv.png" alt="עו״ד יניב גיל" class="hero-img">
                     </div>
-                    <h3>דיני משפחה</h3>
-                    <p>טיפול מקצועי ואמפתי בכל סוגי הסכסוכים המשפחתיים, גירושין, מזונות, משמורת ילדים והסכמי ממון</p>
-                    <a href="practice-areas.html#family" class="service-btn">קרא עוד</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                        </svg>
-                    </div>
-                    <h3>סדר דין אזרחי</h3>
-                    <p>ייצוג מקצועי בתביעות אזרחיות, דיני חוזים, נזיקין, מקרקעין וכל סוגי הסכסוכים המסחריים</p>
-                    <a href="practice-areas.html#civil" class="service-btn">קרא עוד</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3>הוצאה לפועל</h3>
-                    <p>ליווי מקצועי בהליכי הוצאה לפועל, הגנה על זכויות החייב וניהול משא ומתן עם נושים</p>
-                    <a href="practice-areas.html#enforcement" class="service-btn">קרא עוד</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about home-compact">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>אודות המשרד</h2>
-                    <p>משרד עו"ד יניב גיל ושות' הוקם בשנת 2008 ומתמחה במגוון רחב של תחומי משפט, עם דגש על דיני משפחה, חדלות פירעון וסדר דין אזרחי.</p>
-                    <p>אנו מאמינים כי לכל לקוח מגיע ייצוג משפטי מקצועי, אישי ואמין. המשרד מתאפיין בגישה אישית, מקצועיות גבוהה ותוצאות מוכחות.</p>
+        <!-- Practice Areas Section -->
+        <section class="practice-areas-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>תחומי התמחות</h2>
+                    <p class="section-subtitle">אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה בהליכים משפטיים מורכבים</p>
+                </div>
+                
+                <div class="grid cols-4 gap-lg">
+                    <div class="card practice-card">
+                        <div class="card-body">
+                            <h3>דיני משפחה</h3>
+                            <p>טיפול מקצועי ואמפתי בכל סוגי הסכסוכים המשפחתיים, גירושין, מזונות, משמורת ילדים והסכמי ממון</p>
+                            <a href="practice-areas.html#family" class="button">קרא עוד</a>
+                        </div>
+                    </div>
+
+                    <div class="card practice-card">
+                        <div class="card-body">
+                            <h3>חדלות פירעון</h3>
+                            <p>ייעוץ וליווי מקיף בהליכי חדלות פירעון ופשיטת רגל. אנו עוזרים לכם להתחיל מחדש ולשקם את המצב הכלכלי</p>
+                            <a href="practice-areas.html#bankruptcy" class="button">קרא עוד</a>
+                        </div>
+                    </div>
+
+                    <div class="card practice-card">
+                        <div class="card-body">
+                            <h3>סדר דין אזרחי</h3>
+                            <p>ייצוג מקצועי בתביעות אזרחיות, דיני חוזים, נזיקין, מקרקעין וכל סוגי הסכסוכים המסחריים</p>
+                            <a href="practice-areas.html#civil" class="button">קרא עוד</a>
+                        </div>
+                    </div>
+
+                    <div class="card practice-card">
+                        <div class="card-body">
+                            <h3>הוצאה לפועל</h3>
+                            <p>ליווי מקצועי בהליכי הוצאה לפועל, הגנה על זכויות החייב וניהול משא ומתן עם נושים</p>
+                            <a href="practice-areas.html#enforcement" class="button">קרא עוד</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>אודות המשרד</h2>
+                        <p>משרד עו״ד יניב גיל ושות׳ הוקם בשנת 2008 ומתמחה במגוון רחב של תחומי משפט, עם דגש על דיני משפחה, חדלות פירעון וסדר דין אזרחי.</p>
+                        <p>אנו מאמינים כי לכל לקוח מגיע ייצוג משפטי מקצועי, אישי ואמין. המשרד מתאפיין בגישה אישית, מקצועיות גבוהה ותוצאות מוכחות.</p>
+                        
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <h4>מקצועיות</h4>
+                                <p>ניסיון של למעלה מ-15 שנה בתחום המשפט</p>
+                            </div>
+                            
+                            <div class="value-item">
+                                <h4>אמינות</h4>
+                                <p>יחסי אמון ארוכי טווח עם לקוחותינו</p>
+                            </div>
+                            
+                            <div class="value-item">
+                                <h4>מסירות</h4>
+                                <p>מחויבות מלאה ללקוח ולמטרותיו</p>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="values-grid">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
+                    <div class="about-image">
+                        <img src="images/yaniv.png" alt="עו״ד יניב גיל" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Environment Section -->
+        <section class="office-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>סביבת העבודה שלנו</h2>
+                    <p>משרד מודרני ומקצועי המספק את התנאים האופטימליים לייצוג משפטי איכותי</p>
+                </div>
+                
+                <div class="grid cols-4 gap-lg">
+                    <div class="office-item">
+                        <img src="images/656338_db49c3fc2d104cb18118ce948c359d27~mv2_d_2400_1600_s_2.avif" alt="משרד מקצועי" class="office-img" loading="lazy">
+                        <h3>משרד מקצועי</h3>
+                        <p>סביבת עבודה נוחה ומקצועית עם כל הכלים הנדרשים</p>
+                    </div>
+                    
+                    <div class="office-item">
+                        <img src="images/656338_47894ebdd38a4fa5a07a697951c0d66d~mv2_d_3456_2304_s_2.avif" alt="ייצוג בבית המשפט" class="office-img" loading="lazy">
+                        <h3>ייצוג בבית המשפט</h3>
+                        <p>מסורת משפטית ארוכת שנים עם גישה מודרנית</p>
+                    </div>
+                    
+                    <div class="office-item">
+                        <img src="images/656338_9fd5d43605914b7a8348eaebc679173c~mv2.avif" alt="צוות מקצועי" class="office-img" loading="lazy">
+                        <h3>צוות מקצועי</h3>
+                        <p>תשומת לב לפרטים ודיוק בכל הליך משפטי</p>
+                    </div>
+                    
+                    <div class="office-item">
+                        <img src="images/656338_24395c988dd6462ca1cd646417be4b23~mv2.avif" alt="סביבת עבודה" class="office-img" loading="lazy">
+                        <h3>סביבת עבודה</h3>
+                        <p>חדר ישיבות מודרני עם נוף לעיר תל אביב</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles Section -->
+        <section class="articles-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>מאמרים אחרונים</h2>
+                    <p>מאמרים מקצועיים ופסיקה עדכנית בתחומי התמחותנו</p>
+                </div>
+                
+                <div class="grid cols-4 gap-lg">
+                    <article class="card article-card">
+                        <div class="card-body">
+                            <h3>חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
+                            <p>ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
+                            <a href="https://www.psakdin.co.il/Document/%D7%A7%D7%99%D7%91%D7%9C-%D7%94%D7%97%D7%96%D7%A8-%D7%9C%D7%A6-%D7%A7-45-%D7%90%D7%9C%D7%A3-%D7%A9-%D7%9C%D7%92%D7%91%D7%A8-%D7%A9%D7%99%D7%9C%D7%93%D7%99%D7%95-%D7%A0%D7%A2%D7%93%D7%A8%D7%95-%D7%9E%D7%97%D7%AA%D7%95%D7%A0%D7%AA-%D7%90%D7%97%D7%99%D7%95" class="button" target="_blank" rel="noopener">קרא עוד</a>
+                        </div>
+                    </article>
+
+                    <article class="card article-card">
+                        <div class="card-body">
+                            <h3>הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
+                            <p>הסכם גירושין קבע שהבעל יעביר לאשתו את חלקו בנכס. אבל הרישום לא בוצע ובינתיים הוטלו על הבית עיקולים בגין חובות של הגרוש. מה החליט ביהמ״ש?</p>
+                            <a href="https://www.ynet.co.il/economy/article/rk5ptfcac" class="button" target="_blank" rel="noopener">קרא עוד</a>
+                        </div>
+                    </article>
+
+                    <article class="card article-card">
+                        <div class="card-body">
+                            <h3>זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
+                            <p>חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
+                            <a href="https://www.mako.co.il/finances-law/law-general/Article-b26c238757c3d81027.htm?sCh=3d385dd2dd5d4110&pId=1149282442" class="button" target="_blank" rel="noopener">קרא עוד</a>
+                        </div>
+                    </article>
+
+                    <article class="card article-card">
+                        <div class="card-body">
+                            <h3>סכסוך ירושה דירה משפחתית</h3>
+                            <p>מרבה נכסים, מרבה הליכים: הורים אמידים טענו כי דירה שרשומה על שם בנם למעשה שייכת להם. הבן לעומת זאת טען שזו הדירה שלו, וביקש לפנות ממנה את אחותו שמתגוררת בה. השופטת פסקה לטובתו</p>
+                            <a href="https://www.mako.co.il/finances-law/family-law/Article-bcef027b67c0e61027.htm?sCh=3d385dd2dd5d4110&pId=1149282442" class="button" target="_blank" rel="noopener">קרא עוד</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-6">
+                    <a href="articles.html" class="button primary large">צפה בכל המאמרים</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section">
+            <div class="container">
+                <div class="contact-cta-content">
+                    <div class="contact-info">
+                        <h2>צור קשר עכשיו</h2>
+                        <p>ייעוץ ראשוני חינם עם עורך דין מנוסה</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>טלפון:</strong> <a href="tel:03-609-2414">03-609-2414</a>
                             </div>
-                            <h4>מקצועיות</h4>
-                            <p>ניסיון של למעלה מ-15 שנה בתחום המשפט</p>
+                            <div class="contact-item">
+                                <strong>נייד:</strong> <a href="tel:054-8184581">054-8184581</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>אימייל:</strong> <a href="mailto:ynivgil@gmail.com">ynivgil@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>כתובת:</strong> מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב
+                            </div>
                         </div>
                         
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
-                            </div>
-                            <h4>אמינות</h4>
-                            <p>יחסי אמון ארוכי טווח עם לקוחותינו</p>
+                        <div class="contact-actions">
+                            <a href="contact.html" class="button primary large">צור קשר</a>
+                            <a href="tel:03-609-2414" class="button large">התקשר עכשיו</a>
                         </div>
-                        
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-4.7 6.28c-.29.38-.29.9 0 1.28.29.38.79.62 1.31.62H14v5h6z"/>
-                                </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>ביקורות לקוחות</h2>
+                    <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+                </div>
+                
+                <div class="grid cols-4 gap-lg">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="testimonial-rating">5.0</div>
+                            <blockquote>
+                                <p>"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב בו חלק מהאחים קופחו בניגוד גמור לבקשת אבינו המנוח. יניב ידע להקשיב, אסף פרטים, קצוות חוט אותם חיבר לכדי תמונה אחת ברורה שהיוותה בסיס לכתב התנגדות שהתקבל."</p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <strong>ש.ד</strong> - רחובות
                             </div>
-                            <h4>מסירות</h4>
-                            <p>מחויבות מלאה ללקוח ולמטרותיו</p>
+                            <div class="testimonial-area">הגשת התנגדות לצוואה</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="testimonial-rating">5.0</div>
+                            <blockquote>
+                                <p>"עורך דין מדהים ישר ומקצועי להפליא מוכשר קשוב וזמין בכל רגע נתון !! ענה על כל השאלות טיפל בכל ומחק את התיק במהירות נתן תחושת ביטחון שהוא תמיד היה שם בשבילי גם לאחר שהכל נגמר"</p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <strong>ת.</strong> - תל אביב
+                            </div>
+                            <div class="testimonial-area">תביעה בבית המשפט לענייני משפחה</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="testimonial-rating">5.0</div>
+                            <blockquote>
+                                <p>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון מול הבנק, ממש גרם לי לבחור בדרך הנכונה והבריאה ביותר ! איש מדהים ממליץ בחום"</p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <strong>א.</strong> - רמלה
+                            </div>
+                            <div class="testimonial-area">ייעוץ בחדלות פרעון/פשיטת רגל</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="testimonial-rating">5.0</div>
+                            <blockquote>
+                                <p>"אחרי כמעט חצי שנה של המתנה לתיק ירושה שאמור להיסגר תוך חודשיים בלבד ולא קרה כלום. הגעתי לעו״ד יניב. תוך זמן קצר הוא נכנס לעובי הקורה, קידם את התהליך במהירות ובמקצועיות, והביא לתוצאה שחיכינו לה הרבה זמן."</p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <strong>מקסים</strong> - תל אביב
+                            </div>
+                            <div class="testimonial-area">הגשת בקשה לצו ירושה</div>
                         </div>
                     </div>
                 </div>
                 
-                                                    <div class="about-image">
-                    <img src="images/yaniv.png" alt="עו"ד יניב גיל" class="about-img">
+                <div class="text-center mt-6">
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" class="button primary large">לכל הביקורות</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Office Environment Section -->
-    <section class="office-section home-compact">
-        <div class="container">
-            <div class="section-header">
-                <h2>סביבת העבודה שלנו</h2>
-                <p>משרד מודרני ומקצועי המספק את התנאים האופטימליים לייצוג משפטי איכותי</p>
+        </section>
+    </main>
+       
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="כותרת תחתונה">
+      <div class="container">
+        <div class="footer-main">
+          <div class="grid cols-4 gap-lg">
+            <div class="footer-section">
+              <h3>המשרד</h3>
+              <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+                <li><a href="attorneys.html">עורכי דין</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+                <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
+              </ul>
             </div>
             
-            <div class="office-grid">
-               <div class="office-item">
-                   <img src="images/656338_db49c3fc2d104cb18118ce948c359d27~mv2_d_2400_1600_s_2.avif" alt="משרד מקצועי" class="office-img" loading="lazy">
-                   <h3>משרד מקצועי</h3>
-                   <p>סביבת עבודה נוחה ומקצועית עם כל הכלים הנדרשים</p>
-               </div>
-               
-               <div class="office-item">
-                   <img src="images/656338_47894ebdd38a4fa5a07a697951c0d66d~mv2_d_3456_2304_s_2.avif" alt="ייצוג בבית המשפט" class="office-img" loading="lazy">
-                   <h3>ייצוג בבית המשפט</h3>
-                   <p>מסורת משפטית ארוכת שנים עם גישה מודרנית</p>
-               </div>
-               
-               <div class="office-item">
-                   <img src="images/656338_9fd5d43605914b7a8348eaebc679173c~mv2.avif" alt="צוות מקצועי" class="office-img" loading="lazy">
-                   <h3>צוות מקצועי</h3>
-                   <p>תשומת לב לפרטים ודיוק בכל הליך משפטי</p>
-               </div>
-               
-               <div class="office-item">
-                   <img src="images/656338_24395c988dd6462ca1cd646417be4b23~mv2.avif" alt="סביבת עבודה" class="office-img" loading="lazy">
-                   <h3>סביבת עבודה</h3>
-                   <p>חדר ישיבות מודרני עם נוף לעיר תל אביב</p>
-               </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Articles Section -->
-    <section class="articles-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>מאמרים אחרונים</h2>
-                <p>מאמרים מקצועיים ופסיקה עדכנית בתחומי התמחותנו</p>
+            <div class="footer-section">
+              <h3>תחומי התמחות</h3>
+              <ul>
+                <li><a href="practice-areas.html#family">דיני משפחה</a></li>
+                <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
+                <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
+                <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
+              </ul>
             </div>
             
-            <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-content">
-                        <h3>חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
-                        <p>ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
-                        <a href="https://www.psakdin.co.il/Document/%D7%A7%D7%99%D7%91%D7%9C-%D7%94%D7%97%D7%96%D7%A8-%D7%9C%D7%A6-%D7%A7-45-%D7%90%D7%9C%D7%A3-%D7%A9-%D7%9C%D7%92%D7%91%D7%A8-%D7%A9%D7%99%D7%9C%D7%93%D7%99%D7%95-%D7%A0%D7%A2%D7%93%D7%A8%D7%95-%D7%9E%D7%97%D7%AA%D7%95%D7%A0%D7%AA-%D7%90%D7%97%D7%99%D7%95" class="article-link" target="_blank" rel="noopener">קרא עוד</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-content">
-                        <h3>הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
-                        <p>הסכם גירושין קבע שהבעל יעביר לאשתו את חלקו בנכס. אבל הרישום לא בוצע ובינתיים הוטלו על הבית עיקולים בגין חובות של הגרוש. מה החליט ביהמ"ש?</p>
-                        <a href="https://www.ynet.co.il/economy/article/rk5ptfcac" class="article-link" target="_blank" rel="noopener">קרא עוד</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-content">
-                        <h3>זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
-                        <p>חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
-                        <a href="https://www.mako.co.il/finances-law/law-general/Article-b26c238757c3d81027.htm?sCh=3d385dd2dd5d4110&pId=1149282442" class="article-link" target="_blank" rel="noopener">קרא עוד</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-content">
-                        <h3>סכסוך ירושה דירה משפחתית</h3>
-                        <p>מרבה נכסים, מרבה הליכים: הורים אמידים טענו כי דירה שרשומה על שם בנם למעשה שייכת להם. הבן לעומת זאת טען שזו הדירה שלו, וביקש לפנות ממנה את אחותו שמתגוררת בה. השופטת פסקה לטובתו</p>
-                        <a href="https://www.mako.co.il/finances-law/family-law/Article-bcef027b67c0e61027.htm?sCh=3d385dd2dd5d4110&pId=1149282442" class="article-link" target="_blank" rel="noopener">קרא עוד</a>
-                    </div>
-                </article>
+            <div class="footer-section">
+              <h3>מידע ותוכן</h3>
+              <ul>
+                <li><a href="articles.html">מאמרים</a></li>
+                <li><a href="media.html">תקשורת</a></li>
+                <li><a href="practice-areas.html">כל תחומי ההתמחות</a></li>
+              </ul>
             </div>
             
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="articles.html" class="cta-button">צפה בכל המאמרים</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>צור קשר</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>טלפון:</strong> 03-609-2414
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>אימייל:</strong> info@yanivgil.co.il
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>כתובת:</strong> מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-section">
+              <h3>יצירת קשר</h3>
+              <div class="contact-info">
+                <p><strong>טלפון:</strong><br>
+                <a href="tel:03-609-2414">03-609-2414</a></p>
                 
-                <div class="contact-form">
-                    <h3>שלח הודעה</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">שם מלא</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">אימייל</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">טלפון</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">הודעה</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">שלח הודעה</button>
-                    </form>
-                </div>
+                <p><strong>נייד:</strong><br>
+                <a href="tel:054-8184581">054-8184581</a></p>
+                
+                <p><strong>אימייל:</strong><br>
+                <a href="mailto:ynivgil@gmail.com">ynivgil@gmail.com</a></p>
+                
+                <p><strong>כתובת:</strong><br>
+                מגדל "WE-TLV"<br>
+                דרך מנחם בגין 150<br>
+                קומה 7, תל-אביב</p>
+              </div>
             </div>
+          </div>
         </div>
-           </section>
-       
-       <!-- Testimonials Section -->
-       <section class="testimonials" id="testimonials">
-           <div class="container">
-               <div class="section-header">
-                   <h2 class="section-title">ביקורות לקוחות</h2>
-                   <p class="section-subtitle">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
-               </div>
-               
-               <div class="testimonials-grid">
-                   <div class="testimonial-card">
-                       <div class="testimonial-header">
-                           <div class="testimonial-rating">5.0</div>
-                           <div class="testimonial-date">03.08.2025</div>
-                       </div>
-                       <div class="testimonial-content">
-                           <p>"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב בו חלק מהאחים קופחו בניגוד גמור לבקשת אבינו המנוח. יניב ידע להקשיב, אסף פרטים, קצוות חוט אותם חיבר לכדי תמונה אחת ברורה שהיוותה בסיס לכתב התנגדות שהתקבל."</p>
-                           <div class="testimonial-author">
-                               <span class="author-name">ש.ד</span>
-                               <span class="author-location">רחובות</span>
-                           </div>
-                           <div class="testimonial-area">תחום עיסוק: הגשת התנגדות לצוואה | יצוג בסכסוך בין יורשים | עריכת צוואה</div>
-                       </div>
-                   </div>
-                   
-                   <div class="testimonial-card">
-                       <div class="testimonial-header">
-                           <div class="testimonial-rating">5.0</div>
-                           <div class="testimonial-date">15.07.2025</div>
-                       </div>
-                       <div class="testimonial-content">
-                           <p>"עורך דין מדהים ישר ומקצועי להפליא מוכשר קשוב וזמין בכל רגע נתון !! ענה על כל השאלות טיפל בכל ומחק את התיק במהירות נתן תחושת ביטחון שהוא תמיד היה שם בשבילי גם לאחר שהכל נגמר"</p>
-                           <div class="testimonial-author">
-                               <span class="author-name">ת.</span>
-                               <span class="author-location">תל אביב</span>
-                           </div>
-                           <div class="testimonial-area">תחום עיסוק: תביעה בבית המשפט לענייני משפחה</div>
-                       </div>
-                   </div>
-                   
-                   <div class="testimonial-card">
-                       <div class="testimonial-header">
-                           <div class="testimonial-rating">5.0</div>
-                           <div class="testimonial-date">22.06.2025</div>
-                       </div>
-                       <div class="testimonial-content">
-                           <p>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון מול הבנק, ממש גרם לי לבחור בדרך הנכונה והבריאה ביותר ! איש מדהים ממליץ בחום"</p>
-                           <div class="testimonial-author">
-                               <span class="author-name">א.</span>
-                               <span class="author-location">רמלה</span>
-                           </div>
-                           <div class="testimonial-area">תחום עיסוק: ייעוץ בחדלות פרעון/פשיטת רגל</div>
-                       </div>
-                   </div>
-                   
-                   <div class="testimonial-card">
-                       <div class="testimonial-header">
-                           <div class="testimonial-rating">5.0</div>
-                           <div class="testimonial-date">12.06.2025</div>
-                       </div>
-                       <div class="testimonial-content">
-                           <p>"אחרי כמעט חצי שנה של המתנה לתיק ירושה שאמור להיסגר תוך חודשיים בלבד ולא קרה כלום. הגעתי לעו"ד יניב. תוך זמן קצר הוא נכנס לעובי הקורה, קידם את התהליך במהירות ובמקצועיות, והביא לתוצאה שחיכינו לה הרבה זמן."</p>
-                           <div class="testimonial-author">
-                               <span class="author-name">מקסים</span>
-                               <span class="author-location">תל אביב</span>
-                           </div>
-                           <div class="testimonial-area">תחום עיסוק: הגשת בקשה לצו ירושה</div>
-                       </div>
-                   </div>
-               </div>
-               
-               <div class="testimonials-cta">
-                   <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" class="cta-button">לכל הביקורות</a>
-               </div>
-           </div>
-       </section>
-       
-       <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>משרד עו"ד יניב גיל</h3>
-                    <p>מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב 6492105, ישראל</p>
-                    <p>טלפון: 03-609-2414 | נייד: 054-8184581 | פקס: 03-609-2413</p>
-                </div>
-                <div class="footer-links">
-                    <a href="contact.html" class="cta-button">לתיאום פגישה</a>
-                </div>
+        
+        <div class="footer-bottom">
+          <div class="flex justify-between items-center">
+            <div class="footer-copyright">
+              <p>&copy; 2024 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 משרד עו"ד יניב גיל. כל הזכויות שמורות.</p>
+            <div class="footer-legal">
+              <a href="#privacy">מדיניות פרטיות</a>
+              <span>•</span>
+              <a href="#terms">תנאי שימוש</a>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script>
-        // Loading screen
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loadingScreen = document.getElementById('loadingScreen');
-                loadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 1500);
-        });
-
-        // Enhanced hover effects for navigation
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.05) rotateX(5deg)';
-            });
-            
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1) rotateX(0deg)';
-            });
-        });
-
-        // Enhanced button hover effects
-        document.querySelectorAll('.hero-btn, .service-btn, .cta-button').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.05)';
-            });
-            
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="js/header.js"></script>
 </body>
 </html>

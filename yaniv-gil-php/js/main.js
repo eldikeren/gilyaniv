@@ -244,20 +244,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = this.querySelector('button[type="submit"], .cta-button[type="submit"], .submit-btn[type="submit"]') || this.querySelector('button, .cta-button, .submit-btn');
             const originalText = submitBtn ? submitBtn.textContent : '';
             if (submitBtn) {
-                submitBtn.textContent = 'שולח...';
-                submitBtn.disabled = true;
+            submitBtn.textContent = 'שולח...';
+            submitBtn.disabled = true;
             }
             
             setTimeout(() => {
                 showNotification('ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.', 'success');
                 this.reset();
                 if (submitBtn) {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
                 }
             }, 1200);
         });
-    });
+        });
     
     // Email validation function
     function isValidEmail(email) {
