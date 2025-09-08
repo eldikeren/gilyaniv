@@ -11,6 +11,7 @@
   --shadow:0 10px 28px rgba(0,0,0,.07);
   --fs-200:14px; --fs-300:16px; --fs-400:18px; --fs-500:22px; --fs-600:28px; --fs-700:36px;
   --gutter:24px; --maxw:1200px;
+  --glass:rgba(255,255,255,.92);
 }
 
 /* Base */
@@ -284,4 +285,76 @@ textarea{ min-height:120px; resize:vertical; }
 }
 @media (max-width:420px){
   .grid.cols-4{ grid-template-columns:1fr; }
+}
+
+/* ===== Header: floating + shrinking + non-clipping mega ===== */
+.site-header{
+  position: sticky; top: 0; z-index: 4000;                 /* sits above page/hero */
+  background: var(--glass);                                 /* translucent or blur won't show */
+  -webkit-backdrop-filter: saturate(120%) blur(8px);
+  backdrop-filter: saturate(120%) blur(8px);                /* glass effect */
+  transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease;
+}
+
+.header-top{
+  height: 40px; border-bottom: 1px solid var(--border);
+  transition: height .22s ease, opacity .22s ease;
+}
+
+.header-main .container.header-main-inner{
+  padding-block: 16px; transition: padding .22s ease;
+}
+
+/* Logo scaling in compact state */
+.logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease, transform .22s ease; }
+.logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
+
+/* Compact state (added by JS when you leave the top) */
+.site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
+.site-header.is-compact .header-top{ height:0; opacity:0; border-bottom:0; overflow:hidden; }
+.site-header.is-compact .header-main .container.header-main-inner{ padding-block: 8px; }
+.site-header.is-compact .logo .logo-mark{ height: 36px; }
+.site-header.is-compact .logo .logo-text{ opacity: 0; }    /* optional; remove if you want wordmark visible */
+
+/* Make sure nothing clips the mega-panel */
+.header-main, .site-header, .header-top{ overflow: visible; }
+
+/* Primary nav + mega */
+.primary-nav > ul{ display:flex; gap:26px; margin:0; padding:0; list-style:none; }
+.primary-nav a, .mega-toggle{
+  display:inline-block; padding:8px 0; text-decoration:none; background:none; border:0; font:inherit; cursor:pointer;
+}
+.has-mega{ position:relative; }                             /* anchor for panel */
+.mega-panel{
+  position:absolute; top:calc(100% + 10px); inset-inline-end:0; /* RTL align to the right */
+  width:min(86vw, 880px);
+  background:#fff; border:1px solid var(--border); border-radius:12px;
+  box-shadow:0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08);
+  padding:16px; display:none; z-index:5000;                 /* sit above header+hero */
+}
+.has-mega.open > .mega-panel{ display:block; }
+
+/* Hero/video should not overlay menus */
+.home-hero, .home-hero video{ position:relative; z-index:0; }
+
+/* Mobile drawer */
+@media (max-width:960px){
+  .secondary-nav{ display:none; }
+  .hamburger{ display:block; width:44px; height:44px; border:1px solid var(--border); border-radius:10px; background:#fff; }
+  #primary-nav.primary-nav{
+    position:fixed; top:0; right:0; height:100dvh; width:min(85vw, 360px);
+    background:#fff; border-inline-start:1px solid var(--border);
+    transform:translateX(100%); transition:transform .25s ease; padding:24px; z-index:4500; overflow:auto;
+  }
+  body.nav-open #primary-nav{ transform:translateX(0); }
+  .primary-nav > ul{ flex-direction:column; gap:14px; }
+}
+
+/* Sentinel must be visible to trigger compact state */
+#headerSentinel{ height:1px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .site-header, .header-top, .header-main .container.header-main-inner,
+  .logo .logo-mark, .logo .logo-text{ transition:none !important; }
 }

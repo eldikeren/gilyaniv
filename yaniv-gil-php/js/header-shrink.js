@@ -1,18 +1,18 @@
-// header-shrink.js
+// js/header-shrink.js
 document.addEventListener('DOMContentLoaded', () => {
   const header   = document.getElementById('siteHeader');
   const sentinel = document.getElementById('headerSentinel');
   if (!header || !sentinel) return;
 
-  // Ensure sentinel is visible to the observer
-  sentinel.style.height = sentinel.offsetHeight ? sentinel.style.height : '1px';
+  // Ensure the sentinel exists & has size (also set in CSS)
+  if (!sentinel.offsetHeight) sentinel.style.height = '1px';
 
-  // Shrink header when the top sentinel scrolls out of view
+  // Shrink header when sentinel leaves viewport
   const io = new IntersectionObserver(([entry]) => {
     header.classList.toggle('is-compact', !entry.isIntersecting);
   }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 });
+
   io.observe(sentinel);
-  // IntersectionObserver is more performant than scroll handlers for this job.
 
   // Mobile hamburger → slide-in primary nav
   const burger = document.querySelector('.hamburger');
@@ -26,19 +26,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Mega menu ("תחומי התמחות") toggle with proper aria-expanded
-  const megaLI   = document.querySelector('.has-mega');
-  const megaBtn  = document.querySelector('.mega-toggle');
-  const megaPane = megaLI?.querySelector('.mega-panel');
+  document.querySelectorAll('.mega-toggle').forEach(btn => {
+    const li = btn.closest('.has-mega');
+    const pane = li?.querySelector('.mega-panel');
+    
+    if (li && btn && pane) {
+      const closeMega = () => { 
+        li.classList.remove('open'); 
+        btn.setAttribute('aria-expanded','false'); 
+      };
+      
+      btn.addEventListener('click', () => {
+        const open = li.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+        
+        // Close siblings
+        li.parentElement.querySelectorAll('.has-mega').forEach(sib => {
+          if (sib !== li) {
+            sib.classList.remove('open');
+            sib.querySelector('.mega-toggle')?.setAttribute('aria-expanded','false');
+          }
+        });
+      });
+      
+      // Close on outside click, Escape, or scroll
+      document.addEventListener('click', (e) => { 
+        if (!li.contains(e.target)) closeMega(); 
+      });
+      document.addEventListener('keydown', (e) => { 
+        if (e.key === 'Escape') closeMega(); 
+      });
+    }
+  });
 
-  if (megaLI && megaBtn && megaPane) {
-    const closeMega = () => { megaLI.classList.remove('open'); megaBtn.setAttribute('aria-expanded','false'); };
-    megaBtn.addEventListener('click', () => {
-      const open = megaLI.classList.toggle('open');
-      megaBtn.setAttribute('aria-expanded', String(open));
-    });
-    // Close on outside click, Escape, or scroll
-    document.addEventListener('click', (e) => { if (!megaLI.contains(e.target)) closeMega(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMega(); });
-    window.addEventListener('scroll', () => { closeMega(); }, { passive:true });
-  }
+  // Close mega on scroll (optional polish)
+  const megaLI  = document.querySelector('.has-mega');
+  const megaBtn = document.querySelector('.mega-toggle');
+  const closeMega = () => {
+    if (megaLI && megaBtn) {
+      megaLI.classList.remove('open');
+      megaBtn.setAttribute('aria-expanded','false');
+    }
+  };
+  window.addEventListener('scroll', closeMega, { passive:true });
 });
