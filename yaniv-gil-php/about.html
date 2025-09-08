@@ -20,17 +20,18 @@
     <link rel="stylesheet" href="css/header-premium.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/pw-rtl.css">
+    <link rel="stylesheet" href="css/pw-rtl.css?v=20250908a">
     <link rel="stylesheet" href="css/contact-rtl.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
-    <script src="js/header-shrink.js" defer></script>
+    <script src="js/header-shrink.js?v=20250908a" defer></script>
 </head>
 <body>
     <!-- Header -->
     <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
 
-    <header class="site-header" role="banner" aria-label="כותרת האתר">
+    <header class="site-header" id="siteHeader" role="banner" aria-label="כותרת האתר">
       <div class="header-top">
         <div class="container header-top-inner">
           <nav class="secondary-nav" aria-label="תפריט משני">
@@ -106,6 +107,9 @@
         </div>
       </div>
     </header>
+
+    <!-- sentinel tells JS when header left the top -->
+    <div id="headerSentinel" aria-hidden="true"></div>
 
     <!-- Page Header -->
     <section class="page-header">

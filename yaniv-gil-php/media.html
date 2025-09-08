@@ -27,13 +27,14 @@
     <link rel="stylesheet" href="css/header-premium.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/pw-rtl.css">
+    <link rel="stylesheet" href="css/pw-rtl.css?v=20250908a">
     <link rel="stylesheet" href="css/contact-rtl.css">
     <link rel="stylesheet" href="css/media-rtl.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header" id="siteHeader">
         <div class="header-top">
             <div class="container">
                 <div class="header-top-inner">
@@ -108,6 +109,9 @@
             </div>
         </div>
     </header>
+
+    <!-- sentinel tells JS when header left the top -->
+    <div id="headerSentinel" aria-hidden="true"></div>
 
     <!-- ===== HERO ===== -->
     <section class="articles-hero">
@@ -283,7 +287,7 @@
         </div>
     </footer>
 
-    <script src="js/header-shrink.js" defer></script>
+    <script src="js/header-shrink.js?v=20250908a" defer></script>
     <script src="js/media-filters.js" defer></script>
 </body>
 </html>

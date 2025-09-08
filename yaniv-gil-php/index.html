@@ -21,15 +21,17 @@
     <link rel="stylesheet" href="css/header-premium.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/pw-rtl.css">
+    <link rel="stylesheet" href="css/pw-rtl.css?v=20250908a">
     <link rel="stylesheet" href="css/contact-rtl.css">
     <link rel="stylesheet" href="css/home-rtl.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
+    <style>html::after{content:"THEME LOADED";position:fixed;inset:auto 8px 8px auto;background:#0a3d62;color:#fff;padding:4px 8px;border-radius:6px;z-index:99999;font:600 12px/1.2 Heebo,sans-serif}</style>
 </head>
 <body>
     <!-- Header -->
     <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
 
-    <header class="site-header" role="banner" aria-label="כותרת האתר">
+    <header class="site-header" id="siteHeader" role="banner" aria-label="כותרת האתר">
       <div class="header-top">
         <div class="container header-top-inner">
           <nav class="secondary-nav" aria-label="תפריט משני">
@@ -105,6 +107,9 @@
         </div>
         </div>
     </header>
+
+    <!-- sentinel tells JS when header left the top -->
+    <div id="headerSentinel" aria-hidden="true"></div>
 
     <!-- ===== HOME HERO (video background; text unchanged) ===== -->
     <main id="main">
@@ -328,8 +333,7 @@
         </div>
     </footer>
 
-    <script src="js/header.js"></script>
-    <script src="js/header-shrink.js" defer></script>
+    <script src="js/header-shrink.js?v=20250908a" defer></script>
     <script src="js/home.js" defer></script>
 </body>
 </html>
