@@ -119,20 +119,22 @@
 .logo a {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
-.logo img {
+.logo .logo-text {
   display: block;
-  height: 48px;
+  height: 96px; /* 2x larger */
   width: auto;
+  max-width: none;
+  object-fit: contain;
 }
 
-.logo .logo-image {
-  height: 48px;
-  width: 48px;
-  border-radius: var(--radius);
-  object-fit: cover;
+.logo .logo-main {
+  display: block;
+  height: 96px; /* 2x larger */
+  width: auto;
+  object-fit: contain;
 }
 
 /* Hamburger Menu */
@@ -368,13 +370,12 @@
     padding-block: var(--space-3);
   }
   
-  .logo img {
-    height: 40px;
+  .logo .logo-text {
+    height: 80px; /* 2x larger for mobile */
   }
   
-  .logo .logo-image {
-    height: 40px;
-    width: 40px;
+  .logo .logo-main {
+    height: 80px; /* 2x larger for mobile */
   }
   
   .site-search {
