@@ -68,7 +68,12 @@ img{ max-width:100%; height:auto; display:block; }
   box-shadow:var(--shadow-2);
   padding:22px;
   backdrop-filter:saturate(120%) blur(6px);
+  color: var(--ink);
 }
+.hero-card .kicker{ color:var(--primary); font-weight:700; letter-spacing:.02em; }
+.hero-card .meta-list{ color: var(--ink); }
+.hero-card .meta-list li{ color: var(--ink); }
+.hero-card .meta-list strong{ color: var(--ink); }
 .kicker{ color:var(--primary); font-weight:700; letter-spacing:.02em; }
 .section-sub{ color:var(--muted); }
 
