@@ -31,17 +31,12 @@
   margin:0 0 10px; 
   color:#fff; 
   text-shadow: 
-    0 0 10px rgba(255,255,255,0.5),
-    0 0 20px rgba(255,255,255,0.3),
-    0 0 30px rgba(255,255,255,0.2),
-    3px 3px 0 #fff,
     2px 2px 0 #fff,
     1px 1px 0 #fff,
     -1px -1px 0 #fff,
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
-    0 0 5px rgba(0,0,0,0.8);
-  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+    0 0 3px rgba(0,0,0,0.6);
 }
 .home-hero .lead{ 
   font-size:var(--fs-500); 
@@ -49,15 +44,11 @@
   opacity:.95; 
   color:#fff; 
   text-shadow: 
-    0 0 8px rgba(255,255,255,0.4),
-    0 0 16px rgba(255,255,255,0.2),
-    2px 2px 0 #fff,
     1px 1px 0 #fff,
     -1px -1px 0 #fff,
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
-    0 0 3px rgba(0,0,0,0.6);
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
+    0 0 2px rgba(0,0,0,0.5);
 }
 .home-hero .actions{ display:flex; flex-wrap:wrap; gap:10px; }
 .home-hero .btn.primary{ background:linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%); color:#fff; border-color:transparent; box-shadow:0 6px 14px rgba(10,61,98,.25); }

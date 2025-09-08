@@ -62,6 +62,29 @@ html[dir="rtl"] .site-header{ direction:rtl; }
 }
 .primary-nav a:hover::after{ width:100%; }
 
+/* mega menu */
+.has-mega{ position:relative; }
+.mega-toggle{
+  background:none; border:none; color:var(--ink); font-weight:500; text-decoration:none; 
+  padding:8px 0; position:relative; cursor:pointer; font-size:inherit; font-family:inherit;
+}
+.mega-toggle:hover::after{ width:100%; }
+.mega-toggle::after{
+  content:""; position:absolute; inset-inline-end:0; bottom:0; height:2px; width:0;
+  background:var(--primary); transition:width .22s ease;
+}
+.mega-panel{
+  position:absolute; inset-inline-end:0; top:calc(100% + 10px); display:none; min-width:720px;
+  background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow);
+  padding:24px; z-index:1000;
+}
+.has-mega.open > .mega-panel{ display:block; }
+.mega-panel .grid{ gap:18px; }
+.mega-panel ul{ list-style:none; margin:0; padding:0; }
+.mega-panel li{ margin:6px 0; }
+.mega-panel a{ color:var(--ink); text-decoration:none; padding:4px 0; display:block; }
+.mega-panel a:hover{ color:var(--primary); text-decoration:underline; }
+
 /* hamburger (mobile) */
 .hamburger{ display:none; width:44px; height:44px; border:1px solid var(--border); border-radius:10px; background:#fff; }
 .hamburger span, .hamburger::before, .hamburger::after{
@@ -78,6 +101,9 @@ html[dir="rtl"] .site-header{ direction:rtl; }
     padding:24px; box-shadow:var(--shadow); z-index:1100; overflow:auto; }
   body.nav-open .primary-nav{ transform:translateX(0); }
   .primary-nav > ul{ flex-direction:column; gap:14px; }
+  /* Mega panels become inline lists in the drawer */
+  .mega-panel{ position:static; display:block; border:none; box-shadow:none; padding:0; min-width:auto; }
+  .has-mega.open > .mega-panel{ display:block; }
 }
 
 /* ===== compact state on scroll ===== */
