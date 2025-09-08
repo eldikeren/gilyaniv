@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>צור קשר - משרד עורכי דין יניב גיל</title>
     <meta name="description" content="צרו קשר עם משרד עו״ד יניב גיל - ייעוץ ראשוני חינם, טלפון, אימייל וכתובת">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yanivgil.co.il/contact.html">
     <meta property="og:title" content="צור קשר - משרד עו״ד יניב גיל">
     <meta property="og:description" content="ייעוץ ראשוני חינם. פרטי יצירת קשר וכתובת המשרד.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="צור קשר - משרד עו״ד יניב גיל">
-    <meta name="twitter:description" content="ייעוץ ראשוני חינם. פרטי יצירת קשר וכתובת המשרד.">
-    <meta name="twitter:image" content="images/logo.png">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yanivgil.co.il/contact.html">
+    <meta property="twitter:title" content="צור קשר - משרד עו״ד יניב גיל">
+    <meta property="twitter:description" content="ייעוץ ראשוני חינם. פרטי יצירת קשר וכתובת המשרד.">
+    <meta property="twitter:image" content="https://www.yanivgil.co.il/images/logo.png">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
@@ -20,330 +28,298 @@
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/pw-rtl.css">
     <link rel="stylesheet" href="css/contact-rtl.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    <script src="js/header.js" defer></script>
 </head>
 <body>
     <!-- Header -->
-    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
-
-    <header class="site-header" role="banner" aria-label="כותרת האתר">
-      <div class="header-top">
-        <div class="container header-top-inner">
-          <nav class="secondary-nav" aria-label="תפריט משני">
-            <ul>
-              <li><a href="articles.html">מאמרים</a></li>
-              <li><a href="media.html">תקשורת</a></li>
-              <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
-              <li><a href="about.html">אודות המשרד</a></li>
-            </ul>
-          </nav>
-          <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
-            <label class="visually-hidden" for="q">חיפוש באתר</label>
-            <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
-            <button type="submit" class="button small">חפש</button>
-            <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
-          </form>
-        </div>
-      </div>
-
-      <div class="header-main">
-        <div class="container header-main-inner">
-                <div class="logo">
-            <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
-              <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-main">
-              <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
-            </a>
-          </div>
-
-          <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-
-          <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
-            <ul>
-              <li>
-                <a href="attorneys.html">עורכי דין</a>
-              </li>
-              <li class="has-mega">
-                <button class="mega-toggle" aria-haspopup="true" aria-expanded="false">תחומי התמחות</button>
-                <div class="mega-panel" role="region" aria-label="תחומי התמחות">
-                  <div class="grid cols-3">
-                    <ul>
-                      <li><a href="practice-areas.html#family">דיני משפחה</a></li>
-                      <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
-                      <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
-                      <li><a href="practice-areas.html#real-estate">מקרקעין</a></li>
-                      <li><a href="practice-areas.html#commercial">משפט מסחרי</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="practice-areas.html#labor">דיני עבודה</a></li>
-                      <li><a href="practice-areas.html#inheritance">דיני ירושה</a></li>
-                      <li><a href="practice-areas.html#contracts">דיני חוזים</a></li>
-                    </ul>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-inner">
+                    <nav class="secondary-nav">
+                        <ul>
+                            <li><a href="articles.html">מאמרים</a></li>
+                            <li><a href="media.html">תקשורת</a></li>
+                            <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
+                            <li><a href="about.html">אודות המשרד</a></li>
+                        </ul>
+                    </nav>
+                    <div class="site-search">
+                        <form action="search.html" method="get">
+                            <input type="search" name="q" placeholder="חיפוש באתר" aria-label="חיפוש באתר">
+                            <button type="submit">חפש</button>
+                        </form>
                     </div>
                 </div>
-              </li>
-              <li>
-                    <a href="articles.html">מאמרים</a>
-              </li>
-              <li>
-                    <a href="media.html">תקשורת</a>
-              </li>
-              <li>
-                    <a href="contact.html" class="active">צור קשר</a>
-              </li>
-            </ul>
-                </nav>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-inner">
+                    <div class="logo">
+                        <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
+                            <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-main">
+                            <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
+                        </a>
+                    </div>
+                    <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    <nav class="primary-nav" id="primary-nav">
+                        <ul>
+                            <li><a href="attorneys.html">עורכי דין</a></li>
+                            <li class="has-mega">
+                                <button class="mega-toggle" aria-expanded="false">תחומי התמחות</button>
+                                <div class="mega-panel">
+                                    <div class="grid cols-4">
+                                        <div>
+                                            <ul>
+                                                <li><a href="practice-areas.html#family">דיני משפחה</a></li>
+                                                <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
+                                                <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
+                                                <li><a href="practice-areas.html#execution">הוצאה לפועל</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="practice-areas.html#real-estate">מקרקעין</a></li>
+                                                <li><a href="practice-areas.html#commercial">משפט מסחרי</a></li>
+                                                <li><a href="practice-areas.html#labor">דיני עבודה</a></li>
+                                                <li><a href="practice-areas.html#inheritance">דיני ירושה</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="practice-areas.html#contracts">דיני חוזים</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="articles.html">מאמרים</a></li>
+                            <li><a href="media.html">תקשורת</a></li>
+                            <li><a href="contact.html">צור קשר</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">צור קשר</h1>
-                <p class="page-subtitle">אנחנו כאן לעזור לכם - ייעוץ ראשוני חינם</p>
-                <div class="page-header-decoration"></div>
+    <!-- ===== HERO ===== -->
+    <section class="contact-hero">
+        <div class="container inner">
+            <div>
+                <h1>צור קשר</h1>
+                <p class="lead">אנחנו כאן לעזור לכם - ייעוץ ראשוני חינם</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">פרטי התקשרות</h2>
-                <p class="section-subtitle">אנחנו זמינים עבורכם בכל עת - צרו קשר עכשיו לייעוץ ראשוני חינם</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>טלפון</h3>
-                    <p>התקשרו עכשיו לייעוץ ראשוני חינם עם עורך דין מנוסה. הצוות שלנו זמין עבורכם בכל שעות הפעילות.</p>
-                    <ul class="service-list">
-                        <li>טלפון ראשי: 03-609-2414</li>
-                        <li>נייד: 054-8184581</li>
-                        <li>פקס: 03-609-2413</li>
-                        <li>שעות פעילות: א'-ה' 9:00-18:00</li>
+            <div class="hero-card">
+                <div class="card-body">
+                    <p class="kicker">פרטי התקשרות</p>
+                    <ul class="meta-list">
+                        <li><strong>טלפון:</strong> 03-609-2414</li>
+                        <li><strong>נייד:</strong> 054-8184581</li>
+                        <li><strong>פקס:</strong> 03-609-2413</li>
+                        <li><strong>שעות פעילות:</strong> א'-ה' 9:00-18:00</li>
                     </ul>
-                    <a href="tel:03-609-2414" class="service-btn">התקשר עכשיו</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>אימייל</h3>
-                    <p>שלחו לנו הודעה באימייל ונחזור אליכם בהקדם האפשרי. אנו מתחייבים לענות לכל פנייה תוך 24 שעות.</p>
-                    <ul class="service-list">
-                        <li>אימייל: ynivgil@gmail.com</li>
-                        <li>זמן תגובה: עד 24 שעות</li>
-                    </ul>
-                    <a href="mailto:ynivgil@gmail.com" class="service-btn">שלח אימייל</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>כתובת המשרד</h3>
-                    <p>המשרד ממוקם במרכז תל אביב, בקלות נגישות בתחבורה ציבורית וחניה. בואו לבקר אותנו במשרד.</p>
-                    <ul class="service-list">
-                        <li>מגדל "WE-TLV"</li>
-                        <li>דרך מנחם בגין 150</li>
-                        <li>קומה 7, תל-אביב</li>
-                        <li>חניה חינם ללקוחות</li>
-                    </ul>
-                    <a href="#map" class="service-btn">הצג במפה</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>שעות פעילות</h3>
-                    <p>המשרד פתוח בימים ראשון עד חמישי, עם אפשרות לקביעת פגישות גם בשעות הערב ובסופי שבוע.</p>
-                    <ul class="service-list">
-                        <li>ראשון-חמישי: 9:00-18:00</li>
-                        <li>שישי: 9:00-13:00</li>
-                        <li>שבת: סגור</li>
-                        <li>פגישות ערב: בתיאום מראש</li>
-                    </ul>
-                    <a href="#appointment" class="service-btn">קבע פגישה</a>
+                    <div class="actions">
+                        <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
+                        <a class="btn" href="mailto:ynivgil@gmail.com">שלח אימייל</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">שלחו לנו הודעה</h2>
-                <p class="section-subtitle">מלאו את הטופס ונחזור אליכם בהקדם האפשרי</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>למה לבחור בנו?</h3>
-                    <div class="contact-item">
-                        <i></i>
-                        <div>
-                            <h4>ייעוץ ראשוני חינם</h4>
-                            <p>אנו מציעים ייעוץ ראשוני חינם לכל לקוח חדש</p>
+    <!-- ===== CONTENT ===== -->
+    <section class="contact-wrap">
+        <div class="container contact-grid">
+            <!-- עמודת מידע/שאלות נפוצות -->
+            <div>
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">טלפון</h2>
+                        <p>התקשרו עכשיו לייעוץ ראשוני חינם עם עורך דין מנוסה. הצוות שלנו זמין עבורכם בכל שעות הפעילות.</p>
+                        <ul class="meta-list">
+                            <li>טלפון ראשי: 03-609-2414</li>
+                            <li>נייד: 054-8184581</li>
+                            <li>פקס: 03-609-2413</li>
+                            <li>שעות פעילות: א'-ה' 9:00-18:00</li>
+                        </ul>
+                        <div class="actions">
+                            <a class="btn primary" href="tel:03-609-2414">התקשר עכשיו</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i></i>
-                        <div>
-                            <h4>עורכי דין מנוסים</h4>
-                            <p>צוות עורכי דין מנוסים עם ניסיון של למעלה מ-15 שנה</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i></i>
-                        <div>
-                            <h4>גישה אישית</h4>
-                            <p>אנו מאמינים בגישה אישית וחמה לכל לקוח</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i></i>
-                        <div>
-                            <h4>זמינות מלאה</h4>
-                            <p>הצוות שלנו זמין עבורכם בכל שעות הפעילות</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>טופס יצירת קשר</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">שם מלא *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">טלפון *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">אימייל *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">נושא הפנייה *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">בחרו נושא</option>
-                                <option value="family">דיני משפחה</option>
-                                <option value="bankruptcy">חדלות פירעון</option>
-                                <option value="civil">סדר דין אזרחי</option>
-                                <option value="real-estate">מקרקעין</option>
-                                <option value="commercial">משפט מסחרי</option>
-                                <option value="labor">דיני עבודה</option>
-                                <option value="consultation">ייעוץ כללי</option>
-                                <option value="other">אחר</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="urgency">דחיפות</label>
-                            <select id="urgency" name="urgency">
-                                <option value="normal">רגיל</option>
-                                <option value="urgent">דחוף</option>
-                                <option value="very-urgent">דחוף מאוד</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="preferred-contact">אופן התקשרות מועדף</label>
-                            <select id="preferred-contact" name="preferred-contact">
-                                <option value="phone">טלפון</option>
-                                <option value="email">אימייל</option>
-                                <option value="whatsapp">ווטסאפ</option>
-                                <option value="meeting">פגישה במשרד</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">תיאור הבעיה *</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="תארו את הבעיה המשפטית שלכם..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <span class="checkmark"></span>
-                                אני מסכים למדיניות הפרטיות ולקבלת עדכונים
-                            </label>
-                        </div>
-                        <button type="submit" class="submit-btn">שלח הודעה</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                </article>
 
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">אימייל</h2>
+                        <p>שלחו לנו הודעה באימייל ונחזור אליכם בהקדם האפשרי. אנו מתחייבים לענות לכל פנייה תוך 24 שעות.</p>
+                        <ul class="meta-list">
+                            <li>אימייל: ynivgil@gmail.com</li>
+                            <li>זמן תגובה: עד 24 שעות</li>
+                        </ul>
+                        <div class="actions">
+                            <a class="btn primary" href="mailto:ynivgil@gmail.com">שלח אימייל</a>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">כתובת המשרד</h2>
+                        <p>המשרד ממוקם במרכז תל אביב, בקלות נגישות בתחבורה ציבורית וחניה. בואו לבקר אותנו במשרד.</p>
+                        <ul class="meta-list">
+                            <li>מגדל "WE-TLV"</li>
+                            <li>דרך מנחם בגין 150</li>
+                            <li>קומה 7, תל-אביב</li>
+                            <li>חניה חינם ללקוחות</li>
+                        </ul>
+                        <div class="actions">
+                            <a class="btn" href="#map">הצג במפה</a>
+                        </div>
+                    </div>
+                </article>
 
-    <!-- FAQ Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">שאלות נפוצות</h2>
-                <p class="section-subtitle">תשובות לשאלות נפוצות על השירות שלנו</p>
+                <section class="card faq">
+                    <div class="card-body">
+                        <h2 class="section-title">שאלות נפוצות</h2>
+                        <details>
+                            <summary>האם הייעוץ הראשוני באמת חינם?</summary>
+                            <p>כן, אנו מציעים ייעוץ ראשוני חינם לכל לקוח חדש. הייעוץ כולל הערכת המקרה והמלצות ראשוניות ללא עלות.</p>
+                        </details>
+                        <details>
+                            <summary>כמה זמן לוקח לקבל תשובה?</summary>
+                            <p>אנו מתחייבים לענות לכל פנייה תוך 24 שעות. במקרים דחופים, נחזור אליכם תוך מספר שעות.</p>
+                        </details>
+                        <details>
+                            <summary>האם אפשר לקבוע פגישה בשעות הערב?</summary>
+                            <p>כן, אנו מציעים פגישות בשעות הערב בתיאום מראש. פגישות כאלה מתקיימות בדרך כלל בין 18:00-20:00.</p>
+                        </details>
+                        <details>
+                            <summary>האם אתם מטפלים בתיקים בכל הארץ?</summary>
+                            <p>כן, אנו מטפלים בתיקים בכל רחבי הארץ. המשרד ממוקם בתל אביב, אך אנו זמינים ללקוחות מכל מקום.</p>
+                        </details>
+                    </div>
+                </section>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>האם הייעוץ הראשוני באמת חינם?</h3>
-                    <p>כן, אנו מציעים ייעוץ ראשוני חינם לכל לקוח חדש. הייעוץ כולל הערכת המקרה והמלצות ראשוניות ללא עלות.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>כמה זמן לוקח לקבל תשובה?</h3>
-                    <p>אנו מתחייבים לענות לכל פנייה תוך 24 שעות. במקרים דחופים, נחזור אליכם תוך מספר שעות.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>האם אפשר לקבוע פגישה בשעות הערב?</h3>
-                    <p>כן, אנו מציעים פגישות בשעות הערב בתיאום מראש. פגישות כאלה מתקיימות בדרך כלל בין 18:00-20:00.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>האם אתם מטפלים בתיקים בכל הארץ?</h3>
-                    <p>כן, אנו מטפלים בתיקים בכל רחבי הארץ. המשרד ממוקם בתל אביב, אך אנו זמינים ללקוחות מכל מקום.</p>
-                </div>
+
+            <!-- עמודת טופס -->
+            <div>
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">שלחו לנו הודעה</h2>
+                        <form id="contact-form" action="#" method="post" novalidate>
+                            <div class="form-row">
+                                <label for="name">שם מלא *</label>
+                                <input id="name" name="name" type="text" required>
+                            </div>
+                            <div class="form-row inline">
+                                <div>
+                                    <label for="phone">טלפון *</label>
+                                    <input id="phone" name="phone" type="tel" required>
+                                </div>
+                                <div>
+                                    <label for="email">אימייל *</label>
+                                    <input id="email" name="email" type="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="subject">נושא *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">בחרו נושא</option>
+                                    <option value="family">דיני משפחה</option>
+                                    <option value="bankruptcy">חדלות פירעון</option>
+                                    <option value="civil">סדר דין אזרחי</option>
+                                    <option value="real-estate">מקרקעין</option>
+                                    <option value="commercial">משפט מסחרי</option>
+                                    <option value="labor">דיני עבודה</option>
+                                    <option value="consultation">ייעוץ כללי</option>
+                                    <option value="other">אחר</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="urgency">דחיפות</label>
+                                <select id="urgency" name="urgency">
+                                    <option value="normal">רגיל</option>
+                                    <option value="urgent">דחוף</option>
+                                    <option value="very-urgent">דחוף מאוד</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="preferred-contact">אופן התקשרות מועדף</label>
+                                <select id="preferred-contact" name="preferred-contact">
+                                    <option value="phone">טלפון</option>
+                                    <option value="email">אימייל</option>
+                                    <option value="whatsapp">ווטסאפ</option>
+                                    <option value="meeting">פגישה במשרד</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="message">תיאור הבעיה *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="תארו את הבעיה המשפטית שלכם..."></textarea>
+                            </div>
+                            <div class="form-row">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    אני מסכים למדיניות הפרטיות ולקבלת עדכונים
+                                </label>
+                            </div>
+                            <div class="actions">
+                                <button class="btn primary" type="submit">שלח הודעה</button>
+                            </div>
+                        </form>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-                            <div class="footer-logo-text">
-                        <h3>יניב גיל</h3>
-                        <p>משרד עו"ד ונוטריון</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="grid cols-4">
+                    <div class="footer-section">
+                        <h3>משרד עו"ד יניב גיל</h3>
+                        <p>מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב 6492105, ישראל</p>
+                        <p>טלפון: 03-609-2414 | נייד: 054-8184581 | פקס: 03-609-2413</p>
                     </div>
-            <p class="footer-text">משרד עורכי דין יניב גיל - מקצועיות, אמינות ומצוינות</p>
-            <div class="footer-links">
-                <a href="index.html">דף הבית</a>
-                <a href="about.html">אודות</a>
-                <a href="practice-areas.html">תחומי התמחות</a>
-                <a href="attorneys.html">עורכי דין</a>
-                <a href="articles.html">מאמרים</a>
-                <a href="media.html">תקשורת</a>
-                <a href="contact.html">צור קשר</a>
+                    <div class="footer-section">
+                        <h3>תחומי התמחות</h3>
+                        <ul>
+                            <li><a href="practice-areas.html#family">דיני משפחה</a></li>
+                            <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
+                            <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
+                            <li><a href="practice-areas.html#execution">הוצאה לפועל</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>שירותים</h3>
+                        <ul>
+                            <li><a href="attorneys.html">עורכי דין</a></li>
+                            <li><a href="articles.html">מאמרים</a></li>
+                            <li><a href="media.html">תקשורת</a></li>
+                            <li><a href="contact.html">צור קשר</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>יצירת קשר</h3>
+                        <p><a href="contact.html" class="btn primary">לתיאום פגישה</a></p>
+                    </div>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 משרד עורכי דין יניב גיל. כל הזכויות שמורות.</p>
+                <div class="flex">
+                    <p>&copy; 2024 משרד עו"ד יניב גיל. כל הזכויות שמורות.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    
+    <script src="js/header.js" defer></script>
 </body>
 </html>
