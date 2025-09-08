@@ -116,10 +116,23 @@
 }
 
 /* Logo */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
 .logo img {
   display: block;
   height: 48px;
   width: auto;
+}
+
+.logo .logo-image {
+  height: 48px;
+  width: 48px;
+  border-radius: var(--radius);
+  object-fit: cover;
 }
 
 /* Hamburger Menu */
@@ -357,6 +370,11 @@
   
   .logo img {
     height: 40px;
+  }
+  
+  .logo .logo-image {
+    height: 40px;
+    width: 40px;
   }
   
   .site-search {
