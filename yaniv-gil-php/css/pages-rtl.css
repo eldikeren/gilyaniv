@@ -1,0 +1,83 @@
+/* ===== Shared (RTL, theme-consistent) ===== */
+:root{
+  --primary:#0a3d62; --primary-dark:#072a45; --primary-tint:#e8f1f7;
+  --ink:#0b0d12; --muted:#4b5563;
+  --surface:#fff; --surface-soft:#f6f7f9; --border:#e6e7eb;
+  --shadow-1:0 1px 2px rgba(0,0,0,.06); --shadow-2:0 8px 22px rgba(0,0,0,.10);
+  --radius:14px; --radius-sm:10px; --gutter:18px;
+}
+html{ direction:rtl; }
+.container{ width:100%; max-width:1200px; margin-inline:auto; padding-inline:24px; }
+.card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+       box-shadow:var(--shadow-1), var(--shadow-2); overflow:hidden; }
+.card-body{ padding:16px; }
+.kicker{ color:var(--primary); font-weight:700; margin:0 0 6px; }
+.btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px;
+      border:1px solid var(--border); border-radius:10px; background:#fff; color:var(--ink); }
+.btn.primary{ background:linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+              color:#fff; border-color:transparent; box-shadow:0 6px 14px rgba(10,61,98,.25); }
+.section{ padding-block:28px; background:linear-gradient(0deg, var(--surface) 0%, var(--surface-soft) 100%); }
+.section-header{ margin:0 0 12px; }
+.section-header h1,.section-header h2{ margin:0 0 6px; }
+.meta{ color:var(--muted); font-size:14px; }
+
+/* ===== /attorneys.html ===== */
+.team-hero{
+  color:#fff;
+  background:
+    radial-gradient(1200px 420px at 80% -10%, rgba(255,255,255,.12), transparent 60%),
+    linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary) 100%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-block:36px;
+}
+.team-hero .inner{ display:grid; gap:8px; }
+.team-wrap{ padding-block:24px; }
+.team-grid{ display:grid; gap:var(--gutter); grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:980px){ .team-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px){ .team-grid{ grid-template-columns:1fr; } }
+
+.lawyer-card{ display:flex; flex-direction:column; height:100%; }
+.lawyer-media{ aspect-ratio: 4/3; background: #e9eef3; display:grid; place-items:center; overflow:hidden; }
+.lawyer-media img{ width:100%; height:100%; object-fit:cover; }
+.lawyer-body{ padding:16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.lawyer-name{ font-size:20px; margin:0; }
+.lawyer-title{ color:var(--muted); margin:0; }
+.lawyer-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+.lawyer-tag{ background:var(--primary-tint); color:var(--primary-dark); border-radius:999px; padding:3px 10px; font-size:12px; }
+.lawyer-actions{ margin-top:auto; display:flex; gap:10px; }
+
+/* "About our approach" and contact block on this page */
+.team-approach{ display:grid; gap:var(--gutter); grid-template-columns:1.2fr .8fr; }
+@media (max-width:980px){ .team-approach{ grid-template-columns:1fr; } }
+
+/* ===== /contact.html ===== */
+.contact-hero{
+  color:#fff;
+  background:
+    radial-gradient(1200px 420px at 80% -10%, rgba(255,255,255,.12), transparent 60%),
+    linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary) 100%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-block:36px;
+}
+.contact-wrap{ padding-block:28px; }
+.contact-grid{ display:grid; gap:var(--gutter); grid-template-columns:1.1fr .9fr; }
+@media (max-width:980px){ .contact-grid{ grid-template-columns:1fr; } }
+
+.contact-cta.card{ box-shadow: var(--shadow-2); }
+.info-list{ margin:0; padding:0; list-style:none; }
+.info-list li+li{ margin-top:6px; }
+
+/* Form presence & focus */
+.form-row{ display:grid; gap:8px; }
+.form-row.inline{ grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:560px){ .form-row.inline{ grid-template-columns:1fr; } }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea{
+  width:100%; padding:12px; border:1px solid var(--border); border-radius:12px; background:#fff;
+  box-shadow:var(--shadow-1); transition: border-color .15s ease, box-shadow .15s ease;
+}
+input:focus, select:focus, textarea:focus{
+  outline:none; border-color:var(--primary); box-shadow:var(--shadow-1), 0 0 0 3px rgba(10,61,98,.2);
+}
+.details.faq details{ border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:#fff; box-shadow:var(--shadow-1); }
+.details.faq details+details{ margin-top:12px; }
+.details.faq summary{ cursor:pointer; font-weight:700; }
