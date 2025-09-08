@@ -1,5 +1,39 @@
 @import "./base.css";
 
+/* Professional Arrow Icons */
+.arrow-icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--brand-accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--fs-300);
+  transition: all var(--transition-fast);
+  padding: var(--space-2) 0;
+}
+
+.article-link:hover {
+  color: var(--brand-accent-2);
+  text-decoration: underline;
+}
+
+.article-link:hover .arrow-icon {
+  transform: translateX(-2px);
+  stroke-width: 2;
+}
+
 /* Section Spacing */
 section {
   padding: var(--space-9) 0;
