@@ -504,8 +504,15 @@
         </div>
     </footer>
 
-    <script src="js/header.js" defer></script>
     <script src="js/header-shrink.js" defer></script>
     <script src="js/articles-filters.js" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const h = document.getElementById('siteHeader');
+      const root = document.documentElement;
+      const set = ()=> root.style.setProperty('--header-h', h?.offsetHeight? h.offsetHeight+'px' : '64px');
+      set(); addEventListener('resize', set); addEventListener('orientationchange', set);
+    });
+    </script>
 </body>
 </html>
