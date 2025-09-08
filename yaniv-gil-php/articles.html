@@ -26,26 +26,80 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+    <header class="site-header" role="banner" aria-label="כותרת האתר">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <nav class="secondary-nav" aria-label="תפריט משני">
+            <ul>
+              <li><a href="articles.html">מאמרים</a></li>
+              <li><a href="media.html">תקשורת</a></li>
+              <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
+              <li><a href="about.html">אודות המשרד</a></li>
+            </ul>
+          </nav>
+          <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
+            <label class="visually-hidden" for="q">חיפוש באתר</label>
+            <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
+            <button type="submit" class="button small">חפש</button>
+            <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="header-main">
+        <div class="container header-main-inner">
                                        <div class="logo">
-                           <img src="images/logo.png" alt="לוגו משרד עו"ד יניב גיל" class="logo-img">
-                           <div class="brand-logo-text">
-                               <h1>יניב גיל</h1>
-                               <p>משרד עו"ד ונוטריון</p>
+            <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
+              <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-main">
+              <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
+            </a>
+          </div>
+
+          <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
+            <ul>
+              <li>
+                <a href="attorneys.html">עורכי דין</a>
+              </li>
+              <li class="has-mega">
+                <button class="mega-toggle" aria-haspopup="true" aria-expanded="false">תחומי התמחות</button>
+                <div class="mega-panel" role="region" aria-label="תחומי התמחות">
+                  <div class="grid cols-3">
+                    <ul>
+                      <li><a href="practice-areas.html#family">דיני משפחה</a></li>
+                      <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
+                      <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
+                      <li><a href="practice-areas.html#real-estate">מקרקעין</a></li>
+                      <li><a href="practice-areas.html#commercial">משפט מסחרי</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="practice-areas.html#labor">דיני עבודה</a></li>
+                      <li><a href="practice-areas.html#inheritance">דיני ירושה</a></li>
+                      <li><a href="practice-areas.html#contracts">דיני חוזים</a></li>
+                    </ul>
                            </div>
                        </div>
-                <div class="nav-toggle"><span></span><span></span><span></span></div>
-                <nav class="nav" id="nav-menu">
-                    <a href="index.html" class="nav-link">דף הבית</a>
-                    <a href="about.html" class="nav-link">אודות</a>
-                    <a href="practice-areas.html" class="nav-link">תחומי התמחות</a>
-                    <a href="attorneys.html" class="nav-link">עורכי דין</a>
-                    <a href="articles.html" class="nav-link active">מאמרים</a>
-                    <a href="media.html" class="nav-link">תקשורת</a>
-                    <a href="index.html#testimonials" class="nav-link">ביקורות לקוחות</a>
-                    <a href="contact.html" class="nav-link">צור קשר</a>
+              </li>
+              <li>
+                <a href="articles.html">מאמרים</a>
+              </li>
+              <li>
+                    <a href="media.html">תקשורת</a>
+              </li>
+              <li>
+                    <a href="contact.html">צור קשר</a>
+              </li>
+            </ul>
                 </nav>
             </div>
         </div>
