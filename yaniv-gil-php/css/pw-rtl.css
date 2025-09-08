@@ -39,6 +39,11 @@ video{
   width:100%; height:auto; border-radius:14px; 
   box-shadow:var(--shadow); background:#fafafa;
 }
+.video-articles{ 
+  width:100%; height:auto; border-radius:16px; 
+  box-shadow:var(--shadow); background:#fafafa;
+  min-height:300px; object-fit:cover;
+}
 .video-container{ position:relative; overflow:hidden; }
 .video-overlay{ 
   position:absolute; inset:0; background:rgba(0,0,0,0.1); 
@@ -51,6 +56,15 @@ video{
 }
 .hero-image video:hover{
   transform: scale(1.02);
+}
+
+/* Articles video specific styling */
+.about-image video{
+  transition: all 0.3s ease;
+}
+.about-image video:hover{
+  transform: scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px; }
 
