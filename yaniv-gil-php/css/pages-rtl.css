@@ -18,7 +18,32 @@ html{ direction:rtl; }
       border:1px solid var(--border); border-radius:10px; background:#fff; color:var(--ink); }
 .btn.primary{ background:linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
               color:#fff; border-color:transparent; box-shadow:0 6px 14px rgba(10,61,98,.25); }
-.section{ padding-block:28px; background:linear-gradient(0deg, var(--surface) 0%, var(--surface-soft) 100%); }
+.section{ 
+  padding-block:28px; 
+  background:
+    radial-gradient(circle at 25% 75%, rgba(10,61,98,0.025) 0%, transparent 45%),
+    radial-gradient(circle at 75% 25%, rgba(10,61,98,0.02) 0%, transparent 45%),
+    linear-gradient(140deg, rgba(10,61,98,0.008) 0%, transparent 30%, transparent 70%, rgba(10,61,98,0.008) 100%),
+    linear-gradient(0deg, var(--surface) 0%, var(--surface-soft) 100%); 
+  position: relative;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(50deg, transparent 35%, rgba(10,61,98,0.006) 45%, transparent 55%),
+    linear-gradient(-50deg, transparent 35%, rgba(10,61,98,0.004) 45%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section > * {
+  position: relative;
+  z-index: 1;
+}
 .section-header{ margin:0 0 12px; }
 .section-header h1,.section-header h2{ margin:0 0 6px; }
 .meta{ color:var(--muted); font-size:14px; }
