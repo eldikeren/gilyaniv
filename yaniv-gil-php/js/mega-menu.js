@@ -58,15 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
     closeAllMegaPanels();
   });
   
-  // Handle mobile menu toggle
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  // Handle mobile menu toggle (hamburger)
+  const hamburger = document.querySelector('.hamburger');
+  const primaryNav = document.querySelector('#primary-nav');
   
-  if (mobileMenuToggle && mobileMenu) {
-    mobileMenuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('open');
-      mobileMenu.classList.toggle('open');
-      mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  console.log('Hamburger found:', !!hamburger);
+  console.log('Primary nav found:', !!primaryNav);
+  
+  if (hamburger && primaryNav) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.contains('open');
+      primaryNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      
+      console.log('Mobile menu toggled, isOpen:', !isOpen);
       
       // Close mega panels when mobile menu opens
       if (!isOpen) {
