@@ -1,4 +1,17 @@
 /* ===== Shared (RTL, theme-consistent) - Corporate Blue Outline Cards ===== */
+
+/* Consistent white text for all blue hero sections */
+.hero, .team-hero, .about-hero, .contact-hero, [class*="-hero"] {
+  color: #fff !important;
+}
+.hero h1, .hero h2, .hero p, .hero .meta,
+.team-hero h1, .team-hero h2, .team-hero p, .team-hero .meta,
+.about-hero h1, .about-hero h2, .about-hero p, .about-hero .meta,
+.contact-hero h1, .contact-hero h2, .contact-hero p, .contact-hero .meta,
+[class*="-hero"] h1, [class*="-hero"] h2, [class*="-hero"] p, [class*="-hero"] .meta {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
 :root{
   --primary:#0a3d62; --primary-dark:#072a45; --primary-tint:#e8f1f7;
   --ink:#0b0d12; --muted:#4b5563;
@@ -57,6 +70,10 @@ html{ direction:rtl; }
   border-bottom:1px solid rgba(255,255,255,.08);
   padding-block:36px;
 }
+.team-hero h1, .team-hero h2, .team-hero p, .team-hero .meta {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
 .team-hero .inner{ display:grid; gap:8px; }
 .team-wrap{ padding-block:24px; }
 .team-grid{ display:grid; gap:var(--gutter); grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -87,6 +104,10 @@ html{ direction:rtl; }
   border-bottom:1px solid rgba(255,255,255,.08);
   padding-block:36px;
 }
+.about-hero h1, .about-hero h2, .about-hero p, .about-hero .meta {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
 .about-wrap{ padding-block:28px; }
 .about-grid{ display:grid; gap:var(--gutter); grid-template-columns:1fr; }
 .about-section{ margin-bottom:32px; }
@@ -103,6 +124,10 @@ html{ direction:rtl; }
     linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary) 100%);
   border-bottom:1px solid rgba(255,255,255,.08);
   padding-block:36px;
+}
+.contact-hero h1, .contact-hero h2, .contact-hero p, .contact-hero .meta {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .contact-wrap{ padding-block:28px; }
 .contact-grid{ display:grid; gap:var(--gutter); grid-template-columns:1.1fr .9fr; }
