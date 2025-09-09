@@ -161,7 +161,9 @@ video{
   box-shadow:0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08);
   padding: 16px; display: none; z-index: 5000;
 }
-.has-mega.open > .mega-panel{ display:block; }
+.has-mega.open > .mega-panel{ display:block !important; }
+.mega-toggle{ cursor: pointer; background: none; border: none; color: inherit; font: inherit; }
+.mega-toggle:hover{ color: var(--primary); }
 
 #headerSentinel{ height: 1px; } /* critical so the observer can trigger */
 

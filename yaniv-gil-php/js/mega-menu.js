@@ -1,7 +1,10 @@
 // Mega Menu functionality
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Mega menu script loaded');
   const megaToggles = document.querySelectorAll('.mega-toggle');
   const megaPanels = document.querySelectorAll('.mega-panel');
+  console.log('Found mega toggles:', megaToggles.length);
+  console.log('Found mega panels:', megaPanels.length);
   
   // Close all mega panels
   function closeAllMegaPanels() {
