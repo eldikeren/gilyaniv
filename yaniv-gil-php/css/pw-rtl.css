@@ -40,7 +40,9 @@ html,body{
 .section--compact{ padding-block: var(--section-pad-compact); }
 
 /* Cards (visible depth) */
-.card{ background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow-1), var(--shadow-2); overflow:hidden; }
+.card{ background:#fff; border:2px solid var(--primary); border-radius:14px; box-shadow:var(--shadow-1), var(--shadow-2), 0 0 0 1px rgba(10,61,98,0.1); overflow:hidden; 
+       transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.card:hover{ border-color: var(--primary-dark); box-shadow: var(--shadow-1), var(--shadow-2), 0 0 0 2px rgba(10,61,98,0.2); }
 .card-body{ padding: var(--card-pad); }
 
 /* Headings: reduce big gaps */

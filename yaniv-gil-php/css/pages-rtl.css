@@ -1,4 +1,4 @@
-/* ===== Shared (RTL, theme-consistent) ===== */
+/* ===== Shared (RTL, theme-consistent) - Corporate Blue Outline Cards ===== */
 :root{
   --primary:#0a3d62; --primary-dark:#072a45; --primary-tint:#e8f1f7;
   --ink:#0b0d12; --muted:#4b5563;
@@ -8,8 +8,10 @@
 }
 html{ direction:rtl; }
 .container{ width:100%; max-width:1200px; margin-inline:auto; padding-inline:24px; }
-.card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius);
-       box-shadow:var(--shadow-1), var(--shadow-2); overflow:hidden; }
+.card{ background:#fff; border:2px solid var(--primary); border-radius:var(--radius);
+       box-shadow:var(--shadow-1), var(--shadow-2), 0 0 0 1px rgba(10,61,98,0.1); overflow:hidden; 
+       transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.card:hover{ border-color: var(--primary-dark); box-shadow: var(--shadow-1), var(--shadow-2), 0 0 0 2px rgba(10,61,98,0.2); }
 .card-body{ padding:16px; }
 .kicker{ color:var(--primary); font-weight:700; margin:0 0 6px; }
 .btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px;
@@ -36,7 +38,8 @@ html{ direction:rtl; }
 @media (max-width:980px){ .team-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:560px){ .team-grid{ grid-template-columns:1fr; } }
 
-.lawyer-card{ display:flex; flex-direction:column; height:100%; }
+.lawyer-card{ display:flex; flex-direction:column; height:100%; border:2px solid var(--primary); }
+.lawyer-card:hover{ border-color: var(--primary-dark); }
 .lawyer-media{ aspect-ratio: 4/3; background: #e9eef3; display:grid; place-items:center; overflow:hidden; }
 .lawyer-media img{ width:100%; height:100%; object-fit:cover; }
 .lawyer-body{ padding:16px; display:flex; flex-direction:column; gap:8px; flex:1; }
@@ -80,7 +83,8 @@ html{ direction:rtl; }
 .contact-grid{ display:grid; gap:var(--gutter); grid-template-columns:1.1fr .9fr; }
 @media (max-width:980px){ .contact-grid{ grid-template-columns:1fr; } }
 
-.contact-cta.card{ box-shadow: var(--shadow-2); }
+.contact-cta.card{ box-shadow: var(--shadow-2); border:2px solid var(--primary); }
+.contact-cta.card:hover{ border-color: var(--primary-dark); }
 .info-list{ margin:0; padding:0; list-style:none; }
 .info-list li+li{ margin-top:6px; }
 
