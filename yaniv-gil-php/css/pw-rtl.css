@@ -175,51 +175,39 @@ video{
 
 @media (max-width: 980px) {
   .hamburger {
-    display: block !important;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #fff;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
     cursor: pointer;
-    position: relative;
-  }
-  
-  .hamburger span,
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: var(--ink);
-    margin: 4px auto;
-    transition: all 0.3s ease;
+    padding: 0;
   }
   
   .hamburger span {
-    margin-top: 8px;
-  }
-  
-  .hamburger::before {
-    margin-top: -8px;
-  }
-  
-  .hamburger::after {
-    margin-top: 4px;
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--ink);
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
   }
   
   /* Hamburger animation when open */
-  .hamburger[aria-expanded="true"] span {
+  .hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger[aria-expanded="true"] span:nth-child(2) {
     opacity: 0;
   }
   
-  .hamburger[aria-expanded="true"]::before {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-  
-  .hamburger[aria-expanded="true"]::after {
-    transform: rotate(-45deg) translate(6px, -6px);
+  .hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
   
   /* Mobile navigation */
@@ -235,6 +223,7 @@ video{
     padding: 20px;
     display: none;
     z-index: 1000;
+    margin-top: 10px;
   }
   
   #primary-nav.open {
@@ -248,7 +237,7 @@ video{
   }
   
   #primary-nav li {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
   }
   
   #primary-nav a {
@@ -258,6 +247,8 @@ video{
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
   }
   
   #primary-nav a:hover {
@@ -265,7 +256,7 @@ video{
     color: var(--primary);
   }
   
-  /* Mega menu in mobile */
+  /* Mega menu in mobile - make it simple */
   .has-mega .mega-panel {
     position: static;
     width: 100%;
@@ -274,6 +265,31 @@ video{
     background: var(--surface-soft);
     margin-top: 10px;
     border-radius: 8px;
+    padding: 15px;
+  }
+  
+  .has-mega .mega-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .has-mega .mega-panel li {
+    margin: 0 0 8px 0;
+  }
+  
+  .has-mega .mega-panel a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .has-mega .mega-panel a:hover {
+    background: rgba(10,61,98,0.1);
+    color: var(--primary);
   }
 }
 

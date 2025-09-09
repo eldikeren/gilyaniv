@@ -66,16 +66,33 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Primary nav found:', !!primaryNav);
   
   if (hamburger && primaryNav) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
       const isOpen = primaryNav.classList.contains('open');
-      primaryNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
       
-      console.log('Mobile menu toggled, isOpen:', !isOpen);
-      
-      // Close mega panels when mobile menu opens
-      if (!isOpen) {
+      if (isOpen) {
+        // Close menu
+        primaryNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        console.log('Mobile menu closed');
+      } else {
+        // Open menu
+        primaryNav.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        console.log('Mobile menu opened');
+        
+        // Close mega panels when mobile menu opens
         closeAllMegaPanels();
+      }
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !primaryNav.contains(e.target)) {
+        primaryNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
       }
     });
   }
