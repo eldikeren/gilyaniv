@@ -1,0 +1,93 @@
+/* ===== Home (RTL) — premium hero video + section styling ===== */
+:root{
+  --primary:#0a3d62; --primary-dark:#072a45; --primary-tint:#e8f1f7;
+  --ink:#0b0d12; --muted:#4b5563;
+  --surface:#fff; --surface-soft:#f6f7f9; --border:#e6e7eb;
+  --shadow-1:0 1px 2px rgba(0,0,0,.06); --shadow-2:0 8px 22px rgba(0,0,0,.10);
+  --radius:14px; --radius-sm:10px; --maxw:1200px; --gutter:24px;
+  --fs-200:14px; --fs-300:16px; --fs-400:18px; --fs-500:22px; --fs-600:28px; --fs-700:36px; --fs-800:48px;
+  
+  /* Modern font stack for Hebrew */
+  --font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Apply modern font to all text */
+body, html {
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---- HERO: full-bleed video with gradient overlay ---- */
+.home-hero{
+  position:relative; min-height:76vh; display:grid; place-items:center; overflow:hidden;
+  color:#fff; background:#0a3d62; /* safe fallback if video blocked */
+}
+.home-hero video{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  filter:brightness(.75) contrast(1.05); /* keep text legible on top */
+}
+.home-hero::after{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 420px at 80% -10%, rgba(255,255,255,.15), transparent 60%),
+    linear-gradient(180deg, rgba(7,42,69,.85) 0%, rgba(7,42,69,.55) 45%, rgba(7,42,69,.65) 100%);
+  pointer-events:none;
+}
+.home-hero .inner{ position:relative; z-index:1; width:100%; max-width:var(--maxw); margin-inline:auto; padding: clamp(24px, 3vw, 40px); }
+.home-hero .title{ 
+  font-size:clamp(28px, 4.5vw, 56px); 
+  line-height:1.15; 
+  margin:0 0 10px; 
+  color:#fff; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  font-weight: 700;
+}
+.home-hero .lead{ 
+  font-size:var(--fs-500); 
+  margin:0 0 18px; 
+  opacity:.95; 
+  color:#fff; 
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  font-weight: 400;
+}
+.home-hero .actions{ display:flex; flex-wrap:wrap; gap:10px; }
+.home-hero .btn.primary{ background:linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%); color:#fff; border-color:transparent; box-shadow:0 6px 14px rgba(10,61,98,.25); }
+.home-hero .btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border:1px solid var(--border); border-radius:10px; background:#fff; color:var(--ink); }
+
+/* Respect "reduced motion": show poster only, no parallax/video tint changes */
+@media (prefers-reduced-motion: reduce){
+  .home-hero video{ display:none; }
+}
+/* ---- Sections ---- */
+.section{ padding-block:40px; background:linear-gradient(0deg,var(--surface) 0%, var(--surface-soft) 100%); }
+.section .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px; }
+.section-header{ margin-bottom:14px; }
+.section-header h2{ font-size:var(--fs-700); margin:0 0 6px; }
+.section-header p{ color:var(--muted); margin:0; }
+
+/* Practice areas: clean cards */
+.practice-grid{ display:grid; gap:18px; grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (max-width:980px){ .practice-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px){ .practice-grid{ grid-template-columns:1fr; } }
+.card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-1), var(--shadow-2); overflow:hidden; }
+.card-body{ padding:18px; }
+.card h3{ margin:0 0 8px; }
+.card p{ margin:0 0 10px; color:var(--muted); }
+.card .btn{ margin-top:auto; }
+
+/* Articles preview: 3-up responsive */
+.articles-grid{ display:grid; gap:18px; grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:980px){ .articles-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px){ .articles-grid{ grid-template-columns:1fr; } }
+
+/* Testimonials strip: scroll-snap (no emojis, clean badges) */
+.testimonials{
+  display:flex; gap:14px; overflow:auto; scroll-snap-type:x mandatory; padding-bottom:6px;
+}
+.testimonial{ scroll-snap-align:start; min-width:min(420px, 88%); background:#fff; border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow-1); padding:16px; }
+.testimonial .rating{ font-weight:700; color:#fff; background:var(--primary); border-radius:999px; padding:4px 10px; display:inline-block; margin-bottom:8px; }
+
+/* Contact CTA */
+.cta{ background:#fff; border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow-2); padding:24px; display:grid; gap:14px; align-items:center; grid-template-columns:1.2fr .8fr; }
+@media (max-width:980px){ .cta{ grid-template-columns:1fr; } }
