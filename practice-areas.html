@@ -35,8 +35,9 @@
     
     <!-- Header shrink script -->
     <script src="js/header-shrink.js?v=1" defer></script>
-    <script src="js/scroll-animations.js?v=20250908b" defer></script>
+    <script src="js/scroll-animations.js?v=20250908c" defer></script>
     <script src="js/mega-menu.js?v=20250908d" defer></script>
+    <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -53,14 +54,12 @@
               <li><a href="about.html">אודות המשרד</a></li>
             </ul>
           </nav>
-          <div class="top-actions">
             <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
               <label class="visually-hidden" for="q">חיפוש באתר</label>
               <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
               <button type="submit" class="button small">חפש</button>
               <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
             </form>
-          </div>
         </div>
       </div>
 
@@ -467,7 +466,7 @@
       new IntersectionObserver(([e]) => {
         header.classList.toggle('is-compact', !e.isIntersecting);
       }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
-    });
+        });
     </script>
 </body>
 </html>
