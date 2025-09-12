@@ -42,7 +42,7 @@
     <script defer src="/js/header-loader.js"></script>
   <style id="rescue-header">
   :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{ 
+  .site-header, header#siteHeader, .site-header.site-header{ 
     position: sticky !important; 
     top: 0 !important; 
     z-index: 9999 !important; 
@@ -83,14 +83,14 @@
     outline: none !important; 
   }
 
-  /* Corporate Blue Design System for Home Page */
+  /* Hero Color Design System for Home Page - Same effects as practice areas */
   :root {
-    --corporate-blue: #1e3a8a;
-    --corporate-blue-light: #3b82f6;
-    --corporate-blue-dark: #1e40af;
-    --corporate-blue-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    --corporate-blue-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
-    --corporate-blue-hover: 0 20px 40px rgba(30, 58, 138, 0.25);
+    --hero-primary: #0a3d62;
+    --hero-primary-dark: #072a45;
+    --hero-primary-light: #0a3d62;
+    --hero-gradient: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
+    --hero-shadow: 0 10px 30px rgba(10, 61, 98, 0.15);
+    --hero-hover: 0 20px 40px rgba(10, 61, 98, 0.25);
   }
 
   /* Symmetric Practice Grid - 3 cards in a row */
@@ -114,8 +114,8 @@
     background: #ffffff !important;
     border-radius: 16px !important;
     padding: 2rem !important;
-    box-shadow: var(--corporate-blue-shadow) !important;
-    border: 1px solid rgba(30, 58, 138, 0.1) !important;
+    box-shadow: var(--hero-shadow) !important;
+    border: 1px solid rgba(10, 61, 98, 0.1) !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     overflow: hidden !important;
@@ -131,7 +131,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--corporate-blue-gradient);
+    background: var(--hero-gradient);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -143,12 +143,12 @@
 
   .practice-grid .card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: var(--corporate-blue-hover) !important;
-    border-color: var(--corporate-blue-light) !important;
+    box-shadow: var(--hero-hover) !important;
+    border-color: var(--hero-primary-light) !important;
   }
 
   .practice-grid .card h3 {
-    color: var(--corporate-blue-dark) !important;
+    color: var(--hero-primary-dark) !important;
     font-size: 1.5rem !important;
     font-weight: 700 !important;
     margin-bottom: 1rem !important;
@@ -163,7 +163,7 @@
   }
 
   .practice-grid .btn {
-    background: var(--corporate-blue-gradient) !important;
+    background: var(--hero-gradient) !important;
     color: white !important;
     padding: 0.875rem 2rem !important;
     border-radius: 8px !important;
@@ -172,7 +172,7 @@
     text-align: center !important;
     display: inline-block !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.3) !important;
     border: none !important;
     cursor: pointer !important;
     margin-top: auto !important;
@@ -180,17 +180,17 @@
 
   .practice-grid .btn:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4) !important;
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.4) !important;
+    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
   }
 
-  /* Apply corporate blue styling to ALL cards on the page */
+  /* Apply hero color styling to ALL cards on the page - Same design as practice areas */
   .card, .article-card, .media-card, .service-card {
     background: #ffffff !important;
     border-radius: 16px !important;
     padding: 2rem !important;
-    box-shadow: var(--corporate-blue-shadow) !important;
-    border: 1px solid rgba(30, 58, 138, 0.1) !important;
+    box-shadow: var(--hero-shadow) !important;
+    border: 1px solid rgba(10, 61, 98, 0.1) !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     overflow: hidden !important;
@@ -206,7 +206,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--corporate-blue-gradient);
+    background: var(--hero-gradient);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -218,12 +218,12 @@
 
   .card:hover, .article-card:hover, .media-card:hover, .service-card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: var(--corporate-blue-hover) !important;
-    border-color: var(--corporate-blue-light) !important;
+    box-shadow: var(--hero-hover) !important;
+    border-color: var(--hero-primary-light) !important;
   }
 
   .card h3, .article-card h3, .media-card h3, .service-card h3 {
-    color: var(--corporate-blue-dark) !important;
+    color: var(--hero-primary-dark) !important;
     font-size: 1.5rem !important;
     font-weight: 700 !important;
     margin-bottom: 1rem !important;
@@ -238,7 +238,7 @@
   }
 
   .card .btn, .article-card .btn, .media-card .btn, .service-card .btn {
-    background: var(--corporate-blue-gradient) !important;
+    background: var(--hero-gradient) !important;
     color: white !important;
     padding: 0.875rem 2rem !important;
     border-radius: 8px !important;
@@ -247,7 +247,7 @@
     text-align: center !important;
     display: inline-block !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.3) !important;
     border: none !important;
     cursor: pointer !important;
     margin-top: auto !important;
@@ -255,8 +255,8 @@
 
   .card .btn:hover, .article-card .btn:hover, .media-card .btn:hover, .service-card .btn:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4) !important;
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.4) !important;
+    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
   }
   </style>
 </head>
