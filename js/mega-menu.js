@@ -1,99 +1,117 @@
-// Mega Menu functionality
+// Accessible Mega Menu + Mobile Nav
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Mega menu script loaded');
-  const megaToggles = document.querySelectorAll('.mega-toggle');
-  const megaPanels = document.querySelectorAll('.mega-panel');
-  console.log('Found mega toggles:', megaToggles.length);
-  console.log('Found mega panels:', megaPanels.length);
+  const body        = document.body;
+  const mqMobile    = window.matchMedia('(max-width: 768px)');
+  const hamburger   = document.querySelector('.hamburger');
+  const primaryNav  = document.querySelector('#primary-nav');
+  const megaToggles = Array.from(document.querySelectorAll('.mega-toggle'));
+  const megaItems   = Array.from(document.querySelectorAll('.has-mega'));
   
-  // Close all mega panels
-  function closeAllMegaPanels() {
-    megaToggles.forEach(toggle => {
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.closest('.has-mega').classList.remove('open');
-    });
-    megaPanels.forEach(panel => {
-      panel.style.display = 'none';
-    });
-  }
-  
-  // Handle mega menu toggle clicks
-  megaToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
+  // --- Helpers ---
+  const closeAllMega = () => {
+    megaItems.forEach(item => item.classList.remove('open'));
+    megaToggles.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+  };
+  const openMega = (item, btn) => {
+    closeAllMega();
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  };
+  const openMobileNav = () => {
+    body.classList.add('nav-open');                 // ✅ matches CSS
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+    closeAllMega();                                 // avoid double menus
+  };
+  const closeMobileNav = () => {
+    body.classList.remove('nav-open');              // ✅ matches CSS
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+  };
+  const isNavOpen = () => body.classList.contains('nav-open');
+
+  // --- Mega menu (desktop & mobile) ---
+  megaToggles.forEach(btn => {
+    const item = btn.closest('.has-mega');
+    if (!item) return;
+
+    // Click toggles open/close
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation();
-      
-      const parent = toggle.closest('.has-mega');
-      const panel = parent.querySelector('.mega-panel');
-      const isOpen = parent.classList.contains('open');
-      
-      // Close all other panels first
-      closeAllMegaPanels();
-      
-      if (!isOpen) {
-        // Open this panel
-        parent.classList.add('open');
-        toggle.setAttribute('aria-expanded', 'true');
-        panel.style.display = 'block';
+      const isOpen = item.classList.contains('open');
+      if (isOpen) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        openMega(item, btn);
       }
     });
+
+    // Keyboard support
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+
+    const panel = item.querySelector('.mega-panel');
+    if (panel) {
+      panel.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
+      panel.addEventListener('focusout', () => {
+        setTimeout(() => {
+          if (!item.contains(document.activeElement)) {
+            item.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        }, 0);
+      });
+    }
   });
-  
-  // Close mega menu when clicking outside
+
+  // Close mega on outside click
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.has-mega')) {
-      closeAllMegaPanels();
-    }
+    const insideMega = e.target.closest('.has-mega');
+    if (!insideMega) closeAllMega();
   });
-  
-  // Close mega menu on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeAllMegaPanels();
-    }
-  });
-  
-  // Close mega menu on scroll
-  window.addEventListener('scroll', () => {
-    closeAllMegaPanels();
-  });
-  
-  // Handle mobile menu toggle (hamburger)
-  const hamburger = document.querySelector('.hamburger');
-  const primaryNav = document.querySelector('#primary-nav');
-  
-  console.log('Hamburger found:', !!hamburger);
-  console.log('Primary nav found:', !!primaryNav);
-  
+
+  // --- Mobile nav (hamburger) ---
   if (hamburger && primaryNav) {
     hamburger.addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation();
-      
-      const isOpen = primaryNav.classList.contains('open');
-      
-      if (isOpen) {
-        // Close menu
-        primaryNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        console.log('Mobile menu closed');
-      } else {
-        // Open menu
-        primaryNav.classList.add('open');
-        hamburger.setAttribute('aria-expanded', 'true');
-        console.log('Mobile menu opened');
-        
-        // Close mega panels when mobile menu opens
-        closeAllMegaPanels();
-      }
+      if (isNavOpen()) closeMobileNav();
+      else openMobileNav();
     });
-    
-    // Close mobile menu when clicking outside
+
+    // Click outside to close
     document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !primaryNav.contains(e.target)) {
-        primaryNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+      if (!isNavOpen()) return;
+      const clickedNav = e.target.closest('#primary-nav');
+      const clickedHamburger = e.target.closest('.hamburger');
+      if (!clickedNav && !clickedHamburger) closeMobileNav();
+    });
+
+    // Esc closes the mobile nav
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isNavOpen()) {
+        closeMobileNav();
+        hamburger.focus();
       }
     });
+
+    // On resize to desktop, ensure nav is closed
+    const handleResize = () => {
+      if (!mqMobile.matches) closeMobileNav();
+    };
+    mqMobile.addEventListener ? mqMobile.addEventListener('change', handleResize)
+                              : window.addEventListener('resize', handleResize);
   }
+
+  // Close all open mega panels on scroll
+  window.addEventListener('scroll', closeAllMega, { passive: true });
 });
