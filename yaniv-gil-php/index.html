@@ -45,12 +45,14 @@
   .site-header{ 
     position: sticky !important; 
     top: 0 !important; 
-    z-index: 4000 !important; 
+    z-index: 9999 !important; 
     background: var(--glass) !important; 
     -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
     backdrop-filter: saturate(120%) blur(8px) !important; 
     transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
     width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
   .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
@@ -81,18 +83,14 @@
     outline: none !important; 
   }
 
-  /* Hero-Matching Design System for Home Page */
+  /* Corporate Blue Design System for Home Page */
   :root {
-    --hero-primary: #0a3d62;
-    --hero-primary-dark: #072a45;
-    --hero-primary-tint: #e8f1f7;
-    --hero-accent: #ffffff;
-    --hero-dark: #0a3d62;
-    --hero-darker: #072a45;
-    --hero-glow: 0 0 20px rgba(10, 61, 98, 0.3);
-    --hero-glow-strong: 0 0 30px rgba(10, 61, 98, 0.6);
-    --hero-gradient: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
-    --hero-text-glow: 0 0 10px rgba(10, 61, 98, 0.5);
+    --corporate-blue: #1e3a8a;
+    --corporate-blue-light: #3b82f6;
+    --corporate-blue-dark: #1e40af;
+    --corporate-blue-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    --corporate-blue-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
+    --corporate-blue-hover: 0 20px 40px rgba(30, 58, 138, 0.25);
   }
 
   /* Symmetric Practice Grid - 3 cards in a row */
@@ -113,15 +111,15 @@
   }
 
   .practice-grid .card {
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.9) 0%, rgba(7, 42, 69, 0.95) 100%) !important;
-    border-radius: 20px !important;
-    padding: 2.5rem !important;
-    box-shadow: var(--hero-glow) !important;
-    border: 1px solid rgba(10, 61, 98, 0.4) !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    box-shadow: var(--corporate-blue-shadow) !important;
+    border: 1px solid rgba(30, 58, 138, 0.1) !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     overflow: hidden !important;
-    min-height: 350px !important;
+    min-height: 300px !important;
     display: flex !important;
     flex-direction: column !important;
   }
@@ -133,62 +131,66 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--hero-gradient);
-    border-radius: 20px 20px 0 0;
+    background: var(--corporate-blue-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .practice-grid .card:hover::before {
+    transform: scaleX(1);
   }
 
   .practice-grid .card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: var(--hero-glow-strong) !important;
-    border-color: var(--hero-primary) !important;
+    transform: translateY(-8px) !important;
+    box-shadow: var(--corporate-blue-hover) !important;
+    border-color: var(--corporate-blue-light) !important;
   }
 
   .practice-grid .card h3 {
-    color: var(--hero-accent) !important;
-    font-size: 1.6rem !important;
+    color: var(--corporate-blue-dark) !important;
+    font-size: 1.5rem !important;
     font-weight: 700 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
     line-height: 1.3 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
   }
 
   .practice-grid .card p {
-    color: rgba(255, 255, 255, 0.9) !important;
-    line-height: 1.7 !important;
+    color: #64748b !important;
+    line-height: 1.6 !important;
     margin-bottom: 1.5rem !important;
     flex-grow: 1 !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
   }
 
   .practice-grid .btn {
-    background: var(--hero-gradient) !important;
+    background: var(--corporate-blue-gradient) !important;
     color: white !important;
-    padding: 1rem 2.5rem !important;
-    border-radius: 12px !important;
+    padding: 0.875rem 2rem !important;
+    border-radius: 8px !important;
     text-decoration: none !important;
     font-weight: 600 !important;
     text-align: center !important;
     display: inline-block !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 6px 14px rgba(10,61,98,.25) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3) !important;
     border: none !important;
     cursor: pointer !important;
     margin-top: auto !important;
   }
 
   .practice-grid .btn:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px rgba(10,61,98,.4) !important;
-    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4) !important;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
   }
 
-  /* Apply hero styling to ALL cards on the page */
+  /* Apply corporate blue styling to ALL cards on the page */
   .card, .article-card, .media-card, .service-card {
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.9) 0%, rgba(7, 42, 69, 0.95) 100%) !important;
-    border-radius: 20px !important;
-    padding: 2.5rem !important;
-    box-shadow: var(--hero-glow) !important;
-    border: 1px solid rgba(10, 61, 98, 0.4) !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    box-shadow: var(--corporate-blue-shadow) !important;
+    border: 1px solid rgba(30, 58, 138, 0.1) !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     overflow: hidden !important;
@@ -204,72 +206,57 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--hero-gradient);
-    border-radius: 20px 20px 0 0;
+    background: var(--corporate-blue-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover::before, .article-card:hover::before, .media-card:hover::before, .service-card:hover::before {
+    transform: scaleX(1);
   }
 
   .card:hover, .article-card:hover, .media-card:hover, .service-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: var(--hero-glow-strong) !important;
-    border-color: var(--hero-primary) !important;
+    transform: translateY(-8px) !important;
+    box-shadow: var(--corporate-blue-hover) !important;
+    border-color: var(--corporate-blue-light) !important;
   }
 
   .card h3, .article-card h3, .media-card h3, .service-card h3 {
-    color: var(--hero-accent) !important;
-    font-size: 1.6rem !important;
+    color: var(--corporate-blue-dark) !important;
+    font-size: 1.5rem !important;
     font-weight: 700 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
     line-height: 1.3 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
   }
 
   .card p, .article-card p, .media-card p, .service-card p {
-    color: rgba(255, 255, 255, 0.9) !important;
-    line-height: 1.7 !important;
+    color: #64748b !important;
+    line-height: 1.6 !important;
     margin-bottom: 1.5rem !important;
     flex-grow: 1 !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
   }
 
   .card .btn, .article-card .btn, .media-card .btn, .service-card .btn {
-    background: var(--hero-gradient) !important;
+    background: var(--corporate-blue-gradient) !important;
     color: white !important;
-    padding: 1rem 2.5rem !important;
-    border-radius: 12px !important;
+    padding: 0.875rem 2rem !important;
+    border-radius: 8px !important;
     text-decoration: none !important;
     font-weight: 600 !important;
     text-align: center !important;
     display: inline-block !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 6px 14px rgba(10,61,98,.25) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3) !important;
     border: none !important;
     cursor: pointer !important;
     margin-top: auto !important;
   }
 
   .card .btn:hover, .article-card .btn:hover, .media-card .btn:hover, .service-card .btn:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px rgba(10,61,98,.4) !important;
-    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
-  }
-
-  /* Fix icon overlapping and font clarity */
-  .card .service-icon, .article-card .service-icon, .media-card .service-icon, .service-card .service-icon {
-    margin-bottom: 1.5rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 60px !important;
-    width: 60px !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  }
-
-  .card .service-icon img, .article-card .service-icon img, .media-card .service-icon img, .service-card .service-icon img {
-    max-width: 40px !important;
-    max-height: 40px !important;
-    filter: brightness(0) invert(1) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4) !important;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
   }
   </style>
 </head>
@@ -508,8 +495,8 @@
     document.addEventListener('DOMContentLoaded', () => {
       // Wait for header to be loaded by header-loader.js
       setTimeout(() => {
-        const header = document.getElementById('siteHeader');
-        const s      = document.getElementById('headerSentinel');
+      const header = document.getElementById('siteHeader');
+      const s      = document.getElementById('headerSentinel');
         if (!header || !s) {
           console.warn('Header or sentinel not found, retrying...');
           // Retry after a longer delay
@@ -526,11 +513,11 @@
           }, 500);
           return;
         }
-        if (!s.offsetHeight) s.style.height = '1px';
+      if (!s.offsetHeight) s.style.height = '1px';
 
-        new IntersectionObserver(([e]) => {
-          header.classList.toggle('is-compact', !e.isIntersecting);
-        }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+      new IntersectionObserver(([e]) => {
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
         console.log('Header shrink initialized');
       }, 200);
     });
