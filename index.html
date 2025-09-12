@@ -316,4 +316,16 @@
     });
     </script>
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('siteHeader');
+  const sentinel = document.getElementById('headerSentinel');
+  if(!header || !sentinel){ console.warn('Header/Sentinel missing'); return; }
+  if (!sentinel.offsetHeight) sentinel.style.height = '1px';
+  new IntersectionObserver(([e])=>{
+    header.classList.toggle('is-compact', !e.isIntersecting);
+  }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(sentinel);
+  console.log('[header-shrink] ready', { header, sentinel });
+});
+</script>
 </html>

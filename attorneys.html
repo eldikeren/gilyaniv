@@ -40,6 +40,26 @@
     <script src="js/mega-menu.js?v=20250908d" defer></script>
     <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
 </head>
+<style id="rescue-header">
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{ position: sticky; top: 0; z-index: 4000; background: var(--glass); -webkit-backdrop-filter: saturate(120%) blur(8px); backdrop-filter: saturate(120%) blur(8px); transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease; }
+  .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
+  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
+  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
+  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
+  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
+  .site-header.is-compact .header-top{ height: 0; opacity: 0; border-bottom: 0; overflow: hidden; }
+  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px; }
+  .site-header.is-compact .logo .logo-mark{ height: 36px; }
+  .site-header.is-compact .logo .logo-text{ opacity: 0; }
+  .header-top, .header-main, .site-header{ overflow: visible; }
+  .has-mega{ position: relative; }
+  .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
+  .has-mega.open > .mega-panel{ display: block; }
+  #headerSentinel{ height: 1px; }
+  .brand:focus, .logo a:focus{ outline: none !important; }
+  html::after{ content:"RESCUE CSS LOADED"; position: fixed; inset: auto 8px 8px auto; background:#0a3d62; color:#fff; padding:4px 8px; border-radius:6px; z-index:99999; font:600 12px/1.2 Heebo, sans-serif; }
+</style>
 <body>
     <div id="header-root"></div>
 
