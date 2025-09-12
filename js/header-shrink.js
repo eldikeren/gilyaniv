@@ -1,15 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Header shrink script loaded');
-  const header   = document.getElementById('siteHeader');
-  const sentinel = document.getElementById('headerSentinel');
-  console.log('Header found:', !!header);
-  console.log('Sentinel found:', !!sentinel);
-  if (!header || !sentinel) return;
+// /js/header-shrink.js
+// Adds .is-shrunk to the header after scrolling a bit
 
-  if (!sentinel.offsetHeight) sentinel.style.height = '1px';
+(function () {
+  if (window.__HEADER_SHRINK_WIRED__) return;
+  window.__HEADER_SHRINK_WIRED__ = true;
 
-  new IntersectionObserver(([entry]) => {
-    console.log('Header intersection:', entry.isIntersecting);
-    header.classList.toggle('is-compact', !entry.isIntersecting);
-  }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(sentinel);
-});
+  window.initHeaderShrink = function initHeaderShrink() {
+    const header = document.getElementById('siteHeader');
+    if (!header) return;
+
+    const onScroll = () => {
+      if (window.scrollY > 12) header.classList.add('is-shrunk');
+      else header.classList.remove('is-shrunk');
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // initialize state
+  };
+
+  // If header exists already, init immediately
+  if (document.getElementById('siteHeader')) {
+    window.initHeaderShrink();
+  }
+})();

@@ -1,0 +1,39 @@
+<!-- /partials/header.html -->
+<header id="siteHeader" class="site-header" role="banner" dir="rtl">
+  <div class="header-inner">
+    <a href="/" class="brand" aria-label="Yaniv Gil &amp; Co.">Yaniv Gil &amp; Co.</a>
+
+    <button class="hamburger" aria-label="פתח תפריט" aria-controls="primary-nav" aria-expanded="false">
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+
+  <!-- Light overlay sits BEHIND the drawer -->
+  <div id="nav-overlay" aria-hidden="true"></div>
+
+  <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main">
+    <ul class="menu-root">
+      <li><a href="/index.html">דף הבית</a></li>
+      <li><a href="/about.html">אודות</a></li>
+
+      <li class="has-mega">
+        <button class="mega-toggle" aria-expanded="false" aria-controls="mega-areas">תחומי התמחות</button>
+        <div id="mega-areas" class="mega-panel" role="region" aria-label="תחומי התמחות">
+          <div class="mega-grid">
+            <a href="/articles.html#corporate">דיני חברות</a>
+            <a href="/articles.html#realestate">מקרקעין</a>
+            <a href="/articles.html#litigation">ליטיגציה</a>
+            <a href="/articles.html#labor">דיני עבודה</a>
+            <a href="/articles.html#ip">קניין רוחני</a>
+            <a href="/articles.html#tax">מיסים</a>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/attorneys.html">עורכי דין</a></li>
+      <li><a href="/articles.html">מאמרים</a></li>
+      <li><a href="/contact.html">צור קשר</a></li>
+    </ul>
+  </nav>
+</header>
