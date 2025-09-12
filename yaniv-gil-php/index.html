@@ -102,13 +102,13 @@
     --hero-hover: 0 20px 40px rgba(10, 61, 98, 0.25);
   }
 
-  /* Symmetric Practice Grid - 2x2 layout */
+  /* Practice Grid - All 4 cards in one row */
   .practice-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-top: 3rem;
-    max-width: 1000px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -124,9 +124,32 @@
     margin-right: auto;
   }
 
+  @media (max-width: 1200px) {
+    .practice-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
   @media (max-width: 768px) {
+    .practice-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
     .practice-grid, .articles-grid {
       grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 0 0.5rem;
     }
   }
 
@@ -142,6 +165,20 @@
     min-height: 300px !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+  
+  @media (max-width: 768px) {
+    .practice-grid .card, .articles-grid .card {
+      padding: 1.5rem !important;
+      min-height: 250px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .practice-grid .card, .articles-grid .card {
+      padding: 1rem !important;
+      min-height: 200px !important;
+    }
   }
 
   .practice-grid .card::before {
@@ -535,8 +572,8 @@
       setTimeout(() => {
         forceStickyHeader();
         
-        const header = document.getElementById('siteHeader');
-        const s      = document.getElementById('headerSentinel');
+      const header = document.getElementById('siteHeader');
+      const s      = document.getElementById('headerSentinel');
         if (!header || !s) {
           console.warn('Header or sentinel not found, retrying...');
           // Retry after a longer delay
@@ -554,11 +591,11 @@
           }, 500);
           return;
         }
-        if (!s.offsetHeight) s.style.height = '1px';
+      if (!s.offsetHeight) s.style.height = '1px';
 
-        new IntersectionObserver(([e]) => {
-          header.classList.toggle('is-compact', !e.isIntersecting);
-        }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+      new IntersectionObserver(([e]) => {
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
         console.log('Header shrink initialized');
       }, 200);
       
