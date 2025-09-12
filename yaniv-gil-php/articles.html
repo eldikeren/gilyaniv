@@ -23,44 +23,81 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/header-premium.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/pw-rtl.css?v=20250908b">
-    <link rel="stylesheet" href="css/contact-rtl.css">
-    <link rel="stylesheet" href="css/articles-rtl.css">
-    <link rel="stylesheet" href="css/mobile-responsive.css">
+    
+    <!-- Design tokens + base -->
+    <link rel="stylesheet" href="css/design-tokens.css?v=1">
+    <link rel="stylesheet" href="css/base.css?v=1">
+
+    <!-- Page scaffolding + responsive -->
+    <link rel="stylesheet" href="css/pages-rtl.css?v=1">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=1">
+
+    <!-- Page-specific skins -->
+    <link rel="stylesheet" href="css/articles-rtl.css?v=1">
+
+    <!-- Premium theme — load LAST so it overrides older CSS -->
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
+    
+    <!-- Header shrink script -->
+    <script src="/js/header-shrink.js?v=2025-09-12a" defer></script>
+    
+    <link rel="stylesheet" href="/css/mobile-responsive.css">
+    <script defer src="/js/mega-menu.js"></script>
+    <script defer src="/js/header-shrink.js"></script>
+    <script defer src="/js/header-loader.js"></script>
+    <script src="js/scroll-animations.js?v=20250908c" defer></script>
+    <script src="js/mega-menu.js?v=20250908d" defer></script>
+    <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
+  <style id="rescue-header">
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{ position: sticky; top: 0; z-index: 4000; background: var(--glass); -webkit-backdrop-filter: saturate(120%) blur(8px); backdrop-filter: saturate(120%) blur(8px); transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease; }
+  .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
+  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
+  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
+  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
+  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
+  .site-header.is-compact .header-top{ height: 0; opacity: 0; border-bottom: 0; overflow: hidden; }
+  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px; }
+  .site-header.is-compact .logo .logo-mark{ height: 36px; }
+  .site-header.is-compact .logo .logo-text{ opacity: 0; }
+  .header-top, .header-main, .site-header{ overflow: visible; }
+  .has-mega{ position: relative; }
+  .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
+  .has-mega.open > .mega-panel{ display: block; }
+  #headerSentinel{ height: 1px; }
+  .brand:focus, .logo a:focus{ outline: none !important; }
+  </style>
 </head>
 <body>
+    <div id="header-root"></div>
     <!-- Header -->
-    <header class="site-header">
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+    <header class="site-header" id="siteHeader" role="banner" aria-label="כותרת האתר">
         <div class="header-top">
-            <div class="container">
-                <div class="header-top-inner">
-                    <nav class="secondary-nav">
-                        <ul>
-                            <li><a href="articles.html">מאמרים</a></li>
-                            <li><a href="media.html">תקשורת</a></li>
-                            <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
-                            <li><a href="about.html">אודות המשרד</a></li>
-                        </ul>
-                    </nav>
-                    <div class="site-search">
-                        <form action="search.html" method="get">
-                            <input type="search" name="q" placeholder="חיפוש באתר" aria-label="חיפוש באתר">
-                            <button type="submit">חפש</button>
-                        </form>
-                    </div>
+            <div class="container header-top-inner">
+                <nav class="secondary-nav">
+                    <ul>
+                        <li><a href="articles.html">מאמרים</a></li>
+                        <li><a href="media.html">תקשורת</a></li>
+                        <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
+                        <li><a href="about.html">אודות המשרד</a></li>
+                    </ul>
+                </nav>
+                <div class="site-search">
+                    <form action="search.html" method="get">
+                        <input type="search" name="q" placeholder="חיפוש באתר" aria-label="חיפוש באתר">
+                        <button type="submit">חפש</button>
+                    </form>
+                </div>
                 </div>
             </div>
         </div>
         <div class="header-main">
-        <div class="container">
-                <div class="header-main-inner">
+        <div class="container header-main-inner">
                                        <div class="logo">
                         <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
-                            <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-main">
+                            <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-mark">
                             <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
                         </a>
                     </div>
@@ -109,6 +146,9 @@
             </div>
         </div>
     </header>
+    
+    <!-- sentinel tells JS when header left the top -->
+    <div id="headerSentinel" aria-hidden="true" style="height:1px"></div>
 
     <!-- ===== HERO ===== -->
     <section class="articles-hero">
@@ -119,11 +159,7 @@
                     <p>מאמרים מקצועיים ופרסומים בתחומי המשפט השונים</p>
                 </div>
                 <div class="hero-video">
-                    <video class="video-hero-small" autoplay muted loop playsinline>
-                        <source src="images/274243_Information Dolly Library Bookshelf_By_Ivan_Nikolaev_Atanasov_Artlist_HD.mp4" type="video/mp4">
-                        <!-- Fallback for browsers that don't support video -->
-                        <img src="images/books.jpeg" alt="מאמרים ופרסומים" loading="lazy">
-                    </video>
+                    <img src="images/books.jpeg" alt="מאמרים ופרסומים" loading="lazy" class="video-hero-small">
                 </div>
             </div>
         </div>
@@ -505,7 +541,6 @@
         </div>
     </footer>
 
-    <script src="js/header-shrink.js?v=20250908b" defer></script>
     <script src="js/scroll-animations.js?v=20250908b" defer></script>
     <script src="js/mega-menu.js?v=20250908d" defer></script>
     <script src="js/articles-filters.js?v=20250908a" defer></script>
@@ -515,6 +550,20 @@
       const root = document.documentElement;
       const set = ()=> root.style.setProperty('--header-h', h?.offsetHeight? h.offsetHeight+'px' : '64px');
       set(); addEventListener('resize', set); addEventListener('orientationchange', set);
+    });
+    </script>
+    
+    <!-- Shrink controller (tiny JS) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('siteHeader');
+      const s      = document.getElementById('headerSentinel');
+      if (!header || !s) return;
+      if (!s.offsetHeight) s.style.height = '1px';
+
+      new IntersectionObserver(([e]) => {
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
     });
     </script>
 </body>

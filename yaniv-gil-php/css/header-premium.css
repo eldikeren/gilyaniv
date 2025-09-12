@@ -108,3 +108,15 @@ html[dir="rtl"] .site-header{ direction:rtl; }
 
 /* ===== Sentinel must have a size so IntersectionObserver can see it ===== */
 #headerSentinel{ height: 1px; }
+
+/* Remove focus outlines on logo/menu items when clicked (mouse/touch) */
+.site-header a:focus,
+.site-header a:focus-visible,
+.site-header button:focus,
+.site-header button:focus-visible,
+.site-header .logo a:focus,
+.site-header .brand:focus,
+.site-header .hamburger:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,15 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Header shrink script loaded');
-  const header   = document.getElementById('siteHeader');
-  const sentinel = document.getElementById('headerSentinel');
-  console.log('Header found:', !!header);
-  console.log('Sentinel found:', !!sentinel);
-  if (!header || !sentinel) return;
+// /js/header-shrink.js
+// Uses IntersectionObserver on #headerSentinel to toggle .is-compact on #siteHeader
 
-  if (!sentinel.offsetHeight) sentinel.style.height = '1px';
+(function () {
+  if (window.__HEADER_SHRINK_WIRED__) return;
+  window.__HEADER_SHRINK_WIRED__ = true;
 
-  new IntersectionObserver(([entry]) => {
-    console.log('Header intersection:', entry.isIntersecting);
-    header.classList.toggle('is-compact', !entry.isIntersecting);
-  }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(sentinel);
-});
+  window.initHeaderShrink = function initHeaderShrink() {
+    const header = document.getElementById('siteHeader');
+    const sentinel = document.getElementById('headerSentinel');
+    if (!header || !sentinel) return;
+    if (!sentinel.offsetHeight) sentinel.style.height = '1px';
+
+    const io = new IntersectionObserver(([entry]) => {
+      header.classList.toggle('is-compact', !entry.isIntersecting);
+    }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 });
+    io.observe(sentinel);
+  };
+
+  // If elements already exist, init immediately
+  if (document.getElementById('siteHeader') && document.getElementById('headerSentinel')) {
+    window.initHeaderShrink();
+  }
+})();

@@ -1,5 +1,8 @@
-<!-- /partials/header.html -->
-<header id="siteHeader" class="site-header" role="banner" aria-label="כותרת האתר">
+<!-- Skip link for accessibility -->
+<a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+<header class="site-header" id="siteHeader" data-rtl role="banner" aria-label="כותרת האתר" dir="rtl">
+  <!-- Top strip: secondary nav + search -->
   <div class="header-top">
     <div class="container header-top-inner">
       <nav class="secondary-nav" aria-label="תפריט משני">
@@ -10,15 +13,19 @@
           <li><a href="about.html">אודות המשרד</a></li>
         </ul>
       </nav>
-      <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
-        <label class="visually-hidden" for="q">חיפוש באתר</label>
-        <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
-        <button type="submit" class="button small">חפש</button>
-        <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
-      </form>
+
+      <div class="top-actions">
+        <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
+          <label class="visually-hidden" for="q">חיפוש באתר</label>
+          <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
+          <button type="submit" class="button small">חפש</button>
+          <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
+        </form>
+      </div>
     </div>
   </div>
 
+  <!-- Main header row: logo + hamburger + primary nav -->
   <div class="header-main">
     <div class="container header-main-inner">
       <div class="logo">
@@ -28,21 +35,29 @@
         </a>
       </div>
 
+      <!-- Hamburger (mobile) -->
       <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
-        <span></span>
-        <span></span>
-        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="visually-hidden">תפריט</span>
       </button>
 
+      <!-- Light overlay sits BEHIND the drawer (mobile) -->
+      <div id="nav-overlay" aria-hidden="true"></div>
+
+      <!-- Primary navigation + mega menu -->
       <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
-        <ul>
-          <li>
-            <a href="attorneys.html">עורכי דין</a>
-          </li>
+        <ul class="menu-root">
+          <li><a href="attorneys.html">עורכי דין</a></li>
+
           <li class="has-mega">
-            <button class="mega-toggle" aria-haspopup="true" aria-expanded="false">תחומי התמחות</button>
-            <div class="mega-panel" role="region" aria-label="תחומי התמחות">
-              <div class="grid cols-3">
+            <button class="mega-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mega-areas">
+              תחומי התמחות
+            </button>
+            <div class="mega-panel" id="mega-areas" role="region" aria-label="תחומי התמחות">
+              <!-- Keep your 3-column grid, it collapses to 1-col on mobile via CSS -->
+              <div class="grid cols-3 mega-grid">
                 <ul>
                   <li><a href="practice-areas.html#family">דיני משפחה</a></li>
                   <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
@@ -61,17 +76,15 @@
               </div>
             </div>
           </li>
-          <li>
-            <a href="articles.html">מאמרים</a>
-          </li>
-          <li>
-            <a href="media.html">תקשורת</a>
-          </li>
-          <li>
-            <a href="contact.html">צור קשר</a>
-          </li>
+
+          <li><a href="articles.html">מאמרים</a></li>
+          <li><a href="media.html">תקשורת</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
         </ul>
       </nav>
     </div>
   </div>
 </header>
+
+<!-- Sentinel from your original (kept for compatibility; not required by our JS) -->
+<div id="headerSentinel" aria-hidden="true"></div>
