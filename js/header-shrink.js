@@ -1,5 +1,5 @@
 // /js/header-shrink.js
-// Adds .is-shrunk to the header after scrolling a bit
+// Uses IntersectionObserver on #headerSentinel to toggle .is-compact on #siteHeader
 
 (function () {
   if (window.__HEADER_SHRINK_WIRED__) return;
@@ -7,19 +7,18 @@
 
   window.initHeaderShrink = function initHeaderShrink() {
     const header = document.getElementById('siteHeader');
-    if (!header) return;
+    const sentinel = document.getElementById('headerSentinel');
+    if (!header || !sentinel) return;
+    if (!sentinel.offsetHeight) sentinel.style.height = '1px';
 
-    const onScroll = () => {
-      if (window.scrollY > 12) header.classList.add('is-shrunk');
-      else header.classList.remove('is-shrunk');
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // initialize state
+    const io = new IntersectionObserver(([entry]) => {
+      header.classList.toggle('is-compact', !entry.isIntersecting);
+    }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 });
+    io.observe(sentinel);
   };
 
-  // If header exists already, init immediately
-  if (document.getElementById('siteHeader')) {
+  // If elements already exist, init immediately
+  if (document.getElementById('siteHeader') && document.getElementById('headerSentinel')) {
     window.initHeaderShrink();
   }
 })();
