@@ -2,16 +2,7 @@
   "version": 2,
   "rewrites": [
     { "source": "/", "destination": "/yaniv-gil-php/index.html" },
-    { "source": "/(.*)\.php", "destination": "/yaniv-gil-php/$1.html" },
+    { "source": "/(.*)\\.php", "destination": "/yaniv-gil-php/$1.html" },
     { "source": "/(.*)", "destination": "/yaniv-gil-php/$1" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "index, follow" }
-      ]
-    }
   ]
 }
-
