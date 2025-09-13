@@ -131,6 +131,38 @@
       }
     }
   </style>
+  
+  <!-- NUCLEAR OPTION: CSS that runs after everything else -->
+  <style>
+    /* Force this to be the absolute last CSS rule */
+    html body main section.section[aria-labelledby="revTitle"] div.container header.section-header h2#revTitle {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      z-index: auto !important;
+      transform: none !important;
+      float: none !important;
+      clear: none !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin: 0 auto 1rem auto !important;
+      text-align: center !important;
+      font-size: 2.5rem !important;
+      color: #0a3d62 !important;
+      font-weight: 700 !important;
+      font-family: 'Heebo', Arial, sans-serif !important;
+      line-height: 1.2 !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      min-height: auto !important;
+      overflow: visible !important;
+      scroll-margin-top: 140px !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -263,6 +295,21 @@
           revTitle.style.minHeight = 'auto';
           revTitle.style.overflow = 'visible';
           revTitle.style.scrollMarginTop = '140px';
+          
+          // Check if it's in the wrong position and move it back
+          const rect = revTitle.getBoundingClientRect();
+          if (rect.top < 200) { // If it's too close to the top
+            console.log('Fixing #revTitle position - was at top:', rect.top);
+            // Force it back to its parent container
+            const parent = revTitle.closest('.section-header');
+            if (parent) {
+              parent.style.position = 'relative';
+              parent.style.top = 'auto';
+              parent.style.left = 'auto';
+              parent.style.right = 'auto';
+              parent.style.zIndex = 'auto';
+            }
+          }
         }
       };
 
@@ -271,6 +318,34 @@
       setTimeout(forceRevTitleInPlace, 100);
       setTimeout(forceRevTitleInPlace, 500);
       setTimeout(forceRevTitleInPlace, 1000);
+      setTimeout(forceRevTitleInPlace, 2000);
+
+      // Set up a MutationObserver to continuously monitor the element
+      const observer = new MutationObserver(() => {
+        forceRevTitleInPlace();
+      });
+
+      // Start observing when the element is available
+      const startObserver = () => {
+        const revTitle = document.getElementById('revTitle');
+        if (revTitle) {
+          observer.observe(revTitle, {
+            attributes: true,
+            attributeFilter: ['style', 'class'],
+            childList: false,
+            subtree: false
+          });
+          observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['style', 'class'],
+            childList: true,
+            subtree: true
+          });
+        } else {
+          setTimeout(startObserver, 100);
+        }
+      };
+      startObserver();
 
       // If #revTitle is in URL, scroll there smoothly after load
       if (window.location.hash === '#revTitle') {
