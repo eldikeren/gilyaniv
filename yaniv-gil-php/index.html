@@ -76,10 +76,14 @@
   .header-top-design {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.8) 0%, rgba(7, 42, 69, 0.9) 100%);
-    backdrop-filter: blur(10px) saturate(120%);
-    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    background: linear-gradient(135deg, 
+      rgba(10, 61, 98, 0.95) 0%, 
+      rgba(7, 42, 69, 0.98) 50%,
+      rgba(10, 61, 98, 0.95) 100%);
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
     position: relative;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
   }
   
   .header-top-design::before {
@@ -90,16 +94,37 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, 
-      rgba(255,255,255,0.1) 0%, 
-      transparent 25%, 
-      transparent 75%, 
-      rgba(255,255,255,0.1) 100%);
-    animation: prism-shimmer 3s ease-in-out infinite;
+      rgba(255,255,255,0.3) 0%, 
+      transparent 30%, 
+      transparent 70%, 
+      rgba(255,255,255,0.3) 100%);
+    animation: prism-shimmer 4s ease-in-out infinite;
+  }
+  
+  .header-top-design::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(10, 61, 98, 0.4) 25%, 
+      rgba(7, 42, 69, 0.6) 50%, 
+      rgba(10, 61, 98, 0.4) 75%, 
+      transparent 100%);
+    animation: prism-wave 6s ease-in-out infinite;
   }
   
   @keyframes prism-shimmer {
-    0%, 100% { transform: translateX(-100%); opacity: 0.3; }
+    0%, 100% { transform: translateX(-100%); opacity: 0.4; }
     50% { transform: translateX(100%); opacity: 0.8; }
+  }
+  
+  @keyframes prism-wave {
+    0%, 100% { transform: translateX(-100%); opacity: 0.2; }
+    50% { transform: translateX(100%); opacity: 0.6; }
   }
   .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
   .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
