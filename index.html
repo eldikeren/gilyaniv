@@ -134,8 +134,33 @@
   
   <!-- NUCLEAR OPTION: CSS that runs after everything else -->
   <style>
-    /* Force this to be the absolute last CSS rule */
-    html body main section.section[aria-labelledby="revTitle"] div.container header.section-header h2#revTitle {
+    /* ISOLATED TITLE STYLES: Completely separate from external CSS conflicts */
+    .testimonials-title-wrapper {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      z-index: auto !important;
+      transform: none !important;
+      float: none !important;
+      clear: none !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin: 0 auto 2rem auto !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      min-height: auto !important;
+      overflow: visible !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .testimonials-title {
       position: static !important;
       top: auto !important;
       left: auto !important;
@@ -161,6 +186,54 @@
       min-height: auto !important;
       overflow: visible !important;
       scroll-margin-top: 140px !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+
+    .testimonials-subtitle {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      z-index: auto !important;
+      transform: none !important;
+      float: none !important;
+      clear: none !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin: 0 auto !important;
+      text-align: center !important;
+      font-size: 1.1rem !important;
+      color: #666 !important;
+      font-weight: 400 !important;
+      font-family: 'Heebo', Arial, sans-serif !important;
+      line-height: 1.4 !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      min-height: auto !important;
+      overflow: visible !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+    
+    @media (max-width: 768px) {
+      .testimonials-title { 
+        scroll-margin-top: 120px !important;
+        font-size: 2.2rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .testimonials-title { 
+        scroll-margin-top: 100px !important;
+        font-size: 1.8rem !important;
+      }
     }
   </style>
 </head>
@@ -217,10 +290,11 @@
     <!-- ===== ✅ Testimonials ===== -->
     <section class="section" aria-labelledby="revTitle">
       <div class="container">
-        <header class="section-header">
-          <h2 id="revTitle">ביקורות לקוחות</h2>
-          <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
-        </header>
+        <!-- ISOLATED TITLE: Completely separate from section-header to avoid external CSS conflicts -->
+        <div class="testimonials-title-wrapper">
+          <h2 id="revTitle" class="testimonials-title">ביקורות לקוחות</h2>
+          <p class="testimonials-subtitle">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+        </div>
 
         <div class="testimonials">
           <figure class="testimonial">
@@ -268,6 +342,8 @@
       // Force #revTitle to stay in normal flow
       const forceRevTitleInPlace = () => {
         const revTitle = document.getElementById('revTitle');
+        const titleWrapper = document.querySelector('.testimonials-title-wrapper');
+        
         if (revTitle) {
           // Remove any positioning that might be applied by external CSS
           revTitle.style.position = 'static';
@@ -295,20 +371,43 @@
           revTitle.style.minHeight = 'auto';
           revTitle.style.overflow = 'visible';
           revTitle.style.scrollMarginTop = '140px';
-          
-          // Check if it's in the wrong position and move it back
+          revTitle.style.background = 'none';
+          revTitle.style.border = 'none';
+          revTitle.style.boxShadow = 'none';
+          revTitle.style.padding = '0';
+        }
+
+        if (titleWrapper) {
+          // Also fix the wrapper
+          titleWrapper.style.position = 'relative';
+          titleWrapper.style.top = 'auto';
+          titleWrapper.style.left = 'auto';
+          titleWrapper.style.right = 'auto';
+          titleWrapper.style.bottom = 'auto';
+          titleWrapper.style.zIndex = 'auto';
+          titleWrapper.style.transform = 'none';
+          titleWrapper.style.float = 'none';
+          titleWrapper.style.clear = 'none';
+          titleWrapper.style.display = 'block';
+          titleWrapper.style.visibility = 'visible';
+          titleWrapper.style.opacity = '1';
+          titleWrapper.style.margin = '0 auto 2rem auto';
+          titleWrapper.style.padding = '0';
+          titleWrapper.style.width = '100%';
+          titleWrapper.style.maxWidth = 'none';
+          titleWrapper.style.height = 'auto';
+          titleWrapper.style.minHeight = 'auto';
+          titleWrapper.style.overflow = 'visible';
+          titleWrapper.style.background = 'none';
+          titleWrapper.style.border = 'none';
+          titleWrapper.style.boxShadow = 'none';
+        }
+        
+        // Check if it's in the wrong position and move it back
+        if (revTitle) {
           const rect = revTitle.getBoundingClientRect();
           if (rect.top < 200) { // If it's too close to the top
             console.log('Fixing #revTitle position - was at top:', rect.top);
-            // Force it back to its parent container
-            const parent = revTitle.closest('.section-header');
-            if (parent) {
-              parent.style.position = 'relative';
-              parent.style.top = 'auto';
-              parent.style.left = 'auto';
-              parent.style.right = 'auto';
-              parent.style.zIndex = 'auto';
-            }
           }
         }
       };
