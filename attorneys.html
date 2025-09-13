@@ -1,508 +1,106 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="הכירו את צוות עורכי הדין של משרד עו״ד יניב גיל – ניסיון, מומחיות ומקצועיות.">
-    <meta property="og:title" content="עורכי דין - משרד עו״ד יניב גיל">
-    <meta property="og:description" content="הכירו את הצוות המקצועי שלנו.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="עורכי דין - משרד עו״ד יניב גיל">
-    <meta name="twitter:description" content="הכירו את הצוות המקצועי שלנו.">
-    <meta name="twitter:image" content="images/logo.png">
-    <title>עורכי דין - משרד עורכי דין יניב גיל</title>
-    <meta name="description" content="צוות עורכי הדין המקצועי של משרד עורכי דין יניב גיל - מומחים בתחומי המשפט השונים">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>עורכי דין - משרד עורכי דין יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
+
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/design-tokens.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
     
-    <!-- Design tokens + base -->
-    <link rel="stylesheet" href="css/design-tokens.css?v=1">
-    <link rel="stylesheet" href="css/base.css?v=1">
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
 
-    <!-- Page scaffolding + responsive -->
-    <link rel="stylesheet" href="css/pages-rtl.css?v=1">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=1">
+    <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
+    }
+    
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
+    
+    /* Card styling */
+    .card {
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    
+    /* Footer styling */
+    .site-footer {
+      background: #0a3d62;
+      color: #fff;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+    
+    .site-footer .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .site-footer ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
 
-    <!-- Page-specific skins -->
-    <link rel="stylesheet" href="css/contact-rtl.css?v=1">
-
-    <!-- Header skin MUST be last so it wins the cascade -->
-    <link rel="stylesheet" href="css/header-premium.css?v=1">
-    <link rel="stylesheet" href="css/pw-rtl.css?v=1">
-
-    <!-- Header shrink script -->
-    <script src="js/header-shrink.js?v=1" defer></script>
-    <script defer src="/js/mega-menu.js"></script>
-    <script defer src="/js/header-shrink.js"></script>
-    <script defer src="/js/header-loader.js"></script>
-    <script src="js/scroll-animations.js?v=20250908c" defer></script>
-    <script src="js/mega-menu.js?v=20250908d" defer></script>
-    <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
 </head>
-<style id="rescue-header">
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header, header#siteHeader, .site-header.site-header, header{ 
-    position: sticky !important; 
-    top: 0 !important; 
-    z-index: 9999 !important; 
-    background: var(--glass) !important; 
-    -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
-    backdrop-filter: saturate(120%) blur(8px) !important; 
-    transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  
-  /* Force sticky positioning on all possible header elements */
-  #header-root header, #header-root .site-header, .header-root header, .header-root .site-header {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 9999 !important;
-    background: var(--glass) !important;
-    width: 100% !important;
-  }
-  .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
-  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
-  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
-  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07) !important; }
-  .site-header.is-compact .header-top{ height: 0 !important; opacity: 0 !important; border-bottom: 0 !important; overflow: hidden !important; }
-  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px !important; }
-  .site-header.is-compact .logo .logo-mark{ height: 36px !important; }
-  .site-header.is-compact .logo .logo-text{ opacity: 0 !important; }
-  .header-top, .header-main, .site-header{ overflow: visible; }
-  .has-mega{ position: relative; }
-  .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
-  .has-mega.open > .mega-panel{ display: block; }
-  #headerSentinel{ height: 1px; }
-  /* Remove ugly focus outlines */
-  .brand:focus, .logo a:focus, 
-  .primary-nav a:focus, .secondary-nav a:focus,
-  .hamburger:focus, .mega-toggle:focus,
-  .mega-panel a:focus, .site-search input:focus,
-  .site-search button:focus, .btn:focus,
-  nav a:focus, button:focus, input:focus { 
-    outline: none !important; 
-  }
-
-  /* HERO-MATCHING DESIGN SYSTEM */
-  :root {
-    --hero-primary: #0a3d62;
-    --hero-primary-dark: #072a45;
-    --hero-primary-tint: #e8f1f7;
-    --hero-accent: #ffffff;
-    --hero-dark: #0a3d62;
-    --hero-darker: #072a45;
-    --hero-glow: 0 0 20px rgba(10, 61, 98, 0.3);
-    --hero-glow-strong: 0 0 30px rgba(10, 61, 98, 0.6);
-    --hero-gradient: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
-    --hero-text-glow: 0 0 10px rgba(10, 61, 98, 0.5);
-  }
-
-  /* Hero-Matching Page Header */
-  .page-header {
-    background: linear-gradient(135deg, var(--hero-dark) 0%, var(--hero-darker) 100%);
-    position: relative;
-    overflow: hidden;
-    padding: 4rem 0;
-  }
-
-  .page-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(10, 61, 98, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(7, 42, 69, 0.1) 0%, transparent 50%),
-      linear-gradient(45deg, transparent 30%, rgba(10, 61, 98, 0.05) 50%, transparent 70%);
-    animation: heroPulse 4s ease-in-out infinite;
-  }
-
-  @keyframes heroPulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-  }
-
-  .page-header h1 {
-    color: var(--hero-accent) !important;
-    font-size: 3.5rem !important;
-    font-weight: 800 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 1rem !important;
-    background: var(--hero-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: textGlow 3s ease-in-out infinite alternate;
-  }
-
-  @keyframes textGlow {
-    0% { filter: brightness(1); }
-    100% { filter: brightness(1.2); }
-  }
-
-  .page-header .section-subtitle {
-    color: rgba(255, 255, 255, 0.95) !important;
-    font-size: 1.3rem !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Hero-Matching Section Headers */
-  .section-title {
-    color: var(--hero-primary) !important;
-    font-size: 2.5rem !important;
-    font-weight: 700 !important;
-    text-shadow: var(--hero-text-glow) !important;
-    position: relative;
-    margin-bottom: 2rem !important;
-  }
-
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--hero-gradient);
-    border-radius: 2px;
-    box-shadow: var(--hero-glow);
-  }
-
-  .section-subtitle {
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-size: 1.2rem !important;
-    line-height: 1.6 !important;
-    text-shadow: 0 0 10px rgba(10, 61, 98, 0.2) !important;
-  }
-
-  /* Hero-Matching About Content */
-  .about-content {
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.8) 0%, rgba(7, 42, 69, 0.9) 100%);
-    border: 1px solid rgba(10, 61, 98, 0.3);
-    border-radius: 20px;
-    padding: 3rem;
-    box-shadow: 
-      var(--hero-glow),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--hero-gradient);
-    animation: scanLine 3s linear infinite;
-  }
-
-  @keyframes scanLine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-
-  .about-content h3 {
-    color: #ffffff !important;
-    font-size: 2.2rem !important;
-    font-weight: 800 !important;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.95) !important;
-    margin-bottom: 1.5rem !important;
-    position: relative;
-    line-height: 1.3 !important;
-    letter-spacing: 0.5px !important;
-    padding-right: 40px !important;
-  }
-
-  .about-content h3::after {
-    content: '▶';
-    color: var(--hero-primary);
-    margin-right: 15px;
-    font-size: 1.4rem;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-  }
-
-  .about-content p {
-    color: #ffffff !important;
-    font-size: 1.2rem !important;
-    font-weight: 500 !important;
-    line-height: 1.8 !important;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.9) !important;
-    margin-bottom: 1.5rem !important;
-    letter-spacing: 0.3px !important;
-  }
-
-  /* Symmetric Team Grid - 3 cards top row, 1 centered below */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .team-grid .team-card:nth-child(4) {
-    grid-column: 2;
-    justify-self: center;
-    max-width: 350px;
-  }
-
-  @media (max-width: 768px) {
-    .team-grid {
-      grid-template-columns: 1fr;
-    }
-    .team-grid .team-card:nth-child(4) {
-      grid-column: 1;
-      max-width: none;
-    }
-  }
-
-  .team-card {
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.9) 0%, rgba(7, 42, 69, 0.95) 100%);
-    border: 1px solid rgba(10, 61, 98, 0.4);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: var(--hero-glow);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .team-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(10, 61, 98, 0.05) 50%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .team-card:hover::before {
-    opacity: 1;
-  }
-
-  .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--hero-glow-strong);
-    border-color: var(--hero-primary);
-  }
-
-  .team-card h3 {
-    color: var(--hero-accent) !important;
-    font-size: 1.8rem !important;
-    font-weight: 700 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .team-card p {
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  .team-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .team-card li {
-    color: rgba(255, 255, 255, 0.7) !important;
-    padding: 0.5rem 0;
-    position: relative;
-    padding-right: 2rem;
-    font-size: 0.95rem;
-  }
-
-  .team-card li::before {
-    content: '▸';
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    color: var(--hero-accent);
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
-
-  /* Hero-Matching Buttons */
-  .btn, .service-btn {
-    background: var(--hero-gradient) !important;
-    color: white !important;
-    padding: 1rem 2.5rem !important;
-    border-radius: 12px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    display: inline-block !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 6px 14px rgba(10,61,98,.25) !important;
-    border: none !important;
-    cursor: pointer !important;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn::before, .service-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .btn:hover::before, .service-btn:hover::before {
-    left: 100%;
-  }
-
-  .btn:hover, .service-btn:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px rgba(10,61,98,.4) !important;
-  }
-
-  /* Hero-Matching Contact Section */
-  .contact-section {
-    background: linear-gradient(135deg, var(--hero-dark) 0%, var(--hero-darker) 100%);
-    border: 1px solid rgba(10, 61, 98, 0.3);
-    border-radius: 20px;
-    padding: 3rem;
-    margin-top: 3rem;
-    box-shadow: var(--hero-glow);
-    position: relative;
-  }
-
-  .contact-section h2 {
-    color: var(--hero-accent) !important;
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
-    margin-bottom: 2rem !important;
-  }
-
-  .contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .contact-item {
-    background: rgba(10, 61, 98, 0.1);
-    border: 1px solid rgba(10, 61, 98, 0.3);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .contact-item:hover {
-    background: rgba(10, 61, 98, 0.2);
-    box-shadow: 0 0 20px rgba(10, 61, 98, 0.3);
-  }
-
-  .contact-item h3 {
-    color: var(--hero-accent) !important;
-    font-size: 1.2rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .contact-item p, .contact-item a {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-decoration: none !important;
-    font-size: 1.1rem !important;
-  }
-
-  .contact-item a:hover {
-    color: var(--hero-primary) !important;
-    text-shadow: var(--hero-text-glow) !important;
-  }
-
-  /* Hero-Matching Form Styling */
-  .contact-form {
-    background: rgba(10, 61, 98, 0.8);
-    border: 1px solid rgba(10, 61, 98, 0.3);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-top: 2rem;
-  }
-
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    background: rgba(7, 42, 69, 0.8) !important;
-    border: 1px solid rgba(10, 61, 98, 0.3) !important;
-    border-radius: 8px !important;
-    color: white !important;
-    padding: 1rem !important;
-    font-size: 1rem !important;
-    transition: all 0.3s ease !important;
-  }
-
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    border-color: var(--hero-primary) !important;
-    box-shadow: 0 0 15px rgba(10, 61, 98, 0.3) !important;
-    outline: none !important;
-  }
-
-  .contact-form label {
-    color: var(--hero-accent) !important;
-    font-weight: 600 !important;
-    margin-bottom: 0.5rem !important;
-    display: block !important;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .page-header h1 {
-      font-size: 2.5rem !important;
-    }
-    
-    .section-title {
-      font-size: 2rem !important;
-    }
-    
-    .about-content,
-    .contact-section {
-      padding: 2rem;
-    }
-    
-    .team-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
 <body>
+    <!-- Use header-loader.js to load the header -->
     <div id="header-root"></div>
+    
+    <!-- Skip link for accessibility -->
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
 
     <main id="main">
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
@@ -697,100 +295,23 @@
         </div>
     </section>
 
+    
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo" aria-label="כותרת תחתונה">
-      <div class="container">
-        <div class="footer-main">
-          <div class="grid cols-4 gap-lg">
-            <div class="footer-section">
-              <h3>המשרד</h3>
-              <ul>
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul>
                 <li><a href="about.html">אודות המשרד</a></li>
-                <li><a href="attorneys.html">עורכי דין</a></li>
-                <li><a href="contact.html">צור קשר</a></li>
-                <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-section">
-              <h3>תחומי התמחות</h3>
-              <ul>
-                <li><a href="practice-areas.html#family">דיני משפחה</a></li>
-                <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
-                <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
-                <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-section">
-              <h3>מידע ותוכן</h3>
-              <ul>
-                <li><a href="articles.html">מאמרים</a></li>
-                <li><a href="media.html">תקשורת</a></li>
-                <li><a href="practice-areas.html">כל תחומי ההתמחות</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-section">
-              <h3>יצירת קשר</h3>
-              <div class="contact-info">
-                <p><strong>טלפון:</strong><br>
-                <a href="tel:03-609-2414">03-609-2414</a></p>
-                
-                <p><strong>נייד:</strong><br>
-                <a href="tel:054-8184581">054-8184581</a></p>
-                
-                <p><strong>אימייל:</strong><br>
-                <a href="mailto:yanivgil@gmail.com">yanivgil@gmail.com</a></p>
-                
-                <p><strong>כתובת:</strong><br>
-                מגדל "WE-TLV"<br>
-                דרך מנחם בגין 150<br>
-                קומה 7, תל-אביב</p>
-                    </div>
-            </div>
-          </div>
-        </div>
-        
-            <div class="footer-bottom">
-          <div class="flex justify-between items-center">
-            <div class="footer-copyright">
-              <p>&copy; 2024 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
-            </div>
-            <div class="footer-legal">
-              <a href="#privacy">מדיניות פרטיות</a>
-              <span>•</span>
-              <a href="#terms">תנאי שימוש</a>
-            </div>
-          </div>
-            </div>
+                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+            </ul>
         </div>
     </footer>
 
+    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
     <script>
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .about-content, .contact-content').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add active class to current page in navigation
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add active class to current page in navigation
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             const navLinks = document.querySelectorAll('nav a');
             
@@ -800,69 +321,7 @@
                 }
             });
         });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('תודה על פנייתכם! עורך הדין הנבחר יצור איתכם קשר בהקדם.');
-        });
     </script>
 
-    <!-- Shrink controller (tiny JS) -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Force sticky header immediately
-      const forceStickyHeader = () => {
-        const headers = document.querySelectorAll('header, .site-header, #siteHeader');
-        headers.forEach(header => {
-          if (header) {
-            header.style.position = 'sticky';
-            header.style.top = '0';
-            header.style.zIndex = '9999';
-            header.style.background = 'rgba(255,255,255,.92)';
-            header.style.width = '100%';
-            console.log('Forced sticky header');
-          }
-        });
-      };
-      
-      // Apply immediately
-      forceStickyHeader();
-      
-      // Wait for header to be loaded by header-loader.js
-      setTimeout(() => {
-        forceStickyHeader();
-        
-      const header = document.getElementById('siteHeader');
-      const s      = document.getElementById('headerSentinel');
-        if (!header || !s) {
-          console.warn('Header or sentinel not found, retrying...');
-          // Retry after a longer delay
-          setTimeout(() => {
-            forceStickyHeader();
-            const header2 = document.getElementById('siteHeader');
-            const s2 = document.getElementById('headerSentinel');
-            if (header2 && s2) {
-              if (!s2.offsetHeight) s2.style.height = '1px';
-              new IntersectionObserver(([e]) => {
-                header2.classList.toggle('is-compact', !e.isIntersecting);
-              }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s2);
-              console.log('Header shrink initialized (retry)');
-            }
-          }, 500);
-          return;
-        }
-      if (!s.offsetHeight) s.style.height = '1px';
-
-      new IntersectionObserver(([e]) => {
-        header.classList.toggle('is-compact', !e.isIntersecting);
-      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
-        console.log('Header shrink initialized');
-      }, 200);
-      
-      // Also apply on window load
-      window.addEventListener('load', forceStickyHeader);
-    });
-    </script>
 </body>
 </html>

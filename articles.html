@@ -1,83 +1,106 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאמרים ופרסומים - משרד עו"ד יניב גיל</title>
-    <meta name="description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים מאת עו״ד יניב גיל - דיני משפחה, חדלות פירעון, סדר דין אזרחי ומקרקעין">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yanivgil.co.il/articles.html">
-    <meta property="og:title" content="מאמרים ופרסומים - משרד עו״ד יניב גיל">
-    <meta property="og:description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים מאת עו״ד יניב גיל">
-    <meta property="og:image" content="https://www.yanivgil.co.il/images/logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yanivgil.co.il/articles.html">
-    <meta property="twitter:title" content="מאמרים ופרסומים - משרד עו״ד יניב גיל">
-    <meta property="twitter:description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים מאת עו״ד יניב גיל">
-    <meta property="twitter:image" content="https://www.yanivgil.co.il/images/logo.png">
+    <title>מאמרים ופרסומים - משרד עו"ד יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
 
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/design-tokens.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
     
-    <!-- Design tokens + base -->
-    <link rel="stylesheet" href="css/design-tokens.css?v=1">
-    <link rel="stylesheet" href="css/base.css?v=1">
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
 
-    <!-- Page scaffolding + responsive -->
-    <link rel="stylesheet" href="css/pages-rtl.css?v=1">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=1">
-
-    <!-- Page-specific skins -->
-    <link rel="stylesheet" href="css/articles-rtl.css?v=1">
-
-    <!-- Premium theme — load LAST so it overrides older CSS -->
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
+    <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
+    }
     
-    <!-- Header shrink script -->
-    <script src="/js/header-shrink.js?v=2025-09-12a" defer></script>
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
     
-    <link rel="stylesheet" href="/css/mobile-responsive.css">
-    <script defer src="/js/mega-menu.js"></script>
-    <script defer src="/js/header-shrink.js"></script>
-    <script defer src="/js/header-loader.js"></script>
-    <script src="js/scroll-animations.js?v=20250908c" defer></script>
-    <script src="js/mega-menu.js?v=20250908d" defer></script>
-    <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
-  <style id="rescue-header">
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{ position: sticky; top: 0; z-index: 4000; background: var(--glass); -webkit-backdrop-filter: saturate(120%) blur(8px); backdrop-filter: saturate(120%) blur(8px); transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease; }
-  .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
-  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
-  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
-  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
-  .site-header.is-compact .header-top{ height: 0; opacity: 0; border-bottom: 0; overflow: hidden; }
-  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px; }
-  .site-header.is-compact .logo .logo-mark{ height: 36px; }
-  .site-header.is-compact .logo .logo-text{ opacity: 0; }
-  .header-top, .header-main, .site-header{ overflow: visible; }
-  .has-mega{ position: relative; }
-  .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
-  .has-mega.open > .mega-panel{ display: block; }
-  #headerSentinel{ height: 1px; }
-  /* Remove ugly focus outlines */
-  .brand:focus, .logo a:focus, 
-  .primary-nav a:focus, .secondary-nav a:focus,
-  .hamburger:focus, .mega-toggle:focus,
-  .mega-panel a:focus, .site-search input:focus,
-  .site-search button:focus, .btn:focus,
-  nav a:focus, button:focus, input:focus { 
-    outline: none !important; 
-  }
-  </style>
+    /* Card styling */
+    .card {
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    
+    /* Footer styling */
+    .site-footer {
+      background: #0a3d62;
+      color: #fff;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+    
+    .site-footer .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .site-footer ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
 </head>
 <body>
+    <!-- Use header-loader.js to load the header -->
+    <div id="header-root"></div>
+    
+    <!-- Skip link for accessibility -->
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+    <main id="main">
+
     <div id="header-root"></div>
     <!-- Header -->
     <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
@@ -435,46 +458,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-main">
-                <div class="grid cols-4">
-                    <div class="footer-section">
-                    <h3>משרד עו"ד יניב גיל</h3>
-                    <p>מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב 6492105, ישראל</p>
-                    <p>טלפון: 03-609-2414 | נייד: 054-8184581 | פקס: 03-609-2413</p>
-                </div>
-                    <div class="footer-section">
-                        <h3>תחומי התמחות</h3>
-                        <ul>
-                            <li><a href="practice-areas.html#family">דיני משפחה</a></li>
-                            <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
-                            <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
-                            <li><a href="practice-areas.html#execution">הוצאה לפועל</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>שירותים</h3>
-                        <ul>
-                            <li><a href="attorneys.html">עורכי דין</a></li>
-                            <li><a href="articles.html">מאמרים</a></li>
-                            <li><a href="media.html">תקשורת</a></li>
-                            <li><a href="contact.html">צור קשר</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>יצירת קשר</h3>
-                        <p><a href="contact.html" class="btn primary">לתיאום פגישה</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="flex">
-                <p>&copy; 2024 משרד עו"ד יניב גיל. כל הזכויות שמורות.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
     <script src="js/scroll-animations.js?v=20250908b" defer></script>
     <script src="js/mega-menu.js?v=20250908d" defer></script>
@@ -501,5 +485,33 @@
       }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
     });
     </script>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add active class to current page in navigation
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

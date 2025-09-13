@@ -1,328 +1,106 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="תחומי ההתמחות של משרד עו״ד יניב גיל – דיני משפחה, חדלות פירעון, סדר דין אזרחי, מקרקעין ועוד.">
-    <meta property="og:title" content="תחומי התמחות - משרד עו״ד יניב גיל">
-    <meta property="og:description" content="סקירת תחומי השירות והניסיון שלנו.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="תחומי התמחות - משרד עו״ד יניב גיל">
-    <meta name="twitter:description" content="סקירת תחומי השירות והניסיון שלנו.">
-    <meta name="twitter:image" content="images/logo.png">
-    <title>תחומי התמחות - משרד עורכי דין יניב גיל</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>תחומי התמחות - משרד עורכי דין יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
+
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/design-tokens.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
     
-    <!-- Design tokens + base -->
-    <link rel="stylesheet" href="css/design-tokens.css?v=1">
-    <link rel="stylesheet" href="css/base.css?v=1">
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
 
-    <!-- Page scaffolding + responsive -->
-    <link rel="stylesheet" href="css/pages-rtl.css?v=1">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=1">
-
-    <!-- Page-specific skins -->
-    <link rel="stylesheet" href="css/contact-rtl.css?v=1">
-
-    <!-- Premium theme — load LAST so it overrides older CSS -->
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-01-15">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-01-15">
-    
-    <!-- Header shrink script -->
-    <script src="js/header-shrink.js?v=1" defer></script>
-    
-    <link rel="stylesheet" href="/css/mobile-responsive.css">
-    <script defer src="/js/mega-menu.js"></script>
-    <script defer src="/js/header-shrink.js"></script>
-    <script defer src="/js/header-loader.js"></script>
-    <script src="js/scroll-animations.js?v=20250908c" defer></script>
-    <script src="js/mega-menu.js?v=20250908d" defer></script>
-    <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
-  <style id="rescue-header" data-version="2025-01-15">
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{ 
-    position: sticky !important; 
-    top: 0 !important; 
-    z-index: 9999 !important; 
-    background: var(--glass) !important; 
-    -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
-    backdrop-filter: saturate(120%) blur(8px) !important; 
-    transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
-  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
-  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
-  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
-  .site-header.is-compact .header-top{ height: 0; opacity: 0; border-bottom: 0; overflow: hidden; }
-  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px; }
-  .site-header.is-compact .logo .logo-mark{ height: 36px; }
-  .site-header.is-compact .logo .logo-text{ opacity: 0; }
-  .header-top, .header-main, .site-header{ overflow: visible; }
-  .has-mega{ position: relative; }
-  .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
-  .has-mega.open > .mega-panel{ display: block; }
-  #headerSentinel{ height: 1px; }
-  /* Remove ugly focus outlines */
-  .brand:focus, .logo a:focus, 
-  .primary-nav a:focus, .secondary-nav a:focus,
-  .hamburger:focus, .mega-toggle:focus,
-  .mega-panel a:focus, .site-search input:focus,
-  .site-search button:focus, .btn:focus,
-  nav a:focus, button:focus, input:focus { 
-    outline: none !important; 
-  }
-
-  /* Corporate Blue Design Effects for Practice Areas - Updated */
-  :root {
-    --corporate-blue: #1e3a8a;
-    --corporate-blue-light: #3b82f6;
-    --corporate-blue-dark: #1e40af;
-    --corporate-blue-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    --corporate-blue-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
-    --corporate-blue-hover: 0 20px 40px rgba(30, 58, 138, 0.25);
-  }
-
-  /* Symmetric Services Grid - 2x2 layout */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .service-card {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    padding: 2rem !important;
-    box-shadow: var(--corporate-blue-shadow) !important;
-    border: 1px solid rgba(30, 58, 138, 0.1) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    height: fit-content !important;
-    min-height: 400px !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--corporate-blue-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-
-  .service-card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .service-card:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: var(--corporate-blue-hover) !important;
-    border-color: var(--corporate-blue-light) !important;
-  }
-
-  .service-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--corporate-blue-gradient);
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
-  }
-
-  .service-icon::after {
-    content: '⚖️';
-    font-size: 24px;
-    color: white;
-  }
-
-  .service-card h3 {
-    color: var(--corporate-blue-dark) !important;
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.3 !important;
-  }
-
-  .service-card p {
-    color: #64748b !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    flex-grow: 1 !important;
-  }
-
-  .service-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem 0;
-    flex-grow: 1;
-  }
-
-  .service-list li {
-    color: #475569;
-    padding: 0.5rem 0;
-    position: relative;
-    padding-right: 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .service-list li::before {
-    content: '✓';
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    color: var(--corporate-blue-light);
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
-  .service-btn {
-    background: var(--corporate-blue-gradient) !important;
-    color: white !important;
-    padding: 0.875rem 2rem !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    display: inline-block !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3) !important;
-    border: none !important;
-    cursor: pointer !important;
-    margin-top: auto !important;
-  }
-
-  .service-btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4) !important;
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: none;
+    <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
     }
     
-    .service-card {
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
+    
+    /* Card styling */
+    .card {
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
       padding: 1.5rem;
-      min-height: 350px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-  }
-  </style>
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    
+    /* Footer styling */
+    .site-footer {
+      background: #0a3d62;
+      color: #fff;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+    
+    .site-footer .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .site-footer ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
 </head>
 <body>
+    <!-- Use header-loader.js to load the header -->
     <div id="header-root"></div>
-    <!-- Header -->
+    
+    <!-- Skip link for accessibility -->
     <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
 
-    <header class="site-header" id="siteHeader" data-rtl role="banner" aria-label="כותרת האתר">
-      <div class="header-top">
-        <div class="container header-top-inner">
-          <nav class="secondary-nav" aria-label="תפריט משני">
-            <ul>
-              <li><a href="articles.html">מאמרים</a></li>
-              <li><a href="media.html">תקשורת</a></li>
-              <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
-              <li><a href="about.html">אודות המשרד</a></li>
-            </ul>
-          </nav>
-            <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
-              <label class="visually-hidden" for="q">חיפוש באתר</label>
-              <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
-              <button type="submit" class="button small">חפש</button>
-              <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
-            </form>
-        </div>
-      </div>
-
-      <div class="header-main">
-        <div class="container header-main-inner">
-                                       <div class="logo">
-            <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
-              <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-mark">
-              <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
-            </a>
-          </div>
-
-          <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
-            <ul>
-              <li>
-                <a href="attorneys.html">עורכי דין</a>
-              </li>
-              <li class="has-mega">
-                <button class="mega-toggle" aria-haspopup="true" aria-expanded="false">תחומי התמחות</button>
-                <div class="mega-panel" role="region" aria-label="תחומי התמחות">
-                  <div class="grid cols-3">
-                    <ul>
-                      <li><a href="practice-areas.html#family">דיני משפחה</a></li>
-                      <li><a href="practice-areas.html#bankruptcy">חדלות פירעון</a></li>
-                      <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
-                      <li><a href="practice-areas.html#real-estate">מקרקעין</a></li>
-                      <li><a href="practice-areas.html#commercial">משפט מסחרי</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="practice-areas.html#labor">דיני עבודה</a></li>
-                      <li><a href="practice-areas.html#inheritance">דיני ירושה</a></li>
-                      <li><a href="practice-areas.html#contracts">דיני חוזים</a></li>
-                    </ul>
-                           </div>
-                       </div>
-              </li>
-              <li>
-                    <a href="articles.html">מאמרים</a>
-              </li>
-              <li>
-                    <a href="media.html">תקשורת</a>
-              </li>
-              <li>
-                    <a href="contact.html">צור קשר</a>
-              </li>
-            </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- sentinel tells JS when header left the top -->
-    <div id="headerSentinel" aria-hidden="true" style="height:1px"></div>
-
     <main id="main">
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
@@ -593,49 +371,23 @@
             </div>
         </div>
     </section>
+    
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>משרד עו"ד יניב גיל</h3>
-                    <p>מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב 6492105, ישראל</p>
-                    <p>טלפון: 03-609-2414 | נייד: 054-8184581 | פקס: 03-609-2413</p>
-                </div>
-                <div class="footer-links">
-                    <a href="contact.html" class="cta-button">לתיאום פגישה</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 משרד עו"ד יניב גיל. כל הזכויות שמורות.</p>
-            </div>
+            <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+            </ul>
         </div>
     </footer>
 
+    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
     <script>
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .about-content, .contact-content').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add active class to current page in navigation
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add active class to current page in navigation
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             const navLinks = document.querySelectorAll('nav a');
             
@@ -645,45 +397,7 @@
                 }
             });
         });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('תודה על פנייתכם! נציג שלנו יצור איתכם קשר בהקדם.');
-        });
     </script>
-    
-    <!-- Shrink controller (tiny JS) -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Wait for header to be loaded by header-loader.js
-      setTimeout(() => {
-        const header = document.getElementById('siteHeader');
-        const s      = document.getElementById('headerSentinel');
-        if (!header || !s) {
-          console.warn('Header or sentinel not found, retrying...');
-          // Retry after a longer delay
-          setTimeout(() => {
-            const header2 = document.getElementById('siteHeader');
-            const s2 = document.getElementById('headerSentinel');
-            if (header2 && s2) {
-              if (!s2.offsetHeight) s2.style.height = '1px';
-              new IntersectionObserver(([e]) => {
-                header2.classList.toggle('is-compact', !e.isIntersecting);
-              }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s2);
-              console.log('Header shrink initialized (retry)');
-            }
-          }, 500);
-          return;
-        }
-        if (!s.offsetHeight) s.style.height = '1px';
 
-        new IntersectionObserver(([e]) => {
-          header.classList.toggle('is-compact', !e.isIntersecting);
-        }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
-        console.log('Header shrink initialized');
-      }, 200);
-    });
-    </script>
 </body>
 </html>

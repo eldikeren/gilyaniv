@@ -1,54 +1,8 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <!-- ✅ EXTREME ERROR SUPPRESSION: Run this first to prevent any console errors -->
-    <script>
-      // Override console methods to completely suppress all errors
-      (function() {
-        // Store original console methods
-        var originalConsole = {
-          log: console.log,
-          error: console.error,
-          warn: console.warn,
-          info: console.info,
-          debug: console.debug
-        };
-        
-        // Override all console methods to filter out specific messages
-        console.log = function() {
-          // Skip all header-related messages
-          if (arguments[0] && typeof arguments[0] === 'string' && 
-              (arguments[0].includes('header') || 
-               arguments[0].includes('Header') ||
-               arguments[0].includes('Hamburger') ||
-               arguments[0].includes('Primary nav') ||
-               arguments[0].includes('Mobile menu'))) {
-            return;
-          }
-          return originalConsole.log.apply(console, arguments);
-        };
-        
-        // Completely silence errors
-        console.error = function() { return; };
-        console.warn = function() { return; };
-        
-        // Patch window.onerror to catch all JavaScript errors
-        window.onerror = function(message, source, lineno, colno, error) {
-          // Suppress all errors
-          return true; // Prevents the error from being shown in console
-        };
-        
-        // Override setTimeout to prevent certain callbacks from running
-        var originalSetTimeout = window.setTimeout;
-        window.setTimeout = function(callback, delay) {
-          if (callback && callback.toString && callback.toString().includes('Header')) {
-            // Don't run header-related timeouts
-            return 0;
-          }
-          return originalSetTimeout.apply(window, arguments);
-        };
-      })();
-    </script>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
