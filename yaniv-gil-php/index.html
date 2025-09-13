@@ -70,12 +70,27 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
   }
   
   .section-header h2 {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    font-size: 2.5rem !important;
+    color: #0a3d62 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+  }
+  
+  .section-header p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.2rem !important;
+    color: #64748b !important;
+    margin-bottom: 0 !important;
   }
   
   /* Add scroll padding for anchor links */
@@ -83,24 +98,7 @@
     scroll-margin-top: 140px !important;
   }
   
-  /* Ensure testimonials section header is visible */
-  .section[aria-labelledby="revTitle"] .section-header {
-    margin-bottom: 2rem !important;
-    text-align: center !important;
-  }
-  
-  .section[aria-labelledby="revTitle"] .section-header h2 {
-    font-size: 2.5rem !important;
-    color: #0a3d62 !important;
-    margin-bottom: 1rem !important;
-    font-weight: 700 !important;
-  }
-  
-  .section[aria-labelledby="revTitle"] .section-header p {
-    font-size: 1.2rem !important;
-    color: #64748b !important;
-    margin-bottom: 0 !important;
-  }
+  /* Ensure testimonials section header is visible - using general section-header styles above */
   .header-top{ 
     height: 40px; 
     border-bottom: 1px solid var(--border); 
@@ -294,12 +292,12 @@
       background: rgba(10, 61, 98, 0.7) !important;
     }
     
-    /* Mobile testimonials header styling */
-    .section[aria-labelledby="revTitle"] .section-header h2 {
+    /* Mobile section header styling */
+    .section-header h2 {
       font-size: 2rem !important;
     }
     
-    .section[aria-labelledby="revTitle"] .section-header p {
+    .section-header p {
       font-size: 1rem !important;
     }
     
@@ -939,17 +937,29 @@
       const hamburger = document.querySelector('.hamburger');
       const primaryNav = document.querySelector('.primary-nav');
       
+      console.log('Hamburger found:', !!hamburger);
+      console.log('Primary nav found:', !!primaryNav);
+      
       if (hamburger && primaryNav) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Hamburger clicked');
+          
           primaryNav.classList.toggle('active');
           hamburger.classList.toggle('active');
           hamburger.setAttribute('aria-expanded', primaryNav.classList.contains('active'));
+          
+          console.log('Menu active:', primaryNav.classList.contains('active'));
         });
         
         // Close menu when clicking on a link
         const navLinks = primaryNav.querySelectorAll('a');
+        console.log('Nav links found:', navLinks.length);
+        
         navLinks.forEach(link => {
           link.addEventListener('click', function() {
+            console.log('Nav link clicked');
             primaryNav.classList.remove('active');
             hamburger.classList.remove('active');
             hamburger.setAttribute('aria-expanded', 'false');
@@ -964,6 +974,8 @@
             hamburger.setAttribute('aria-expanded', 'false');
           }
         });
+      } else {
+        console.warn('Mobile menu elements not found');
       }
     });
     </script>

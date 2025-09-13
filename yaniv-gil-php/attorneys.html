@@ -833,8 +833,8 @@
       setTimeout(() => {
         forceStickyHeader();
         
-        const header = document.getElementById('siteHeader');
-        const s      = document.getElementById('headerSentinel');
+      const header = document.getElementById('siteHeader');
+      const s      = document.getElementById('headerSentinel');
         if (!header || !s) {
           console.warn('Header or sentinel not found, retrying...');
           // Retry after a longer delay
@@ -852,11 +852,11 @@
           }, 500);
           return;
         }
-        if (!s.offsetHeight) s.style.height = '1px';
+      if (!s.offsetHeight) s.style.height = '1px';
 
-        new IntersectionObserver(([e]) => {
-          header.classList.toggle('is-compact', !e.isIntersecting);
-        }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+      new IntersectionObserver(([e]) => {
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
         console.log('Header shrink initialized');
       }, 200);
       
