@@ -102,24 +102,37 @@
     --hero-hover: 0 20px 40px rgba(10, 61, 98, 0.25);
   }
 
-  /* Office name styling for hero section - Large and centered */
-  .office-name {
-    font-size: 3.5rem !important;
+  /* Office name overlay on top of video - Large and centered */
+  .office-name-overlay {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 4rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.9) !important;
-    margin-bottom: 2rem !important;
-    letter-spacing: 2px !important;
+    text-shadow: 0 6px 12px rgba(0,0,0,0.9) !important;
+    letter-spacing: 3px !important;
     text-align: center !important;
     opacity: 1 !important;
-    line-height: 1.2 !important;
+    line-height: 1.1 !important;
+    z-index: 10 !important;
+    white-space: nowrap !important;
   }
 
   @media (max-width: 768px) {
-    .office-name {
-      font-size: 2.5rem !important;
+    .office-name-overlay {
+      font-size: 2.8rem !important;
+      letter-spacing: 2px !important;
+      white-space: normal !important;
+      max-width: 90% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .office-name-overlay {
+      font-size: 2.2rem !important;
       letter-spacing: 1px !important;
-      margin-bottom: 1.5rem !important;
     }
   }
 
@@ -350,8 +363,8 @@
             <source src="images/733896_Park Buildings Pov City_By_Thomas_Gellert_Artlist_HD.mp4" type="video/mp4">
           </video>
 
+          <div class="office-name-overlay">משרד עורכי דין גיל יניב</div>
           <div class="inner">
-            <div class="office-name">משרד עורכי דין גיל יניב</div>
             <h1 class="title">העורך דין הנכון עושה את כל ההבדל</h1>
             <p class="lead">לעו״ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
             <div class="actions">
