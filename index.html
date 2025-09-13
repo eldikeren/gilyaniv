@@ -72,11 +72,8 @@
       font-size: 0.9rem;
       color: #555;
     }
-  </style>
-  
-  <!-- ROOT CAUSE FIX: Prevent header scripts from affecting testimonials section -->
-  <style>
-    /* ✅ Force testimonials header back into normal layout */
+
+    /* ✅ Block global header script from fixing testimonials title */
     section[aria-labelledby="revTitle"] .section-header {
       position: static !important;
       top: auto !important;
@@ -87,12 +84,6 @@
       width: auto !important;
       margin: 0 auto 1rem auto !important;
       padding: 0 !important;
-      transform: none !important;
-      float: none !important;
-      clear: none !important;
-      overflow: visible !important;
-      visibility: visible !important;
-      opacity: 1 !important;
     }
 
     #revTitle {
@@ -104,67 +95,12 @@
       color: #0a3d62 !important;
       font-weight: 700 !important;
       scroll-margin-top: 140px;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      z-index: auto !important;
-      transform: none !important;
-      float: none !important;
-      clear: none !important;
-      overflow: visible !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      background: none !important;
-      border: none !important;
-      box-shadow: none !important;
-      padding: 0 !important;
     }
-
-    /* Backup title styles (now hidden since we fixed the root cause) */
-    .testimonials-title-backup {
-      display: none;
-    }
-
-    .testimonials-title-wrapper {
-      display: block;
-      margin: 2rem auto;
-      text-align: center;
-    }
-
-    .testimonials-title {
-      font-size: 2.5rem;
-      color: #0a3d62;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      scroll-margin-top: 140px;
-    }
-
-    .testimonials-subtitle {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 0;
-    }
-    
     @media (max-width: 768px) {
-      #revTitle { 
-        scroll-margin-top: 120px;
-        font-size: 2.2rem;
-      }
-      .testimonials-title { 
-        scroll-margin-top: 120px;
-        font-size: 2.2rem;
-      }
+      #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
     }
     @media (max-width: 480px) {
-      #revTitle { 
-        scroll-margin-top: 100px;
-        font-size: 1.8rem;
-      }
-      .testimonials-title { 
-        scroll-margin-top: 100px;
-        font-size: 1.8rem;
-      }
+      #revTitle { font-size: 1.8rem; scroll-margin-top: 100px; }
     }
   </style>
 </head>
@@ -221,6 +157,7 @@
     <!-- ===== ✅ Testimonials ===== -->
     <section class="section" aria-labelledby="revTitle">
       <div class="container">
+        <!-- ✅ cleaned: no style="", no class="visible" -->
         <header class="section-header">
           <h2 id="revTitle">ביקורות לקוחות</h2>
           <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
@@ -261,15 +198,9 @@
     </div>
   </footer>
 
-  <!-- Simple script for anchor links -->
+  <!-- Optional: Smooth scroll for #revTitle -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Reset scroll on load unless user explicitly clicked #revTitle
-      if (!window.location.hash || window.location.hash !== '#revTitle') {
-        window.scrollTo(0, 0);
-      }
-
-      // If #revTitle is in URL, scroll there smoothly after load
       if (window.location.hash === '#revTitle') {
         setTimeout(() => {
           const target = document.getElementById('revTitle');
