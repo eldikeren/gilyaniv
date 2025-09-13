@@ -37,39 +37,6 @@
       font-weight: 700;
     }
 
-    /* ✅ Force the headline to appear above the cards in its place */
-    #revTitle {
-      display: block !important;
-      position: static !important;
-      margin: 0 auto 1rem auto !important;
-      text-align: center !important;
-      font-size: 2.5rem !important;
-      color: #0a3d62 !important;
-      font-weight: 700 !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      z-index: auto !important;
-      transform: none !important;
-      float: none !important;
-      clear: none !important;
-      scroll-margin-top: 140px !important;
-    }
-    
-    @media (max-width: 768px) {
-      #revTitle { 
-        scroll-margin-top: 120px !important;
-        font-size: 2.2rem !important;
-      }
-    }
-    @media (max-width: 480px) {
-      #revTitle { 
-        scroll-margin-top: 100px !important;
-        font-size: 1.8rem !important;
-      }
-    }
-
     .testimonials {
       display: flex;
       gap: 2rem;
@@ -104,6 +71,64 @@
     .testimonial figcaption {
       font-size: 0.9rem;
       color: #555;
+    }
+  </style>
+  
+  <!-- ULTRA AGGRESSIVE FIX: Force #revTitle to stay in normal flow -->
+  <style>
+    /* This must be the LAST CSS to override everything */
+    html body main section.section[aria-labelledby="revTitle"] div.container header.section-header h2#revTitle,
+    html body main section.section div.container header.section-header h2#revTitle,
+    html body section.section header.section-header h2#revTitle,
+    html body h2#revTitle,
+    #revTitle {
+      all: unset !important;
+      display: block !important;
+      position: static !important;
+      margin: 0 auto 1rem auto !important;
+      text-align: center !important;
+      font-size: 2.5rem !important;
+      color: #0a3d62 !important;
+      font-weight: 700 !important;
+      font-family: 'Heebo', Arial, sans-serif !important;
+      line-height: 1.2 !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      min-height: auto !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      z-index: auto !important;
+      transform: none !important;
+      float: none !important;
+      clear: none !important;
+      overflow: visible !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      scroll-margin-top: 140px !important;
+    }
+    
+    @media (max-width: 768px) {
+      html body main section.section[aria-labelledby="revTitle"] div.container header.section-header h2#revTitle,
+      html body main section.section div.container header.section-header h2#revTitle,
+      html body section.section header.section-header h2#revTitle,
+      html body h2#revTitle,
+      #revTitle { 
+        scroll-margin-top: 120px !important;
+        font-size: 2.2rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      html body main section.section[aria-labelledby="revTitle"] div.container header.section-header h2#revTitle,
+      html body main section.section div.container header.section-header h2#revTitle,
+      html body section.section header.section-header h2#revTitle,
+      html body h2#revTitle,
+      #revTitle { 
+        scroll-margin-top: 100px !important;
+        font-size: 1.8rem !important;
+      }
     }
   </style>
 </head>
@@ -207,6 +232,45 @@
       if (!window.location.hash || window.location.hash !== '#revTitle') {
         window.scrollTo(0, 0);
       }
+
+      // Force #revTitle to stay in normal flow
+      const forceRevTitleInPlace = () => {
+        const revTitle = document.getElementById('revTitle');
+        if (revTitle) {
+          // Remove any positioning that might be applied by external CSS
+          revTitle.style.position = 'static';
+          revTitle.style.top = 'auto';
+          revTitle.style.left = 'auto';
+          revTitle.style.right = 'auto';
+          revTitle.style.bottom = 'auto';
+          revTitle.style.zIndex = 'auto';
+          revTitle.style.transform = 'none';
+          revTitle.style.float = 'none';
+          revTitle.style.clear = 'none';
+          revTitle.style.display = 'block';
+          revTitle.style.visibility = 'visible';
+          revTitle.style.opacity = '1';
+          revTitle.style.margin = '0 auto 1rem auto';
+          revTitle.style.textAlign = 'center';
+          revTitle.style.fontSize = '2.5rem';
+          revTitle.style.color = '#0a3d62';
+          revTitle.style.fontWeight = '700';
+          revTitle.style.fontFamily = "'Heebo', Arial, sans-serif";
+          revTitle.style.lineHeight = '1.2';
+          revTitle.style.width = '100%';
+          revTitle.style.maxWidth = 'none';
+          revTitle.style.height = 'auto';
+          revTitle.style.minHeight = 'auto';
+          revTitle.style.overflow = 'visible';
+          revTitle.style.scrollMarginTop = '140px';
+        }
+      };
+
+      // Apply the fix immediately and after a delay
+      forceRevTitleInPlace();
+      setTimeout(forceRevTitleInPlace, 100);
+      setTimeout(forceRevTitleInPlace, 500);
+      setTimeout(forceRevTitleInPlace, 1000);
 
       // If #revTitle is in URL, scroll there smoothly after load
       if (window.location.hash === '#revTitle') {
