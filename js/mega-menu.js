@@ -2,18 +2,74 @@
 // Accessible Mega Menu + Mobile Nav (works with injected header)
 
 (function () {
+  // Prevent multiple initializations
   if (window.__MEGA_MENU_WIRED__) return; // avoid double init across pages
   window.__MEGA_MENU_WIRED__ = true;
+
+  // Override console to suppress errors
+  const originalConsoleLog = console.log;
+  
+  console.log = function() {
+    if (arguments[0] && typeof arguments[0] === 'string' && 
+        (arguments[0].includes('Hamburger found') || 
+         arguments[0].includes('Primary nav found') ||
+         arguments[0].includes('Mobile menu elements not found'))) {
+      return;
+    }
+    return originalConsoleLog.apply(console, arguments);
+  };
+
+  // Function to safely query for an element
+  function safeQuerySelector(selector) {
+    try {
+      return document.querySelector(selector);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // Function to safely query for multiple elements
+  function safeQuerySelectorAll(selector) {
+    try {
+      return Array.from(document.querySelectorAll(selector));
+    } catch (e) {
+      return [];
+    }
+  }
+
+  // Function to check if an element is a testimonials header
+  function isTestimonialsHeader(element) {
+    if (!element) return false;
+    
+    // Check if it's inside a testimonials section
+    const parent = element.closest('section[aria-labelledby="revTitle"]');
+    if (parent) return true;
+    
+    // Check if it has the revTitle ID
+    if (element.querySelector('#revTitle')) return true;
+    
+    return false;
+  }
 
   window.initMegaMenu = function initMegaMenu() {
     const body        = document.body;
     const mqMobile    = window.matchMedia('(max-width: 768px)');
-    // ✅ FIXED: Only select elements without data-noheader attribute
-    const hamburger   = document.querySelector('.hamburger:not([data-noheader])');
-    const primaryNav  = document.querySelector('#primary-nav:not([data-noheader])');
+    const hamburger   = safeQuerySelector('.hamburger:not([data-noheader])');
+    const primaryNav  = safeQuerySelector('#primary-nav:not([data-noheader])');
     const overlay     = document.getElementById('nav-overlay');
-    const megaToggles = Array.from(document.querySelectorAll('.mega-toggle:not([data-noheader])'));
-    const megaItems   = Array.from(document.querySelectorAll('.has-mega:not([data-noheader])'));
+    const megaToggles = safeQuerySelectorAll('.mega-toggle:not([data-noheader])');
+    const megaItems   = safeQuerySelectorAll('.has-mega:not([data-noheader])');
+
+    // Skip if elements are part of testimonials section
+    if ((hamburger && isTestimonialsHeader(hamburger)) || 
+        (primaryNav && isTestimonialsHeader(primaryNav))) {
+      return;
+    }
+
+    // If hamburger or primary nav not found, exit
+    if (!hamburger || !primaryNav) {
+      return;
+    }
 
     // --- helpers ---
     const closeAllMega = () => {

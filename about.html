@@ -34,35 +34,10 @@
     <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
     <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
     
-    <!-- ✅ OVERRIDE problematic scripts completely -->
-    <script>
-      // Immediately override problematic functions to prevent any errors
-      window.initHeaderShrink = function() { console.log('Header shrink disabled'); };
-      window.initMegaMenu = function() { console.log('Mega menu disabled'); };
-      
-      // Suppress all console errors
-      const originalConsoleError = console.error;
-      console.error = function() { 
-        // Just suppress everything
-        return;
-      };
-      
-      // Suppress specific console logs
-      const originalConsoleLog = console.log;
-      console.log = function() {
-        if (arguments[0] && typeof arguments[0] === 'string' && 
-            (arguments[0].includes('Forced fixed header') || 
-             arguments[0].includes('Header or sentinel not found') ||
-             arguments[0].includes('Hamburger found') ||
-             arguments[0].includes('Primary nav found') ||
-             arguments[0].includes('Mobile menu elements not found'))) {
-          return; // Suppress these messages
-        }
-        return originalConsoleLog.apply(console, arguments);
-      };
-    </script>
-    
-    <!-- Keep only the useful scripts -->
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
     <script src="js/scroll-animations.js?v=2025-09-13a" defer></script>
     <script src="js/pages-rtl-enhance.js?v=2025-09-13a" defer></script>
   <style id="rescue-header">

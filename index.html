@@ -62,109 +62,10 @@
     <link rel="stylesheet" href="css/home-rtl.css?v=1">
     <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
     <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
-    <!-- ✅ OVERRIDE problematic scripts completely -->
-    <script>
-      // Immediately override problematic functions to prevent any errors
-      window.initHeaderShrink = function() { console.log('Header shrink disabled'); };
-      window.initMegaMenu = function() { console.log('Mega menu disabled'); };
-      
-      // Suppress all console errors
-      const originalConsoleError = console.error;
-      console.error = function() { 
-        // Just suppress everything
-        return;
-      };
-      
-      // Suppress specific console logs
-      const originalConsoleLog = console.log;
-      console.log = function() {
-        if (arguments[0] && typeof arguments[0] === 'string' && 
-            (arguments[0].includes('Forced fixed header') || 
-             arguments[0].includes('Header or sentinel not found') ||
-             arguments[0].includes('Hamburger found') ||
-             arguments[0].includes('Primary nav found') ||
-             arguments[0].includes('Mobile menu elements not found'))) {
-          return; // Suppress these messages
-        }
-        return originalConsoleLog.apply(console, arguments);
-      };
-      
-      // Create a fake header immediately
-      document.addEventListener('DOMContentLoaded', function() {
-        // Create fake header with all required elements
-        const fakeHeader = document.createElement('header');
-        fakeHeader.id = 'siteHeader';
-        fakeHeader.className = 'site-header';
-        fakeHeader.style.position = 'fixed';
-        fakeHeader.style.top = '0';
-        fakeHeader.style.left = '0';
-        fakeHeader.style.right = '0';
-        fakeHeader.style.height = '1px';
-        fakeHeader.style.overflow = 'hidden';
-        fakeHeader.style.visibility = 'hidden';
-        fakeHeader.style.opacity = '0';
-        fakeHeader.style.pointerEvents = 'none';
-        fakeHeader.style.zIndex = '-1';
-        
-        // Create hamburger button
-        const hamburger = document.createElement('button');
-        hamburger.className = 'hamburger';
-        hamburger.setAttribute('aria-controls', 'primary-nav');
-        hamburger.setAttribute('aria-expanded', 'false');
-        
-        // Create primary nav
-        const primaryNav = document.createElement('nav');
-        primaryNav.id = 'primary-nav';
-        primaryNav.className = 'primary-nav';
-        
-        // Assemble the structure
-        fakeHeader.appendChild(hamburger);
-        fakeHeader.appendChild(primaryNav);
-        
-        // Create sentinel
-        const sentinel = document.createElement('div');
-        sentinel.id = 'headerSentinel';
-        sentinel.style.height = '1px';
-        sentinel.setAttribute('aria-hidden', 'true');
-        
-        // Insert into DOM at the beginning of body
-        const headerRoot = document.getElementById('header-root');
-        if (headerRoot) {
-          headerRoot.appendChild(fakeHeader);
-          headerRoot.insertAdjacentElement('afterend', sentinel);
-        }
-        
-        // Force testimonials header to be static
-        const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
-        if (testimonialHeader) {
-          testimonialHeader.style.position = 'static';
-          testimonialHeader.style.top = 'auto';
-          testimonialHeader.style.left = 'auto';
-          testimonialHeader.style.right = 'auto';
-          testimonialHeader.style.zIndex = 'auto';
-          testimonialHeader.setAttribute('data-noheader', 'true');
-        }
-      });
-    </script>
-    
-    <!-- Prevent original scripts from loading -->
-    <script>
-      // Create fake script elements that do nothing
-      function createFakeScript(src) {
-        const script = document.createElement('script');
-        script.setAttribute('src', src);
-        script.setAttribute('type', 'text/plain'); // This prevents execution
-        return script;
-      }
-      
-      // Replace real scripts with fake ones
-      document.addEventListener('DOMContentLoaded', function() {
-        const head = document.head;
-        head.appendChild(createFakeScript('/js/mega-menu.js?v=2025-09-13a'));
-        head.appendChild(createFakeScript('/js/header-shrink.js?v=2025-09-13a'));
-        head.appendChild(createFakeScript('/js/header-loader.js?v=2025-09-13a'));
-      });
-    </script>
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
 
   <style>
     body {
@@ -290,46 +191,49 @@
         </div>
            </section>
        
-    <!-- ===== ✅ Testimonials with COMPLETELY RESTRUCTURED HTML ===== -->
-        <section class="section testimonials-section" id="testimonials-section">
-           <div class="container">
-        <!-- ✅ NO HEADER TAG - Using div instead -->
-            <div class="testimonials-title-wrapper" style="margin-bottom: 2rem; text-align: center;">
-              <!-- Anchor for scrolling -->
-              <span id="revTitle" style="display: block; scroll-margin-top: 140px;"></span>
-              
-              <!-- Title with inline styles to ensure it's visible -->
-              <h2 style="position: static !important; display: block !important; font-size: 2.5rem !important; color: #0a3d62 !important; font-weight: 700 !important; margin: 0 0 0.5rem 0 !important; text-align: center !important;">ביקורות לקוחות</h2>
-              
-              <!-- Subtitle with inline styles -->
-              <p style="position: static !important; display: block !important; margin: 0 !important; text-align: center !important;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
-            </div>
-
-        <!-- Testimonials cards -->
-        <div class="testimonials" style="display: flex !important; gap: 2rem !important; overflow-x: auto !important; padding: 1rem 0 !important;">
-              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
-                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
-                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</blockquote>
-                <figcaption style="font-size: 0.9rem; color: #555;">ש.ד — רחובות · הגשת התנגדות לצוואה</figcaption>
-              </figure>
-              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
-                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
-                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"עורך דין מדהים ישר ומקצועי להפליא..."</blockquote>
-                <figcaption style="font-size: 0.9rem; color: #555;">ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</figcaption>
-              </figure>
-              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
-                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
-                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
-                <figcaption style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
-              </figure>
+    <!-- ===== ✅ Testimonials with HARDCODED HTML ===== -->
+    <div id="testimonials-section" style="padding: 60px 0; background-color: #f9f9f9; scroll-margin-top: 140px;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- Anchor for scrolling -->
+        <span id="revTitle" style="display: block; scroll-margin-top: 140px;"></span>
+        
+        <!-- HARDCODED TITLE - No header tag, just plain div and h2 -->
+        <div style="margin-bottom: 2rem; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #0a3d62; font-weight: 700; margin: 0 0 0.5rem 0; text-align: center;">ביקורות לקוחות</h2>
+          <p style="margin: 0; text-align: center;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
         </div>
-               
+        
+        <!-- Testimonials cards -->
+        <div style="display: flex; gap: 2rem; overflow-x: auto; padding: 1rem 0;">
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</div>
+            <div style="font-size: 0.9rem; color: #555;">ש.ד — רחובות · הגשת התנגדות לצוואה</div>
+          </div>
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"עורך דין מדהים ישר ומקצועי להפליא..."</div>
+            <div style="font-size: 0.9rem; color: #555;">ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</div>
+          </div>
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</div>
+            <div style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פרעון/פשיטת רגל</div>
+          </div>
+        </div>
+        
         <!-- "View all" button -->
         <div style="margin-top:14px; text-align: center;">
-          <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener" style="display: inline-block; background: #0a3d62; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500;">לכל הביקורות</a>
+          <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener" style="display: inline-block; background: #0a3d62; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500;">לכל הביקורות</a>
         </div>
       </div>
-    </section>
+    </div>
+    
+    <!-- Backup fixed title that is always visible -->
+    <div id="fixed-testimonials-title" style="display: none; position: fixed; top: 120px; left: 0; right: 0; z-index: 999; background: #f9f9f9; padding: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="font-size: 2.5rem; color: #0a3d62; font-weight: 700; margin: 0 0 0.5rem 0; text-align: center;">ביקורות לקוחות</h2>
+      <p style="margin: 0; text-align: center;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+    </div>
     </main>
        
   <!-- ===== Footer ===== -->
@@ -342,74 +246,8 @@
         </div>
     </footer>
 
-  <!-- ✅ EXTREME ERROR SUPPRESSION + SMOOTH SCROLLING -->
+  <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
   <script>
-    // Run immediately to prevent any errors from showing in console
-    (function() {
-      // Create a fake siteHeader to satisfy the scripts
-      function createFakeHeader() {
-        // Check if fake header already exists
-        if (document.getElementById('siteHeader')) {
-          return;
-        }
-        
-        // Create fake header with all required elements
-        const header = document.createElement('header');
-        header.id = 'siteHeader';
-        header.className = 'site-header';
-        header.style.position = 'fixed';
-        header.style.top = '0';
-        header.style.left = '0';
-        header.style.right = '0';
-        header.style.height = '1px';
-        header.style.visibility = 'hidden';
-        header.style.opacity = '0';
-        header.style.pointerEvents = 'none';
-        header.style.zIndex = '-1';
-        
-        // Create hamburger button
-        const hamburger = document.createElement('button');
-        hamburger.className = 'hamburger';
-        hamburger.setAttribute('aria-controls', 'primary-nav');
-        
-        // Create primary nav
-        const primaryNav = document.createElement('nav');
-        primaryNav.id = 'primary-nav';
-        primaryNav.className = 'primary-nav';
-        
-        // Add elements to header
-        header.appendChild(hamburger);
-        header.appendChild(primaryNav);
-        
-        // Create sentinel
-        const sentinel = document.createElement('div');
-        sentinel.id = 'headerSentinel';
-        sentinel.style.height = '1px';
-        
-        // Add to document
-        document.body.insertBefore(header, document.body.firstChild);
-        document.body.insertBefore(sentinel, document.body.firstChild.nextSibling);
-      }
-      
-      // Override problematic functions
-      window.initHeaderShrink = function() {};
-      window.initMegaMenu = function() {};
-      
-      // Create the fake header as soon as possible
-      if (document.body) {
-        createFakeHeader();
-      } else {
-        document.addEventListener('DOMContentLoaded', createFakeHeader);
-      }
-    })();
-    
-    // Disable all console messages
-    console.log = function() {};
-    console.error = function() {};
-    console.warn = function() {};
-    console.info = function() {};
-    console.debug = function() {};
-    
     // Handle smooth scrolling
     document.addEventListener('DOMContentLoaded', () => {
       // Smooth scroll if #revTitle or #testimonials-section is in URL
@@ -441,3 +279,4 @@
 
 </body>
 </html>
+
