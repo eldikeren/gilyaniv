@@ -136,18 +136,21 @@
       display: flex !important;
       justify-content: space-between !important;
       align-items: center !important;
+      position: relative !important;
     }
     
     .hamburger {
       display: block !important;
       z-index: 10000 !important;
       position: relative !important;
-      order: 2 !important;
-      margin-left: auto !important;
+      order: 1 !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
     }
     
     .logo {
-      order: 1 !important;
+      order: 2 !important;
+      margin: 0 auto !important;
     }
     
     .primary-nav {
@@ -162,6 +165,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
       z-index: 9999 !important;
       width: 100% !important;
+      border-radius: 0 0 12px 12px !important;
     }
     
     .primary-nav.active {
@@ -176,7 +180,7 @@
     }
     
     .primary-nav li {
-      margin: 0.5rem 0 !important;
+      margin: 0.25rem 0 !important;
       width: 100% !important;
     }
     
@@ -187,10 +191,39 @@
       font-weight: 600 !important;
       text-decoration: none !important;
       border-bottom: 1px solid rgba(10, 61, 98, 0.1) !important;
+      border-radius: 6px !important;
+      background: rgba(255,255,255,0.8) !important;
+      margin: 0.25rem 0 !important;
     }
     
     .primary-nav a:hover {
-      background: rgba(10, 61, 98, 0.05) !important;
+      background: rgba(10, 61, 98, 0.1) !important;
+      color: #ffffff !important;
+    }
+    
+    /* Make testimonials scroll bar visible on mobile */
+    .testimonials {
+      overflow-x: auto !important;
+      scrollbar-width: thin !important;
+      scrollbar-color: rgba(10, 61, 98, 0.5) rgba(255,255,255,0.3) !important;
+    }
+    
+    .testimonials::-webkit-scrollbar {
+      height: 8px !important;
+    }
+    
+    .testimonials::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.3) !important;
+      border-radius: 4px !important;
+    }
+    
+    .testimonials::-webkit-scrollbar-thumb {
+      background: rgba(10, 61, 98, 0.5) !important;
+      border-radius: 4px !important;
+    }
+    
+    .testimonials::-webkit-scrollbar-thumb:hover {
+      background: rgba(10, 61, 98, 0.7) !important;
     }
     
     @keyframes prism-shimmer-mobile {
@@ -281,7 +314,7 @@
       letter-spacing: 1px !important;
       white-space: normal !important;
       max-width: 90% !important;
-      top: 25% !important;
+      top: 15% !important;
     }
   }
 
@@ -289,7 +322,7 @@
     .office-name-overlay {
       font-size: 1.8rem !important;
       letter-spacing: 0.5px !important;
-      top: 20% !important;
+      top: 10% !important;
     }
   }
 
@@ -341,8 +374,8 @@
   
   @media (max-width: 480px) {
     .practice-grid, .articles-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
       padding: 0 0.5rem;
     }
   }
