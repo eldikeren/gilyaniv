@@ -54,12 +54,16 @@
             e.preventDefault();
             const target = document.getElementById('revTitle');
             if (target) {
-              const headerHeight = 120;
-              const targetPosition = target.offsetTop - headerHeight;
-              window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-              });
+              // Get the section that contains the testimonials
+              const testimonialsSection = target.closest('section');
+              if (testimonialsSection) {
+                const headerHeight = window.innerWidth <= 768 ? 100 : 120;
+                const targetPosition = testimonialsSection.offsetTop - headerHeight;
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              }
             }
           }
         });
@@ -93,6 +97,18 @@
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding-top: 100px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding-top: 90px !important;
+    }
   }
   
   /* Ensure section headers are visible and add scroll padding */
@@ -131,6 +147,19 @@
     left: 0 !important;
     right: 0 !important;
     z-index: 1 !important;
+  }
+  
+  /* Ensure testimonials section header is not fixed */
+  .section[aria-labelledby="revTitle"] .section-header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 1 !important;
+    background: transparent !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Smooth scrolling for anchor links */
@@ -210,6 +239,7 @@
       justify-content: space-between !important;
       align-items: center !important;
       position: relative !important;
+      padding: 0.5rem 1rem !important;
     }
     
     .hamburger {
@@ -219,6 +249,7 @@
       order: 1 !important;
       margin-right: 0 !important;
       margin-left: 0 !important;
+      padding: 0.5rem !important;
     }
     
     .logo {
@@ -226,21 +257,25 @@
       margin: 0 auto !important;
       flex-grow: 1 !important;
       text-align: center !important;
+      padding: 0 1rem !important;
     }
     
     .primary-nav {
       display: none !important;
-      position: absolute !important;
-      top: 100% !important;
+      position: fixed !important;
+      top: 100px !important;
       left: 0 !important;
       right: 0 !important;
+      bottom: 0 !important;
       background: rgba(255,255,255,0.98) !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+      backdrop-filter: blur(15px) !important;
+      -webkit-backdrop-filter: blur(15px) !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
       z-index: 9999 !important;
       width: 100% !important;
-      border-radius: 0 0 12px 12px !important;
+      border-radius: 0 !important;
+      overflow-y: auto !important;
+      padding: 2rem 0 !important;
     }
     
     .primary-nav.active {
@@ -423,25 +458,28 @@
 
   @media (max-width: 768px) {
     .office-name-overlay {
-      font-size: 1.8rem !important;
-      letter-spacing: 0.5px !important;
+      font-size: 2.2rem !important;
+      letter-spacing: 1px !important;
       white-space: normal !important;
-      max-width: 95% !important;
-      top: 15% !important;
-      line-height: 1.2 !important;
-      padding: 0 1rem !important;
+      max-width: 90% !important;
+      top: 20% !important;
+      line-height: 1.3 !important;
+      padding: 0 1.5rem !important;
+      text-align: center !important;
+      word-wrap: break-word !important;
     }
   }
 
   @media (max-width: 480px) {
     .office-name-overlay {
-      font-size: 1.2rem !important;
-      letter-spacing: 0.2px !important;
-      top: 10% !important;
-      line-height: 1.2 !important;
-      padding: 0 0.5rem !important;
-      max-width: 90% !important;
+      font-size: 1.6rem !important;
+      letter-spacing: 0.5px !important;
+      top: 18% !important;
+      line-height: 1.3 !important;
+      padding: 0 1rem !important;
+      max-width: 85% !important;
       word-wrap: break-word !important;
+      text-align: center !important;
     }
   }
 
@@ -479,23 +517,26 @@
   @media (max-width: 768px) {
     .practice-grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 2rem;
       max-width: 100%;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
+      margin-top: 2rem;
     }
     .articles-grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 2rem;
       max-width: 100%;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
+      margin-top: 2rem;
     }
   }
   
   @media (max-width: 480px) {
     .practice-grid, .articles-grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 0 1rem;
+      margin-top: 1.5rem;
     }
   }
 
@@ -515,32 +556,34 @@
   
   @media (max-width: 768px) {
     .practice-grid .card, .articles-grid .card {
-      padding: 1.5rem !important;
-      min-height: 250px !important;
+      padding: 2rem !important;
+      min-height: 280px !important;
+      margin-bottom: 0.5rem !important;
     }
   }
   
   @media (max-width: 480px) {
     .practice-grid .card, .articles-grid .card {
-      padding: 1rem !important;
-      min-height: 200px !important;
+      padding: 1.5rem !important;
+      min-height: 240px !important;
+      margin-bottom: 0.5rem !important;
     }
     
     .practice-grid .card h3, .articles-grid .card h3 {
-      font-size: 1.1rem !important;
-      line-height: 1.3 !important;
-      margin-bottom: 0.75rem !important;
-    }
-    
-    .practice-grid .card p, .articles-grid .card p {
-      font-size: 0.9rem !important;
+      font-size: 1.3rem !important;
       line-height: 1.4 !important;
       margin-bottom: 1rem !important;
     }
     
+    .practice-grid .card p, .articles-grid .card p {
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
+      margin-bottom: 1.2rem !important;
+    }
+    
     .practice-grid .card .btn, .articles-grid .card .btn {
-      padding: 0.6rem 1.2rem !important;
-      font-size: 0.85rem !important;
+      padding: 0.8rem 1.5rem !important;
+      font-size: 0.9rem !important;
     }
   }
 
@@ -988,8 +1031,17 @@
           e.stopPropagation();
           console.log('Hamburger clicked');
           
-          primaryNav.classList.toggle('active');
+          // Toggle active class on hamburger and nav
           hamburger.classList.toggle('active');
+          primaryNav.classList.toggle('active');
+          
+          // Prevent body scroll when menu is open
+          if (primaryNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+          
           hamburger.setAttribute('aria-expanded', primaryNav.classList.contains('active'));
           
           console.log('Menu active:', primaryNav.classList.contains('active'));
