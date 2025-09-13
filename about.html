@@ -1,342 +1,77 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
-    <script src="/js/console-silencer.js?v=2025-09-13d"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות - משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
-    <meta name="description" content="למדו על משרד עורכי הדין יניב גיל - ניסיון של למעלה מ-15 שנה בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
-
+    <title>אודות - משרד עו"ד יניב גיל</title>
+    
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="css/design-tokens.css?v=2025-09-13d">
-    <link rel="stylesheet" href="css/base.css?v=2025-09-13d">
-    <link rel="stylesheet" href="css/pages-rtl.css?v=2025-09-13d">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=2025-09-13d">
-    <link rel="stylesheet" href="css/home-rtl.css?v=2025-09-13d">
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13d">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13d">
-    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
-    <script defer src="/js/mega-menu.js?v=2025-09-13d"></script>
-    <script defer src="/js/header-shrink.js?v=2025-09-13d"></script>
-    <script defer src="/js/header-loader.js?v=2025-09-13d"></script>
-
+    <link rel="stylesheet" href="css/design-tokens.css?v=2025-09-13e">
+    <link rel="stylesheet" href="css/base.css?v=2025-09-13e">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2025-09-13e">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2025-09-13e">
+    <link rel="stylesheet" href="css/home-rtl.css?v=2025-09-13e">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13e">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13e">
+    
+    <script defer src="/js/mega-menu.js?v=2025-09-13e"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13e"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13e"></script>
+    
     <style>
         body {
             padding-top: 120px !important;
             font-family: 'Heebo', Arial, sans-serif;
         }
-        @media (max-width: 768px) {
-            body { padding-top: 100px !important; }
-        }
-        @media (max-width: 480px) {
-            body { padding-top: 90px !important; }
-        }
-
-        .section-header h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #0a3d62;
-            font-weight: 700;
-        }
-
-        /* About page specific styles */
-        .about-hero {
+        
+        .hero-section {
             background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.7)), url('images/656338_db49c3fc2d104cb18118ce948c359d27~mv2_d_2400_1600_s_2.avif');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 80px 0;
-            margin-bottom: 40px;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .about-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .about-hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about-section {
-            padding: 60px 0;
-        }
-
-        .about-section:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-
-        .about-content h3 {
-            color: #0a3d62;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-content p {
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .value-card {
-            background: #fff;
-            border: 1px solid #e6e7eb;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0a3d62;
-        }
-
-        .value-card h3 {
-            color: #0a3d62;
-            margin-bottom: 15px;
-        }
-
-        .team-section {
-            padding: 60px 0;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .team-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-
-        .team-content h3 {
-            color: #0a3d62;
-            font-size: 1.8rem;
+        
+        .hero-section h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
-
-        @media (max-width: 768px) {
-            .about-grid, .values-grid, .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-hero h1 {
-                font-size: 2.5rem;
-            }
+        
+        .content-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-
-        @media (max-width: 480px) {
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-hero h1 {
-                font-size: 2rem;
-            }
+        
+        .footer {
+            background: #0a3d62;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <!-- Header will be loaded by header-loader.js -->
     <div id="header-root"></div>
-
-    <main id="main">
-        <!-- About Hero Section -->
-        <section class="about-hero">
-            <div class="container">
-                <h1>אודות המשרד - עדכון חדש</h1>
-                <p>משרד עורכי דין יניב גיל - מקצועיות, אמינות ומצוינות - למעלה מ-15 שנות ניסיון בתחומי המשפט השונים</p>
-            </div>
+    
+    <main>
+        <section class="hero-section">
+            <h1>אודות המשרד - עמוד חדש</h1>
+            <p>משרד עורכי דין יניב גיל - מקצועיות, אמינות ומצוינות</p>
         </section>
-
-        <!-- Our Story Section -->
-        <section class="about-section">
-            <div class="container">
-                <header class="section-header">
-                    <h2>הסיפור שלנו</h2>
-                    <p>משרד עורכי דין יניב גיל נוסד מתוך חזון לספק שירות משפטי מקצועי, אישי ואמין לכל לקוח</p>
-                </header>
-
-                <div class="about-grid">
-                    <div class="about-content">
-                        <h3>החזון שלנו</h3>
-                        <p>במשרד עורכי דין יניב גיל, אנו מאמינים שכל אדם זכאי לייצוג משפטי מקצועי ואמין. החזון שלנו הוא לספק פתרונות משפטיים יצירתיים ויעילים, תוך שמירה על האינטרסים של הלקוחות שלנו.</p>
-                        
-                        <h3>הניסיון שלנו</h3>
-                        <p>לעו"ד יניב גיל ניסיון של למעלה מ-15 שנה בתחומי המשפט השונים, כולל דיני משפחה, חדלות פירעון וסדר דין אזרחי. הניסיון הרב שלנו מאפשר לנו לספק פתרונות מותאמים אישית לכל מקרה.</p>
-                        
-                        <h3>הגישה שלנו</h3>
-                        <p>אנו מאמינים בגישה אישית וחמה לכל לקוח. כל מקרה מטופל באופן ייחודי, תוך הבנת הצרכים המיוחדים של כל לקוח ומשפחתו. הצוות שלנו זמין תמיד לענות על שאלות ולספק תמיכה לאורך כל התהליך המשפטי.</p>
-                    </div>
-                    
-                    <div class="about-image">
-                        <img src="images/656338_629497ba299a440a8c59c1649405f3d1~mv2_d_3024_4032_s_4_2.avif" alt="משרד עו&quot;ד יניב גיל" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Values Section -->
-        <section class="about-section">
-            <div class="container">
-                <header class="section-header">
-                    <h2>הערכים שלנו</h2>
-                    <p>הערכים המנחים אותנו בעבודתנו היומיומית</p>
-                </header>
-
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <img src="images/icons/professionalism.svg" alt="מקצועיות" onerror="this.outerHTML='👨‍⚖️'">
-                        </div>
-                        <h3>מקצועיות</h3>
-                        <p>אנו מתחייבים למקצועיות הגבוהה ביותר בכל תחומי העיסוק שלנו, תוך שמירה על סטנדרטים אתיים גבוהים.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <img src="images/icons/integrity.svg" alt="אמינות" onerror="this.outerHTML='🤝'">
-                        </div>
-                        <h3>אמינות</h3>
-                        <p>האמינות היא הבסיס לכל מערכת היחסים שלנו עם הלקוחות. אנו מתחייבים לשקיפות מלאה בכל התהליכים.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <img src="images/icons/expertise.svg" alt="מצוינות" onerror="this.outerHTML='🎯'">
-                        </div>
-                        <h3>מצוינות</h3>
-                        <p>אנו שואפים למצוינות בכל מה שאנו עושים, תוך מתן תשומת לב לפרטים הקטנים ביותר.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <img src="images/icons/commitment.svg" alt="מחויבות" onerror="this.outerHTML='💙'">
-                        </div>
-                        <h3>מחויבות</h3>
-                        <p>אנו מחויבים ללקוחות שלנו ולצרכים שלהם, ומתחייבים להיות שם עבורם בכל שלב של התהליך המשפטי.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section class="about-section">
-            <div class="container">
-                <header class="section-header">
-                    <h2>הצוות שלנו</h2>
-                    <p>צוות מקצועי ומיומן העומד לרשותכם</p>
-                </header>
-
-                <div class="team-grid">
-                    <div class="team-image">
-                        <img src="images/team/attorney-portrait.svg" alt="צוות המשרד" onerror="this.src='images/656338_47894ebdd38a4fa5a07a697951c0d66d~mv2_d_3456_2304_s_2.avif'">
-                    </div>
-                    
-                    <div class="team-content">
-                        <h3>עו"ד יניב גיל</h3>
-                        <p>עו"ד יניב גיל הוא מייסד המשרד ומנהלו. עם ניסיון של למעלה מ-15 שנה בתחומי המשפט השונים, עו"ד גיל מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי.</p>
-                        
-                        <h3>הצוות המקצועי</h3>
-                        <p>הצוות שלנו כולל עורכי דין מנוסים ומיומנים, המתמחים בתחומים שונים של המשפט. כל חבר בצוות מביא עימו ניסיון ייחודי ומומחיות בתחום התמחותו.</p>
-                        
-                        <h3>השירות שלנו</h3>
-                        <p>אנו מספקים שירות משפטי מקיף ואישי, תוך הבנת הצרכים המיוחדים של כל לקוח. הצוות שלנו זמין תמיד לענות על שאלות ולספק תמיכה לאורך כל התהליך המשפטי.</p>
-                    </div>
-                </div>
-            </div>
+        
+        <section class="content-section">
+            <h2>הסיפור שלנו</h2>
+            <p>במשרד עורכי דין יניב גיל, אנו מאמינים שכל אדם זכאי לייצוג משפטי מקצועי ואמין. החזון שלנו הוא לספק פתרונות משפטיים יצירתיים ויעילים, תוך שמירה על האינטרסים של הלקוחות שלנו.</p>
+            
+            <p>לעו"ד יניב גיל ניסיון של למעלה מ-15 שנה בתחומי המשפט השונים, כולל דיני משפחה, חדלות פירעון וסדר דין אזרחי. הניסיון הרב שלנו מאפשר לנו לספק פתרונות מותאמים אישית לכל מקרה.</p>
         </section>
     </main>
-
-    <!-- ===== Footer ===== -->
-    <footer class="site-footer">
-        <div class="container">
-            <ul>
-                <li><a href="about.html">אודות המשרד</a></li>
-                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
-            </ul>
-        </div>
+    
+    <footer class="footer">
+        <p>© 2024 משרד עורכי דין יניב גיל. כל הזכויות שמורות.</p>
     </footer>
-
-    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add animation effects
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe elements for animation
-            document.querySelectorAll('.about-grid, .values-grid, .team-grid, .value-card, .section-header').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-
-            // Add staggered animations
-            document.querySelectorAll('.value-card').forEach((card, index) => {
-                card.style.transitionDelay = `${0.1 * index}s`;
-            });
-
-            // Add active class to current page in navigation
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === 'about.html') {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
