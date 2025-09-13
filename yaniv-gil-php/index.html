@@ -64,6 +64,43 @@
   body {
     padding-top: 120px !important;
   }
+  
+  /* Ensure section headers are visible and add scroll padding */
+  .section-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .section-header h2 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Add scroll padding for anchor links */
+  #revTitle {
+    scroll-margin-top: 140px !important;
+  }
+  
+  /* Ensure testimonials section header is visible */
+  .section[aria-labelledby="revTitle"] .section-header {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+  }
+  
+  .section[aria-labelledby="revTitle"] .section-header h2 {
+    font-size: 2.5rem !important;
+    color: #0a3d62 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+  }
+  
+  .section[aria-labelledby="revTitle"] .section-header p {
+    font-size: 1.2rem !important;
+    color: #64748b !important;
+    margin-bottom: 0 !important;
+  }
   .header-top{ 
     height: 40px; 
     border-bottom: 1px solid var(--border); 
@@ -98,16 +135,14 @@
       rgba(255,255,255,0.4) 0%, 
       transparent 50%,
       rgba(255,255,255,0.4) 100%);
-    animation: prism-shimmer 12s ease-in-out infinite;
+    animation: prism-fade 8s ease-in-out infinite;
   }
   
-  @keyframes prism-shimmer {
+  @keyframes prism-fade {
     0%, 100% { 
-      transform: translateX(-100%); 
-      opacity: 0.5; 
+      opacity: 0.3; 
     }
     50% { 
-      transform: translateX(100%); 
       opacity: 0.8; 
     }
   }
@@ -128,7 +163,7 @@
         rgba(255,255,255,0.2) 0%, 
         transparent 50%,
         rgba(255,255,255,0.2) 100%);
-      animation: prism-shimmer-mobile 15s ease-in-out infinite;
+      animation: prism-fade-mobile 10s ease-in-out infinite;
     }
     
     /* Fix mobile menu positioning and functionality */
@@ -144,13 +179,15 @@
       z-index: 10000 !important;
       position: relative !important;
       order: 1 !important;
-      margin-right: auto !important;
+      margin-right: 0 !important;
       margin-left: 0 !important;
     }
     
     .logo {
       order: 2 !important;
       margin: 0 auto !important;
+      flex-grow: 1 !important;
+      text-align: center !important;
     }
     
     .primary-nav {
@@ -201,6 +238,37 @@
       color: #ffffff !important;
     }
     
+    /* Ensure hamburger is visible and clickable */
+    .hamburger {
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      padding: 0.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 3px !important;
+    }
+    
+    .hamburger span {
+      width: 25px !important;
+      height: 3px !important;
+      background: #0a3d62 !important;
+      transition: all 0.3s ease !important;
+      border-radius: 2px !important;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px) !important;
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0 !important;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px) !important;
+    }
+    
     /* Make testimonials scroll bar visible on mobile */
     .testimonials {
       overflow-x: auto !important;
@@ -226,13 +294,20 @@
       background: rgba(10, 61, 98, 0.7) !important;
     }
     
-    @keyframes prism-shimmer-mobile {
+    /* Mobile testimonials header styling */
+    .section[aria-labelledby="revTitle"] .section-header h2 {
+      font-size: 2rem !important;
+    }
+    
+    .section[aria-labelledby="revTitle"] .section-header p {
+      font-size: 1rem !important;
+    }
+    
+    @keyframes prism-fade-mobile {
       0%, 100% { 
-        transform: translateX(-100%); 
-        opacity: 0.3; 
+        opacity: 0.2; 
       }
       50% { 
-        transform: translateX(100%); 
         opacity: 0.6; 
       }
     }
@@ -310,19 +385,23 @@
 
   @media (max-width: 768px) {
     .office-name-overlay {
-      font-size: 2.2rem !important;
-      letter-spacing: 1px !important;
+      font-size: 1.8rem !important;
+      letter-spacing: 0.5px !important;
       white-space: normal !important;
-      max-width: 90% !important;
+      max-width: 95% !important;
       top: 15% !important;
+      line-height: 1.2 !important;
+      padding: 0 1rem !important;
     }
   }
 
   @media (max-width: 480px) {
     .office-name-overlay {
-      font-size: 1.8rem !important;
-      letter-spacing: 0.5px !important;
-      top: 10% !important;
+      font-size: 1.4rem !important;
+      letter-spacing: 0.3px !important;
+      top: 12% !important;
+      line-height: 1.3 !important;
+      padding: 0 0.5rem !important;
     }
   }
 
@@ -405,6 +484,23 @@
     .practice-grid .card, .articles-grid .card {
       padding: 1rem !important;
       min-height: 200px !important;
+    }
+    
+    .practice-grid .card h3, .articles-grid .card h3 {
+      font-size: 1.1rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    
+    .practice-grid .card p, .articles-grid .card p {
+      font-size: 0.9rem !important;
+      line-height: 1.4 !important;
+      margin-bottom: 1rem !important;
+    }
+    
+    .practice-grid .card .btn, .articles-grid .card .btn {
+      padding: 0.6rem 1.2rem !important;
+      font-size: 0.85rem !important;
     }
   }
 
