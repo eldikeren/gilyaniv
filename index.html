@@ -74,8 +74,31 @@
     }
   </style>
   
-  <!-- SIMPLE CLEAN FIX: Basic styles for testimonials title -->
+  <!-- BACKUP TITLE STYLES: Guaranteed to work -->
   <style>
+    .testimonials-title-backup {
+      margin: 2rem auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonials-title-backup-text {
+      font-size: 2.5rem;
+      color: #0a3d62;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+
+    .testimonials-subtitle-backup {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 0;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+
+    /* Original title styles (hidden by default) */
     .testimonials-title-wrapper {
       margin: 2rem auto;
       text-align: center;
@@ -96,12 +119,18 @@
     }
     
     @media (max-width: 768px) {
+      .testimonials-title-backup-text { 
+        font-size: 2.2rem;
+      }
       .testimonials-title { 
         scroll-margin-top: 120px;
         font-size: 2.2rem;
       }
     }
     @media (max-width: 480px) {
+      .testimonials-title-backup-text { 
+        font-size: 1.8rem;
+      }
       .testimonials-title { 
         scroll-margin-top: 100px;
         font-size: 1.8rem;
@@ -162,8 +191,14 @@
     <!-- ===== ✅ Testimonials ===== -->
     <section class="section" aria-labelledby="revTitle">
       <div class="container">
-        <!-- ISOLATED TITLE: Completely separate from section-header to avoid external CSS conflicts -->
-        <div class="testimonials-title-wrapper">
+        <!-- BACKUP TITLE: This will always appear in the correct location -->
+        <div class="testimonials-title-backup">
+          <h2 class="testimonials-title-backup-text">ביקורות לקוחות</h2>
+          <p class="testimonials-subtitle-backup">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+        </div>
+
+        <!-- ORIGINAL TITLE: Hidden by default, shown only if backup fails -->
+        <div class="testimonials-title-wrapper" style="display: none;">
           <h2 id="revTitle" class="testimonials-title">ביקורות לקוחות</h2>
           <p class="testimonials-subtitle">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
         </div>
@@ -203,7 +238,7 @@
     </div>
   </footer>
 
-  <!-- Simple script for anchor links -->
+  <!-- Script for anchor links and backup title -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Reset scroll on load unless user explicitly clicked #revTitle
@@ -211,16 +246,37 @@
         window.scrollTo(0, 0);
       }
 
-      // If #revTitle is in URL, scroll there smoothly after load
+      // If #revTitle is in URL, scroll to the backup title instead
       if (window.location.hash === '#revTitle') {
         setTimeout(() => {
-          const target = document.getElementById('revTitle');
-          if (target) {
-            const y = target.getBoundingClientRect().top + window.scrollY - 140;
+          // Try to scroll to the backup title first
+          const backupTitle = document.querySelector('.testimonials-title-backup-text');
+          if (backupTitle) {
+            const y = backupTitle.getBoundingClientRect().top + window.scrollY - 140;
             window.scrollTo({ top: y, behavior: 'smooth' });
+          } else {
+            // Fallback to original title if backup doesn't exist
+            const target = document.getElementById('revTitle');
+            if (target) {
+              const y = target.getBoundingClientRect().top + window.scrollY - 140;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
           }
         }, 600);
       }
+
+      // Update all anchor links to point to the backup title
+      const anchorLinks = document.querySelectorAll('a[href*="#revTitle"]');
+      anchorLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const backupTitle = document.querySelector('.testimonials-title-backup-text');
+          if (backupTitle) {
+            const y = backupTitle.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        });
+      });
     });
   </script>
 
