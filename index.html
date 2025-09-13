@@ -37,16 +37,34 @@
       font-weight: 700;
     }
 
-    /* ✅ FIX: remove top/left/right/z-index so it won’t float at top */
+    /* ✅ Force the headline to appear above the cards in its place */
     #revTitle {
-      scroll-margin-top: 140px !important;
-      position: relative !important;
+      all: unset;
+      display: block !important;
+      position: static !important;
+      margin: 0 auto 1rem auto !important;
+      text-align: center !important;
+      font-size: 2.5rem !important;
+      color: #0a3d62 !important;
+      font-weight: 700 !important;
     }
+
+    /* Optional: keep scroll margin for anchor links */
+    #revTitle {
+      scroll-margin-top: 140px;
+    }
+    
     @media (max-width: 768px) {
-      #revTitle { scroll-margin-top: 120px !important; }
+      #revTitle { 
+        scroll-margin-top: 120px !important;
+        font-size: 2.2rem !important;
+      }
     }
     @media (max-width: 480px) {
-      #revTitle { scroll-margin-top: 100px !important; }
+      #revTitle { 
+        scroll-margin-top: 100px !important;
+        font-size: 1.8rem !important;
+      }
     }
 
     .testimonials {
