@@ -92,6 +92,39 @@
       #revTitle { font-size: 1.8rem; scroll-margin-top: 100px; }
     }
   </style>
+
+<style>
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
+    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
+    transition:box-shadow .22s,background-color .22s,padding .22s}
+  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
+  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
+  .logo .logo-mark{height:48px;transition:height .22s}
+  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
+  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
+  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
+  .has-mega{position:relative}
+  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
+    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
+    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
+  .has-mega.open>.mega-panel{display:block}
+  .site-header,.header-top,.header-main{overflow:visible}
+  #headerSentinel{height:1px}
+</style>
+
+
+<style>
+  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
+  .grid{display:grid;gap:20px;}
+  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
+  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
+</style>
+
 </head>
 
 <body>
@@ -119,10 +152,11 @@
     <!-- ===== Practice Areas ===== -->
         <section class="section" aria-labelledby="areasTitle">
         <div class="container">
-            <header class="section-header">
+            <header id="siteHeader" class="site-header" class="section-header">
               <h2 id="areasTitle">תחומי התמחות</h2>
           <p>אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה</p>
             </header>
+<div id="headerSentinel" aria-hidden="true"></div>
         <!-- ... your 4 cards ... -->
         </div>
     </section>
@@ -130,7 +164,7 @@
     <!-- ===== Articles ===== -->
         <section class="section" aria-labelledby="artTitle">
         <div class="container">
-            <header class="section-header">
+            <header id="siteHeader" class="site-header" class="section-header">
               <h2 id="artTitle">מאמרים אחרונים</h2>
             </header>
         <!-- ... your 3 article cards ... -->
@@ -171,8 +205,8 @@
           </div>
           <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
             <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
-            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</div>
-            <div style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פרעון/פשיטת רגל</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פירעון..."</div>
+            <div style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פירעון/פשיטת רגל</div>
           </div>
         </div>
         
@@ -230,6 +264,19 @@
       });
     });
   </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const header=document.getElementById('siteHeader');
+  const s=document.getElementById('headerSentinel');
+  if(!header||!s){return}
+  if(!s.offsetHeight){s.style.height='1px'}
+  new IntersectionObserver(([e])=>{
+    header.classList.toggle('is-compact', !e.isIntersecting);
+  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
+});
+</script>
 
 </body>
 </html>
