@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="css/pages-rtl.css?v=2">
   <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
     <link rel="stylesheet" href="css/home-rtl.css?v=1">
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
-    <script defer src="/js/mega-menu.js"></script>
-    <script defer src="/js/header-shrink.js"></script>
-    <script defer src="/js/header-loader.js"></script>
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
+    <!-- ✅ Load our fix script BEFORE other scripts -->
+    <script defer src="/js/header-fix.js?v=2025-09-13a"></script>
+    <script defer src="/js/mega-menu.js?v=2025-09-13a"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13a"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13a"></script>
 
   <style>
     body {
@@ -127,8 +129,7 @@
 <body>
     <div id="header-root"></div>
 
-  <!-- ✅ Fake invisible header to prevent scripts from grabbing testimonials header -->
-  <header id="fake-site-header" style="position:relative; height:1px; overflow:hidden; visibility:hidden;" data-noheader="true"></header>
+  <!-- ✅ Removed: The fake header is now created by header-fix.js -->
 
     <main id="main">
     <!-- ===== HERO ===== -->
