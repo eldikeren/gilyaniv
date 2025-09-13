@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
 
-  <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="stylesheet" href="css/design-tokens.css?v=2">
   <link rel="stylesheet" href="css/base.css?v=2">
   <link rel="stylesheet" href="css/pages-rtl.css?v=2">
   <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
-  <link rel="stylesheet" href="css/home-rtl.css?v=1">
-  <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
-  <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
-  <script defer src="/js/mega-menu.js"></script>
-  <script defer src="/js/header-shrink.js"></script>
-  <script defer src="/js/header-loader.js"></script>
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
+    <script defer src="/js/mega-menu.js"></script>
+    <script defer src="/js/header-shrink.js"></script>
+    <script defer src="/js/header-loader.js"></script>
 
   <style>
     body {
@@ -108,103 +108,125 @@
 </head>
 
 <body>
-  <div id="header-root"></div>
-  
-  <!-- Fake invisible header to prevent scripts from grabbing testimonials header -->
-  <header id="fake-site-header" style="position:relative; height:1px; overflow:hidden;"></header>
+    <div id="header-root"></div>
 
-  <main id="main">
-    <!-- ===== HERO ===== -->
-    <section class="home-hero" aria-label="פתיח">
-      <video id="heroVideo" class="home-hero-video" autoplay muted loop playsinline preload="metadata">
-        <source src="images/733896_Park Buildings Pov City_By_Thomas_Gellert_Artlist_HD.mp4" type="video/mp4">
-      </video>
-      <div class="office-name-overlay">משרד עורכי דין גיל יניב</div>
-      <div class="inner">
-        <h1 class="title">העורך דין הנכון עושה את כל ההבדל</h1>
-        <p class="lead">לעו״ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
-        <div class="actions">
-          <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
-          <a class="btn" href="/about.html">למד עוד על המשרד</a>
-        </div>
+  <!-- Fake invisible header to prevent scripts from grabbing testimonials header -->
+  <header id="siteHeader" class="site-header" style="position:relative; height:1px; overflow:hidden; visibility:hidden;">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-design"></div>
       </div>
+    </div>
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        <button class="hamburger" aria-controls="primary-nav" aria-expanded="false">
+          <span></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav">
+          <ul>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div id="headerSentinel" style="height:1px;" aria-hidden="true"></div>
+
+    <main id="main">
+    <!-- ===== HERO ===== -->
+        <section class="home-hero" aria-label="פתיח">
+          <video id="heroVideo" class="home-hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="images/733896_Park Buildings Pov City_By_Thomas_Gellert_Artlist_HD.mp4" type="video/mp4">
+          </video>
+      <div class="office-name-overlay">משרד עורכי דין גיל יניב</div>
+          <div class="inner">
+            <h1 class="title">העורך דין הנכון עושה את כל ההבדל</h1>
+            <p class="lead">לעו״ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
+            <div class="actions">
+              <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
+              <a class="btn" href="/about.html">למד עוד על המשרד</a>
+            </div>
+        </div>
     </section>
 
     <!-- ===== Practice Areas ===== -->
-    <section class="section" aria-labelledby="areasTitle">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="areasTitle">תחומי התמחות</h2>
+        <section class="section" aria-labelledby="areasTitle">
+        <div class="container">
+            <header class="section-header">
+              <h2 id="areasTitle">תחומי התמחות</h2>
           <p>אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה</p>
-        </header>
+            </header>
         <!-- ... your 4 cards ... -->
-      </div>
+        </div>
     </section>
 
     <!-- ===== Articles ===== -->
-    <section class="section" aria-labelledby="artTitle">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="artTitle">מאמרים אחרונים</h2>
-        </header>
+        <section class="section" aria-labelledby="artTitle">
+        <div class="container">
+            <header class="section-header">
+              <h2 id="artTitle">מאמרים אחרונים</h2>
+            </header>
         <!-- ... your 3 article cards ... -->
-      </div>
+        </div>
     </section>
 
     <!-- ===== Contact ===== -->
-    <section class="section" aria-labelledby="ctaTitle">
-      <div class="container">
-        <h2 id="ctaTitle">צור קשר עכשיו</h2>
+        <section class="section" aria-labelledby="ctaTitle">
+        <div class="container">
+                <h2 id="ctaTitle">צור קשר עכשיו</h2>
         <!-- ... contact details ... -->
-      </div>
-    </section>
-
+        </div>
+           </section>
+       
     <!-- ===== ✅ Testimonials ===== -->
-    <section class="section" aria-labelledby="revTitle">
-      <div class="container">
+        <section class="section" aria-labelledby="revTitle">
+           <div class="container">
         <!-- ✅ cleaned: no style="", no class="visible" -->
-        <header class="section-header">
-          <h2 id="revTitle">ביקורות לקוחות</h2>
-          <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
-        </header>
+            <header class="section-header">
+              <h2 id="revTitle">ביקורות לקוחות</h2>
+              <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+            </header>
 
         <div class="testimonials">
-          <figure class="testimonial">
-            <span class="rating">5.0</span>
-            <blockquote>"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</blockquote>
-            <figcaption>ש.ד — רחובות · הגשת התנגדות לצוואה</figcaption>
-          </figure>
-          <figure class="testimonial">
-            <span class="rating">5.0</span>
-            <blockquote>"עורך דין מדהים ישר ומקצועי להפליא..."</blockquote>
-            <figcaption>ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</figcaption>
-          </figure>
-          <figure class="testimonial">
-            <span class="rating">5.0</span>
-            <blockquote>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
-            <figcaption>א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
-          </figure>
-        </div>
-
-        <div style="margin-top:14px">
-          <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener">לכל הביקורות</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
+              <figure class="testimonial">
+                <span class="rating">5.0</span>
+                <blockquote>"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</blockquote>
+                <figcaption>ש.ד — רחובות · הגשת התנגדות לצוואה</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <span class="rating">5.0</span>
+                <blockquote>"עורך דין מדהים ישר ומקצועי להפליא..."</blockquote>
+                <figcaption>ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <span class="rating">5.0</span>
+                <blockquote>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
+                <figcaption>א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
+              </figure>
+               </div>
+               
+            <div style="margin-top:14px">
+              <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener">לכל הביקורות</a>
+                       </div>
+                   </div>
+        </section>
+    </main>
+       
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="container">
-      <ul>
-        <li><a href="about.html">אודות המשרד</a></li>
+        <div class="container">
+              <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
         <li><a href="index.html#revTitle">ביקורות לקוחות</a></li>
-      </ul>
-    </div>
-  </footer>
+              </ul>
+        </div>
+    </footer>
 
   <!-- Prevent header-loader.js from grabbing the testimonials <header> -->
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Mark testimonials header so header scripts ignore it
       const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
@@ -223,7 +245,7 @@
         }, 600);
       }
     });
-  </script>
+    </script>
 
 </body>
 </html>
