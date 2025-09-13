@@ -52,19 +52,52 @@
           const href = this.getAttribute('href');
           if (href.includes('#revTitle')) {
             e.preventDefault();
-            const target = document.getElementById('revTitle');
-            if (target) {
-              // Get the section that contains the testimonials
-              const testimonialsSection = target.closest('section');
-              if (testimonialsSection) {
-                const headerHeight = window.innerWidth <= 768 ? 100 : 120;
-                const targetPosition = testimonialsSection.offsetTop - headerHeight;
-                window.scrollTo({
-                  top: targetPosition,
-                  behavior: 'smooth'
-                });
+            console.log('Scrolling to testimonials section...');
+            
+            // Wait a bit for any layout changes
+            setTimeout(() => {
+              const target = document.getElementById('revTitle');
+              if (target) {
+                console.log('Found revTitle element:', target);
+                
+                // Get the section that contains the testimonials
+                const testimonialsSection = target.closest('section');
+                if (testimonialsSection) {
+                  console.log('Found testimonials section:', testimonialsSection);
+                  
+                  // Calculate header height based on screen size
+                  let headerHeight = 120;
+                  if (window.innerWidth <= 480) {
+                    headerHeight = 90;
+                  } else if (window.innerWidth <= 768) {
+                    headerHeight = 100;
+                  }
+                  
+                  // Calculate target position
+                  const targetPosition = testimonialsSection.offsetTop - headerHeight - 20; // Extra 20px buffer
+                  
+                  console.log('Scrolling to position:', targetPosition);
+                  console.log('Section offsetTop:', testimonialsSection.offsetTop);
+                  console.log('Header height:', headerHeight);
+                  
+                  // Try smooth scrolling first
+                  window.scrollTo({
+                    top: Math.max(0, targetPosition),
+                    behavior: 'smooth'
+                  });
+                  
+                  // Fallback: if smooth scrolling doesn't work, try direct scroll
+                  setTimeout(() => {
+                    if (Math.abs(window.pageYOffset - targetPosition) > 50) {
+                      console.log('Smooth scroll failed, using direct scroll');
+                      window.scrollTo(0, Math.max(0, targetPosition));
+                    }
+                  }, 500);
+                }
+              } else {
+                console.log('revTitle element not found');
               }
-            }
+            }, 100);
           }
         });
       });
@@ -147,6 +180,18 @@
     left: 0 !important;
     right: 0 !important;
     z-index: 1 !important;
+  }
+  
+  @media (max-width: 768px) {
+    #revTitle {
+      scroll-margin-top: 120px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #revTitle {
+      scroll-margin-top: 110px !important;
+    }
   }
   
   /* Ensure testimonials section header is not fixed */
