@@ -110,30 +110,8 @@
 <body>
     <div id="header-root"></div>
 
-  <!-- Fake invisible header to prevent scripts from grabbing testimonials header -->
-  <header id="siteHeader" class="site-header" style="position:relative; height:1px; overflow:hidden; visibility:hidden;">
-    <div class="header-top">
-      <div class="container header-top-inner">
-        <div class="header-top-design"></div>
-      </div>
-    </div>
-    <div class="header-main">
-      <div class="container header-main-inner">
-        <div class="logo">
-          <a href="#"></a>
-        </div>
-        <button class="hamburger" aria-controls="primary-nav" aria-expanded="false">
-          <span></span>
-        </button>
-        <nav id="primary-nav" class="primary-nav">
-          <ul>
-            <li><a href="#">Link</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <div id="headerSentinel" style="height:1px;" aria-hidden="true"></div>
+  <!-- ✅ Fake invisible header to prevent scripts from grabbing testimonials header -->
+  <header id="fake-site-header" style="position:relative; height:1px; overflow:hidden;"></header>
 
     <main id="main">
     <!-- ===== HERO ===== -->
@@ -225,8 +203,8 @@
         </div>
     </footer>
 
-  <!-- Prevent header-loader.js from grabbing the testimonials <header> -->
-    <script>
+  <!-- ✅ Prevent header-loader.js from grabbing the testimonials <header> -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Mark testimonials header so header scripts ignore it
       const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
@@ -245,7 +223,7 @@
         }, 600);
       }
     });
-    </script>
+  </script>
 
 </body>
 </html>
