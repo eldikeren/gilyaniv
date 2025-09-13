@@ -73,7 +73,7 @@
       color: #555;
     }
 
-    /* ✅ Block global header script from fixing testimonials title */
+    /* ✅ Block header scripts from touching this section */
     section[aria-labelledby="revTitle"] .section-header {
       position: static !important;
       top: auto !important;
@@ -84,6 +84,7 @@
       width: auto !important;
       margin: 0 auto 1rem auto !important;
       padding: 0 !important;
+      pointer-events: none;
     }
 
     #revTitle {
@@ -95,6 +96,7 @@
       color: #0a3d62 !important;
       font-weight: 700 !important;
       scroll-margin-top: 140px;
+      pointer-events: auto;
     }
     @media (max-width: 768px) {
       #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
@@ -198,9 +200,16 @@
     </div>
   </footer>
 
-  <!-- Optional: Smooth scroll for #revTitle -->
+  <!-- Prevent header-loader.js from grabbing the testimonials <header> -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Mark testimonials header so header scripts ignore it
+      const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
+      if (testimonialHeader) {
+        testimonialHeader.setAttribute('data-noheader', 'true');
+      }
+
+      // Smooth scroll for #revTitle
       if (window.location.hash === '#revTitle') {
         setTimeout(() => {
           const target = document.getElementById('revTitle');
