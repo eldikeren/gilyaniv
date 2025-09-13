@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>התקשרו עכשיו לייעוץ ראשוני חינם.</p>
             <ul class="info-list">
               <li><strong>טלפון:</strong> 03-609-2414</li>
-              <li><strong>אימייל:</strong> ynivgil@gmail.com</li>
+              <li><strong>אימייל:</strong> yanivgil@gmail.com</li>
               <li><strong>כתובת:</strong> מגדל "WE-TLV", דרך מנחם בגין 150, תל-אביב</li>
             </ul>
             <div class="actions" style="margin-top:10px">
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
         <div class="actions" style="margin-top:10px">
           <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
-          <a class="btn" href="mailto:ynivgil@gmail.com">שלח אימייל</a>
+          <a class="btn" href="mailto:yanivgil@gmail.com">שלח אימייל</a>
         </div>
       </div>`;
       left.prepend(cta);

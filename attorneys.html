@@ -36,29 +36,468 @@
 
     <!-- Header shrink script -->
     <script src="js/header-shrink.js?v=1" defer></script>
+    <script defer src="/js/mega-menu.js"></script>
+    <script defer src="/js/header-shrink.js"></script>
+    <script defer src="/js/header-loader.js"></script>
     <script src="js/scroll-animations.js?v=20250908c" defer></script>
     <script src="js/mega-menu.js?v=20250908d" defer></script>
     <script src="js/pages-rtl-enhance.js?v=20250908c" defer></script>
 </head>
 <style id="rescue-header">
   :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{ position: sticky; top: 0; z-index: 4000; background: var(--glass); -webkit-backdrop-filter: saturate(120%) blur(8px); backdrop-filter: saturate(120%) blur(8px); transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease; }
+  .site-header, header#siteHeader, .site-header.site-header, header{ 
+    position: sticky !important; 
+    top: 0 !important; 
+    z-index: 9999 !important; 
+    background: var(--glass) !important; 
+    -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
+    backdrop-filter: saturate(120%) blur(8px) !important; 
+    transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  /* Force sticky positioning on all possible header elements */
+  #header-root header, #header-root .site-header, .header-root header, .header-root .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: var(--glass) !important;
+    width: 100% !important;
+  }
   .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
   .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
   .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
   .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07); }
-  .site-header.is-compact .header-top{ height: 0; opacity: 0; border-bottom: 0; overflow: hidden; }
-  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px; }
-  .site-header.is-compact .logo .logo-mark{ height: 36px; }
-  .site-header.is-compact .logo .logo-text{ opacity: 0; }
+  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07) !important; }
+  .site-header.is-compact .header-top{ height: 0 !important; opacity: 0 !important; border-bottom: 0 !important; overflow: hidden !important; }
+  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px !important; }
+  .site-header.is-compact .logo .logo-mark{ height: 36px !important; }
+  .site-header.is-compact .logo .logo-text{ opacity: 0 !important; }
   .header-top, .header-main, .site-header{ overflow: visible; }
   .has-mega{ position: relative; }
   .mega-panel{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08); padding: 16px; display: none; z-index: 5000; }
   .has-mega.open > .mega-panel{ display: block; }
   #headerSentinel{ height: 1px; }
-  .brand:focus, .logo a:focus{ outline: none !important; }
-  html::after{ content:"RESCUE CSS LOADED"; position: fixed; inset: auto 8px 8px auto; background:#0a3d62; color:#fff; padding:4px 8px; border-radius:6px; z-index:99999; font:600 12px/1.2 Heebo, sans-serif; }
+  /* Remove ugly focus outlines */
+  .brand:focus, .logo a:focus, 
+  .primary-nav a:focus, .secondary-nav a:focus,
+  .hamburger:focus, .mega-toggle:focus,
+  .mega-panel a:focus, .site-search input:focus,
+  .site-search button:focus, .btn:focus,
+  nav a:focus, button:focus, input:focus { 
+    outline: none !important; 
+  }
+
+  /* HERO-MATCHING DESIGN SYSTEM */
+  :root {
+    --hero-primary: #0a3d62;
+    --hero-primary-dark: #072a45;
+    --hero-primary-tint: #e8f1f7;
+    --hero-accent: #ffffff;
+    --hero-dark: #0a3d62;
+    --hero-darker: #072a45;
+    --hero-glow: 0 0 20px rgba(10, 61, 98, 0.3);
+    --hero-glow-strong: 0 0 30px rgba(10, 61, 98, 0.6);
+    --hero-gradient: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
+    --hero-text-glow: 0 0 10px rgba(10, 61, 98, 0.5);
+  }
+
+  /* Hero-Matching Page Header */
+  .page-header {
+    background: linear-gradient(135deg, var(--hero-dark) 0%, var(--hero-darker) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(10, 61, 98, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(7, 42, 69, 0.1) 0%, transparent 50%),
+      linear-gradient(45deg, transparent 30%, rgba(10, 61, 98, 0.05) 50%, transparent 70%);
+    animation: heroPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes heroPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .page-header h1 {
+    color: var(--hero-accent) !important;
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1rem !important;
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textGlow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes textGlow {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.2); }
+  }
+
+  .page-header .section-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.3rem !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Hero-Matching Section Headers */
+  .section-title {
+    color: var(--hero-primary) !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    text-shadow: var(--hero-text-glow) !important;
+    position: relative;
+    margin-bottom: 2rem !important;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--hero-gradient);
+    border-radius: 2px;
+    box-shadow: var(--hero-glow);
+  }
+
+  .section-subtitle {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 0 10px rgba(10, 61, 98, 0.2) !important;
+  }
+
+  /* Hero-Matching About Content */
+  .about-content {
+    background: linear-gradient(135deg, rgba(10, 61, 98, 0.8) 0%, rgba(7, 42, 69, 0.9) 100%);
+    border: 1px solid rgba(10, 61, 98, 0.3);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 
+      var(--hero-glow),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--hero-gradient);
+    animation: scanLine 3s linear infinite;
+  }
+
+  @keyframes scanLine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .about-content h3 {
+    color: #ffffff !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.95) !important;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+    line-height: 1.3 !important;
+    letter-spacing: 0.5px !important;
+    padding-right: 40px !important;
+  }
+
+  .about-content h3::after {
+    content: '▶';
+    color: var(--hero-primary);
+    margin-right: 15px;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  }
+
+  .about-content p {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.9) !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  /* Symmetric Team Grid - 3 cards top row, 1 centered below */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-grid .team-card:nth-child(4) {
+    grid-column: 2;
+    justify-self: center;
+    max-width: 350px;
+  }
+
+  @media (max-width: 768px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+    .team-grid .team-card:nth-child(4) {
+      grid-column: 1;
+      max-width: none;
+    }
+  }
+
+  .team-card {
+    background: linear-gradient(135deg, rgba(10, 61, 98, 0.9) 0%, rgba(7, 42, 69, 0.95) 100%);
+    border: 1px solid rgba(10, 61, 98, 0.4);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--hero-glow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(10, 61, 98, 0.05) 50%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .team-card:hover::before {
+    opacity: 1;
+  }
+
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hero-glow-strong);
+    border-color: var(--hero-primary);
+  }
+
+  .team-card h3 {
+    color: var(--hero-accent) !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .team-card p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .team-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .team-card li {
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-right: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .team-card li::before {
+    content: '▸';
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    color: var(--hero-accent);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Hero-Matching Buttons */
+  .btn, .service-btn {
+    background: var(--hero-gradient) !important;
+    color: white !important;
+    padding: 1rem 2.5rem !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 6px 14px rgba(10,61,98,.25) !important;
+    border: none !important;
+    cursor: pointer !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before, .service-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn:hover::before, .service-btn:hover::before {
+    left: 100%;
+  }
+
+  .btn:hover, .service-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(10,61,98,.4) !important;
+  }
+
+  /* Hero-Matching Contact Section */
+  .contact-section {
+    background: linear-gradient(135deg, var(--hero-dark) 0%, var(--hero-darker) 100%);
+    border: 1px solid rgba(10, 61, 98, 0.3);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: 3rem;
+    box-shadow: var(--hero-glow);
+    position: relative;
+  }
+
+  .contact-section h2 {
+    color: var(--hero-accent) !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .contact-item {
+    background: rgba(10, 61, 98, 0.1);
+    border: 1px solid rgba(10, 61, 98, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover {
+    background: rgba(10, 61, 98, 0.2);
+    box-shadow: 0 0 20px rgba(10, 61, 98, 0.3);
+  }
+
+  .contact-item h3 {
+    color: var(--hero-accent) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .contact-item p, .contact-item a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+  }
+
+  .contact-item a:hover {
+    color: var(--hero-primary) !important;
+    text-shadow: var(--hero-text-glow) !important;
+  }
+
+  /* Hero-Matching Form Styling */
+  .contact-form {
+    background: rgba(10, 61, 98, 0.8);
+    border: 1px solid rgba(10, 61, 98, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    background: rgba(7, 42, 69, 0.8) !important;
+    border: 1px solid rgba(10, 61, 98, 0.3) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    border-color: var(--hero-primary) !important;
+    box-shadow: 0 0 15px rgba(10, 61, 98, 0.3) !important;
+    outline: none !important;
+  }
+
+  .contact-form label {
+    color: var(--hero-accent) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2.5rem !important;
+    }
+    
+    .section-title {
+      font-size: 2rem !important;
+    }
+    
+    .about-content,
+    .contact-section {
+      padding: 2rem;
+    }
+    
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 <body>
     <div id="header-root"></div>
@@ -192,7 +631,7 @@
                         <i></i>
                         <div>
                             <h4>אימייל</h4>
-                            <p><a href="mailto:ynivgil@gmail.com">ynivgil@gmail.com</a></p>
+                            <p><a href="mailto:yanivgil@gmail.com">yanivgil@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -304,7 +743,7 @@
                 <a href="tel:054-8184581">054-8184581</a></p>
                 
                 <p><strong>אימייל:</strong><br>
-                <a href="mailto:ynivgil@gmail.com">ynivgil@gmail.com</a></p>
+                <a href="mailto:yanivgil@gmail.com">yanivgil@gmail.com</a></p>
                 
                 <p><strong>כתובת:</strong><br>
                 מגדל "WE-TLV"<br>
@@ -372,14 +811,57 @@
     <!-- Shrink controller (tiny JS) -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Force sticky header immediately
+      const forceStickyHeader = () => {
+        const headers = document.querySelectorAll('header, .site-header, #siteHeader');
+        headers.forEach(header => {
+          if (header) {
+            header.style.position = 'sticky';
+            header.style.top = '0';
+            header.style.zIndex = '9999';
+            header.style.background = 'rgba(255,255,255,.92)';
+            header.style.width = '100%';
+            console.log('Forced sticky header');
+          }
+        });
+      };
+      
+      // Apply immediately
+      forceStickyHeader();
+      
+      // Wait for header to be loaded by header-loader.js
+      setTimeout(() => {
+        forceStickyHeader();
+        
       const header = document.getElementById('siteHeader');
       const s      = document.getElementById('headerSentinel');
-      if (!header || !s) return;
+        if (!header || !s) {
+          console.warn('Header or sentinel not found, retrying...');
+          // Retry after a longer delay
+          setTimeout(() => {
+            forceStickyHeader();
+            const header2 = document.getElementById('siteHeader');
+            const s2 = document.getElementById('headerSentinel');
+            if (header2 && s2) {
+              if (!s2.offsetHeight) s2.style.height = '1px';
+              new IntersectionObserver(([e]) => {
+                header2.classList.toggle('is-compact', !e.isIntersecting);
+              }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s2);
+              console.log('Header shrink initialized (retry)');
+            }
+          }, 500);
+          return;
+        }
       if (!s.offsetHeight) s.style.height = '1px';
 
       new IntersectionObserver(([e]) => {
         header.classList.toggle('is-compact', !e.isIntersecting);
       }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+        console.log('Header shrink initialized');
+      }, 200);
+      
+      // Also apply on window load
+      window.addEventListener('load', forceStickyHeader);
     });
     </script>
 </body>

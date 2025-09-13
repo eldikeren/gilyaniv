@@ -8,11 +8,12 @@
   window.initMegaMenu = function initMegaMenu() {
     const body        = document.body;
     const mqMobile    = window.matchMedia('(max-width: 768px)');
-    const hamburger   = document.querySelector('.hamburger');
-    const primaryNav  = document.querySelector('#primary-nav');
+    // ✅ FIXED: Only select elements without data-noheader attribute
+    const hamburger   = document.querySelector('.hamburger:not([data-noheader])');
+    const primaryNav  = document.querySelector('#primary-nav:not([data-noheader])');
     const overlay     = document.getElementById('nav-overlay');
-    const megaToggles = Array.from(document.querySelectorAll('.mega-toggle'));
-    const megaItems   = Array.from(document.querySelectorAll('.has-mega'));
+    const megaToggles = Array.from(document.querySelectorAll('.mega-toggle:not([data-noheader])'));
+    const megaItems   = Array.from(document.querySelectorAll('.has-mega:not([data-noheader])'));
 
     // --- helpers ---
     const closeAllMega = () => {

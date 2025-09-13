@@ -73,18 +73,33 @@
       color: #555;
     }
 
-    /* ✅ Block header scripts from touching this section */
-    section[aria-labelledby="revTitle"] .section-header {
+    /* ✅ ENHANCED: Block header scripts from touching this section */
+    section[aria-labelledby="revTitle"] .section-header,
+    section[aria-labelledby="revTitle"] header,
+    [data-noheader="true"] {
       position: static !important;
       top: auto !important;
       left: auto !important;
       right: auto !important;
+      bottom: auto !important;
       z-index: auto !important;
       background: none !important;
       width: auto !important;
       margin: 0 auto 1rem auto !important;
       padding: 0 !important;
-      pointer-events: none;
+      pointer-events: none !important;
+      transform: none !important;
+      float: none !important;
+      clear: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: block !important;
+      height: auto !important;
+      min-height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+      clip: auto !important;
+      clip-path: none !important;
     }
 
     #revTitle {
@@ -96,7 +111,9 @@
       color: #0a3d62 !important;
       font-weight: 700 !important;
       scroll-margin-top: 140px;
-      pointer-events: auto;
+      pointer-events: auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
     }
     @media (max-width: 768px) {
       #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
@@ -111,7 +128,7 @@
     <div id="header-root"></div>
 
   <!-- ✅ Fake invisible header to prevent scripts from grabbing testimonials header -->
-  <header id="fake-site-header" style="position:relative; height:1px; overflow:hidden;"></header>
+  <header id="fake-site-header" style="position:relative; height:1px; overflow:hidden; visibility:hidden;" data-noheader="true"></header>
 
     <main id="main">
     <!-- ===== HERO ===== -->
@@ -203,13 +220,25 @@
         </div>
     </footer>
 
-  <!-- ✅ Prevent header-loader.js from grabbing the testimonials <header> -->
+  <!-- ✅ ENHANCED: Prevent header-loader.js from grabbing the testimonials <header> -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Mark testimonials header so header scripts ignore it
       const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
       if (testimonialHeader) {
         testimonialHeader.setAttribute('data-noheader', 'true');
+        
+        // Also mark any child elements that might be targeted by scripts
+        const allHeaderElements = testimonialHeader.querySelectorAll('*');
+        allHeaderElements.forEach(el => {
+          el.setAttribute('data-noheader', 'true');
+        });
+      }
+      
+      // Mark the h2#revTitle element directly
+      const revTitle = document.getElementById('revTitle');
+      if (revTitle) {
+        revTitle.setAttribute('data-noheader', 'true');
       }
 
       // Smooth scroll for #revTitle
@@ -222,6 +251,20 @@
           }
         }, 600);
       }
+      
+      // Add click handler for links to #revTitle
+      const revTitleLinks = document.querySelectorAll('a[href$="#revTitle"]');
+      revTitleLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('revTitle');
+          if (target) {
+            const y = target.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            history.pushState(null, '', '#revTitle');
+          }
+        });
+      });
     });
   </script>
 
