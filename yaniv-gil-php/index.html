@@ -42,36 +42,55 @@
     <script defer src="/js/header-loader.js"></script>
   <style id="rescue-header">
   :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header, header#siteHeader, .site-header.site-header, header{ 
-    position: sticky !important; 
+  /* ULTRA AGGRESSIVE STICKY HEADER FIX */
+  .site-header, header#siteHeader, .site-header.site-header, header, 
+  #header-root header, #header-root .site-header, .header-root header, .header-root .site-header,
+  header[role="banner"], .site-header[role="banner"], #siteHeader[role="banner"] { 
+    position: fixed !important; 
     top: 0 !important; 
-    z-index: 9999 !important; 
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 99999 !important; 
     background: var(--glass) !important; 
     -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
     backdrop-filter: saturate(120%) blur(8px) !important; 
     transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
     width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
-  /* Force sticky positioning on all possible header elements */
-  #header-root header, #header-root .site-header, .header-root header, .header-root .site-header {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 9999 !important;
-    background: var(--glass) !important;
-    width: 100% !important;
+  /* Add top padding to body to account for fixed header */
+  body {
+    padding-top: 120px !important;
   }
   .header-top{ height: 40px; border-bottom: 1px solid var(--border); transition: height .22s ease, opacity .22s ease; }
   .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
   .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
   .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ box-shadow: 0 10px 28px rgba(0,0,0,.07) !important; }
-  .site-header.is-compact .header-top{ height: 0 !important; opacity: 0 !important; border-bottom: 0 !important; overflow: hidden !important; }
-  .site-header.is-compact .header-main .header-main-inner{ padding-block: 8px !important; }
-  .site-header.is-compact .logo .logo-mark{ height: 36px !important; }
-  .site-header.is-compact .logo .logo-text{ opacity: 0 !important; }
+  .site-header.is-compact{ 
+    box-shadow: 0 10px 28px rgba(0,0,0,.07) !important; 
+  }
+  .site-header.is-compact .header-top{ 
+    height: 0 !important; 
+    opacity: 0 !important; 
+    border-bottom: 0 !important; 
+    overflow: hidden !important; 
+  }
+  .site-header.is-compact .header-main .header-main-inner{ 
+    padding-block: 8px !important; 
+  }
+  .site-header.is-compact .logo .logo-mark{ 
+    height: 36px !important; 
+  }
+  .site-header.is-compact .logo .logo-text{ 
+    opacity: 0 !important; 
+  }
+  
+  /* Adjust body padding when header is compact */
+  .site-header.is-compact ~ * {
+    padding-top: 80px !important;
+  }
   .header-top, .header-main, .site-header{ overflow: visible; }
   .has-mega{ position: relative; }
   .mega-panel{
@@ -588,19 +607,26 @@
     <!-- Shrink controller (tiny JS) -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Force sticky header immediately
+      // Force fixed header immediately
       const forceStickyHeader = () => {
         const headers = document.querySelectorAll('header, .site-header, #siteHeader');
         headers.forEach(header => {
           if (header) {
-            header.style.position = 'sticky';
+            header.style.position = 'fixed';
             header.style.top = '0';
-            header.style.zIndex = '9999';
+            header.style.left = '0';
+            header.style.right = '0';
+            header.style.zIndex = '99999';
             header.style.background = 'rgba(255,255,255,.92)';
             header.style.width = '100%';
-            console.log('Forced sticky header');
+            header.style.margin = '0';
+            header.style.padding = '0';
+            console.log('Forced fixed header');
           }
         });
+        
+        // Add body padding
+        document.body.style.paddingTop = '120px';
       };
       
       // Apply immediately
@@ -631,9 +657,15 @@
         }
       if (!s.offsetHeight) s.style.height = '1px';
 
-      new IntersectionObserver(([e]) => {
-        header.classList.toggle('is-compact', !e.isIntersecting);
-      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+        new IntersectionObserver(([e]) => {
+          header.classList.toggle('is-compact', !e.isIntersecting);
+          // Adjust body padding based on header state
+          if (!e.isIntersecting) {
+            document.body.style.paddingTop = '80px'; // Compact header
+          } else {
+            document.body.style.paddingTop = '120px'; // Full header
+          }
+        }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
         console.log('Header shrink initialized');
       }, 200);
       
