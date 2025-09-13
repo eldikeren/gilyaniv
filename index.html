@@ -173,73 +173,13 @@
       color: #555;
     }
 
-    /* ✅ NUCLEAR OPTION: Force testimonials header to stay in place */
-    section[aria-labelledby="revTitle"],
-    section[aria-labelledby="revTitle"] *,
-    section[aria-labelledby="revTitle"] .section-header,
-    section[aria-labelledby="revTitle"] header,
-    [data-noheader="true"] {
-      position: static !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      z-index: auto !important;
-      background: none !important;
-      width: auto !important;
-      margin: 0 auto 1rem auto !important;
-      padding: 0 !important;
-      pointer-events: auto !important;
-      transform: none !important;
-      float: none !important;
-      clear: none !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: block !important;
-      height: auto !important;
-      min-height: auto !important;
-      max-height: none !important;
-      overflow: visible !important;
-      clip: auto !important;
-      clip-path: none !important;
-      box-shadow: none !important;
-      border: none !important;
-      text-align: center !important;
-      font-size: inherit !important;
-      font-weight: inherit !important;
-      color: inherit !important;
-      text-decoration: none !important;
-      text-transform: none !important;
-      letter-spacing: normal !important;
-      line-height: normal !important;
-      white-space: normal !important;
-      word-spacing: normal !important;
-      word-wrap: normal !important;
-      word-break: normal !important;
-      text-indent: 0 !important;
-      vertical-align: baseline !important;
+    /* Basic styles for testimonials section */
+    #testimonials-section {
+      scroll-margin-top: 140px;
     }
     
-    /* Exception for the testimonials container to allow horizontal scrolling */
-    .testimonials {
-      display: flex !important;
-      overflow-x: auto !important;
-      gap: 2rem !important;
-      padding: 1rem 0 !important;
-    }
-
     #revTitle {
-      display: block !important;
-      position: static !important;
-      margin: 0 auto 1rem auto !important;
-      text-align: center !important;
-      font-size: 2.5rem !important;
-      color: #0a3d62 !important;
-      font-weight: 700 !important;
       scroll-margin-top: 140px;
-      pointer-events: auto !important;
-      opacity: 1 !important;
-      visibility: visible !important;
     }
     @media (max-width: 768px) {
       #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
@@ -301,38 +241,46 @@
         </div>
            </section>
        
-    <!-- ===== ✅ Testimonials ===== -->
-        <section class="section" aria-labelledby="revTitle">
+    <!-- ===== ✅ Testimonials with COMPLETELY RESTRUCTURED HTML ===== -->
+        <section class="section testimonials-section" id="testimonials-section">
            <div class="container">
-        <!-- ✅ cleaned: no style="", no class="visible" -->
-            <header class="section-header">
-              <h2 id="revTitle">ביקורות לקוחות</h2>
-              <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
-            </header>
+        <!-- ✅ NO HEADER TAG - Using div instead -->
+            <div class="testimonials-title-wrapper" style="margin-bottom: 2rem; text-align: center;">
+              <!-- Anchor for scrolling -->
+              <span id="revTitle" style="display: block; scroll-margin-top: 140px;"></span>
+              
+              <!-- Title with inline styles to ensure it's visible -->
+              <h2 style="position: static !important; display: block !important; font-size: 2.5rem !important; color: #0a3d62 !important; font-weight: 700 !important; margin: 0 0 0.5rem 0 !important; text-align: center !important;">ביקורות לקוחות</h2>
+              
+              <!-- Subtitle with inline styles -->
+              <p style="position: static !important; display: block !important; margin: 0 !important; text-align: center !important;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+            </div>
 
-        <div class="testimonials">
-              <figure class="testimonial">
-                <span class="rating">5.0</span>
-                <blockquote>"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</blockquote>
-                <figcaption>ש.ד — רחובות · הגשת התנגדות לצוואה</figcaption>
+        <!-- Testimonials cards -->
+        <div class="testimonials" style="display: flex !important; gap: 2rem !important; overflow-x: auto !important; padding: 1rem 0 !important;">
+              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
+                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</blockquote>
+                <figcaption style="font-size: 0.9rem; color: #555;">ש.ד — רחובות · הגשת התנגדות לצוואה</figcaption>
               </figure>
-              <figure class="testimonial">
-                <span class="rating">5.0</span>
-                <blockquote>"עורך דין מדהים ישר ומקצועי להפליא..."</blockquote>
-                <figcaption>ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</figcaption>
+              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
+                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"עורך דין מדהים ישר ומקצועי להפליא..."</blockquote>
+                <figcaption style="font-size: 0.9rem; color: #555;">ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</figcaption>
               </figure>
-              <figure class="testimonial">
-                <span class="rating">5.0</span>
-                <blockquote>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
-                <figcaption>א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
+              <figure class="testimonial" style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+                <span class="rating" style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</span>
+                <blockquote style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
+                <figcaption style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
               </figure>
-               </div>
+        </div>
                
-            <div style="margin-top:14px">
-              <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener">לכל הביקורות</a>
-                       </div>
-                   </div>
-        </section>
+        <!-- "View all" button -->
+        <div style="margin-top:14px; text-align: center;">
+          <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener" style="display: inline-block; background: #0a3d62; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500;">לכל הביקורות</a>
+        </div>
+      </div>
+    </section>
     </main>
        
   <!-- ===== Footer ===== -->
@@ -340,110 +288,22 @@
         <div class="container">
               <ul>
                 <li><a href="about.html">אודות המשרד</a></li>
-        <li><a href="index.html#revTitle">ביקורות לקוחות</a></li>
+        <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
               </ul>
         </div>
     </footer>
 
-  <!-- ✅ NUCLEAR OPTION: Force testimonials header to stay in place -->
+  <!-- ✅ SIMPLIFIED SCRIPT for the new structure -->
   <script>
-    // Run immediately
-    (function() {
-      // Completely disable all console messages
-      console.log = function() {};
-      console.error = function() {};
-      console.warn = function() {};
-      console.info = function() {};
-      
-      // Create a style element to force the testimonials header to stay in place
-      const style = document.createElement('style');
-      style.textContent = `
-        section[aria-labelledby="revTitle"] .section-header {
-          position: static !important;
-          top: auto !important;
-          left: auto !important;
-          right: auto !important;
-          bottom: auto !important;
-          z-index: auto !important;
-          transform: none !important;
-          margin: 0 auto 1rem auto !important;
-          padding: 0 !important;
-          width: auto !important;
-          height: auto !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          display: block !important;
-          background: none !important;
-        }
-        
-        #revTitle {
-          position: static !important;
-          display: block !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          margin: 0 auto 1rem auto !important;
-          text-align: center !important;
-          font-size: 2.5rem !important;
-          color: #0a3d62 !important;
-          font-weight: 700 !important;
-        }
-      `;
-      document.head.appendChild(style);
-    })();
+    // Disable console messages
+    console.log = function() {};
+    console.error = function() {};
+    console.warn = function() {};
+    console.info = function() {};
     
-    // Run when DOM is loaded
+    // Handle smooth scrolling for #revTitle
     document.addEventListener('DOMContentLoaded', () => {
-      // Mark testimonials header so header scripts ignore it
-      const testimonialHeader = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
-      if (testimonialHeader) {
-        testimonialHeader.setAttribute('data-noheader', 'true');
-        
-        // Force the header to stay in place with inline styles
-        testimonialHeader.style.cssText = `
-          position: static !important;
-          top: auto !important;
-          left: auto !important;
-          right: auto !important;
-          bottom: auto !important;
-          z-index: auto !important;
-          transform: none !important;
-          margin: 0 auto 1rem auto !important;
-          padding: 0 !important;
-          width: auto !important;
-          height: auto !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          display: block !important;
-          background: none !important;
-        `;
-        
-        // Also mark any child elements that might be targeted by scripts
-        const allHeaderElements = testimonialHeader.querySelectorAll('*');
-        allHeaderElements.forEach(el => {
-          el.setAttribute('data-noheader', 'true');
-        });
-      }
-      
-      // Mark the h2#revTitle element directly
-      const revTitle = document.getElementById('revTitle');
-      if (revTitle) {
-        revTitle.setAttribute('data-noheader', 'true');
-        
-        // Force the title to stay in place with inline styles
-        revTitle.style.cssText = `
-          position: static !important;
-          display: block !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          margin: 0 auto 1rem auto !important;
-          text-align: center !important;
-          font-size: 2.5rem !important;
-          color: #0a3d62 !important;
-          font-weight: 700 !important;
-        `;
-      }
-
-      // Smooth scroll for #revTitle
+      // Smooth scroll if #revTitle is in URL
       if (window.location.hash === '#revTitle') {
         setTimeout(() => {
           const target = document.getElementById('revTitle');
@@ -468,51 +328,19 @@
         });
       });
       
-      // Set up a MutationObserver to continuously monitor and fix the testimonials header
-      const observer = new MutationObserver(() => {
-        const header = document.querySelector('section[aria-labelledby="revTitle"] .section-header');
-        if (header) {
-          header.style.cssText = `
-            position: static !important;
-            top: auto !important;
-            left: auto !important;
-            right: auto !important;
-            bottom: auto !important;
-            z-index: auto !important;
-            transform: none !important;
-            margin: 0 auto 1rem auto !important;
-            padding: 0 !important;
-            width: auto !important;
-            height: auto !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            display: block !important;
-            background: none !important;
-          `;
-        }
-        
-        const title = document.getElementById('revTitle');
-        if (title) {
-          title.style.cssText = `
-            position: static !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            margin: 0 auto 1rem auto !important;
-            text-align: center !important;
-            font-size: 2.5rem !important;
-            color: #0a3d62 !important;
-            font-weight: 700 !important;
-          `;
-        }
-      });
-      
-      // Start observing the document
-      observer.observe(document.body, { 
-        childList: true, 
-        subtree: true, 
-        attributes: true, 
-        attributeFilter: ['style', 'class']
+      // Update footer links to point to the new section ID
+      const footerLinks = document.querySelectorAll('a[href="index.html#revTitle"]');
+      footerLinks.forEach(link => {
+        link.href = 'index.html#testimonials-section';
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('testimonials-section');
+          if (target) {
+            const y = target.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            history.pushState(null, '', '#testimonials-section');
+          }
+        });
       });
     });
   </script>
