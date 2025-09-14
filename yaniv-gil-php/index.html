@@ -36,612 +36,19 @@
     
     <!-- Header shrink script -->
     <script src="js/header-shrink.js?v=1" defer></script>
-    
-    <link rel="stylesheet" href="/css/mobile-responsive.css">
-    <script defer src="/js/mega-menu.js"></script>
-    <script defer src="/js/header-shrink.js"></script>
-    <script defer src="/js/header-loader.js"></script>
-  <style id="rescue-header">
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  /* ULTRA AGGRESSIVE STICKY HEADER FIX */
-  .site-header, header#siteHeader, .site-header.site-header, header, 
-  #header-root header, #header-root .site-header, .header-root header, .header-root .site-header,
-  header[role="banner"], .site-header[role="banner"], #siteHeader[role="banner"] { 
-    position: fixed !important; 
-    top: 0 !important; 
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 99999 !important; 
-    background: var(--glass) !important; 
-    -webkit-backdrop-filter: saturate(120%) blur(8px) !important; 
-    backdrop-filter: saturate(120%) blur(8px) !important; 
-    transition: box-shadow .22s ease, background-color .22s ease, padding .22s ease !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  /* Add top padding to body to account for fixed header */
-  body {
-    padding-top: 120px !important;
-    font-family: 'Heebo', Arial, sans-serif !important;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-  }
-  
-  /* Ensure section headers are visible and add scroll padding */
-  .section-header {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin-bottom: 2rem !important;
-    text-align: center !important;
-  }
-  
-  .section-header h2 {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 2.5rem !important;
-    color: #0a3d62 !important;
-    margin-bottom: 1rem !important;
-    font-weight: 700 !important;
-  }
-  
-  .section-header p {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 1.2rem !important;
-    color: #64748b !important;
-    margin-bottom: 0 !important;
-  }
-  
-  /* Add scroll padding for anchor links */
-  #revTitle {
-    scroll-margin-top: 140px !important;
-  }
-  
-  /* Ensure testimonials section header is visible - using general section-header styles above */
-  .header-top{ 
-    height: 40px; 
-    border-bottom: 1px solid var(--border); 
-    transition: height .22s ease, opacity .22s ease; 
-    background: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .header-top-design {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, 
-      rgba(10, 61, 98, 0.8) 0%, 
-      rgba(7, 42, 69, 0.9) 100%);
-    backdrop-filter: blur(10px) saturate(150%);
-    -webkit-backdrop-filter: blur(10px) saturate(150%);
-    position: relative;
-    box-shadow: 
-      inset 0 1px 2px rgba(255,255,255,0.2),
-      0 0 10px rgba(10, 61, 98, 0.2);
-  }
-  
-  .header-top-design::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, 
-      rgba(255,255,255,0.4) 0%, 
-      transparent 50%,
-      rgba(255,255,255,0.4) 100%);
-    animation: prism-fade 8s ease-in-out infinite;
-  }
-  
-  @keyframes prism-fade {
-    0%, 100% { 
-      opacity: 0.3; 
-    }
-    50% { 
-      opacity: 0.8; 
-    }
-  }
-  
-  /* Mobile: Simplify the glass effect and ensure menu works */
-  @media (max-width: 768px) {
-    .header-top-design {
-      background: linear-gradient(135deg, 
-        rgba(10, 61, 98, 0.9) 0%, 
-        rgba(7, 42, 69, 0.95) 100%);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
-    }
-    
-    .header-top-design::before {
-      background: linear-gradient(45deg, 
-        rgba(255,255,255,0.2) 0%, 
-        transparent 50%,
-        rgba(255,255,255,0.2) 100%);
-      animation: prism-fade-mobile 10s ease-in-out infinite;
-    }
-    
-    /* Fix mobile menu positioning and functionality */
-    .header-main-inner {
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      position: relative !important;
-    }
-    
-    .hamburger {
-      display: block !important;
-      z-index: 10000 !important;
-      position: relative !important;
-      order: 1 !important;
-      margin-right: 0 !important;
-      margin-left: 0 !important;
-    }
-    
-    .logo {
-      order: 2 !important;
-      margin: 0 auto !important;
-      flex-grow: 1 !important;
-      text-align: center !important;
-    }
-    
-    .primary-nav {
-      display: none !important;
-      position: absolute !important;
-      top: 100% !important;
-      left: 0 !important;
-      right: 0 !important;
-      background: rgba(255,255,255,0.98) !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-      z-index: 9999 !important;
-      width: 100% !important;
-      border-radius: 0 0 12px 12px !important;
-    }
-    
-    .primary-nav.active {
-      display: block !important;
-    }
-    
-    .primary-nav ul {
-      flex-direction: column !important;
-      padding: 1rem !important;
-      margin: 0 !important;
-      list-style: none !important;
-    }
-    
-    .primary-nav li {
-      margin: 0.25rem 0 !important;
-      width: 100% !important;
-    }
-    
-    .primary-nav a {
-      display: block !important;
-      padding: 0.75rem 1rem !important;
-      color: #0a3d62 !important;
-      font-weight: 600 !important;
-      text-decoration: none !important;
-      border-bottom: 1px solid rgba(10, 61, 98, 0.1) !important;
-      border-radius: 6px !important;
-      background: rgba(255,255,255,0.8) !important;
-      margin: 0.25rem 0 !important;
-    }
-    
-    .primary-nav a:hover {
-      background: rgba(10, 61, 98, 0.1) !important;
-      color: #ffffff !important;
-    }
-    
-    /* Ensure hamburger is visible and clickable */
-    .hamburger {
-      background: none !important;
-      border: none !important;
-      cursor: pointer !important;
-      padding: 0.5rem !important;
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 3px !important;
-    }
-    
-    .hamburger span {
-      width: 25px !important;
-      height: 3px !important;
-      background: #0a3d62 !important;
-      transition: all 0.3s ease !important;
-      border-radius: 2px !important;
-    }
-    
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(6px, 6px) !important;
-    }
-    
-    .hamburger.active span:nth-child(2) {
-      opacity: 0 !important;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px) !important;
-    }
-    
-    /* Make testimonials scroll bar visible on mobile */
-    .testimonials {
-      overflow-x: auto !important;
-      scrollbar-width: thin !important;
-      scrollbar-color: rgba(10, 61, 98, 0.5) rgba(255,255,255,0.3) !important;
-    }
-    
-    .testimonials::-webkit-scrollbar {
-      height: 8px !important;
-    }
-    
-    .testimonials::-webkit-scrollbar-track {
-      background: rgba(255,255,255,0.3) !important;
-      border-radius: 4px !important;
-    }
-    
-    .testimonials::-webkit-scrollbar-thumb {
-      background: rgba(10, 61, 98, 0.5) !important;
-      border-radius: 4px !important;
-    }
-    
-    .testimonials::-webkit-scrollbar-thumb:hover {
-      background: rgba(10, 61, 98, 0.7) !important;
-    }
-    
-    /* Mobile section header styling */
-    .section-header h2 {
-      font-size: 2rem !important;
-    }
-    
-    .section-header p {
-      font-size: 1rem !important;
-    }
-    
-    @keyframes prism-fade-mobile {
-      0%, 100% { 
-        opacity: 0.2; 
-      }
-      50% { 
-        opacity: 0.6; 
-      }
-    }
-  }
-  .header-main .header-main-inner{ padding-block: 16px; transition: padding .22s ease; }
-  .logo .logo-mark{ height: 48px; width:auto; transition: height .22s ease; }
-  .logo .logo-text{ max-width: 220px; height:auto; transition: opacity .22s ease; }
-  .site-header.is-compact{ 
-    box-shadow: 0 10px 28px rgba(0,0,0,.07) !important; 
-  }
-  .site-header.is-compact .header-top{ 
-    height: 40px !important; 
-    opacity: 1 !important; 
-    border-bottom: 1px solid var(--border) !important; 
-    overflow: visible !important; 
-  }
-  .site-header.is-compact .header-main .header-main-inner{ 
-    padding-block: 8px !important; 
-  }
-  .site-header.is-compact .logo .logo-mark{ 
-    height: 36px !important; 
-  }
-  .site-header.is-compact .logo .logo-text{ 
-    opacity: 0 !important; 
-  }
-  
-  /* Header-top always visible, no padding adjustment needed */
-  .header-top, .header-main, .site-header{ overflow: visible; }
-  .has-mega{ position: relative; }
-  .mega-panel{
-    position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: min(86vw, 880px);
-    background: #fff; border: 1px solid var(--border); border-radius: 12px;
-    box-shadow: 0 30px 60px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.08);
-    padding: 16px; display: none; z-index: 5000;
-  }
-  .has-mega.open > .mega-panel{ display: block; }
-  #headerSentinel{ height: 1px; }
-  /* Remove ugly focus outlines */
-  .brand:focus, .logo a:focus, 
-  .primary-nav a:focus, .secondary-nav a:focus,
-  .hamburger:focus, .mega-toggle:focus,
-  .mega-panel a:focus, .site-search input:focus,
-  .site-search button:focus, .btn:focus,
-  nav a:focus, button:focus, input:focus { 
-    outline: none !important; 
-  }
+    <script src="/js/mega-menu.js"></script>
 
-  /* Hero Color Design System for Home Page - Same effects as practice areas */
-  :root {
-    --hero-primary: #0a3d62;
-    --hero-primary-dark: #072a45;
-    --hero-primary-light: #0a3d62;
-    --hero-gradient: linear-gradient(135deg, #0a3d62 0%, #072a45 100%);
-    --hero-shadow: 0 10px 30px rgba(10, 61, 98, 0.15);
-    --hero-hover: 0 20px 40px rgba(10, 61, 98, 0.25);
-  }
-
-  /* Office name overlay on top of video - Large and centered */
-  .office-name-overlay {
-    position: absolute !important;
-    top: 30% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    font-size: 4rem !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    text-shadow: 0 6px 12px rgba(0,0,0,0.9) !important;
-    letter-spacing: 3px !important;
-    text-align: center !important;
-    opacity: 1 !important;
-    line-height: 1.1 !important;
-    z-index: 10 !important;
-    white-space: nowrap !important;
-  }
-
-  @media (max-width: 768px) {
-    .office-name-overlay {
-      font-size: 1.8rem !important;
-      letter-spacing: 0.5px !important;
-      white-space: normal !important;
-      max-width: 95% !important;
-      top: 15% !important;
-      line-height: 1.2 !important;
-      padding: 0 1rem !important;
+    <style>
+    /* Add scroll padding for anchor links */
+    #revTitle {
+      scroll-margin-top: 140px;
     }
-  }
 
-  @media (max-width: 480px) {
-    .office-name-overlay {
-      font-size: 1.4rem !important;
-      letter-spacing: 0.3px !important;
-      top: 12% !important;
-      line-height: 1.3 !important;
-      padding: 0 0.5rem !important;
+    section[id="revTitle"],
+    h2#revTitle {
+      scroll-margin-top: 140px;
     }
-  }
-
-  /* Practice Grid - All 4 cards in one row */
-  .practice-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Articles Grid - All 3 cards in one row */
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 1200px) {
-    .practice-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .articles-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .practice-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-    .articles-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .practice-grid, .articles-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.8rem;
-      padding: 0 0.5rem;
-    }
-  }
-
-  .practice-grid .card {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    padding: 2rem !important;
-    box-shadow: var(--hero-shadow) !important;
-    border: 1px solid rgba(10, 61, 98, 0.1) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    min-height: 300px !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  @media (max-width: 768px) {
-    .practice-grid .card, .articles-grid .card {
-      padding: 1.5rem !important;
-      min-height: 250px !important;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .practice-grid .card, .articles-grid .card {
-      padding: 1rem !important;
-      min-height: 200px !important;
-    }
-    
-    .practice-grid .card h3, .articles-grid .card h3 {
-      font-size: 1.1rem !important;
-      line-height: 1.3 !important;
-      margin-bottom: 0.75rem !important;
-    }
-    
-    .practice-grid .card p, .articles-grid .card p {
-      font-size: 0.9rem !important;
-      line-height: 1.4 !important;
-      margin-bottom: 1rem !important;
-    }
-    
-    .practice-grid .card .btn, .articles-grid .card .btn {
-      padding: 0.6rem 1.2rem !important;
-      font-size: 0.85rem !important;
-    }
-  }
-
-  .practice-grid .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--hero-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-
-  .practice-grid .card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .practice-grid .card:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: var(--hero-hover) !important;
-    border-color: var(--hero-primary-light) !important;
-  }
-
-  .practice-grid .card h3 {
-    color: var(--hero-primary-dark) !important;
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.3 !important;
-  }
-
-  .practice-grid .card p {
-    color: #64748b !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    flex-grow: 1 !important;
-  }
-
-  .practice-grid .btn {
-    background: var(--hero-gradient) !important;
-    color: white !important;
-    padding: 0.875rem 2rem !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    display: inline-block !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.3) !important;
-    border: none !important;
-    cursor: pointer !important;
-    margin-top: auto !important;
-  }
-
-  .practice-grid .btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.4) !important;
-    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
-  }
-
-  /* Apply hero color styling to ALL cards on the page - Same design as practice areas */
-  .card, .article-card, .media-card, .service-card {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    padding: 2rem !important;
-    box-shadow: var(--hero-shadow) !important;
-    border: 1px solid rgba(10, 61, 98, 0.1) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    min-height: 300px !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .card::before, .article-card::before, .media-card::before, .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--hero-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-
-  .card:hover::before, .article-card:hover::before, .media-card:hover::before, .service-card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .card:hover, .article-card:hover, .media-card:hover, .service-card:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: var(--hero-hover) !important;
-    border-color: var(--hero-primary-light) !important;
-  }
-
-  .card h3, .article-card h3, .media-card h3, .service-card h3 {
-    color: var(--hero-primary-dark) !important;
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.3 !important;
-  }
-
-  .card p, .article-card p, .media-card p, .service-card p {
-    color: #64748b !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    flex-grow: 1 !important;
-  }
-
-  .card .btn, .article-card .btn, .media-card .btn, .service-card .btn {
-    background: var(--hero-gradient) !important;
-    color: white !important;
-    padding: 0.875rem 2rem !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    display: inline-block !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.3) !important;
-    border: none !important;
-    cursor: pointer !important;
-    margin-top: auto !important;
-  }
-
-  .card .btn:hover, .article-card .btn:hover, .media-card .btn:hover, .service-card .btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.4) !important;
-    background: linear-gradient(135deg, #072a45 0%, #0a3d62 100%) !important;
-  }
-  </style>
+    </style>
 </head>
 <body>
     <div id="header-root"></div>
@@ -725,20 +132,21 @@
             
             <div class="articles-grid">
               <article class="card"><div class="card-body">
-                        <h3>חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
-                        <p>ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
+                    <h3>חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
+                    <p>ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
                 <a class="btn primary" href="https://www.psakdin.co.il" target="_blank" rel="noopener">קרא עוד</a>
               </div></article>
 
               <article class="card"><div class="card-body">
-                        <h3>הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
+                <p></p>
+                <h3>הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
                 <p>הסכם גירושין קבע שהבעל יעביר לאשתו את חלקו בנכס. אבל הרישום לא בוצע ובינתיים הוטלו על הבית עיקולים בגין חובות של הגרוש. מה החליט ביהמ״ש?</p>
                 <a class="btn primary" href="https://www.ynet.co.il" target="_blank" rel="noopener">קרא עוד</a>
               </div></article>
 
               <article class="card"><div class="card-body">
-                        <h3>זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
-                        <p>חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
+                    <h3>זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
+                    <p>חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
                 <a class="btn primary" href="https://www.mako.co.il" target="_blank" rel="noopener">קרא עוד</a>
               </div></article>
             </div>
@@ -753,23 +161,23 @@
         <section class="section" aria-labelledby="ctaTitle">
         <div class="container">
             <div class="cta">
-                        <div>
-                <h2 id="ctaTitle">צור קשר עכשיו</h2>
-                <p>ייעוץ ראשוני חינם עם עורך דין מנוסה</p>
-                <p>טלפון: 03-609-2414 · נייד: 054-8184581 · אימייל: yanivgil@gmail.com</p>
-                <p>כתובת: מגדל "WE-TLV", דרך מנחם בגין 150, קומה 7, תל-אביב</p>
-                        </div>
+                <div>
+                  <h2 id="ctaTitle">צור קשר עכשיו</h2>
+                  <p>ייעוץ ראשוני חינם עם עורך דין מנוסה</p>
+                  <p>טלפון: 03-609-2414 · נייד: 054-8184581 · אימייל: yanivgil@gmail.com</p>
+                  <p>כתובת: מגדל "WE-TLV", דרך מנחם בגין 150, קומה 7, תל-אביב</p>
+                </div>
               <div class="actions">
                 <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
                 <a class="btn" href="/contact.html">צור קשר</a>
                 </div>
             </div>
         </div>
-           </section>
-       
+            </section>
+        
         <!-- Testimonials (same text—styled on a sleek snap strip) -->
         <section class="section" aria-labelledby="revTitle">
-           <div class="container">
+          <div class="container">
             <header class="section-header">
               <h2 id="revTitle">ביקורות לקוחות</h2>
               <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
@@ -791,16 +199,16 @@
                 <blockquote>"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פרעון..."</blockquote>
                 <figcaption>א. — רמלה · חדלות פרעון/פשיטת רגל</figcaption>
               </figure>
-               </div>
-               
+            </div>
+              
             <div style="margin-top:14px">
               <a class="btn" href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener">לכל הביקורות</a>
-                       </div>
-                   </div>
+            </div>
+          </div>
         </section>
     </main>
-       
-       <!-- Footer -->
+        
+    <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="כותרת תחתונה">
         <div class="container">
         <div class="footer-main">
@@ -813,7 +221,7 @@
                 <li><a href="contact.html">צור קשר</a></li>
                 <li><a href="index.html#revTitle">ביקורות לקוחות</a></li>
               </ul>
-                       </div>
+            </div>
             
             <div class="footer-section">
               <h3>תחומי התמחות</h3>
@@ -823,8 +231,8 @@
                 <li><a href="practice-areas.html#civil">סדר דין אזרחי</a></li>
                 <li><a href="practice-areas.html#enforcement">הוצאה לפועל</a></li>
               </ul>
-                   </div>
-                   
+            </div>
+            
             <div class="footer-section">
               <h3>מידע ותוכן</h3>
               <ul>
@@ -832,8 +240,8 @@
                 <li><a href="media.html">תקשורת</a></li>
                 <li><a href="practice-areas.html">כל תחומי ההתמחות</a></li>
               </ul>
-                   </div>
-                   
+            </div>
+            
             <div class="footer-section">
               <h3>יצירת קשר</h3>
               <div class="contact-info">
@@ -850,31 +258,29 @@
                 מגדל "WE-TLV"<br>
                 דרך מנחם בגין 150<br>
                 קומה 7, תל-אביב</p>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               
-            <div class="footer-bottom">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
           <div class="flex justify-between items-center">
             <div class="footer-copyright">
               <p>&copy; 2024 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
-               </div>
+            </div>
             <div class="footer-legal">
               <a href="#privacy">מדיניות פרטיות</a>
               <span>•</span>
               <a href="#terms">תנאי שימוש</a>
-                </div>
             </div>
-            </div>
+          </div>
+        </div>
         </div>
     </footer>
 
     <script src="js/scroll-animations.js?v=20250908b" defer></script>
     <script src="js/mega-menu.js?v=20250908d" defer></script>
     <script src="js/home.js" defer></script>
-
-
 
     <!-- Smooth scroll fix for testimonials link -->
     <script>
@@ -893,118 +299,4 @@
       });
     });
     </script>
-
-
-    
-    <!-- Shrink controller (tiny JS) -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Force fixed header immediately
-      const forceStickyHeader = () => {
-        const headers = document.querySelectorAll('header, .site-header, #siteHeader');
-        headers.forEach(header => {
-          if (header) {
-            header.style.position = 'fixed';
-            header.style.top = '0';
-            header.style.left = '0';
-            header.style.right = '0';
-            header.style.zIndex = '99999';
-            header.style.background = 'rgba(255,255,255,.92)';
-            header.style.width = '100%';
-            header.style.margin = '0';
-            header.style.padding = '0';
-            console.log('Forced fixed header');
-          }
-        });
-        
-        // Add body padding
-        document.body.style.paddingTop = '120px';
-      };
-      
-      // Apply immediately
-      forceStickyHeader();
-      
-      // Wait for header to be loaded by header-loader.js
-      setTimeout(() => {
-        forceStickyHeader();
-        
-      const header = document.getElementById('siteHeader');
-      const s      = document.getElementById('headerSentinel');
-        if (!header || !s) {
-          console.warn('Header or sentinel not found, retrying...');
-          // Retry after a longer delay
-          setTimeout(() => {
-            forceStickyHeader();
-            const header2 = document.getElementById('siteHeader');
-            const s2 = document.getElementById('headerSentinel');
-            if (header2 && s2) {
-              if (!s2.offsetHeight) s2.style.height = '1px';
-              new IntersectionObserver(([e]) => {
-                header2.classList.toggle('is-compact', !e.isIntersecting);
-              }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s2);
-              console.log('Header shrink initialized (retry)');
-            }
-          }, 500);
-          return;
-        }
-      if (!s.offsetHeight) s.style.height = '1px';
-
-      new IntersectionObserver(([e]) => {
-        header.classList.toggle('is-compact', !e.isIntersecting);
-          // Keep body padding the same since header-top always visible
-          document.body.style.paddingTop = '120px';
-      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
-        console.log('Header shrink initialized');
-      }, 200);
-      
-      // Also apply on window load
-      window.addEventListener('load', forceStickyHeader);
-      
-      // Mobile menu functionality
-      const hamburger = document.querySelector('.hamburger');
-      const primaryNav = document.querySelector('.primary-nav');
-      
-      console.log('Hamburger found:', !!hamburger);
-      console.log('Primary nav found:', !!primaryNav);
-      
-      if (hamburger && primaryNav) {
-        hamburger.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          console.log('Hamburger clicked');
-          
-          primaryNav.classList.toggle('active');
-          hamburger.classList.toggle('active');
-          hamburger.setAttribute('aria-expanded', primaryNav.classList.contains('active'));
-          
-          console.log('Menu active:', primaryNav.classList.contains('active'));
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = primaryNav.querySelectorAll('a');
-        console.log('Nav links found:', navLinks.length);
-        
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            console.log('Nav link clicked');
-            primaryNav.classList.remove('active');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-          });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!hamburger.contains(e.target) && !primaryNav.contains(e.target)) {
-            primaryNav.classList.remove('active');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-          }
-        });
-      } else {
-        console.warn('Mobile menu elements not found');
-      }
-    });
-    </script>
 </body>
-</html>
