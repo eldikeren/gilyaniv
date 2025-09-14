@@ -3,121 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות - משרד עו"ד יניב גיל</title>
-    
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="css/design-tokens.css?v=2025-09-13e">
-    <link rel="stylesheet" href="css/base.css?v=2025-09-13e">
-    <link rel="stylesheet" href="css/pages-rtl.css?v=2025-09-13e">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=2025-09-13e">
-    <link rel="stylesheet" href="css/home-rtl.css?v=2025-09-13e">
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13e">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13e">
-    
-    <script defer src="/js/mega-menu.js?v=2025-09-13e"></script>
-    <script defer src="/js/header-shrink.js?v=2025-09-13e"></script>
-    <script defer src="/js/header-loader.js?v=2025-09-13e"></script>
-    
+    <title>צור קשר - עו"ד יניב גיל</title>
+    <meta name="description" content="ליצירת קשר עם משרד עורכי הדין יניב גיל, לקביעת פגישת ייעוץ ראשונית או לקבלת מידע נוסף.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            padding-top: 120px !important;
-            font-family: 'Heebo', Arial, sans-serif;
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
         }
-        
-        .hero-section {
-            background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.7)), url('images/656338_db49c3fc2d104cb18118ce948c359d27~mv2_d_2400_1600_s_2.avif');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
+        .prose p {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-        
-        .hero-section h1 {
-            font-size: 3rem;
+        .prose h2 {
+            margin-top: 2rem;
             margin-bottom: 1rem;
         }
-        
-        .content-section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .mobile-menu-open {
+            display: flex !important;
         }
-        
-        .footer {
-            background: #0a3d62;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+        .header-content {
+            flex-grow: 1;
+            justify-content: flex-end;
         }
     </style>
-
-<style>
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
-    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
-    transition:box-shadow .22s,background-color .22s,padding .22s}
-  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
-  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
-  .logo .logo-mark{height:48px;transition:height .22s}
-  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
-  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
-  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
-  .has-mega{position:relative}
-  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
-    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
-    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
-  .has-mega.open>.mega-panel{display:block}
-  .site-header,.header-top,.header-main{overflow:visible}
-  #headerSentinel{height:1px}
-</style>
-
-
-<style>
-  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
-  .grid{display:grid;gap:20px;}
-  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
-  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
-  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
-  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
-</style>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header will be loaded by header-loader.js -->
-    <div id="header-root"></div>
-    
-    <main>
-        <section class="hero-section">
-            <h1>אודות המשרד - עמוד חדש</h1>
-            <p>משרד עורכי דין יניב גיל - מקצועיות, אמינות ומצוינות</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>הסיפור שלנו</h2>
-            <p>במשרד עורכי דין יניב גיל, אנו מאמינים שכל אדם זכאי לייצוג משפטי מקצועי ואמין. החזון שלנו הוא לספק פתרונות משפטיים יצירתיים ויעילים, תוך שמירה על האינטרסים של הלקוחות שלנו.</p>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                <img src="Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Logo" class="w-48 h-auto transition-all duration-300 ease-in-out" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+            </a>
             
-            <p>לעו"ד יניב גיל ניסיון של למעלה מ-15 שנה בתחומי המשפט השונים, כולל דיני משפחה, חדלות פירעון וסדר דין אזרחי. הניסיון הרב שלנו מאפשר לנו לספק פתרונות מותאמים אישית לכל מקרה.</p>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="about.html" class="hover:text-blue-600 transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="practice-areas.html" class="hover:text-blue-600 transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="articles.html" class="hover:text-blue-600 transition-colors duration-200">מאמרים</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition-colors duration-200">צור קשר</a></li>
+                    <li><a href="index.html#testimonials" class="hover:text-blue-600 transition-colors duration-200">ביקורות לקוחות</a></li>
+                </ul>
+            </nav>
+            
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-5 py-3 text-base font-medium text-white shadow-sm transition-all duration-300 hover:bg-blue-700" href="tel:036092414">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section for Contact Page -->
+        <section class="relative bg-gray-900 py-24 md:py-32 lg:py-48 text-white text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/1c3150/ffffff?text=Yaniv+Gil+Law+Office+Background');">
+            <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+            <div class="relative z-10 px-4 md:px-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">צור קשר</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">אנחנו כאן כדי לעזור לכם</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">שלח לנו הודעה</h2>
+                        <p class="text-lg text-gray-600 mb-8">נשמח לשמוע מכם ולספק ייעוץ ראשוני חינם.</p>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="sr-only">שם מלא</label>
+                                <input type="text" id="name" placeholder="שם מלא" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="sr-only">אימייל</label>
+                                <input type="email" id="email" placeholder="אימייל" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="phone" class="sr-only">טלפון</label>
+                                <input type="tel" id="phone" placeholder="טלפון" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="message" class="sr-only">הודעה</label>
+                                <textarea id="message" rows="4" placeholder="הודעה" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"></textarea>
+                            </div>
+                            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                                <button type="submit" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-300 hover:bg-blue-700">
+                                    שלח עכשיו
+                                </button>
+                                <a class="inline-flex items-center justify-center rounded-full border-2 border-blue-600 bg-transparent px-8 py-4 text-base font-semibold text-blue-600 shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white" href="tel:036092414">
+                                    התקשר ישירות
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info and Map -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">פרטי התקשרות</h3>
+                            <div class="space-y-4 text-gray-600">
+                                <p><strong>טלפון:</strong><br><a href="tel:03-609-2414" class="hover:text-blue-600">03-609-2414</a></p>
+                                <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-blue-600">054-8184581</a></p>
+                                <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-blue-600">yanivgil@gmail.com</a></p>
+                                <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">הכירו אותנו</h3>
+                            <iframe class="w-full h-80 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.1610427382023!2d34.796328315185996!3d32.07223008120619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d34ac79b8895b%3A0x6a2c24f67d4f9f6e!2sYaniv%20Gil%20Law%20Office%20and%20Notary!5e0!3m2!1sen!2sil!4v1628173456789!5m2!1sen!2sil" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <p>© 2024 משרד עורכי דין יניב גיל. כל הזכויות שמורות.</p>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">צור קשר</a></li>
+                        <li><a href="index.html#testimonials" class="hover:text-white transition-colors duration-200">ביקורות לקוחות</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <ul class="space-y-2">
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">דיני משפחה</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">חדלות פירעון</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">סדר דין אזרחי</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">הוצאה לפועל</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
+                    <div class="space-y-4">
+                        <p><strong>טלפון:</strong><br><a href="tel:03-609-2414" class="hover:text-white">03-609-2414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-white">054-8184581</a></p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-white">yanivgil@gmail.com</a></p>
+                        <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">מדיניות פרטיות</a>
+                    <a href="#" class="hover:text-white">תנאי שימוש</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const header=document.getElementById('siteHeader');
-  const s=document.getElementById('headerSentinel');
-  if(!header||!s){return}
-  if(!s.offsetHeight){s.style.height='1px'}
-  new IntersectionObserver(([e])=>{
-    header.classList.toggle('is-compact', !e.isIntersecting);
-  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
-});
-</script>
+    <script>
+        // Script for the shrinking header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-xl');
+                header.classList.remove('py-6', 'shadow-md');
+            } else {
+                header.classList.remove('py-3', 'shadow-xl');
+                header.classList.add('py-6', 'shadow-md');
+            }
+        });
 
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const yOffset = -96; // Adjust for fixed header height
+                    const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                    history.pushState(null, '', `#${targetId}`);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
