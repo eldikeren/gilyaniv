@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+  <script src="/js/console-silencer.js?v=2025-09-13c"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
@@ -14,94 +15,49 @@
   <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
   <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
 
+  <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+  <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+  <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
+
   <style>
-    body {
-      padding-top: 120px !important;
-      font-family: 'Heebo', Arial, sans-serif;
-    }
-    @media (max-width: 768px) {
-      body { padding-top: 100px !important; }
-    }
-    @media (max-width: 480px) {
-      body { padding-top: 90px !important; }
-    }
+    body { padding-top: 120px!important; font-family:'Heebo',Arial,sans-serif; }
+    @media(max-width:768px){ body{padding-top:100px!important} }
+    @media(max-width:480px){ body{padding-top:90px!important} }
 
     .section-header h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #0a3d62;
-      font-weight: 700;
+      text-align:center; font-size:2.5rem; margin-bottom:1rem; color:#0a3d62; font-weight:700;
     }
 
     .testimonials {
-      display: flex;
-      gap: 2rem;
-      overflow-x: auto;
-      padding: 1rem 0;
+      display:flex; gap:2rem; overflow-x:auto; padding:1rem 0;
     }
 
     .testimonial {
-      min-width: 280px;
-      background: #fff;
-      border: 1px solid #e6e7eb;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      min-width:280px; background:#fff; border:1px solid #e6e7eb; border-radius:12px;
+      padding:1.5rem; box-shadow:0 6px 16px rgba(0,0,0,0.08);
     }
 
     .testimonial .rating {
-      display: inline-block;
-      background: #0a3d62;
-      color: #fff;
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
+      display:inline-block; background:#0a3d62; color:#fff; padding:0.3rem 0.6rem;
+      border-radius:6px; margin-bottom:0.5rem; font-weight:bold;
     }
 
     .testimonial blockquote {
-      font-style: italic;
-      margin: 0 0 0.75rem 0;
+      font-style:italic; margin:0 0 0.75rem 0;
     }
 
     .testimonial figcaption {
-      font-size: 0.9rem;
-      color: #555;
+      font-size:0.9rem; color:#555;
     }
 
-    #testimonials-section { scroll-margin-top: 140px; }
-    @media (max-width: 768px) {
-      #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
-    }
-    @media (max-width: 480px) {
-      #revTitle { font-size: 1.8rem; scroll-margin-top: 100px; }
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 4000;
-      background: rgba(255,255,255,0.92);
-      -webkit-backdrop-filter: saturate(120%) blur(8px);
-      backdrop-filter: saturate(120%) blur(8px);
-    }
+    #testimonials-section, #revTitle { scroll-margin-top:140px; }
+    @media (max-width:768px){ #revTitle{font-size:2.2rem;scroll-margin-top:120px} }
+    @media (max-width:480px){ #revTitle{font-size:1.8rem;scroll-margin-top:100px} }
   </style>
 </head>
 
 <body>
-  <!-- ✅ Static Header Navigation -->
-  <header class="site-header">
-    <nav class="container">
-      <ul class="main-nav">
-        <li><a href="index.html#areasTitle">תחומי התמחות</a></li>
-        <li><a href="index.html#artTitle">מאמרים</a></li>
-        <li><a href="index.html#ctaTitle">צור קשר</a></li>
-        <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
-        <li><a href="about.html">אודות המשרד</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-root"></div>
 
   <main id="main">
     <!-- ===== HERO ===== -->
@@ -123,20 +79,20 @@
     <!-- ===== Practice Areas ===== -->
     <section class="section" aria-labelledby="areasTitle">
       <div class="container">
-        <header class="section-header">
+        <header id="siteHeader" class="site-header section-header">
           <h2 id="areasTitle">תחומי התמחות</h2>
+          <p>אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה</p>
         </header>
-        <!-- Practice area cards here -->
+        <div id="headerSentinel" aria-hidden="true"></div>
       </div>
     </section>
 
     <!-- ===== Articles ===== -->
     <section class="section" aria-labelledby="artTitle">
       <div class="container">
-        <header class="section-header">
+        <header id="siteHeader" class="site-header section-header">
           <h2 id="artTitle">מאמרים אחרונים</h2>
         </header>
-        <!-- Article cards here -->
       </div>
     </section>
 
@@ -144,15 +100,14 @@
     <section class="section" aria-labelledby="ctaTitle">
       <div class="container">
         <h2 id="ctaTitle">צור קשר עכשיו</h2>
-        <!-- Contact details here -->
       </div>
     </section>
 
-    <!-- ===== Testimonials (Fixed) ===== -->
-    <section id="testimonials-section" class="section" aria-labelledby="revTitle" style="padding: 60px 0; background-color: #f9f9f9;">
-      <div class="container">
-        <header class="section-header" style="text-align:center; margin-bottom:2rem;">
-          <h2 id="revTitle" style="font-size:2.5rem;color:#0a3d62;font-weight:700;">ביקורות לקוחות</h2>
+    <!-- ===== ✅ Testimonials Fixed ===== -->
+    <section id="testimonials-section" style="padding:60px 0; background-color:#f9f9f9;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+        <header class="section-header" style="text-align:center;margin-bottom:2rem;">
+          <h2 id="revTitle">ביקורות לקוחות</h2>
           <p>מה הלקוחות אומרים על השירות המקצועי שלנו</p>
         </header>
 
@@ -174,8 +129,9 @@
           </figure>
         </div>
 
-        <div style="margin-top:2rem; text-align:center;">
-          <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" class="btn primary">
+        <div style="margin-top:14px;text-align:center;">
+          <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener"
+            style="display:inline-block;background:#0a3d62;color:white;padding:0.75rem 1.5rem;text-decoration:none;border-radius:4px;font-weight:500;">
             לכל הביקורות
           </a>
         </div>
@@ -192,20 +148,37 @@
     </div>
   </footer>
 
-  <!-- Smooth Scrolling -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#testimonials-section') {
+        setTimeout(() => {
+          const t = document.getElementById('testimonials-section');
+          if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 140, behavior: 'smooth' });
+        }, 600);
+      }
       document.querySelectorAll('a[href$="#testimonials-section"]').forEach(link => {
         link.addEventListener('click', e => {
           e.preventDefault();
-          const section = document.getElementById('testimonials-section');
-          if (section) {
-            const y = section.getBoundingClientRect().top + window.scrollY - 140;
+          const t = document.getElementById('testimonials-section');
+          if (t) {
+            const y = t.getBoundingClientRect().top + window.scrollY - 140;
             window.scrollTo({ top: y, behavior: 'smooth' });
             history.pushState(null, '', '#testimonials-section');
           }
         });
       });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const header=document.getElementById('siteHeader');
+      const s=document.getElementById('headerSentinel');
+      if(!header||!s){return}
+      if(!s.offsetHeight){s.style.height='1px'}
+      new IntersectionObserver(([e])=>{
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
     });
   </script>
 </body>
