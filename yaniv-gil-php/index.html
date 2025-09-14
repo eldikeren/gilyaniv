@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
-    <!-- Cache bust: 20250108 -->
     <meta name="description" content="משרד עו״ד יניב גיל ושות' - מומחים בדיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל. ניסיון של למעלה מ-15 שנה.">
     <meta property="og:title" content="משרד עו״ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
     <meta property="og:description" content="ייעוץ וייצוג משפטי מקצועי עם ניסיון של למעלה מ-15 שנה. דיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל.">
@@ -19,108 +18,324 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Design tokens + base -->
-    <link rel="stylesheet" href="css/design-tokens.css?v=2">
-    <link rel="stylesheet" href="css/base.css?v=2">
-
-    <!-- Page scaffolding + responsive -->
-    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
-
-    <!-- Page-specific skins (home only) -->
-    <link rel="stylesheet" href="css/home-rtl.css?v=1">
-
-    <!-- Premium theme — load LAST so it overrides older CSS -->
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-12a">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-12a">
-    
-    <!-- Styles for the new header and shrinking effect -->
+    <!-- All styles are now in this file for reliability -->
     <style>
-      /* New header styles */
+      /* Base styles from original design */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Heebo', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        color: #333;
+        direction: rtl;
+        text-align: right;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .section {
+        padding: 4rem 0;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .btn.primary {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+      }
+      .btn.primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .btn:not(.primary) {
+        background-color: transparent;
+        color: #007bff;
+        border-color: #007bff;
+      }
+      .btn:not(.primary):hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Header and floating/shrinking effect */
       .site-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 1000;
-          background-color: #fff;
-          transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-          padding: 1.25rem 2rem;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+        transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       }
       .site-header.is-scrolled {
-          padding: 0.75rem 2rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0.75rem 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
       .header-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       .header-logo {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          text-decoration: none;
-          color: #333;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #333;
       }
       .header-logo-svg {
-          width: 30px;
-          height: 30px;
-          fill: #007bff; /* Adjust color to match brand */
+        width: 40px;
+        height: 40px;
       }
       .header-logo-text {
-          font-weight: 700;
-          font-size: 1.5rem;
-          color: #333;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #333;
       }
       .header-nav ul {
-          display: flex;
-          gap: 2rem;
-          list-style: none;
-          margin: 0;
-          padding: 0;
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
       }
       .header-nav a {
-          text-decoration: none;
-          color: #555;
-          font-weight: 500;
-          transition: color 0.2s ease-in-out;
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
       }
       .header-nav a:hover {
-          color: #007bff; /* Adjust hover color */
+        color: #007bff;
       }
       .header-actions {
-          display: flex;
-          gap: 1rem;
+        display: flex;
+        gap: 1rem;
       }
-
-      /* Add scroll padding for anchor links */
-      #revTitle,
-      section[id="revTitle"],
-      h2#revTitle {
-        scroll-margin-top: 140px;
-      }
-      
       /* Ensure main content is below the fixed header */
       main {
-        padding-top: 100px; /* Adjust this value to match header height */
+        padding-top: 100px;
+      }
+
+      /* Hero section styles */
+      .home-hero {
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .home-hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      .office-name-overlay {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      .home-hero .inner {
+        text-align: center;
+        z-index: 1;
+      }
+      .home-hero .title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .home-hero .lead {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+      .home-hero .actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
       }
       
+      /* Practice areas grid */
+      .practice-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .card-body {
+        padding: 1.5rem;
+      }
+      .card h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      .card a {
+        margin-top: 1rem;
+      }
+      
+      /* Articles grid */
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      /* CTA section */
+      .cta {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .cta h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .cta p {
+        margin: 0.5rem 0;
+      }
+      .cta .actions {
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 1rem;
+      }
+      
+      /* Testimonials section */
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .testimonial {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: right;
+      }
+      .testimonial .rating {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffc107;
+      }
+      .testimonial blockquote {
+        margin: 1rem 0;
+        font-style: italic;
+      }
+      .testimonial figcaption {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Footer */
+      .site-footer {
+        background-color: #333;
+        color: #fff;
+        padding: 4rem 0 2rem;
+      }
+      .footer-main {
+        padding-bottom: 2rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .footer-section h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-section a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-section a:hover {
+        color: #fff;
+      }
+      .contact-info p {
+        margin: 0.5rem 0;
+      }
+      .footer-bottom {
+        padding-top: 1rem;
+        border-top: 1px solid #555;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-legal a {
+        color: #ccc;
+        text-decoration: none;
+      }
     </style>
 </head>
 <body>
     
-    <!-- New Hardcoded Header with Logo -->
+    <!-- New Hardcoded Header with Correct Logo and Full Menu -->
     <header class="site-header" role="banner">
         <div class="header-container">
             <a href="index.html" class="header-logo">
-                <!-- Simple SVG logo - a circle as a placeholder for a more complex logo -->
+                <!-- SVG logo with shield and stars -->
                 <svg class="header-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="45" stroke="#007bff" stroke-width="5" fill="none"/>
-                  <path d="M50 20 L75 80 H25 Z" fill="#007bff"/>
+                  <path fill="#007bff" d="M50,95 L15,55 L15,15 L50,5 L85,15 L85,55 Z"/>
+                  <path fill="#fff" d="M50,15 L35,40 L65,40 L50,15 Z"/>
+                  <circle fill="#ffc107" cx="50" cy="50" r="10"/>
+                  <polygon fill="#ffc107" points="50,45 55,55 45,55"/>
+                  <polygon fill="#fff" points="50,30 40,65 60,65"/>
+                  <circle fill="#ffc107" cx="50" cy="70" r="5"/>
+                  <path fill="#ffc107" d="M25,25 L35,35 L25,45 L15,35 Z"/>
+                  <path fill="#ffc107" d="M75,25 L85,35 L75,45 L65,35 Z"/>
+                  <path fill="#ffc107" d="M50,20 L60,30 L50,40 L40,30 Z"/>
+                  <text x="50" y="70" font-family="Heebo" font-size="15" fill="#fff" text-anchor="middle" alignment-baseline="middle">עו"ד</text>
                 </svg>
                 <span class="header-logo-text">משרד עו״ד יניב גיל</span>
             </a>
@@ -138,10 +353,9 @@
         </div>
     </header>
 
-    <!-- ===== HOME HERO (video background; text unchanged) ===== -->
+    <!-- The rest of the page content is restored below -->
     <main id="main">
         <section class="home-hero" aria-label="פתיח">
-          <!-- Your current hero video; keep the same file path -->
           <video id="heroVideo" class="home-hero-video" autoplay muted loop playsinline preload="metadata">
             <source src="images/733896_Park Buildings Pov City_By_Thomas_Gellert_Artlist_HD.mp4" type="video/mp4">
           </video>
@@ -157,7 +371,6 @@
         </div>
     </section>
 
-        <!-- Practice areas (use your same labels/links) -->
         <section class="section" aria-labelledby="areasTitle">
         <div class="container">
             <header class="section-header">
@@ -166,7 +379,6 @@
             </header>
 
             <div class="practice-grid">
-              <!-- דיני משפחה -->
               <article class="card">
                 <div class="card-body">
                     <h3>דיני משפחה</h3>
@@ -174,8 +386,6 @@
                   <a class="btn" href="/#">קרא עוד</a>
                 </div>
               </article>
-
-              <!-- חדלות פירעון -->
               <article class="card">
                 <div class="card-body">
                   <h3>חדלות פירעון</h3>
@@ -183,8 +393,6 @@
                   <a class="btn" href="/#">קרא עוד</a>
                     </div>
               </article>
-
-              <!-- סדר דין אזרחי -->
               <article class="card">
                 <div class="card-body">
                     <h3>סדר דין אזרחי</h3>
@@ -192,8 +400,6 @@
                   <a class="btn" href="/#">קרא עוד</a>
                 </div>
               </article>
-
-              <!-- הוצאה לפועל -->
               <article class="card">
                 <div class="card-body">
                     <h3>הוצאה לפועל</h3>
@@ -205,8 +411,6 @@
         </div>
     </section>
 
-
-        <!-- Featured articles (3-up cards; use the same headlines/excerpts/links you show on the homepage) -->
         <section class="section" aria-labelledby="artTitle">
         <div class="container">
             <header class="section-header">
@@ -220,14 +424,12 @@
                     <p>ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
                 <a class="btn primary" href="https://www.psakdin.co.il" target="_blank" rel="noopener">קרא עוד</a>
               </div></article>
-
               <article class="card"><div class="card-body">
                 <p></p>
                 <h3>הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
                 <p>הסכם גירושין קבע שהבעל יעביר לאשתו את חלקו בנכס. אבל הרישום לא בוצע ובינתיים הוטלו על הבית עיקולים בגין חובות של הגרוש. מה החליט ביהמ״ש?</p>
                 <a class="btn primary" href="https://www.ynet.co.il" target="_blank" rel="noopener">קרא עוד</a>
               </div></article>
-
               <article class="card"><div class="card-body">
                     <h3>זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
                     <p>חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
@@ -241,7 +443,6 @@
         </div>
     </section>
 
-        <!-- Contact CTA (reuse your same contact details) -->
         <section class="section" aria-labelledby="ctaTitle">
         <div class="container">
             <div class="cta">
@@ -259,7 +460,6 @@
         </div>
             </section>
         
-        <!-- Testimonials (same text—styled on a sleek snap strip) -->
         <section class="section" aria-labelledby="revTitle">
           <div class="container">
             <header class="section-header">
@@ -293,7 +493,6 @@
     </section>
     </main>
         
-    <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="כותרת תחתונה">
         <div class="container">
         <div class="footer-main">
