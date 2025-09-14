@@ -44,12 +44,12 @@
           width: 100%;
           z-index: 1000;
           background-color: #fff;
-          transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-          padding: 1rem 2rem;
+          transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          padding: 1.25rem 2rem;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       }
       .site-header.is-scrolled {
-          padding: 0.5rem 2rem;
+          padding: 0.75rem 2rem;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
       .header-container {
@@ -60,10 +60,21 @@
           margin: 0 auto;
       }
       .header-logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          color: #333;
+      }
+      .header-logo-svg {
+          width: 30px;
+          height: 30px;
+          fill: #007bff; /* Adjust color to match brand */
+      }
+      .header-logo-text {
           font-weight: 700;
           font-size: 1.5rem;
           color: #333;
-          text-decoration: none;
       }
       .header-nav ul {
           display: flex;
@@ -76,6 +87,10 @@
           text-decoration: none;
           color: #555;
           font-weight: 500;
+          transition: color 0.2s ease-in-out;
+      }
+      .header-nav a:hover {
+          color: #007bff; /* Adjust hover color */
       }
       .header-actions {
           display: flex;
@@ -98,10 +113,17 @@
 </head>
 <body>
     
-    <!-- New Hardcoded Header -->
+    <!-- New Hardcoded Header with Logo -->
     <header class="site-header" role="banner">
         <div class="header-container">
-            <a href="index.html" class="header-logo">משרד עו״ד יניב גיל</a>
+            <a href="index.html" class="header-logo">
+                <!-- Simple SVG logo - a circle as a placeholder for a more complex logo -->
+                <svg class="header-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" stroke="#007bff" stroke-width="5" fill="none"/>
+                  <path d="M50 20 L75 80 H25 Z" fill="#007bff"/>
+                </svg>
+                <span class="header-logo-text">משרד עו״ד יניב גיל</span>
+            </a>
             <nav class="header-nav">
                 <ul>
                     <li><a href="/about.html">אודות המשרד</a></li>
@@ -361,10 +383,12 @@
         // Script for the shrinking header effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.site-header');
-            if (window.scrollY > 50) { // Shrink after 50px of scroll
-                header.classList.add('is-scrolled');
-            } else {
-                header.classList.remove('is-scrolled');
+            if (header) { // Ensure header element exists
+                if (window.scrollY > 50) { // Shrink after 50px of scroll
+                    header.classList.add('is-scrolled');
+                } else {
+                    header.classList.remove('is-scrolled');
+                }
             }
         });
     </script>
