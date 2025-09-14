@@ -130,6 +130,13 @@
   object-fit: contain;
 }
 
+.logo .logo-mark {
+  display: block;
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo .logo-main {
   display: block;
   height: 96px; /* 2x larger */
