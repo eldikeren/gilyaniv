@@ -933,15 +933,15 @@
 <script>
     function toggleContent(contentId) {
         const content = document.getElementById(contentId);
-        const button = event.target;
+        const button = content.parentElement.querySelector('button');
         
         if (content) {
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
-                button.textContent = 'סגור';
+                if (button) button.textContent = 'סגור';
             } else {
                 content.classList.add('hidden');
-                button.textContent = 'קרא עוד';
+                if (button) button.textContent = 'קרא עוד';
             }
         }
     }
