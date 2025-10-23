@@ -33,3 +33,22 @@ yarn-error.log*
 # Build directories
 /dist/
 /build/
+.vercel
+
+# Video optimization files (too large for git)
+ffmpeg/
+ffmpeg.zip
+videos/
+convert-videos.bat
+
+# Large video files (original uncompressed versions)
+images/dog.mp4
+images/contact.mp4
+images/artickels.mp4
+images/attorney.mp4
+images/index.mp4
+images/media.mp4
+images/*.mp4.old
+
+# Keep compressed versions for deployment
+# images/dog-compressed.mp4 (this will be tracked)

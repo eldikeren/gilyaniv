@@ -1,461 +1,1160 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
-    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תחומי התמחות - משרד עורכי דין יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
-
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="css/design-tokens.css?v=2">
-    <link rel="stylesheet" href="css/base.css?v=2">
-    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
-    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
-    <link rel="stylesheet" href="css/home-rtl.css?v=1">
-    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
-    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
-    
-    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
-    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
-    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
-    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
-
+    <title>תחומי התמחות - עו"ד יניב גיל</title>
+    <meta name="description" content="משרד עו״ד יניב גיל מתמחה במגוון רחב של תחומי משפט: דיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
     body {
-      padding-top: 120px !important;
-      font-family: 'Heebo', Arial, sans-serif;
-    }
-    @media (max-width: 768px) {
-      body { padding-top: 100px !important; }
-    }
-    @media (max-width: 480px) {
-      body { padding-top: 90px !important; }
-    }
-    
-    .section-header h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #0a3d62;
-      font-weight: 700;
-    }
-    
-    /* Card styling */
-    .card {
-      background: #fff;
-      border: 1px solid #e6e7eb;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-    }
-    
-    /* Footer styling */
-    .site-footer {
-      background: #0a3d62;
-      color: #fff;
-      padding: 3rem 0;
-      margin-top: 3rem;
-    }
-    
-    .site-footer .container {
-      width: 100%;
-      max-width: 1200px;
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+        
+        /* Header styles */
+        .site-header {
+            transition: all 0.3s ease-in-out;
+        }
+        .site-header.scrolled {
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .header-logo, .header-text-logo {
+            transition: all 0.3s ease-in-out;
+        }
+        .header-logo {
+            height: 60px;
+            width: auto;
+        }
+        .header-text-logo {
+            height: 50px;
+            width: auto;
+        }
+        .site-header.scrolled .header-logo {
+            height: 40px;
+            width: auto;
+        }
+        .site-header.scrolled .header-text-logo {
+            height: 30px;
+            width: auto;
+        }
+        
+        /* Hero section height */
+        .h-80vh {
+            height: 80vh;
+        }
+        
+        /* Scroll down arrow animation */
+        .scroll-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #c9a55c;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+        .scroll-arrow:hover {
+            color: #1a1a1a;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #c9a55c;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-links a:hover {
+            background: #c9a55c;
+            color: #1a1a1a;
+        }
+        
+        /* Practice Areas Accordion */
+        .practice-accordion {
+            max-width: 1000px;
       margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    
-    .site-footer ul {
+        }
+        .practice-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .practice-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            border-color: #c9a55c;
+        }
+        .practice-card.active {
+            border-color: #c9a55c;
+            box-shadow: 0 8px 30px rgba(201, 165, 92, 0.2);
+        }
+        .practice-header {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
       display: flex;
-      gap: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            transition: all 0.3s ease;
+        }
+        .practice-header:hover {
+            background: linear-gradient(135deg, #c9a55c 0%, #f4d03f 100%);
+            color: white;
+        }
+        .practice-header:hover .practice-title,
+        .practice-header:hover .practice-subtitle {
+            color: white;
+        }
+        .practice-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
       margin: 0;
-      padding: 0;
-      list-style: none;
-      justify-content: center;
-    }
-    
-    .site-footer a {
-      color: #fff;
+            transition: color 0.3s ease;
+        }
+        .practice-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0.25rem 0 0 0;
+            transition: color 0.3s ease;
+        }
+        .practice-toggle {
+            font-size: 1.5rem;
+            color: #c9a55c;
+            transition: all 0.3s ease;
+            transform: rotate(0deg);
+        }
+        .practice-card.active .practice-toggle {
+            transform: rotate(180deg);
+            color: #1a1a1a;
+        }
+        .practice-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            opacity: 0;
+        }
+        .practice-card.active .practice-content {
+            max-height: 1000px;
+            padding: 0 2rem 2rem 2rem;
+            opacity: 1;
+        }
+        .practice-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .practice-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .service-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-right: 4px solid #c9a55c;
+            transition: all 0.3s ease;
+        }
+        .service-item:hover {
+            background: #c9a55c;
+            color: white;
+            transform: translateX(-5px);
+        }
+        .service-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .service-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .practice-cta {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: #c9a55c;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
       text-decoration: none;
-    }
-    
-    .site-footer a:hover {
-      text-decoration: underline;
-    }
-    
-  .service-card { scroll-margin-top: 140px; }
-  @media (max-width: 768px) { .service-card { scroll-margin-top: 120px; } }
-  @media (max-width: 480px) { .service-card { scroll-margin-top: 100px; } }
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background: linear-gradient(135deg, #c9a55c 0%, #f4d03f 100%);
+            color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 165, 92, 0.3);
+        }
+        
+        /* Elegant Decorative Elements */
+        .elegant-pattern {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        /* Sophisticated Line Patterns */
+        .elegant-line-horizontal {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9a55c, transparent);
+            width: 200px;
+            top: 20%;
+            right: 10%;
+        }
+        .elegant-line-vertical {
+            width: 1px;
+            background: linear-gradient(180deg, transparent, #c9a55c, transparent);
+            height: 150px;
+            bottom: 30%;
+            left: 15%;
+        }
+        .elegant-line-diagonal {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(45deg, transparent, #c9a55c, transparent);
+            top: 40%;
+            left: 8%;
+            transform: rotate(45deg);
+        }
+        
+        /* Cross Pattern */
+        .elegant-cross {
+            width: 40px;
+            height: 40px;
+            top: 25%;
+            right: 20%;
+        }
+        .elegant-cross::before,
+        .elegant-cross::after {
+            content: '';
+            position: absolute;
+            background: #c9a55c;
+        }
+        .elegant-cross::before {
+            width: 40px;
+            height: 1px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .elegant-cross::after {
+            width: 1px;
+            height: 40px;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+        
+        /* Subtle Corner Accents */
+        .corner-accent {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0.12;
+        }
+        .corner-accent.top-right {
+            top: 15%;
+            right: 5%;
+            border-top: 1px solid #c9a55c;
+            border-right: 1px solid #c9a55c;
+        }
+        .corner-accent.bottom-left {
+            bottom: 20%;
+            left: 8%;
+            border-bottom: 1px solid #c9a55c;
+            border-left: 1px solid #c9a55c;
+        }
+        
+        /* Elegant Dots Pattern */
+        .elegant-dots {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #c9a55c;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .elegant-dots::before,
+        .elegant-dots::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #c9a55c;
+            border-radius: 50%;
+        }
+        .elegant-dots::before {
+            top: 0;
+            left: 20px;
+        }
+        .elegant-dots::after {
+            top: 0;
+            left: 40px;
+        }
+        
+        /* Section Backgrounds - Very Subtle */
+        .section-bg-pattern {
+            position: relative;
+        }
+        .section-bg-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(201, 165, 92, 0.01) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 0%, rgba(26, 26, 26, 0.005) 100%);
+            z-index: 1;
+        }
+        .section-bg-pattern > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Section Separator Lines */
+        .section-separator {
+            height: 2px;
+            width: 100%;
+            margin: 0;
+        }
+        .section-separator.black {
+            background: #1a1a1a;
+        }
+        .section-separator.gold {
+            background: #c9a55c;
+        }
+        
+        /* Practice Area Card Decorative Outlines */
+        .practice-card {
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #1a1a1a;
+            border-radius: 12px;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .practice-card::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid #c9a55c;
+            border-radius: 8px;
+            opacity: 0.4;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .practice-card:hover::before {
+            opacity: 0.6;
+        }
+        .practice-card:hover::after {
+            opacity: 0.7;
+        }
+        .practice-header {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 60vh;
+            }
+            .scroll-arrow {
+                bottom: 20px;
+            }
+            .practice-header {
+                padding: 1rem 1.5rem;
+            }
+            .practice-title {
+                font-size: 1.25rem;
+            }
+            .practice-content {
+                padding: 1rem 1.5rem 2rem 1.5rem;
+                max-height: none !important;
+                transition: opacity 0.3s ease, padding 0.3s ease;
+            }
+            .practice-card:not(.active) .practice-content {
+                display: none;
+            }
+            .practice-card.active .practice-content {
+                display: block;
+            }
+            .practice-description {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            .practice-services {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            .service-item {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+            .practice-cta {
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+            .cta-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+                display: block;
+            }
+            .elegant-pattern,
+            .corner-accent,
+            .elegant-dots {
+                display: none;
+            }
+        }
 </style>
-
-
-<style>
-  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
-  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
-    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
-    transition:box-shadow .22s,background-color .22s,padding .22s}
-  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
-  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
-  .logo .logo-mark{height:48px;transition:height .22s}
-  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
-  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
-  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
-  .has-mega{position:relative}
-  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
-    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
-    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
-  .has-mega.open>.mega-panel{display:block}
-  .site-header,.header-top,.header-main{overflow:visible}
-  #headerSentinel{height:1px}
-
-  .service-card { scroll-margin-top: 140px; }
-  @media (max-width: 768px) { .service-card { scroll-margin-top: 120px; } }
-  @media (max-width: 480px) { .service-card { scroll-margin-top: 100px; } }
-</style>
-
-
-<style>
-  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
-  .grid{display:grid;gap:20px;}
-  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
-  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
-  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
-  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
-
-  .service-card { scroll-margin-top: 140px; }
-  @media (max-width: 768px) { .service-card { scroll-margin-top: 120px; } }
-  @media (max-width: 480px) { .service-card { scroll-margin-top: 100px; } }
-</style>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Use header-loader.js to load the header -->
-    <div id="header-root"></div>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html">
+                    <img src="images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="index.html" class="hover:text-[#c9a55c] transition-colors duration-200">בית</a></li>
+                    <li><a href="index.html#about" class="hover:text-[#c9a55c] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="attorneys.html" class="hover:text-[#c9a55c] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="practice-areas.html" class="hover:text-[#c9a55c] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="articles.html" class="hover:text-[#c9a55c] transition-colors duration-200">מאמרים</a></li>
+                    <li><a href="media.html" class="hover:text-[#c9a55c] transition-colors duration-200">מדיה</a></li>
+                    <li><a href="contact.html" class="hover:text-[#c9a55c] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="index.html" class="mobile-menu-link">בית</a>
+                    <a href="index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="articles.html" class="mobile-menu-link">מאמרים</a>
+                    <a href="media.html" class="mobile-menu-link">מדיה</a>
+                    <a href="contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative h-80vh flex items-center justify-center text-white text-center">
+            <video autoplay muted loop playsinline preload="none" poster="videos/index-poster.jpg" class="absolute inset-0 w-full h-full object-cover">
+                <source src="videos/index-mobile.webm" type="video/webm" media="(max-width: 768px)">
+                <source src="videos/index.webm" type="video/webm">
+                <source src="videos/index-compressed.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+            <div class="relative z-10 p-6 md:p-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">תחומי התמחות</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">מומחיות משפטית מקיפה בתחומים השונים - ניסיון של למעלה מ-20 שנה בהליכים משפטיים מורכבים</p>
+            </div>
+            <!-- Scroll down arrow -->
+            <div class="scroll-arrow" onclick="scrollToNextSection()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+        </div>
+    </section>
+
+        <!-- Section Separator -->
+        <div class="section-separator black"></div>
+        <div class="section-separator gold"></div>
+        
+        <!-- Practice Areas Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-800">תחומי ההתמחות שלנו</h2>
+                    <p class="text-lg text-gray-600">לחץ על כל תחום התמחות לפרטים נוספים ושירותים מקצועיים</p>
+            </div>
+            
+                <div class="practice-accordion">
+                    <!-- דיני משפחה -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">דיני משפחה</h3>
+                                <p class="practice-subtitle">טיפול מקצועי ואמפתי בסכסוכים משפחתיים</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                דיני משפחה הם אחד התחומים הרגישים והמורכבים ביותר במשפט הישראלי. כאשר ימים סוערים וגורליים עומדים בפתח, ייעוץ משפטי מעורך דין מומחה ובעל ותק של 16 שנים בתחום דיני משפחה הינו חובה! עורך דין יניב גיל בקי בסוגיות המשפטיות בתחום מורכב ובעל חשיבות לעתידכם האישי ולעתיד ילדיכם.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">גירושין והסכמי גירושין</div>
+                                    <div class="service-description">ליווי מלא בתהליך הגירושין, הכנת הסכמי גירושין מקיפים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">מזונות ילדים ומזונות אישה</div>
+                                    <div class="service-description">ייצוג בתביעות מזונות, חישוב סכומים הוגנים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">משמורת ילדים וחלוקת זמני שהות</div>
+                                    <div class="service-description">הגנה על טובת הילד, הסדרי ראייה מיטביים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">חלוקת רכוש בין בני זוג</div>
+                                    <div class="service-description">איזון משאבים, חלוקה הוגנת של נכסים משותפים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הסכמי ממון</div>
+                                    <div class="service-description">הכנת הסכמי ממון מקיפים, הגנה על זכויות כלכליות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">אימוץ ילדים</div>
+                                    <div class="service-description">ליווי בהליכי אימוץ, ייצוג בפני בתי משפט</div>
+                                </div>
+                            </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                            </div>
+                        </div>
+                </div>
+                
+                    <!-- חדלות פירעון -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">חדלות פירעון</h3>
+                                <p class="practice-subtitle">ייעוץ וליווי מקיף בהליכי פשיטת רגל</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                משרד עורך דין יניב גיל הינו משרד ותיק ומנוסה בתחום הטיפול והביצוע של פשיטות רגל. ליווי אישי ומקצועי החל מראשית דרכו של התהליך ועד למציאת הפתרון היעיל ביותר לטובת הלקוח, תוך ראיה רחבה ובדיקת כל האפשרויות לביצוע התהליך עם דגש לכל ההיבטים הסובבים את החייב ומשפחתו.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">הכנת בקשות לפשיטת רגל</div>
+                                    <div class="service-description">הכנה מקצועית של כל המסמכים הנדרשים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הכנת בקשות לצו כינוס</div>
+                                    <div class="service-description">הגנה מיידית מפני נושים ועיקולים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הגנה מפני עיקולים</div>
+                                    <div class="service-description">עיכוב הליכי הוצאה לפועל עד לקבלת צו כינוס</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הסדר נושים</div>
+                                    <div class="service-description">ניהול משא ומתן עם נושים, הסדרי תשלום</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">קבלת הפטר</div>
+                                    <div class="service-description">זירוז הליכים לקבלת הפטר ומחיקת חובות</div>
+                </div>
+                                <div class="service-item">
+                                    <div class="service-title">השבת רישיון נהיגה</div>
+                                    <div class="service-description">הליכים להשבת רישיון נהיגה שנשלל</div>
+                </div>
+                </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                </div>
+                </div>
+                    </div>
+                    
+                    <!-- סדר דין אזרחי -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">סדר דין אזרחי</h3>
+                                <p class="practice-subtitle">ייצוג מקיף בהליכים אזרחיים בבתי המשפט</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                לעו"ד גיל ניסיון עשיר ומוכח של מעל 17 שנים בניהול תיקי ליטיגציה עבור לקוחותיו בכל הערכאות המשפטיות ובתי המשפט בארץ. טקטיקת ניהול המשפט לרבות אופן ניהול החקירות הנגדיות וכו' חשובה ביותר ופעמים רבות תביעות נופלות וקמות על סדר הדין האזרחי.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">תביעות נזיקין</div>
+                                    <div class="service-description">ייצוג בתביעות נזיקין, תאונות דרכים, רשלנות רפואית</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">תביעות חוזיות</div>
+                                    <div class="service-description">הגנה על זכויות חוזיות, אכיפת הסכמים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">תביעות כספיות</div>
+                                    <div class="service-description">ייצוג בתביעות כספיות, חובות, החזר כספים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">בוררות וגישור</div>
+                                    <div class="service-description">ייצוג בהליכי בוררות וגישור, פתרון סכסוכים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ערעורים אזרחיים</div>
+                                    <div class="service-description">הגשת ערעורים, ייצוג בערכאות עליונות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייצוג בבתי משפט</div>
+                                    <div class="service-description">ייצוג מקצועי בבתי משפט השלום והמחוזי</div>
+                                </div>
+                            </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                            </div>
+                        </div>
+                </div>
+                
+                    <!-- הוצאה לפועל -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">הוצאה לפועל</h3>
+                                <p class="practice-subtitle">ליווי מקצועי בהליכי הוצאה לפועל</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                משרד עורך דין גיל מספק את שירותיו הן עבור חייבים והן עבור תובעים וזוכים. למשרד התמחות מיוחדת בייצוג חייבים בכל הליכי הוצאה לפועל, מציאת פתרונות להסדרת וסגירת חובות, הגנה מפני פינוי דירה, טיפול בהליך פשיטת רגל, טיפול בעיקולי בנקים, עיקולי רכב, עיקולי משכורת, איחוד תיקים, חקירת יכולת, חייב מוגבל באמצעים.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">הגנה מפני עיקולים</div>
+                                    <div class="service-description">הגנה מפני עיקולי בנקים, רכב ומשכורת</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הסדרת חובות</div>
+                                    <div class="service-description">מציאת פתרונות להסדרת וסגירת חובות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">משא ומתן עם נושים</div>
+                                    <div class="service-description">ניהול משא ומתן והסדרים מול זוכים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">בקשות לפטור מעיקול</div>
+                                    <div class="service-description">הגשת בקשות שונות לביטול עיקולים והגבלות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">איחוד תיקים</div>
+                                    <div class="service-description">איחוד תיקים וניהולם במערכת ההוצאה לפועל</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">חקירת יכולת</div>
+                                    <div class="service-description">ייצוג בחקירות יכולת, חייב מוגבל באמצעים</div>
+                                </div>
+                            </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                </div>
+            </div>
+                </div>
+                
+                    <!-- מקרקעין -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">מקרקעין</h3>
+                                <p class="practice-subtitle">ייעוץ וייצוג מקיף בתחום המקרקעין והנדל"ן</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                משרד עו"ד יניב גיל ושות' מעניק גישה משולבת לייעוץ בכל התחומים וכל סוגי הנדל"ן עם גישה מעשית והבנה של נושאים עסקיים. למשרדנו התמחות ייחודית בתחום המקרקעין והנדל"ן, הכוללת ידע נרחב, הבנה ומיומנות בטיפול במגוון רחב ביותר של נושאים מתחום המקרקעין ומתחומים קשורים.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">עסקאות מקרקעין</div>
+                                    <div class="service-description">עריכת הסכמי מכירת/רכישת דירות ומגרשים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">מיסוי מקרקעין</div>
+                                    <div class="service-description">ייעוץ במס שבח, מס מכירה, מס רכישה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">תכנון ובנייה</div>
+                                    <div class="service-description">ייצוג בפני ועדות תכנון, התנגדויות לתוכניות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">פיצויים בגין הפקעות</div>
+                                    <div class="service-description">ייצוג בפיצויים בגין הפקעות וירידת ערך</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">בתים משותפים</div>
+                                    <div class="service-description">הסכמי שיתוף/פירוק שיתוף, איחוד וחלוקת מקרקעין</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">אכיפת זכויות רוכשי דירות</div>
+                                    <div class="service-description">חוק מכר דירות, ליקויי בנייה, תביעות פינוי</div>
+                                </div>
+                            </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                </div>
+            </div>
+                    </div>
+                    
+                    <!-- משפט מסחרי -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">משפט מסחרי</h3>
+                                <p class="practice-subtitle">ייעוץ וייצוג לחברות ועסקים</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                ייעוץ וייצוג מקיף לחברות ועסקים בתחומי המשפט המסחרי. אנו מספקים שירותים מקצועיים לחברות קטנות ובינוניות, יזמים ועסקים פרטיים, תוך הבנת הצרכים העסקיים והמשפטיים הייחודיים של כל לקוח.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">דיני חברות</div>
+                                    <div class="service-description">הקמת חברות, ניהול חברות, הליכי פירוק</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הסכמים מסחריים</div>
+                                    <div class="service-description">עריכת הסכמים מסחריים, הסכמי שותפות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">סכסוכים עסקיים</div>
+                                    <div class="service-description">פתרון סכסוכים עסקיים, ייצוג בהליכים משפטיים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הגנה על קניין רוחני</div>
+                                    <div class="service-description">הגנה על פטנטים, סימני מסחר, זכויות יוצרים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייצוג חברות</div>
+                                    <div class="service-description">ייצוג חברות בהליכים משפטיים, ייעוץ משפטי</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הליכי פירוק חברות</div>
+                                    <div class="service-description">ליווי בהליכי פירוק חברות, חלוקת נכסים</div>
+                                </div>
+                    </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                </div>
+            </div>
+        </div>
+                
+                    <!-- דיני עבודה -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">דיני עבודה</h3>
+                                <p class="practice-subtitle">ייעוץ וייצוג מקיף בתחום דיני העבודה</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                ייעוץ וייצוג מקיף בתחום דיני העבודה, כולל ייצוג עובדים ומעבידים בהליכים משפטיים שונים. אנו מספקים שירותים מקצועיים הן לעובדים והן למעבידים, תוך הבנת הצרכים הייחודיים של כל צד.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">פיטורין לא מוצדקים</div>
+                                    <div class="service-description">ייצוג עובדים בפיטורין לא מוצדקים, תביעות פיצויים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">תביעות שכר וזכויות עובדים</div>
+                                    <div class="service-description">ייצוג בתביעות שכר, שעות נוספות, זכויות עובדים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הסכמי עבודה</div>
+                                    <div class="service-description">עריכת הסכמי עבודה, חוזי העסקה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייצוג בהליכי עבודה</div>
+                                    <div class="service-description">ייצוג בבתי דין לעבודה, הליכי בוררות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הגנה על זכויות עובדים</div>
+                                    <div class="service-description">הגנה על זכויות עובדים, מניעת אפליה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייעוץ למעבידים</div>
+                                    <div class="service-description">ייעוץ משפטי למעבידים, ניהול משאבי אנוש</div>
+            </div>
+                </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                </div>
+            </div>
+        </div>
+
+                    <!-- דיני ירושה -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                        <div>
+                                <h3 class="practice-title">דיני ירושה</h3>
+                                <p class="practice-subtitle">ייעוץ וייצוג בהליכי ירושה וצוואות</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                ייעוץ וייצוג מקיף בתחום דיני ירושה, כולל עריכת צוואות, הליכי ירושה, חלוקת עזבונות וניהול נכסי נפטרים. אנו מספקים שירותים מקצועיים ורגישים בתקופות קשות של אובדן.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">עריכת צוואות</div>
+                                    <div class="service-description">עריכת צוואות מקיפות, צוואות הדדיות</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">הליכי ירושה</div>
+                                    <div class="service-description">הגשת בקשות לצו ירושה, ניהול הליכי ירושה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">חלוקת עזבונות</div>
+                                    <div class="service-description">חלוקת נכסי נפטרים, ניהול עזבונות</div>
+            </div>
+                                <div class="service-item">
+                                    <div class="service-title">התנגדויות לצוואות</div>
+                                    <div class="service-description">הגשת התנגדויות לצוואות, ביטול צוואות</div>
+                        </div>
+                                <div class="service-item">
+                                    <div class="service-title">מינוי אפוטרופוס</div>
+                                    <div class="service-description">הליכי מינוי אפוטרופוס, ניהול נכסי חסויים</div>
+                    </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייעוץ משפחתי</div>
+                                    <div class="service-description">ייעוץ למשפחות בתהליכי ירושה וצוואות</div>
+                        </div>
+                    </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                        </div>
+                    </div>
+                </div>
+                
+                    <!-- דיני חוזים -->
+                    <div class="practice-card">
+                        <div class="practice-header" onclick="togglePracticeCard(this)">
+                            <div>
+                                <h3 class="practice-title">דיני חוזים</h3>
+                                <p class="practice-subtitle">ייעוץ וייצוג בתחום דיני החוזים</p>
+                            </div>
+                            <span class="practice-toggle">▼</span>
+                        </div>
+                        <div class="practice-content">
+                            <p class="practice-description">
+                                ייעוץ וייצוג מקיף בתחום דיני החוזים, כולל עריכת חוזים, אכיפת חוזים, ביטול חוזים ופתרון סכסוכים חוזיים. אנו מספקים שירותים מקצועיים הן לעסקים והן ליחידים.
+                            </p>
+                            <div class="practice-services">
+                                <div class="service-item">
+                                    <div class="service-title">עריכת חוזים</div>
+                                    <div class="service-description">עריכת חוזים מסחריים, חוזי שירות, חוזי עבודה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">אכיפת חוזים</div>
+                                    <div class="service-description">ייצוג באכיפת חוזים, תביעות הפרת חוזה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ביטול חוזים</div>
+                                    <div class="service-description">הגשת תביעות לביטול חוזים, הפרת חוזה</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">פתרון סכסוכים חוזיים</div>
+                                    <div class="service-description">גישור ופישור בסכסוכים חוזיים</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-title">ייעוץ חוזי</div>
+                                    <div class="service-description">ייעוץ משפטי בעריכת חוזים וניהול חוזים</div>
+                        </div>
+                                <div class="service-item">
+                                    <div class="service-title">תביעות נזיקין חוזיות</div>
+                                    <div class="service-description">ייצוג בתביעות נזיקין הנובעות מהפרת חוזה</div>
+                        </div>
+                        </div>
+                            <div class="practice-cta">
+                                <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <!-- Skip link for accessibility -->
-    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
-
-    <main id="main">
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">תחומי התמחות</h1>
-                <p class="page-subtitle">מומחיות משפטית מקיפה בתחומים השונים - ניסיון של למעלה מ-15 שנה בהליכים משפטיים מורכבים</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Practice Areas Grid -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">תחומי ההתמחות שלנו</h2>
-                <p class="section-subtitle">אנו מתמחים במגוון רחב של תחומי משפט, תוך מתן שירות מקצועי ואישי לכל לקוח</p>
-            </div>
-            
-            <div class="services-grid">
-                    <div class="service-card" id="family">
-                        <div class="service-icon"></div>
-                    <h3>דיני משפחה</h3>
-                    <p>טיפול מקצועי ואמפתי בכל סוגי הסכסוכים המשפחתיים, גירושין, מזונות, משמורת ילדים והסכמי ממון.</p>
-                    <ul class="service-list">
-                        <li>גירושין והסכמי גירושין</li>
-                        <li>מזונות ילדים ומזונות אישה</li>
-                        <li>משמורת ילדים וחלוקת זמני שהות</li>
-                        <li>חלוקת רכוש בין בני זוג</li>
-                        <li>הסכמי ממון</li>
-                        <li>אימוץ ילדים</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-                
-                    <div class="service-card" id="bankruptcy">
-                        <div class="service-icon"></div>
-                    <h3>חדלות פירעון</h3>
-                    <p>ייעוץ מקיף בתחום חדלות הפירעון והפשיטת הרגל. אנו מסייעים לחייבים ולנושים בהליכי חדלות פירעון, תוך הבנת המורכבות הכלכלית והמשפטית של התהליך.</p>
-                    <ul class="service-list">
-                        <li>בקשות לחדלות פירעון</li>
-                        <li>הליכי פשיטת רגל</li>
-                        <li>תכנון פיננסי והסדרת חובות</li>
-                        <li>ייצוג נושים בהליכי חדלות פירעון</li>
-                        <li>הסכמי הסדר חוב</li>
-                        <li>הגנה מפני עיקולים</li>
-                        <li>ייעוץ לחברות במצוקה כלכלית</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-                
-                    <div class="service-card" id="civil">
-                        <div class="service-icon"></div>
-                    <h3>סדר דין אזרחי</h3>
-                    <p>ייצוג מקיף בהליכים אזרחיים בבתי המשפט השונים. אנו מספקים ייעוץ מקצועי וייצוג משפטי יעיל בתביעות אזרחיות מורכבות.</p>
-                    <ul class="service-list">
-                        <li>תביעות נזיקין</li>
-                        <li>תביעות חוזיות</li>
-                        <li>תביעות כספיות</li>
-                        <li>הליכי הוצאה לפועל</li>
-                        <li>ערעורים אזרחיים</li>
-                        <li>בוררות וגישור</li>
-                        <li>ייצוג בבתי משפט השלום והמחוזי</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-                
-                    <div class="service-card" id="enforcement">
-                        <div class="service-icon"></div>
-                        <h3>הוצאה לפועל</h3>
-                        <p>ליווי מקצועי בהליכי הוצאה לפועל, הגנה על זכויות החייב וניהול משא ומתן עם נושים. אנו מספקים ייעוץ מקיף ומייצגים לקוחות בהליכים מורכבים.</p>
-                        <ul class="service-list">
-                            <li>הגנה מפני עיקולים</li>
-                            <li>הסדרת חובות</li>
-                            <li>משא ומתן עם נושים</li>
-                            <li>בקשות לפטור מעיקול</li>
-                            <li>ייצוג בהליכי הוצאה לפועל</li>
-                            <li>ייעוץ לחייבים</li>
-                            <li>הגנה על נכסים</li>
-                        </ul>
-                        <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                    </div>
-                    
-                    <div class="service-card" id="real-estate">
-                        <div class="service-icon"></div>
-                    <h3>מקרקעין</h3>
-                    <p>ייעוץ וייצוג מקיף בתחום המקרקעין, כולל עסקאות מקרקעין, התנגדויות לתוכניות בנייה, דיני שכירות ועוד.</p>
-                    <ul class="service-list">
-                        <li>עסקאות מקרקעין</li>
-                        <li>התנגדויות לתוכניות בנייה</li>
-                        <li>דיני שכירות</li>
-                        <li>הסכמי שכירות מסחרית</li>
-                        <li>פיצויים בגין הפקעת קרקעות</li>
-                        <li>התנגדויות להיתרי בנייה</li>
-                        <li>ייצוג בפני ועדות התכנון</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-                
-                    <div class="service-card" id="commercial">
-                        <div class="service-icon"></div>
-                    <h3>משפט מסחרי</h3>
-                    <p>ייעוץ וייצוג לחברות ועסקים בתחומי המשפט המסחרי, כולל דיני חברות, הסכמים מסחריים ופתרון סכסוכים עסקיים.</p>
-                    <ul class="service-list">
-                        <li>דיני חברות</li>
-                        <li>הסכמים מסחריים</li>
-                        <li>סכסוכים עסקיים</li>
-                        <li>הגנה על קניין רוחני</li>
-                        <li>ייצוג חברות בהליכים משפטיים</li>
-                        <li>ייעוץ משפטי לעסקים</li>
-                        <li>הליכי פירוק חברות</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-                
-                    <div class="service-card" id="labor">
-                        <div class="service-icon"></div>
-                    <h3>דיני עבודה</h3>
-                    <p>ייעוץ וייצוג מקיף בתחום דיני העבודה, כולל ייצוג עובדים ומעבידים בהליכים משפטיים שונים.</p>
-                    <ul class="service-list">
-                        <li>פיטורין לא מוצדקים</li>
-                        <li>תביעות שכר וזכויות עובדים</li>
-                        <li>הסכמי עבודה</li>
-                        <li>ייצוג בהליכי עבודה</li>
-                        <li>ייעוץ למעבידים</li>
-                        <li>הגנה על זכויות עובדים</li>
-                        <li>הליכי בוררות עבודה</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                    </div>
-                    
-                    <div class="service-card" id="inheritance">
-                        <div class="service-icon"></div>
-                        <h3>דיני ירושה</h3>
-                        <p>ייעוץ וייצוג מקיף בתחום דיני הירושה, כולל צוואות, עיזבונות, התנגדויות לצוואות וניהול עיזבונות.</p>
-                        <ul class="service-list">
-                            <li>עריכת צוואות</li>
-                            <li>התנגדויות לצוואות</li>
-                            <li>ניהול עיזבונות</li>
-                            <li>חלוקת ירושות</li>
-                            <li>ייצוג יורשים</li>
-                            <li>ייעוץ משפטי בענייני ירושה</li>
-                            <li>הליכים בבתי משפט לענייני משפחה</li>
-                        </ul>
-                        <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                    </div>
-                    
-                    <div class="service-card" id="contracts">
-                        <div class="service-icon"></div>
-                        <h3>דיני חוזים</h3>
-                        <p>ייעוץ וייצוג מקיף בתחום דיני החוזים, כולל עריכת חוזים, ביטול חוזים ופתרון סכסוכים חוזיים.</p>
-                        <ul class="service-list">
-                            <li>עריכת חוזים</li>
-                            <li>ביטול חוזים</li>
-                            <li>פתרון סכסוכים חוזיים</li>
-                            <li>ייצוג בהליכי חוזים</li>
-                            <li>ייעוץ משפטי לחוזים</li>
-                            <li>הגנה על זכויות חוזיות</li>
-                            <li>פיצויים בגין הפרת חוזים</li>
-                    </ul>
-                    <a href="contact.html" class="service-btn">התייעץ עכשיו</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">למה לבחור בנו?</h2>
-                <p class="section-subtitle">היתרונות המקצועיים שלנו בשירות המשפטי</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>ניסיון מוכח</h3>
-                    <p>למשרדנו ניסיון של למעלה מ-15 שנה בתחומי המשפט השונים. הניסיון הרב שלנו מאפשר לנו לספק פתרונות יצירתיים ויעילים לבעיות משפטיות מורכבות.</p>
-                    
-                    <h3>גישה אישית</h3>
-                    <p>אנו מאמינים בגישה אישית וחמה לכל לקוח. כל מקרה מטופל באופן ייחודי, תוך הבנת הצרכים המיוחדים של כל לקוח ומשפחתו.</p>
-                    
-                    <h3>מקצועיות ואמינות</h3>
-                    <p>אנו מתחייבים למקצועיות הגבוהה ביותר ולאמינות מלאה בכל התהליכים. הצוות שלנו זמין תמיד לענות על שאלות ולספק תמיכה לאורך כל התהליך המשפטי.</p>
-                    
-                    <h3>תוצאות מוכחות</h3>
-                    <p>למשרדנו היסטוריה של הצלחות ופתרונות יצירתיים לבעיות מורכבות. אנו גאים בתוצאות שהשגנו עבור לקוחותינו לאורך השנים.</p>
-                </div>
-                
-                <div class="about-image">
-                        <img src="images/656338_db49c3fc2d104cb18118ce948c359d27~mv2_d_2400_1600_s_2.avif" alt="משרד עו״ד יניב גיל" class="about-img" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">צריכים ייעוץ משפטי?</h2>
-                <p class="section-subtitle">התקשרו עכשיו לייעוץ ראשוני חינם עם עורך דין מנוסה</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>צור קשר עכשיו</h3>
-                    <div class="contact-item">
-                            <i></i>
-                        <div>
-                            <h4>טלפון</h4>
-                            <p><a href="tel:03-609-2414">03-609-2414</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                            <i></i>
-                        <div>
-                            <h4>אימייל</h4>
-                            <p><a href="mailto:yanivgil@gmail.com">yanivgil@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                            <i></i>
-                        <div>
-                            <h4>כתובת</h4>
-                            <p>מגדל "WE-TLV" דרך מנחם בגין 150 (קומה 7) תל-אביב</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>שלחו לנו הודעה</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">שם מלא</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">טלפון</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">אימייל</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">נושא</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">בחרו נושא</option>
-                                <option value="family">דיני משפחה</option>
-                                <option value="bankruptcy">חדלות פירעון</option>
-                                <option value="civil">סדר דין אזרחי</option>
-                                    <option value="enforcement">הוצאה לפועל</option>
-                                <option value="real-estate">מקרקעין</option>
-                                <option value="commercial">משפט מסחרי</option>
-                                <option value="labor">דיני עבודה</option>
-                                    <option value="inheritance">דיני ירושה</option>
-                                    <option value="contracts">דיני חוזים</option>
-                                <option value="other">אחר</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">תיאור הבעיה</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">שלח הודעה</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Section Separator -->
+        <div class="section-separator black"></div>
+        <div class="section-separator gold"></div>
     
+        <!-- CTA Section -->
+        <section class="bg-[#1a1a1a] text-white py-16 text-center relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">צריכים ייעוץ משפטי?</h2>
+                <p class="text-lg max-w-2xl mx-auto mb-8 font-light">התקשרו עכשיו לייעוץ ראשוני חינם עם עורך דין מנוסה</p>
+                <a class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-transparent px-8 py-4 text-base font-semibold text-[#c9a55c] transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="contact.html">
+                    צור קשר עכשיו
+                </a>
+            </div>
+        </section>
+        
+        <!-- Section Separator -->
+        <div class="section-separator black"></div>
+        <div class="section-separator gold"></div>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="site-footer">
-        <div class="container">
-            <ul>
-                <li><a href="about.html">אודות המשרד</a></li>
-                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition-colors duration-200">בית</a></li>
+                        <li><a href="index.html#about" class="hover:text-white transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" class="hover:text-white transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" class="hover:text-white transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="media.html" class="hover:text-white transition-colors duration-200">מדיה</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <ul class="space-y-2">
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">דיני משפחה</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">חדלות פירעון</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">סדר דין אזרחי</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">הוצאה לפועל</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">מקרקעין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">משפט מסחרי</a></li>
             </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
+                    <div class="space-y-4">
+                        <p><strong>טלפון:</strong><br><a href="tel:03-609-2414" class="hover:text-white">03-609-2414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-white">054-8184581</a></p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-white">yanivgil@gmail.com</a></p>
+                        <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">שעות פעילות</h3>
+                    <div class="space-y-2">
+                        <p>ראשון - חמישי: 9:00 - 18:00</p>
+                        <p>שישי: 9:00 - 13:00</p>
+                        <p>שבת: סגור</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                <p>האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" class="hover:text-white transition-colors duration-200">Eladdigital</a></p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-white">מדיניות פרטיות</a>
+                    <a href="terms-of-use.html" class="hover:text-white">תנאי שימוש</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add active class to current page in navigation
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('nav a');
+        // Header shrinking effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to next section function
+        function scrollToNextSection() {
+            const mainContent = document.querySelector('main');
+            if (mainContent) {
+                const yOffset = -96; // Adjust for fixed header height
+                const y = mainContent.getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+
+        // Practice areas accordion functionality
+        function togglePracticeCard(header) {
+            const card = header.parentElement;
+            const isActive = card.classList.contains('active');
             
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
+            // Close all other cards
+            document.querySelectorAll('.practice-card').forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('active');
                 }
             });
+            
+            // Toggle current card
+            if (isActive) {
+                card.classList.remove('active');
+            } else {
+                card.classList.add('active');
+            }
+        }
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+            });
         });
-    </script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const header=document.getElementById('siteHeader');
-  const s=document.getElementById('headerSentinel');
-  if(!header||!s){return}
-  if(!s.offsetHeight){s.style.height='1px'}
-  new IntersectionObserver(([e])=>{
-    header.classList.toggle('is-compact', !e.isIntersecting);
-  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
+            
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+            
 });
 </script>
-
 </body>
 </html>
