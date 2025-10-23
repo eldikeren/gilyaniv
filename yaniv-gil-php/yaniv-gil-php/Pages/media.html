@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תקשורת - משרד עו"ד יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/design-tokens.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
+    
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
+
+    <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
+    }
+    
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
+    
+    /* Card styling */
+    .card {
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    
+    /* Footer styling */
+    .site-footer {
+      background: #0a3d62;
+      color: #fff;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+    
+    .site-footer .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .site-footer ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
+
+<style>
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
+    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
+    transition:box-shadow .22s,background-color .22s,padding .22s}
+  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
+  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
+  .logo .logo-mark{height:48px;transition:height .22s}
+  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
+  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
+  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
+  .has-mega{position:relative}
+  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
+    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
+    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
+  .has-mega.open>.mega-panel{display:block}
+  .site-header,.header-top,.header-main{overflow:visible}
+  #headerSentinel{height:1px}
+</style>
+
+
+<style>
+  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
+  .grid{display:grid;gap:20px;}
+  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
+  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
+</style>
+
+</head>
+<body>
+    <!-- Use header-loader.js to load the header -->
+    <div id="header-root"></div>
+    
+    <!-- Skip link for accessibility -->
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+    <main id="main">
+
+    <div id="header-root"></div>
+    <!-- Header injected by header-loader.js into #header-root -->
+
+    <!-- ===== HERO ===== -->
+    <section class="media-hero">
+        <div class="container">
+            <div class="section-header">
+                <h1>הופעות בתקשורת</h1>
+                <p>עו"ד יניב גיל בתקשורת הישראלית - מומחיות משפטית מוכרת ומוערכת</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="articles-wrap">
+        <div class="container">
+
+            <!-- Toolbar -->
+            <div class="articles-toolbar">
+                <div role="toolbar" aria-label="סינון לפי סוג">
+                    <!-- Single-select filter buttons -->
+                    <button class="filter-btn is-active" data-filter="all" aria-pressed="true">הכל</button>
+                    <button class="filter-btn" data-filter="טלוויזיה" aria-pressed="false">טלוויזיה</button>
+                    <button class="filter-btn" data-filter="רדיו" aria-pressed="false">רדיו</button>
+                    <button class="filter-btn" data-filter="עיתונות" aria-pressed="false">עיתונות</button>
+                    <button class="filter-btn" data-filter="דיגיטל" aria-pressed="false">דיגיטל</button>
+            </div>
+            
+                <div class="sort-wrap">
+                    <label for="sortMedia">מיון:</label>
+                    <select id="sortMedia">
+                        <option value="newest">הכי חדשים</option>
+                        <option value="oldest">הכי ישנים</option>
+                        <option value="az">כותרת א–ת</option>
+                        <option value="za">כותרת ת–א</option>
+                    </select>
+                    </div>
+                </div>
+
+            <!-- Grid -->
+            <div id="mediaGrid">
+                <!-- Media Item 1 -->
+                <article class="card media-card" data-type="טלוויזיה" data-date="2024-03-15">
+                    <div class="card-body">
+                        <p class="meta">טלוויזיה · 2024</p>
+                        <h3 class="title">ערוץ 12 - חדשות</h3>
+                        <p class="excerpt">ראיון עם עו"ד יניב גיל בנושא חדלות פירעון והשינויים בחוק. עו"ד גיל הסביר על ההשלכות של השינויים החדשים על חייבים ונושים.</p>
+                        <p class="meta">תאריך: 15 במרץ 2024 · נושא: חדלות פירעון · משך: 8 דקות</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">לצפייה</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Media Item 2 -->
+                <article class="card media-card" data-type="רדיו" data-date="2024-02-08">
+                    <div class="card-body">
+                        <p class="meta">רדיו · 2024</p>
+                        <h3 class="title">רדיו תל אביב</h3>
+                        <p class="excerpt">ראיון ברדיו תל אביב בנושא דיני משפחה וזכויות הורים. עו"ד גיל דיבר על השינויים בחוק המשמורת והשפעתם על משפחות.</p>
+                        <p class="meta">תאריך: 8 בפברואר 2024 · נושא: דיני משפחה · תוכנית: "המשפחה שלי"</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">להאזנה</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Media Item 3 -->
+                <article class="card media-card" data-type="עיתונות" data-date="2024-01-22">
+                    <div class="card-body">
+                        <p class="meta">עיתונות · 2024</p>
+                        <h3 class="title">ידיעות אחרונות</h3>
+                        <p class="excerpt">כתבה מקיפה בידיעות אחרונות על תיק חדלות פירעון מורכב שטיפל בו עו"ד גיל. הכתבה עסקה בהצלחה המשפטית ובהשלכות על החייבים.</p>
+                        <p class="meta">תאריך: 22 בינואר 2024 · נושא: חדלות פירעון · כותרת: "המקרה ששינה הכל"</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">לקריאה</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Media Item 4 -->
+                <article class="card media-card" data-type="טלוויזיה" data-date="2024-01-10">
+                    <div class="card-body">
+                        <p class="meta">טלוויזיה · 2024</p>
+                        <h3 class="title">ערוץ 13 - משפט</h3>
+                        <p class="excerpt">תוכנית מיוחדת על דיני משפחה בהשתתפות עו"ד יניב גיל. התוכנית עסקה בנושאים אקטואליים בתחום המשפחה והמשפט.</p>
+                        <p class="meta">תאריך: 10 בינואר 2024 · נושא: דיני משפחה · תוכנית: "משפט המשפחה"</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">לצפייה</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Media Item 5 -->
+                <article class="card media-card" data-type="דיגיטל" data-date="2024-01-05">
+                    <div class="card-body">
+                        <p class="meta">דיגיטל · 2024</p>
+                        <h3 class="title">ynet - כלכלה</h3>
+                        <p class="excerpt">ראיון מקוון עם עו"ד יניב גיל בנושא סדר דין אזרחי והוצאה לפועל. עו"ד גיל הסביר על התהליכים המשפטיים ועל זכויות החייבים.</p>
+                        <p class="meta">תאריך: 5 בינואר 2024 · נושא: סדר דין אזרחי · פורמט: ראיון וידאו</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">לצפייה</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Media Item 6 -->
+                <article class="card media-card" data-type="עיתונות" data-date="2023-12-15">
+                    <div class="card-body">
+                        <p class="meta">עיתונות · 2023</p>
+                        <h3 class="title">הארץ - כלכלה</h3>
+                        <p class="excerpt">כתבה מקצועית על שינויים בחוק חדלות הפירעון עם התייחסות למומחיותו של עו"ד יניב גיל בתחום זה.</p>
+                        <p class="meta">תאריך: 15 בדצמבר 2023 · נושא: חדלות פירעון · עמודים: 1</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#" target="_blank" rel="noopener">לקריאה</a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+            <p id="emptyState" hidden>לא נמצאו תוצאות בסינון/מיון הנוכחי.</p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>צריכים ייעוץ משפטי?</h2>
+                <p>עו"ד יניב גיל זמין לייעוץ משפטי מקצועי בתחומי התמחותו</p>
+                <div class="contact-actions">
+                    <a href="contact.html" class="btn primary">לתיאום פגישה</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+
+    <script src="js/scroll-animations.js?v=20250908b" defer></script>
+    <script src="js/mega-menu.js?v=20250908d" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const h = document.getElementById('siteHeader');
+      const root = document.documentElement;
+      const set = ()=> root.style.setProperty('--header-h', h?.offsetHeight? h.offsetHeight+'px' : '64px');
+      set(); addEventListener('resize', set); addEventListener('orientationchange', set);
+    });
+    </script>
+    <script src="js/media-filters.js" defer></script>
+    
+    <!-- Shrink controller (tiny JS) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('siteHeader');
+      const s      = document.getElementById('headerSentinel');
+      if (!header || !s) return;
+      if (!s.offsetHeight) s.style.height = '1px';
+
+      new IntersectionObserver(([e]) => {
+        header.classList.toggle('is-compact', !e.isIntersecting);
+      }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(s);
+    });
+    </script>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add active class to current page in navigation
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const header=document.getElementById('siteHeader');
+  const s=document.getElementById('headerSentinel');
+  if(!header||!s){return}
+  if(!s.offsetHeight){s.style.height='1px'}
+  new IntersectionObserver(([e])=>{
+    header.classList.toggle('is-compact', !e.isIntersecting);
+  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
+});
+</script>
+
+</body>
+</html>

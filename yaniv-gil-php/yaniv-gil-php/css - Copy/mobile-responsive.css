@@ -1,0 +1,138 @@
+/* /css/mobile-responsive.css */
+
+/* --- Utilities --- */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Prevent background scroll when nav is open */
+body.nav-open { overflow: hidden; }
+
+/* --- Header base --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: #ffffffcc; /* subtle translucency */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  transition: box-shadow .2s ease, transform .2s ease, background .2s ease;
+}
+.site-header.is-shrunk {
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.site-header .header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 16px;
+  max-width: 1200px; margin-inline:auto; padding: 12px 16px;
+}
+.brand {
+  font-weight: 800; font-size: 20px; line-height: 1; color:#111; text-decoration:none;
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: inline-flex; align-items:center; justify-content:center;
+  width: 40px; height: 40px;
+  border: 0; background: transparent; cursor: pointer;
+}
+.hamburger-box{ display:inline-block; width:22px; height:16px; position:relative; }
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after{
+  position:absolute; left:0; width:22px; height:2px; content:""; background:#111; transition:.2s;
+}
+.hamburger-inner{ top:7px; }
+.hamburger-inner:before{ top:-7px; }
+.hamburger-inner:after{ top:7px; }
+.hamburger[aria-expanded="true"] .hamburger-inner{ background:transparent; }
+.hamburger[aria-expanded="true"] .hamburger-inner:before{ transform:translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] .hamburger-inner:after{ transform:translateY(-7px) rotate(-45deg); }
+
+/* --- Overlay behind the drawer --- */
+#nav-overlay{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.35);  /* lighter so content still visible */
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+  z-index: 1000;                 /* drawer sits above */
+}
+body.nav-open #nav-overlay{ opacity:1; visibility:visible; }
+
+/* --- Mobile drawer --- */
+.primary-nav{
+  position: fixed; top: 0; right: -100%;
+  width: min(88vw, 420px);
+  height: 100dvh;
+  overflow-y: auto;
+  background: #fff;              /* solid for contrast */
+  color:#111;
+  box-shadow: -24px 0 40px rgba(0,0,0,.12);
+  z-index: 1100;
+  transition: right .25s ease;
+}
+body.nav-open .primary-nav{ right: 0; }
+
+/* Root menu links */
+.primary-nav .menu-root { list-style:none; padding: 12px 0; margin:0; }
+.primary-nav a, .primary-nav .mega-toggle{
+  display:block; width:100%;
+  padding: 14px 18px;
+  color:#111; text-decoration:none; font-weight:600; text-align:right;
+  background: transparent; border:0; cursor:pointer;
+}
+.primary-nav a:hover,
+.primary-nav a:focus,
+.primary-nav .mega-toggle:hover,
+.primary-nav .mega-toggle:focus{ background: rgba(0,0,0,.06); outline: none; }
+
+/* Mega panel (desktop) */
+.mega-panel{
+  position: absolute;
+  top: 100%; inset-inline-end: 0;
+  min-width: 640px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+  display: none;
+}
+.has-mega.open > .mega-panel{ display:block; }
+.mega-grid{
+  display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;
+}
+.mega-grid a{
+  padding: 10px 12px; border-radius: 8px; background: #f7f7f8; font-weight:600; color:#111;
+}
+.mega-grid a:hover{ background:#eee; }
+
+/* Mega on mobile: just stacked, solid background */
+@media (max-width: 768px){
+  .mega-panel{
+    position: static; display: block;
+    border: 0; border-radius: 0; box-shadow: none; padding: 0; margin-inline: 0;
+    background: #fff;
+  }
+  .mega-grid{ grid-template-columns: 1fr; gap: 0; }
+  .mega-grid a{ background: transparent; border-radius: 0; }
+}
+
+/* Basic desktop layout */
+@media (min-width: 769px){
+  .hamburger{ display:none; }
+  .primary-nav{
+    position: static; height:auto; width:auto; overflow:visible; background:transparent;
+    box-shadow:none; transition:none;
+  }
+  .primary-nav .menu-root{ display:flex; align-items:center; gap: 6px; padding: 0; }
+  .primary-nav a, .primary-nav .mega-toggle{ padding: 12px 14px; background:transparent; }
+}
