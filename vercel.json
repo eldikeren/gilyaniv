@@ -1,11 +1,13 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/", "destination": "/yaniv-gil-php/index.html" },
-    { "source": "/about", "destination": "/yaniv-gil-php/about.html" },
-    { "source": "/about.html", "destination": "/yaniv-gil-php/about.html" },
-    { "source": "/(.*)\\.php", "destination": "/yaniv-gil-php/$1.html" },
-    { "source": "/(.*)", "destination": "/yaniv-gil-php/$1" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/attorneys", "destination": "/attorneys.html" },
+    { "source": "/practice-areas", "destination": "/practice-areas.html" },
+    { "source": "/articles", "destination": "/articles.html" },
+    { "source": "/media", "destination": "/media.html" },
+    { "source": "/contact", "destination": "/contact.html" }
   ],
   "headers": [
     {
