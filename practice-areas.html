@@ -724,10 +724,10 @@
 
                     <!-- Civil Law Section -->
                     <div id="civil-law" class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <div class="p-6 border-b border-gray-200">
+                        <div class="p-6 border-b border-gray-200 cursor-pointer" onclick="toggleContent('civil-content')">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-2xl font-bold text-[#1a1a1a] text-right">סדר דין אזרחי ומקרקעין</h3>
-                                <button onclick="toggleContent('civil-content')" class="bg-[#c9a55c] text-white px-4 py-2 rounded-lg hover:bg-[#b8944a] transition-colors duration-200">
+                                <button class="bg-[#c9a55c] text-white px-4 py-2 rounded-lg hover:bg-[#b8944a] transition-colors duration-200">
                                     קרא עוד
                                 </button>
                             </div>
@@ -935,12 +935,14 @@
         const content = document.getElementById(contentId);
         const button = event.target;
         
-        if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden');
-            button.textContent = 'סגור';
-        } else {
-            content.classList.add('hidden');
-            button.textContent = 'קרא עוד';
+        if (content) {
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                button.textContent = 'סגור';
+            } else {
+                content.classList.add('hidden');
+                button.textContent = 'קרא עוד';
+            }
         }
     }
 
