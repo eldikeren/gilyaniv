@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר - משרד עורכי דין יניב גיל, חדלות פירעון וסדר דין אזרחי</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/design-tokens.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+    <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
+    
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
+
+    <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
+    }
+    
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
+    
+    /* Card styling */
+    .card {
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    
+    /* Footer styling */
+    .site-footer {
+      background: #0a3d62;
+      color: #fff;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+    
+    .site-footer .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .site-footer ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
+
+<style>
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
+    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
+    transition:box-shadow .22s,background-color .22s,padding .22s}
+  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
+  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
+  .logo .logo-mark{height:48px;transition:height .22s}
+  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
+  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
+  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
+  .has-mega{position:relative}
+  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
+    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
+    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
+  .has-mega.open>.mega-panel{display:block}
+  .site-header,.header-top,.header-main{overflow:visible}
+  #headerSentinel{height:1px}
+</style>
+
+
+<style>
+  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
+  .grid{display:grid;gap:20px;}
+  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
+  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
+</style>
+
+</head>
+<body>
+    <!-- Use header-loader.js to load the header -->
+    <div id="header-root"></div>
+    
+    <!-- Skip link for accessibility -->
+    <a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
+
+    <main id="main">
+
+
+    <!-- sentinel tells JS when header left the top -->
+    <div id="headerSentinel" aria-hidden="true" style="height:1px"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="contact-hero">
+        <div class="container inner">
+            <div>
+                <h1>צור קשר</h1>
+                <p class="lead">אנחנו כאן לעזור לכם - ייעוץ ראשוני חינם</p>
+            </div>
+            <div class="hero-card">
+                <div class="card-body">
+                    <p class="kicker">פרטי התקשרות</p>
+                    <ul class="meta-list">
+                        <li><strong>טלפון:</strong> 03-609-2414</li>
+                        <li><strong>נייד:</strong> 054-8184581</li>
+                        <li><strong>פקס:</strong> 03-609-2413</li>
+                        <li><strong>שעות פעילות:</strong> א'-ה' 9:00-18:00</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
+                        <a class="btn" href="mailto:yanivgil@gmail.com">שלח אימייל</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="contact-wrap">
+        <div class="container contact-grid">
+            <!-- עמודת מידע/שאלות נפוצות -->
+            <div>
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">טלפון</h2>
+                    <p>התקשרו עכשיו לייעוץ ראשוני חינם עם עורך דין מנוסה. הצוות שלנו זמין עבורכם בכל שעות הפעילות.</p>
+                        <ul class="meta-list">
+                        <li>טלפון ראשי: 03-609-2414</li>
+                        <li>נייד: 054-8184581</li>
+                        <li>פקס: 03-609-2413</li>
+                        <li>שעות פעילות: א'-ה' 9:00-18:00</li>
+                    </ul>
+                        <div class="actions">
+                            <a class="btn primary" href="tel:03-609-2414">התקשר עכשיו</a>
+                        </div>
+                </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">אימייל</h2>
+                    <p>שלחו לנו הודעה באימייל ונחזור אליכם בהקדם האפשרי. אנו מתחייבים לענות לכל פנייה תוך 24 שעות.</p>
+                        <ul class="meta-list">
+                        <li>אימייל: yanivgil@gmail.com</li>
+                        <li>זמן תגובה: עד 24 שעות</li>
+                    </ul>
+                        <div class="actions">
+                            <a class="btn primary" href="mailto:yanivgil@gmail.com">שלח אימייל</a>
+                        </div>
+                </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">כתובת המשרד</h2>
+                    <p>המשרד ממוקם במרכז תל אביב, בקלות נגישות בתחבורה ציבורית וחניה. בואו לבקר אותנו במשרד.</p>
+                        <ul class="meta-list">
+                        <li>מגדל "WE-TLV"</li>
+                        <li>דרך מנחם בגין 150</li>
+                        <li>קומה 7, תל-אביב</li>
+                        <li>חניה חינם ללקוחות</li>
+                    </ul>
+                        <div class="actions">
+                            <a class="btn" href="#map">הצג במפה</a>
+                </div>
+            </div>
+                </article>
+
+                <section class="card faq">
+                    <div class="card-body">
+                        <h2 class="section-title">שאלות נפוצות</h2>
+                        <details>
+                            <summary>האם הייעוץ הראשוני באמת חינם?</summary>
+                            <p>כן, אנו מציעים ייעוץ ראשוני חינם לכל לקוח חדש. הייעוץ כולל הערכת המקרה והמלצות ראשוניות ללא עלות.</p>
+                        </details>
+                        <details>
+                            <summary>כמה זמן לוקח לקבל תשובה?</summary>
+                            <p>אנו מתחייבים לענות לכל פנייה תוך 24 שעות. במקרים דחופים, נחזור אליכם תוך מספר שעות.</p>
+                        </details>
+                        <details>
+                            <summary>האם אפשר לקבוע פגישה בשעות הערב?</summary>
+                            <p>כן, אנו מציעים פגישות בשעות הערב בתיאום מראש. פגישות כאלה מתקיימות בדרך כלל בין 18:00-20:00.</p>
+                        </details>
+                        <details>
+                            <summary>האם אתם מטפלים בתיקים בכל הארץ?</summary>
+                            <p>כן, אנו מטפלים בתיקים בכל רחבי הארץ. המשרד ממוקם בתל אביב, אך אנו זמינים ללקוחות מכל מקום.</p>
+                        </details>
+        </div>
+    </section>
+            </div>
+            
+            <!-- עמודת טופס -->
+                        <div>
+                <article class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">שלחו לנו הודעה</h2>
+                        <form id="contact-form" action="#" method="post" novalidate>
+                            <div class="form-row">
+                                <label for="name">שם מלא *</label>
+                                <input id="name" name="name" type="text" required>
+                        </div>
+                            <div class="form-row inline">
+                        <div>
+                                    <label for="phone">טלפון *</label>
+                                    <input id="phone" name="phone" type="tel" required>
+                    </div>
+                        <div>
+                                    <label for="email">אימייל *</label>
+                                    <input id="email" name="email" type="email" required>
+                        </div>
+                    </div>
+                            <div class="form-row">
+                                <label for="subject">נושא *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">בחרו נושא</option>
+                                <option value="family">דיני משפחה</option>
+                                <option value="bankruptcy">חדלות פירעון</option>
+                                <option value="civil">סדר דין אזרחי</option>
+                                <option value="real-estate">מקרקעין</option>
+                                <option value="commercial">משפט מסחרי</option>
+                                <option value="labor">דיני עבודה</option>
+                                <option value="consultation">ייעוץ כללי</option>
+                                <option value="other">אחר</option>
+                            </select>
+                        </div>
+                            <div class="form-row">
+                            <label for="urgency">דחיפות</label>
+                            <select id="urgency" name="urgency">
+                                <option value="normal">רגיל</option>
+                                <option value="urgent">דחוף</option>
+                                <option value="very-urgent">דחוף מאוד</option>
+                            </select>
+                        </div>
+                            <div class="form-row">
+                            <label for="preferred-contact">אופן התקשרות מועדף</label>
+                            <select id="preferred-contact" name="preferred-contact">
+                                <option value="phone">טלפון</option>
+                                <option value="email">אימייל</option>
+                                <option value="whatsapp">ווטסאפ</option>
+                                <option value="meeting">פגישה במשרד</option>
+                            </select>
+                        </div>
+                            <div class="form-row">
+                            <label for="message">תיאור הבעיה *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="תארו את הבעיה המשפטית שלכם..."></textarea>
+                        </div>
+                            <div class="form-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                אני מסכים למדיניות הפרטיות ולקבלת עדכונים
+                            </label>
+                        </div>
+                            <div class="actions">
+                                <button class="btn primary" type="submit">שלח הודעה</button>
+                            </div>
+                    </form>
+                </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+                <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add active class to current page in navigation
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const header=document.getElementById('siteHeader');
+  const s=document.getElementById('headerSentinel');
+  if(!header||!s){return}
+  if(!s.offsetHeight){s.style.height='1px'}
+  new IntersectionObserver(([e])=>{
+    header.classList.toggle('is-compact', !e.isIntersecting);
+  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
+});
+</script>
+
+</body>
+</html>
