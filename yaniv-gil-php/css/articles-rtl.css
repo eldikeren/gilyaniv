@@ -18,6 +18,9 @@
   box-shadow:var(--shadow-2); background:#fafafa;
   object-fit:cover;
 }
+
+/* Force-remove legacy video on articles hero if present */
+.articles-hero video{ display:none !important; }
 @media (max-width:980px){ 
   .articles-hero .hero-content{ grid-template-columns:1fr; gap:16px; text-align:center; }
   .video-hero-small{ width:100px; height:100px; }

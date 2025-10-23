@@ -1,24 +1,8 @@
-<a class="skip-link visually-hidden" href="#main">דלג לתוכן הראשי</a>
-
-<header class="site-header" id="siteHeader" data-rtl role="banner" aria-label="כותרת האתר">
+<!-- /partials/header.html -->
+<header id="siteHeader" class="site-header" role="banner" aria-label="כותרת האתר">
   <div class="header-top">
     <div class="container header-top-inner">
-      <nav class="secondary-nav" aria-label="תפריט משני">
-        <ul>
-          <li><a href="articles.html">מאמרים</a></li>
-          <li><a href="media.html">תקשורת</a></li>
-          <li><a href="index.html#testimonials">ביקורות לקוחות</a></li>
-          <li><a href="about.html">אודות המשרד</a></li>
-        </ul>
-      </nav>
-      <div class="top-actions">
-        <form class="site-search" role="search" aria-label="חיפוש" action="/search" method="GET">
-          <label class="visually-hidden" for="q">חיפוש באתר</label>
-          <input id="q" name="q" type="search" placeholder="חיפוש..." autocomplete="off" />
-          <button type="submit" class="button small">חפש</button>
-          <div id="search-suggest" class="suggest hide" aria-live="polite"></div>
-        </form>
-      </div>
+      <div class="header-top-design"></div>
     </div>
   </div>
 
@@ -28,13 +12,14 @@
         <a href="index.html" aria-label="עמוד הבית - משרד עו״ד יניב גיל">
           <img src="images/logo.png" alt="לוגו משרד עו״ד יניב גיל" class="logo-mark">
           <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="עו״ד יניב גיל" class="logo-text">
+          <img src="images/new-logo.png" alt="לוגו חדש משרד עו״ד יניב גיל" class="logo-mark">
         </a>
       </div>
 
       <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט ניווט">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="תפריט ראשי">
@@ -71,6 +56,12 @@
             <a href="media.html">תקשורת</a>
           </li>
           <li>
+            <a href="index.html#revTitle">ביקורות לקוחות</a>
+          </li>
+          <li>
+            <a href="about.html">אודות המשרד</a>
+          </li>
+          <li>
             <a href="contact.html">צור קשר</a>
           </li>
         </ul>
@@ -78,6 +69,3 @@
     </div>
   </div>
 </header>
-
-<!-- sentinel tells JS when header left the top -->
-<div id="headerSentinel" aria-hidden="true"></div>
