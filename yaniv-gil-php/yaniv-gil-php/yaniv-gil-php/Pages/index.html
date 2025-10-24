@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- ✅ CONSOLE SILENCER: Load this before anything else -->
+    <script src="/js/console-silencer.js?v=2025-09-13c"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/design-tokens.css?v=2">
+  <link rel="stylesheet" href="css/base.css?v=2">
+  <link rel="stylesheet" href="css/pages-rtl.css?v=2">
+  <link rel="stylesheet" href="css/mobile-responsive.css?v=2">
+    <link rel="stylesheet" href="css/home-rtl.css?v=1">
+    <link rel="stylesheet" href="/css/pw-rtl.css?v=2025-09-13a">
+    <link rel="stylesheet" href="/css/header-premium.css?v=2025-09-13a">
+    <!-- ✅ COMPLETELY NEW APPROACH: Load our fixed scripts -->
+    <script defer src="/js/mega-menu.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-shrink.js?v=2025-09-13b"></script>
+    <script defer src="/js/header-loader.js?v=2025-09-13b"></script>
+
+  <style>
+    body {
+      padding-top: 120px !important;
+      font-family: 'Heebo', Arial, sans-serif;
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 100px !important; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 90px !important; }
+    }
+
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      font-weight: 700;
+    }
+
+    .testimonials {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+
+    .testimonial {
+      min-width: 280px;
+      background: #fff;
+      border: 1px solid #e6e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .testimonial .rating {
+      display: inline-block;
+      background: #0a3d62;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .testimonial figcaption {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Basic styles for testimonials section */
+    #testimonials-section {
+      scroll-margin-top: 140px;
+    }
+    
+    #revTitle {
+      scroll-margin-top: 140px;
+    }
+    @media (max-width: 768px) {
+      #revTitle { font-size: 2.2rem; scroll-margin-top: 120px; }
+    }
+    @media (max-width: 480px) {
+      #revTitle { font-size: 1.8rem; scroll-margin-top: 100px; }
+    }
+  </style>
+
+<style>
+  :root{ --border:#e6e7eb; --glass:rgba(255,255,255,.92); }
+  .site-header{position:sticky;top:0;z-index:4000;background:var(--glass);
+    -webkit-backdrop-filter:saturate(120%) blur(8px);backdrop-filter:saturate(120%) blur(8px);
+    transition:box-shadow .22s,background-color .22s,padding .22s}
+  .header-top{height:40px;border-bottom:1px solid var(--border);transition:height .22s,opacity .22s}
+  .header-main .header-main-inner{padding-block:16px;transition:padding .22s}
+  .logo .logo-mark{height:48px;transition:height .22s}
+  .site-header.is-compact{box-shadow:0 10px 28px rgba(0,0,0,.07)}
+  .site-header.is-compact .header-top{height:0;opacity:0;border:0;overflow:hidden}
+  .site-header.is-compact .header-main .header-main-inner{padding-block:8px}
+  .has-mega{position:relative}
+  .mega-panel{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:5000;display:none;
+    width:min(86vw,880px);background:#fff;border:1px solid var(--border);border-radius:12px;
+    box-shadow:0 30px 60px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.08);padding:16px}
+  .has-mega.open>.mega-panel{display:block}
+  .site-header,.header-top,.header-main{overflow:visible}
+  #headerSentinel{height:1px}
+</style>
+
+
+<style>
+  .card{background:#fff;border:1px solid #e6e7eb;border-radius:12px;padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.12);}
+  .grid{display:grid;gap:20px;}
+  @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:900px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
+  @media (min-width:900px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:899px){ .grid{grid-template-columns:1fr} }
+</style>
+
+</head>
+
+<body>
+    <div id="header-root"></div>
+
+  <!-- ✅ Removed: The fake header is now created by header-fix.js -->
+
+    <main id="main">
+    <!-- ===== HERO ===== -->
+        <section class="home-hero" aria-label="פתיח">
+          <video id="heroVideo" class="home-hero-video" autoplay muted loop playsinline preload="none" poster="videos/index-poster.jpg">
+            <source src="videos/index-mobile.webm" type="video/webm" media="(max-width: 768px)">
+            <source src="videos/index.webm" type="video/webm">
+            <source src="videos/index-compressed.mp4" type="video/mp4">
+          </video>
+      <div class="office-name-overlay">משרד עורכי דין גיל יניב</div>
+          <div class="inner">
+            <h1 class="title">העורך דין הנכון עושה את כל ההבדל</h1>
+            <p class="lead">לעו״ד יניב גיל ניסיון של למעלה מ-15 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
+            <div class="actions">
+              <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
+              <a class="btn" href="/about.html">למד עוד על המשרד</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Practice Areas ===== -->
+        <section class="section" aria-labelledby="areasTitle">
+        <div class="container">
+            <header id="siteHeader" class="site-header" class="section-header">
+              <h2 id="areasTitle">תחומי התמחות</h2>
+          <p>אנו מתמחים במגוון רחב של תחומי משפט עם ניסיון מוכח של למעלה מ-15 שנה</p>
+            </header>
+<div id="headerSentinel" aria-hidden="true"></div>
+        <!-- ... your 4 cards ... -->
+        </div>
+    </section>
+
+    <!-- ===== Articles ===== -->
+        <section class="section" aria-labelledby="artTitle">
+        <div class="container">
+            <header id="siteHeader" class="site-header" class="section-header">
+              <h2 id="artTitle">מאמרים אחרונים</h2>
+            </header>
+        <!-- ... your 3 article cards ... -->
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+        <section class="section" aria-labelledby="ctaTitle">
+        <div class="container">
+                <h2 id="ctaTitle">צור קשר עכשיו</h2>
+        <!-- ... contact details ... -->
+        </div>
+           </section>
+       
+    <!-- ===== ✅ Testimonials with HARDCODED HTML ===== -->
+    <div id="testimonials-section" style="padding: 60px 0; background-color: #f9f9f9; scroll-margin-top: 140px;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- Anchor for scrolling -->
+        <span id="revTitle" style="display: block; scroll-margin-top: 140px;"></span>
+        
+        <!-- HARDCODED TITLE - No header tag, just plain div and h2 -->
+        <div style="margin-bottom: 2rem; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #0a3d62; font-weight: 700; margin: 0 0 0.5rem 0; text-align: center;">ביקורות לקוחות</h2>
+          <p style="margin: 0; text-align: center;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+        </div>
+        
+        <!-- Testimonials cards -->
+        <div style="display: flex; gap: 2rem; overflow-x: auto; padding: 1rem 0;">
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"עו״ד יניב גיל ייצג אותנו בתיק צוואה מורכב..."</div>
+            <div style="font-size: 0.9rem; color: #555;">ש.ד — רחובות · הגשת התנגדות לצוואה</div>
+          </div>
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"עורך דין מדהים ישר ומקצועי להפליא..."</div>
+            <div style="font-size: 0.9rem; color: #555;">ת. — תל אביב · תביעה בבית המשפט לענייני משפחה</div>
+          </div>
+          <div style="min-width: 280px; background: #fff; border: 1px solid #e6e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+            <div style="display: inline-block; background: #0a3d62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.5rem; font-weight: bold;">5.0</div>
+            <div style="font-style: italic; margin: 0 0 0.75rem 0;">"שירות אדיב אמין ומקצועי ! עזר לי מאוד בתיק חדלות פירעון..."</div>
+            <div style="font-size: 0.9rem; color: #555;">א. — רמלה · חדלות פירעון/פשיטת רגל</div>
+          </div>
+        </div>
+        
+        <!-- "View all" button -->
+        <div style="margin-top:14px; text-align: center;">
+          <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener" style="display: inline-block; background: #0a3d62; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500;">לכל הביקורות</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Backup fixed title that is always visible -->
+    <div id="fixed-testimonials-title" style="display: none; position: fixed; top: 120px; left: 0; right: 0; z-index: 999; background: #f9f9f9; padding: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="font-size: 2.5rem; color: #0a3d62; font-weight: 700; margin: 0 0 0.5rem 0; text-align: center;">ביקורות לקוחות</h2>
+      <p style="margin: 0; text-align: center;">מה הלקוחות אומרים על השירות המקצועי שלנו</p>
+    </div>
+    </main>
+       
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+        <div class="container">
+              <ul>
+                <li><a href="about.html">אודות המשרד</a></li>
+        <li><a href="index.html#testimonials-section">ביקורות לקוחות</a></li>
+              </ul>
+        </div>
+    </footer>
+
+  <!-- ✅ SIMPLIFIED SCRIPT for smooth scrolling -->
+  <script>
+    // Handle smooth scrolling
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scroll if #revTitle or #testimonials-section is in URL
+      if (window.location.hash === '#revTitle' || window.location.hash === '#testimonials-section') {
+        setTimeout(() => {
+          const target = document.getElementById(window.location.hash === '#revTitle' ? 'revTitle' : 'testimonials-section');
+          if (target) {
+            const y = target.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 600);
+      }
+      
+      // Add click handler for all testimonial links
+      const testimonialLinks = document.querySelectorAll('a[href$="#revTitle"], a[href$="#testimonials-section"]');
+      testimonialLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('testimonials-section');
+          if (target) {
+            const y = target.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            history.pushState(null, '', '#testimonials-section');
+          }
+        });
+      });
+    });
+  </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const header=document.getElementById('siteHeader');
+  const s=document.getElementById('headerSentinel');
+  if(!header||!s){return}
+  if(!s.offsetHeight){s.style.height='1px'}
+  new IntersectionObserver(([e])=>{
+    header.classList.toggle('is-compact', !e.isIntersecting);
+  },{rootMargin:'-1px 0px 0px 0px'}).observe(s);
+});
+</script>
+
+</body>
+</html>
+
