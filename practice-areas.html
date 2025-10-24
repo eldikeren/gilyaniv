@@ -534,8 +534,14 @@
                 if (targetId === 'family-law' || targetId === 'bankruptcy' || targetId === 'civil-law') {
                     console.log('Valid target ID found, opening section...');
                     setTimeout(() => {
-                        console.log('Opening content for:', targetId + '-content');
-                        openContentById(targetId + '-content');
+                        // Map the section IDs to content IDs
+                        let contentId = targetId;
+                        if (targetId === 'family-law') contentId = 'family-content';
+                        if (targetId === 'civil-law') contentId = 'civil-content';
+                        if (targetId === 'bankruptcy') contentId = 'bankruptcy-content';
+                        
+                        console.log('Opening content for:', contentId);
+                        openContentById(contentId);
                         // Scroll to the section
                         const section = document.getElementById(targetId);
                         console.log('Section element found:', section);
