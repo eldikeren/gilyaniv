@@ -10,15 +10,17 @@ lighthouse-*.json
 yaniv-gil-php/
 Website Performance & Design Auditor/
 Pages/
-# Allow essential images and videos
-!images/icons/*.png
-!images/icons/*.jpg
-!images/icons/*.jpeg
+# Exclude large video files (keep only compressed ones)
+images/*.mp4
+!images/dog-compressed.mp4
+# Exclude large image files but keep essential ones
+images/*.jpeg
+images/*.jpg
+images/*.png
 !images/new-logo.png
 !images/Yaniv-Gil.png
 !images/deutsch.png
 !images/Yaniv-Gil-Law-Office-Notary_text.avif
 !images/Yaniv-Gil-Law-Office-Notary_logo.avif
-!images/contact.mp4
-!images/dog-compressed.mp4
-!images/index.mp4
+# Allow all icon files (they're small)
+!images/icons/*
