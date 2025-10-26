@@ -5,13 +5,10 @@
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "upload:videos": "node scripts/upload-videos.js",
     "build": "echo 'Static site - no build needed'",
     "start": "echo 'Static site - serve with any web server'"
   },
-  "dependencies": {
-    "@vercel/blob": "^0.19.2"
-  },
+  "dependencies": {},
   "keywords": [
     "law",
     "website",
