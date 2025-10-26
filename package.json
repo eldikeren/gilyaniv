@@ -18,5 +18,13 @@
     "static"
   ],
   "author": "Yaniv Gil Law Office",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldikeren/gilyaniv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eldikeren/gilyaniv/issues"
+  },
+  "homepage": "https://github.com/eldikeren/gilyaniv#readme"
 }
