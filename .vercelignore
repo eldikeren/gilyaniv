@@ -27,3 +27,4 @@ images/*.png
 !images/icons/*
 # Explicitly allow Mako logo
 !images/icons/mako logo.png
+!images/icons/mako-logo.png
