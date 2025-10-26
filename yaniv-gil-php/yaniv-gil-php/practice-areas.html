@@ -46,35 +46,7 @@
             height: 80vh;
         }
         
-        /* Scroll down arrow animation */
-        .scroll-arrow {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #c9a55c;
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-            cursor: pointer;
-            z-index: 10;
-            transition: color 0.3s ease;
-        }
-        .scroll-arrow:hover {
-            color: #1a1a1a;
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-        
-        /* Full-screen mobile menu */
+        /* Mobile menu styles */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -128,383 +100,12 @@
             background: #c9a55c;
             color: #1a1a1a;
         }
-        
-        /* Practice Areas Accordion */
-        .practice-accordion {
-            max-width: 1000px;
-      margin: 0 auto;
-        }
-        .practice-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        .practice-card:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            border-color: #c9a55c;
-        }
-        .practice-card.active {
-            border-color: #c9a55c;
-            box-shadow: 0 8px 30px rgba(201, 165, 92, 0.2);
-        }
-        .practice-header {
-            padding: 1.5rem 2rem;
-            cursor: pointer;
-      display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            transition: all 0.3s ease;
-        }
-        .practice-header:hover {
-            background: linear-gradient(135deg, #c9a55c 0%, #f4d03f 100%);
-            color: white;
-        }
-        .practice-header:hover .practice-title,
-        .practice-header:hover .practice-subtitle {
-            color: white;
-        }
-        .practice-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1a1a1a;
-      margin: 0;
-            transition: color 0.3s ease;
-        }
-        .practice-subtitle {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0.25rem 0 0 0;
-            transition: color 0.3s ease;
-        }
-        .practice-toggle {
-            font-size: 1.5rem;
-            color: #c9a55c;
-            transition: all 0.3s ease;
-            transform: rotate(0deg);
-        }
-        .practice-card.active .practice-toggle {
-            transform: rotate(180deg);
-            color: #1a1a1a;
-        }
-        .practice-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            opacity: 0;
-        }
-        .practice-card.active .practice-content {
-            max-height: 1000px;
-            padding: 0 2rem 2rem 2rem;
-            opacity: 1;
-        }
-        .practice-description {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        .practice-services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .service-item {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            border-right: 4px solid #c9a55c;
-            transition: all 0.3s ease;
-        }
-        .service-item:hover {
-            background: #c9a55c;
-            color: white;
-            transform: translateX(-5px);
-        }
-        .service-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .service-description {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        .practice-cta {
-            text-align: center;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-        }
-        .cta-button {
-            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-            color: #c9a55c;
-            padding: 0.75rem 2rem;
-            border-radius: 25px;
-      text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        .cta-button:hover {
-            background: linear-gradient(135deg, #c9a55c 0%, #f4d03f 100%);
-            color: #1a1a1a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(201, 165, 92, 0.3);
-        }
-        
-        /* Elegant Decorative Elements */
-        .elegant-pattern {
-            position: absolute;
-            opacity: 0.15;
-            z-index: 1;
-            pointer-events: none;
-        }
-        
-        /* Sophisticated Line Patterns */
-        .elegant-line-horizontal {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #c9a55c, transparent);
-            width: 200px;
-            top: 20%;
-            right: 10%;
-        }
-        .elegant-line-vertical {
-            width: 1px;
-            background: linear-gradient(180deg, transparent, #c9a55c, transparent);
-            height: 150px;
-            bottom: 30%;
-            left: 15%;
-        }
-        .elegant-line-diagonal {
-            width: 120px;
-            height: 1px;
-            background: linear-gradient(45deg, transparent, #c9a55c, transparent);
-            top: 40%;
-            left: 8%;
-            transform: rotate(45deg);
-        }
-        
-        /* Cross Pattern */
-        .elegant-cross {
-            width: 40px;
-            height: 40px;
-            top: 25%;
-            right: 20%;
-        }
-        .elegant-cross::before,
-        .elegant-cross::after {
-            content: '';
-            position: absolute;
-            background: #c9a55c;
-        }
-        .elegant-cross::before {
-            width: 40px;
-            height: 1px;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-        }
-        .elegant-cross::after {
-            width: 1px;
-            height: 40px;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-        }
-        
-        /* Subtle Corner Accents */
-        .corner-accent {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0.12;
-        }
-        .corner-accent.top-right {
-            top: 15%;
-            right: 5%;
-            border-top: 1px solid #c9a55c;
-            border-right: 1px solid #c9a55c;
-        }
-        .corner-accent.bottom-left {
-            bottom: 20%;
-            left: 8%;
-            border-bottom: 1px solid #c9a55c;
-            border-left: 1px solid #c9a55c;
-        }
-        
-        /* Elegant Dots Pattern */
-        .elegant-dots {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #c9a55c;
-            border-radius: 50%;
-            opacity: 0.2;
-        }
-        .elegant-dots::before,
-        .elegant-dots::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #c9a55c;
-            border-radius: 50%;
-        }
-        .elegant-dots::before {
-            top: 0;
-            left: 20px;
-        }
-        .elegant-dots::after {
-            top: 0;
-            left: 40px;
-        }
-        
-        /* Section Backgrounds - Very Subtle */
-        .section-bg-pattern {
-            position: relative;
-        }
-        .section-bg-pattern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(135deg, rgba(201, 165, 92, 0.01) 0%, transparent 50%),
-                linear-gradient(45deg, transparent 0%, rgba(26, 26, 26, 0.005) 100%);
-            z-index: 1;
-        }
-        .section-bg-pattern > * {
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Section Separator Lines */
-        .section-separator {
-            height: 2px;
-            width: 100%;
-            margin: 0;
-        }
-        .section-separator.black {
-            background: #1a1a1a;
-        }
-        .section-separator.gold {
-            background: #c9a55c;
-        }
-        
-        /* Practice Area Card Decorative Outlines */
-        .practice-card {
-            position: relative;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-        .practice-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid #1a1a1a;
-            border-radius: 12px;
-            opacity: 0.3;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .practice-card::after {
-            content: '';
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            right: 4px;
-            bottom: 4px;
-            border: 1px solid #c9a55c;
-            border-radius: 8px;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .practice-card:hover::before {
-            opacity: 0.6;
-        }
-        .practice-card:hover::after {
-            opacity: 0.7;
-        }
-        .practice-header {
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .h-80vh {
-                height: 60vh;
-            }
-            .scroll-arrow {
-                bottom: 20px;
-            }
-            .practice-header {
-                padding: 1rem 1.5rem;
-            }
-            .practice-title {
-                font-size: 1.25rem;
-            }
-            .practice-content {
-                padding: 1rem 1.5rem 2rem 1.5rem;
-                max-height: none !important;
-                transition: opacity 0.3s ease, padding 0.3s ease;
-            }
-            .practice-card:not(.active) .practice-content {
-                display: none;
-            }
-            .practice-card.active .practice-content {
-                display: block;
-            }
-            .practice-description {
-                font-size: 0.95rem;
-                line-height: 1.6;
-                margin-bottom: 1rem;
-            }
-            .practice-services {
-                grid-template-columns: 1fr;
-                gap: 0.75rem;
-                margin-bottom: 1rem;
-            }
-            .service-item {
-                padding: 0.75rem;
-                font-size: 0.9rem;
-            }
-            .practice-cta {
-                padding-top: 1rem;
-                margin-top: 1rem;
-            }
-            .cta-button {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.9rem;
-                width: 100%;
-                max-width: 280px;
-                margin: 0 auto;
-                display: block;
-            }
-            .elegant-pattern,
-            .corner-accent,
-            .elegant-dots {
-                display: none;
-            }
-        }
 </style>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-800">
-
-    <!-- Header with floating/shrinking effect -->
+    <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
@@ -522,7 +123,7 @@
                     <li><a href="attorneys.html" class="hover:text-[#c9a55c] transition-colors duration-200">עורכי דין</a></li>
                     <li><a href="practice-areas.html" class="hover:text-[#c9a55c] transition-colors duration-200">תחומי התמחות</a></li>
                     <li><a href="articles.html" class="hover:text-[#c9a55c] transition-colors duration-200">מאמרים</a></li>
-                    <li><a href="media.html" class="hover:text-[#c9a55c] transition-colors duration-200">מדיה</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#c9a55c] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" class="hover:text-[#c9a55c] transition-colors duration-200">צור קשר</a></li>
                 </ul>
             </nav>
@@ -549,7 +150,7 @@
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
                     <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
                     <a href="articles.html" class="mobile-menu-link">מאמרים</a>
-                    <a href="media.html" class="mobile-menu-link">מדיה</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
                     <a href="contact.html" class="mobile-menu-link">צור קשר</a>
                 </div>
             </div>
@@ -559,14 +160,21 @@
     <main class="pt-24">
         <!-- Hero Section -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center">
+<<<<<<< HEAD
             <video autoplay muted loop playsinline preload="none" poster="videos/index-poster.jpg" class="absolute inset-0 w-full h-full object-cover">
                 <source src="videos/index-mobile.webm" type="video/webm" media="(max-width: 768px)">
                 <source src="videos/index.webm" type="video/webm">
                 <source src="videos/index-compressed.mp4" type="video/mp4">
+=======
+            <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+                <source src="images/practice.mp4?v=3" type="video/mp4">
+                Your browser does not support the video tag.
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">תחומי התמחות</h1>
+<<<<<<< HEAD
                 <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">מומחיות משפטית מקיפה בתחומים השונים - ניסיון של למעלה מ-15 שנה בהליכים משפטיים מורכבים</p>
             </div>
             <!-- Scroll down arrow -->
@@ -574,12 +182,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
+=======
+                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">מומחיות משפטית מקיפה בתחומים השונים - ניסיון של למעלה מ-20 שנה בהליכים משפטיים מורכבים</p>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
         </div>
     </section>
-
-        <!-- Section Separator -->
-        <div class="section-separator black"></div>
-        <div class="section-separator gold"></div>
         
         <!-- Practice Areas Section -->
         <section class="py-16 md:py-24 bg-gray-50">
@@ -589,6 +196,7 @@
                     <p class="text-lg text-gray-600">לחץ על כל תחום התמחות לפרטים נוספים ושירותים מקצועיים</p>
             </div>
             
+<<<<<<< HEAD
                 <div class="practice-accordion">
                     <!-- דיני משפחה -->
                     <div class="practice-card">
@@ -631,10 +239,52 @@
                             </div>
                             <div class="practice-cta">
                                 <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+=======
+                <div class="space-y-6">
+                    <!-- Family Law Section -->
+                    <div id="family-law" class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 border-b border-gray-200 cursor-pointer" onclick="toggleContent('family-content')">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#1a1a1a] text-right">דיני משפחה, ירושות וצוואות</h3>
+                                <button class="bg-[#c9a55c] text-white px-4 py-2 rounded-lg hover:bg-[#b8944a] transition-colors duration-200">
+                                    קרא עוד
+                                </button>
+                            </div>
+                        </div>
+                        <div id="family-content" class="hidden p-6">
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                תחום דיני המשפחה נוגע במקומות הרגישים ביותר של חיינו. כאשר ניצבים בפני גירושין, סכסוך משפחתי או סוגיות ירושה – חשוב לפעול בצורה מושכלת ורגועה, בליווי עורך דין מנוסה.
+                            </p>
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                עו״ד יניב גיל, בעל ניסיון של למעלה מ־20 שנים בתחום, מעניק ליווי מקצועי ורגיש לכל שלב בתהליך – מתוך הבנה עמוקה של ההיבטים המשפטיים והאנושיים גם יחד.
+                            </p>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold mb-4 text-[#1a1a1a] text-right">דיני משפחה</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ליווי מלא בתהליכי גירושין והכנת הסכמי גירושין</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייצוג בתביעות מזונות ילדים ואישה</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ניהול סוגיות משמורת וזמני שהות</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">חלוקת רכוש ואיזון משאבים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">עריכת הסכמי ממון והגנה על נכסים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייצוג בהליכי אימוץ והכרה באבהות</h5>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
                             </div>
                         </div>
                 </div>
                 
+<<<<<<< HEAD
                     <!-- חדלות פירעון -->
                     <div class="practice-card">
                         <div class="practice-header" onclick="togglePracticeCard(this)">
@@ -811,10 +461,93 @@
                             </div>
                             <div class="practice-cta">
                                 <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+=======
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold mb-4 text-[#1a1a1a] text-right">דיני ירושה וצוואות</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">עריכת צוואות אישיות והדדיות</h5>
+                            </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">הגשת בקשות לצווי ירושה וצווי קיום צוואה</h5>
+                        </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ניהול עיזבונות וחלוקת נכסי נפטרים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">הגשת התנגדויות לצוואות וביטולן</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">מינוי אפוטרופוסים וניהול נכסי חסויים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייעוץ משפחתי וליווי בהליכי ירושה מורכבים</h5>
+                                </div>
+                </div>
+                    </div>
+                    
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                במשרד יניב גיל תקבלו ייצוג מקצועי, דיסקרטי ורגיש, עם דגש על פתרונות מעשיים ושמירה על האינטרסים האישיים והמשפחתיים שלכם.
+                            </p>
+                            
+                            <div class="text-center">
+                                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#c9a55c] shadow-lg transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]">
+                                    התייעצו עכשיו – קבלו החלטות נכונות לעתיד רגוע ובטוח יותר
+                                </a>
+                                </div>
+                        </div>
+                </div>
+                
+                    <!-- Bankruptcy Section -->
+                    <div id="bankruptcy" class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 border-b border-gray-200 cursor-pointer" onclick="toggleContent('bankruptcy-content')">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#1a1a1a] text-right">חדלות פירעון והוצאה לפועל</h3>
+                                <button class="bg-[#c9a55c] text-white px-4 py-2 rounded-lg hover:bg-[#b8944a] transition-colors duration-200">
+                                    קרא עוד
+                                </button>
+                            </div>
+                        </div>
+                        <div id="bankruptcy-content" class="hidden p-6">
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                משרד עורך דין יניב גיל הוא משרד ותיק ובעל ניסיון רב בתחום חדלות פירעון, פשיטות רגל והליכי הוצאה לפועל. המשרד מלווה את לקוחותיו באופן אישי וצמוד – החל מהשלב הראשוני של בחינת המצב הכלכלי ועד למציאת הפתרון המשפטי והמעשי היעיל ביותר להסדרת החובות ולפתיחת דף חדש בחיים.
+                            </p>
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                הגישה במשרד משלבת מקצועיות, רגישות והבנה אנושית, תוך ראייה רחבה והתייחסות לכל ההיבטים הכלכליים, האישיים והמשפחתיים של הלקוח.
+                            </p>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold mb-4 text-[#1a1a1a] text-right">שירותים עיקריים בתחום חדלות פירעון:</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">הכנת בקשות לפשיטת רגל ולצו פתיחת הליכים</h5>
+                            </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">הגנה מיידית מפני נושים, עיקולים וצווי הוצאה לפועל</h5>
+                        </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ניהול משא ומתן והסדרי חוב מול נושים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">בקשות לצווי עיכוב הליכים וביטול עיקולים</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">איחוד תיקים וייצוג בחקירות</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">קבלת הפטר ומחיקת חובות</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">השבת רישיון נהיגה שנשלל עקב חובות</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייצוג חייבים וזוכים בכל לשכות ההוצאה לפועל</h5>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
                 </div>
             </div>
                     </div>
                     
+<<<<<<< HEAD
                     <!-- משפט מסחרי -->
                     <div class="practice-card">
                         <div class="practice-header" onclick="togglePracticeCard(this)">
@@ -946,10 +679,59 @@
                     </div>
                             <div class="practice-cta">
                                 <a href="contact.html" class="cta-button">התייעץ עכשיו</a>
+=======
+                            <div class="text-center">
+                                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#c9a55c] shadow-lg transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]">
+                                    התייעץ עכשיו עם עו"ד יניב גיל וקבל הגנה מקצועית
+                                </a>
+                            </div>
+            </div>
+        </div>
+                
+                    <!-- Civil Law Section -->
+                    <div id="civil-law" class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 border-b border-gray-200 cursor-pointer" onclick="toggleContent('civil-content')">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-2xl font-bold text-[#1a1a1a] text-right">סדר דין אזרחי ומקרקעין</h3>
+                                <button class="bg-[#c9a55c] text-white px-4 py-2 rounded-lg hover:bg-[#b8944a] transition-colors duration-200">
+                                    קרא עוד
+                                </button>
+                            </div>
+                        </div>
+                        <div id="civil-content" class="hidden p-6">
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                ייצוג מקצועי בתביעות אזרחיות, דיני חוזים, נזיקין, מקרקעין וכל סוגי הסכסוכים המסחריים. אנו מספקים ליווי משפטי מקיף בכל תחומי המשפט האזרחי.
+                            </p>
+                            <p class="text-gray-700 mb-6 text-right leading-relaxed">
+                                עו״ד דויטש, מומחה לדיני מקרקעין ולסדר דין אזרחי, מעניק ייצוג מקצועי ויעיל בתביעות אזרחיות מורכבות, עם דגש על השגת התוצאות הטובות ביותר עבור הלקוחות.
+                            </p>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold mb-4 text-[#1a1a1a] text-right">תחומי התמחות:</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">עסקאות מקרקעין מקצועיות ומקיפות</h5>
+                            </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">דיני חוזים ואכיפת חוזים</h5>
+                        </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">תביעות נזיקין</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייצוג בבתי משפט</h5>
+                                </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייעוץ משפטי מקיף</h5>
+            </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-[#c9a55c]">
+                                        <h5 class="font-semibold text-[#1a1a1a] mb-2 text-right">ייצוג בסכסוכים מסחריים</h5>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
                         </div>
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                     <!-- דיני חוזים -->
                     <div class="practice-card">
                         <div class="practice-header" onclick="togglePracticeCard(this)">
@@ -994,14 +776,26 @@
                         </div>
                         </div>
                 </div>
+=======
+                            <div class="text-center">
+                                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#c9a55c] shadow-lg transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]">
+                                    התייעץ עכשיו עם עו"ד דויטש – קבל ייצוג מקצועי ויעיל
+                                </a>
+                            </div>
+                        </div>
+                                </div>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
             </div>
         </div>
     </section>
     
+<<<<<<< HEAD
         <!-- Section Separator -->
         <div class="section-separator black"></div>
         <div class="section-separator gold"></div>
     
+=======
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
         <!-- CTA Section -->
         <section class="bg-[#1a1a1a] text-white py-16 text-center relative overflow-hidden">
             <div class="container mx-auto px-4">
@@ -1012,10 +806,13 @@
                 </a>
             </div>
         </section>
+<<<<<<< HEAD
         
         <!-- Section Separator -->
         <div class="section-separator black"></div>
         <div class="section-separator gold"></div>
+=======
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
     </main>
 
     <!-- Footer -->
@@ -1030,19 +827,29 @@
                         <li><a href="attorneys.html" class="hover:text-white transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">תחומי התמחות</a></li>
                         <li><a href="articles.html" class="hover:text-white transition-colors duration-200">מאמרים</a></li>
+<<<<<<< HEAD
                         <li><a href="media.html" class="hover:text-white transition-colors duration-200">מדיה</a></li>
+=======
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
                         <li><a href="contact.html" class="hover:text-white transition-colors duration-200">צור קשר</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
                     <ul class="space-y-2">
+<<<<<<< HEAD
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">דיני משפחה</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">חדלות פירעון</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">סדר דין אזרחי</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">הוצאה לפועל</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">מקרקעין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-white transition-colors duration-200">משפט מסחרי</a></li>
+=======
+                        <li><a href="practice-areas.html#family-law" class="hover:text-white transition-colors duration-200">דיני משפחה, ירושות וצוואות</a></li>
+                        <li><a href="practice-areas.html#bankruptcy" class="hover:text-white transition-colors duration-200">חדלות פירעון והוצאה לפועל</a></li>
+                        <li><a href="practice-areas.html#civil-law" class="hover:text-white transition-colors duration-200">סדר דין אזרחי ומקרקעין</a></li>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
             </ul>
                 </div>
                 <div>
@@ -1050,6 +857,10 @@
                     <div class="space-y-4">
                         <p><strong>טלפון:</strong><br><a href="tel:03-609-2414" class="hover:text-white">03-609-2414</a></p>
                         <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-white">054-8184581</a></p>
+<<<<<<< HEAD
+=======
+                        <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-white">03-6092413</a></p>
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
                         <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-white">yanivgil@gmail.com</a></p>
                         <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
                     </div>
@@ -1085,6 +896,7 @@
             }
         });
 
+<<<<<<< HEAD
         // Scroll to next section function
         function scrollToNextSection() {
             const mainContent = document.querySelector('main');
@@ -1154,6 +966,123 @@
                 }
             });
             
+=======
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+            });
+        });
+            
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Practice areas functionality
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            const button = content.parentElement.querySelector('button');
+            
+            if (content) {
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    if (button) button.textContent = 'סגור';
+                } else {
+                    content.classList.add('hidden');
+                    if (button) button.textContent = 'קרא עוד';
+                }
+            }
+        }
+
+        // Function to open content by ID
+        function openContentById(contentId) {
+            console.log('openContentById called with:', contentId);
+            const content = document.getElementById(contentId);
+            console.log('Content element found:', content);
+            if (content) {
+                content.classList.remove('hidden');
+                console.log('Content opened successfully');
+                // Find the button in the parent section
+                const section = content.closest('.bg-white.rounded-xl.shadow-lg');
+                console.log('Section found:', section);
+                if (section) {
+                    const button = section.querySelector('button');
+                    console.log('Button found:', button);
+                    if (button) {
+                        button.textContent = 'סגור';
+                        console.log('Button text updated to סגור');
+                    }
+                }
+            } else {
+                console.error('Content element not found for ID:', contentId);
+            }
+        }
+
+        // Check for hash on page load and open corresponding section
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded event fired');
+            const hash = window.location.hash;
+            console.log('Current hash:', hash);
+            if (hash) {
+                const targetId = hash.substring(1);
+                console.log('Target ID extracted:', targetId);
+                if (targetId === 'family-law' || targetId === 'bankruptcy' || targetId === 'civil-law') {
+                    console.log('Valid target ID found, opening section...');
+                    setTimeout(() => {
+                        // Map the section IDs to content IDs
+                        let contentId = targetId;
+                        if (targetId === 'family-law') contentId = 'family-content';
+                        if (targetId === 'civil-law') contentId = 'civil-content';
+                        if (targetId === 'bankruptcy') contentId = 'bankruptcy-content';
+                        
+                        console.log('Opening content for:', contentId);
+                        openContentById(contentId);
+                        // Scroll to the section
+                        const section = document.getElementById(targetId);
+                        console.log('Section element found:', section);
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            console.log('Scrolled to section:', targetId);
+                        } else {
+                            console.error('Section not found for ID:', targetId);
+                        }
+                    }, 100);
+                } else {
+                    console.log('Target ID not in valid list:', targetId);
+                }
+            } else {
+                console.log('No hash found in URL');
+            }
+>>>>>>> 1d9aec55dfa9b0535c77602d0314bcddb3fe324e
 });
 </script>
 </body>
