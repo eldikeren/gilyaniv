@@ -1,0 +1,21 @@
+# Exclude large files from Vercel deployment
+node_modules
+*.log
+audit-*.json
+lighthouse-*.json
+*.mp4
+*.mov
+*.zip
+*.csv
+*.pdf
+*.webm
+*.gif
+# Exclude nested duplicate directories
+yaniv-gil-php/
+Website Performance & Design Auditor/
+# Keep only essential images, exclude large ones
+*.png
+*.jpg
+*.jpeg
+!images/new-logo.png
+!images/Yaniv-Gil-Law-Office-Notary_text.avif

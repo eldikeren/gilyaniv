@@ -1,0 +1,22 @@
+{
+  "name": "yaniv-gil-law-office",
+  "version": "1.0.0",
+  "description": "Yaniv Gil Law Office Website",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "upload:videos": "node scripts/upload-videos.js",
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - serve with any web server'"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.19.2"
+  },
+  "keywords": [
+    "law",
+    "website",
+    "static"
+  ],
+  "author": "Yaniv Gil Law Office",
+  "license": "MIT"
+}
