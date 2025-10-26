@@ -25,3 +25,5 @@ images/*.png
 !images/Yaniv-Gil-Law-Office-Notary_logo.avif
 # Allow all icon files (they're small)
 !images/icons/*
+# Explicitly allow Mako logo
+!images/icons/mako logo.png
