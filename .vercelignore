@@ -13,6 +13,7 @@ lighthouse-*.json
 # Exclude nested duplicate directories
 yaniv-gil-php/
 Website Performance & Design Auditor/
+Pages/
 # Keep only essential images, exclude large ones
 *.png
 *.jpg
