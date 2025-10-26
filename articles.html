@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאמרים ופרסומים - משרד עו"ד יניב גיל - v2.0</title>
+    <title>מאמרים ופרסומים - משרד עו"ד יניב גיל - v3.0</title>
     <meta name="description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים - משרד עו״ד יניב גיל">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/new-logo.png">
@@ -1431,7 +1431,7 @@
         });
 
         
-
+        
         document.getElementById('close-mobile-menu').addEventListener('click', function() {
 
             document.getElementById('mobile-menu').classList.add('translate-x-full');
@@ -1455,7 +1455,7 @@
             let currentFilter = 'all';
 
             
-
+            
             // Filter functionality
 
             filterButtons.forEach(button => {
@@ -1477,7 +1477,7 @@
                     button.setAttribute('aria-pressed', 'true');
 
                     
-
+                    
                     // Apply filter
 
                     currentFilter = button.getAttribute('data-filter');
@@ -1489,13 +1489,13 @@
             });
 
             
-
+            
             // Sort functionality
 
             sortSelect.addEventListener('change', filterAndSortArticles);
 
             
-
+            
             function filterAndSortArticles() {
 
                 // Filter articles
@@ -1515,13 +1515,13 @@
                 });
 
                 
-
+                
                 // Show/hide empty state message
 
                 emptyState.hidden = visibleCount > 0;
 
                 
-
+                
                 // Sort visible articles
 
                 const sortValue = sortSelect.value;
@@ -1531,7 +1531,7 @@
                 const articlesGrid = document.getElementById('articlesGrid');
 
                 
-
+                
                 visibleArticles.sort((a, b) => {
 
                     if (sortValue === 'new') {
@@ -1557,7 +1557,7 @@
                 });
 
                 
-
+                
                 // Reorder in DOM
 
                 visibleArticles.forEach(article => {
@@ -1569,7 +1569,7 @@
             }
 
             
-
+            
             // Check URL for filter parameter
 
             const urlParams = new URLSearchParams(window.location.search);
@@ -1591,7 +1591,7 @@
             }
 
             
-
+            
             // Initial filter and sort
 
             filterAndSortArticles();
@@ -1633,7 +1633,7 @@
             const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
             
-
+            
             // Open menu
 
             if (mobileMenuButton) {
@@ -1649,7 +1649,7 @@
             }
 
             
-
+            
             // Close menu
 
             if (closeMenuButton) {
@@ -1665,7 +1665,7 @@
             }
 
             
-
+            
             // Close menu when clicking a link
 
             mobileMenuLinks.forEach(link => {
@@ -1681,7 +1681,7 @@
             });
 
             
-
+            
             // Close menu when clicking outside
 
             mobileMenu.addEventListener('click', function(e) {
