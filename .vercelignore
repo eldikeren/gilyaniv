@@ -10,8 +10,9 @@ lighthouse-*.json
 yaniv-gil-php/
 Website Performance & Design Auditor/
 Pages/
-# Exclude large video files (keep only compressed ones)
-images/*.mp4
+# Allow essential videos
+!images/index.mp4
+!images/contact.mp4
 !images/dog-compressed.mp4
 # Exclude large image files but keep essential ones
 images/*.jpeg
