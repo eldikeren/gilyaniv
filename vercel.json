@@ -1,11 +1,11 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/", "destination": "/yaniv-gil-php/index.html" },
-    { "source": "/about", "destination": "/yaniv-gil-php/about.html" },
-    { "source": "/about.html", "destination": "/yaniv-gil-php/about.html" },
-    { "source": "/(.*)\\.php", "destination": "/yaniv-gil-php/$1.html" },
-    { "source": "/(.*)", "destination": "/yaniv-gil-php/$1" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about.html", "destination": "/about.html" },
+    { "source": "/(.*)\\.php", "destination": "/$1.html" },
+    { "source": "/(.*)", "destination": "/$1" }
   ],
   "headers": [
     {
