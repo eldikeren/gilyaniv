@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר - עו"ד יניב גיל</title>
+    <meta name="description" content="צרו קשר עם משרד עו״ד יניב גיל לקבלת ייעוץ משפטי מקצועי. ייעוץ ראשוני חינם בתחומי דיני משפחה, חדלות פירעון וסדר דין אזרחי.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="צור קשר - משרד עו״ד יניב גיל">
+    <meta property="og:description" content="ייעוץ משפטי מקצועי בדיני משפחה, חדלות פירעון וסדר דין אזרחי. ייעוץ ראשוני חינם.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="משרד עו״ד יניב גיל - לוגו">
+    <meta property="og:url" content="https://gilyaniv.vercel.app/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="צור קשר - משרד עו״ד יניב גיל">
+    <meta name="twitter:description" content="ייעוץ משפטי מקצועי בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
+    <meta name="twitter:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+    body {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+        .prose p {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .mobile-menu-open {
+            display: flex !important;
+        }
+        .header-content {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        .h-80vh {
+            height: 80vh;
+        }
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 60vh;
+            }
+        }
+        .header-logo {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .header-text-logo {
+            width: 220px; 
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .scrolled .header-logo {
+            height: 40px;
+        }
+        .scrolled .header-text-logo {
+            width: 170px;
+    }
+    @media (max-width: 768px) {
+            .text-4xl { font-size: 2rem; }
+            .text-5xl { font-size: 2.5rem; }
+            .text-6xl { font-size: 3rem; }
+        }
+    .card {
+            transition: all 0.3s ease;
+        }
+    .card:hover {
+      transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #b8941f, #f4d03f);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        /* Scroll down arrow animation */
+        .scroll-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #b8941f;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+        .scroll-arrow:hover {
+            color: #1a1a1a;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+      width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .mobile-menu-links {
+      display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #b8941f;
+      text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-links a:hover {
+            background: #b8941f;
+            color: #1a1a1a;
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Vercel Speed Insights -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html">
+                    <img src="images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="פתח תפריט נייד">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#b8941f] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+                    </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close" aria-label="סגור תפריט נייד">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="index.html" class="mobile-menu-link">בית</a>
+                    <a href="index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section for Contact Page -->
+        <section class="relative h-80vh flex items-center justify-center text-white text-center">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="images/contact.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+            <div class="relative z-10 p-6 md:p-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">צור קשר</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light">אנחנו כאן לעזור לכם</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-8 py-4 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="tel:0548184581">
+                        התקשר עכשיו
+                    </a>
+                    <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-transparent px-8 py-4 text-base font-semibold text-[#b8941f] transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="#contact-form">
+                        שלח הודעה
+                    </a>
+                </div>
+            </div>
+            <!-- Scroll down arrow -->
+            <div class="scroll-arrow" onclick="scrollToNextSection()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+        </div>
+    </section>
+
+        <!-- Contact Information Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-800">פרטי התקשרות</h2>
+                    <p class="text-lg text-gray-600">התקשרו אלינו בכל עת לקבלת ייעוץ משפטי מקצועי</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Phone Card -->
+                    <article class="card bg-white rounded-xl shadow-lg p-8 text-center relative">
+                        <div class="mb-6">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">טלפון</h3>
+                            <p class="text-gray-600 mb-4">התקשרו עכשיו לייעוץ טלפוני ראשוני עם עורך דין מנוסה בתחום</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-600 mb-6">
+                            <p><strong>טלפון ראשי:</strong> 03-6092414</p>
+                            <p><strong>נייד:</strong> 054-8184581</p>
+                                                       <p><strong>פקס:</strong> 03-6092413</p>
+                            <p><strong>שעות פעילות:</strong> א'-ה' 9:00-18:00</p>
+                </div>
+                        <a class="inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-6 py-3 text-base font-medium text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" href="tel:054-8184581">
+                            התקשר עכשיו
+                        </a>
+                </article>
+
+                    <!-- Email Card -->
+                    <article class="card bg-white rounded-xl shadow-lg p-8 text-center relative">
+                        <div class="mb-6">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">אימייל</h3>
+                            <p class="text-gray-600 mb-4">שלחו לנו הודעה ונחזור אליכם בהקדם האפשרי</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-600 mb-6">
+                            <p><strong>אימייל:</strong> yanivgil@gmail.com</p>
+                            <p><strong>זמן תגובה:</strong> עד 24 שעות</p>
+                </div>
+                        <a class="inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-6 py-3 text-base font-medium text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" href="mailto:yanivgil@gmail.com">
+                            שלח אימייל
+                        </a>
+                </article>
+
+                    <!-- Address Card -->
+                    <article class="card bg-white rounded-xl shadow-lg p-8 text-center relative">
+                        <div class="mb-6">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">כתובת המשרד</h3>
+                            <p class="text-gray-600 mb-4">המשרד ממוקם במרכז תל אביב, בקלות נגישות</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-600 mb-6">
+                            <p>מגדל "WE-TLV"</p>
+                            <p>דרך מנחם בגין 150</p>
+                            <p>קומה 7, תל-אביב</p>
+                            <p><strong>חניה חינם ללקוחות</strong></p>
+                        </div>
+                        <a class="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-transparent px-6 py-3 text-base font-medium text-gray-700 transition-all duration-300 hover:bg-gray-100 hover:border-gray-400" href="#map">
+                            הצג במפה
+                        </a>
+                    </article>
+                </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-800">מיקום המשרד</h2>
+                <p class="text-lg text-gray-600">מגדל "WE-TLV", דרך מנחם בגין 150, קומה 7, תל-אביב</p>
+            </div>
+            
+            <!-- Map Container -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg" style="height: 400px;">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.5!2d34.7805!3d32.0853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sDerech%20Menachem%20Begin%20150%2C%20Tel%20Aviv-Yafo!5e0!3m2!1sen!2sil!4v1234567890123!5m2!1sen!2sil"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
+                    <a href="https://waze.com/ul?q=מגדל%20WE-TLV%20דרך%20מנחם%20בגין%20150%20תל%20אביב" 
+                       target="_blank" 
+                       class="inline-flex items-center justify-center rounded-full bg-[#b8941f] text-white px-6 py-3 text-base font-medium transition-all duration-300 hover:bg-[#a0884a] hover:transform hover:scale-105">
+                        <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        ניווט עם Waze
+                    </a>
+                    <a href="https://maps.google.com/?q=מגדל%20WE-TLV%20דרך%20מנחם%20בגין%20150%20תל%20אביב" 
+                       target="_blank" 
+                       class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-transparent text-[#b8941f] px-6 py-3 text-base font-medium transition-all duration-300 hover:bg-[#b8941f] hover:text-white">
+                        <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        פתח ב-Google Maps
+                    </a>
+                </div>
+                
+                <!-- Additional Info -->
+                <div class="mt-6 text-center text-sm text-gray-600">
+                    <p><strong>חניה:</strong> חניה חינם ללקוחות המשרד</p>
+                    <p><strong>נגישות:</strong> המשרד נגיש לנכים</p>
+                    <p><strong>תחבורה ציבורית:</strong> תחנת רכבת "סבידור" במרחק 5 דקות הליכה</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Form Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-800">שלחו לנו הודעה</h2>
+                        <p class="text-lg text-gray-600">מלאו את הטופס ונחזור אליכם בהקדם האפשרי</p>
+            </div>
+            
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <article class="card bg-white rounded-xl shadow-lg p-8 relative">
+                            <form id="contact-form" novalidate class="space-y-6">
+                        <div>
+                                    <label for="from_name" class="block text-sm font-medium text-gray-700 mb-2">שם מלא *</label>
+                                    <input id="from_name" name="from_name" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                        </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                                        <label for="from_phone" class="block text-sm font-medium text-gray-700 mb-2">טלפון *</label>
+                                        <input id="from_phone" name="from_phone" type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                    </div>
+                        <div>
+                                        <label for="from_email" class="block text-sm font-medium text-gray-700 mb-2">אימייל *</label>
+                                        <input id="from_email" name="from_email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                        </div>
+                    </div>
+                                
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">נושא *</label>
+                                    <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                <option value="">בחרו נושא</option>
+                                <option value="family">דיני משפחה</option>
+                                <option value="bankruptcy">חדלות פירעון</option>
+                                <option value="civil">סדר דין אזרחי</option>
+                                <option value="real-estate">מקרקעין</option>
+                                <option value="commercial">משפט מסחרי</option>
+                                <option value="labor">דיני עבודה</option>
+                                <option value="consultation">ייעוץ כללי</option>
+                                <option value="other">אחר</option>
+                            </select>
+                        </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">דחיפות</label>
+                                        <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                <option value="normal">רגיל</option>
+                                <option value="urgent">דחוף</option>
+                                <option value="very-urgent">דחוף מאוד</option>
+                            </select>
+                        </div>
+                                    <div>
+                                        <label for="preferred-contact" class="block text-sm font-medium text-gray-700 mb-2">אופן התקשרות מועדף</label>
+                                        <select id="preferred-contact" name="preferred-contact" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                <option value="phone">טלפון</option>
+                                <option value="email">אימייל</option>
+                                <option value="whatsapp">ווטסאפ</option>
+                                <option value="meeting">פגישה במשרד</option>
+                            </select>
+                        </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">תיאור הבעיה *</label>
+                                    <textarea id="message" name="message" rows="6" required placeholder="תארו את הבעיה המשפטית שלכם..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200"></textarea>
+                        </div>
+                                
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
+                                    <label for="privacy" class="mr-3 text-sm text-gray-600">
+                                אני מסכים למדיניות הפרטיות ולקבלת עדכונים
+                            </label>
+                        </div>
+                                
+                                <button class="w-full inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-8 py-4 text-base font-semibold text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" type="submit">
+                                    שלח הודעה
+                                </button>
+                            </form>
+                        </article>
+
+                        <!-- FAQ Section -->
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">שאלות נפוצות</h3>
+                            
+                            <div class="space-y-4">
+                                <details class="card bg-white rounded-xl shadow-lg p-6 relative">
+                                    <summary class="font-semibold text-gray-800 cursor-pointer hover:text-yellow-600 transition-colors duration-200">
+                                        ייעוץ טלפוני ראשוני
+                                    </summary>
+                                    <p class="mt-3 text-gray-600">אנו מציעים ייעוץ טלפוני ראשוני לכל לקוח חדש. הייעוץ כולל הערכת המקרה והמלצות ראשוניות.</p>
+                                </details>
+                                
+                                <details class="card bg-white rounded-xl shadow-lg p-6 relative">
+                                    <summary class="font-semibold text-gray-800 cursor-pointer hover:text-yellow-600 transition-colors duration-200">
+                                        כמה זמן לוקח לקבל תשובה?
+                                    </summary>
+                                    <p class="mt-3 text-gray-600">אנו מתחייבים לענות לכל פנייה תוך 24 שעות. במקרים דחופים, נחזור אליכם תוך מספר שעות.</p>
+                                </details>
+                                
+                                <details class="card bg-white rounded-xl shadow-lg p-6 relative">
+                                    <summary class="font-semibold text-gray-800 cursor-pointer hover:text-yellow-600 transition-colors duration-200">
+                                        האם אפשר לקבוע פגישה בשעות הערב?
+                                    </summary>
+                                    <p class="mt-3 text-gray-600">כן, אנו מציעים פגישות בשעות הערב בתיאום מראש. פגישות כאלה מתקיימות בדרך כלל בין 18:00-20:00.</p>
+                                </details>
+                                
+                                <details class="card bg-white rounded-xl shadow-lg p-6 relative">
+                                    <summary class="font-semibold text-gray-800 cursor-pointer hover:text-yellow-600 transition-colors duration-200">
+                                        האם אתם מטפלים בתיקים בכל הארץ?
+                                    </summary>
+                                    <p class="mt-3 text-gray-600">כן, אנו מטפלים בתיקים בכל רחבי הארץ. המשרד ממוקם בתל אביב, אך אנו זמינים ללקוחות מכל מקום.</p>
+                                </details>
+                            </div>
+
+                            <!-- Dog Video Section -->
+                            <div class="mt-8">
+                                <video 
+                                    autoplay 
+                                    muted 
+                                    loop 
+                                    playsinline 
+                                    preload="none" 
+                                    class="w-full h-auto rounded-xl shadow-lg"
+                                    style="max-height: 400px; object-fit: cover;"
+                                >
+                                    <source src="images/dog-compressed.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors duration-200">בית</a></li>
+                        <li><a href="about.html" class="hover:text-yellow-400 transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" class="hover:text-yellow-400 transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-yellow-400 transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" class="hover:text-yellow-400 transition-colors duration-200">פרסומים מקצועיים</a></li>
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-yellow-400 transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-400 transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <ul class="space-y-2">
+                        <li><a href="practice-areas.html#family-law" class="hover:text-yellow-400 transition-colors duration-200">דיני משפחה, ירושות וצוואות</a></li>
+                        <li><a href="practice-areas.html#bankruptcy" class="hover:text-yellow-400 transition-colors duration-200">חדלות פירעון והוצאה לפועל</a></li>
+                        <li><a href="practice-areas.html#civil-law" class="hover:text-yellow-400 transition-colors duration-200">סדר דין אזרחי ומקרקעין</a></li>
+            </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
+                    <div class="space-y-4">
+                        <p><strong>טלפון ראשי:</strong><br><a href="tel:03-6092414" class="hover:text-yellow-400">03-6092414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-yellow-400">054-8184581</a></p>
+                        <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-yellow-400">03-6092413</a></p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-yellow-400">yanivgil@gmail.com</a></p>
+                        <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <div>
+                    <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                    <p class="mt-2">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Eladdigital</a></p>
+                </div>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-yellow-400 transition-colors duration-200">מדיניות פרטיות</a>
+                    <a href="terms-of-use.html" class="hover:text-yellow-400 transition-colors duration-200">תנאי שימוש</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script for the shrinking header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            const logo = header.querySelector('.header-logo');
+            const textLogo = header.querySelector('.header-text-logo');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-xl');
+                header.classList.remove('py-6', 'shadow-md');
+                if (logo) {
+                    logo.classList.add('scrolled');
+                }
+                if (textLogo) {
+                    textLogo.classList.add('scrolled');
+                }
+            } else {
+                header.classList.remove('py-3', 'shadow-xl');
+                header.classList.add('py-6', 'shadow-md');
+                if (logo) {
+                    logo.classList.remove('scrolled');
+                }
+                if (textLogo) {
+                    textLogo.classList.remove('scrolled');
+                }
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // Simple mobile menu toggle - you can expand this as needed
+                    console.log('Mobile menu clicked');
+                });
+            }
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('תודה על פנייתכם! נחזור אליכם בהקדם האפשרי.');
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const yOffset = -96; // Adjust for fixed header height
+                    const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                    history.pushState(null, '', `#${targetId}`);
+                }
+            });
+        });
+
+        // Scroll to next section function
+        function scrollToNextSection() {
+            const mainContent = document.querySelector('main section:nth-child(2)');
+            if (mainContent) {
+                const yOffset = -96; // Adjust for fixed header height
+                const y = mainContent.getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                });
+            });
+            
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+        });
+
+        // Initialize EmailJS when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize EmailJS
+            emailjs.init("bZa2jc2c_0IfnuYK4");
+            
+            
+            // Contact form handling with EmailJS
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'שולח...';
+                    submitBtn.disabled = true;
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    
+                    // Convert subject to Hebrew if needed
+                    const subject = formData.get('subject');
+                    const hebrewSubjects = {
+                        'family': 'דיני משפחה',
+                        'bankruptcy': 'חדלות פירעון',
+                        'civil': 'סדר דין אזרחי',
+                        'real-estate': 'מקרקעין',
+                        'commercial': 'משפט מסחרי',
+                        'labor': 'דיני עבודה',
+                        'consultation': 'ייעוץ כללי',
+                        'other': 'אחר'
+                    };
+                    const hebrewSubject = hebrewSubjects[subject] || subject;
+                    
+                    const templateParams = {
+                        from_name: formData.get('from_name'),
+                        from_phone: formData.get('from_phone'),
+                        from_email: formData.get('from_email'),
+                        subject: hebrewSubject,
+                        message: formData.get('message'),
+                        to_email: 'yanivgil@gmail.com',
+                        reply_to: formData.get('from_email')
+                    };
+                    
+                    // Try to send email using EmailJS with correct recipient
+                    if (typeof emailjs !== 'undefined') {
+                        
+                        // The template expects 'email' field to be the recipient
+                        // We want to send TO yanivgil@gmail.com, not to the user
+                        const emailParams = {
+                            ...templateParams,
+                            email: 'yanivgil@gmail.com', // This is the TO field in the template
+                            reply_to: templateParams.from_email
+                        };
+                        
+                        emailjs.send('service_3vdbcvb', 'template_bbqt03j', emailParams)
+                            .then(function(response) {
+                                alert('תודה על פנייתכם! ההודעה נשלחה בהצלחה ונחזור אליכם בהקדם.');
+                                document.getElementById('contact-form').reset();
+                            }, function(error) {
+                                
+                                // Fallback to mailto
+                                const emailBody = `שלום עו"ד יניב גיל,
+
+קיבלתי פנייה חדשה מהאתר:
+
+פרטי הפנייה:
+שם: ${templateParams.from_name}
+טלפון: ${templateParams.from_phone}
+אימייל: ${templateParams.from_email}
+נושא: ${templateParams.subject}
+הודעה: ${templateParams.message}
+
+בברכה,
+האתר`;
+
+                                const mailtoLink = `mailto:yanivgil@gmail.com?subject=${encodeURIComponent('פנייה חדשה מהאתר - ' + templateParams.subject)}&body=${encodeURIComponent(emailBody)}`;
+                                window.location.href = mailtoLink;
+                                alert('תודה על פנייתכם! נפתח עבורכם תוכנת הדואר האלקטרוני. אנא שלחו את ההודעה.');
+                            })
+                            .finally(function() {
+                                // Reset button state
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                            });
+                    } else {
+                        alert('שגיאה בטעינת שירות השליחה. אנא נסו שוב מאוחר יותר.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+});
+</script>
+</body>
+</html>
