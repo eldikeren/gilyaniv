@@ -2,21 +2,34 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>משרד עו"ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>משרד עורכי הדין יניב גיל ו־שות' | דיני משפחה • חדלות פירעון • סדר דין אזרחי, תל-אביב</title>
     <meta name="description" content="משרד עו״ד יניב גיל ושות' - מומחים בדיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל. ניסיון של למעלה מ-20 שנה.">
     <meta property="og:title" content="משרד עו״ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
     <meta property="og:description" content="ייעוץ וייצוג משפטי מקצועי עם ניסיון של למעלה מ-20 שנה. דיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/new-logo.png">
+    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="משרד עו״ד יניב גיל - לוגו">
+    <meta property="og:url" content="https://gilyaniv.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="משרד עו״ד יניב גיל - מומחים בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
     <meta name="twitter:description" content="ייעוץ וייצוג משפטי מקצועי עם ניסיון של למעלה מ-20 שנה.">
-    <meta name="twitter:image" content="images/new-logo.png">
+    <meta name="twitter:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="apple-touch-icon" href="images/new-logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Vercel Speed Insights -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
     <!-- Preload critical resources -->
     <link rel="preload" href="images/index.mp4" as="video" type="video/mp4">
     <link rel="preload" href="images/new-logo.png" as="image">
@@ -27,6 +40,16 @@
         body {
             font-family: 'Heebo', sans-serif;
             direction: rtl;
+            /* Mobile performance optimizations */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            /* Fix for Galaxy devices */
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            /* Prevent horizontal scroll on mobile */
+            overflow-x: hidden;
         }
         .h-80vh {
             height: 80vh;
@@ -196,13 +219,254 @@
             color: #1a1a1a;
         }
         
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
+        /* Comprehensive Mobile Responsiveness */
+        
+        /* Galaxy and Android devices - specific fixes */
+        @media screen and (max-width: 768px) and (orientation: portrait) {
             .h-80vh {
-                height: 60vh;
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .scroll-arrow {
+                bottom: 20px;
+            }
+            /* Fix for Galaxy viewport issues */
+            body {
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+            /* Ensure proper scaling on Galaxy devices */
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        
+        /* iPhone SE (375x667) */
+        @media screen and (max-width: 375px) and (max-height: 667px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 45px;
+            }
+            .header-text-logo {
+                width: 160px;
+            }
+            .scrolled .header-logo {
+                height: 35px;
+            }
+            .scrolled .header-text-logo {
+                width: 130px;
+            }
+            h1 {
+                font-size: 1.75rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.25rem !important;
+                line-height: 1.3;
+            }
+            .scroll-arrow {
+                bottom: 15px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* iPhone 12/13/14 (390x844) */
+        @media screen and (min-width: 376px) and (max-width: 390px) and (max-height: 844px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 50px;
+            }
+            .header-text-logo {
+                width: 180px;
+            }
+            .scrolled .header-logo {
+                height: 38px;
+            }
+            .scrolled .header-text-logo {
+                width: 150px;
+            }
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.5rem !important;
+                line-height: 1.3;
+            }
+        }
+        
+        /* iPhone 12/13/14 Pro Max (428x926) */
+        @media screen and (min-width: 391px) and (max-width: 428px) and (max-height: 926px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 55px;
+            }
+            .header-text-logo {
+                width: 200px;
+            }
+            .scrolled .header-logo {
+                height: 42px;
+            }
+            .scrolled .header-text-logo {
+                width: 165px;
+            }
+            h1 {
+                font-size: 2.25rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3;
+            }
+        }
+        
+        /* iPhone 15 Plus/Pro Max (430x932) */
+        @media screen and (min-width: 429px) and (max-width: 430px) and (max-height: 932px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.875rem !important;
+                line-height: 1.3;
+            }
+        }
+        
+        /* Galaxy S21/S22/S23 (360x800) */
+        @media screen and (max-width: 360px) and (max-height: 800px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 40px;
+            }
+            .header-text-logo {
+                width: 140px;
+            }
+            .scrolled .header-logo {
+                height: 32px;
+            }
+            .scrolled .header-text-logo {
+                width: 120px;
+            }
+            h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.125rem !important;
+                line-height: 1.3;
+            }
+            .scroll-arrow {
+                bottom: 10px;
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Galaxy S21/S22/S23 Ultra (412x915) */
+        @media screen and (min-width: 361px) and (max-width: 412px) and (max-height: 915px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 52px;
+            }
+            .header-text-logo {
+                width: 190px;
+            }
+            .scrolled .header-logo {
+                height: 40px;
+            }
+            .scrolled .header-text-logo {
+                width: 160px;
+            }
+            h1 {
+                font-size: 1.875rem !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 1.375rem !important;
+                line-height: 1.3;
+            }
+        }
+        
+        /* Landscape orientation fixes */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .header-logo {
+                height: 35px;
+            }
+            .header-text-logo {
+                width: 120px;
+            }
+            .scrolled .header-logo {
+                height: 28px;
+            }
+            .scrolled .header-text-logo {
+                width: 100px;
+            }
+            h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.1;
+            }
+            h2 {
+                font-size: 1.125rem !important;
+                line-height: 1.2;
             }
             .scroll-arrow {
                 bottom: 5px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* General mobile improvements */
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            .scroll-arrow {
+                bottom: 20px;
+            }
+            /* Fix text wrapping issues */
+            h1, h2, p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+            }
+            /* Improve touch targets */
+            button, a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            /* Better spacing for mobile */
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            /* Fix for Galaxy browser issues */
+            * {
+                -webkit-tap-highlight-color: transparent;
             }
         }
         
@@ -239,7 +503,8 @@
                     <li><a href="#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                     <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                     <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                    <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                    <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
                     <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                 </ul>
@@ -266,7 +531,8 @@
                     <a href="#about" class="mobile-menu-link">אודות המשרד</a>
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
                     <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
-                    <a href="articles.html" class="mobile-menu-link">מאמרים</a>
+                    <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="blog.html" class="mobile-menu-link">בלוג</a>
                     <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
                     <a href="contact.html" class="mobile-menu-link">צור קשר</a>
                 </div>
@@ -279,11 +545,14 @@
         <section class="relative h-80vh flex items-center justify-center text-white text-center">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" preload="metadata">
                 <source src="images/index.mp4" type="video/mp4">
+                <!-- Fallback for slow connections -->
+                <source src="images/index-compressed.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">העורך דין הנכון עושה את כל ההבדל</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light">לעו״ד יניב גיל ניסיון של למעלה מ-20 שנה כעורך דין מתמחה בדיני משפחה, חדלות פירעון וסדר דין אזרחי</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-2">משרד עו״ד יניב גיל ושות'</h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 text-[#b8941f]">בעל מוניטין רב בתחומי דיני משפחה וחדל״פ</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;">לעו״ד יניב גיל ניסיון של למעלה מ-20 שנה כעורך דין מומחה בדיני משפחה וחדלות&nbsp;פירעון</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-8 py-4 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="tel:0548184581">
                         התקשר עכשיו
@@ -313,7 +582,8 @@
                     <p class="text-lg text-gray-600">הסיפור שלנו, המומחיות שלנו, והמחויבות שלנו ללקוחותינו</p>
                 </div>
                 <div class="prose max-w-3xl mx-auto text-lg text-gray-700">
-                    <p>משרד עורכי הדין יניב גיל ושות' מתמחה במתן פתרונות משפטיים מקיפים בתחומי דיני משפחה, חדלות פירעון, סדר דין אזרחי והוצאה לפועל. עם ניסיון עשיר של למעלה מ-20 שנה, המשרד מציע ייעוץ משפטי יצירתי ומקצועי, המותאם אישית לצרכיו של כל לקוח.</p>
+                    <p>משרד עורכי הדין יניב גיל ושות' מתמחה במתן פתרונות משפטיים מקיפים בתחומי דיני משפחה וחדלות פירעון. עם ניסיון עשיר של למעלה מ-20 שנה, המשרד מציע ייעוץ משפטי יצירתי ומקצועי, המותאם אישית לצרכיו של כל לקוח.</p>
+                    <p>למשרד מחלקה לדיני מקרקעין ודיני חוזים בהובלת עורך דין יריב דויטש.</p>
                     <p>אנו מאמינים כי גישה משפטית נכונה מתחילה בהבנה עמוקה של הצרכים האישיים של הלקוח. צוות המשרד פועל במקצועיות, יסודיות ודיסקרטיות מוחלטת, במטרה להוביל את הלקוחות לתוצאות המיטביות עבורם, תוך מתן יחס אישי ותמיכה לאורך כל הדרך.</p>
                 </div>
             </div>
@@ -344,8 +614,8 @@
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">חדלות פירעון והוצאה לפועל</h3>
-                            <p class="text-gray-600 mb-4">ייעוץ וליווי מקיף בהליכי חדלות פירעון ופשיטת רגל. אנו עוזרים לכם להתחיל מחדש ולשקם את המצב הכלכלי</p>
-                            <p class="text-gray-600 mb-4">הגנה מפני עיקולים, הסדרי חוב וקבלת הפטר</p>
+                            <p class="text-gray-600 mb-4">ייעוץ וליווי מקיף בהליכי חדלות פירעון ופשיטת רגל. אנו עוזרים לכם לצאת לדרך כלכלית חדשה, תוך מחיקת החובות קבלת הפטר מהחובות.</p>
+                            <p class="text-gray-600 mb-4">למשרדנו שירותים יחודיים כגון: העלאת דירוג האשראי בסיום ההליך וכן אפליקציה בלעדית ויחודית לניהול ההוצאות החודשיות.</p>
                             <a href="practice-areas.html#bankruptcy" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
                                 קרא עוד
                             </a>
@@ -353,9 +623,9 @@
                     </article>
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">סדר דין אזרחי ומקרקעין</h3>
-                            <p class="text-gray-600 mb-4">בהובלת עו"ד דויטש, מומחה לדיני מקרקעין ולסדר דין אזרחי.</p>
-                            <p class="text-gray-600 mb-4">ייצוג מקצועי בעסקאות נדל"ן, חוזים, תביעות כספיות וסכסוכים אזרחיים — עם דגש על שירות מדויק, יסודי ואמין.</p>
+                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">דיני חוזים ודיני מקרקעין</h3>
+                            <p class="text-gray-600 mb-4">בהובלת עו"ד יריב דויטש, מומחה לדיני מקרקעין, דיני חוזים וסדר דין אזרח.</p>
+                            <p class="text-gray-600 mb-4">ייצוג מקצועי בעסקאות נדל"ן, חוזים, תביעות כספיות, סכסוכים אזרחיים - מסחריים— עם דגש על שירות מדויק, יסודי ואמין.</p>
                             <a href="practice-areas.html#civil-law" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
                                 קרא עוד
                             </a>
@@ -379,23 +649,35 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
-                            <p class="text-gray-600 mb-4">ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
-                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://www.psakdin.co.il" target="_blank" rel="noopener">קרא עוד &rarr;</a>
+                            <div class="flex items-center justify-end gap-2 mb-2">
+                                <img src="images/icons/YNET.png?v=2" alt="Ynet" style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                <span class="text-xs text-gray-500">Ynet</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">פסק דין - בקשה לשקול מחדש החלטה בתיק ניכור הורי</h3>
+                            <p class="text-gray-600 mb-4">מקרה מורכב של ניכור הורי שבו הילדה נמצאת בתחושת אימה. פסק דין העוסק בהגנה על טובת הילד ובהתמודדות עם תופעת הניכור ההורי</p>
+                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://www.ynet.co.il/articles/0,7340,L-5644880,00.html" target="_blank" rel="noopener">קרא עוד &rarr;</a>
                         </div>
                     </article>
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">הגרושה מול הנושים: מי יקבל את בית המגורים?</h3>
-                            <p class="text-gray-600 mb-4">הסכם גירושין קבע שהבעל יעביר לאשתו את חלקו בנכס. אבל הרישום לא בוצע ובינתיים הוטלו על הבית עיקולים בגין חובות של הגרוש. מה החליט ביהמ״ש?</p>
-                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://www.ynet.co.il" target="_blank" rel="noopener">קרא עוד &rarr;</a>
+                            <div class="flex items-center justify-end gap-2 mb-2">
+                                <img src="images/icons/WALLA LOGO.png?v=2" alt="Walla" style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                <span class="text-xs text-gray-500">Walla</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ביטול או הפחתת דמי מזונות: הפסיקה שמשפיעה על הורים שהתגרשו</h3>
+                            <p class="text-gray-600 mb-4">שאלת תשלום מזונות לילדים משותפים היא סוגיה שכיחה וטעונה. פסק דין של העליון ביולי 2017 שינה את כללי המשחק.</p>
+                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://law.walla.co.il/item/3349298" target="_blank" rel="noopener">קרא עוד &rarr;</a>
                         </div>
                     </article>
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
-                            <p class="text-gray-600 mb-4">חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
-                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://www.mako.co.il" target="_blank" rel="noopener">קרא עוד &rarr;</a>
+                            <div class="flex items-center justify-end gap-2 mb-2">
+                                <img src="images/icons/mako-logo.png?v=2" alt="mako" style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                <span class="text-xs text-gray-500">mako</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">עקב התיישנות: חוב של מאות אלפי שקלים לא ישולם</h3>
+                            <p class="text-gray-600 mb-4">התובע המתין 19 שנים עד שתבע החזר הלוואה תוך הסתמכות על סעיף בשטר התחייבות. ביהמ"ש קבע שהסעיף אינו חוקי וההתחייבות בעייתית.</p>
+                            <a class="text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200 underline" href="https://www.mako.co.il/finances-law/law-general/Article-e0f2da5db7c4c61026.htm?sCh=3d385dd2dd5d4110&pId=1149282442" target="_blank" rel="noopener">קרא עוד &rarr;</a>
                         </div>
                     </article>
                 </div>
@@ -505,7 +787,8 @@
                         <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
                         <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                         <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                     </ul>
@@ -565,7 +848,8 @@
                 <li><a href="#about" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">אודות המשרד</a></li>
                 <li><a href="attorneys.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">עורכי דין</a></li>
                 <li><a href="practice-areas.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">תחומי התמחות</a></li>
-                <li><a href="articles.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">מאמרים</a></li>
+                <li><a href="articles.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">פרסומים מקצועיים</a></li>
+                <li><a href="blog.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">בלוג</a></li>
                 <li><a href="media.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">מדיה</a></li>
                 <li><a href="contact.html" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">צור קשר</a></li>
             </ul>

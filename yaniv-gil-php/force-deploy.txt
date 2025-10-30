@@ -1,0 +1,12 @@
+FORCE DEPLOYMENT - Version 2.0
+Date: 2025-01-27 16:00:00
+This file forces Vercel to completely redeploy the site with all latest changes.
+
+Changes included:
+- 24 articles in Yaniv Gil section
+- Fixed CSS color scheme
+- Removed duplicate files
+- Updated vercel.json configuration
+- Fixed routing issues
+
+If you see this file, the deployment was successful.

@@ -1,0 +1,4 @@
+FORCE DEPLOY V3 - FIX MAKO LOGO AND DUPLICATES
+Timestamp: 2025-01-27 18:00:00
+Version: v3.0
+Changes: Fixed Mako logo deployment, removed duplicates, updated cache headers
