@@ -147,6 +147,25 @@
             background: #b8941f;
             color: #1a1a1a;
         }
+        /* Hide video controls on mobile */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video {
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -207,8 +226,9 @@
     <main class="pt-24">
         <!-- Hero Section for Blog Page -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                <source src="images/artickels.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" class="absolute inset-0 w-full h-full object-cover" style="pointer-events: none;">
+                <source src="images/blog-compressed.mp4" type="video/mp4">
+                <source src="images/blog.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
