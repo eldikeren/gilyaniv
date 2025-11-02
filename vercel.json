@@ -27,12 +27,12 @@
         },
         {
           "key": "Last-Modified",
-          "value": "Mon, 27 Jan 2025 16:00:00 GMT"
+          "value": "Tue, 28 Jan 2025 20:00:00 GMT"
         },
-                    {
-                      "key": "X-Deployment-Version",
-                      "value": "2025-01-27-v3-FORCE-REFRESH"
-                    }
+        {
+          "key": "X-Deployment-Version",
+          "value": "2025-01-28-v4-BLOG-DEPLOY"
+        }
       ]
     }
   ]
