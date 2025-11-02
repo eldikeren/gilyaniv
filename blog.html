@@ -166,6 +166,46 @@
         video {
             pointer-events: none;
         }
+        /* Article truncation styles */
+        .article-content {
+            position: relative;
+            transition: max-height 0.3s ease;
+        }
+        .article-content.truncated {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+        }
+        .article-content.expanded {
+            display: block;
+            -webkit-line-clamp: unset;
+            -webkit-box-orient: unset;
+            overflow: visible;
+            text-overflow: unset;
+        }
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 0.75rem;
+            color: #c9a55c;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .read-more-btn:hover {
+            color: #b8941f;
+        }
+        .read-more-btn::after {
+            content: ' ←';
+            margin-right: 0.25rem;
+        }
+        .read-less-btn::after {
+            content: ' ↓';
+            margin-right: 0.25rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -1524,25 +1564,6 @@
         const articles = document.querySelectorAll('.blog-card');
         const sortSelect = document.getElementById('sort-select');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const category = button.getAttribute('data-category');
-                
-                articles.forEach(article => {
-                    if (category === 'all' || article.getAttribute('data-category') === category) {
-                        article.style.display = 'block';
-                    } else {
-                        article.style.display = 'none';
-                    }
-                });
-            });
-        });
-
         // Sort functionality
         if (sortSelect) {
             sortSelect.addEventListener('change', () => {
@@ -1567,8 +1588,126 @@
                 articlesArray.forEach(article => {
                     grid.appendChild(article);
                 });
+                
+                // Reinitialize truncation after sorting
+                setTimeout(initArticleTruncation, 50);
             });
         }
+        
+        // Reinitialize truncation after filtering
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const category = button.getAttribute('data-category');
+                
+                articles.forEach(article => {
+                    if (category === 'all' || article.getAttribute('data-category') === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+                
+                // Reinitialize truncation after filtering
+                setTimeout(initArticleTruncation, 50);
+            });
+        });
+
+        // Article expand/collapse functionality
+        function initArticleTruncation() {
+            const articleContents = document.querySelectorAll('.article-content');
+            
+            articleContents.forEach(content => {
+                // Skip if already initialized (unless we're reinitializing)
+                const existingBtn = content.nextElementSibling;
+                if (existingBtn && existingBtn.classList.contains('read-more-btn')) {
+                    // Already has a button, skip
+                    return;
+                }
+                
+                // Remove any existing initialized marker
+                delete content.dataset.initialized;
+                
+                // Measure the content height without truncation
+                const originalDisplay = content.style.display;
+                const originalMaxHeight = content.style.maxHeight;
+                content.style.display = 'block';
+                content.style.maxHeight = 'none';
+                const originalHeight = content.scrollHeight;
+                
+                // Restore styles
+                content.style.display = originalDisplay;
+                content.style.maxHeight = originalMaxHeight;
+                
+                // Calculate approximate height for 4 lines
+                const styles = window.getComputedStyle(content);
+                const fontSize = parseFloat(styles.fontSize);
+                const lineHeight = parseFloat(styles.lineHeight) || fontSize * 1.5;
+                const maxHeight = lineHeight * 4;
+                
+                // Check if content needs truncation (more than 4 lines)
+                if (originalHeight > maxHeight + 20) { // 20px buffer for margins/padding
+                    // Mark as initialized
+                    content.dataset.initialized = 'true';
+                    
+                    // Add truncated class initially
+                    content.classList.add('truncated');
+                    
+                    // Create read more button
+                    const readMoreBtn = document.createElement('button');
+                    readMoreBtn.className = 'read-more-btn';
+                    readMoreBtn.textContent = 'קרא עוד';
+                    readMoreBtn.setAttribute('aria-label', 'הרחב מאמר');
+                    readMoreBtn.type = 'button';
+                    
+                    // Insert button after content
+                    content.parentNode.insertBefore(readMoreBtn, content.nextSibling);
+                    
+                    // Toggle functionality
+                    readMoreBtn.addEventListener('click', function() {
+                        if (content.classList.contains('truncated')) {
+                            // Expand
+                            content.classList.remove('truncated');
+                            content.classList.add('expanded');
+                            readMoreBtn.textContent = 'קרא פחות';
+                            readMoreBtn.classList.add('read-less-btn');
+                        } else {
+                            // Collapse
+                            content.classList.remove('expanded');
+                            content.classList.add('truncated');
+                            readMoreBtn.textContent = 'קרא עוד';
+                            readMoreBtn.classList.remove('read-less-btn');
+                            
+                            // Scroll to top of article smoothly
+                            setTimeout(() => {
+                                const articleCard = content.closest('.blog-card');
+                                if (articleCard) {
+                                    articleCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }, 100);
+                        }
+                    });
+                } else {
+                    // Mark as initialized even if no truncation needed
+                    content.dataset.initialized = 'true';
+                }
+            });
+        }
+        
+        // Initialize on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initArticleTruncation);
+        } else {
+            // DOM already loaded
+            initArticleTruncation();
+        }
+        
+        // Also run after a short delay to ensure all content is rendered
+        setTimeout(initArticleTruncation, 100);
     </script>
 </body>
 </html>
