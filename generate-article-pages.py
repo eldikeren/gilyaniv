@@ -6,6 +6,7 @@ Script to extract blog articles from blog.html and create individual article pag
 
 import re
 import os
+import json
 from html import unescape
 
 def slugify(title):
@@ -195,12 +196,29 @@ def read_header_footer_template():
     
     return header, footer
 
-def create_article_page(article, header_template, footer_template):
+def load_full_articles():
+    """Load full article content from JSON file if it exists"""
+    full_content = {}
+    json_path = 'full-articles-content.json'
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                full_content = json.load(f)
+        except Exception as e:
+            print(f"  Warning: Could not load full articles: {e}")
+    return full_content
+
+def create_article_page(article, header_template, footer_template, full_articles_db=None):
     """Create individual HTML page for an article"""
     
     # Generate page title and meta
     page_title = f"{article['title']} - עו״ד יניב גיל"
     meta_description = f"{article['title']} - מאמר מקצועי מאת עו״ד יניב גיל בנושא {article['category']}"
+    
+    # Use full content if available, otherwise use preview content
+    if full_articles_db and article['title'] in full_articles_db and not article['title'].startswith('_'):
+        article['content'] = full_articles_db[article['title']]
+        print(f"  Using full content for: {article['title']}")
     
     # Modify header to include article-specific meta
     header = header_template.replace(
@@ -392,6 +410,14 @@ def main():
     print("Reading header and footer templates...")
     header_template, footer_template = read_header_footer_template()
     
+    # Load full articles content if available
+    print("Loading full articles content (if available)...")
+    full_articles_db = load_full_articles()
+    if full_articles_db:
+        print(f"  Loaded {len([k for k in full_articles_db.keys() if not k.startswith('_')])} full articles")
+    else:
+        print("  No full articles file found - will use preview content")
+    
     # Create blog-articles directory if it doesn't exist
     os.makedirs('blog-articles', exist_ok=True)
     
@@ -399,7 +425,7 @@ def main():
     print("\nGenerating article pages...")
     for i, article in enumerate(articles, 1):
         print(f"  [{i}/{len(articles)}] Creating {article['slug']}.html...")
-        article_html = create_article_page(article, header_template, footer_template)
+        article_html = create_article_page(article, header_template, footer_template, full_articles_db)
         
         output_path = f"blog-articles/{article['slug']}.html"
         with open(output_path, 'w', encoding='utf-8') as f:
