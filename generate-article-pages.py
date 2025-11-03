@@ -127,11 +127,39 @@ def extract_articles(html_content):
             content = content_match.group(1)
             # Remove the closing </div> if it's in there
             content = content.rstrip().rstrip('</div>').rstrip()
+            
+            # Remove "קרא עוד" links and preview-only text from the content
+            # Remove links to blog-articles (these shouldn't be in the full article pages)
+            # Match anchor tags with blog-articles href - be more aggressive
+            content = re.sub(r'<a[^>]*href\s*=\s*["\']blog-articles/[^"\']*["\'][^>]*>.*?</a\s*>', '', content, flags=re.DOTALL | re.IGNORECASE)
+            # Also catch self-closing or malformed anchor tags
+            content = re.sub(r'<a[^>]*href\s*=\s*["\']blog-articles/[^"\']*["\'][^>]*/?>', '', content, flags=re.IGNORECASE)
+            
+            # Remove any empty anchor tags that might be left (including malformed ones)
+            content = re.sub(r'<a[^>]*>\s*</a\s*>', '', content, flags=re.DOTALL)
+            content = re.sub(r'<a[^>]*/>', '', content)
+            # Remove orphaned closing anchor tags
+            content = re.sub(r'</a\s*>', '', content)
+            content = re.sub(r'</a\s*$', '', content)
+            
+            # Remove "קרא עוד" or "קרא את המאמר המלא" text from paragraphs (preview text)
+            content = re.sub(r'קרא עוד\s*←?\s*', '', content)
+            content = re.sub(r'קרא את המאמר המלא\s*←?\s*', '', content)
+            
+            # Clean up any double spaces (but preserve newlines in HTML)
+            content = re.sub(r'([^\n])\s+([^\n])', r'\1 \2', content)
+            content = re.sub(r'<p[^>]*>\s*</p>', '', content)
+            
+            # Strip any trailing whitespace
+            content = content.strip()
         else:
             # Fallback: try to get everything between h2 and closing article
             h2_match = re.search(r'<h2[^>]*>.*?</h2>(.*?)(?=</article>)', article_html, re.DOTALL)
             if h2_match:
                 content = h2_match.group(1).strip()
+                # Remove "קרא עוד" links
+                content = re.sub(r'<a[^>]*href=["\']blog-articles/[^"\']*["\'][^>]*>.*?קרא עוד.*?</a>', '', content, flags=re.DOTALL | re.IGNORECASE)
+                content = re.sub(r'<a[^>]*href=["\']blog-articles/[^"\']*["\'][^>]*>.*?קרא את המאמר המלא.*?</a>', '', content, flags=re.DOTALL | re.IGNORECASE)
             else:
                 content = article_html
         
