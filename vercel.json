@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - no build needed - Google Analytics tag verification fix'",
+  "buildCommand": "echo 'Static site - no build needed - Force deployment for Google Analytics and fixes'",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
