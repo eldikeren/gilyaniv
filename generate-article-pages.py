@@ -264,6 +264,19 @@ def create_article_page(article, header_template, footer_template, full_articles
     fixed_footer = re.sub(r'src="(?!\.\./|https?://)(images/)', r'src="../\1', fixed_footer)
     fixed_footer = re.sub(r'href="(?!\.\./|https?://|#|tel:|mailto:)(family-law\.html|divorce-law\.html|inheritance-wills\.html|insolvency\.html)', r'href="../\1', fixed_footer)
     
+    # Ensure Google Analytics tag is in the header (for future generations)
+    if 'G-1ES9G9LMG6' not in fixed_header and 'googletagmanager.com/gtag' not in fixed_header:
+        # Add Google Analytics tag right after <head>
+        google_tag = """    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>"""
+        fixed_header = re.sub(r'(<head[^>]*>)', r'\1\n' + google_tag + '\n', fixed_header, flags=re.IGNORECASE)
+    
     # Create article page HTML
     html = f"""<!DOCTYPE html>
 {fixed_header}
