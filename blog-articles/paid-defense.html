@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -200,47 +199,7 @@
         video {
             pointer-events: none;
         }
-        /* Article truncation styles */
-        .article-content {
-            position: relative;
-            transition: max-height 0.3s ease;
-        }
-        .article-content.truncated {
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.5;
-        }
-        .article-content.expanded {
-            display: block;
-            -webkit-line-clamp: unset;
-            -webkit-box-orient: unset;
-            overflow: visible;
-            text-overflow: unset;
-        }
-        .read-more-btn {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 0.75rem;
-            color: #c9a55c;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .read-more-btn:hover {
-            color: #b8941f;
-        }
-        .read-more-btn::after {
-            content: ' ←';
-            margin-right: 0.25rem;
-        }
-        .read-less-btn::after {
-            content: ' ↓';
-            margin-right: 0.25rem;
-        }
-    </style>
+        </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header with floating/shrinking effect -->
@@ -381,16 +340,10 @@
                     <!-- Article Content -->
                     <div class="prose prose-lg max-w-none article-content">
                         
-                        <p class="text-gray-600 mb-4">טענת "פרעתי" היא טענה של החייב כי הוא מילא אחר פסק הדין או חלקו, ושהוא אינו חייב עוד למלא אחריו. פרעתי לא מתייחס רק לחוב, ויתכן גם על חפץ שהוחזר.</p>
-                        
-                        <h3>נטל ההוכחה</h3>
-                        <p>נטל ההוכחה הוא על החייב, היכול לטעון "פרעתי" בכך שיטען (ויוכיח) שהחזיר את חובו, אך יכול גם לטעון: יש התיישנות על פסק הדין או על החוב.</p>
-                        
-                        <h3>סמכויות רשם ההוצאה לפועל</h3>
-                        <p>רשם ההוצאה לפועל רשאי לקבוע אם ובאיזו מידה מוטלת על החייב למלא אחר פסק הדין. עד לקביעתו כאמור, רשאי רשם ההוצאה לפועל להורות על עיכוב ביצועו של פסק הדין, כולו או מקצתו, מטעמים מיוחדים שיירשמו.</p>
-                        
-                        <h3>מועד העלאת הטענה</h3>
-                        <p>טענת פרעתי אפשר להעלות בכל עת. אין שום מגבלה. סמכות הרשם היא מרגע שניתן פסק הדין. כל אירוע שמתרחש לאחר פסק הדין הוא בסמכות הרשם, ולכן בכל פעם שמשלמים/פורעים או מבצעים יש לקחת קבלה ולשמור אותה במקום שהזוכה לא יכול להגיע אליה.</p
+                        <p class="text-gray-600 mb-4">טענת "פרעתי" היא טענה של החייב כי הוא מילא אחר פסק הדין או חלקו, ושהוא אינו חייב עוד למלא אחריו פרעתי לא מתייחס רק לחוב, ויתכן גם על חפץ שהוחזר נטל ההוכחה קרא עוד ←</p>
+                        <a href="blog-articles/paid-defense.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
+                            קרא עוד ←
+                        </a
                     </div>
                     
                     <!-- Back to Blog Link -->

@@ -16,6 +16,8 @@ def slugify(title):
         "ערעורים בפשיטת רגל": "bankruptcy-appeals",
         "מינוי כונס נכסים זמני": "temporary-receiver",
         "הפטר בפש\"ר": "bankruptcy-discharge",
+        "הפטר בפש'ר": "bankruptcy-discharge",
+        "הפטר בפש": "bankruptcy-discharge",
         "הכרזה על פשיטת רגל - התנאים וההליכים": "bankruptcy-declaration",
         "ההגבלות על פושט הרגל": "bankruptcy-restrictions",
         "פיצוי על סירוב גט - חידוש בפסיקה": "get-refusal-compensation",
@@ -154,6 +156,10 @@ def read_header_footer_template():
     # Extract header (everything before <main>)
     header_match = re.search(r'(.*?)<main', content, re.DOTALL)
     header = header_match.group(1) if header_match else ""
+    
+    # Remove DOCTYPE from header (we'll add it separately)
+    header = re.sub(r'<!DOCTYPE\s+html[^>]*>\s*', '', header, flags=re.IGNORECASE)
+    header = header.lstrip()
     
     # Extract footer (everything after </main>)
     footer_match = re.search(r'</main>(.*?)$', content, re.DOTALL)

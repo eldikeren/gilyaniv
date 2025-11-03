@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -200,47 +199,7 @@
         video {
             pointer-events: none;
         }
-        /* Article truncation styles */
-        .article-content {
-            position: relative;
-            transition: max-height 0.3s ease;
-        }
-        .article-content.truncated {
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.5;
-        }
-        .article-content.expanded {
-            display: block;
-            -webkit-line-clamp: unset;
-            -webkit-box-orient: unset;
-            overflow: visible;
-            text-overflow: unset;
-        }
-        .read-more-btn {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 0.75rem;
-            color: #c9a55c;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .read-more-btn:hover {
-            color: #b8941f;
-        }
-        .read-more-btn::after {
-            content: ' ←';
-            margin-right: 0.25rem;
-        }
-        .read-less-btn::after {
-            content: ' ↓';
-            margin-right: 0.25rem;
-        }
-    </style>
+        </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header with floating/shrinking effect -->
@@ -381,17 +340,10 @@
                     <!-- Article Content -->
                     <div class="prose prose-lg max-w-none article-content">
                         
-                        <p class="text-gray-600 mb-4">צו עיכוב יציאה מהארץ הוא כלי משפטי חשוב בהליכי גירושין, המאפשר למנוע מאחד הצדדים לעזוב את הארץ במהלך ההליכים.</p>
-                        
-                        <h3>מתי ניתן לבקש צו עיכוב</h3>
-                        <ul class="list-disc list-inside text-gray-600 mb-4">
-                            <li>כאשר קיים חשש שהצד השני יעזוב את הארץ</li>
-                            <li>כאשר יש חשש להעברת נכסים לחו"ל</li>
-                            <li>כאשר יש חשש להעברת ילדים לחו"ל</li>
-                        </ul>
-                        
-                        <h3>הליך קבלת הצו</h3>
-                        <p>הבקשה מוגשת לבית המשפט לענייני משפחה, ויש להוכיח כי קיים חשש ממשי שהצד השני יעזוב את הארץ. הצו ניתן בדרך כלל לזמן מוגבל ויש לחדש אותו מעת לעת.</p
+                        <p class="text-gray-600 mb-4">צו עיכוב יציאה מהארץ הוא כלי משפטי חשוב בהליכי גירושין, המאפשר למנוע מאחד הצדדים לעזוב את הארץ במהלך ההליכים מתי ניתן לבקש צו עיכוב כאשר קיים חשש שהצד השני יעזוב את הארץ קרא עוד ←</p>
+                        <a href="blog-articles/travel-restriction-order.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
+                            קרא עוד ←
+                        </a
                     </div>
                     
                     <!-- Back to Blog Link -->

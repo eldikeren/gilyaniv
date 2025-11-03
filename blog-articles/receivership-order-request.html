@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -200,47 +199,7 @@
         video {
             pointer-events: none;
         }
-        /* Article truncation styles */
-        .article-content {
-            position: relative;
-            transition: max-height 0.3s ease;
-        }
-        .article-content.truncated {
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.5;
-        }
-        .article-content.expanded {
-            display: block;
-            -webkit-line-clamp: unset;
-            -webkit-box-orient: unset;
-            overflow: visible;
-            text-overflow: unset;
-        }
-        .read-more-btn {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 0.75rem;
-            color: #c9a55c;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .read-more-btn:hover {
-            color: #b8941f;
-        }
-        .read-more-btn::after {
-            content: ' ←';
-            margin-right: 0.25rem;
-        }
-        .read-less-btn::after {
-            content: ' ↓';
-            margin-right: 0.25rem;
-        }
-    </style>
+        </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header with floating/shrinking effect -->
@@ -381,14 +340,10 @@
                     <!-- Article Content -->
                     <div class="prose prose-lg max-w-none article-content">
                         
-                        <p class="text-gray-600 mb-4">הליך פשיטת רגל נפתח עם הגשת בקשה למתן צו כינוס נכסים. הבקשה יכולה להיות מוגשת על ידי החייב עצמו או על ידי נושה.</p>
-                        
-                        <h3>בקשת חייב - תקנה 8</h3>
-                        <p>בקשת חייב למתן צו כינוס נכסים תוגש לבית המשפט המחוזי לפי טופס 4. לבקשה יצורפו: תצהיר המאמת את העובדות הכלולות בבקשה, רשימת נושים וסכום החובות, רשימת נכסים והכנסות, וכן דו"ח על הוצאות והכנסות בששת החודשים שקדמו לבקשה.</p>
-                        <p>החייב ימסור לכונס הרשמי העתק מהבקשה וכן יפקיד בידו פיקדון בסך 1,600 שקלים חדשים וכל סכום נוסף שיורה הכונס הרשמי.</p>
-                        
-                        <h3>בקשת נושה - תקנה 9</h3>
-                        <p>בקשת פשיטת רגל של נושה תוגש לבית המשפט לפי טופס 6. קיים סכום מינימום כדי להתחיל פשיטת רגל, העומד כיום על 85,763 ₪.</p
+                        <p class="text-gray-600 mb-4">הליך פשיטת רגל נפתח עם הגשת בקשה למתן צו כינוס נכסים הבקשה יכולה להיות מוגשת על ידי החייב עצמו או על ידי נושה בקשת חייב - תקנה 8 קרא עוד ←</p>
+                        <a href="blog-articles/receivership-order-request.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
+                            קרא עוד ←
+                        </a
                     </div>
                     
                     <!-- Back to Blog Link -->
