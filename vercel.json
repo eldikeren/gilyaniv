@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - no build needed - Facebook link added'",
+  "buildCommand": "echo 'Static site - no build needed - Google Analytics tag deployed'",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
