@@ -248,9 +248,25 @@ def create_article_page(article, header_template, footer_template, full_articles
         f'<meta property="og:url" content="https://www.yanivgil.co.il/blog-articles/{article["slug"]}.html">'
     )
     
+    # Fix relative paths in header_template and footer_template for blog-articles subdirectory
+    # Since article pages are in blog-articles/ subdirectory, all links to main pages need ../ prefix
+    fixed_header = header_template
+    # Fix href attributes: replace href="page.html" with href="../page.html" (but skip if already has ../ or http)
+    fixed_header = re.sub(r'href="(?!\.\./|https?://|#|tel:|mailto:)(index\.html|about\.html|attorneys\.html|practice-areas\.html|articles\.html|blog\.html|contact\.html|media\.html)', r'href="../\1', fixed_header)
+    # Fix src attributes for images
+    fixed_header = re.sub(r'src="(?!\.\./|https?://)(images/)', r'src="../\1', fixed_header)
+    # Fix practice area pages
+    fixed_header = re.sub(r'href="(?!\.\./|https?://|#|tel:|mailto:)(family-law\.html|divorce-law\.html|inheritance-wills\.html|insolvency\.html)', r'href="../\1', fixed_header)
+    
+    # Fix footer paths too
+    fixed_footer = footer_template
+    fixed_footer = re.sub(r'href="(?!\.\./|https?://|#|tel:|mailto:)(index\.html|about\.html|attorneys\.html|practice-areas\.html|articles\.html|blog\.html|contact\.html|media\.html)', r'href="../\1', fixed_footer)
+    fixed_footer = re.sub(r'src="(?!\.\./|https?://)(images/)', r'src="../\1', fixed_footer)
+    fixed_footer = re.sub(r'href="(?!\.\./|https?://|#|tel:|mailto:)(family-law\.html|divorce-law\.html|inheritance-wills\.html|insolvency\.html)', r'href="../\1', fixed_footer)
+    
     # Create article page HTML
     html = f"""<!DOCTYPE html>
-{header}
+{fixed_header}
 <body class="bg-gray-50 text-gray-800">
     <!-- Header with floating/shrinking effect -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
@@ -347,7 +363,7 @@ def create_article_page(article, header_template, footer_template, full_articles
         </section>
     </main>
     
-    {footer_template}
+    {fixed_footer}
 
     <!-- JavaScript -->
     <script>
