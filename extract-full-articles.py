@@ -15,19 +15,33 @@ def extract_full_articles_from_old_blog(blog_file='blog-old-full.html'):
         print(f"Error: {blog_file} not found!")
         return {}
     
-    # Try different encodings
-    encodings = ['utf-8', 'utf-8-sig', 'latin1']
+    # Try different encodings - but ensure we preserve Hebrew correctly
     content = None
-    for enc in encodings:
-        try:
-            with open(blog_file, 'r', encoding=enc) as f:
+    try:
+        # First try UTF-8 (most common)
+        with open(blog_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+        # Check if content looks valid (has Hebrew characters)
+        if not any('\u0590' <= c <= '\u05FF' for c in content[:1000]):
+            # Try UTF-8-sig (BOM)
+            with open(blog_file, 'r', encoding='utf-8-sig') as f:
                 content = f.read()
-            break
+    except Exception as e:
+        print(f"Warning: UTF-8 reading failed: {e}, trying alternative encodings...")
+        try:
+            # Try reading as binary and decode
+            with open(blog_file, 'rb') as f:
+                raw = f.read()
+            content = raw.decode('utf-8')
         except:
-            continue
+            try:
+                content = raw.decode('utf-8-sig')
+            except:
+                print(f"Error: Could not read {blog_file}!")
+                return {}
     
-    if content is None:
-        print(f"Error: Could not read {blog_file} with any encoding!")
+    if content is None or len(content) < 100:
+        print(f"Error: Could not read valid content from {blog_file}!")
         return {}
     
     # Find all articles with their full content

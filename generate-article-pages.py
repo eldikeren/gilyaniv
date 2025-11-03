@@ -216,9 +216,22 @@ def create_article_page(article, header_template, footer_template, full_articles
     meta_description = f"{article['title']} - מאמר מקצועי מאת עו״ד יניב גיל בנושא {article['category']}"
     
     # Use full content if available, otherwise use preview content
-    if full_articles_db and article['title'] in full_articles_db and not article['title'].startswith('_'):
-        article['content'] = full_articles_db[article['title']]
-        print(f"  Using full content for: {article['title']}")
+    # JSON now uses slugs as keys directly
+    full_content = None
+    if full_articles_db:
+        article_slug = article['slug']
+        # Try direct slug lookup (new format)
+        if article_slug in full_articles_db:
+            full_content = full_articles_db[article_slug]
+        # Fallback: try title match (old format)
+        elif article['title'] in full_articles_db:
+            full_content = full_articles_db[article['title']]
+    
+    if full_content:
+        article['content'] = full_content
+        print(f"  ✅ Using full content for: {article['title']}")
+    else:
+        print(f"  ⚠️ Using preview content for: {article['title']} (not found in full articles DB)")
     
     # Modify header to include article-specific meta
     header = header_template.replace(
