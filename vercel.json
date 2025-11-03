@@ -9,6 +9,10 @@
     { "source": "/(.*)\\.php", "destination": "/$1.html" },
     { "source": "/(.*)", "destination": "/$1" }
   ],
+  "routes": [
+    { "src": "/robots.txt", "dest": "/robots.txt", "headers": { "Content-Type": "text/plain" } },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml", "headers": { "Content-Type": "application/xml" } }
+  ],
   "headers": [
     {
       "source": "/(.*)",
