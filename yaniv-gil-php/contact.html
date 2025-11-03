@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="ייעוץ משפטי מקצועי בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
     <meta name="twitter:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
@@ -181,10 +181,15 @@
     <!-- Vercel Speed Insights -->
     <script>
         (function() {
-            var script = document.createElement('script');
-            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
-            script.async = true;
-            document.head.appendChild(script);
+            try {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+                script.async = true;
+                script.type = 'module';
+                document.head.appendChild(script);
+            } catch(e) {
+                // Silently fail if module error occurs
+            }
         })();
     </script>
     <!-- EmailJS -->

@@ -24,10 +24,15 @@
     <!-- Vercel Speed Insights -->
     <script>
         (function() {
-            var script = document.createElement('script');
-            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
-            script.async = true;
-            document.head.appendChild(script);
+            try {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+                script.async = true;
+                script.type = 'module';
+                document.head.appendChild(script);
+            } catch(e) {
+                // Silently fail if module error occurs
+            }
         })();
     </script>
     <!-- Preload critical resources -->
@@ -35,7 +40,7 @@
     <link rel="preload" href="images/new-logo.png" as="image">
     <link rel="preload" href="images/Yaniv-Gil-Law-Office-Notary_text.avif" as="image">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
         body {
             font-family: 'Heebo', sans-serif;

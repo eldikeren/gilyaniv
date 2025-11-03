@@ -33,7 +33,7 @@
     <meta name="keywords" content="עורך דין יניב גיל, צור קשר, ייעוץ משפטי, דיני משפחה, חדלות פירעון, תל אביב">
     <link rel="canonical" href="https://www.yanivgil.co.il/contact.html">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
@@ -195,10 +195,15 @@
     <!-- Vercel Speed Insights -->
     <script>
         (function() {
-            var script = document.createElement('script');
-            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
-            script.async = true;
-            document.head.appendChild(script);
+            try {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+                script.async = true;
+                script.type = 'module';
+                document.head.appendChild(script);
+            } catch(e) {
+                // Silently fail if module error occurs
+            }
         })();
     </script>
     <!-- EmailJS -->
