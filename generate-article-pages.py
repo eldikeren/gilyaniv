@@ -273,6 +273,7 @@ def create_article_page(article, header_template, footer_template, full_articles
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
+
       gtag('config', 'G-1ES9G9LMG6');
     </script>"""
         fixed_header = re.sub(r'(<head[^>]*>)', r'\1\n' + google_tag + '\n', fixed_header, flags=re.IGNORECASE)

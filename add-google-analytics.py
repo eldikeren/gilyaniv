@@ -15,6 +15,7 @@ GOOGLE_TAG = """    <!-- Google tag (gtag.js) -->
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-1ES9G9LMG6');
     </script>"""
 
