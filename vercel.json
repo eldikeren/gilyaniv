@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - Force fresh deployment after Git reconnect - $(date)'",
+  "buildCommand": "echo 'Static site - Force deployment with Google Analytics tag - 2025-01-04 15:50'",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
