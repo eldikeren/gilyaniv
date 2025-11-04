@@ -1,6 +1,7 @@
 {
   "version": 2,
   "buildCommand": "echo 'Static site - Force deployment with Google Analytics tag - 2025-01-04 15:50'",
+  "installCommand": "echo 'Skipping npm install - static site'",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
@@ -8,10 +9,6 @@
     { "source": "/about.html", "destination": "/about.html" },
     { "source": "/(.*)\\.php", "destination": "/$1.html" },
     { "source": "/(.*)", "destination": "/$1" }
-  ],
-  "routes": [
-    { "src": "/robots.txt", "dest": "/robots.txt", "headers": { "Content-Type": "text/plain" } },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml", "headers": { "Content-Type": "application/xml" } }
   ],
   "headers": [
     {
