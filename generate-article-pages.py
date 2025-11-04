@@ -213,6 +213,11 @@ def create_article_page(article, header_template, footer_template, full_articles
     
     # Generate page title and meta
     page_title = f"{article['title']} - עו״ד יניב גיל"
+
+
+
+
+
     meta_description = f"{article['title']} - מאמר מקצועי מאת עו״ד יניב גיל בנושא {article['category']}"
     
     # Use full content if available, otherwise use preview content
