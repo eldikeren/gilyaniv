@@ -3,6 +3,19 @@
   "buildCommand": "echo 'Static site - Force deployment with Google Analytics tag - 2025-01-04 15:50'",
   "installCommand": "echo 'Skipping npm install - static site'",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "yanivgil.co.il"
+        }
+      ],
+      "destination": "https://www.yanivgil.co.il/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },
