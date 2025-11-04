@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - Force deployment with Google Analytics tag - 2025-01-04 15:50'",
+  "buildCommand": "echo 'Static site - Deploy compressed videos and 404 fix - 2025-01-04'",
   "installCommand": "echo 'Skipping npm install - static site'",
   "outputDirectory": ".",
   "redirects": [
