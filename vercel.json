@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - no build needed - Deploy commit 02ac656 with Google Analytics G-1ES9G9LMG6'",
+  "buildCommand": "echo 'Static site - Force fresh deployment after Git reconnect - $(date)'",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
