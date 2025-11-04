@@ -1,0 +1,278 @@
+{
+  "overall": {
+    "scores": {
+      "performance": 0.66,
+      "accessibility": 0.8233333333333333,
+      "seo": 0.98,
+      "bestPractices": 0.9400000000000001
+    },
+    "averageScore": 0.8508333333333333
+  },
+  "pages": [
+    {
+      "url": "https://gilyaniv.vercel.app/",
+      "timestamp": "2025-10-26T08:50:15.897Z",
+      "performance": {
+        "metrics": {
+          "score": 0.66,
+          "fcp": 3369.7265,
+          "lcp": 9214.704999999996,
+          "si": 4396.071226981735,
+          "tbt": 0,
+          "cls": 0.0075825933126645794,
+          "fmp": 3369.7265,
+          "tti": 3369.7265
+        },
+        "issues": [
+          {
+            "type": "critical",
+            "message": "First Contentful Paint is too slow (>1.8s)",
+            "value": 3369.7265
+          },
+          {
+            "type": "high",
+            "message": "Largest Contentful Paint is too slow (>2.5s)",
+            "value": 9214.704999999996
+          },
+          {
+            "type": "high",
+            "message": "Speed Index is too slow (>3.4s)",
+            "value": 4396.071226981735
+          }
+        ]
+      },
+      "accessibility": {
+        "score": 0.77,
+        "issues": [
+          {
+            "type": "critical",
+            "message": "Color contrast ratio is insufficient for accessibility"
+          },
+          {
+            "type": "high",
+            "message": "Touch targets are too small (<48px)"
+          },
+          {
+            "type": "high",
+            "message": "Buttons missing accessible names"
+          }
+        ]
+      },
+      "seo": {
+        "score": 0.98,
+        "issues": []
+      },
+      "bestPractices": {
+        "score": 0.96,
+        "issues": [
+          {
+            "type": "medium",
+            "message": "Not using responsive images"
+          },
+          {
+            "type": "low",
+            "message": "Images have incorrect aspect ratios"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://gilyaniv.vercel.app/contact.html",
+      "timestamp": "2025-10-26T08:50:27.344Z",
+      "performance": {
+        "metrics": {
+          "score": 0.63,
+          "fcp": 3678.982,
+          "lcp": 10878.348500000002,
+          "si": 5564.639986010359,
+          "tbt": 0,
+          "cls": 0.0009705455410541983,
+          "fmp": 3678.982,
+          "tti": 3678.982
+        },
+        "issues": [
+          {
+            "type": "critical",
+            "message": "First Contentful Paint is too slow (>1.8s)",
+            "value": 3678.982
+          },
+          {
+            "type": "high",
+            "message": "Largest Contentful Paint is too slow (>2.5s)",
+            "value": 10878.348500000002
+          },
+          {
+            "type": "high",
+            "message": "Speed Index is too slow (>3.4s)",
+            "value": 5564.639986010359
+          }
+        ]
+      },
+      "accessibility": {
+        "score": 0.84,
+        "issues": [
+          {
+            "type": "critical",
+            "message": "Color contrast ratio is insufficient for accessibility"
+          },
+          {
+            "type": "high",
+            "message": "Touch targets are too small (<48px)"
+          },
+          {
+            "type": "high",
+            "message": "Buttons missing accessible names"
+          }
+        ]
+      },
+      "seo": {
+        "score": 0.98,
+        "issues": []
+      },
+      "bestPractices": {
+        "score": 0.93,
+        "issues": [
+          {
+            "type": "medium",
+            "message": "Not using responsive images"
+          },
+          {
+            "type": "low",
+            "message": "Images have incorrect aspect ratios"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://gilyaniv.vercel.app/terms-of-use.html",
+      "timestamp": "2025-10-26T08:50:39.314Z",
+      "performance": {
+        "metrics": {
+          "score": 0.69,
+          "fcp": 3067.3154999999997,
+          "lcp": 8499.633,
+          "si": 3580.7492130373244,
+          "tbt": 0,
+          "cls": 0.0010191803220436664,
+          "fmp": 3067.3154999999997,
+          "tti": 3067.3154999999997
+        },
+        "issues": [
+          {
+            "type": "critical",
+            "message": "First Contentful Paint is too slow (>1.8s)",
+            "value": 3067.3154999999997
+          },
+          {
+            "type": "high",
+            "message": "Largest Contentful Paint is too slow (>2.5s)",
+            "value": 8499.633
+          },
+          {
+            "type": "high",
+            "message": "Speed Index is too slow (>3.4s)",
+            "value": 3580.7492130373244
+          }
+        ]
+      },
+      "accessibility": {
+        "score": 0.86,
+        "issues": [
+          {
+            "type": "critical",
+            "message": "Color contrast ratio is insufficient for accessibility"
+          },
+          {
+            "type": "high",
+            "message": "Touch targets are too small (<48px)"
+          },
+          {
+            "type": "high",
+            "message": "Buttons missing accessible names"
+          }
+        ]
+      },
+      "seo": {
+        "score": 0.98,
+        "issues": []
+      },
+      "bestPractices": {
+        "score": 0.93,
+        "issues": [
+          {
+            "type": "medium",
+            "message": "Not using responsive images"
+          },
+          {
+            "type": "low",
+            "message": "Images have incorrect aspect ratios"
+          }
+        ]
+      }
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      {
+        "category": "Performance",
+        "title": "Optimize Largest Contentful Paint (LCP)",
+        "description": "LCP is the most important Core Web Vital for user experience",
+        "actions": [
+          "Compress and optimize hero images/videos",
+          "Preload critical resources",
+          "Use a CDN for faster delivery",
+          "Implement lazy loading for non-critical images",
+          "Consider using WebP/AVIF formats"
+        ],
+        "impact": "High - Directly affects user experience and search rankings"
+      },
+      {
+        "category": "Accessibility",
+        "title": "Fix Color Contrast Issues",
+        "description": "Ensure text is readable for all users",
+        "actions": [
+          "Increase contrast ratio to at least 4.5:1 for normal text",
+          "Use tools like WebAIM Contrast Checker",
+          "Test with color blindness simulators",
+          "Ensure sufficient contrast for interactive elements"
+        ],
+        "impact": "Critical - Required for accessibility compliance"
+      }
+    ],
+    "high": [
+      {
+        "category": "Performance",
+        "title": "Improve First Contentful Paint (FCP)",
+        "description": "FCP measures how quickly users see content",
+        "actions": [
+          "Minimize render-blocking resources",
+          "Optimize critical CSS",
+          "Use resource hints (preload, preconnect)",
+          "Reduce server response time"
+        ],
+        "impact": "High - Affects perceived performance"
+      },
+      {
+        "category": "Accessibility",
+        "title": "Improve Touch Target Sizes",
+        "description": "Make interactive elements easier to tap on mobile",
+        "actions": [
+          "Ensure touch targets are at least 48x48px",
+          "Add adequate spacing between interactive elements",
+          "Test on actual mobile devices",
+          "Consider thumb-friendly navigation patterns"
+        ],
+        "impact": "High - Improves mobile usability"
+      }
+    ],
+    "medium": [],
+    "low": []
+  },
+  "summary": {
+    "totalPages": 3,
+    "criticalIssues": 2,
+    "highIssues": 2,
+    "mediumIssues": 0,
+    "lowIssues": 0
+  }
+}

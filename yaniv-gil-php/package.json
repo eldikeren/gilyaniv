@@ -1,0 +1,14 @@
+{
+  "name": "yaniv-gil-law-office",
+  "version": "1.0.0",
+  "description": "Yaniv Gil Law Office Website",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}
