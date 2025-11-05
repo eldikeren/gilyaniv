@@ -47,6 +47,56 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // Smart 404 redirect logic - automatically redirect common old URLs
+        (function() {
+            const path = window.location.pathname.toLowerCase();
+            const redirectMap = {
+                // Family law related
+                'personalstatus': '/family-law.html',
+                'familycourt': '/family-law.html',
+                'beitdinrabani': '/family-law.html',
+                'geirush': '/divorce-law.html',
+                'divorce': '/divorce-law.html',
+                'yerusha': '/inheritance-wills.html',
+                'inheritance': '/inheritance-wills.html',
+                
+                // Bankruptcy/Insolvency related
+                'bankruptcy': '/insolvency.html',
+                'pshitat': '/insolvency.html',
+                'pshita': '/insolvency.html',
+                'chadlut': '/insolvency.html',
+                'to-end-your-dept': '/insolvency.html',
+                'kinus': '/insolvency.html',
+                'nechasim': '/insolvency.html',
+                
+                // Practice areas
+                'realestate': '/practice-areas.html',
+                'practiceareas': '/practice-areas.html',
+                'mikrakin': '/practice-areas.html',
+                
+                // Other
+                'article': '/articles.html',
+                'media': '/media.html',
+                'contact': '/contact.html',
+                'attorney': '/attorneys.html',
+                'about': '/index.html#about'
+            };
+            
+            // Check if path contains any of the keywords
+            for (const [keyword, destination] of Object.entries(redirectMap)) {
+                if (path.includes(keyword)) {
+                    console.log('Auto-redirecting from 404:', path, 'to:', destination);
+                    window.location.href = destination;
+                    return;
+                }
+            }
+            
+            // If no redirect found, show the 404 page
+            console.log('404 - No automatic redirect found for:', path);
+        })();
+    </script>
 </body>
 </html>
 
