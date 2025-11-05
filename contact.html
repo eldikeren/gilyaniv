@@ -34,8 +34,6 @@
     <link rel="canonical" href="https://www.yanivgil.co.il/contact.html">
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
-    <!-- EmailJS CDN -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
     body {
             font-family: 'Heebo', sans-serif;
@@ -730,8 +728,17 @@
 
         // Initialize EmailJS when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize EmailJS
-            emailjs.init("bZa2jc2c_0IfnuYK4");
+            // Wait for EmailJS to load before initializing
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("bZa2jc2c_0IfnuYK4");
+            } else {
+                // Retry after a short delay if EmailJS hasn't loaded yet
+                setTimeout(function() {
+                    if (typeof emailjs !== 'undefined') {
+                        emailjs.init("bZa2jc2c_0IfnuYK4");
+                    }
+                }, 500);
+            }
             
             
             // Contact form handling with EmailJS
