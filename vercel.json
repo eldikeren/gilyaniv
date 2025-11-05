@@ -30,7 +30,11 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/index", "destination": "/index.html" },
-    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/personalstatus", "destination": "/family-law.html" },
+    { "source": "/familycourt", "destination": "/family-law.html" },
+    { "source": "/realestate", "destination": "/practice-areas.html" },
+    { "source": "/practiceareas", "destination": "/practice-areas.html" },
     { "source": "/attorneys", "destination": "/attorneys.html" },
     { "source": "/practice-areas", "destination": "/practice-areas.html" },
     { "source": "/articles", "destination": "/articles.html" },
