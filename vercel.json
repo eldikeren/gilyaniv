@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - Deploy compressed videos and 404 fix - 2025-01-04'",
+  "buildCommand": "echo 'Static site - Deploy compressed videos and 404 fix - 2025-01-05'",
   "installCommand": "echo 'Skipping npm install - static site'",
   "outputDirectory": ".",
   "redirects": [
@@ -14,14 +14,37 @@
       ],
       "destination": "https://www.yanivgil.co.il/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gilyaniv.vercel.app"
+        }
+      ],
+      "destination": "https://www.yanivgil.co.il/$1",
+      "permanent": true
     }
   ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
+    { "source": "/index", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },
-    { "source": "/about.html", "destination": "/about.html" },
-    { "source": "/(.*)\\.php", "destination": "/$1.html" },
-    { "source": "/(.*)", "destination": "/$1" }
+    { "source": "/attorneys", "destination": "/attorneys.html" },
+    { "source": "/practice-areas", "destination": "/practice-areas.html" },
+    { "source": "/articles", "destination": "/articles.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/media", "destination": "/media.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
+    { "source": "/family-law", "destination": "/family-law.html" },
+    { "source": "/insolvency", "destination": "/insolvency.html" },
+    { "source": "/divorce-law", "destination": "/divorce-law.html" },
+    { "source": "/inheritance-wills", "destination": "/inheritance-wills.html" },
+    { "source": "/blog-articles/:slug", "destination": "/blog-articles/:slug.html" },
+    { "source": "/(.*)\\.php", "destination": "/$1.html" }
   ],
   "headers": [
     {

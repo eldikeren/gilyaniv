@@ -269,7 +269,7 @@
     <main class="pt-24">
         <!-- Hero Section for Blog Page -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" class="absolute inset-0 w-full h-full object-cover" style="pointer-events: none;">
+            <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
                 <source src="images/blog-compressed.mp4" type="video/mp4">
                 <source src="images/blog.mp4" type="video/mp4">
             </video>
@@ -729,7 +729,7 @@
                     <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                        <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
                         <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
@@ -885,12 +885,6 @@
                 
             });
         });
-
-        
-        }
-        
-        // Also run after a short delay to ensure all content is rendered
-        setTimeout(initArticleTruncation, 100);
     </script>
 </body>
 </html>
