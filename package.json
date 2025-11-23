@@ -2,26 +2,13 @@
   "name": "yaniv-gil-law-office",
   "version": "1.0.0",
   "description": "Yaniv Gil Law Office Website",
-  "type": "module",
-  "main": "index.html",
   "scripts": {
-    "build": "echo 'Static site - no build needed'",
-    "start": "echo 'Static site - serve with any web server'"
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "build": "npm run build:css"
   },
-  "dependencies": {},
-  "keywords": [
-    "law",
-    "website",
-    "static"
-  ],
-  "author": "Yaniv Gil Law Office",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eldikeren/gilyaniv.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eldikeren/gilyaniv/issues"
-  },
-  "homepage": "https://github.com/eldikeren/gilyaniv#readme"
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
 }

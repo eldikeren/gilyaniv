@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1ES9G9LMG6');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>בלוג משפטי - עו"ד יניב גיל - מאמרים מקצועיים בנושא פשיטת רגל</title>
@@ -20,48 +10,13 @@
     <meta property="og:title" content="בלוג משפטי - עו״ד יניב גיל">
     <meta property="og:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://www.yanivgil.co.il/blog.html">
-    <meta property="og:locale" content="he_IL">
-    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="בלוג משפטי - עו״ד יניב גיל">
-    <meta name="twitter:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
-    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
-    <meta name="author" content="עו״ד יניב גיל">
-    <link rel="canonical" href="https://www.yanivgil.co.il/blog.html">
+    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta property="og:url" content="https://gilyaniv.vercel.app/blog.html">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="apple-touch-icon" href="images/new-logo.png">
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "בלוג משפטי - עו״ד יניב גיל",
-      "description": "בלוג משפטי מקצועי עם מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד",
-      "url": "https://www.yanivgil.co.il/blog.html",
-      "author": {
-        "@type": "Person",
-        "name": "עו״ד יניב גיל",
-        "jobTitle": "עורך דין"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "משרד עו״ד יניב גיל ושות'",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.yanivgil.co.il/images/new-logo.png"
-        }
-      }
-    }
-    </script>
     <style>
         body {
             font-family: 'Heebo', sans-serif;
@@ -94,30 +49,6 @@
             flex-grow: 1;
             justify-content: flex-end;
         }
-        .h-80vh {
-            height: 80vh;
-        }
-        @media (max-width: 768px) {
-            .h-80vh {
-                height: 60vh;
-            }
-        }
-        .header-logo {
-            height: 60px;
-            width: auto;
-            transition: all 0.3s ease-in-out;
-        }
-        .header-text-logo {
-            width: 220px; 
-            height: auto;
-            transition: all 0.3s ease-in-out;
-        }
-        .scrolled .header-logo {
-            height: 40px;
-        }
-        .scrolled .header-text-logo {
-            width: 170px;
-        }
         .blog-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -136,6 +67,7 @@
             background-color: #b8941f;
             color: white;
         }
+<<<<<<< HEAD
         /* Full-screen mobile menu */
         .mobile-menu-overlay {
             position: fixed;
@@ -251,55 +183,55 @@
             }
         }
 </style>
+=======
+    </style>
+>>>>>>> 1c8df82c9bdb26093b27297d07c45a5327428f14
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Header with floating/shrinking effect -->
-    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
-        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <a href="index.html">
-                    <img src="images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
-                </a>
-                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
-                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
-                </a>
-            </div>
-            <nav class="hidden md:flex flex-1 justify-center">
-                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
-                    <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                    <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
-                    <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
-                    <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                    <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
-                    <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
-                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
-                    <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
-                </ul>
-            </nav>
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-            <div class="flex items-center space-x-4 space-x-reverse">
-                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
-                    התקשר עכשיו
-                </a>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/new-logo.png" alt="עו״ד יניב גיל" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                        <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                        <li><a href="#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200 font-bold text-[#c9a55c]">בלוג</a></li>
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                        <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 hover:text-[#b8941f] transition-colors duration-200" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-        
-        <!-- Full-screen Mobile Menu Overlay -->
-        <div id="mobile-menu" class="mobile-menu-overlay">
-            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
-            <div class="mobile-menu-content">
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4">
                 <div class="mobile-menu-links">
                     <a href="index.html" class="mobile-menu-link">בית</a>
-                    <a href="index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="#about" class="mobile-menu-link">אודות המשרד</a>
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
                     <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
                     <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
-                    <a href="blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="blog.html" class="mobile-menu-link font-bold text-[#c9a55c]">בלוג</a>
                     <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
                     <a href="contact.html" class="mobile-menu-link">צור קשר</a>
                 </div>
@@ -307,19 +239,21 @@
         </div>
     </header>
 
-    <main class="pt-24">
-        <!-- Hero Section for Blog Page -->
-        <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
-                <source src="images/blog-compressed.mp4" type="video/mp4">
-                <source src="images/blog.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
-            <div class="relative z-10 p-6 md:p-12">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">בלוג משפטי מקצועי</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה</p>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">בלוג משפטי מקצועי</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="bg-[#c9a55c] text-[#1a1a1a] px-6 py-3 rounded-full font-medium">
+                    עו״ד יניב גיל
+                </div>
+                <div class="bg-white/10 text-white px-6 py-3 rounded-full font-medium">
+                    מידע עדכני ומקצועי
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Filter and Sort Section -->
     <section class="bg-white py-8 shadow-sm">
@@ -370,13 +304,19 @@
                             <span>6 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">ערעורים בפשיטת רגל</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">קיימות 5 אפשרויות שקבעה הפסיקה לגבי ערעורים בהליכי פשיטת רגל: סוגי הערעורים צו בפשיטת רגל - ערעור בזכות (לעליון) קרא עוד ←</p>
-                        <a href="blog-articles/bankruptcy-appeals.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">קיימות 5 אפשרויות שקבעה הפסיקה לגבי ערעורים בהליכי פשיטת רגל:</p>
+                        
+                        <h3>סוגי הערעורים</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>צו בפשיטת רגל - ערעור בזכות (לעליון)</li>
+                            <li>כאשר שופט מחוזי נותן החלטה שהיא לא צו בפשיטת רגל - ערעור ברשות</li>
+                            <li>צו בפשיטת רגל שנתן רשם של מחוזי, והוא פס"ד - ערעור בזכות לעליון</li>
+                            <li>צו בפשיטת רגל שנתן הרשם והוא החלטה אחרת – ערעור בזכות לפני שופט בית המשפט המחוזי</li>
+                            <li>החלטה שנתן רשם מחוזי, שהיא לא צו בפשיטת רגל - יחולו דיני הערעור הרגילים</li>
+                        </ul>
                     </div>
                 </article>
 
@@ -388,31 +328,47 @@
                             <span>5 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">מינוי כונס נכסים זמני</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">כונס זמני, מינויו ושכרו - סעיף 21 לפקודה קובע: סעיף 21 (א) משהוגשה הבקשה רשאי בית המשפט אם נוכח שיש צורך לעשות כן להגנת הנכסים, למנות את הכונס הרשמי, או אדם מתאים אחר, עוד לפני מתן צו הכינוס, להיות כונס זמני של נכסי החייב או חלק מהם ולהורות לו להחזיק באותם נכסים מיד קרא עוד ←</p>
-                        <a href="blog-articles/temporary-receiver.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">לאחר הגשת הבקשה לפשיטת רגל (ע"י הנושה או החייב), לפני מתן צו הכינוס, רשאי בית המשפט למנות את הכנ"ר או אדם אחר להיות כונס זמני לנכסי החייב, אם נוכח שיש צורך לעשות כן להגנת הנכסים.</p>
+                        
+                        <h3>בקשה למינוי</h3>
+                        <p>בית המשפט רשאי למנות כונס זמני לנכסי החייב על-פי בקשת הנושה, החייב, או הכונס הרשמי, ובנסיבות מיוחדות - אף ללא בקשה כאמור.</p>
+                        
+                        <h3>צו המינוי</h3>
+                        <p>לא יתמנה אדם ככונס זמני אלא אם כן הודיע לבית המשפט על הסכמתו לכך. בצו המינוי רשאי בית המשפט לקבוע את סמכויותיו ואת תפקידיו של הכונס הזמני.</p>
+                        
+                        <h3>חובותיו של כונס זמני</h3>
+                        <p>כונס זמני שאינו הכונס הרשמי יתן כל ערובה שתיראה לבית המשפט להבטחת אחריותו לנכסים שהוא ממונה עליהם ולכל אשר הוא בקשר לנכסים.</p>
                     </div>
                 </article>
 
                 <!-- Article 3: Bankruptcy Discharge -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-12-04" data-title="הפטר בפש"ר">
+                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-12-04" data-title="הפטר בפשיטת רגל - הסוף לחובות">
                     <div class="article-meta">
                         <div class="flex items-center gap-4 text-sm text-gray-600">
                             <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
                             <span>4 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">הפטר בפש"ר</h2>
-                    
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">הפטר בפשיטת רגל - הסוף לחובות</h2>
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">הפטר הוא צו הניתן על ידי בית המשפט (המחוזי) ואשר פוטר את פושט הרגל מכל חוב בר תביעה בפשיטת רגל, פרט לחובות מסוימים (המפורטים בסעיף 69) ההפטר מחזיר את פושט הרגל אל "חיק החברה האנושית" והוא חוזר להיות אישיות משפטית - יכול להחזיק כרטיסי אשראי, לפתוח חשבון בנק וכו' (כל ההגבלות של סעיף 42) הפטר לאלתר...</p>
-                        <a href="blog-articles/bankruptcy-discharge.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">הפטר הוא צו הניתן על ידי בית המשפט (המחוזי) ואשר פוטר את פושט הרגל מכל חוב בר תביעה בפשיטת רגל, פרט לחובות מסוימים (המפורטים בסעיף 69).</p>
+                        
+                        <h3>הפטר לאלתר</h3>
+                        <p>הליך אזוטרי בו צו ההפטר ניתן מיד עם ההכרזה על האדם כפושט רגל, ובעצם - בלי שהתחיל כל הליך. התנאים למתן הפטר לאלתר:</p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>חלפו לפחות שישה חודשים מיום מתן צו הכינוס</li>
+                            <li>הטעם למתן ההפטר לאלתר: אין בניהול הליכי פשיטת רגל כדי להביא תועלת לנושים</li>
+                        </ul>
+                        
+                        <h3>כשפושט הרגל מבקש הפטר</h3>
+                        <p>פושט רגל רשאי בכל עת לבקש מבית המשפט הפטר. בית המשפט יקבע יום לדיון בבקשה, והודעה על כך תישלח, ארבעה עשר ימים לפחות לפני היום שנקבע.</p>
+                        
+                        <h3>סייגים למתן הפטר</h3>
+                        <p>הואשם פושט הרגל והורשע בעבירה לפי פקודה זו בכל עבירה הנוגעת לפשיטת הרגל שלו, רשאי בית המשפט להחליט שלא יתן הפטר או יתלה אותו לתקופה שתמצא מתאימה.</p>
                     </div>
                 </article>
 
@@ -424,13 +380,20 @@
                             <span>2 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">הכרזה על פשיטת רגל - התנאים וההליכים</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">הכרזה על פשיטת רגל היא הליך משפטי בו מוכרז אדם כפושט רגל על ידי בית המשפט, לאחר שמתקיימים התנאים הקבועים בחוק התנאים להכרזה החייב לא שילם חוב בסכום של 85,763 ₪ לפחות קרא עוד ←</p>
-                        <a href="blog-articles/bankruptcy-declaration.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">הכרזה על פשיטת רגל היא הליך משפטי בו מוכרז אדם כפושט רגל על ידי בית המשפט, לאחר שמתקיימים התנאים הקבועים בחוק.</p>
+                        
+                        <h3>התנאים להכרזה</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>החייב לא שילם חוב בסכום של 85,763 ₪ לפחות</li>
+                            <li>החייב לא יכול לשלם את חובותיו</li>
+                            <li>יש נכסים שניתן לחלקם בין הנושים</li>
+                        </ul>
+                        
+                        <h3>הפרסום והתוצאות</h3>
+                        <p>הודעה על הכרזת פשיטת רגל תפורסם ברשומות ובעתון יומי. משהוכרז חייב פושט רגל, יהיה הכונס הרשמי, מכוח משרתו, נאמן על נכסי פושט הרגל.</p>
                     </div>
                 </article>
 
@@ -442,13 +405,24 @@
                             <span>3 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">ההגבלות על פושט הרגל</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">פושט רגל כפוף למספר הגבלות משמעותיות על פעילותו הכלכלית והעסקית הגבלות עיקריות אין לו רשות לפתוח חשבון בנק חדש קרא עוד ←</p>
-                        <a href="blog-articles/bankruptcy-restrictions.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">פושט רגל כפוף למספר הגבלות משמעותיות על פעילותו הכלכלית והעסקית.</p>
+                        
+                        <h3>הגבלות עיקריות</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>אין לו רשות לפתוח חשבון בנק חדש</li>
+                            <li>אין לו רשות לקבל אשראי בסכום העולה על 5,000 ₪</li>
+                            <li>אין לו רשות לצאת מהארץ ללא רשות בית המשפט</li>
+                            <li>אין לו רשות להעביר נכסים ללא רשות בית המשפט</li>
+                        </ul>
+                        
+                        <h3>הגבלות נוספות</h3>
+                        <p>חייב שהוכרז פושט רגל לא ייסד תאגיד ולא יהיה בעל ענין בתאגיד, במישרין או בעקיפין, אלא אם כן אישרו זאת מראש בית המשפט או הנאמן.</p>
+                        
+                        <h3>ביטול ההגבלות</h3>
+                        <p>ההגבלות יבוטלו לאחר ש: ניתן צו הפטר, בוטלה ההכרזה על פשיטת הרגל או בוטל צו כינוס שניתן נגד החייב, או אישר בית המשפט פשרה או הסדר עם הנושים.</p>
                     </div>
                 </article>
 
@@ -460,13 +434,20 @@
                             <span>9 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">פיצוי על סירוב גט - חידוש בפסיקה</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">בפסק דין חדש שניתן על-ידי בית המשפט לענייני משפחה בירושלים, נפסק, כי בעל צריך לפצות את אשתו, בגין נזקים שנגרמו לה כתוצאה מכך שהבעל סרב לתת לה גט הרקע למקרה לאחר שהאשה הגישה תביעה לגירושין לבית הדין הרבני בשנת 1998, ועזבה את הבית המשותף של הצדדים יחד עם הילדים, קיבל בית הדין הרבני הגדול בשנת 2006 את תביעתה לגירושין קרא עוד ←</p>
-                        <a href="blog-articles/get-refusal-compensation.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">בפסק דין חדש שניתן על-ידי בית המשפט לענייני משפחה בירושלים, נפסק, כי בעל צריך לפצות את אשתו, בגין נזקים שנגרמו לה כתוצאה מכך שהבעל סרב לתת לה גט.</p>
+                        
+                        <h3>הרקע למקרה</h3>
+                        <p>לאחר שהאשה הגישה תביעה לגירושין לבית הדין הרבני בשנת 1998, ועזבה את הבית המשותף של הצדדים יחד עם הילדים, קיבל בית הדין הרבני הגדול בשנת 2006 את תביעתה לגירושין.</p>
+                        
+                        <h3>החידוש הגדול בפסיקה</h3>
+                        <p>החידוש הגדול, הוא התייחסותו של בית המשפט לענייני משפחה לשאלה ממתי יחויב הבעל בפיצויים, האם מיום בו ניתן פסק הדין שמחייב אותו לתת גט או ממועד מוקדם יותר?</p>
+                        <p>בית המשפט קבע, כי הרשלנות היא כלל לא פונקציה של פסיקת החיוב לתת גט – אלא, פונקציה של סירוב הבעל להיענות לבקשת האישה להתגרש, ושל הנזק שנגרם לה החל מהרגע שהוא לא נענה לבקשה.</p>
+                        
+                        <h3>השלכות הפסיקה</h3>
+                        <p>יש לשים לב – המדובר בחידוש בפסיקה, ומהווה סימן חשוב לעתיד - לפי פסק הדין גם נשים שבית הדין לא נתן פסק דין שמחייב את הבעל לתת להן גט - יכולות להגיש תביעה נזיקית לבית המשפט למשפחה, ויתכן כי הן תקבלנה פיצוי בגין הנזקים שנגרמים להן עקב סירוב הבעל לתת להן גט.</p>
                     </div>
                 </article>
 
@@ -478,13 +459,22 @@
                             <span>8 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">עילות גירושין בדין העברי</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">הדין העברי מכיר במספר עילות לגירושין, כאשר כל עילה דורשת הוכחה ספציפית עילות עיקריות לגירושין עקרות - כאשר האישה לא יכולה להביא ילדים קרא עוד ←</p>
-                        <a href="blog-articles/divorce-grounds.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">הדין העברי מכיר במספר עילות לגירושין, כאשר כל עילה דורשת הוכחה ספציפית.</p>
+                        
+                        <h3>עילות עיקריות לגירושין</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>עקרות - כאשר האישה לא יכולה להביא ילדים</li>
+                            <li>מעשה כיעור - התנהגות לא מוסרית של האישה</li>
+                            <li>סירוב לקיום יחסי אישות</li>
+                            <li>מחלה קשה או נכות</li>
+                            <li>עזיבת הבית ללא סיבה מוצדקת</li>
+                        </ul>
+                        
+                        <h3>עילות נוספות</h3>
+                        <p>בנוסף לעילות העיקריות, קיימות עילות נוספות כגון: אי כיבוד הורים, התנהגות לא נאותה, ועוד.</p>
                     </div>
                 </article>
 
@@ -496,13 +486,20 @@
                             <span>7 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">צו עיכוב יציאה מהארץ</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">צו עיכוב יציאה מהארץ הוא כלי משפטי חשוב בהליכי גירושין, המאפשר למנוע מאחד הצדדים לעזוב את הארץ במהלך ההליכים מתי ניתן לבקש צו עיכוב כאשר קיים חשש שהצד השני יעזוב את הארץ קרא עוד ←</p>
-                        <a href="blog-articles/travel-restriction-order.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">צו עיכוב יציאה מהארץ הוא כלי משפטי חשוב בהליכי גירושין, המאפשר למנוע מאחד הצדדים לעזוב את הארץ במהלך ההליכים.</p>
+                        
+                        <h3>מתי ניתן לבקש צו עיכוב</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4">
+                            <li>כאשר קיים חשש שהצד השני יעזוב את הארץ</li>
+                            <li>כאשר יש חשש להעברת נכסים לחו"ל</li>
+                            <li>כאשר יש חשש להעברת ילדים לחו"ל</li>
+                        </ul>
+                        
+                        <h3>הליך קבלת הצו</h3>
+                        <p>הבקשה מוגשת לבית המשפט לענייני משפחה, ויש להוכיח כי קיים חשש ממשי שהצד השני יעזוב את הארץ. הצו ניתן בדרך כלל לזמן מוגבל ויש לחדש אותו מעת לעת.</p>
                     </div>
                 </article>
 
@@ -514,13 +511,19 @@
                             <span>10 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">עיקול ועיקול מקרקעין</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">הגדרה של עיקול אינה נמצאת בחוק ואומצה על ידי ביהמ"ש עליון בכמה פסקי דין מה שאימץ העליון כי העיקול הוא פעולה משפטית נגד בעלים של הנכס או מי שמחזיק בו ופעולה זו באה להגביל את שכירותו של הנכס וגם את השימוש בו כדי שלא יהיה ניתן להבריח את הנכס והזוכה מוכן לגבות את החוב מתוך מימוש נכס זה יש לזכור שעקול זאת דרגה נמוכה ביותר של בטוחות מבחינה זו שהעיקול הוא בעצם זכות חוסמת, כלומר מונעת פעולות, אבל אינה מקנה זכויות קנייניות בנכס זה כמו למשל שיעבוד ולכן היות והעיקול יש לו בעצם הבט דיוני בלבד לכן זה לא משנה מי מעקל ראשון או אחרון וכל מעקלים נהנים ביחד מפירות העיקול כל אחד באופן יחסי לחוב שהוא נושה לו קרא עוד ←</p>
-                        <a href="blog-articles/seizure-real-estate.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">הגדרה של עיקול אינה נמצאת בחוק ואומצה על ידי ביהמ"ש עליון בכמה פסקי דין. העיקול הוא פעולה משפטית נגד בעלים של הנכס או מי שמחזיק בו ופעולה זו באה להגביל את שכירותו של הנכס וגם את השימוש בו כדי שלא יהיה ניתן להבריח את הנכס והזוכה מוכן לגבות את החוב מתוך מימוש נכס זה.</p>
+                        
+                        <h3>מהות העיקול</h3>
+                        <p>עיקול הוא דרגה נמוכה ביותר של בטוחות מבחינה זו שהעיקול הוא בעצם זכות חוסמת, כלומר מונעת פעולות, אבל אינה מקנה זכויות קנייניות בנכס זה כמו למשל שיעבוד. היות והעיקול יש לו בעצם הבט דיוני בלבד לכן זה לא משנה מי מעקל ראשון או אחרון וכל מעקלים נהנים ביחד מפירות העיקול כל אחד באופן יחסי לחוב שהוא נושה לו.</p>
+                        
+                        <h3>עיקול מקרקעין</h3>
+                        <p>עיקול מקרקעין תופס לשלוש שנים ויש צורך במחיקתו ע"י הוצל"פ. בחוק מקרקעין שעיקול שעברו עליו 10 שנים בלי שהוא גובש רשם מקרקעין רשאי לבטלו לאחר שנתן את הודעה בדבר כוונתו לביטול את העיקול.</p>
+                        
+                        <h3>הליכי מכירה</h3>
+                        <p>כאשר מטילים עיקול מקרקעין יש לנו תקופת הכשרה של שישים ושישה ימים שבתחומיה צריך לעשות פעולות מקדמיות למכירת הנכס. אנו מטילים את העיקול וכמובן רושמים אותו בטאבו ואם לא נרשום לא יהיה שום ערך, ממתינים 30 ימים שחייב יפרע את החוב ואז ראש הוצל"פ נותן צו מכירה ראשוני או מקדמי שפותח הליכים.</p>
                     </div>
                 </article>
 
@@ -532,13 +535,19 @@
                             <span>11 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">מימוש משכנתא</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">על פי תקנה 99 (ב) לתקנות הוצל"פ, כאשר רוצים להגיש בקשה למימוש משכנתא יש לצרף: שטר המשכנתא או העתק מאושר מהמשכנתא, נסח רישום המקרקעין הממושכנים, תצהיר לאימות העובדות הכלולות בבקשה וייפוי כוח (אם אנחנו המייצגים) הליך האזהרה אם הוגשה בקשה כזו, יש להמציא לחייב אזהרה קרא עוד ←</p>
-                        <a href="blog-articles/mortgage-execution.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">על פי תקנה 99 (ב) לתקנות הוצל"פ, כאשר רוצים להגיש בקשה למימוש משכנתא יש לצרף: שטר המשכנתא או העתק מאושר מהמשכנתא, נסח רישום המקרקעין הממושכנים, תצהיר לאימות העובדות הכלולות בבקשה וייפוי כוח (אם אנחנו המייצגים).</p>
+                        
+                        <h3>הליך האזהרה</h3>
+                        <p>אם הוגשה בקשה כזו, יש להמציא לחייב אזהרה. האזהרה תוגש על פי תקנה 100 הקובעת שבתכוף לאחר הגשת הבקשה למימוש משכנתה, ימציא מנהל לשכת ההוצאה לפועל לחייב אזהרה לפי סעיף 7 לחוק. באזהרה ייכללו פרטי שטר המשכנתא.</p>
+                        
+                        <h3>דירת מגורים - הסדר מיוחד</h3>
+                        <p>בחוק ההוצל"פ יש הסדר מיוחד לביצוע משכנתא או משכון על דירת מגורים - סעיף 81ב1. בקשה לפי סעיף 6 לביצוע משכנתה על דירת מגורים המשמשת למגורים של יחיד או למימוש משכון על זכויות לגבי דירת מגורים, לא תוגש ללשכת ההוצאה לפועל אלא אם כן חלפו שישה חודשים מהמועד כמפורט בחוק.</p>
+                        
+                        <h3>זכות החייב למכור בעצמו</h3>
+                        <p>החייב רשאי להודיע לרשם ההוצאה לפועל, בתוך 20 ימים מיום המצאת האזהרה, על רצונו למכור בעצמו את דירת המגורים, לצורך פירעון מלוא חוב ההלוואה. הודיע החייב כאמור, יורה רשם ההוצאה לפועל על עיכוב הליכי ביצוע המשכנתא לתקופה של 90 ימים מיום קבלת ההודעה.</p>
                     </div>
                 </article>
 
@@ -550,13 +559,19 @@
                             <span>12 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">טענת 'פרעתי' - סעיף 19 לחוק ההוצל"פ</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">טענת "פרעתי" היא טענה של החייב כי הוא מילא אחר פסק הדין או חלקו, ושהוא אינו חייב עוד למלא אחריו פרעתי לא מתייחס רק לחוב, ויתכן גם על חפץ שהוחזר נטל ההוכחה קרא עוד ←</p>
-                        <a href="blog-articles/paid-defense.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">טענת "פרעתי" היא טענה של החייב כי הוא מילא אחר פסק הדין או חלקו, ושהוא אינו חייב עוד למלא אחריו. פרעתי לא מתייחס רק לחוב, ויתכן גם על חפץ שהוחזר.</p>
+                        
+                        <h3>נטל ההוכחה</h3>
+                        <p>נטל ההוכחה הוא על החייב, היכול לטעון "פרעתי" בכך שיטען (ויוכיח) שהחזיר את חובו, אך יכול גם לטעון: יש התיישנות על פסק הדין או על החוב.</p>
+                        
+                        <h3>סמכויות רשם ההוצאה לפועל</h3>
+                        <p>רשם ההוצאה לפועל רשאי לקבוע אם ובאיזו מידה מוטלת על החייב למלא אחר פסק הדין. עד לקביעתו כאמור, רשאי רשם ההוצאה לפועל להורות על עיכוב ביצועו של פסק הדין, כולו או מקצתו, מטעמים מיוחדים שיירשמו.</p>
+                        
+                        <h3>מועד העלאת הטענה</h3>
+                        <p>טענת פרעתי אפשר להעלות בכל עת. אין שום מגבלה. סמכות הרשם היא מרגע שניתן פסק הדין. כל אירוע שמתרחש לאחר פסק הדין הוא בסמכות הרשם, ולכן בכל פעם שמשלמים/פורעים או מבצעים יש לקחת קבלה ולשמור אותה במקום שהזוכה לא יכול להגיע אליה.</p>
                     </div>
                 </article>
 
@@ -568,13 +583,19 @@
                             <span>13 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">דרכים למימוש שטר</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">פרק ט' לתקנות הוצל"פ - תקנות 102 עד 109 - ביצוע שטר בקשה לביצוע שטר מאוד דומה לבקשה לביצוע פסק דין בעת הגשת הבקשה לביצוע שטר יש לצרף אליה (תקנה 103): קרא עוד ←</p>
-                        <a href="blog-articles/execution-of-bills.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">פרק ט' לתקנות הוצל"פ - תקנות 102 עד 109 - ביצוע שטר. בקשה לביצוע שטר מאוד דומה לבקשה לביצוע פסק דין. בעת הגשת הבקשה לביצוע שטר יש לצרף אליה את השטר המקורי (אם מדובר בצ'ק - עותק של שני צדדיו) ואם יש ייצוג - העתק ייפוי הכוח.</p>
+                        
+                        <h3>הליך ההתנגדות</h3>
+                        <p>קיים הליך מיוחד למימוש שטרות ותביעות על סכום קצוב, והוא הליך ההתנגדות. לחייב עומדת הזכות להגיש התנגדות לביצוע שטר. את ההתנגדות מגישים תוך 30 ימים מהיום שהומצאה האזהרה, והיא מוגשת לאותה לשכה שבה הוגשה הבקשה לביצוע שטר.</p>
+                        
+                        <h3>העברת ההליך לבית המשפט</h3>
+                        <p>הוגשה התנגדות לפי תקנה 106, יצווה רשם ההוצאה לפועל לעכב את ביצוע השטר כנגד המתנגד, ויעביר לבית המשפט המוסמך לדון בתביעה על פי השטר את כתב ההתנגדות וכל המצורפות אליו. כאשר העניין מועבר לבית המשפט ההליך הופך להיות תביעה בסדר דין מקוצר.</p>
+                        
+                        <h3>תוצאות הדיון בבית המשפט</h3>
+                        <p>החליט בית המשפט לדחות את ההתנגדות, כולה או מקצתה, או נתן פסק דין לטובת מבקש הביצוע לאחר שניתנה רשות להתגונן, ימציא הזוכה את ההחלטה או פסק הדין, לפי העניין, בתוך 14 ימים מיום נתינתם, ללשכת ההוצאה לפועל, והיא תמשיך בהליכי ביצוע בהתאם להחלטה או לפסק הדין.</p>
                     </div>
                 </article>
 
@@ -586,13 +607,19 @@
                             <span>14 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">סדר הדין האחיד לכל הסמכויות השיפוטיות של הרשם וצד ג'</h2>
-                    
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">סדר הדין האחיד לכל הסמכויות השיפוטיות</h2>
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">תקנות ההוצל"פ - תקנה 27א, הגשת בקשה לפי סעיפים 19, 25, 48, או 58 לחוק ודיון בה תק' תשס"ט-2009, קובעת: הגשת בקשה לפי סעיפים 19, 25, 48 או 58 לחוק, ודיון בה יהיו בדרך הקבועה בפרק כ' לתקנות סדר הדין, בשינויים המחויבים, ואולם רשם ההוצאה לפועל רשאי לסטות מסדרי הדין האמורים אם מצא כי הדבר יועיל להכרעה צודקת ויעילה בהליך, וכן רשאי הוא לדחות את הבקשה בלי שקיים דיון פרק כ' לתקנות סדר הדין הוא הפרק בעניין בקשות בכתב (תקנות 240-246) מכיוון שמדובר בשיקול דעת, התקנה קובעת: קרא עוד ←</p>
-                        <a href="blog-articles/uniform-civil-procedure.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">תקנות ההוצל"פ - תקנה 27א, הגשת בקשה לפי סעיפים 19, 25, 48, או 58 לחוק ודיון בה תק' תשס"ט-2009, קובעת: הגשת בקשה לפי סעיפים 19, 25, 48 או 58 לחוק, ודיון בה יהיו בדרך הקבועה בפרק כ' לתקנות סדר הדין, בשינויים המחויבים.</p>
+                        
+                        <h3>שיקול דעת הרשם</h3>
+                        <p>רשם ההוצאה לפועל רשאי לסטות מסדרי הדין האמורים אם מצא כי הדבר יועיל להכרעה צודקת ויעילה בהליך, וכן רשאי הוא לדחות את הבקשה בלי שקיים דיון. מכיוון שמדובר בשיקול דעת, התקנה קובעת שניתן לסטות מסדרי הדין האמורים.</p>
+                        
+                        <h3>הכרעה בטענת פרעתי</h3>
+                        <p>רשם ההוצאה לפועל יכול לקבוע אם ובאיזה מידה מוטל על החייב לבצע את פסק הדין. אם הרשם רואה שיש טעם לעכב את פסק הדין, הוא רשאי להורות על עיכוב הביצוע עד שיכריע בטענת הפרעתי. ועוד: אם יש החלטה לעכב ביצוע, יצווה הרשם על החייב להפקיד ערובה לשם הבטחת ביצוע פסק הדין.</p>
+                        
+                        <h3>גביית יתר והחזרתה</h3>
+                        <p>כל סכום שנגבה מהחייב מעל לחוב הפסוק ישולם לחייב, ואם נמסר לזוכה, רשאי רשם ההוצאה לפועל לצוות על החזרתו. הצו ניתן להוצאה לפועל כאילו היה פסק דין לטובת החייב נגד הזוכה.</p>
                     </div>
                 </article>
 
@@ -604,157 +631,19 @@
                             <span>15 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
+                    </div>
                     <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">תביעה על סכום קצוב</h2>
-                    
                     <div class="article-content">
-                        <p class="text-gray-600 mb-4">ביצוע תביעה על סכום קצוב תקנות 109א עד 109יב, סעיף 81א1 לחוק מהי תביעה על סכום קצוב? קרא עוד ←</p>
-                        <a href="blog-articles/fixed-amount-claims.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 15A: Introduction to Bankruptcy -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-11-30" data-title="מבוא להליך פשיטת רגל">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
-                            <span>30 בנובמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">מבוא להליך פשיטת רגל</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">פשיטת רגל (פשט"ר) היא הליך המופעל כלפי אדם חדל פירעון, כלומר: החייב יותר מכפי שביכולתו לפרוע מדובר בהליך המרכז את כל פעולות הגביה של כל הנושים מהחייב, בפיקוח בית המשפט המחוזי, באמצעות בעל תפקיד המכונה "נאמן בפשיטת רגל" עם פתיחת ההליכים של פשיטת הרגל, לא ניתן לבצע פעולות גביה עצמאיות כגון הוצאה לפועל, כנגד פושט הרגל קרא עוד ←</p>
-                        <a href="blog-articles/bankruptcy-introduction.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 15: Request for Receivership Order -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-12-01" data-title="בקשה למתן צו כינוס נכסים">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
-                            <span>1 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">בקשה למתן צו כינוס נכסים</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">הליך פשיטת רגל נפתח עם הגשת בקשה למתן צו כינוס נכסים הבקשה יכולה להיות מוגשת על ידי החייב עצמו או על ידי נושה בקשת חייב - תקנה 8 קרא עוד ←</p>
-                        <a href="blog-articles/receivership-order-request.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 15B: Receivership Order at Request of Debtor -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-12-02" data-title="צו כינוס נכסים לבקשת החייב (פשיטת רגל)">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
-                            <span>2 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">צו כינוס נכסים לבקשת החייב (פשיטת רגל)</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">סעיף 18 לפקודת פשט"ר [נוסח חדש] בקשת פשיטת הרגל שמגיש החייב אם צורף לה אישור מאת הכונס הרשמי וכי מולאו התנאים הקבועים בחוק ומטעמים שירשמו רשאי בית המשפט לאחר שמיעת עמדת הכונס הרשמי ליתן צו כינוס לבקשת החייב ובלבד שבית המשפט שוכנע כי החייב פנה תחילה לכונס הרשמי קרא עוד ←</p>
-                        <a href="blog-articles/receivership-order-debtor.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 15C: Compromise or Arrangement After Declaration -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="פשיטת רגל" data-date="2024-12-03" data-title="פשרה או הסדר לאחר ההכרזה על החייב כפושט רגל">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
-                            <span>3 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">פשרה או הסדר לאחר ההכרזה על החייב כפושט רגל</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">פשרה או הסדר לאחר הכרזה - סעיף 52 לפקודה קובע: משהוכרז החייב פושט רגל רשאים הנושים בכל עת להחליט, ברוב מנין ושלושה רבעי ערך של התובעים הנוכחים והמצביעים, בעצמם או על ידי שלוח, לקבל הצעת פשרה לפירעון החובות המגיעים להם בפשיטת הרגל או הצעת הסדר לעסקי פושט הרגל, ומשעשו כן יהיו ההליכים ותוצאותיהם כמו בפשרה או בהסדר לפני ההכרזה על פשיטת רגל הנושים רשאים בכל עת לקבל הצעת פשרה או הסדר קרא עוד ←</p>
-                        <a href="blog-articles/compromise-after-bankruptcy.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 16: Civil Marriage -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="דיני משפחה" data-date="2024-12-17" data-title="נישואים אזרחיים בישראל">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">דיני משפחה</span>
-                            <span>17 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">נישואים אזרחיים בישראל</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">הדרך היחידה בה ניתן להינשא במדינת ישראל, היא בנישואים דתיים זאת אומרת, בני זוג יהודים, יכולים להינשא במדינת ישראל, אך ורק ברבנות, ולא בשום דרך אחרת נישואים אזרחיים בחו"ל קרא עוד ←</p>
-                        <a href="blog-articles/civil-marriage-israel.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 17: Rabbinical Court -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="דיני משפחה" data-date="2024-12-18" data-title="בית דין רבני - סמכויות והליכים">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">דיני משפחה</span>
-                            <span>18 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">בית דין רבני - סמכויות והליכים</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">בית הדין הרבני הינו בית דין דתי, הדן בכל ענייני המשפחה בעבר, פסק בית הדין הרבני אך ורק בהתאם לדין העברי, וכיום, לאחר פסיקה של בית המשפט העליון והחוקים החדשים שחוקקו, נקבע, כי גם בית הדין הרבני צריך להפעיל את כל מערכת החוקים האזרחית החלה במדינה, במקביל לדין העברי סמכויות בית הדין הרבני קרא עוד ←</p>
-                        <a href="blog-articles/rabbinical-court.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 18: Family Court -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="דיני משפחה" data-date="2024-12-16" data-title="בית המשפט לענייני משפחה">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">דיני משפחה</span>
-                            <span>16 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">בית המשפט לענייני משפחה</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">בית המשפט לענייני משפחה הוקם בשנת 1994 מטרתו הנה לרכז ולדון בכל הסכסוכים בנושאי משפחה בבית משפט אחד, אצל שופט אחד שופטי בית המשפט לענייני משפחה הינם שופטים אשר עיקר הכשרתם הנה בתחום דיני המשפחה קרא עוד ←</p>
-                        <a href="blog-articles/family-court.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 19: Execution Law and Other Laws -->
-                <article class="card blog-card bg-white rounded-xl shadow-lg p-8 relative" data-category="הוצאה לפועל" data-date="2024-12-19" data-title="חוק הוצאה לפועל וחוקים אחרים">
-                    <div class="article-meta">
-                        <div class="flex items-center gap-4 text-sm text-gray-600">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">הוצאה לפועל</span>
-                            <span>19 בדצמבר 2024</span>
-                            <span>עו״ד יניב גיל</span>
-                        </div>
-                    <h2 class="text-2xl font-bold mb-4 text-[#1a1a1a]">חוק הוצאה לפועל וחוקים אחרים</h2>
-                    
-                    <div class="article-content">
-                        <p class="text-gray-600 mb-4">תקנות הוצאה לפועל נגד המדינה 31/3/2014 - קיים חוק לתיקון סדרי הדין האזרחיים, חוק שנחקק לפני כחמישים שנה וסעיף 7 – אומר אין הליכי הוצאה לפועל נגד המדינה קרא עוד ←</p>
-                        <a href="blog-articles/execution-law-other-laws.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-semibold transition-colors mt-4">
-                            קרא עוד ←
-                        </a>
+                        <p class="text-gray-600 mb-4">תביעה על סכום קצוב היא תביעה שלא הגיעה לדיון בבית המשפט - תביעה שלא היה בה כתב הגנה ולא היה הליך משפטי. מדובר בתביעה מכוח חוזה, שיש עליה ראיה בכתב (או תביעה מכוח חיקוק, כגון: תביעה לתשלום ארנונה) ושאותה ניתן היה להגיש גם בסדמ"ר, אבל במקום - מגישים אותה בהוצל"פ בהסדר מיוחד.</p>
+                        
+                        <h3>תנאים לתביעה על סכום קצוב</h3>
+                        <p>תביעה שהיא אחת מאלה: תביעה על סכום כסף קצוב הבאה מכוח חוזה או התחייבות מפורשים, שיש עליה ראיה בכתב, או תביעה הבאה מכוח חיוב לשלם סכום כסף קצוב שעילתו בהוראה מפורשת של חיקוק, ניתן לבקש לבצעה בהוצאה לפועל כמו פסק דין של בית משפט בכפוף להוראות החוק, ובלבד שסכום התביעה אינו עולה על 50,000 שקלים חדשים ביום הגשתה.</p>
+                        
+                        <h3>הליך ההתראה</h3>
+                        <p>המבקש לבצע תביעה על סכום קצוב לפי הוראות החוק ישלח לנתבע התראה בדבר כוונתו להגיש את התביעה לביצוע בהוצאה לפועל. ההתראה תישלח בדואר רשום כדי לוודא שלא מפתיעים את החייב, שהרי לא מדובר ב"סתם תביעה" אלא תביעה שהיא מספיק טובה, ויש לאפשר לחייב להגיב (להגיש התנגדות).</p>
+                        
+                        <h3>הגשת התנגדות</h3>
+                        <p>הנתבע רשאי להגיש התנגדות לבקשת הביצוע, לרבות התנגדות מהטעם שלא התקיימו בתביעה התנאים הקבועים בחוק, בתוך שלושים ימים מיום המצאת האזהרה. הוגשה התנגדות, יעכב רשם ההוצאה לפועל את ביצוע הבקשה ויעביר את התביעה וההתנגדות לבית המשפט. לעניין הדיון בבית המשפט יראו את ההתנגדות כבקשת רשות להתגונן בסדר דין מקוצר לפי תקנות סדרי הדין.</p>
                     </div>
                 </article>
 
@@ -763,148 +652,99 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+    <footer class="bg-[#1a1a1a] text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <img src="images/new-logo.png" alt="עו״ד יניב גיל" class="h-12 w-auto mb-4">
+                    <p class="text-gray-400 mb-4">משרד עורכי דין המתמחה בפשיטת רגל, חדלות פירעון ודיני משפחה</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#c9a55c] transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#c9a55c] transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">קישורים מהירים</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
                         <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
                         <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
-                        <li><a href="media.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיה</a></li>
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                         <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                     </ul>
                 </div>
+
+                <!-- Practice Areas -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <h3 class="text-xl font-bold mb-4">תחומי התמחות</h3>
                     <ul class="space-y-2">
-                        <li><a href="practice-areas.html#family-law" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה, ירושות וצוואות</a></li>
-                        <li><a href="practice-areas.html#bankruptcy" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון והוצאה לפועל</a></li>
-                        <li><a href="practice-areas.html#civil-law" class="hover:text-[#b8941f] transition-colors duration-200">סדר דין אזרחי ומקרקעין</a></li>
-            </ul>
+                        <li><a href="practice-areas.html#bankruptcy" class="hover:text-[#b8941f] transition-colors duration-200">פשיטת רגל</a></li>
+                        <li><a href="practice-areas.html#family-law" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה</a></li>
+                        <li><a href="practice-areas.html#civil-law" class="hover:text-[#b8941f] transition-colors duration-200">דיני נזיקין</a></li>
+                        <li><a href="practice-areas.html#real-estate" class="hover:text-[#b8941f] transition-colors duration-200">דיני נדל״ן</a></li>
+                    </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
-                    <div class="space-y-4">
-                        <p><strong>טלפון ראשי:</strong><br><a href="tel:03-6092414" class="hover:text-[#b8941f]">03-6092414</a></p>
-                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-[#b8941f]">054-8184581</a></p>
-                        <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-[#b8941f]">03-6092413</a></p>
-                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-[#b8941f]">yanivgil@gmail.com</a></p>
-                        <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
-                        <p class="mt-4">
-                            <strong>עקבו אחרינו:</strong><br>
-                            <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-[#b8941f] transition-colors duration-200" aria-label="Facebook">Facebook</a>
-                        </p>
+                    <h3 class="text-xl font-bold mb-4">צור קשר</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#c9a55c] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">רחוב הרצל 123, תל אביב</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#c9a55c] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">03-1234567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#c9a55c] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@yanivgil.co.il</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <div class="flex flex-col items-center md:items-start">
-                    <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
-                    <p class="mt-1">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#b8941f] transition-colors">Eladdigital</a></p>
-                </div>
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="privacy-policy.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיניות פרטיות</a>
-                    <a href="terms-of-use.html" class="hover:text-[#b8941f] transition-colors duration-200">תנאי שימוש</a>
-                </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 עו״ד יניב גיל. כל הזכויות שמורות.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Script for the shrinking header effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('site-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-mobile-menu');
+        // Mobile menu toggle
+        function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-            
-            // Open menu
-            if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                });
-            }
-            
-            // Close menu
-            if (closeMenuButton) {
-                closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                });
-            }
-            
-            // Close menu when clicking a link
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                });
-            });
-            
-            // Close menu when clicking outside
-            if (mobileMenu) {
-                mobileMenu.addEventListener('click', function(e) {
-                    if (e.target === mobileMenu) {
-                        mobileMenu.classList.remove('active');
-                        document.body.style.overflow = ''; // Enable scrolling
-                    }
-                });
-            }
-        });
+            mobileMenu.classList.toggle('hidden');
+        }
 
         // Filter functionality
         const filterButtons = document.querySelectorAll('.filter-btn');
         const articles = document.querySelectorAll('.blog-card');
         const sortSelect = document.getElementById('sort-select');
 
-        // Sort functionality
-        if (sortSelect) {
-            sortSelect.addEventListener('change', () => {
-                const sortBy = sortSelect.value;
-                const articlesArray = Array.from(articles);
-                
-                articlesArray.sort((a, b) => {
-                    switch(sortBy) {
-                        case 'newest':
-                            return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
-                        case 'oldest':
-                            return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
-                        case 'title':
-                            return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'), 'he');
-                        default:
-                            return 0;
-                    }
-                });
-
-                // Re-append sorted articles
-                const grid = document.getElementById('articles-grid');
-                articlesArray.forEach(article => {
-                    grid.appendChild(article);
-                });
-                
-                // Reinitialize truncation after sorting
-                
-            });
-        }
-        
-        // Reinitialize truncation after filtering
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
@@ -921,11 +761,48 @@
                         article.style.display = 'none';
                     }
                 });
-                
-                // Reinitialize truncation after filtering
-                
             });
         });
+
+        // Sort functionality
+        sortSelect.addEventListener('change', () => {
+            const sortBy = sortSelect.value;
+            const articlesArray = Array.from(articles);
+            
+            articlesArray.sort((a, b) => {
+                switch(sortBy) {
+                    case 'newest':
+                        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+                    case 'oldest':
+                        return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
+                    case 'title':
+                        return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-append sorted articles
+            const grid = document.getElementById('articles-grid');
+            articlesArray.forEach(article => {
+                grid.appendChild(article);
+            });
+        });
+
+        // Search functionality (if needed in future)
+        function searchArticles(query) {
+            const searchTerm = query.toLowerCase();
+            articles.forEach(article => {
+                const title = article.getAttribute('data-title').toLowerCase();
+                const content = article.textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
     </script>
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/972548184581?text=????%2C%20???%20???????%20??????%20?????" class="whatsapp-float" target="_blank" rel="noopener" aria-label="??? WhatsApp">

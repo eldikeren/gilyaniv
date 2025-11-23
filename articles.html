@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאמרים ופרסומים - משרד עו"ד יניב גיל - v3.0</title>
-    <meta name="description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים - משרד עו״ד יניב גיל">
+    <title>פרסומים מקצועיים – עו"ד יניב גיל | מאמרים ודעות משפטיות</title>
+    <meta name="description" content="פרסומים מקצועיים במדיה של עו״ד יניב גיל. מאמרים ודעות משפטיות בנושא דיני משפחה, חדלות פירעון, גירושין וירושה.">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="מאמרים - משרד עו״ד יניב גיל">
     <meta property="og:description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים - משרד עו״ד יניב גיל">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="משרד עו״ד יניב גיל - לוגו">
-    <meta property="og:url" content="https://gilyaniv.vercel.app/articles.html">
+    <meta property="og:url" content="https://www.yanivgil.co.il/articles.html">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="מאמרים - משרד עו״ד יניב גיל">
     <meta name="twitter:description" content="מאמרים מקצועיים ופרסומים בתחומי המשפט השונים">
-    <meta name="twitter:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta name="keywords" content="מאמרים משפטיים, פרסומים מקצועיים, עורך דין יניב גיל, דיני משפחה, חדלות פירעון">
+    <link rel="canonical" href="https://www.yanivgil.co.il/articles.html">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="apple-touch-icon" href="images/new-logo.png">
     <!-- Vercel Speed Insights -->
     <script>
         (function() {
-            var script = document.createElement('script');
-            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
-            script.async = true;
-            document.head.appendChild(script);
+            try {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+                script.async = true;
+                script.type = 'module';
+                document.head.appendChild(script);
+            } catch(e) {
+                // Silently fail if module error occurs
+            }
         })();
     </script>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
     body {
             font-family: 'Heebo', sans-serif;
@@ -213,7 +232,48 @@
             background: #b8941f;
             color: #1a1a1a;
     }
-    </style>
+            /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            background-color: #20BA5A;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                bottom: 15px;
+                left: 15px;
+            }
+            .whatsapp-float svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+</style>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -237,6 +297,7 @@
                     <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                     <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
                     <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
                     <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                 </ul>
@@ -265,6 +326,7 @@
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
                     <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
                     <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="blog.html" class="mobile-menu-link">בלוג</a>
                     <a href="contact.html" class="mobile-menu-link">צור קשר</a>
                 </div>
             </div>
@@ -273,8 +335,9 @@
 
     <main class="pt-24">
         <!-- Hero Section for Articles Page -->
-        <section class="relative h-80vh flex items-center justify-center text-white text-center">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+                <source src="images/artickels-compressed.mp4" type="video/mp4">
                 <source src="images/artickels.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
@@ -461,18 +524,6 @@
                         <p class="text-gray-600 mb-4">התובע חיכה 19 שנים עד שתבע החזר הלוואה בהסתמך על סעיף בשטר ההתחייבות שבו נכתב כי אין תחולה לחוק ההתיישנות. אלא שבית המשפט קבע כי הסעיף אינו חוקי וכי ממילא ההתחייבות בעייתית כיוון שחסרים בה פרטים מהותיים</p>
                         <div class="mt-auto">
                             <a class="inline-block text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200" href="https://www.mako.co.il/finances-law/law-general/Article-e0f2da5db7c4c61026.htm?sCh=3d385dd2dd5d4110&pId=1149282442" target="_blank" rel="noopener">קרא עוד &rarr;</a>
-                    </div>
-                </article>
-
-                <!-- Yaniv Article 13 -->
-                    <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-28" data-title="סירוב גט - יניב גיל">
-                        <div class="source-logo">
-                            <img src="images/icons/yaniv-gil-logo.png" alt="Yaniv Gil" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=Yaniv+Gil'">
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">סירוב גט - יניב גיל</h3>
-                        <p class="text-gray-600 mb-4">מאמר מקצועי על סירוב גט והשלכותיו המשפטיות, כולל דרכי טיפול ופתרונות משפטיים</p>
-                        <div class="mt-auto">
-                            <a class="inline-block text-[#b8941f] hover:text-[#1a1a1a] font-medium transition-colors duration-200" href="https://www.yanivgil.co.il/siruv-get" target="_blank" rel="noopener">קרא עוד &rarr;</a>
                     </div>
                 </article>
 
@@ -729,10 +780,11 @@
                     <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                        <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
                         <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
                         <li><a href="media.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיה</a></li>
                         <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                     </ul>
@@ -753,6 +805,10 @@
                         <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-[#b8941f]">03-6092413</a></p>
                         <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-[#b8941f]">yanivgil@gmail.com</a></p>
                         <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                        <p class="mt-4">
+                            <strong>עקבו אחרינו:</strong><br>
+                            <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-yellow-400 transition-colors duration-200" aria-label="Facebook">Facebook</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -951,5 +1007,13 @@
             });
         });
     </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972548184581?text=????%2C%20???%20???????%20??????%20?????" class="whatsapp-float" target="_blank" rel="noopener" aria-label="??? WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 </body>
 </html>
+
+

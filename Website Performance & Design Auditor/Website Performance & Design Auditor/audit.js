@@ -6,31 +6,69 @@ import axios from "axios";
 
 export async function analyzeWebsite(url, options = {}) {
   console.log(`🔍 Starting audit for ${url}`);
-  const chrome = await launch({ chromeFlags: ["--headless"] });
-  const result = await lighthouse(url, {
-    port: chrome.port,
-    output: "json",
-    logLevel: "info",
-  });
+  let chrome;
+  try {
+    chrome = await launch({ 
+      chromeFlags: ["--headless", "--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage", "--disable-web-security"] 
+    });
+    
+    const result = await lighthouse(url, {
+      port: chrome.port,
+      output: "json",
+      logLevel: "info",
+      settings: {
+        maxWaitForFcp: 15000,
+        maxWaitForLoad: 30000,
+        throttlingMethod: 'simulate',
+        throttling: {
+          rttMs: 40,
+          throughputKbps: 10240,
+          cpuSlowdownMultiplier: 1,
+          requestLatencyMs: 0,
+          downloadThroughputKbps: 0,
+          uploadThroughputKbps: 0
+        },
+        skipAudits: ['uses-http2', 'uses-long-cache-ttl']
+      }
+    });
 
-  const report = JSON.parse(result.report);
-  await chrome.kill();
+    const report = JSON.parse(result.report);
+    await chrome.kill();
 
-  // Save full Lighthouse report
-  fs.writeFileSync(`audit-${new URL(url).hostname}.json`, JSON.stringify(report, null, 2));
+    // Save full Lighthouse report
+    const filename = `audit-${new URL(url).hostname}-${Date.now()}.json`;
+    fs.writeFileSync(filename, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved: ${filename}`);
 
-  const { performance, accessibility, seo, "best-practices": bestPractices } = report.categories;
+    const { performance, accessibility, seo, "best-practices": bestPractices } = report.categories;
 
-  return {
-    url,
-    scores: {
-      performance: performance.score,
-      accessibility: accessibility.score,
-      seo: seo.score,
-      bestPractices: bestPractices.score,
-    },
-    recommendations: generateRecommendations(report),
-  };
+    return {
+      url,
+      scores: {
+        performance: performance?.score || 0,
+        accessibility: accessibility?.score || 0,
+        seo: seo?.score || 0,
+        bestPractices: bestPractices?.score || 0,
+      },
+      recommendations: generateRecommendations(report),
+      reportFile: filename
+    };
+  } catch (error) {
+    console.error(`❌ Error auditing ${url}:`, error.message);
+    if (chrome) await chrome.kill();
+    
+    return {
+      url,
+      scores: {
+        performance: 0,
+        accessibility: 0,
+        seo: 0,
+        bestPractices: 0,
+      },
+      recommendations: [`Failed to audit: ${error.message}`],
+      reportFile: null
+    };
+  }
 }
 
 function generateRecommendations(report) {

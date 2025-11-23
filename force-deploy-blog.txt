@@ -1,5 +1,0 @@
-Force deployment with blog section - 2025-01-27
-Blog section added with comprehensive legal articles
-Navigation updated to include blog links
-Deployment timestamp: 2025-01-27 16:30:00
-

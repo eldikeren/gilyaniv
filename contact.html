@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר - עו"ד יניב גיל</title>
-    <meta name="description" content="צרו קשר עם משרד עו״ד יניב גיל לקבלת ייעוץ משפטי מקצועי. ייעוץ ראשוני חינם בתחומי דיני משפחה, חדלות פירעון וסדר דין אזרחי.">
+    <title>צור קשר – עו"ד יניב גיל | דיני משפחה וחדלות פירעון בתל אביב</title>
+    <meta name="description" content="ייעוץ ראשוני ודיסקרטי עם עו״ד יניב גיל. התקשרו: 03-6092414 או 054-8184581. משרד בתל אביב – דיני משפחה, גירושין, ירושה וחדלות פירעון.">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="צור קשר - משרד עו״ד יניב גיל">
     <meta property="og:description" content="ייעוץ משפטי מקצועי בדיני משפחה, חדלות פירעון וסדר דין אזרחי. ייעוץ ראשוני חינם.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="משרד עו״ד יניב גיל - לוגו">
-    <meta property="og:url" content="https://gilyaniv.vercel.app/contact.html">
+    <meta property="og:url" content="https://www.yanivgil.co.il/contact.html">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="צור קשר - משרד עו״ד יניב גיל">
     <meta name="twitter:description" content="ייעוץ משפטי מקצועי בדיני משפחה, חדלות פירעון וסדר דין אזרחי">
-    <meta name="twitter:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta name="keywords" content="עורך דין יניב גיל, צור קשר, ייעוץ משפטי, דיני משפחה, חדלות פירעון, תל אביב">
+    <link rel="canonical" href="https://www.yanivgil.co.il/contact.html">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- EmailJS CDN -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
     body {
             font-family: 'Heebo', sans-serif;
@@ -258,20 +270,65 @@
             background: #b8941f;
             color: #1a1a1a;
     }
+    
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        left: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    .whatsapp-float:hover {
+        background-color: #20BA5A;
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    .whatsapp-float svg {
+        width: 35px;
+        height: 35px;
+    }
+    @media (max-width: 768px) {
+        .whatsapp-float {
+            width: 56px;
+            height: 56px;
+            bottom: 15px;
+            left: 15px;
+        }
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Vercel Speed Insights -->
     <script>
         (function() {
-            var script = document.createElement('script');
-            script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
-            script.async = true;
-            document.head.appendChild(script);
+            try {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/@vercel/speed-insights@latest/dist/index.js';
+                script.async = true;
+                script.type = 'module';
+                document.head.appendChild(script);
+            } catch(e) {
+                // Silently fail if module error occurs
+            }
         })();
     </script>
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -289,10 +346,11 @@
             <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="תפריט ראשי">
                 <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
                     <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                    <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                     <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
                     <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
                     <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
                     <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                     </ul>
@@ -308,7 +366,7 @@
                     התקשר עכשיו
                 </a>
             </div>
-                    </div>
+        </div>
         
         <!-- Full-screen Mobile Menu Overlay -->
         <div id="mobile-menu" class="mobile-menu-overlay">
@@ -320,6 +378,7 @@
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
                     <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
                     <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="blog.html" class="mobile-menu-link">בלוג</a>
                     <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
                     <a href="contact.html" class="mobile-menu-link">צור קשר</a>
                 </div>
@@ -332,8 +391,9 @@
     
     <main id="main-content" class="pt-24" role="main">
         <!-- Hero Section for Contact Page -->
-        <section class="relative h-80vh flex items-center justify-center text-white text-center">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+                <source src="images/contact-compressed.mp4" type="video/mp4">
                 <source src="images/contact.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
@@ -343,6 +403,12 @@
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-8 py-4 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="tel:0548184581">
                         התקשר עכשיו
+                    </a>
+                    <a class="inline-flex items-center justify-center rounded-full border-2 border-[#25D366] bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#20BA5A] hover:border-[#20BA5A]" href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" target="_blank" rel="noopener">
+                        <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        שלח WhatsApp
                     </a>
                     <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-transparent px-8 py-4 text-base font-semibold text-[#b8941f] transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]" href="#contact-form">
                         שלח הודעה
@@ -447,13 +513,14 @@
                 <div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg" style="height: 400px;">
                     <!-- Google Maps Embed -->
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.5!2d34.7805!3d32.0853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sDerech%20Menachem%20Begin%20150%2C%20Tel%20Aviv-Yafo!5e0!3m2!1sen!2sil!4v1234567890123!5m2!1sen!2sil"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.6321932549345!2d34.79234797563399!3d32.07919547396302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b1d363f01c5%3A0x13baccb897da65b5!2z157XkteT15wgV0UgVExW!5e0!3m2!1sen!2sil!4v1762332473619!5m2!1sen!2sil"
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="מיקום המשרד - מגדל WE-TLV, דרך מנחם בגין 150, תל-אביב">
                     </iframe>
                 </div>
                 
@@ -482,7 +549,7 @@
                 <div class="mt-6 text-center text-sm text-gray-600">
                     <p><strong>חניה:</strong> חניה חינם ללקוחות המשרד</p>
                     <p><strong>נגישות:</strong> המשרד נגיש לנכים</p>
-                    <p><strong>תחבורה ציבורית:</strong> תחנת רכבת "סבידור" במרחק 5 דקות הליכה</p>
+                    <p><strong>תחבורה ציבורית:</strong> תחנות רכבת "סבידור" ו"השלום" במרחק 5 דקות הליכה</p>
                 </div>
             </div>
         </div>
@@ -500,60 +567,30 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <!-- Contact Form -->
                         <article class="card bg-white rounded-xl shadow-lg p-8 relative">
-                            <form id="contact-form" novalidate class="space-y-6">
+                            <form id="contact-form" action="https://formsubmit.co/yanivgil@gmail.com" method="POST" novalidate class="space-y-6">
                         <div>
-                                    <label for="from_name" class="block text-sm font-medium text-gray-700 mb-2">שם מלא *</label>
-                                    <input id="from_name" name="from_name" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">שם מלא *</label>
+                                    <input id="name" name="name" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
                         </div>
                                 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                                        <label for="from_phone" class="block text-sm font-medium text-gray-700 mb-2">טלפון *</label>
-                                        <input id="from_phone" name="from_phone" type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">טלפון *</label>
+                                        <input id="phone" name="phone" type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
                     </div>
                         <div>
-                                        <label for="from_email" class="block text-sm font-medium text-gray-700 mb-2">אימייל *</label>
-                                        <input id="from_email" name="from_email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">אימייל *</label>
+                                        <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
                         </div>
                     </div>
                                 
                                 <div>
-                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">נושא *</label>
-                                    <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
-                                <option value="">בחרו נושא</option>
-                                <option value="family">דיני משפחה</option>
-                                <option value="bankruptcy">חדלות פירעון</option>
-                                <option value="civil">סדר דין אזרחי</option>
-                                <option value="real-estate">מקרקעין</option>
-                                <option value="commercial">משפט מסחרי</option>
-                                <option value="labor">דיני עבודה</option>
-                                <option value="consultation">ייעוץ כללי</option>
-                                <option value="other">אחר</option>
-                            </select>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">נושא הפנייה</label>
+                                    <input id="subject" name="subject" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200" placeholder="נושא הפנייה">
                         </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">דחיפות</label>
-                                        <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
-                                <option value="normal">רגיל</option>
-                                <option value="urgent">דחוף</option>
-                                <option value="very-urgent">דחוף מאוד</option>
-                            </select>
-                        </div>
-                                    <div>
-                                        <label for="preferred-contact" class="block text-sm font-medium text-gray-700 mb-2">אופן התקשרות מועדף</label>
-                                        <select id="preferred-contact" name="preferred-contact" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200">
-                                <option value="phone">טלפון</option>
-                                <option value="email">אימייל</option>
-                                <option value="whatsapp">ווטסאפ</option>
-                                <option value="meeting">פגישה במשרד</option>
-                            </select>
-                        </div>
-                                </div>
                                 
                                 <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">תיאור הבעיה *</label>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">הודעה *</label>
                                     <textarea id="message" name="message" rows="6" required placeholder="תארו את הבעיה המשפטית שלכם..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors duration-200"></textarea>
                         </div>
                                 
@@ -563,6 +600,12 @@
                                 אני מסכים למדיניות הפרטיות ולקבלת עדכונים
                             </label>
                         </div>
+                                
+                                <!-- FormSubmit hidden fields -->
+                                <input type="hidden" name="_cc" value="elad.d.keren@gmail.com">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://www.yanivgil.co.il/thanks.html">
+                                <input type="hidden" name="_from" value="פניה מהאתר - Yaniv Gil Law">
                                 
                                 <button class="w-full inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-8 py-4 text-base font-semibold text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" type="submit">
                                     שלח הודעה
@@ -634,10 +677,11 @@
                     <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-yellow-400 transition-colors duration-200">בית</a></li>
-                        <li><a href="about.html" class="hover:text-yellow-400 transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="index.html#about" class="hover:text-yellow-400 transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-yellow-400 transition-colors duration-200">עורכי דין</a></li>
                         <li><a href="practice-areas.html" class="hover:text-yellow-400 transition-colors duration-200">תחומי התמחות</a></li>
                         <li><a href="articles.html" class="hover:text-yellow-400 transition-colors duration-200">פרסומים מקצועיים</a></li>
+                        <li><a href="blog.html" class="hover:text-yellow-400 transition-colors duration-200">בלוג</a></li>
                         <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-yellow-400 transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                         <li><a href="contact.html" class="hover:text-yellow-400 transition-colors duration-200">צור קשר</a></li>
                     </ul>
@@ -658,6 +702,10 @@
                         <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-yellow-400">03-6092413</a></p>
                         <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-yellow-400">yanivgil@gmail.com</a></p>
                         <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                        <p class="mt-4">
+                            <strong>עקבו אחרינו:</strong><br>
+                            <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-yellow-400 transition-colors duration-200" aria-label="Facebook">Facebook</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -715,12 +763,6 @@
             }
         });
 
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('תודה על פנייתכם! נחזור אליכם בהקדם האפשרי.');
-        });
 
         // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -787,108 +829,21 @@
             });
         });
 
-        // Initialize EmailJS when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize EmailJS
-            emailjs.init("bZa2jc2c_0IfnuYK4");
-            
-            
-            // Contact form handling with EmailJS
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Show loading state
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'שולח...';
-                    submitBtn.disabled = true;
-                    
-                    // Get form data
-                    const formData = new FormData(this);
-                    
-                    // Convert subject to Hebrew if needed
-                    const subject = formData.get('subject');
-                    const hebrewSubjects = {
-                        'family': 'דיני משפחה',
-                        'bankruptcy': 'חדלות פירעון',
-                        'civil': 'סדר דין אזרחי',
-                        'real-estate': 'מקרקעין',
-                        'commercial': 'משפט מסחרי',
-                        'labor': 'דיני עבודה',
-                        'consultation': 'ייעוץ כללי',
-                        'other': 'אחר'
-                    };
-                    const hebrewSubject = hebrewSubjects[subject] || subject;
-                    
-                    const templateParams = {
-                        from_name: formData.get('from_name'),
-                        from_phone: formData.get('from_phone'),
-                        from_email: formData.get('from_email'),
-                        subject: hebrewSubject,
-                        message: formData.get('message'),
-                        to_email: 'yanivgil@gmail.com',
-                        reply_to: formData.get('from_email')
-                    };
-                    
-                    // Try to send email using EmailJS with correct recipient
-                    if (typeof emailjs !== 'undefined') {
-                        
-                        // The template expects 'email' field to be the recipient
-                        // We want to send TO yanivgil@gmail.com, not to the user
-                        const emailParams = {
-                            ...templateParams,
-                            email: 'yanivgil@gmail.com', // This is the TO field in the template
-                            reply_to: templateParams.from_email
-                        };
-                        
-                        emailjs.send('service_3vdbcvb', 'template_bbqt03j', emailParams)
-                            .then(function(response) {
-                                alert('תודה על פנייתכם! ההודעה נשלחה בהצלחה ונחזור אליכם בהקדם.');
-                                document.getElementById('contact-form').reset();
-                            }, function(error) {
-                                
-                                // Fallback to mailto
-                                const emailBody = `שלום עו"ד יניב גיל,
-
-קיבלתי פנייה חדשה מהאתר:
-
-פרטי הפנייה:
-שם: ${templateParams.from_name}
-טלפון: ${templateParams.from_phone}
-אימייל: ${templateParams.from_email}
-נושא: ${templateParams.subject}
-הודעה: ${templateParams.message}
-
-בברכה,
-האתר`;
-
-                                const mailtoLink = `mailto:yanivgil@gmail.com?subject=${encodeURIComponent('פנייה חדשה מהאתר - ' + templateParams.subject)}&body=${encodeURIComponent(emailBody)}`;
-                                window.location.href = mailtoLink;
-                                alert('תודה על פנייתכם! נפתח עבורכם תוכנת הדואר האלקטרוני. אנא שלחו את ההודעה.');
-                            })
-                            .finally(function() {
-                                // Reset button state
-                                submitBtn.textContent = originalText;
-                                submitBtn.disabled = false;
-                            });
-                    } else {
-                        alert('שגיאה בטעינת שירות השליחה. אנא נסו שוב מאוחר יותר.');
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    }
-                });
-            }
-});
 </script>
 
+<<<<<<< HEAD
     <!-- Accessibility Floating Button -->
     <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות - גישה לדף נגישות האתר" title="הצהרת נגישות">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+=======
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" class="whatsapp-float" target="_blank" rel="noopener" aria-label="שלח WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+>>>>>>> 1c8df82c9bdb26093b27297d07c45a5327428f14
         </svg>
     </a>
 </body>

@@ -4,440 +4,467 @@ import path from "path";
 export class WebsiteAnalyzer {
   constructor() {
     this.auditFiles = [];
-    this.analysisResults = {};
+    this.analysisResults = {
+      overall: {},
+      pages: [],
+      recommendations: {
+        critical: [],
+        high: [],
+        medium: [],
+        low: []
+      },
+      trends: {},
+      summary: {}
+    };
   }
 
   // Find all audit JSON files
   findAuditFiles() {
-    const files = fs.readdirSync(".");
-    this.auditFiles = files.filter(file => file.startsWith("audit-") && file.endsWith(".json"));
-    console.log(`📊 Found ${this.auditFiles.length} audit files: ${this.auditFiles.join(", ")}`);
+    const files = fs.readdirSync('.');
+    this.auditFiles = files.filter(file => file.startsWith('audit-') && file.endsWith('.json'));
+    console.log(`📁 Found ${this.auditFiles.length} audit files`);
     return this.auditFiles;
   }
 
   // Load and parse audit data
-  loadAuditData(filename) {
-    try {
-      const data = fs.readFileSync(filename, "utf8");
-      return JSON.parse(data);
-    } catch (error) {
-      console.error(`❌ Error loading ${filename}:`, error.message);
-      return null;
+  loadAuditData() {
+    const audits = [];
+    
+    for (const file of this.auditFiles) {
+      try {
+        const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+        audits.push({
+          file,
+          url: data.requestedUrl || data.finalUrl,
+          timestamp: new Date(data.fetchTime),
+          data
+        });
+      } catch (error) {
+        console.error(`❌ Error loading ${file}:`, error.message);
+      }
     }
+    
+    return audits;
   }
 
   // Analyze performance metrics
   analyzePerformance(audit) {
-    const performance = audit.categories.performance;
-    const audits = audit.audits;
+    const { data } = audit;
+    const performance = data.categories?.performance;
+    const audits = data.audits || {};
     
     const metrics = {
-      score: performance.score * 100,
-      fcp: audits["first-contentful-paint"]?.numericValue,
-      lcp: audits["largest-contentful-paint"]?.numericValue,
-      cls: audits["cumulative-layout-shift"]?.numericValue,
-      fid: audits["max-potential-fid"]?.numericValue,
-      tbt: audits["total-blocking-time"]?.numericValue,
-      si: audits["speed-index"]?.numericValue,
-      tti: audits["interactive"]?.numericValue
+      score: performance?.score || 0,
+      fcp: audits['first-contentful-paint']?.numericValue || 0,
+      lcp: audits['largest-contentful-paint']?.numericValue || 0,
+      si: audits['speed-index']?.numericValue || 0,
+      tbt: audits['total-blocking-time']?.numericValue || 0,
+      cls: audits['cumulative-layout-shift']?.numericValue || 0,
+      fmp: audits['first-meaningful-paint']?.numericValue || 0,
+      tti: audits['interactive']?.numericValue || 0
     };
 
     const issues = [];
-    const recommendations = [];
+    
+    // Performance issues
+    if (metrics.fcp > 1800) issues.push({ type: 'critical', message: 'First Contentful Paint is too slow (>1.8s)', value: metrics.fcp });
+    if (metrics.lcp > 2500) issues.push({ type: 'high', message: 'Largest Contentful Paint is too slow (>2.5s)', value: metrics.lcp });
+    if (metrics.si > 3400) issues.push({ type: 'high', message: 'Speed Index is too slow (>3.4s)', value: metrics.si });
+    if (metrics.tbt > 200) issues.push({ type: 'high', message: 'Total Blocking Time is too high (>200ms)', value: metrics.tbt });
+    if (metrics.cls > 0.1) issues.push({ type: 'high', message: 'Cumulative Layout Shift is too high (>0.1)', value: metrics.cls });
+    if (metrics.tti > 3800) issues.push({ type: 'medium', message: 'Time to Interactive is too slow (>3.8s)', value: metrics.tti });
 
-    // Core Web Vitals analysis
-    if (metrics.lcp > 2500) {
-      issues.push("Poor LCP (Largest Contentful Paint)");
-      recommendations.push({
-        category: "Performance",
-        priority: "High",
-        issue: "Slow LCP",
-        description: `LCP is ${Math.round(metrics.lcp)}ms (should be < 2500ms)`,
-        solutions: [
-          "Optimize and compress hero images/videos",
-          "Preload critical resources",
-          "Use a CDN for faster delivery",
-          "Implement lazy loading for non-critical images"
-        ]
-      });
-    }
-
-    if (metrics.cls > 0.1) {
-      issues.push("Poor CLS (Cumulative Layout Shift)");
-      recommendations.push({
-        category: "Performance",
-        priority: "High",
-        issue: "Layout Shift",
-        description: `CLS score is ${metrics.cls.toFixed(3)} (should be < 0.1)`,
-        solutions: [
-          "Reserve space for images and ads",
-          "Avoid inserting content above existing content",
-          "Use size attributes for images",
-          "Preload web fonts"
-        ]
-      });
-    }
-
-    if (metrics.fid > 100) {
-      issues.push("Poor FID (First Input Delay)");
-      recommendations.push({
-        category: "Performance",
-        priority: "Medium",
-        issue: "Input Delay",
-        description: `FID is ${Math.round(metrics.fid)}ms (should be < 100ms)`,
-        solutions: [
-          "Reduce JavaScript execution time",
-          "Break up long tasks",
-          "Use web workers for heavy computations",
-          "Defer non-critical JavaScript"
-        ]
-      });
-    }
-
-    return { metrics, issues, recommendations };
+    return { metrics, issues };
   }
 
   // Analyze accessibility
   analyzeAccessibility(audit) {
-    const accessibility = audit.categories.accessibility;
-    const audits = audit.audits;
+    const { data } = audit;
+    const accessibility = data.categories?.accessibility;
+    const audits = data.audits || {};
     
     const issues = [];
-    const recommendations = [];
-
-    // Color contrast
-    if (audits["color-contrast"]?.score < 1) {
-      issues.push("Color contrast issues");
-      recommendations.push({
-        category: "Accessibility",
-        priority: "High",
-        issue: "Insufficient Color Contrast",
-        description: "Text and background colors don't meet WCAG standards",
-        solutions: [
-          "Increase contrast ratio to at least 4.5:1 for normal text",
-          "Use contrast checking tools",
-          "Test with color blindness simulators",
-          "Provide alternative text for color-coded information"
-        ]
-      });
+    
+    // Accessibility issues
+    if (audits['color-contrast']?.score < 1) {
+      issues.push({ type: 'critical', message: 'Color contrast ratio is insufficient for accessibility' });
+    }
+    if (audits['tap-targets']?.score < 1) {
+      issues.push({ type: 'high', message: 'Touch targets are too small (<48px)' });
+    }
+    if (audits['image-alt']?.score < 1) {
+      issues.push({ type: 'high', message: 'Images missing alt text' });
+    }
+    if (audits['button-name']?.score < 1) {
+      issues.push({ type: 'high', message: 'Buttons missing accessible names' });
+    }
+    if (audits['link-name']?.score < 1) {
+      issues.push({ type: 'medium', message: 'Links missing accessible names' });
+    }
+    if (audits['heading-order']?.score < 1) {
+      issues.push({ type: 'medium', message: 'Heading elements not in sequential order' });
     }
 
-    // Missing alt text
-    if (audits["image-alt"]?.score < 1) {
-      issues.push("Missing alt text");
-      recommendations.push({
-        category: "Accessibility",
-        priority: "High",
-        issue: "Missing Alt Text",
-        description: "Images lack descriptive alt attributes",
-        solutions: [
-          "Add descriptive alt text to all images",
-          "Use empty alt='' for decorative images",
-          "Ensure alt text describes the image content",
-          "Test with screen readers"
-        ]
-      });
-    }
-
-    // Tap targets
-    if (audits["tap-targets"]?.score < 1) {
-      issues.push("Small tap targets");
-      recommendations.push({
-        category: "Accessibility",
-        priority: "Medium",
-        issue: "Small Touch Targets",
-        description: "Interactive elements are too small for mobile users",
-        solutions: [
-          "Ensure tap targets are at least 48x48px",
-          "Add adequate spacing between interactive elements",
-          "Test on actual mobile devices",
-          "Consider thumb-friendly navigation"
-        ]
-      });
-    }
-
-    return { 
-      score: accessibility.score * 100, 
-      issues, 
-      recommendations 
+    return {
+      score: accessibility?.score || 0,
+      issues
     };
   }
 
   // Analyze SEO
   analyzeSEO(audit) {
-    const seo = audit.categories.seo;
-    const audits = audit.audits;
+    const { data } = audit;
+    const seo = data.categories?.seo;
+    const audits = data.audits || {};
     
     const issues = [];
-    const recommendations = [];
-
-    // Meta description
-    if (audits["meta-description"]?.score < 1) {
-      issues.push("Missing meta description");
-      recommendations.push({
-        category: "SEO",
-        priority: "Medium",
-        issue: "Missing Meta Description",
-        description: "Page lacks a meta description tag",
-        solutions: [
-          "Add unique meta descriptions (150-160 characters)",
-          "Include target keywords naturally",
-          "Write compelling descriptions that encourage clicks",
-          "Avoid duplicate meta descriptions across pages"
-        ]
-      });
+    
+    // SEO issues
+    if (audits['meta-description']?.score < 1) {
+      issues.push({ type: 'high', message: 'Missing or invalid meta description' });
+    }
+    if (audits['document-title']?.score < 1) {
+      issues.push({ type: 'high', message: 'Missing or invalid document title' });
+    }
+    if (audits['viewport']?.score < 1) {
+      issues.push({ type: 'critical', message: 'Missing viewport meta tag' });
+    }
+    if (audits['crawlable-anchors']?.score < 1) {
+      issues.push({ type: 'medium', message: 'Some links are not crawlable' });
+    }
+    if (audits['is-crawlable']?.score < 1) {
+      issues.push({ type: 'critical', message: 'Page is not crawlable by search engines' });
     }
 
-    // Title tag
-    if (audits["document-title"]?.score < 1) {
-      issues.push("Missing or poor title tag");
-      recommendations.push({
-        category: "SEO",
-        priority: "High",
-        issue: "Title Tag Issues",
-        description: "Page title is missing or not optimized",
-        solutions: [
-          "Add unique, descriptive title tags (50-60 characters)",
-          "Include primary keywords near the beginning",
-          "Make titles compelling and click-worthy",
-          "Avoid keyword stuffing"
-        ]
-      });
-    }
-
-    // Heading structure
-    if (audits["heading-order"]?.score < 1) {
-      issues.push("Poor heading structure");
-      recommendations.push({
-        category: "SEO",
-        priority: "Medium",
-        issue: "Heading Structure",
-        description: "Headings don't follow proper hierarchy",
-        solutions: [
-          "Use H1 for main page title",
-          "Follow logical heading order (H1 > H2 > H3)",
-          "Don't skip heading levels",
-          "Use headings to structure content logically"
-        ]
-      });
-    }
-
-    return { 
-      score: seo.score * 100, 
-      issues, 
-      recommendations 
+    return {
+      score: seo?.score || 0,
+      issues
     };
   }
 
   // Analyze best practices
   analyzeBestPractices(audit) {
-    const bestPractices = audit.categories["best-practices"];
-    const audits = audit.audits;
+    const { data } = audit;
+    const bestPractices = data.categories?.['best-practices'];
+    const audits = data.audits || {};
     
     const issues = [];
-    const recommendations = [];
-
-    // HTTPS
-    if (audits["is-on-https"]?.score < 1) {
-      issues.push("Not using HTTPS");
-      recommendations.push({
-        category: "Security",
-        priority: "High",
-        issue: "HTTP Instead of HTTPS",
-        description: "Site is not using secure HTTPS protocol",
-        solutions: [
-          "Install SSL certificate",
-          "Redirect all HTTP traffic to HTTPS",
-          "Update internal links to use HTTPS",
-          "Test HTTPS implementation thoroughly"
-        ]
-      });
+    
+    // Best practices issues
+    if (audits['uses-https']?.score < 1) {
+      issues.push({ type: 'critical', message: 'Site is not using HTTPS' });
+    }
+    if (audits['no-vulnerable-libraries']?.score < 1) {
+      issues.push({ type: 'high', message: 'Using vulnerable JavaScript libraries' });
+    }
+    if (audits['csp-xss']?.score < 1) {
+      issues.push({ type: 'high', message: 'Missing Content Security Policy' });
+    }
+    if (audits['uses-responsive-images']?.score < 1) {
+      issues.push({ type: 'medium', message: 'Not using responsive images' });
+    }
+    if (audits['image-aspect-ratio']?.score < 1) {
+      issues.push({ type: 'low', message: 'Images have incorrect aspect ratios' });
     }
 
-    // Console errors
-    if (audits["no-console-time"]?.score < 1) {
-      issues.push("Console errors present");
-      recommendations.push({
-        category: "Best Practices",
-        priority: "Medium",
-        issue: "Console Errors",
-        description: "JavaScript errors detected in browser console",
-        solutions: [
-          "Fix JavaScript errors and warnings",
-          "Remove console.log statements from production",
-          "Implement proper error handling",
-          "Test in multiple browsers"
-        ]
-      });
-    }
-
-    return { 
-      score: bestPractices.score * 100, 
-      issues, 
-      recommendations 
+    return {
+      score: bestPractices?.score || 0,
+      issues
     };
+  }
+
+  // Generate actionable recommendations
+  generateRecommendations(audits) {
+    const recommendations = {
+      critical: [],
+      high: [],
+      medium: [],
+      low: []
+    };
+
+    // Performance recommendations
+    const performanceIssues = audits.flatMap(audit => audit.performance?.issues || []);
+    const lcpIssues = performanceIssues.filter(issue => issue.message.includes('Largest Contentful Paint'));
+    const fcpIssues = performanceIssues.filter(issue => issue.message.includes('First Contentful Paint'));
+    const clsIssues = performanceIssues.filter(issue => issue.message.includes('Cumulative Layout Shift'));
+
+    if (lcpIssues.length > 0) {
+      recommendations.critical.push({
+        category: 'Performance',
+        title: 'Optimize Largest Contentful Paint (LCP)',
+        description: 'LCP is the most important Core Web Vital for user experience',
+        actions: [
+          'Compress and optimize hero images/videos',
+          'Preload critical resources',
+          'Use a CDN for faster delivery',
+          'Implement lazy loading for non-critical images',
+          'Consider using WebP/AVIF formats'
+        ],
+        impact: 'High - Directly affects user experience and search rankings'
+      });
+    }
+
+    if (fcpIssues.length > 0) {
+      recommendations.high.push({
+        category: 'Performance',
+        title: 'Improve First Contentful Paint (FCP)',
+        description: 'FCP measures how quickly users see content',
+        actions: [
+          'Minimize render-blocking resources',
+          'Optimize critical CSS',
+          'Use resource hints (preload, preconnect)',
+          'Reduce server response time'
+        ],
+        impact: 'High - Affects perceived performance'
+      });
+    }
+
+    if (clsIssues.length > 0) {
+      recommendations.high.push({
+        category: 'Performance',
+        title: 'Fix Cumulative Layout Shift (CLS)',
+        description: 'CLS measures visual stability during page load',
+        actions: [
+          'Set explicit dimensions for images and videos',
+          'Reserve space for dynamic content',
+          'Avoid inserting content above existing content',
+          'Use CSS transforms instead of changing layout properties'
+        ],
+        impact: 'High - Prevents content jumping and improves UX'
+      });
+    }
+
+    // Accessibility recommendations
+    const accessibilityIssues = audits.flatMap(audit => audit.accessibility?.issues || []);
+    const contrastIssues = accessibilityIssues.filter(issue => issue.message.includes('Color contrast'));
+    const tapTargetIssues = accessibilityIssues.filter(issue => issue.message.includes('Touch targets'));
+
+    if (contrastIssues.length > 0) {
+      recommendations.critical.push({
+        category: 'Accessibility',
+        title: 'Fix Color Contrast Issues',
+        description: 'Ensure text is readable for all users',
+        actions: [
+          'Increase contrast ratio to at least 4.5:1 for normal text',
+          'Use tools like WebAIM Contrast Checker',
+          'Test with color blindness simulators',
+          'Ensure sufficient contrast for interactive elements'
+        ],
+        impact: 'Critical - Required for accessibility compliance'
+      });
+    }
+
+    if (tapTargetIssues.length > 0) {
+      recommendations.high.push({
+        category: 'Accessibility',
+        title: 'Improve Touch Target Sizes',
+        description: 'Make interactive elements easier to tap on mobile',
+        actions: [
+          'Ensure touch targets are at least 48x48px',
+          'Add adequate spacing between interactive elements',
+          'Test on actual mobile devices',
+          'Consider thumb-friendly navigation patterns'
+        ],
+        impact: 'High - Improves mobile usability'
+      });
+    }
+
+    // SEO recommendations
+    const seoIssues = audits.flatMap(audit => audit.seo?.issues || []);
+    const metaDescriptionIssues = seoIssues.filter(issue => issue.message.includes('meta description'));
+    const titleIssues = seoIssues.filter(issue => issue.message.includes('document title'));
+
+    if (metaDescriptionIssues.length > 0) {
+      recommendations.high.push({
+        category: 'SEO',
+        title: 'Add Meta Descriptions',
+        description: 'Meta descriptions improve click-through rates from search results',
+        actions: [
+          'Write unique meta descriptions for each page (150-160 characters)',
+          'Include target keywords naturally',
+          'Make descriptions compelling and action-oriented',
+          'Avoid duplicate meta descriptions'
+        ],
+        impact: 'High - Improves search result appearance and CTR'
+      });
+    }
+
+    if (titleIssues.length > 0) {
+      recommendations.high.push({
+        category: 'SEO',
+        title: 'Optimize Page Titles',
+        description: 'Page titles are crucial for SEO and user experience',
+        actions: [
+          'Write unique, descriptive titles for each page',
+          'Keep titles under 60 characters',
+          'Include primary keywords near the beginning',
+          'Use brand name consistently'
+        ],
+        impact: 'High - Critical for search rankings'
+      });
+    }
+
+    return recommendations;
   }
 
   // Generate comprehensive analysis
-  analyzeWebsite(filename) {
-    const audit = this.loadAuditData(filename);
-    if (!audit) return null;
-
-    const url = audit.finalUrl || filename;
-    console.log(`\n🔍 Analyzing: ${url}`);
-
-    const analysis = {
-      url,
-      timestamp: new Date().toISOString(),
-      performance: this.analyzePerformance(audit),
-      accessibility: this.analyzeAccessibility(audit),
-      seo: this.analyzeSEO(audit),
-      bestPractices: this.analyzeBestPractices(audit)
-    };
-
-    // Calculate overall score
-    analysis.overallScore = Math.round(
-      (analysis.performance.metrics.score + 
-       analysis.accessibility.score + 
-       analysis.seo.score + 
-       analysis.bestPractices.score) / 4
-    );
-
-    return analysis;
-  }
-
-  // Generate priority-based action plan
-  generateActionPlan(analyses) {
-    const allRecommendations = [];
+  analyze() {
+    console.log('🔍 Starting comprehensive website analysis...');
     
-    analyses.forEach(analysis => {
-      [
-        ...analysis.performance.recommendations,
-        ...analysis.accessibility.recommendations,
-        ...analysis.seo.recommendations,
-        ...analysis.bestPractices.recommendations
-      ].forEach(rec => {
-        allRecommendations.push({
-          ...rec,
-          url: analysis.url
-        });
-      });
+    // Find and load audit files
+    this.findAuditFiles();
+    const audits = this.loadAuditData();
+    
+    if (audits.length === 0) {
+      console.log('❌ No audit files found');
+      return this.analysisResults;
+    }
+
+    // Analyze each page
+    const pageAnalyses = audits.map(audit => {
+      console.log(`📊 Analyzing ${audit.url}`);
+      
+      return {
+        url: audit.url,
+        timestamp: audit.timestamp,
+        performance: this.analyzePerformance(audit),
+        accessibility: this.analyzeAccessibility(audit),
+        seo: this.analyzeSEO(audit),
+        bestPractices: this.analyzeBestPractices(audit)
+      };
     });
 
-    // Group by priority
-    const highPriority = allRecommendations.filter(r => r.priority === "High");
-    const mediumPriority = allRecommendations.filter(r => r.priority === "Medium");
-    const lowPriority = allRecommendations.filter(r => r.priority === "Low");
-
-    return {
-      highPriority,
-      mediumPriority,
-      lowPriority,
-      totalIssues: allRecommendations.length
+    // Calculate overall scores
+    const overallScores = {
+      performance: pageAnalyses.reduce((sum, page) => sum + page.performance.metrics.score, 0) / pageAnalyses.length,
+      accessibility: pageAnalyses.reduce((sum, page) => sum + page.accessibility.score, 0) / pageAnalyses.length,
+      seo: pageAnalyses.reduce((sum, page) => sum + page.seo.score, 0) / pageAnalyses.length,
+      bestPractices: pageAnalyses.reduce((sum, page) => sum + page.bestPractices.score, 0) / pageAnalyses.length
     };
+
+    // Generate recommendations
+    const recommendations = this.generateRecommendations(pageAnalyses);
+
+    // Compile results
+    this.analysisResults = {
+      overall: {
+        scores: overallScores,
+        averageScore: Object.values(overallScores).reduce((sum, score) => sum + score, 0) / 4
+      },
+      pages: pageAnalyses,
+      recommendations,
+      summary: {
+        totalPages: pageAnalyses.length,
+        criticalIssues: recommendations.critical.length,
+        highIssues: recommendations.high.length,
+        mediumIssues: recommendations.medium.length,
+        lowIssues: recommendations.low.length
+      }
+    };
+
+    return this.analysisResults;
   }
 
   // Generate detailed report
   generateReport() {
-    console.log("\n" + "=".repeat(80));
-    console.log("🎯 WEBSITE PERFORMANCE & DESIGN AUDIT REPORT");
-    console.log("=".repeat(80));
+    const results = this.analyze();
+    
+    console.log('\n' + '='.repeat(80));
+    console.log('🎯 WEBSITE PERFORMANCE & DESIGN AUDIT REPORT');
+    console.log('='.repeat(80));
+    
+    console.log(`\n📊 OVERALL SCORES:`);
+    console.log(`Performance: ${(results.overall.scores.performance * 100).toFixed(1)}%`);
+    console.log(`Accessibility: ${(results.overall.scores.accessibility * 100).toFixed(1)}%`);
+    console.log(`SEO: ${(results.overall.scores.seo * 100).toFixed(1)}%`);
+    console.log(`Best Practices: ${(results.overall.scores.bestPractices * 100).toFixed(1)}%`);
+    console.log(`Average Score: ${(results.overall.averageScore * 100).toFixed(1)}%`);
 
-    const auditFiles = this.findAuditFiles();
-    if (auditFiles.length === 0) {
-      console.log("❌ No audit files found. Run the audit first.");
-      return;
-    }
+    console.log(`\n📈 SUMMARY:`);
+    console.log(`Pages Analyzed: ${results.summary.totalPages}`);
+    console.log(`Critical Issues: ${results.summary.criticalIssues}`);
+    console.log(`High Priority Issues: ${results.summary.highIssues}`);
+    console.log(`Medium Priority Issues: ${results.summary.mediumIssues}`);
+    console.log(`Low Priority Issues: ${results.summary.lowIssues}`);
 
-    const analyses = auditFiles.map(file => this.analyzeWebsite(file)).filter(Boolean);
-    const actionPlan = this.generateActionPlan(analyses);
-
-    // Summary
-    console.log("\n📊 EXECUTIVE SUMMARY");
-    console.log("-".repeat(50));
-    analyses.forEach(analysis => {
-      console.log(`\n🌐 ${analysis.url}`);
-      console.log(`   Overall Score: ${analysis.overallScore}%`);
-      console.log(`   Performance: ${Math.round(analysis.performance.metrics.score)}%`);
-      console.log(`   Accessibility: ${Math.round(analysis.accessibility.score)}%`);
-      console.log(`   SEO: ${Math.round(analysis.seo.score)}%`);
-      console.log(`   Best Practices: ${Math.round(analysis.bestPractices.score)}%`);
-    });
-
-    // High Priority Issues
-    console.log("\n🚨 HIGH PRIORITY ISSUES");
-    console.log("-".repeat(50));
-    if (actionPlan.highPriority.length === 0) {
-      console.log("✅ No high priority issues found!");
-    } else {
-      actionPlan.highPriority.forEach((rec, index) => {
-        console.log(`\n${index + 1}. ${rec.issue} (${rec.category})`);
-        console.log(`   📍 ${rec.url}`);
-        console.log(`   📝 ${rec.description}`);
-        console.log(`   💡 Solutions:`);
-        rec.solutions.forEach(solution => console.log(`      • ${solution}`));
+    // Critical recommendations
+    if (results.recommendations.critical.length > 0) {
+      console.log('\n🚨 CRITICAL RECOMMENDATIONS:');
+      results.recommendations.critical.forEach((rec, index) => {
+        console.log(`\n${index + 1}. ${rec.title} (${rec.category})`);
+        console.log(`   ${rec.description}`);
+        console.log(`   Impact: ${rec.impact}`);
+        console.log(`   Actions:`);
+        rec.actions.forEach(action => console.log(`   • ${action}`));
       });
     }
 
-    // Medium Priority Issues
-    console.log("\n⚠️  MEDIUM PRIORITY ISSUES");
-    console.log("-".repeat(50));
-    if (actionPlan.mediumPriority.length === 0) {
-      console.log("✅ No medium priority issues found!");
-    } else {
-      actionPlan.mediumPriority.forEach((rec, index) => {
-        console.log(`\n${index + 1}. ${rec.issue} (${rec.category})`);
-        console.log(`   📍 ${rec.url}`);
-        console.log(`   📝 ${rec.description}`);
-        console.log(`   💡 Solutions:`);
-        rec.solutions.forEach(solution => console.log(`      • ${solution}`));
+    // High priority recommendations
+    if (results.recommendations.high.length > 0) {
+      console.log('\n⚠️  HIGH PRIORITY RECOMMENDATIONS:');
+      results.recommendations.high.forEach((rec, index) => {
+        console.log(`\n${index + 1}. ${rec.title} (${rec.category})`);
+        console.log(`   ${rec.description}`);
+        console.log(`   Impact: ${rec.impact}`);
+        console.log(`   Actions:`);
+        rec.actions.forEach(action => console.log(`   • ${action}`));
       });
     }
 
-    // Performance Insights
-    console.log("\n⚡ PERFORMANCE INSIGHTS");
-    console.log("-".repeat(50));
-    analyses.forEach(analysis => {
-      const perf = analysis.performance.metrics;
-      console.log(`\n🌐 ${analysis.url}`);
-      console.log(`   First Contentful Paint: ${Math.round(perf.fcp)}ms`);
-      console.log(`   Largest Contentful Paint: ${Math.round(perf.lcp)}ms`);
-      console.log(`   Cumulative Layout Shift: ${perf.cls?.toFixed(3) || 'N/A'}`);
-      console.log(`   Total Blocking Time: ${Math.round(perf.tbt)}ms`);
+    // Medium priority recommendations
+    if (results.recommendations.medium.length > 0) {
+      console.log('\n📋 MEDIUM PRIORITY RECOMMENDATIONS:');
+      results.recommendations.medium.forEach((rec, index) => {
+        console.log(`\n${index + 1}. ${rec.title} (${rec.category})`);
+        console.log(`   ${rec.description}`);
+        console.log(`   Impact: ${rec.impact}`);
+        console.log(`   Actions:`);
+        rec.actions.forEach(action => console.log(`   • ${action}`));
+      });
+    }
+
+    // Page-by-page breakdown
+    console.log('\n📄 PAGE-BY-PAGE ANALYSIS:');
+    results.pages.forEach((page, index) => {
+      console.log(`\n${index + 1}. ${page.url}`);
+      console.log(`   Performance: ${(page.performance.metrics.score * 100).toFixed(1)}%`);
+      console.log(`   Accessibility: ${(page.accessibility.score * 100).toFixed(1)}%`);
+      console.log(`   SEO: ${(page.seo.score * 100).toFixed(1)}%`);
+      console.log(`   Best Practices: ${(page.bestPractices.score * 100).toFixed(1)}%`);
+      
+      const allIssues = [
+        ...page.performance.issues,
+        ...page.accessibility.issues,
+        ...page.seo.issues,
+        ...page.bestPractices.issues
+      ];
+      
+      if (allIssues.length > 0) {
+        console.log(`   Issues: ${allIssues.length}`);
+        allIssues.slice(0, 3).forEach(issue => {
+          console.log(`   • ${issue.message}`);
+        });
+        if (allIssues.length > 3) {
+          console.log(`   • ... and ${allIssues.length - 3} more issues`);
+        }
+      }
     });
 
-    // Action Plan Summary
-    console.log("\n📋 ACTION PLAN SUMMARY");
-    console.log("-".repeat(50));
-    console.log(`Total Issues Found: ${actionPlan.totalIssues}`);
-    console.log(`High Priority: ${actionPlan.highPriority.length}`);
-    console.log(`Medium Priority: ${actionPlan.mediumPriority.length}`);
-    console.log(`Low Priority: ${actionPlan.lowPriority.length}`);
+    console.log('\n' + '='.repeat(80));
+    console.log('✅ Analysis complete! Focus on critical and high-priority issues first.');
+    console.log('='.repeat(80));
 
-    // Save detailed report
-    const reportData = {
-      timestamp: new Date().toISOString(),
-      summary: analyses.map(a => ({
-        url: a.url,
-        overallScore: a.overallScore,
-        performance: Math.round(a.performance.metrics.score),
-        accessibility: Math.round(a.accessibility.score),
-        seo: Math.round(a.seo.score),
-        bestPractices: Math.round(a.bestPractices.score)
-      })),
-      actionPlan,
-      detailedAnalyses: analyses
-    };
+    return results;
+  }
 
-    fs.writeFileSync("audit-report.json", JSON.stringify(reportData, null, 2));
-    console.log("\n💾 Detailed report saved to: audit-report.json");
-
-    return reportData;
+  // Save detailed report to file
+  saveReport(filename = 'audit-analysis-report.json') {
+    const results = this.analyze();
+    fs.writeFileSync(filename, JSON.stringify(results, null, 2));
+    console.log(`📄 Detailed report saved to: ${filename}`);
+    return filename;
   }
 }
 
-// Run analysis if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const analyzer = new WebsiteAnalyzer();
-  analyzer.generateReport();
-}
+// Export for use in other modules
+export default WebsiteAnalyzer;
