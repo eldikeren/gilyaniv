@@ -27,6 +27,89 @@
             font-family: 'Heebo', sans-serif;
             direction: rtl;
         }
+        
+        /* Skip to content link - Accessibility */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 9999;
+            padding: 1rem 2rem;
+            background: #005fcc;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        
+        /* Focus outlines for accessibility */
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #005fcc !important;
+            outline-offset: 2px;
+        }
+        
+        /* Ensure buttons have minimum touch target size */
+        button,
+        a[role="button"] {
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        /* Accessibility floating button */
+        .accessibility-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background: #005fcc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .accessibility-btn:hover {
+            background: #004499;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+        .accessibility-btn:focus {
+            outline: 3px solid #005fcc;
+            outline-offset: 3px;
+        }
+        .accessibility-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+        @media (max-width: 768px) {
+            .accessibility-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                left: 15px;
+            }
+            .accessibility-btn svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
         .prose p {
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
@@ -197,13 +280,13 @@
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="index.html">
-                    <img src="images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                    <img src="images/new-logo.png" alt="לוגו משרד עו״ד יניב גיל" class="header-logo" style="margin-left: 10px; display: block;">
                 </a>
                 <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
-                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="משרד עו״ד יניב גיל ושות׳" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
                 </a>
             </div>
-            <nav class="hidden md:flex flex-1 justify-center">
+            <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="תפריט ראשי">
                 <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
                     <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
                     <li><a href="about.html" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
@@ -215,7 +298,7 @@
                     </ul>
             </nav>
             <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="פתח תפריט נייד">
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none min-w-[48px] min-h-[48px]" aria-label="פתח תפריט נייד" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -244,7 +327,10 @@
         </div>
     </header>
 
-    <main class="pt-24">
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">דלג לתוכן</a>
+    
+    <main id="main-content" class="pt-24" role="main">
         <!-- Hero Section for Contact Page -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
@@ -264,11 +350,11 @@
                 </div>
             </div>
             <!-- Scroll down arrow -->
-            <div class="scroll-arrow" onclick="scrollToNextSection()">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button type="button" class="scroll-arrow" onclick="scrollToNextSection()" aria-label="גלול לסעיף הבא">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
-        </div>
+            </button>
     </section>
 
         <!-- Contact Information Section -->
@@ -583,6 +669,7 @@
                 <div class="flex gap-4 mt-4 md:mt-0">
                     <a href="privacy-policy.html" class="hover:text-yellow-400 transition-colors duration-200">מדיניות פרטיות</a>
                     <a href="terms-of-use.html" class="hover:text-yellow-400 transition-colors duration-200">תנאי שימוש</a>
+                    <a href="accessibility.html" class="hover:text-yellow-400 transition-colors duration-200">הצהרת נגישות</a>
                 </div>
             </div>
         </div>
@@ -795,5 +882,14 @@
             }
 });
 </script>
+
+    <!-- Accessibility Floating Button -->
+    <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות - גישה לדף נגישות האתר" title="הצהרת נגישות">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
 </body>
 </html>
