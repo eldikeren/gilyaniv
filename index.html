@@ -461,6 +461,7 @@
         /* Navigation dropdown styles */
         #practice-dropdown {
             min-width: 280px;
+            max-height: calc(100vh - 120px); /* Default max-height based on viewport */
         }
         
         /* Comprehensive Mobile Responsiveness */
@@ -793,7 +794,7 @@
                             תחומי התמחות
                             <span class="mr-2 text-xs">▼</span>
                         </button>
-                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2 max-h-96 overflow-y-auto">
+                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2 overflow-y-auto" style="max-height: calc(100vh - 120px);">
                             <!-- דיני משפחה - Collapsible -->
                             <div class="border-b border-gray-200">
                                 <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
@@ -802,13 +803,13 @@
                                 </button>
                                 <div id="category-family" class="hidden">
                                     <a href="divorce.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גירושין</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
-                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
+                                    <a href="divorce-agreements.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
+                                    <a href="property-agreements.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
+                                    <a href="child-custody.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
+                                    <a href="visitation-rights.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
+                                    <a href="child-support.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
+                                    <a href="spousal-support.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
+                                    <a href="guardianship.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
                                 </div>
                             </div>
                             <!-- ירושות וצוואות - Collapsible -->
@@ -827,8 +828,8 @@
                                 </div>
                             </div>
                             <!-- חדלות פירעון והוצאה לפועל - Collapsible -->
-                            <div class="mt-2">
-                                <button onclick="toggleCategoryDropdown('category-bankruptcy')" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                            <div class="border-b border-gray-200 mt-2">
+                                <button onclick="toggleCategoryDropdown('category-bankruptcy', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
                                     <h4 class="font-bold text-[#1a1a1a] text-sm">חדלות פירעון והוצאה לפועל</h4>
                                     <span class="category-icon text-xs text-gray-500">▼</span>
                                 </button>
@@ -842,6 +843,12 @@
                                     <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסדרי חוב</a>
                                     <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">קבלת הפטר</a>
                                 </div>
+                            </div>
+                            <!-- דיני חוזים ודיני מקרקעין - Direct Link (No Collapse) -->
+                            <div class="mt-2">
+                                <a href="practice-areas.html#civil-law" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right font-bold">
+                                    דיני חוזים ודיני מקרקעין
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -1227,13 +1234,13 @@
                             </button>
                             <div id="mobile-category-family" class="hidden mt-2 pr-4">
                                 <a href="divorce.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי גירושין</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי ממון</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">משמורת ילדים</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">זמני שהות</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות ילדים</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות אישה</a>
-                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
+                                <a href="divorce-agreements.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי גירושין</a>
+                                <a href="property-agreements.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי ממון</a>
+                                <a href="child-custody.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">משמורת ילדים</a>
+                                <a href="visitation-rights.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">זמני שהות</a>
+                                <a href="child-support.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות ילדים</a>
+                                <a href="spousal-support.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות אישה</a>
+                                <a href="guardianship.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
                             </div>
                         </div>
                         <div class="mb-2">
@@ -1265,6 +1272,12 @@
                                 <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסדרי חוב</a>
                                 <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">קבלת הפטר</a>
                             </div>
+                        </div>
+                        <!-- דיני חוזים ודיני מקרקעין - Direct Link (No Collapse) -->
+                        <div class="mb-2">
+                            <a href="practice-areas.html#civil-law" class="block w-full text-right py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                דיני חוזים ודיני מקרקעין
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -1371,8 +1384,29 @@
             });
             
             // Toggle current dropdown
-            if (dropdown.classList.contains('hidden')) {
+            const isHidden = dropdown.classList.contains('hidden');
+            if (isHidden) {
                 dropdown.classList.remove('hidden');
+                
+                // If opening the practice dropdown, calculate dynamic max-height
+                if (dropdownId === 'practice-dropdown') {
+                    // Get the button that triggered the dropdown
+                    const button = document.querySelector('button[onclick*="practice-dropdown"]');
+                    if (button) {
+                        // Use setTimeout to ensure dropdown is visible for measurements
+                        setTimeout(() => {
+                            const buttonRect = button.getBoundingClientRect();
+                            const viewportHeight = window.innerHeight;
+                            const spaceBelow = viewportHeight - buttonRect.bottom;
+                            
+                            // Calculate available space (leave 20px padding from bottom)
+                            const availableSpace = Math.max(spaceBelow - 20, 200); // Minimum 200px
+                            
+                            // Set max-height dynamically
+                            dropdown.style.maxHeight = availableSpace + 'px';
+                        }, 0);
+                    }
+                }
             } else {
                 dropdown.classList.add('hidden');
             }
