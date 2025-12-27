@@ -636,16 +636,18 @@
         // Accordion functionality
         function toggleAccordion(accordionId) {
             const accordion = document.getElementById(accordionId);
-            const icon = accordion.previousElementSibling.querySelector('.accordion-icon');
+            if (!accordion) return;
             
-            if (accordion) {
-                if (accordion.classList.contains('hidden')) {
-                    accordion.classList.remove('hidden');
-                    if (icon) icon.classList.add('open');
-                } else {
-                    accordion.classList.add('hidden');
-                    if (icon) icon.classList.remove('open');
-                }
+            // Find the icon in the header above this accordion
+            const header = accordion.previousElementSibling;
+            const icon = header ? header.querySelector('.accordion-icon') : null;
+            
+            if (accordion.classList.contains('hidden')) {
+                accordion.classList.remove('hidden');
+                if (icon) icon.classList.add('open');
+            } else {
+                accordion.classList.add('hidden');
+                if (icon) icon.classList.remove('open');
             }
         }
 
