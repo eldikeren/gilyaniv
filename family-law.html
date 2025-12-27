@@ -138,6 +138,10 @@
                 height: 24px;
             }
         }
+        /* Navigation dropdown styles */
+        #practice-dropdown {
+            min-width: 280px;
+        }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -154,14 +158,52 @@
             </div>
             <nav class="hidden md:flex flex-1 justify-center">
                 <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
-                    <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                    <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
-                    <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
-                    <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                    <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
-                    <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
-                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
-                    <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                    <li><a href="index.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בית</a></li>
+                    <li><a href="index.html#about" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">אודות המשרד</a></li>
+                    <li><a href="attorneys.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">עורכי דין</a></li>
+                    <li class="relative group">
+                        <button onclick="toggleNavDropdown('practice-dropdown')" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">
+                            תחומי התמחות
+                            <span class="mr-2 text-xs">▼</span>
+                        </button>
+                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2 max-h-96 overflow-y-auto">
+                            <div class="px-4 py-2 border-b border-gray-200">
+                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">דיני משפחה</h4>
+                            </div>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גירושין</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
+                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
+                            <div class="px-4 py-2 border-b border-gray-200 mt-2">
+                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">ירושות וצוואות</h4>
+                            </div>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
+                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
+                            <div class="px-4 py-2 border-b border-gray-200 mt-2">
+                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">חדלות פירעון והוצאה לפועל</h4>
+                            </div>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">חדלות פירעון / פשיטת רגל</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הוצאה לפועל</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">איחוד תיקים</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עיכוב יציאה מהארץ</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מחיקת חובות</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ביטול עיקולים</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסדרי חוב</a>
+                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">קבלת הפטר</a>
+                        </div>
+                    </li>
+                    <li><a href="articles.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">צור קשר</a></li>
                 </ul>
             </nav>
             <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
@@ -182,7 +224,40 @@
                     <a href="index.html" class="mobile-menu-link">בית</a>
                     <a href="index.html#about" class="mobile-menu-link">אודות המשרד</a>
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
-                    <a href="practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="mobile-menu-link w-full text-right" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer;">תחומי התמחות ▼</button>
+                    <div id="mobile-practice-dropdown" class="hidden w-full pr-4">
+                        <div class="mb-2 mt-1">
+                            <h4 class="font-bold text-white text-sm mb-1">דיני משפחה</h4>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">גירושין</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסכמי גירושין</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסכמי ממון</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">משמורת ילדים</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">זמני שהות</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מזונות ילדים</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מזונות אישה</a>
+                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">אפוטרופסות</a>
+                        </div>
+                        <div class="mb-2 mt-2">
+                            <h4 class="font-bold text-white text-sm mb-1">ירושות וצוואות</h4>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">עריכת צוואה</a>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">צו ירושה</a>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">צו קיום צוואה</a>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">ניהול עיזבון</a>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">התנגדות לצוואה</a>
+                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">התנגדות לצו ירושה</a>
+                        </div>
+                        <div class="mb-2 mt-2">
+                            <h4 class="font-bold text-white text-sm mb-1">חדלות פירעון והוצאה לפועל</h4>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">חדלות פירעון / פשיטת רגל</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הוצאה לפועל</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">איחוד תיקים</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">עיכוב יציאה מהארץ</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מחיקת חובות</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">ביטול עיקולים</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסדרי חוב</a>
+                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">קבלת הפטר</a>
+                        </div>
+                    </div>
                     <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
                     <a href="blog.html" class="mobile-menu-link">בלוג</a>
                     <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
@@ -209,30 +284,134 @@
                             הסכמי שלום בית, מזונות, משמורת, יישוב סכסוכים. משרדנו מספק ליווי משפטי מקצועי, רגיש ואנושי בכל סוגי הסכסוכים המשפחתיים, תוך התאמה אישית לצרכים של כל משפחה.
                         </p>
                         
-                        <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">השירותים שלנו</h2>
-                        <ul class="list-disc list-inside space-y-3 mb-8 text-lg">
-                            <li>הסכמי שלום בית וגישור משפחתי</li>
-                            <li>תביעות מזונות ילדים ואישה</li>
-                            <li>סוגיות משמורת וזמני שהות</li>
-                            <li>עריכת הסכמי ממון</li>
-                            <li>יישוב סכסוכים משפחתיים</li>
-                            <li>ייצוג בבתי משפט לענייני משפחה ובית דין רבני</li>
-                        </ul>
-                        
-                        <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">למה לבחור בנו?</h2>
-                        <ul class="list-disc list-inside space-y-3 mb-8 text-lg">
-                            <li>ניסיון של למעלה מ-20 שנה בתחום</li>
-                            <li>גישה רגישה ואנושית לכל מקרה</li>
-                            <li>ליווי מקצועי וצמוד לאורך כל התהליך</li>
-                            <li>דיסקרטיות מלאה</li>
-                        </ul>
-                        
-                        <div class="bg-[#c9a55c] bg-opacity-10 border-r-4 border-[#c9a55c] p-6 rounded-lg mt-8">
-                            <p class="text-lg font-semibold mb-4">
-                                לייעוץ ראשוני ודיסקרטי: <strong>03-6092414</strong> או <strong>054-8184581</strong>
+                        <!-- גירושין -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">גירושין – ליווי משפטי רגיש ומקצועי בהליך מורכב</h2>
+                            <p class="mb-4">
+                                הליך הגירושין הוא תהליך משפטי ואישי מורכב, המשפיע באופן ישיר על חייהם של בני הזוג ולעיתים גם על ילדיהם. מעבר להיבט הרגשי, מדובר בהליך הכולל החלטות מהותיות בנוגע לחלוקת רכוש, אחריות הורית, מזונות ונושאים כלכליים ומשפטיים נוספים. כל החלטה שמתקבלת במהלך הליך הגירושין עשויה להשפיע לשנים קדימה, ולכן יש חשיבות מכרעת לליווי משפטי נכון כבר מהשלב הראשון.
                             </p>
-                            <p class="text-gray-700">
+                            <p class="mb-4">
+                                דיני הגירושין בישראל מתנהלים בערכאות שונות – בתי הדין הרבניים ובתי המשפט לענייני משפחה – וכל בחירה בערכאה משפיעה על ניהול ההליך ותוצאותיו. עורך דין מנוסה ידע להעריך את המצב, לבנות אסטרטגיה מתאימה, ולפעול לשמירה על זכויות הלקוח תוך ניסיון לצמצם עימותים מיותרים.
+                            </p>
+                            <p class="mb-4">
+                                במקרים רבים ניתן לנהל הליך גירושין בהסכמה, אך ישנם מצבים בהם מחלוקת עמוקה מחייבת הליך משפטי מלא. בכל מקרה, ניהול נכון של ההליך מאפשר יצירת בסיס יציב לפתיחת פרק חדש בחיים.
+                            </p>
+                        </div>
+
+                        <!-- הסכמי גירושין -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">הסכמי גירושין – פתרון מוסכם שמונע סכסוכים עתידיים</h2>
+                            <p class="mb-4">
+                                הסכם גירושין הוא מסמך משפטי כולל, שמטרתו להסדיר את סיום הקשר הזוגי בהסכמה ולהגדיר מראש את זכויות וחובות הצדדים. הסכם זה כולל לרוב הסדרים בנוגע לחלוקת רכוש, משמורת ואחריות הורית, זמני שהות, מזונות ילדים ולעיתים גם מזונות אישה.
+                            </p>
+                            <p class="mb-4">
+                                היתרון המרכזי של הסכם גירושין הוא שליטה בתוצאה. במקום הכרעה שיפוטית, בני הזוג קובעים בעצמם את תנאי הפרידה, בהתאם לצרכיהם ולנסיבות חייהם. בכך ניתן לחסוך זמן, עלויות, ועומס רגשי משמעותי.
+                            </p>
+                            <p class="mb-4">
+                                עם זאת, ניסוח הסכם גירושין מחייב מומחיות. הסכם שאינו מנוסח כראוי עלול להוביל לפרשנויות שונות, מחלוקות עתידיות ואף להליכים משפטיים חוזרים. לכן חשוב שההסכם ייערך בליווי עורך דין מנוסה, תוך התייחסות גם לתרחישים עתידיים ושינויים אפשריים.
+                            </p>
+                            <p class="mb-4">
+                                הסכם גירושין מאוזן הוא כזה שמגן על שני הצדדים ומציב את טובת הילדים במרכז.
+                            </p>
+                        </div>
+
+                        <!-- הסכמי ממון -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">הסכמי ממון – יצירת ודאות כלכלית בין בני זוג</h2>
+                            <p class="mb-4">
+                                הסכם ממון נועד להסדיר את היחסים הכלכליים בין בני זוג, בין אם טרם הנישואין ובין אם במהלכם. מטרתו למנוע אי־ודאות ומחלוקות עתידיות, ולהגדיר בצורה ברורה כיצד יחולקו נכסים, כספים וזכויות במקרה של פרידה או גירושין.
+                            </p>
+                            <p class="mb-4">
+                                הסכם ממון חשוב במיוחד כאשר אחד הצדדים מגיע עם רכוש קיים, נכסים, עסק עצמאי, או כאשר מדובר בנישואים שניים ויש ילדים מקשרים קודמים. בניגוד לדעה הרווחת, עריכת הסכם ממון אינה מעידה על חוסר אמון אלא על אחריות ותכנון נכון.
+                            </p>
+                            <p class="mb-4">
+                                כדי שהסכם ממון יהיה תקף מבחינה משפטית, עליו להיערך בהתאם לחוק ולקבל אישור של בית משפט או נוטריון, בהתאם לנסיבות. ניסוח מדויק ומאוזן מונע מחלוקות עתידיות ומעניק שקט נפשי לבני הזוג.
+                            </p>
+                        </div>
+
+                        <!-- משמורת ילדים -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">משמורת ילדים – קביעת אחריות הורית לטובת הקטינים</h2>
+                            <p class="mb-4">
+                                שאלת המשמורת, או האחריות ההורית, היא אחת הסוגיות המרכזיות והרגישות ביותר בכל הליך גירושין. מדובר בהחלטה המשפיעה על חיי הילדים, יציבותם הרגשית והקשר שלהם עם כל אחד מהוריהם.
+                            </p>
+                            <p class="mb-4">
+                                בתי המשפט בישראל פועלים לפי עקרון טובת הילד, תוך בחינת מכלול הנסיבות – גיל הילדים, צרכיהם, מסוגלות הורית, ומידת שיתוף הפעולה בין ההורים. בשנים האחרונות ניכרת מגמה של אחריות הורית משותפת, כאשר הדבר מתאים למצב המשפחתי.
+                            </p>
+                            <p class="mb-4">
+                                הכרעה בנושא המשמורת מתקבלת לעיתים לאחר בחינת חוות דעת מקצועיות של גורמי רווחה, ולכן ייצוג משפטי איכותי מאפשר הצגת תמונה מלאה ומאוזנת בפני הערכאה המשפטית.
+                            </p>
+                        </div>
+
+                        <!-- זמני שהות -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">זמני שהות – שמירה על קשר רציף עם שני ההורים</h2>
+                            <p class="mb-4">
+                                זמני שהות מגדירים את חלוקת הזמן של הילדים בין ההורים לאחר הפרידה. מטרתם לאפשר לילדים קשר משמעותי, יציב ורציף עם שני ההורים, גם כאשר אינם חיים יחד.
+                            </p>
+                            <p class="mb-4">
+                                קביעת זמני שהות מחייבת התחשבות בשיקולים רבים: גיל הילדים, מרחק גאוגרפי, מסגרות חינוך, שגרת היום והיכולת ההורית של כל צד. הסדר שאינו מותאם למציאות עלול להוביל לחיכוכים מתמשכים ולפגיעה בילדים.
+                            </p>
+                            <p class="mb-4">
+                                כאשר קיימת הסכמה, ניתן לקבוע זמני שהות גמישים ומותאמים אישית. בהיעדר הסכמה, בית המשפט יקבע את ההסדר המתאים ביותר לטובת הילדים.
+                            </p>
+                        </div>
+
+                        <!-- מזונות ילדים -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">מזונות ילדים – הבטחת רווחתם הכלכלית של הקטינים</h2>
+                            <p class="mb-4">
+                                מזונות ילדים נועדו להבטיח את סיפוק צורכיהם הבסיסיים והנוספים של הילדים לאחר פרידת ההורים. מדובר בהוצאות כגון מזון, ביגוד, דיור, חינוך, בריאות והוצאות שוטפות נוספות.
+                            </p>
+                            <p class="mb-4">
+                                הפסיקה בישראל עברה שינויים משמעותיים, וכיום נבחנת חלוקת החיוב בהתאם ליכולת הכלכלית של ההורים ולזמני השהות. עם זאת, כל מקרה נבחן לגופו, ולא קיימת נוסחה אחידה.
+                            </p>
+                            <p class="mb-4">
+                                קביעת מזונות מחייבת הצגת נתונים מדויקים ותחשיב נכון, על מנת להגיע להסדר הוגן שמשרת את טובת הילדים ואינו יוצר עומס בלתי סביר על אחד ההורים.
+                            </p>
+                        </div>
+
+                        <!-- מזונות אישה -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">מזונות אישה – זכאות, תנאים ונסיבות</h2>
+                            <p class="mb-4">
+                                מזונות אישה הם סוגיה משפטית מורכבת, הנבחנת בעיקר במסגרת הדין הדתי ובהתאם לנסיבות החיים המשותפים. לא כל אישה זכאית למזונות, והזכאות תלויה בגורמים כגון אופן ניהול התא המשפחתי, הכנסות הצדדים ונסיבות הפרידה.
+                            </p>
+                            <p class="mb-4">
+                                ברבים מהמקרים מדובר בזכות זמנית, עד לגירושין או עד להשגת עצמאות כלכלית. קביעת מזונות אישה דורשת ידע וניסיון משפטי, על מנת להגן על זכויות הצדדים ולמנוע פגיעה בלתי מוצדקת.
+                            </p>
+                        </div>
+
+                        <!-- אפוטרופסות -->
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">אפוטרופסות – אחריות משפטית כלפי חסרי ישע</h2>
+                            <p class="mb-4">
+                                אפוטרופסות עוסקת במינוי אדם האחראי על ענייניו של מי שאינו מסוגל לדאוג להם בעצמו – קטין או בגיר. מדובר בהחלטה משמעותית, המשפיעה על חיי היום־יום של האדם ועל זכויותיו.
+                            </p>
+                            <p class="mb-4">
+                                בתי המשפט נוקטים זהירות רבה במינוי אפוטרופוס, ובוחנים האם קיימות חלופות פחות פוגעניות. בשנים האחרונות קיימת מגמה לעידוד פתרונות המכבדים את עצמאות האדם ככל האפשר.
+                            </p>
+                            <p class="mb-4">
+                                טיפול בענייני אפוטרופסות מחייב רגישות, אחריות והיכרות מעמיקה עם הדין, תוך שמירה על כבודו וזכויותיו של האדם.
+                            </p>
+                        </div>
+
+                        <!-- Call to Action Section -->
+                        <div class="bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-8 md:p-12 mt-12 text-center">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">צריכים ייעוץ משפטי? בואו נשוחח</h2>
+                            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                                 אנו מבינים שסוגיות משפחתיות הן רגישות ומורכבות. המשרד שלנו מספק ליווי משפטי מקצועי, תוך רגישות מלאה למצב האישי והמשפחתי.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-medium text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#c9a55c] hover:border-[#c9a55c]">
+                                    התקשר עכשיו: 054-8184581
+                                </a>
+                                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-[#1a1a1a]">
+                                    צור קשר
+                                </a>
+                            </div>
+                            <p class="text-gray-400 mt-6 text-sm">
+                                או התקשר למשרד: <a href="tel:03-6092414" class="text-[#c9a55c] hover:underline">03-6092414</a>
                             </p>
                         </div>
                     </div>
@@ -309,6 +488,43 @@
                     mobileMenu.classList.remove('active');
                     document.body.style.overflow = '';
                 });
+            }
+        });
+
+        // Navigation dropdown functionality
+        function toggleNavDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (!dropdown) return;
+            
+            // Close all other dropdowns
+            const allDropdowns = document.querySelectorAll('[id$="-dropdown"]');
+            allDropdowns.forEach(dd => {
+                if (dd.id !== dropdownId) {
+                    dd.classList.add('hidden');
+                }
+            });
+            
+            // Toggle current dropdown
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            const practiceButton = event.target.closest('button[onclick*="practice-dropdown"]');
+            const practiceDropdown = document.getElementById('practice-dropdown');
+            const mobileButton = event.target.closest('button[onclick*="mobile-practice-dropdown"]');
+            const mobileDropdown = document.getElementById('mobile-practice-dropdown');
+            
+            if (!practiceButton && practiceDropdown && !practiceDropdown.contains(event.target)) {
+                practiceDropdown.classList.add('hidden');
+            }
+            
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
             }
         });
     </script>
