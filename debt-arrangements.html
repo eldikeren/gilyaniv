@@ -200,7 +200,7 @@
                             תחומי התמחות
                             <span class="mr-2 text-xs">▼</span>
                         </button>
-                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2 overflow-y-auto" style="max-height: calc(100vh - 120px);">
+                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2" style="max-height: calc(100vh - 120px); overflow-y: auto; overflow-x: hidden;">
                             <!-- דיני משפחה - Collapsible -->
                             <div class="border-b border-gray-200">
                                 <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
@@ -251,9 +251,9 @@
                                 </div>
                             </div>
                             <!-- דיני חוזים ודיני מקרקעין - Direct Link (No Collapse) -->
-                            <div class="mt-2">
-                                <a href="practice-areas.html#civil-law" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right font-bold">
-                                    דיני חוזים ודיני מקרקעין
+                            <div class="border-b border-gray-200 mt-2">
+                                <a href="practice-areas.html#civil-law" class="block w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">דיני חוזים ודיני מקרקעין</h4>
                                 </a>
                             </div>
                         </div>
