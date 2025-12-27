@@ -872,23 +872,6 @@
                 </a>
             </div>
         </div>
-        
-        <!-- Full-screen Mobile Menu Overlay -->
-        <div id="mobile-menu" class="mobile-menu-overlay">
-            <button id="close-mobile-menu" class="mobile-menu-close" aria-label="סגור תפריט נייד">&times;</button>
-            <div class="mobile-menu-content">
-                <div class="mobile-menu-links">
-                    <a href="index.html" title="דף הבית" class="mobile-menu-link">בית</a>
-                    <a href="#about" title="אודות המשרד" class="mobile-menu-link">אודות המשרד</a>
-                    <a href="attorneys.html" title="עורכי דין" class="mobile-menu-link">עורכי דין</a>
-                    <a href="practice-areas.html" title="תחומי התמחות" class="mobile-menu-link">תחומי התמחות</a>
-                    <a href="articles.html" title="פרסומים מקצועיים" title="פרסומים מקצועיים" class="mobile-menu-link">פרסומים מקצועיים</a>
-                    <a href="blog.html" title="בלוג" class="mobile-menu-link">בלוג</a>
-                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
-                    <a href="contact.html" title="צור קשר" class="mobile-menu-link">צור קשר</a>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Skip to content link -->
@@ -1342,7 +1325,7 @@
             // Open menu
             if (mobileMenuButton) {
                 mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('active');
+                    mobileMenu.classList.remove('translate-x-full');
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
                 });
             }
@@ -1350,15 +1333,19 @@
             // Close menu
             if (closeMenuButton) {
                 closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
+                    mobileMenu.classList.add('translate-x-full');
                     document.body.style.overflow = ''; // Enable scrolling
                 });
             }
             
-            // Close menu when clicking a link
+            // Close menu when clicking a link (except for collapse buttons)
             mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
+                link.addEventListener('click', function(e) {
+                    // Don't close if it's a collapse button
+                    if (link.tagName === 'BUTTON' || link.onclick) {
+                        return;
+                    }
+                    mobileMenu.classList.add('translate-x-full');
                     document.body.style.overflow = ''; // Enable scrolling
                 });
             });
@@ -1366,7 +1353,7 @@
             // Close menu when clicking outside
             mobileMenu.addEventListener('click', function(e) {
                 if (e.target === mobileMenu) {
-                    mobileMenu.classList.remove('active');
+                    mobileMenu.classList.add('translate-x-full');
                     document.body.style.overflow = ''; // Enable scrolling
                 }
             });
@@ -1415,21 +1402,26 @@
         }
 
         // Category dropdown functionality (nested collapse)
-        function toggleCategoryDropdown(categoryId) {
+        function toggleCategoryDropdown(categoryId, event) {
             const category = document.getElementById(categoryId);
             if (!category) return;
             
+            // Prevent event from bubbling if event is provided
+            if (event) {
+                event.stopPropagation();
+            }
+            
             // Find the button that triggered this
-            const button = event.target.closest('button');
+            const button = event ? event.target.closest('button') : null;
             const icon = button ? button.querySelector('.category-icon') : null;
             
             // Toggle category
             if (category.classList.contains('hidden')) {
                 category.classList.remove('hidden');
-                if (icon) icon.classList.add('open');
+                if (icon) icon.textContent = '▲';
             } else {
                 category.classList.add('hidden');
-                if (icon) icon.classList.remove('open');
+                if (icon) icon.textContent = '▼';
             }
         }
 

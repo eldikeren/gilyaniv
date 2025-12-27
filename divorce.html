@@ -497,21 +497,25 @@
 
         // Category dropdown functionality (nested collapse)
         function toggleCategoryDropdown(categoryId, event) {
-            event = event || window.event;
             const category = document.getElementById(categoryId);
             if (!category) return;
             
+            // Prevent event from bubbling if event is provided
+            if (event) {
+                event.stopPropagation();
+            }
+            
             // Find the button that triggered this
-            const button = event.target.closest('button');
+            const button = event ? event.target.closest('button') : null;
             const icon = button ? button.querySelector('.category-icon') : null;
             
             // Toggle category
             if (category.classList.contains('hidden')) {
                 category.classList.remove('hidden');
-                if (icon) icon.classList.add('open');
+                if (icon) icon.textContent = '▲';
             } else {
                 category.classList.add('hidden');
-                if (icon) icon.classList.remove('open');
+                if (icon) icon.textContent = '▼';
             }
         }
 
