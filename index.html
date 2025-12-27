@@ -462,6 +462,8 @@
         #practice-dropdown {
             min-width: 280px;
             max-height: calc(100vh - 120px); /* Default max-height based on viewport */
+            overflow-y: auto !important;
+            overflow-x: hidden;
         }
         
         /* Comprehensive Mobile Responsiveness */
@@ -819,12 +821,12 @@
                                     <span class="category-icon text-xs text-gray-500">▼</span>
                                 </button>
                                 <div id="category-inheritance" class="hidden">
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
+                                    <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="inheritance-order.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
+                                    <a href="will-probate.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
+                                    <a href="estate-management.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
+                                    <a href="will-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
+                                    <a href="inheritance-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
                                 </div>
                             </div>
                             <!-- חדלות פירעון והוצאה לפועל - Collapsible -->
@@ -973,6 +975,15 @@
                     </article>
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">ירושות וצוואות</h3>
+                            <p class="text-gray-600 mb-4">עריכת צוואות, חלוקת עזבון, התנגדויות לצוואה ופתרונות סכסוכי ירושה. מקצועיות ודיסקרטיות מלאה.</p>
+                            <a href="inheritance-wills.html" title="צוואות וירושה" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
+                                קרא עוד
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
                             <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">חדלות פירעון ושיקום כלכלי</h3>
                             <p class="text-gray-600 mb-4">מחיקת חובות, הסדרים ופתיחת פרק חדש. ליווי משפטי מקיף למחיקת חובות והסדרי חוב.</p>
                             <a href="insolvency.html" title="חדלות פירעון" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
@@ -982,18 +993,21 @@
                     </article>
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">גירושין, מזונות ומשמורת</h3>
-                            <p class="text-gray-600 mb-4">ייצוג בבתי משפט ורבני, הסכמי גירושין, מזונות, חלוקת רכוש ומשמורת ילדים. ליווי צמוד ורגיש.</p>
-                            <a href="divorce-law.html" title="דיני גירושין" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
-                                קרא עוד
-                            </a>
-                        </div>
-                    </article>
-                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">צוואות וירושה</h3>
-                            <p class="text-gray-600 mb-4">עריכת צוואות, חלוקת עזבון, התנגדויות לצוואה ופתרונות סכסוכי ירושה. מקצועיות ודיסקרטיות מלאה.</p>
-                            <a href="inheritance-wills.html" title="צוואות וירושה" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
+                            <h3 class="text-xl font-bold mb-4 text-[#1a1a1a]">דיני חוזים ודיני מקרקעין</h3>
+                            <p class="text-gray-600 mb-4">ייצוג מקצועי בתביעות אזרחיות, דיני חוזים, נזיקין, מקרקעין וכל סוגי הסכסוכים המסחריים. אנו מספקים ליווי משפטי מקיף בכל תחומי המשפט האזרחי.</p>
+                            <p class="text-gray-600 mb-4 text-sm">עו״ד דויטש, מומחה לדיני מקרקעין ולסדר דין אזרחי, מעניק ייצוג מקצועי ויעיל בתביעות אזרחיות מורכבות, עם דגש על השגת התוצאות הטובות ביותר עבור הלקוחות.</p>
+                            <div class="mb-4">
+                                <p class="text-gray-700 font-semibold mb-2">תחומי התמחות:</p>
+                                <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
+                                    <li>עסקאות מקרקעין מקצועיות ומקיפות</li>
+                                    <li>דיני חוזים ואכיפת חוזים</li>
+                                    <li>תביעות נזיקין</li>
+                                    <li>ייצוג בבתי משפט</li>
+                                    <li>ייעוץ משפטי מקיף</li>
+                                    <li>ייצוג בסכסוכים מסחריים</li>
+                                </ul>
+                            </div>
+                            <a href="practice-areas.html#civil-law" title="דיני חוזים ודיני מקרקעין" class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-6 py-3 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]">
                                 קרא עוד
                             </a>
                         </div>
@@ -1249,12 +1263,12 @@
                                 <span class="category-icon text-xs ml-2">▼</span>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצוואה</a>
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצו ירושה</a>
+                                <a href="will-writing.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
+                                <a href="inheritance-order.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
+                                <a href="will-probate.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
+                                <a href="estate-management.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
+                                <a href="will-contest.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצוואה</a>
+                                <a href="inheritance-contest.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצו ירושה</a>
                             </div>
                         </div>
                         <div class="mb-2">

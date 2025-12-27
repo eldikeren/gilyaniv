@@ -13,14 +13,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צוואות וירושה – עו"ד יניב גיל | תל אביב</title>
-    <meta name="description" content="עריכת צוואות, חלוקת עזבון, התנגדויות לצוואה ופתרונות סכסוכי ירושה. מקצועיות ודיסקרטיות מלאה.">
-    <meta name="keywords" content="צוואה, ירושה, חלוקת עזבון, התנגדות לצוואה, עורך דין צוואות, עורך דין ירושה, תל אביב">
-    <meta property="og:title" content="צוואות וירושה – עו״ד יניב גיל">
-    <meta property="og:description" content="עריכת צוואות, חלוקת עזבון, התנגדויות לצוואה ופתרונות סכסוכי ירושה. מקצועיות ודיסקרטיות מלאה.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yanivgil.co.il/inheritance-wills.html">
-    <link rel="canonical" href="https://www.yanivgil.co.il/inheritance-wills.html">
+    <title>ניהול עיזבון – ניהול מקצועי של נכסי המנוח | עו"ד יניב גיל | תל אביב</title>
+    <meta name="description" content="ניהול עיזבון מקצועי: גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים. עו״ד יניב גיל – תל אביב.">
+    <meta name="keywords" content="ניהול עיזבון, מנהל עיזבון, עיזבון, חלוקת עיזבון, עורך דין ירושה, תל אביב">
+    <meta property="og:title" content="ניהול עיזבון – ניהול מקצועי של נכסי המנוח | עו״ד יניב גיל | תל אביב">
+    <meta property="og:description" content="ניהול עיזבון מקצועי: גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים.">
+    <link rel="canonical" href="https://www.yanivgil.co.il/estate-management.html">
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="stylesheet" href="css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -162,6 +160,7 @@
         /* Navigation dropdown styles */
         #practice-dropdown {
             min-width: 280px;
+            max-height: calc(100vh - 120px);
             overflow-y: auto !important;
             overflow-x: hidden;
         }
@@ -173,9 +172,18 @@
         .category-icon.open {
             transform: rotate(180deg);
         }
+        /* Navigation button styling */
+        nav a:link, nav a:visited, nav a:hover, nav a:active, nav a:focus {
+            color: #c9a55c !important;
+        }
+        nav a:hover {
+            background: #c9a55c !important;
+            color: #1a1a1a !important;
+        }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
@@ -216,12 +224,12 @@
                             </div>
                             <!-- ירושות וצוואות - Collapsible -->
                             <div class="border-b border-gray-200 mt-2">
-                                <button onclick="toggleCategoryDropdown('category-inheritance')" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                <button onclick="toggleCategoryDropdown('category-inheritance', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
                                     <h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4>
                                     <span class="category-icon text-xs text-gray-500">▼</span>
                                 </button>
                                 <div id="category-inheritance" class="hidden">
-                                    <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
@@ -302,7 +310,7 @@
                                 <span class="category-icon text-xs ml-2">▼</span>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
-                                <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
@@ -349,35 +357,50 @@
                     <nav class="mb-6 text-sm text-gray-600">
                         <a href="index.html" class="hover:text-[#b8941f]">בית</a>
                         <span class="mx-2">/</span>
-                        <span class="text-gray-800">צוואות וירושה</span>
+                        <a href="practice-areas.html" class="hover:text-[#b8941f]">תחומי התמחות</a>
+                        <span class="mx-2">/</span>
+                        <a href="inheritance-wills.html" class="hover:text-[#b8941f]">ירושות וצוואות</a>
+                        <span class="mx-2">/</span>
+                        <span class="text-gray-800">ניהול עיזבון</span>
                     </nav>
                     
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">צוואות וירושה – עו״ד יניב גיל</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">ניהול עיזבון</h1>
                     
                     <div class="prose prose-lg max-w-none text-gray-700">
-                        <p class="text-xl mb-6">עריכת צוואות, חלוקת עזבון, התנגדויות לצוואה ופתרונות סכסוכי ירושה. משרדנו מספק שירותים מקצועיים ודיסקרטיים בכל הנוגע לתכנון ירושה, עריכת צוואות וניהול עיזבונות, תוך הבטחת כיבוד רצון הנפטר והגנה על זכויות היורשים.</p>
+                        <p class="text-xl mb-6 text-gray-800 leading-relaxed">
+                            ניהול עיזבון הוא הליך שנועד להסדיר את טיפולו של מכלול נכסי המנוח – לרבות גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים. במקרים מסוימים, בית המשפט ממנה מנהל עיזבון, זמני או קבוע, בהתאם לסעיפים 78–83 לחוק הירושה.
+                        </p>
                         
-                        <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">השירותים שלנו</h2>
-                        <ul class="list-disc list-inside space-y-3 mb-8 text-lg"><li>עריכת צוואות מכל הסוגים</li>
-                            <li>תכנון ירושה וניהול עיזבונות</li>
-                            <li>הגשת התנגדויות לצוואות</li>
-                            <li>פתרון סכסוכי ירושה</li>
-                            <li>חלוקת עזבון והוצאת צו ירושה</li>
-                            <li>ייצוג בבתי משפט בתיקי ירושה</li></ul>
-                        
-                        <h2 class="text-3xl font-bold mt-8 mb-4 text-[#1a1a1a]">למה לבחור בנו?</h2>
-                        <ul class="list-disc list-inside space-y-3 mb-8 text-lg"><li>ניסיון של למעלה מ-20 שנה בתחום</li>
-                            <li>דיסקרטיות מלאה</li>
-                            <li>ליווי מקצועי לאורך כל התהליך</li>
-                            <li>הבנה עמוקה של דיני הירושה</li>
-                            <li>תכנון מיטבי למניעת סכסוכים</li></ul>
-                        
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            מינוי מנהל עיזבון נדרש במיוחד כאשר מדובר בעיזבון מורכב: נכסים רבים, חובות משמעותיים, סכסוכים בין יורשים, או הוראות צוואה שאינן ברורות. מנהל העיזבון כפוף לפיקוח בית המשפט ונדרש לפעול בנאמנות, בשקיפות ומתוך אחריות מלאה.
+                        </p>
+
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            <strong>ניהול עיזבון לקוי עלול להוביל לפגיעה בזכויות היורשים ואף לאחריות אישית של מנהל העיזבון.</strong> לכן, ליווי משפטי בניהול עיזבון הוא קריטי – הן למנהל עצמו והן ליורשים. עורך דין מנוסה יודע לזהות את כל ההיבטים הרלוונטיים, להציג אותם בצורה משכנעת, ולהבטיח שההליך יתנהל בצורה יעילה ושקופה.
+                        </p>
+
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            תהליך ניהול עיזבון מתחיל בפגישת ייעוץ, בה נבחנות כל הסוגיות הרלוונטיות: נכסי העיזבון, חובות, התחייבויות, יחסים בין יורשים, וכל נושא אחר הקשור לניהול העיזבון. לאחר מכן, מתחיל תהליך הניהול, כולל גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים.
+                        </p>
+
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            ניהול עיזבון כולל היבטים משפטיים וכלכליים מורכבים, כגון גביית חובות, סילוק התחייבויות, שמירה על נכסים, וחלוקת העיזבון. עורך דין מנוסה יודע לזהות את כל ההיבטים הרלוונטיים, להציג אותם בצורה משכנעת, ולהבטיח שההליך יתנהל בצורה יעילה ושקופה, תוך שמירה על זכויות כל הצדדים.
+                        </p>
+
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            מנהל העיזבון כפוף לפיקוח בית המשפט ונדרש לפעול בנאמנות, בשקיפות ומתוך אחריות מלאה. ניהול לקוי עלול להוביל לפגיעה בזכויות היורשים ואף לאחריות אישית של מנהל העיזבון. לכן, חשוב שהניהול יתבצע בליווי עורך דין מנוסה, תוך הקפדה על כל הדרישות המשפטיות והפרוצדורליות.
+                        </p>
+
+                        <p class="mb-8 text-gray-800 leading-relaxed">
+                            במשרדנו, אנו מספקים ליווי מקצועי ומקיף בניהול עיזבון. אנו מבינים את המורכבות המשפטית והכלכלית של התהליך, ומציעים גישה מקצועית ורגישה, תוך שמירה על זכויות הלקוח והבטחת תוצאה מיטבית. המשרד שלנו מתמחה בייצוג בניהול עיזבון מורכב, כולל מקרים של נכסים רבים, חובות משמעותיים, וסוגיות מורכבות אחרות.
+                        </p>
+
                         <!-- Call to Action Section -->
                         <div class="bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-8 md:p-12 mt-12 text-center relative overflow-hidden">
                             <div class="relative z-10">
                                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">צריכים ייעוץ משפטי? בואו נשוחח</h2>
                                 <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-md">
-                                    אנו מבינים שסוגיות ירושה וצוואות נוגעות במקומות רגישים ביותר. המשרד שלנו מספק ליווי משפטי מקצועי, דיסקרטי ואמין, שמטרתו להבטיח את כיבוד רצונכם והגנה על זכויות יקיריכם.
+                                    אנו מבינים שניהול עיזבון הוא תהליך מורכב ואחראי. המשרד שלנו מספק ליווי משפטי מקצועי, תוך רגישות מלאה למצב האישי והמשפחתי.
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                     <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-medium text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#c9a55c] hover:border-[#c9a55c]">
@@ -398,6 +421,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
@@ -417,7 +441,7 @@
                     <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
                     <ul class="space-y-2">
                         <li><a href="family-law.html" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה וגישור</a></li>
-                        <li><a href="divorce-law.html" class="hover:text-[#b8941f] transition-colors duration-200">גירושין ומשמורת</a></li>
+                        <li><a href="divorce.html" class="hover:text-[#b8941f] transition-colors duration-200">גירושין</a></li>
                         <li><a href="inheritance-wills.html" class="hover:text-[#b8941f] transition-colors duration-200">צוואות וירושה</a></li>
                         <li><a href="insolvency.html" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון</a></li>
                     </ul>
@@ -482,8 +506,29 @@
             });
             
             // Toggle current dropdown
-            if (dropdown.classList.contains('hidden')) {
+            const isHidden = dropdown.classList.contains('hidden');
+            if (isHidden) {
                 dropdown.classList.remove('hidden');
+                
+                // If opening the practice dropdown, calculate dynamic max-height
+                if (dropdownId === 'practice-dropdown') {
+                    // Get the button that triggered the dropdown
+                    const button = document.querySelector('button[onclick*="practice-dropdown"]');
+                    if (button) {
+                        // Use setTimeout to ensure dropdown is visible for measurements
+                        setTimeout(() => {
+                            const buttonRect = button.getBoundingClientRect();
+                            const viewportHeight = window.innerHeight;
+                            const spaceBelow = viewportHeight - buttonRect.bottom;
+                            
+                            // Calculate available space (leave 20px padding from bottom)
+                            const availableSpace = Math.max(spaceBelow - 20, 200); // Minimum 200px
+                            
+                            // Set max-height dynamically
+                            dropdown.style.maxHeight = availableSpace + 'px';
+                        }, 0);
+                    }
+                }
             } else {
                 dropdown.classList.add('hidden');
             }
@@ -495,7 +540,6 @@
             const category = document.getElementById(categoryId);
             if (!category) return;
             
-            event = event || window.event;
             // Find the button that triggered this
             const button = event.target.closest('button');
             const icon = button ? button.querySelector('.category-icon') : null;
@@ -543,5 +587,3 @@
     </a>
 </body>
 </html>
-
-

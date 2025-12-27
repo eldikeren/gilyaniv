@@ -161,6 +161,8 @@
         #practice-dropdown {
             min-width: 280px;
             max-height: calc(100vh - 120px);
+            overflow-y: auto !important;
+            overflow-x: hidden;
         }
         /* Category dropdown icon rotation */
         .category-icon {
@@ -227,7 +229,7 @@
                                     <span class="category-icon text-xs text-gray-500">▼</span>
                                 </button>
                                 <div id="category-inheritance" class="hidden">
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
                                     <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
@@ -308,7 +310,7 @@
                                 <span class="category-icon text-xs ml-2">▼</span>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
+                                <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
@@ -359,34 +361,38 @@
                         <span class="mx-2">/</span>
                         <a href="family-law.html" class="hover:text-[#b8941f]">דיני משפחה</a>
                         <span class="mx-2">/</span>
-                        <span class="text-gray-800">הסכמי גירושין</span>
+                        <span class="text-gray-800">מזונות אישה</span>
                     </nav>
                     
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">הסכמי גירושין – פתרון מוסכם שמונע סכסוכים עתידיים</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">מזונות אישה – זכאות, תנאים ונסיבות</h1>
                     
                     <div class="prose prose-lg max-w-none text-gray-700">
                         <p class="text-xl mb-6 text-gray-800 leading-relaxed">
-                            הסכם גירושין הוא מסמך משפטי כולל, שמטרתו להסדיר את סיום הקשר הזוגי בהסכמה ולהגדיר מראש את זכויות וחובות הצדדים. הסכם זה כולל לרוב הסדרים בנוגע לחלוקת רכוש, משמורת ואחריות הורית, זמני שהות, מזונות ילדים ולעיתים גם מזונות אישה. עריכת הסכם גירושין מקצועי ומקיף היא קריטית להבטחת יציבות עתידית ולמניעת סכסוכים עתידיים.
+                            מזונות אישה הם סוגיה משפטית מורכבת, הנבחנת בעיקר במסגרת הדין הדתי ובהתאם לנסיבות החיים המשותפים. לא כל אישה זכאית למזונות, והזכאות תלויה בגורמים כגון אופן ניהול התא המשפחתי, הכנסות הצדדים ונסיבות הפרידה. הבנת הזכאות והתנאים היא קריטית להגנה על זכויות האישה ולמניעת פגיעה בלתי מוצדקת.
                         </p>
                         
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            היתרון המרכזי של הסכם גירושין הוא שליטה בתוצאה. במקום הכרעה שיפוטית, בני הזוג קובעים בעצמם את תנאי הפרידה, בהתאם לצרכיהם ולנסיבות חייהם. בכך ניתן לחסוך זמן, עלויות, ועומס רגשי משמעותי. עם זאת, ניסוח הסכם גירושין מחייב מומחיות. הסכם שאינו מנוסח כראוי עלול להוביל לפרשנויות שונות, מחלוקות עתידיות ואף להליכים משפטיים חוזרים.
+                            ברבים מהמקרים מדובר בזכות זמנית, עד לגירושין או עד להשגת עצמאות כלכלית. קביעת מזונות אישה דורשת ידע וניסיון משפטי, על מנת להגן על זכויות הצדדים ולמנוע פגיעה בלתי מוצדקת. עורך דין מנוסה יודע לזהות את התנאים והנסיבות הקובעים את הזכאות, להציג את הנתונים בצורה משכנעת, ולהבטיח שההחלטה תתקבל בהתאם לחוק ולצדק.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            <strong>לכן חשוב שההסכם ייערך בליווי עורך דין מנוסה, תוך התייחסות גם לתרחישים עתידיים ושינויים אפשריים.</strong> הסכם גירושין מאוזן הוא כזה שמגן על שני הצדדים ומציב את טובת הילדים במרכז. עורך דין מנוסה יודע לזהות נקודות עתידיות שעלולות להוביל למחלוקות, ויכול להציע פתרונות יצירתיים שיענו על צרכי שני הצדדים.
+                            <strong>קביעת מזונות אישה דורשת בחינה מעמיקה של כל הגורמים הרלוונטיים, כולל אופן ניהול התא המשפחתי, הכנסות הצדדים, ונסיבות הפרידה.</strong> עורך דין מנוסה יודע לזהות את הגורמים הקובעים את הזכאות, להציג את הנתונים בצורה משכנעת, ולהבטיח שההחלטה תתקבל בהתאם לחוק ולצדק. חשוב שההחלטה תתקבל לאחר בחינה מעמיקה של כל הגורמים הרלוונטיים.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            תהליך עריכת הסכם גירושין מתחיל בפגישת ייעוץ, בה נבחנות כל הסוגיות הרלוונטיות: חלוקת רכוש ונכסים, הסדרי משמורת, זמני שהות, מזונות ילדים, מזונות אישה (אם רלוונטי), וכל נושא אחר הקשור לפרידה. לאחר מכן, מתחיל תהליך המשא ומתן, בו כל צד מיוצג על ידי עורך דין מנוסה, במטרה להגיע להסכם הוגן ומאוזן.
+                            תהליך קביעת מזונות אישה מתחיל בפגישת ייעוץ, בה נבחנות כל הסוגיות הרלוונטיות: אופן ניהול התא המשפחתי, הכנסות הצדדים, נסיבות הפרידה, וכל נושא אחר הקשור לזכאות. לאחר מכן, מתחיל תהליך המשא ומתן או ההליך המשפטי, בו כל צד מיוצג על ידי עורך דין מנוסה, במטרה להגיע להחלטה הוגנת.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            הסכם גירושין תקף מבחינה משפטית חייב לקבל אישור מבית משפט לענייני משפחה או מבית דין רבני, בהתאם לנסיבות. אישור זה מעניק להסכם תוקף של פסק דין, וכל הפרה שלו יכולה להוביל להליכי אכיפה. לכן, חשוב שההסכם יכלול מנגנוני אכיפה ברורים, ויטפל גם בסוגיות של שינוי נסיבות עתידיות.
+                            החלטה בנושא מזונות אישה יכולה להתקבל בהסכמה בין הצדדים, או על ידי בית משפט לענייני משפחה או בית דין רבני, בהתאם לנסיבות. החלטה זו משפיעה על חיי היום־יום של האישה ועל יכולתה הכלכלית. לכן, חשוב שההחלטה תתקבל לאחר בחינה מעמיקה של כל הגורמים הרלוונטיים, תוך התחשבות בנסיבות הספציפיות.
+                        </p>
+
+                        <p class="mb-6 text-gray-800 leading-relaxed">
+                            סוגיית מזונות אישה כוללת היבטים משפטיים מורכבים, כגון זכאות לפי הדין הדתי, תנאים לזכאות, נסיבות המבטלות את הזכאות, וסוגיות של עדכון והפסקת מזונות. עורך דין מנוסה יודע לזהות את כל ההיבטים הרלוונטיים, להציג אותם בצורה משכנעת, ולהבטיח שההחלטה תתקבל בהתאם לחוק ולצדק.
                         </p>
 
                         <p class="mb-8 text-gray-800 leading-relaxed">
-                            במשרדנו, אנו מספקים ליווי מקצועי ומקיף בעריכת הסכמי גירושין. אנו מבינים את המורכבות הרגשית והמשפטית של התהליך, ומציעים גישה רגישה ומקצועית, תוך שמירה על זכויות הלקוח והבטחת תוצאה מיטבית. המשרד שלנו מתמחה בעריכת הסכמים מורכבים, כולל מקרים של עסקים משפחתיים, נכסים רבים, וסוגיות מורכבות של משמורת ומזונות.
+                            במשרדנו, אנו מספקים ליווי מקצועי ומקיף בסוגיות מזונות אישה. אנו מבינים את המורכבות המשפטית והכלכלית של התהליך, ומציעים גישה מקצועית ורגישה, תוך שמירה על זכויות הלקוח והבטחת תוצאה מיטבית. המשרד שלנו מתמחה בייצוג בסוגיות מורכבות של מזונות אישה, כולל מקרים של זכאות, תנאים, וסוגיות מורכבות אחרות.
                         </p>
 
                         <!-- Call to Action Section -->
@@ -581,3 +587,4 @@
     </a>
 </body>
 </html>
+
