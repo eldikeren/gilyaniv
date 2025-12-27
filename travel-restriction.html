@@ -13,12 +13,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ניהול עיזבון – ניהול מקצועי של נכסי המנוח | עו"ד יניב גיל | תל אביב</title>
-    <meta name="description" content="ניהול עיזבון מקצועי: גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים. עו״ד יניב גיל – תל אביב.">
-    <meta name="keywords" content="ניהול עיזבון, מנהל עיזבון, עיזבון, חלוקת עיזבון, עורך דין ירושה, תל אביב">
-    <meta property="og:title" content="ניהול עיזבון – ניהול מקצועי של נכסי המנוח | עו״ד יניב גיל | תל אביב">
-    <meta property="og:description" content="ניהול עיזבון מקצועי: גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים.">
-    <link rel="canonical" href="https://www.yanivgil.co.il/estate-management.html">
+    <title>עיכוב יציאה מהארץ – ביטול צו עיכוב יציאה | עו"ד יניב גיל תל אביב</title>
+    <meta name="description" content="ביטול צו עיכוב יציאה מהארץ, הפקדת ערבות והסדרת חובות. עו״ד יניב גיל – תל אביב.">
+    <meta name="keywords" content="עיכוב יציאה מהארץ, ביטול עיכוב יציאה, ערבות, הגבלת יציאה, עורך דין הוצאה לפועל, תל אביב">
+    <meta property="og:title" content="עיכוב יציאה מהארץ – ביטול צו עיכוב יציאה | עו״ד יניב גיל">
+    <meta property="og:description" content="ביטול צו עיכוב יציאה מהארץ, הפקדת ערבות והסדרת חובות.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yanivgil.co.il/travel-restriction.html">
+    <link rel="canonical" href="https://www.yanivgil.co.il/travel-restriction.html">
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="stylesheet" href="css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -28,6 +30,8 @@
         .header-text-logo { width: 220px; height: auto; transition: all 0.3s ease-in-out; }
         .scrolled .header-logo { height: 40px; }
         .scrolled .header-text-logo { width: 170px; }
+        .h-80vh { height: 80vh; }
+        @media (max-width: 768px) { .h-80vh { height: 60vh; } }
         .mobile-menu-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.9); z-index: 9999;
@@ -111,6 +115,7 @@
                 height: 32px;
             }
         }
+
         /* Accessibility floating button */
         .accessibility-btn {
             position: fixed;
@@ -160,7 +165,6 @@
         /* Navigation dropdown styles */
         #practice-dropdown {
             min-width: 280px;
-            max-height: calc(100vh - 120px);
             overflow-y: auto !important;
             overflow-x: hidden;
         }
@@ -171,14 +175,6 @@
         }
         .category-icon.open {
             transform: rotate(180deg);
-        }
-        /* Navigation button styling */
-        nav a:link, nav a:visited, nav a:hover, nav a:active, nav a:focus {
-            color: #c9a55c !important;
-        }
-        nav a:hover {
-            background: #c9a55c !important;
-            color: #1a1a1a !important;
         }
 </style>
 </head>
@@ -224,17 +220,17 @@
                             </div>
                             <!-- ירושות וצוואות - Collapsible -->
                             <div class="border-b border-gray-200 mt-2">
-                                <button onclick="toggleCategoryDropdown('category-inheritance', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                <button onclick="toggleCategoryDropdown('category-inheritance')" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
                                     <h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4>
                                     <span class="category-icon text-xs text-gray-500">▼</span>
                                 </button>
                                 <div id="category-inheritance" class="hidden">
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
-                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
+                                    <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="inheritance-order.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
+                                    <a href="will-probate.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
+                                    <a href="estate-management.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
+                                    <a href="will-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
+                                    <a href="inheritance-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
                                 </div>
                             </div>
                             <!-- חדלות פירעון והוצאה לפועל - Collapsible -->
@@ -310,7 +306,7 @@
                                 <span class="category-icon text-xs ml-2">▼</span>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
-                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
+                                <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
                                 <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
@@ -351,56 +347,70 @@
     </header>
 
     <main class="pt-24">
+        <!-- Hero Section -->
         <section class="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <nav class="mb-6 text-sm text-gray-600">
                         <a href="index.html" class="hover:text-[#b8941f]">בית</a>
                         <span class="mx-2">/</span>
-                        <a href="practice-areas.html" class="hover:text-[#b8941f]">תחומי התמחות</a>
+                        <a href="insolvency.html" class="hover:text-[#b8941f]">חדלות פירעון והוצאה לפועל</a>
                         <span class="mx-2">/</span>
-                        <a href="inheritance-wills.html" class="hover:text-[#b8941f]">ירושות וצוואות</a>
-                        <span class="mx-2">/</span>
-                        <span class="text-gray-800">ניהול עיזבון</span>
+                        <span class="text-gray-800">עיכוב יציאה מהארץ</span>
                     </nav>
                     
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">ניהול עיזבון</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#1a1a1a]">עיכוב יציאה מהארץ</h1>
                     
                     <div class="prose prose-lg max-w-none text-gray-700">
                         <p class="text-xl mb-6 text-gray-800 leading-relaxed">
-                            ניהול עיזבון הוא הליך שנועד להסדיר את טיפולו של מכלול נכסי המנוח – לרבות גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים. במקרים מסוימים, בית המשפט ממנה מנהל עיזבון, זמני או קבוע, בהתאם לסעיפים 78–83 לחוק הירושה.
+                            עיכוב יציאה מהארץ הוא אחד האמצעים הפוגעניים ביותר שניתן להטיל על חייב במסגרת הליכי גבייה או חדלות פירעון. מדובר בצעד שמגביל את חופש התנועה של אדם ועלול לפגוע בעבודתו, במשפחתו ובזכויותיו הבסיסיות.
                         </p>
                         
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            מינוי מנהל עיזבון נדרש במיוחד כאשר מדובר בעיזבון מורכב: נכסים רבים, חובות משמעותיים, סכסוכים בין יורשים, או הוראות צוואה שאינן ברורות. מנהל העיזבון כפוף לפיקוח בית המשפט ונדרש לפעול בנאמנות, בשקיפות ומתוך אחריות מלאה.
+                            הטלת צו עיכוב יציאה מהארץ נעשית כאשר קיים חשש ממשי שהחייב יעזוב את המדינה מבלי להסדיר את חובותיו. עם זאת, החוק והפסיקה קובעים כי מדובר באמצעי שיש להפעילו בזהירות ומתוך איזון בין זכויות הנושים לזכויות החייב.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            <strong>ניהול עיזבון לקוי עלול להוביל לפגיעה בזכויות היורשים ואף לאחריות אישית של מנהל העיזבון.</strong> לכן, ליווי משפטי בניהול עיזבון הוא קריטי – הן למנהל עצמו והן ליורשים. עורך דין מנוסה יודע לזהות את כל ההיבטים הרלוונטיים, להציג אותם בצורה משכנעת, ולהבטיח שההליך יתנהל בצורה יעילה ושקופה.
+                            <strong>במקרים רבים ניתן לפעול לביטול הצו או לצמצומו, למשל באמצעות הפקדת ערבות, הצגת תוכנית להסדרת החוב, או הוכחת היעדר חשש להימלטות.</strong> כל מקרה נבחן לגופו.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            תהליך ניהול עיזבון מתחיל בפגישת ייעוץ, בה נבחנות כל הסוגיות הרלוונטיות: נכסי העיזבון, חובות, התחייבויות, יחסים בין יורשים, וכל נושא אחר הקשור לניהול העיזבון. לאחר מכן, מתחיל תהליך הניהול, כולל גביית חובות, סילוק התחייבויות, שמירה על נכסים וחלוקתם ליורשים.
+                            תהליך ביטול עיכוב יציאה מהארץ מתחיל בפגישת ייעוץ, בה נבחנות כל הסוגיות הרלוונטיות: נסיבות הטלת הצו, יכולת הפקדת ערבות, תוכנית להסדרת החוב, וכל נושא אחר הקשור למצב החייב. לאחר מכן, מתחיל תהליך ההגשה, כולל הכנת כל המסמכים הנדרשים והגשת הבקשה לביטול או צמצום הצו.
                         </p>
 
                         <p class="mb-6 text-gray-800 leading-relaxed">
-                            ניהול עיזבון כולל היבטים משפטיים וכלכליים מורכבים, כגון גביית חובות, סילוק התחייבויות, שמירה על נכסים, וחלוקת העיזבון. עורך דין מנוסה יודע לזהות את כל ההיבטים הרלוונטיים, להציג אותם בצורה משכנעת, ולהבטיח שההליך יתנהל בצורה יעילה ושקופה, תוך שמירה על זכויות כל הצדדים.
-                        </p>
-
-                        <p class="mb-6 text-gray-800 leading-relaxed">
-                            מנהל העיזבון כפוף לפיקוח בית המשפט ונדרש לפעול בנאמנות, בשקיפות ומתוך אחריות מלאה. ניהול לקוי עלול להוביל לפגיעה בזכויות היורשים ואף לאחריות אישית של מנהל העיזבון. לכן, חשוב שהניהול יתבצע בליווי עורך דין מנוסה, תוך הקפדה על כל הדרישות המשפטיות והפרוצדורליות.
+                            ייצוג משפטי נכון מאפשר בחינה מהירה של האפשרויות, פנייה לערכאה המתאימה, וניסיון להשיב לחייב את חופש התנועה שלו.
                         </p>
 
                         <p class="mb-8 text-gray-800 leading-relaxed">
-                            במשרדנו, אנו מספקים ליווי מקצועי ומקיף בניהול עיזבון. אנו מבינים את המורכבות המשפטית והכלכלית של התהליך, ומציעים גישה מקצועית ורגישה, תוך שמירה על זכויות הלקוח והבטחת תוצאה מיטבית. המשרד שלנו מתמחה בייצוג בניהול עיזבון מורכב, כולל מקרים של נכסים רבים, חובות משמעותיים, וסוגיות מורכבות אחרות.
+                            במשרדנו, אנו מספקים ליווי מקצועי ומקיף בהליכי ביטול עיכוב יציאה מהארץ. אנו מבינים את המורכבות המשפטית והאישית של התהליך, ומציעים גישה מקצועית ורגישה, תוך שמירה על זכויות הלקוח והבטחת תוצאה מיטבית. המשרד שלנו מתמחה בייצוג בהליכי ביטול עיכוב יציאה מורכבים, כולל מקרים של ערבות, תוכניות הסדר, וסוגיות מורכבות אחרות.
                         </p>
 
+                        <!-- FAQ Section -->
+                        <div class="mt-12 mb-8">
+                            <h2 class="text-3xl font-bold mb-6 text-[#1a1a1a]">שאלות נפוצות – עיכוב יציאה מהארץ</h2>
+                            <div class="space-y-6">
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">מתי ניתן להוציא צו עיכוב יציאה מהארץ?</h3>
+                                    <p class="text-gray-800 leading-relaxed">כאשר קיים חשש שהחייב יעזוב את הארץ מבלי להסדיר את חובותיו.</p>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">האם ניתן לבטל עיכוב יציאה מהארץ?</h3>
+                                    <p class="text-gray-800 leading-relaxed">כן, בנסיבות מתאימות ובהוכחת היעדר חשש להימלטות או בהפקדת ערבות.</p>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">האם עיכוב יציאה פוגע בזכויות יסוד?</h3>
+                                    <p class="text-gray-800 leading-relaxed">כן, ולכן מדובר באמצעי שמופעל בזהירות ובאיזון בין זכויות הצדדים.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <!-- Call to Action Section -->
                         <div class="bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-8 md:p-12 mt-12 text-center relative overflow-hidden">
                             <div class="relative z-10">
                                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">צריכים ייעוץ משפטי? בואו נשוחח</h2>
                                 <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-md">
-                                    אנו מבינים שניהול עיזבון הוא תהליך מורכב ואחראי. המשרד שלנו מספק ליווי משפטי מקצועי, תוך רגישות מלאה למצב האישי והמשפחתי.
+                                    אנו מבינים את המורכבות והלחץ שמלווים הגבלת יציאה מהארץ. המשרד שלנו מספק ליווי משפטי מקצועי, רגיש ואמין, שמטרתו לעזור לכם להשיב את חופש התנועה ולהסדיר את החובות בצורה אחראית.
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                     <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-medium text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#c9a55c] hover:border-[#c9a55c]">
@@ -421,7 +431,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (same as other pages) -->
     <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
@@ -441,7 +451,7 @@
                     <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
                     <ul class="space-y-2">
                         <li><a href="family-law.html" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה וגישור</a></li>
-                        <li><a href="divorce.html" class="hover:text-[#b8941f] transition-colors duration-200">גירושין</a></li>
+                        <li><a href="divorce-law.html" class="hover:text-[#b8941f] transition-colors duration-200">גירושין ומשמורת</a></li>
                         <li><a href="inheritance-wills.html" class="hover:text-[#b8941f] transition-colors duration-200">צוואות וירושה</a></li>
                         <li><a href="insolvency.html" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון</a></li>
                     </ul>
@@ -507,37 +517,15 @@
             });
             
             // Toggle current dropdown
-            const isHidden = dropdown.classList.contains('hidden');
-            if (isHidden) {
+            if (dropdown.classList.contains('hidden')) {
                 dropdown.classList.remove('hidden');
-                
-                // If opening the practice dropdown, calculate dynamic max-height
-                if (dropdownId === 'practice-dropdown') {
-                    // Get the button that triggered the dropdown
-                    const button = document.querySelector('button[onclick*="practice-dropdown"]');
-                    if (button) {
-                        // Use setTimeout to ensure dropdown is visible for measurements
-                        setTimeout(() => {
-                            const buttonRect = button.getBoundingClientRect();
-                            const viewportHeight = window.innerHeight;
-                            const spaceBelow = viewportHeight - buttonRect.bottom;
-                            
-                            // Calculate available space (leave 20px padding from bottom)
-                            const availableSpace = Math.max(spaceBelow - 20, 200); // Minimum 200px
-                            
-                            // Set max-height dynamically
-                            dropdown.style.maxHeight = availableSpace + 'px';
-                        }, 0);
-                    }
-                }
             } else {
                 dropdown.classList.add('hidden');
             }
         }
 
         // Category dropdown functionality (nested collapse)
-        function toggleCategoryDropdown(categoryId, event) {
-            event = event || window.event;
+        function toggleCategoryDropdown(categoryId) {
             const category = document.getElementById(categoryId);
             if (!category) return;
             
@@ -588,3 +576,6 @@
     </a>
 </body>
 </html>
+
+
+
