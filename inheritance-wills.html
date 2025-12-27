@@ -53,6 +53,25 @@
             text-decoration: none; border-radius: 5px; transition: all 0.3s ease;
         }
         .mobile-menu-links a:hover { background: #b8941f; color: #1a1a1a; }
+        /* Mobile menu button styling to match links */
+        .mobile-menu-links button.mobile-menu-link {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #c9a55c;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: right;
+            font-size: inherit;
+            border: none;
+            cursor: pointer;
+        }
+        .mobile-menu-links button.mobile-menu-link:hover {
+            background: #c9a55c;
+            color: #1a1a1a;
+        }
             /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
@@ -144,6 +163,14 @@
         #practice-dropdown {
             min-width: 280px;
         }
+        /* Category dropdown icon rotation */
+        .category-icon {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .category-icon.open {
+            transform: rotate(180deg);
+        }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -168,37 +195,55 @@
                             <span class="mr-2 text-xs">▼</span>
                         </button>
                         <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2 max-h-96 overflow-y-auto">
-                            <div class="px-4 py-2 border-b border-gray-200">
-                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">דיני משפחה</h4>
+                            <!-- דיני משפחה - Collapsible -->
+                            <div class="border-b border-gray-200">
+                                <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">דיני משפחה</h4>
+                                    <span class="category-icon text-xs text-gray-500">▼</span>
+                                </button>
+                                <div id="category-family" class="hidden">
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גירושין</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
+                                    <a href="family-law.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
+                                </div>
                             </div>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גירושין</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
-                            <a href="family-law.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
-                            <div class="px-4 py-2 border-b border-gray-200 mt-2">
-                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">ירושות וצוואות</h4>
+                            <!-- ירושות וצוואות - Collapsible -->
+                            <div class="border-b border-gray-200 mt-2">
+                                <button onclick="toggleCategoryDropdown('category-inheritance')" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4>
+                                    <span class="category-icon text-xs text-gray-500">▼</span>
+                                </button>
+                                <div id="category-inheritance" class="hidden">
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
+                                    <a href="inheritance-wills.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
+                                </div>
                             </div>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
-                            <a href="inheritance-wills.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
-                            <div class="px-4 py-2 border-b border-gray-200 mt-2">
-                                <h4 class="font-bold text-[#1a1a1a] text-sm text-right">חדלות פירעון והוצאה לפועל</h4>
+                            <!-- חדלות פירעון והוצאה לפועל - Collapsible -->
+                            <div class="mt-2">
+                                <button onclick="toggleCategoryDropdown('category-bankruptcy', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">חדלות פירעון והוצאה לפועל</h4>
+                                    <span class="category-icon text-xs text-gray-500">▼</span>
+                                </button>
+                                <div id="category-bankruptcy" class="hidden">
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">חדלות פירעון / פשיטת רגל</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הוצאה לפועל</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">איחוד תיקים</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עיכוב יציאה מהארץ</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מחיקת חובות</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ביטול עיקולים</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסדרי חוב</a>
+                                    <a href="insolvency.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">קבלת הפטר</a>
+                                </div>
                             </div>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">חדלות פירעון / פשיטת רגל</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הוצאה לפועל</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">איחוד תיקים</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עיכוב יציאה מהארץ</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מחיקת חובות</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ביטול עיקולים</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסדרי חוב</a>
-                            <a href="insolvency.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">קבלת הפטר</a>
                         </div>
                     </li>
                     <li><a href="articles.html" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">פרסומים מקצועיים</a></li>
@@ -225,38 +270,53 @@
                     <a href="index.html" class="mobile-menu-link">בית</a>
                     <a href="index.html#about" class="mobile-menu-link">אודות המשרד</a>
                     <a href="attorneys.html" class="mobile-menu-link">עורכי דין</a>
-                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="mobile-menu-link w-full text-right" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer;">תחומי התמחות ▼</button>
-                    <div id="mobile-practice-dropdown" class="hidden w-full pr-4">
-                        <div class="mb-2 mt-1">
-                            <h4 class="font-bold text-white text-sm mb-1">דיני משפחה</h4>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">גירושין</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסכמי גירושין</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסכמי ממון</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">משמורת ילדים</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">זמני שהות</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מזונות ילדים</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מזונות אישה</a>
-                            <a href="family-law.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">אפוטרופסות</a>
+                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="mobile-menu-link w-full text-right">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
+                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2">
+                        <div class="mb-2">
+                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" class="w-full text-right flex items-center justify-between py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <span>דיני משפחה</span>
+                                <span class="category-icon text-xs ml-2">▼</span>
+                            </button>
+                            <div id="mobile-category-family" class="hidden mt-2 pr-4">
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי גירושין</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי ממון</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">משמורת ילדים</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">זמני שהות</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות ילדים</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות אישה</a>
+                                <a href="family-law.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
+                            </div>
                         </div>
-                        <div class="mb-2 mt-2">
-                            <h4 class="font-bold text-white text-sm mb-1">ירושות וצוואות</h4>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">עריכת צוואה</a>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">צו ירושה</a>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">צו קיום צוואה</a>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">ניהול עיזבון</a>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">התנגדות לצוואה</a>
-                            <a href="inheritance-wills.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">התנגדות לצו ירושה</a>
+                        <div class="mb-2">
+                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" class="w-full text-right flex items-center justify-between py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <span>ירושות וצוואות</span>
+                                <span class="category-icon text-xs ml-2">▼</span>
+                            </button>
+                            <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצוואה</a>
+                                <a href="inheritance-wills.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצו ירושה</a>
+                            </div>
                         </div>
-                        <div class="mb-2 mt-2">
-                            <h4 class="font-bold text-white text-sm mb-1">חדלות פירעון והוצאה לפועל</h4>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">חדלות פירעון / פשיטת רגל</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הוצאה לפועל</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">איחוד תיקים</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">עיכוב יציאה מהארץ</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">מחיקת חובות</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">ביטול עיקולים</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">הסדרי חוב</a>
-                            <a href="insolvency.html" class="block py-1 text-sm text-gray-300 hover:text-[#c9a55c] pr-4">קבלת הפטר</a>
+                        <div class="mb-2">
+                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" class="w-full text-right flex items-center justify-between py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <span>חדלות פירעון והוצאה לפועל</span>
+                                <span class="category-icon text-xs ml-2">▼</span>
+                            </button>
+                            <div id="mobile-category-bankruptcy" class="hidden mt-2 pr-4">
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">חדלות פירעון / פשיטת רגל</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הוצאה לפועל</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">איחוד תיקים</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עיכוב יציאה מהארץ</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מחיקת חובות</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ביטול עיקולים</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסדרי חוב</a>
+                                <a href="insolvency.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">קבלת הפטר</a>
+                            </div>
                         </div>
                     </div>
                     <a href="articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
@@ -299,22 +359,24 @@
                             <li>תכנון מיטבי למניעת סכסוכים</li></ul>
                         
                         <!-- Call to Action Section -->
-                        <div class="bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-8 md:p-12 mt-12 text-center">
-                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">צריכים ייעוץ משפטי? בואו נשוחח</h2>
-                            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                                אנו מבינים שסוגיות ירושה וצוואות נוגעות במקומות רגישים ביותר. המשרד שלנו מספק ליווי משפטי מקצועי, דיסקרטי ואמין, שמטרתו להבטיח את כיבוד רצונכם והגנה על זכויות יקיריכם.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                                <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-medium text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#c9a55c] hover:border-[#c9a55c]">
-                                    התקשר עכשיו: 054-8184581
-                                </a>
-                                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-[#1a1a1a]">
-                                    צור קשר
-                                </a>
+                        <div class="bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-8 md:p-12 mt-12 text-center relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">צריכים ייעוץ משפטי? בואו נשוחח</h2>
+                                <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-md">
+                                    אנו מבינים שסוגיות ירושה וצוואות נוגעות במקומות רגישים ביותר. המשרד שלנו מספק ליווי משפטי מקצועי, דיסקרטי ואמין, שמטרתו להבטיח את כיבוד רצונכם והגנה על זכויות יקיריכם.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                    <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-medium text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#c9a55c] hover:border-[#c9a55c]">
+                                        התקשר עכשיו: 054-8184581
+                                    </a>
+                                    <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-[#1a1a1a]">
+                                        צור קשר
+                                    </a>
+                                </div>
+                                <p class="text-white mt-6 text-sm drop-shadow-md">
+                                    או התקשר למשרד: <a href="tel:03-6092414" class="text-[#c9a55c] hover:underline font-semibold">03-6092414</a>
+                                </p>
                             </div>
-                            <p class="text-gray-400 mt-6 text-sm">
-                                או התקשר למשרד: <a href="tel:03-6092414" class="text-[#c9a55c] hover:underline">03-6092414</a>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -410,6 +472,27 @@
                 dropdown.classList.remove('hidden');
             } else {
                 dropdown.classList.add('hidden');
+            }
+        }
+
+        // Category dropdown functionality (nested collapse)
+        function toggleCategoryDropdown(categoryId, event) {
+            event = event || window.event;
+            const category = document.getElementById(categoryId);
+            if (!category) return;
+            
+            event = event || window.event;
+            // Find the button that triggered this
+            const button = event.target.closest('button');
+            const icon = button ? button.querySelector('.category-icon') : null;
+            
+            // Toggle category
+            if (category.classList.contains('hidden')) {
+                category.classList.remove('hidden');
+                if (icon) icon.classList.add('open');
+            } else {
+                category.classList.add('hidden');
+                if (icon) icon.classList.remove('open');
             }
         }
 
