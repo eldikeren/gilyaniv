@@ -1188,7 +1188,7 @@
     </footer>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out" style="pointer-events: none;">
+    <div id="mobile-menu" class="fixed inset-0 bg-white transform translate-x-full transition-all duration-300 ease-in-out" style="pointer-events: none; visibility: hidden; opacity: 0; z-index: -1;">
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="index.html" title="דף הבית">
@@ -1326,6 +1326,10 @@
             if (mobileMenu) {
                 mobileMenu.classList.add('translate-x-full');
                 mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
+                mobileMenu.style.visibility = 'hidden'; // Hide completely when closed
+                mobileMenu.style.opacity = '0'; // Hide completely when closed
+                // Ensure it doesn't block content
+                mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
             }
             
             // Open menu
@@ -1334,6 +1338,9 @@
                     e.stopPropagation();
                     mobileMenu.classList.remove('translate-x-full');
                     mobileMenu.style.pointerEvents = 'auto'; // Enable pointer events when menu is open
+                    mobileMenu.style.visibility = 'visible'; // Show menu when open
+                    mobileMenu.style.opacity = '1'; // Show menu when open
+                    mobileMenu.style.zIndex = '50'; // Higher z-index when open
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
                 });
             }
@@ -1344,6 +1351,8 @@
                     e.stopPropagation();
                     mobileMenu.classList.add('translate-x-full');
                     mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
+                    mobileMenu.style.visibility = 'hidden'; // Hide menu when closed
+                    mobileMenu.style.opacity = '0'; // Hide menu when closed
                     document.body.style.overflow = ''; // Enable scrolling
                 });
             }
@@ -1363,6 +1372,9 @@
                     if (mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
                         mobileMenu.style.pointerEvents = 'none'; // Disable pointer events
+                        mobileMenu.style.visibility = 'hidden'; // Hide menu
+                        mobileMenu.style.opacity = '0'; // Hide menu
+                        mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
                     }
                     document.body.style.overflow = '';
                     
@@ -1383,6 +1395,9 @@
                     if (e.target === mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
                         mobileMenu.style.pointerEvents = 'none'; // Disable pointer events
+                        mobileMenu.style.visibility = 'hidden'; // Hide menu
+                        mobileMenu.style.opacity = '0'; // Hide menu
+                        mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
                         document.body.style.overflow = ''; // Enable scrolling
                     }
                 });
