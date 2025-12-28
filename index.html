@@ -1328,8 +1328,9 @@
                 mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
                 mobileMenu.style.visibility = 'hidden'; // Hide completely when closed
                 mobileMenu.style.opacity = '0'; // Hide completely when closed
-                // Ensure it doesn't block content
                 mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
+                // Ensure it's completely off-screen and doesn't interfere
+                mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
             }
             
             // Open menu
@@ -1341,6 +1342,7 @@
                     mobileMenu.style.visibility = 'visible'; // Show menu when open
                     mobileMenu.style.opacity = '1'; // Show menu when open
                     mobileMenu.style.zIndex = '50'; // Higher z-index when open
+                    mobileMenu.style.transform = 'translateX(0)'; // Bring on-screen
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
                 });
             }
@@ -1353,6 +1355,8 @@
                     mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
                     mobileMenu.style.visibility = 'hidden'; // Hide menu when closed
                     mobileMenu.style.opacity = '0'; // Hide menu when closed
+                    mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
+                    mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
                     document.body.style.overflow = ''; // Enable scrolling
                 });
             }
@@ -1375,6 +1379,7 @@
                         mobileMenu.style.visibility = 'hidden'; // Hide menu
                         mobileMenu.style.opacity = '0'; // Hide menu
                         mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
+                        mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
                     }
                     document.body.style.overflow = '';
                     
@@ -1398,6 +1403,7 @@
                         mobileMenu.style.visibility = 'hidden'; // Hide menu
                         mobileMenu.style.opacity = '0'; // Hide menu
                         mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
+                        mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
                         document.body.style.overflow = ''; // Enable scrolling
                     }
                 });
