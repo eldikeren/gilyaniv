@@ -1206,11 +1206,11 @@
         </div>
         <nav class="p-6">
             <ul class="space-y-4">
-                <li><a href="index.html" title="דף הבית" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link" onclick="const menu = document.getElementById('mobile-menu'); if (menu) { menu.classList.add('translate-x-full'); } document.body.style.overflow = ''; return true;">בית</a></li>
+                <li><a href="index.html" title="דף הבית" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">בית</a></li>
                 <li><a href="#about" title="אודות המשרד" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">אודות המשרד</a></li>
                 <li><a href="attorneys.html" title="עורכי דין" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">עורכי דין</a></li>
                 <li>
-                    <button type="button" onclick="toggleNavDropdown('mobile-practice-dropdown', event); return false;" class="block w-full text-right text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span id="mobile-practice-arrow" style="margin-right: 0.5rem;">▼</span></button>
+                    <button type="button" onclick="toggleNavDropdown('mobile-practice-dropdown', event)" class="block w-full text-right text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span id="mobile-practice-arrow" style="margin-right: 0.5rem;">▼</span></button>
                     <div id="mobile-practice-dropdown" class="hidden w-full mt-2">
                         <div class="mb-2">
                             <button onclick="toggleCategoryDropdown('mobile-category-family', event)" class="w-full text-right flex items-center justify-between py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
@@ -1352,11 +1352,12 @@
                     if (link.tagName === 'BUTTON' || link.onclick || link.closest('button')) {
                         return;
                     }
-                    // Close menu before navigation
+                    // Close menu before navigation - but don't prevent default
                     if (mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
                     }
                     document.body.style.overflow = ''; // Enable scrolling
+                    // Allow navigation to proceed normally
                 });
             });
             
@@ -1364,11 +1365,32 @@
             const navLinks = document.querySelectorAll('nav a.mobile-menu-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
                     // Close menu before navigation
                     if (mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
                     }
                     document.body.style.overflow = '';
+                    
+                    // For home link, ensure proper navigation
+                    if (href === 'index.html' || href === '/') {
+                        // Small delay to ensure menu closes, then navigate
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 100);
+                        e.preventDefault();
+                        return false;
+                    }
+                    
+                    // For hash links, let smooth scroll handle it
+                    if (href && href.startsWith('#')) {
+                        // Don't prevent default - smooth scroll will handle it
+                        return true;
+                    }
+                    
+                    // For other links, allow normal navigation
+                    // Don't prevent default - allow navigation to proceed
                 });
             });
             
@@ -1387,12 +1409,13 @@
         function toggleNavDropdown(dropdownId, event) {
             if (event) {
                 event.stopPropagation();
+                event.preventDefault();
             }
             
             const dropdown = document.getElementById(dropdownId);
             if (!dropdown) {
                 console.error('Dropdown not found:', dropdownId);
-                return;
+                return false;
             }
             
             // Close all other dropdowns
@@ -1400,6 +1423,7 @@
             allDropdowns.forEach(dd => {
                 if (dd.id !== dropdownId) {
                     dd.classList.add('hidden');
+                    dd.style.display = 'none';
                 }
             });
             
@@ -1407,11 +1431,51 @@
             const isHidden = dropdown.classList.contains('hidden');
             if (isHidden) {
                 dropdown.classList.remove('hidden');
+                dropdown.style.display = 'block';
+                dropdown.style.visibility = 'visible';
+                dropdown.style.opacity = '1';
+                dropdown.style.overflow = 'visible';
+                dropdown.style.maxHeight = 'none';
                 
                 // Update arrow icon for mobile menu
                 if (dropdownId === 'mobile-practice-dropdown') {
                     const arrow = document.getElementById('mobile-practice-arrow');
                     if (arrow) arrow.textContent = '▲';
+                    
+                    // Ensure all category buttons and links are visible when dropdown opens
+                    setTimeout(() => {
+                        // Make sure dropdown container is visible
+                        dropdown.style.display = 'block';
+                        dropdown.style.visibility = 'visible';
+                        dropdown.style.opacity = '1';
+                        dropdown.style.height = 'auto';
+                        dropdown.style.overflow = 'visible';
+                        
+                        const categoryButtons = dropdown.querySelectorAll('button[onclick*="toggleCategoryDropdown"]');
+                        categoryButtons.forEach(btn => {
+                            btn.style.display = 'flex';
+                            btn.style.visibility = 'visible';
+                            btn.style.opacity = '1';
+                            btn.style.height = 'auto';
+                            btn.style.overflow = 'visible';
+                        });
+                        
+                        // Ensure the direct link is also visible
+                        const directLinks = dropdown.querySelectorAll('a[href*="practice-areas"]');
+                        directLinks.forEach(link => {
+                            link.style.display = 'block';
+                            link.style.visibility = 'visible';
+                            link.style.opacity = '1';
+                        });
+                        
+                        // Ensure all category container divs (mb-2) are visible
+                        const categoryContainers = dropdown.querySelectorAll('.mb-2');
+                        categoryContainers.forEach(container => {
+                            container.style.display = 'block';
+                            container.style.visibility = 'visible';
+                            container.style.opacity = '1';
+                        });
+                    }, 10);
                 }
                 
                 // If opening the practice dropdown, calculate dynamic max-height
@@ -1435,6 +1499,7 @@
                 }
             } else {
                 dropdown.classList.add('hidden');
+                dropdown.style.display = 'none';
                 
                 // Update arrow icon for mobile menu
                 if (dropdownId === 'mobile-practice-dropdown') {
@@ -1450,13 +1515,12 @@
         function toggleCategoryDropdown(categoryId, event) {
             if (event) {
                 event.stopPropagation();
-                event.preventDefault();
             }
             
             const category = document.getElementById(categoryId);
             if (!category) {
                 console.error('Category not found:', categoryId);
-                return false;
+                return;
             }
             
             // Find the button that triggered this
@@ -1471,8 +1535,6 @@
                 category.classList.add('hidden');
                 if (icon) icon.textContent = '▼';
             }
-            
-            return false;
         }
 
         // Close dropdowns when clicking outside
