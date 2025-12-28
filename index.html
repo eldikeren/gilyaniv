@@ -1206,11 +1206,11 @@
         </div>
         <nav class="p-6">
             <ul class="space-y-4">
-                <li><a href="index.html" title="דף הבית" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">בית</a></li>
+                <li><a href="index.html" title="דף הבית" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link" onclick="const menu = document.getElementById('mobile-menu'); if (menu) { menu.classList.add('translate-x-full'); document.body.style.overflow = ''; }">בית</a></li>
                 <li><a href="#about" title="אודות המשרד" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">אודות המשרד</a></li>
                 <li><a href="attorneys.html" title="עורכי דין" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">עורכי דין</a></li>
                 <li>
-                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="block w-full text-right text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
+                    <button onclick="toggleNavDropdown('mobile-practice-dropdown', event)" class="block w-full text-right text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
                     <div id="mobile-practice-dropdown" class="hidden w-full mt-2">
                         <div class="mb-2">
                             <button onclick="toggleCategoryDropdown('mobile-category-family', event)" class="w-full text-right flex items-center justify-between py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
@@ -1341,12 +1341,22 @@
             // Close menu when clicking a link (except for collapse buttons)
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    // Don't close if it's a collapse button
-                    if (link.tagName === 'BUTTON' || link.onclick) {
+                    // Don't close if it's a collapse button or dropdown button
+                    if (link.tagName === 'BUTTON' || link.onclick || link.closest('button')) {
                         return;
                     }
+                    // Close menu before navigation
                     mobileMenu.classList.add('translate-x-full');
                     document.body.style.overflow = ''; // Enable scrolling
+                });
+            });
+            
+            // Handle all navigation links to close menu
+            document.querySelectorAll('nav a.mobile-menu-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Close menu before navigation
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
                 });
             });
             
@@ -1360,9 +1370,16 @@
         });
 
         // Navigation dropdown functionality
-        function toggleNavDropdown(dropdownId) {
+        function toggleNavDropdown(dropdownId, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            
             const dropdown = document.getElementById(dropdownId);
-            if (!dropdown) return;
+            if (!dropdown) {
+                console.error('Dropdown not found:', dropdownId);
+                return;
+            }
             
             // Close all other dropdowns
             const allDropdowns = document.querySelectorAll('[id$="-dropdown"]');
