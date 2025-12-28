@@ -1188,7 +1188,7 @@
     </footer>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white transform translate-x-full transition-all duration-300 ease-in-out" style="pointer-events: none; visibility: hidden; opacity: 0; z-index: -1;">
+    <div id="mobile-menu" class="fixed inset-0 bg-white transform translate-x-full transition-all duration-300 ease-in-out" style="pointer-events: none; display: none; z-index: -1;">
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="index.html" title="דף הבית">
@@ -1322,28 +1322,28 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
             
-            // Ensure menu is hidden on page load
+            // Ensure menu is hidden on page load - use display:none to completely remove from layout
             if (mobileMenu) {
                 mobileMenu.classList.add('translate-x-full');
-                mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
-                mobileMenu.style.visibility = 'hidden'; // Hide completely when closed
-                mobileMenu.style.opacity = '0'; // Hide completely when closed
-                mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
-                // Ensure it's completely off-screen and doesn't interfere
-                mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
+                mobileMenu.style.display = 'none'; // Completely remove from layout when closed
+                mobileMenu.style.pointerEvents = 'none';
+                mobileMenu.style.zIndex = '-1';
+                mobileMenu.style.transform = 'translateX(100%)';
             }
             
             // Open menu
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', function(e) {
                     e.stopPropagation();
+                    // Show menu first, then animate
+                    mobileMenu.style.display = 'block';
+                    // Force reflow to ensure display is applied
+                    mobileMenu.offsetHeight;
                     mobileMenu.classList.remove('translate-x-full');
-                    mobileMenu.style.pointerEvents = 'auto'; // Enable pointer events when menu is open
-                    mobileMenu.style.visibility = 'visible'; // Show menu when open
-                    mobileMenu.style.opacity = '1'; // Show menu when open
-                    mobileMenu.style.zIndex = '50'; // Higher z-index when open
-                    mobileMenu.style.transform = 'translateX(0)'; // Bring on-screen
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    mobileMenu.style.pointerEvents = 'auto';
+                    mobileMenu.style.zIndex = '50';
+                    mobileMenu.style.transform = 'translateX(0)';
+                    document.body.style.overflow = 'hidden';
                 });
             }
             
@@ -1352,12 +1352,14 @@
                 closeMenuButton.addEventListener('click', function(e) {
                     e.stopPropagation();
                     mobileMenu.classList.add('translate-x-full');
-                    mobileMenu.style.pointerEvents = 'none'; // Disable pointer events when menu is closed
-                    mobileMenu.style.visibility = 'hidden'; // Hide menu when closed
-                    mobileMenu.style.opacity = '0'; // Hide menu when closed
-                    mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
-                    mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
-                    document.body.style.overflow = ''; // Enable scrolling
+                    mobileMenu.style.transform = 'translateX(100%)';
+                    // Hide completely after transition
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                        mobileMenu.style.pointerEvents = 'none';
+                        mobileMenu.style.zIndex = '-1';
+                    }, 300); // Match transition duration
+                    document.body.style.overflow = '';
                 });
             }
             
@@ -1375,11 +1377,11 @@
                     // Close menu immediately but don't prevent navigation
                     if (mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
-                        mobileMenu.style.pointerEvents = 'none'; // Disable pointer events
-                        mobileMenu.style.visibility = 'hidden'; // Hide menu
-                        mobileMenu.style.opacity = '0'; // Hide menu
-                        mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
-                        mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
+                        mobileMenu.style.transform = 'translateX(100%)';
+                        // Hide immediately
+                        mobileMenu.style.display = 'none';
+                        mobileMenu.style.pointerEvents = 'none';
+                        mobileMenu.style.zIndex = '-1';
                     }
                     document.body.style.overflow = '';
                     
@@ -1399,12 +1401,14 @@
                 mobileMenu.addEventListener('click', function(e) {
                     if (e.target === mobileMenu) {
                         mobileMenu.classList.add('translate-x-full');
-                        mobileMenu.style.pointerEvents = 'none'; // Disable pointer events
-                        mobileMenu.style.visibility = 'hidden'; // Hide menu
-                        mobileMenu.style.opacity = '0'; // Hide menu
-                        mobileMenu.style.zIndex = '-1'; // Lower z-index when closed
-                        mobileMenu.style.transform = 'translateX(100%)'; // Force off-screen
-                        document.body.style.overflow = ''; // Enable scrolling
+                        mobileMenu.style.transform = 'translateX(100%)';
+                        // Hide after transition
+                        setTimeout(() => {
+                            mobileMenu.style.display = 'none';
+                            mobileMenu.style.pointerEvents = 'none';
+                            mobileMenu.style.zIndex = '-1';
+                        }, 300);
+                        document.body.style.overflow = '';
                     }
                 });
             }
