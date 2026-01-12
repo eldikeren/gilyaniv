@@ -1457,7 +1457,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+    <footer class="bg-gray-900 text-gray-800 py-8" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
                 <div>
@@ -1543,9 +1543,10 @@
             // Close menu when clicking a link
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', function() {
+                    if (this.tagName !== 'BUTTON') {
                     mobileMenu.classList.remove('active');
                     document.body.style.overflow = ''; // Enable scrolling
-                });
+                    }                });
             });
             
             // Close menu when clicking outside

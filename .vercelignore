@@ -1,0 +1,40 @@
+# Directories to ignore
+yaniv-gil-php/
+Website Performance & Design Auditor/
+ffmpeg/
+node_modules/
+.claude/
+.cursor/
+scripts/
+
+# Files to ignore
+*.zip
+*.py
+*.bat
+*.sh
+*.json
+*.ps1
+requirements.txt
+DEPLOY.md
+STAGING_SETUP.md
+ACCESSIBILITY_*.md
+BACKLINK-*.md
+SEO-*.md
+CURSOR_INSTRUCTIONS.md
+BACKUP-CHECKPOINT.md
+PDF_TIMEOUT_FIX.md
+audit-*.json
+on
+tatus
+nul
+CSS.zip
+Pages.zip
+full.zip
+js.zip
+
+# Keep necessary files
+!package.json
+!package-lock.json
+!vercel.json
+!sitemap.xml
+!robots.txt
