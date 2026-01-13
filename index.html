@@ -172,9 +172,17 @@
     <!-- Tailwind CSS Production Build -->
     <link rel="stylesheet" href="css/tailwind.css">
     <style>
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Heebo', sans-serif;
             direction: rtl;
+            max-width: 100vw;
             /* Mobile performance optimizations */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
