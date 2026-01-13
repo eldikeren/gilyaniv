@@ -798,8 +798,30 @@
                     <a href="index.html" title="דף הבית" class="mobile-menu-link">בית</a>
                     <a href="#about" title="אודות המשרד" class="mobile-menu-link">אודות המשרד</a>
                     <a href="attorneys.html" title="עורכי דין" class="mobile-menu-link">עורכי דין</a>
-                    <a href="practice-areas.html" title="תחומי התמחות" class="mobile-menu-link">תחומי התמחות</a>
-                    <a href="articles.html" title="פרסומים מקצועיים" title="פרסומים מקצועיים" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <button onclick="toggleMobileDropdown(); event.stopPropagation();" class="mobile-menu-link" style="background: #1a1a1a; color: #c9a54d; border: none; cursor: pointer; width: 100%; text-align: right;">תחומי התמחות <span id="mobile-dropdown-arrow">▼</span></button>
+                    <div id="mobile-practice-dropdown" class="hidden" style="background: #1a1a1a; padding: 0.5rem; border-radius: 5px; margin-top: 0.5rem;">
+                        <div style="margin-bottom: 0.5rem;">
+                            <h4 style="font-weight: bold; color: #c9a54d; font-size: 0.9rem; margin-bottom: 0.25rem;">דיני משפחה</h4>
+                            <a href="divorce.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">גירושין</a>
+                            <a href="divorce-agreements.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">הסכמי גירושין</a>
+                            <a href="child-custody.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">משמורת ילדים</a>
+                            <a href="child-support.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">מזונות ילדים</a>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <h4 style="font-weight: bold; color: #c9a54d; font-size: 0.9rem; margin-bottom: 0.25rem;">ירושות וצוואות</h4>
+                            <a href="will-writing.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">עריכת צוואה</a>
+                            <a href="inheritance-order.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">צו ירושה</a>
+                            <a href="will-probate.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">צו קיום צוואה</a>
+                            <a href="will-contest.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">התנגדות לצוואה</a>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <h4 style="font-weight: bold; color: #c9a54d; font-size: 0.9rem; margin-bottom: 0.25rem;">חדלות פירעון</h4>
+                            <a href="insolvency.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">חדלות פירעון</a>
+                            <a href="execution.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">הוצאה לפועל</a>
+                            <a href="debt-cancellation.html" style="display: block; padding: 0.25rem 1rem; color: #f3f4f6; font-size: 0.85rem;">מחיקת חובות</a>
+                        </div>
+                    </div>
+                    <a href="articles.html" title="פרסומים מקצועיים" class="mobile-menu-link">פרסומים מקצועיים</a>
                     <a href="blog.html" title="בלוג" class="mobile-menu-link">בלוג</a>
                     <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
                     <a href="contact.html" title="צור קשר" class="mobile-menu-link">צור קשר</a>
@@ -1216,9 +1238,11 @@
                 });
             }
             
-            // Close menu when clicking a link
+            // Close menu when clicking a link (but not buttons)
             mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function(e) {
+                    // Don't close if it's a button (dropdown toggle)
+                    if (link.tagName === 'BUTTON') return;
                     mobileMenu.classList.remove('active');
                     document.body.style.overflow = ''; // Enable scrolling
                 });
@@ -1232,6 +1256,19 @@
                 }
             });
         });
+
+        // Toggle mobile practice areas dropdown
+        function toggleMobileDropdown() {
+            const dropdown = document.getElementById('mobile-practice-dropdown');
+            const arrow = document.getElementById('mobile-dropdown-arrow');
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                arrow.textContent = '▲';
+            } else {
+                dropdown.classList.add('hidden');
+                arrow.textContent = '▼';
+            }
+        }
     </script>
     
     <!-- Video Lazy Loading -->
