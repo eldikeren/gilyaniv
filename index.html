@@ -867,7 +867,46 @@
                 height: 32px;
             }
         }
-    </style>
+    
+        /* CRITICAL: Force 2nd hierarchy category buttons to be visible */
+        #mobile-practice-dropdown .mb-2 > button,
+        .mobile-menu-overlay .mb-2 > button,
+        button[onclick*="toggleCategoryDropdown"] {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 100% !important;
+            padding: 0.75rem 1rem !important;
+            background-color: #1a1a1a !important;
+            color: #c9a55c !important;
+            border: 1px solid #c9a55c !important;
+            border-radius: 0.5rem !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            text-align: right !important;
+            cursor: pointer !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        #mobile-practice-dropdown .mb-2 > button span,
+        .mobile-menu-overlay .mb-2 > button span,
+        button[onclick*="toggleCategoryDropdown"] span {
+            color: #c9a55c !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Footer text visibility fix */
+        footer a, footer p, footer li, footer span, footer div {
+            color: #d1d5db !important;
+        }
+        footer h3 {
+            color: #ffffff !important;
+        }
+        footer a:hover {
+            color: #c9a55c !important;
+        }
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -1309,11 +1348,11 @@
                 <li><a href="attorneys.html" title="עורכי דין" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">עורכי דין</a></li>
                 <li>
                     <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="block w-full text-right text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
-                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2">
-                        <div class="mb-2">
-                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" class="w-full text-right flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-200" style="background-color: #1a1a1a !important; color: #c9a54d !important; border: 1px solid #c9a54d !important;">
-                                <span style="color: #c9a54d !important;">דיני משפחה</span>
-                                <span class="category-icon text-xs ml-2">▼</span>
+                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2" style="background: #2a2a2a; padding: 1rem; border-radius: 8px;">
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">דיני משפחה</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
                             </button>
                             <div id="mobile-category-family" class="hidden mt-2 pr-4">
                                 <a href="divorce.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
@@ -1326,10 +1365,10 @@
                                 <a href="guardianship.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
                             </div>
                         </div>
-                        <div class="mb-2">
-                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" class="w-full text-right flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-200" style="background-color: #1a1a1a !important; color: #c9a54d !important; border: 1px solid #c9a54d !important;">
-                                <span style="color: #c9a54d !important;">ירושות וצוואות</span>
-                                <span class="category-icon text-xs ml-2">▼</span>
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">ירושות וצוואות</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
                                 <a href="will-writing.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
@@ -1340,10 +1379,10 @@
                                 <a href="inheritance-contest.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצו ירושה</a>
                             </div>
                         </div>
-                        <div class="mb-2">
-                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" class="w-full text-right flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-200" style="background-color: #1a1a1a !important; color: #c9a54d !important; border: 1px solid #c9a54d !important;">
-                                <span style="color: #c9a54d !important;">חדלות פירעון והוצאה לפועל</span>
-                                <span class="category-icon text-xs ml-2">▼</span>
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">חדלות פירעון והוצאה לפועל</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
                             </button>
                             <div id="mobile-category-bankruptcy" class="hidden mt-2 pr-4">
                                 <a href="bankruptcy.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">חדלות פירעון / פשיטת רגל</a>
