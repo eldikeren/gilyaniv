@@ -3,195 +3,338 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/index.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/attorneys.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/practice-areas.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/articles.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/contact.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Practice Area Category Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/family-law.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/divorce-law.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/inheritance-wills.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/insolvency.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Family Law Sub-Pages (NEW) -->
+  <url>
+    <loc>https://www.yanivgil.co.il/divorce.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/divorce-agreements.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/property-agreements.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/child-custody.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/visitation-rights.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/child-support.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/spousal-support.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/guardianship.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Inheritance & Wills Sub-Pages (NEW) -->
+  <url>
+    <loc>https://www.yanivgil.co.il/will-writing.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/inheritance-order.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/will-probate.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/estate-management.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/will-contest.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/inheritance-contest.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Insolvency & Execution Sub-Pages (NEW) -->
+  <url>
+    <loc>https://www.yanivgil.co.il/bankruptcy.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/execution.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/case-consolidation.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/travel-restriction.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/debt-cancellation.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/lien-cancellation.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/debt-arrangements.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/discharge.html</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Articles -->
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-appeals.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/temporary-receiver.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-discharge.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-declaration.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-restrictions.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/get-refusal-compensation.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/divorce-grounds.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/travel-restriction-order.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/seizure-real-estate.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/mortgage-execution.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/paid-defense.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/execution-of-bills.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/uniform-civil-procedure.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/fixed-amount-claims.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-introduction.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-request.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-debtor.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/compromise-after-bankruptcy.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/civil-marriage-israel.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/rabbinical-court.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/family-court.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/blog-articles/execution-law-other-laws.html</loc>
-    <lastmod>2025-11-03</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
