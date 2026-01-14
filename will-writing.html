@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עריכת צוואה | עו"ד יניב גיל ושות' - תל אביב</title>
+    <meta name="description" content="עריכת צוואה מקצועית ותקפה משפטית. סוגי צוואות, הנחיות לעריכה נכונה והבטחת רצונותיכם לדורות הבאים.">
+    <meta name="keywords" content="עריכת צוואה, צוואה בכתב יד, צוואה בעדים, צוואה נוטריונית, עורך דין צוואות, תל אביב">
+    <meta property="og:title" content="עריכת צוואה | עו״ד יניב גיל">
+    <meta property="og:description" content="עריכת צוואה מקצועית ותקפה משפטית. סוגי צוואות, הנחיות לעריכה נכונה והבטחת רצונותיכם לדורות הבאים.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yanivgil.co.il/will-writing.html">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <link rel="canonical" href="https://www.yanivgil.co.il/will-writing.html">
+    <link rel="icon" type="image/png" href="images/new-logo.png">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Heebo', sans-serif; direction: rtl; }
+        .header-logo { height: 60px; width: auto; transition: all 0.3s ease-in-out; }
+        .header-text-logo { width: 220px; height: auto; transition: all 0.3s ease-in-out; }
+        .scrolled .header-logo { height: 40px; }
+        .scrolled .header-text-logo { width: 170px; }
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+        }
+        .mobile-menu-content {
+            padding: 2rem;
+            padding-top: 4rem;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #c9a55c;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .mobile-menu-links a:hover {
+            background: #c9a55c;
+            color: #1a1a1a;
+        }
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            background-color: #20BA5A;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                bottom: 15px;
+                left: 15px;
+            }
+            .whatsapp-float svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        /* Accessibility floating button */
+        .accessibility-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background: #005fcc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .accessibility-btn:hover {
+            background: #004499;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+        .accessibility-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+        @media (max-width: 768px) {
+            .accessibility-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .accessibility-btn svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        /* Footer text visibility fix */
+        footer, footer * {
+            color: #d1d5db !important;
+        }
+        footer h3, footer h4 {
+            color: #ffffff !important;
+        }
+        footer a:hover {
+            color: #c9a55c !important;
+        }
+        /* Content styling */
+        .content-section {
+            margin-bottom: 2rem;
+        }
+        .content-section h3 {
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-right: 4px solid #c9a55c;
+            padding-right: 1rem;
+        }
+        .content-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .content-section ul {
+            list-style-type: disc;
+            padding-right: 1.5rem;
+            color: #4a5568;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html">
+                    <img src="images/new-logo.png" alt="לוגו משרד עו״ד יניב גיל" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="משרד עו״ד יניב גיל ושות׳" class="header-text-logo">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="תפריט ראשי">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="index.html" title="דף הבית" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בית</a></li>
+                    <li><a href="index.html#about" title="אודות המשרד" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">אודות המשרד</a></li>
+                    <li><a href="attorneys.html" title="עורכי דין" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">עורכי דין</a></li>
+                    <li><a href="practice-areas.html" title="תחומי התמחות" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">תחומי התמחות</a></li>
+                    <li><a href="articles.html" title="פרסומים מקצועיים" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" title="בלוג" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">ביקורות מלקוחות</a></li>
+                    <li><a href="contact.html" title="צור קשר" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">צור קשר</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none" aria-label="פתח תפריט">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden md:flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close" aria-label="סגור תפריט">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="index.html">בית</a>
+                    <a href="index.html#about">אודות המשרד</a>
+                    <a href="attorneys.html">עורכי דין</a>
+                    <a href="practice-areas.html">תחומי התמחות</a>
+                    <a href="articles.html">פרסומים מקצועיים</a>
+                    <a href="blog.html">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="contact.html">צור קשר</a>
+                </div>
+                <div class="mt-6">
+                    <a class="block w-full text-center py-3 px-4 bg-[#1a1a1a] text-[#b8941f] border border-[#b8941f] rounded-full hover:bg-[#b8941f] hover:text-[#1a1a1a] transition-colors duration-200" href="tel:0548184581">
+                        התקשר עכשיו
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">עריכת צוואה</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">הבטחת רצונותיכם לדורות הבאים</p>
+            <div class="mt-8">
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-bold text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-transparent hover:text-[#c9a55c]">
+                    לייעוץ ראשוני חינם
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                
+                <div class="content-section">
+                    <h3>חשיבות עריכת צוואה</h3>
+                    <p>צוואה היא מסמך משפטי המאפשר לאדם לקבוע כיצד יחולק רכושו לאחר פטירתו. עריכת צוואה מסודרת מונעת סכסוכים בין יורשים ומבטיחה שרכושכם יגיע למי שאתם רוצים.</p>
+                </div>
+                <div class="content-section">
+                    <h3>סוגי צוואות</h3>
+                    <ul>
+                        <li><strong>צוואה בכתב יד</strong> - נכתבת כולה בכתב ידו של המצווה</li>
+                        <li><strong>צוואה בעדים</strong> - נחתמת בפני שני עדים</li>
+                        <li><strong>צוואה בפני רשות</strong> - נערכת בפני שופט או נוטריון</li>
+                        <li><strong>צוואה בעל פה</strong> - במקרים חריגים של שכיב מרע</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h3>מה כוללת צוואה?</h3>
+                    <p>צוואה יכולה לכלול חלוקת נכסים, מינוי מנהל עיזבון, הוראות לגבי קטינים, תנאים מיוחדים ועוד. משרדנו יסייע לכם לנסח צוואה שתשקף את רצונותיכם במלואם.</p>
+                </div>
+
+
+                <!-- CTA Section -->
+                <div class="bg-gray-100 rounded-xl p-8 mt-12 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">זקוקים לייעוץ משפטי מקצועי?</h3>
+                    <p class="text-gray-600 mb-6">צוות המשרד ישמח לעמוד לרשותכם ולסייע בכל שאלה</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full bg-[#1a1a1a] px-6 py-3 text-[#c9a55c] font-medium hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors">
+                            054-8184581
+                        </a>
+                        <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#1a1a1a] px-6 py-3 text-[#1a1a1a] font-medium hover:bg-[#1a1a1a] hover:text-white transition-colors">
+                            השאירו פרטים
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Pages -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">תחומים נוספים שעשויים לעניין אתכם</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a href="practice-areas.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">כל תחומי ההתמחות</span>
+                        </a>
+                        <a href="blog.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">מאמרים ופרסומים</span>
+                        </a>
+                        <a href="contact.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">צור קשר</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                        <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                        <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <ul class="space-y-2">
+                        <li><a href="family-law.html" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה</a></li>
+                        <li><a href="inheritance-wills.html" class="hover:text-[#b8941f] transition-colors duration-200">ירושות וצוואות</a></li>
+                        <li><a href="insolvency.html" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון</a></li>
+                        <li><a href="practice-areas.html#civil-law" class="hover:text-[#b8941f] transition-colors duration-200">דיני מקרקעין</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
+                    <div class="space-y-4">
+                        <p><strong>טלפון:</strong><br><a href="tel:03-6092414" class="hover:text-[#b8941f]">03-6092414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-[#b8941f]">054-8184581</a></p>
+                        <p><strong>פקס:</strong><br>03-6092413</p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-[#b8941f]">yanivgil@gmail.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">כתובת</h3>
+                    <p>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                    <p class="mt-4">
+                        <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-[#b8941f] transition-colors duration-200">עקבו אחרינו בפייסבוק</a>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <div class="flex flex-col items-center md:items-start">
+                    <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                    <p class="mt-1">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#b8941f] transition-colors">Eladdigital</a></p>
+                </div>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיניות פרטיות</a>
+                    <a href="terms-of-use.html" class="hover:text-[#b8941f] transition-colors duration-200">תנאי שימוש</a>
+                    <a href="accessibility.html" class="hover:text-[#b8941f] transition-colors duration-200">הצהרת נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-xl', 'scrolled');
+                header.classList.remove('py-6', 'shadow-md');
+            } else {
+                header.classList.remove('py-3', 'shadow-xl', 'scrolled');
+                header.classList.add('py-6', 'shadow-md');
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu when clicking a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972548184581?text=שלום, אשמח לקבל ייעוץ משפטי" class="whatsapp-float" target="_blank" rel="noopener" aria-label="שלח הודעת WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Accessibility Button -->
+    <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות" title="הצהרת נגישות">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+    </a>
+</body>
+</html>
