@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix mobile menu: add complete overlay structure to index.html and force gold text styling\n\n- Added full mobile menu overlay HTML structure to index.html\n- Added inline critical CSS with high-specificity selectors \n- Force gold \\(#c9a54d\\) text on dark \\(#1a1a1a\\) background for all category buttons\n- Applied fixes across all pages for consistent mobile menu styling\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(vercel --version:*)",
+      "Bash(vercel --prod:*)",
+      "Bash(git checkout:*)",
+      "Bash(powershell -Command \"\\(Get-Content index.html -Raw\\) -replace ''\\(?ms\\)/\\\\* Force styling for mobile category dropdown buttons \\\\*/.*?button\\\\[onclick\\\\*=\"\"toggleCategoryDropdown\"\"\\\\]:hover \\\\{[^}]+\\\\}'', '''' | Set-Content index.html -NoNewline\")",
+      "Bash(curl:*)",
+      "Bash(git reset:*)"
+    ]
+  }
+}
