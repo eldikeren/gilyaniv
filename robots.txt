@@ -12,11 +12,30 @@ Disallow: /compress-*
 Disallow: /*.zip$
 Disallow: /*.bat$
 Disallow: /*.sh$
+Disallow: /*.py$
+
+# Disallow backup/duplicate blog files
+Disallow: /blog-old-full.html
+Disallow: /blog-before-preview.html
+Disallow: /blog-full-check.html
+Disallow: /blog-full-content-backup.html
+Disallow: /blog-full-content-temp.html
+Disallow: /blog-with-full.html
+Disallow: /blog-with-full-articles.html
+
+# Disallow non-site directories
+Disallow: /yaniv-gil-php/
+Disallow: /ffmpeg/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /css - Copy/
+Disallow: /Website Performance & Design Auditor/
 
 # Allow important files
 Allow: /images/
 Allow: /css/
 Allow: /js/
+Allow: /blog-articles/
 
 # Sitemap location
 Sitemap: https://www.yanivgil.co.il/sitemap.xml
