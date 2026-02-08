@@ -5,8 +5,8 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Main Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/index.html</loc>
-    <lastmod>2025-01-14</lastmod>
+    <loc>https://www.yanivgil.co.il/</loc>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,6 +39,24 @@
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/accessibility.html</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/privacy-policy.html</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/terms-of-use.html</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- Practice Area Category Pages -->
