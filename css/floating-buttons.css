@@ -85,3 +85,40 @@
 .whatsapp-float {
     animation: pulse-attention 2s ease-in-out 3;
 }
+
+/* Floating Accessibility Button */
+.accessibility-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 160px;
+    left: 20px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.accessibility-btn:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+.accessibility-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Mobile: Hide accessibility button too */
+@media (max-width: 768px) {
+    .accessibility-btn {
+        display: none !important;
+    }
+}
