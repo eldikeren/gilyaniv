@@ -1,0 +1,97 @@
+/* Mobile Sticky CTA Bar */
+/* Fixed bar at bottom of screen on mobile devices */
+
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background: linear-gradient(to right, #0C1220, #1a2332);
+  border-top: 2px solid #c9a55c;
+  padding: 8px 12px;
+  gap: 10px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+  direction: rtl;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  /* Add padding to body so content isn't hidden behind the bar */
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+.mobile-cta-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-cta-bar a:active {
+  transform: scale(0.98);
+}
+
+/* Call button - Gold */
+.mobile-cta-bar .cta-call {
+  background: linear-gradient(135deg, #c9a55c 0%, #d4af37 100%);
+  color: #0C1220;
+}
+
+.mobile-cta-bar .cta-call:hover {
+  box-shadow: 0 4px 15px rgba(201, 165, 92, 0.5);
+}
+
+.mobile-cta-bar .cta-call svg {
+  width: 20px;
+  height: 20px;
+  fill: #0C1220;
+}
+
+/* WhatsApp button - Green */
+.mobile-cta-bar .cta-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #fff;
+}
+
+.mobile-cta-bar .cta-whatsapp:hover {
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+}
+
+.mobile-cta-bar .cta-whatsapp svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* Hide the floating buttons when mobile CTA bar is visible */
+@media (max-width: 768px) {
+  .whatsapp-float,
+  .call-float {
+    bottom: 80px; /* Move above the CTA bar */
+  }
+}
+
+/* Print: hide the CTA bar */
+@media print {
+  .mobile-cta-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+}

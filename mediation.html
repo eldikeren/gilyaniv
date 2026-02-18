@@ -23,6 +23,10 @@
     <link rel="canonical" href="https://www.yanivgil.co.il/mediation.html">
     <link rel="icon" type="image/png" href="images/new-logo.png">
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
@@ -304,7 +308,9 @@
     <link rel="stylesheet" href="css/faq-accordion.css">
     <link rel="stylesheet" href="css/floating-buttons.css">
     <link rel="stylesheet" href="css/mobile-menu.css">
-  </head>
+      <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/mobile-cta-bar.css">
+</head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
@@ -661,6 +667,23 @@
         </div>
     </main>
 
+    <!-- Related Services Section -->
+    <section class="py-12 bg-gray-50" aria-labelledby="related-services">
+        <div class="container mx-auto px-4">
+            <h2 id="related-services" class="text-2xl font-bold text-gray-900 mb-6 text-center">שירותים נוספים בתחום דיני משפחה</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <a href="divorce.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">גירושין</span></a>
+                <a href="child-custody.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">משמורת ילדים</span></a>
+                <a href="child-support.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">מזונות ילדים</span></a>
+                <a href="property-division.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">חלוקת רכוש</span></a>
+                <a href="divorce-agreements.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">הסכמי גירושין</span></a>
+                <a href="mediation.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">גישור משפחתי</span></a>
+                <a href="family-law.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">דיני משפחה</span></a>
+                <a href="divorce-guide.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">מדריך גירושין</span></a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
         <div class="container mx-auto px-4">
@@ -705,7 +728,7 @@
             </div>
             <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                 <div class="flex flex-col items-center md:items-start">
-                    <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                    <p>&copy; 2026 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
                     <p class="mt-1">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#b8941f] transition-colors">Eladdigital</a></p>
                 </div>
                 <div class="flex gap-4 mt-4 md:mt-0">
@@ -855,5 +878,16 @@
 
     <script src="js/back-to-top.js"></script>
     <script src="js/progress-bar.js"></script>
-  </body>
+  <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0548184581" class="cta-call" aria-label="התקשר עכשיו">
+            <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+            התקשר עכשיו
+        </a>
+        <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+</body>
 </html>
