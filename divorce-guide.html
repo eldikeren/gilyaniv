@@ -131,6 +131,8 @@
         details[open] summary { background: #ca8a04; color: white; }
         .toc-link { display: block; padding: 0.5rem 1rem; color: #1a1a1a; text-decoration: none; border-radius: 0.375rem; transition: all 0.2s; }
         .toc-link:hover { background: #fefce8; color: #ca8a04; }
+/* Mobile: Hide floating buttons and progress bar */
+        @media (max-width: 768px) { .whatsapp-float, .call-float, .accessibility-btn, .reading-progress { display: none !important; } }
     </style>
 
     <!-- BreadcrumbList Schema -->
