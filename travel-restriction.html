@@ -242,7 +242,35 @@
         }
 
     </style>
-</head>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "בית",
+      "item": "https://www.yanivgil.co.il/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "חדלות פירעון",
+      "item": "https://www.yanivgil.co.il/insolvency.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "עיכוב יציאה מהארץ"
+    }
+  ]
+}
+    </script>
+    
+    </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
