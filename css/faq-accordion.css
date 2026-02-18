@@ -1,0 +1,109 @@
+/* /css/faq-accordion.css - FAQ accordion styling with animations */
+
+.faq-section details {
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.faq-section details:hover {
+  border-color: #c9a55c;
+}
+
+.faq-section details summary {
+  padding: 18px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  gap: 16px;
+}
+
+/* Remove default marker */
+.faq-section details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-section details summary::marker {
+  display: none;
+}
+
+/* Custom arrow indicator */
+.faq-section details summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #c9a55c;
+  border-bottom: 2px solid #c9a55c;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-section details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.faq-section details[open] summary {
+  background: #c9a55c;
+  color: #fff;
+}
+
+.faq-section details[open] summary::after {
+  border-color: #fff;
+}
+
+/* Answer content with animation */
+.faq-section details .faq-answer,
+.faq-section details > div,
+.faq-section details > p {
+  padding: 20px 24px;
+  background: #fff;
+  line-height: 1.7;
+  color: #4a5568;
+  animation: faqSlideDown 0.3s ease;
+}
+
+@keyframes faqSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus state for accessibility */
+.faq-section details summary:focus {
+  outline: 3px solid #c9a55c;
+  outline-offset: 2px;
+}
+
+.faq-section details summary:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .faq-section details summary {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .faq-section details .faq-answer,
+  .faq-section details > div,
+  .faq-section details > p {
+    padding: 16px;
+    font-size: 14px;
+  }
+}

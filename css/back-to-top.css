@@ -1,0 +1,70 @@
+/* /css/back-to-top.css - Back to top button */
+
+.back-to-top {
+  position: fixed;
+  bottom: 160px; /* Above WhatsApp button stack */
+  left: 20px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top:focus {
+  outline: 3px solid #c9a55c;
+  outline-offset: 2px;
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* RTL positioning */
+[dir="rtl"] .back-to-top {
+  left: auto;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 150px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+  }
+
+  [dir="rtl"] .back-to-top {
+    left: auto;
+    right: 15px;
+  }
+
+  .back-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+}

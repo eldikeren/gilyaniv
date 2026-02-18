@@ -45,7 +45,7 @@
         {"@type": "Question", "name": "כמה עולה עורך דין גירושין?", "acceptedAnswer": {"@type": "Answer", "text": "עלות עורך דין גירושין תלויה במורכבות התיק. גירושין בהסכמה עולים בין 5,000 ל-15,000 שקל. גירושין במחלוקת יכולים לעלות בין 15,000 ל-80,000 שקל ויותר. ייעוץ ראשוני במשרדנו ניתן ללא התחייבות."}},
         {"@type": "Question", "name": "כמה זמן לוקח הליך גירושין?", "acceptedAnswer": {"@type": "Answer", "text": "גירושין בהסכמה: 3-6 חודשים. גירושין במחלוקת: שנה עד שלוש שנים. ההיקף תלוי בסוגיות שבמחלוקת, בעומס בית המשפט ובשיתוף הפעולה בין הצדדים."}},
         {"@type": "Question", "name": "איך נקבעים מזונות ילדים?", "acceptedAnswer": {"@type": "Answer", "text": "מאז פסק הדין המהפכני של 2017, מגיל 6 שני ההורים חבים במזונות. הסכום נקבע לפי הכנסות ההורים, חלוקת זמן ההורות, צרכי הילדים ורמת החיים הקודמת. טווח נפוץ: 1,500-4,000 שקל לילד."}},
-        {"@type": "Question", "name": "מה ההבדל בין משמורת משותפת ליחידנית?", "acceptedAnswer": {"@type": "Answer", "text": "במשמורת משותפת הילד מתגורר באופן שוויוני אצל שני ההורים. במשמורת יחידנית, הילד גר בעיקר אצל הורה אחד. המגמה בפסיקה מעדיפה משמורת משותפת."}},
+        {"@type": "Question", "name": "מה ההבדל בין זמני שהות שווים ליחידנית?", "acceptedAnswer": {"@type": "Answer", "text": "בזמני שהות שווים הילד מתגורר באופן שוויוני אצל שני ההורים. במשמורת יחידנית, הילד גר בעיקר אצל הורה אחד. המגמה בפסיקה מעדיפה זמני שהות שווים."}},
         {"@type": "Question", "name": "מה קורה עם הדירה בגירושין?", "acceptedAnswer": {"@type": "Answer", "text": "הדירה נכללת בחלוקת הרכוש. האפשרויות: מכירה וחלוקת התמורה, רכישת חלקו של בן הזוג, או הסדר שלפיו הורה אחד נשאר בדירה לתקופה מוסכמת."}},
         {"@type": "Question", "name": "האם אפשר לשנות הסכם גירושין?", "acceptedAnswer": {"@type": "Answer", "text": "שינוי הסכם גירושין שאושר כפסק דין אפשרי רק בנסיבות מיוחדות: שינוי מהותי בנסיבות, גילוי הטעיה או הסתרת מידע, או כשטובת הילד מחייבת שינוי."}},
         {"@type": "Question", "name": "האם חייבים עורך דין לגירושין?", "acceptedAnswer": {"@type": "Answer", "text": "מבחינה חוקית, לא חובה. מבחינה מעשית, מומלץ מאוד. גם בגירושין בהסכמה, עורך דין מנוסה יוודא שההסכם מגן על זכויותיכם."}},
@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile-menu.css">
     <style>
         html { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; }
         body { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; position: relative !important; font-family: 'Heebo', sans-serif; direction: rtl; }
@@ -97,16 +98,13 @@
         @media (max-width: 768px) { .h-80vh { height: 60vh; } .text-4xl { font-size: 2rem; } .text-5xl { font-size: 2.5rem; } .text-6xl { font-size: 3rem; } }
         .scroll-arrow { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: #c9a55c; font-size: 2rem; animation: bounce 2s infinite; cursor: pointer; z-index: 10; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); } 40% { transform: translateX(-50%) translateY(-10px); } 60% { transform: translateX(-50%) translateY(-5px); } }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; left: 20px; background-color: #25D366; color: white; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); z-index: 1000; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none; }
-        .whatsapp-float:hover { background-color: #20BA5A; transform: scale(1.1); }
-        .whatsapp-float svg { width: 35px; height: 35px; }
         .accessibility-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; background: #005fcc; color: white; border: none; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none; }
         .accessibility-btn:hover { background: #004499; transform: scale(1.1); }
         .accessibility-btn svg { width: 30px; height: 30px; fill: currentColor; }
         .call-float { position: fixed; bottom: 90px; left: 20px; z-index: 1000; display: flex; align-items: center; gap: 8px; background: #1a1a1a; color: #c9a55c; border: 2px solid #c9a55c; border-radius: 50px; padding: 12px 20px; font-weight: bold; font-size: 14px; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.3); transition: all 0.3s ease; }
         .call-float:hover { background: #c9a55c; color: #1a1a1a; transform: scale(1.05); box-shadow: 0 6px 20px rgba(201,165,92,0.4); }
         .call-float svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
-        @media (max-width: 768px) { .whatsapp-float { width: 56px; height: 56px; bottom: 15px; left: 15px; } .whatsapp-float svg { width: 32px; height: 32px; } .accessibility-btn { width: 50px; height: 50px; bottom: 15px; right: 15px; } .accessibility-btn svg { width: 24px; height: 24px; } .call-float { bottom: 80px; left: 15px; padding: 10px 16px; font-size: 13px; } }
+        @media (max-width: 768px) { .accessibility-btn { width: 50px; height: 50px; bottom: 15px; right: 15px; } .accessibility-btn svg { width: 24px; height: 24px; } .call-float { bottom: 80px; left: 15px; padding: 10px 16px; font-size: 13px; } }
         footer, footer * { color: #d1d5db !important; }
         footer h3, footer h4 { color: #ffffff !important; }
         footer a:hover { color: #c9a55c !important; }
@@ -155,8 +153,16 @@
 }
     </script>
     
-    </head>
+      <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/faq-accordion.css">
+    <link rel="stylesheet" href="css/toc-sticky.css">
+    <link rel="stylesheet" href="css/floating-buttons.css">
+  </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" role="progressbar" aria-label="התקדמות קריאה"></div>
 
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
@@ -315,6 +321,16 @@
     </header>
 
     <main class="pt-24">
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><a href="family-law.html">דיני משפחה</a></li>
+        <li><span aria-current="page">מדריך גירושין</span></li>
+      </ol>
+    </nav>
+  </div>
         <!-- Hero Section -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
             <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
@@ -345,29 +361,45 @@
             </div>
         </section>
 
-        <!-- Table of Contents -->
-        <section class="py-8 bg-gray-50">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="bg-white rounded-xl shadow-lg border-2 border-yellow-600 p-8">
-                    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">תוכן עניינים</h2>
-                    <nav class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <a href="#section-1" class="toc-link">1. הליך הגירושין בישראל - סקירה כללית</a>
-                        <a href="#section-2" class="toc-link">2. גירושין בהסכמה מול גירושין במחלוקת</a>
-                        <a href="#section-3" class="toc-link">3. בית המשפט לענייני משפחה מול בית הדין הרבני</a>
-                        <a href="#section-4" class="toc-link">4. מרוץ הסמכויות - מה זה ולמה זה קריטי</a>
-                        <a href="#section-5" class="toc-link">5. הסכם גירושין - המדריך המלא</a>
-                        <a href="#section-6" class="toc-link">6. משמורת ילדים - סוגים, זכויות וחובות</a>
-                        <a href="#section-7" class="toc-link">7. מזונות ילדים - איך נקבעים ומה מגיע</a>
-                        <a href="#section-8" class="toc-link">8. מזונות אישה - מתי, כמה ולמי מגיע</a>
-                        <a href="#section-9" class="toc-link">9. חלוקת רכוש בגירושין</a>
-                        <a href="#section-10" class="toc-link">10. הסכם ממון - הגנה על הרכוש שלכם</a>
-                        <a href="#section-11" class="toc-link">11. גישור משפחתי - החלופה לבית המשפט</a>
-                        <a href="#section-12" class="toc-link">12. שאלות נפוצות (FAQ)</a>
-                        <a href="#section-13" class="toc-link">13. מתי חייבים עורך דין לגירושין?</a>
-                    </nav>
-                </div>
-            </div>
-        </section>
+        <!-- Mobile Table of Contents (Expandable) -->
+        <details class="toc-mobile">
+            <summary>תוכן העניינים</summary>
+            <nav>
+                <a href="#section-1" class="toc-link">1. הליך הגירושין בישראל</a>
+                <a href="#section-2" class="toc-link">2. גירושין בהסכמה מול במחלוקת</a>
+                <a href="#section-3" class="toc-link">3. בית המשפט מול בית הדין</a>
+                <a href="#section-4" class="toc-link">4. מרוץ הסמכויות</a>
+                <a href="#section-5" class="toc-link">5. הסכם גירושין</a>
+                <a href="#section-6" class="toc-link">6. משמורת ילדים</a>
+                <a href="#section-7" class="toc-link">7. מזונות ילדים</a>
+                <a href="#section-8" class="toc-link">8. מזונות אישה</a>
+                <a href="#section-9" class="toc-link">9. חלוקת רכוש</a>
+                <a href="#section-10" class="toc-link">10. הסכם ממון</a>
+                <a href="#section-11" class="toc-link">11. גישור משפחתי</a>
+                <a href="#section-12" class="toc-link">12. שאלות נפוצות</a>
+                <a href="#section-13" class="toc-link">13. מתי צריכים עורך דין?</a>
+            </nav>
+        </details>
+
+        <!-- Desktop Table of Contents - Fixed Sidebar -->
+        <aside class="toc-sidebar-fixed hidden lg:block">
+            <h2>תוכן העניינים</h2>
+            <nav>
+                <a href="#section-1" class="toc-link">1. הליך הגירושין</a>
+                <a href="#section-2" class="toc-link">2. בהסכמה מול במחלוקת</a>
+                <a href="#section-3" class="toc-link">3. ביהמ"ש מול ביה"ד</a>
+                <a href="#section-4" class="toc-link">4. מרוץ הסמכויות</a>
+                <a href="#section-5" class="toc-link">5. הסכם גירושין</a>
+                <a href="#section-6" class="toc-link">6. משמורת ילדים</a>
+                <a href="#section-7" class="toc-link">7. מזונות ילדים</a>
+                <a href="#section-8" class="toc-link">8. מזונות אישה</a>
+                <a href="#section-9" class="toc-link">9. חלוקת רכוש</a>
+                <a href="#section-10" class="toc-link">10. הסכם ממון</a>
+                <a href="#section-11" class="toc-link">11. גישור משפחתי</a>
+                <a href="#section-12" class="toc-link">12. שאלות נפוצות</a>
+                <a href="#section-13" class="toc-link">13. מתי צריך עו"ד?</a>
+            </nav>
+        </aside>
 
         <!-- Section 1 -->
         <section id="section-1" class="py-12 bg-white">
@@ -459,7 +491,7 @@
                             <tr class="bg-gray-50 border-b"><td class="px-4 py-3 font-semibold">שופטים</td><td class="px-4 py-3">שופטים מקצועיים עם הכשרה בדיני משפחה</td><td class="px-4 py-3">דיינים - רבנים מוסמכים</td></tr>
                             <tr class="bg-white border-b"><td class="px-4 py-3 font-semibold">חלוקת רכוש</td><td class="px-4 py-3">חוק יחסי ממון: חלוקה שוויונית 50/50</td><td class="px-4 py-3">גישה מגוונת - לא תמיד שוויונית</td></tr>
                             <tr class="bg-gray-50 border-b"><td class="px-4 py-3 font-semibold">מזונות אישה</td><td class="px-4 py-3">לתקופה מוגבלת, בהתאם לנסיבות</td><td class="px-4 py-3">חיוב רחב יותר לפי ההלכה</td></tr>
-                            <tr class="bg-white border-b"><td class="px-4 py-3 font-semibold">משמורת ילדים</td><td class="px-4 py-3">טובת הילד - גישה מודרנית, משמורת משותפת</td><td class="px-4 py-3">חזקת הגיל הרך + שיקולים הלכתיים</td></tr>
+                            <tr class="bg-white border-b"><td class="px-4 py-3 font-semibold">משמורת ילדים</td><td class="px-4 py-3">טובת הילד - גישה מודרנית, זמני שהות שווים</td><td class="px-4 py-3">חזקת הגיל הרך + שיקולים הלכתיים</td></tr>
                             <tr class="bg-gray-50"><td class="px-4 py-3 font-semibold">סמכות ייחודית</td><td class="px-4 py-3">חלוקת רכוש, צווי הגנה</td><td class="px-4 py-3">גירושין (גט), כתובה</td></tr>
                         </tbody>
                     </table>
@@ -490,7 +522,7 @@
                 <h3 class="text-2xl font-bold mb-4 text-gray-800">מה חייב להיכלל בהסכם גירושין?</h3>
                 <ul class="list-disc pr-6 mb-6 space-y-2 text-gray-700">
                     <li><strong>הסדרת הגירושין:</strong> מועד סידור הגט בבית הדין הרבני</li>
-                    <li><strong><a href="child-custody.html" class="text-yellow-600 hover:underline">משמורת ילדים</a>:</strong> אצל מי הילדים יגורו, משמורת משותפת או יחידנית</li>
+                    <li><strong><a href="child-custody.html" class="text-yellow-600 hover:underline">משמורת ילדים</a>:</strong> אצל מי הילדים יגורו, זמני שהות שווים או יחידנית</li>
                     <li><strong><a href="visitation-rights.html" class="text-yellow-600 hover:underline">זמני שהות</a> (הסדרי ראייה):</strong> לוח זמנים מפורט - ימי חול, סופי שבוע, חגים, חופשות</li>
                     <li><strong><a href="child-support.html" class="text-yellow-600 hover:underline">מזונות ילדים</a>:</strong> סכום חודשי, מדור, חינוך, בריאות, הוצאות חריגות</li>
                     <li><strong><a href="spousal-support.html" class="text-yellow-600 hover:underline">מזונות אישה</a>:</strong> סכום, משך זמן, תנאי הפסקה</li>
@@ -512,8 +544,8 @@
 
                 <h3 class="text-2xl font-bold mb-4 text-gray-800">סוגי משמורת</h3>
 
-                <h4 class="text-xl font-semibold mb-3 text-yellow-700">משמורת משותפת</h4>
-                <p class="text-gray-700 mb-3">בשנים האחרונות חלה מגמה ברורה בפסיקה הישראלית לטובת משמורת משותפת. במשמורת משותפת, שני ההורים חולקים באופן שוויוני (או קרוב לכך) את זמן ההורות עם הילדים. חלוקה נפוצה היא 50/50 או 60/40.</p>
+                <h4 class="text-xl font-semibold mb-3 text-yellow-700">זמני שהות שווים</h4>
+                <p class="text-gray-700 mb-3">בשנים האחרונות חלה מגמה ברורה בפסיקה הישראלית לטובת זמני שהות שווים. בזמני שהות שווים, שני ההורים חולקים באופן שוויוני (או קרוב לכך) את זמן ההורות עם הילדים. חלוקה נפוצה היא 50/50 או 60/40.</p>
                 <p class="text-gray-700 font-semibold mb-3">יתרונות המשמורת המשותפת:</p>
                 <ul class="list-disc pr-6 mb-6 space-y-2 text-gray-700">
                     <li>הילד נהנה מקשר יציב עם שני ההורים</li>
@@ -527,7 +559,7 @@
                 <h4 class="text-xl font-semibold mb-3 text-yellow-700">חזקת הגיל הרך</h4>
                 <p class="text-gray-700 mb-4">עד לתיקון 100 לחוק הכשרות המשפטית והאפוטרופסות בשנת 2017, הייתה קיימת חזקה משפטית שלפיה ילדים עד גיל 6 יישארו אצל האם. כיום החזקה בוטלה, ובית המשפט בוחן כל מקרה לגופו לפי עקרון טובת הילד.</p>
                 <div class="info-box">
-                    <p class="text-gray-800"><strong>שינוי פסיקה חשוב:</strong> ביטול חזקת הגיל הרך פתח את הדלת למשמורת משותפת גם עבור ילדים צעירים. זהו שינוי משמעותי שמשפיע על אלפי משפחות.</p>
+                    <p class="text-gray-800"><strong>שינוי פסיקה חשוב:</strong> ביטול חזקת הגיל הרך פתח את הדלת לזמני שהות שווים גם עבור ילדים צעירים. זהו שינוי משמעותי שמשפיע על אלפי משפחות.</p>
                 </div>
 
                 <h3 class="text-2xl font-bold mb-4 mt-6 text-gray-800">זמני שהות (הסדרי ראייה)</h3>
@@ -553,7 +585,7 @@
                 <ul class="list-disc pr-6 mb-6 space-y-2 text-gray-700">
                     <li><strong>גיל הילדים:</strong> צרכים שונים בגילאים שונים</li>
                     <li><strong>הכנסות שני ההורים:</strong> שכר, נכסים, פוטנציאל השתכרות</li>
-                    <li><strong>חלוקת זמן ההורות:</strong> <a href="child-custody.html" class="text-yellow-600 hover:underline">משמורת משותפת</a> משפיעה על גובה המזונות</li>
+                    <li><strong>חלוקת זמן ההורות:</strong> <a href="child-custody.html" class="text-yellow-600 hover:underline">זמני שהות שווים</a> משפיעה על גובה המזונות</li>
                     <li><strong>צרכי הילד:</strong> חינוך, בריאות, חוגים, צרכים מיוחדים</li>
                     <li><strong>רמת החיים הקודמת של המשפחה</strong></li>
                 </ul>
@@ -682,8 +714,8 @@
                         <div class="p-4 text-gray-700">מאז פסק הדין המהפכני של 2017, מגיל 6 שני ההורים חבים במזונות. הסכום נקבע לפי הכנסות ההורים, חלוקת זמן ההורות, צרכי הילדים ורמת החיים הקודמת. טווח נפוץ: 1,500-4,000 שקל לילד. <a href="child-support.html" class="text-yellow-600 hover:underline">קראו עוד על מזונות ילדים</a>.</div>
                     </details>
                     <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                        <summary class="text-gray-800">מה ההבדל בין משמורת משותפת ליחידנית?</summary>
-                        <div class="p-4 text-gray-700">במשמורת משותפת הילד מתגורר באופן שוויוני (או קרוב לכך) אצל שני ההורים. במשמורת יחידנית, הילד גר בעיקר אצל הורה אחד. המגמה בפסיקה מעדיפה משמורת משותפת. <a href="child-custody.html" class="text-yellow-600 hover:underline">קראו עוד על משמורת ילדים</a>.</div>
+                        <summary class="text-gray-800">מה ההבדל בין זמני שהות שווים ליחידנית?</summary>
+                        <div class="p-4 text-gray-700">בזמני שהות שווים הילד מתגורר באופן שוויוני (או קרוב לכך) אצל שני ההורים. במשמורת יחידנית, הילד גר בעיקר אצל הורה אחד. המגמה בפסיקה מעדיפה זמני שהות שווים. <a href="child-custody.html" class="text-yellow-600 hover:underline">קראו עוד על משמורת ילדים</a>.</div>
                     </details>
                     <details class="bg-white rounded-lg shadow-sm border border-gray-200">
                         <summary class="text-gray-800">מה קורה עם הדירה בגירושין?</summary>
@@ -849,18 +881,37 @@
             if (!practiceButton && practiceDropdown && !practiceDropdown.contains(event.target)) practiceDropdown.classList.add('hidden');
         });
     </script>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" aria-hidden="true"></div>
+
     <!-- Floating Call Button -->
-    <a href="tel:0548184581" class="call-float" aria-label="התקשר עכשיו">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        התקשר עכשיו
+    <a href="tel:0548184581" title="התקשר עכשיו" class="call-float" aria-label="התקשר 054-8184581">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
     </a>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/972548184581" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" title="שלח WhatsApp" class="whatsapp-float" target="_blank" rel="noopener" aria-label="שלח WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="חזרה לראש הדף" title="חזרה למעלה">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
     <!-- Accessibility Floating Button -->
     <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות" title="הצהרת נגישות">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-</body>
+
+    <script src="js/back-to-top.js"></script>
+    <script src="js/progress-bar.js"></script>
+    <script src="js/toc-scroll-spy.js"></script>
+  </body>
 </html>

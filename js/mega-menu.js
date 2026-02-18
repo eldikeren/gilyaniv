@@ -94,12 +94,33 @@
     const isNavOpen = () => body.classList.contains('nav-open');
 
     // --- mega menu toggle ---
+    let hoverTimeout = null;
+    const HOVER_DELAY = 150; // ms delay before opening on hover
+
     megaToggles.forEach(btn => {
       const item = btn.closest('.has-mega');
       if (!item) return;
 
+      // Desktop hover behavior with delay
+      item.addEventListener('mouseenter', () => {
+        if (!mqMobile.matches) {
+          hoverTimeout = setTimeout(() => {
+            openMega(item, btn);
+          }, HOVER_DELAY);
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        clearTimeout(hoverTimeout);
+        if (!mqMobile.matches) {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        clearTimeout(hoverTimeout);
         const isOpen = item.classList.contains('open');
         if (isOpen) {
           item.classList.remove('open');

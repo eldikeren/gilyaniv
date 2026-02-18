@@ -1,0 +1,106 @@
+/* /css/floating-buttons.css - Floating CTA buttons (Call, WhatsApp) */
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #20BA5A;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+}
+
+/* Floating Call Button */
+.call-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    left: 20px;
+    background-color: #0a3d62;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.call-float:hover {
+    background-color: #1f4f7a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(10, 61, 98, 0.6);
+}
+
+.call-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .whatsapp-float svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .call-float {
+        width: 56px;
+        height: 56px;
+        bottom: 80px;
+        left: 15px;
+    }
+
+    .call-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Pulse animation on initial load for attention */
+@keyframes pulse-attention {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+    }
+}
+
+.whatsapp-float {
+    animation: pulse-attention 2s ease-in-out 3;
+}

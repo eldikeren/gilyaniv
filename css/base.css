@@ -178,8 +178,18 @@ li {
 }
 
 .card:hover {
-  box-shadow: var(--shadow-2);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Enhanced interactive card style */
+.card.interactive {
+  cursor: pointer;
+}
+
+.card.interactive:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
 }
 
 .card-body {
@@ -227,14 +237,24 @@ li {
   .grid.cols-4 {
     grid-template-columns: 1fr;
   }
-  
+
   .container {
     padding-inline: var(--space-4);
   }
-  
-  h1 { font-size: var(--fs-700); }
-  h2 { font-size: var(--fs-600); }
-  h3 { font-size: var(--fs-500); }
+
+  /* Ensure minimum 16px body text on mobile */
+  body {
+    font-size: max(16px, var(--fs-300));
+  }
+
+  h1 { font-size: var(--fs-h1, var(--fs-700)); }
+  h2 { font-size: var(--fs-h2, var(--fs-600)); }
+  h3 { font-size: var(--fs-h3, var(--fs-500)); }
+
+  /* Minimum section spacing on mobile - 48px */
+  section {
+    padding-block: var(--space-7); /* 48px */
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

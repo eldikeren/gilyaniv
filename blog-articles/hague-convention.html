@@ -39,6 +39,8 @@
       "mainEntityOfPage": "https://www.yanivgil.co.il/blog-articles/hague-convention.html"
     }
     </script>
+    <link rel="stylesheet" href="../css/floating-buttons.css">
+    <link rel="stylesheet" href="../css/mobile-menu.css">
 
     <style>
         /* CRITICAL: Force content within viewport on mobile */
@@ -113,47 +115,6 @@
         .mobile-menu-links a:hover {
             background: #c9a55c;
             color: #1a1a1a;
-        }
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            background-color: #20BA5A;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-        }
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 56px;
-                height: 56px;
-                bottom: 15px;
-                left: 15px;
-            }
-            .whatsapp-float svg {
-                width: 32px;
-                height: 32px;
-            }
         }
         /* Accessibility floating button */
         .accessibility-btn {
@@ -269,8 +230,14 @@
         }
 
     </style>
-</head>
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="stylesheet" href="../css/progress-bar.css">
+    <link rel="stylesheet" href="../css/faq-accordion.css">
+  </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" role="progressbar" aria-label="התקדמות קריאה"></div>
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
@@ -741,5 +708,14 @@
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
     </a>
-</body>
+  <script src="../js/back-to-top.js"></script>
+    <script src="../js/progress-bar.js"></script>
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="חזרה לראש הדף">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+  </body>
 </html>

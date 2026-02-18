@@ -84,7 +84,8 @@ body.nav-open .primary-nav{ right: 0; }
 /* Root menu links */
 .primary-nav .menu-root { list-style:none; padding: 12px 0; margin:0; }
 .primary-nav a, .primary-nav .mega-toggle{
-  display:block; width:100%;
+  display:flex; align-items:center; width:100%;
+  min-height: 48px; /* WCAG touch target minimum */
   padding: 14px 18px;
   color:#111; text-decoration:none; font-weight:600; text-align:right;
   background: transparent; border:0; cursor:pointer;
@@ -135,4 +136,33 @@ body.nav-open .primary-nav{ right: 0; }
   }
   .primary-nav .menu-root{ display:flex; align-items:center; gap: 6px; padding: 0; }
   .primary-nav a, .primary-nav .mega-toggle{ padding: 12px 14px; background:transparent; }
+}
+
+/* --- Floating CTA Pulse Animation --- */
+@keyframes pulse-attention {
+  0%, 100% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.8), 0 0 0 8px rgba(37, 211, 102, 0.15); }
+}
+
+.whatsapp-float {
+  animation: pulse-attention 2s ease-in-out 3; /* pulse 3 times on page load */
+}
+
+/* Mobile drawer visual indicator */
+.primary-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 48px;
+  background: linear-gradient(180deg, #c9a55c, #d4af37);
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.nav-open .primary-nav::before {
+  opacity: 1;
 }

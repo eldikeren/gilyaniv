@@ -244,8 +244,8 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-3);
   padding: var(--space-6);
-  display: none;
   z-index: var(--z-dropdown);
+  display: none;
 }
 
 .has-mega.open .mega-panel {

@@ -339,6 +339,46 @@ section {
   margin: 0;
 }
 
+/* Testimonial Avatar - Initial Circle */
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c9a55c, #d4af37);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--fs-400);
+  flex-shrink: 0;
+  margin-bottom: var(--space-4);
+  box-shadow: 0 2px 8px rgba(201, 165, 92, 0.3);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.testimonial-header .testimonial-avatar {
+  margin-bottom: 0;
+}
+
+.testimonial-header .testimonial-meta {
+  flex: 1;
+}
+
+.testimonial-header .testimonial-author {
+  margin-bottom: var(--space-1);
+}
+
+.testimonial-header .testimonial-area {
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content,
@@ -428,23 +468,121 @@ section {
   outline-offset: 2px;
 }
 
-/* Print Styles */
+/* Print Styles - Comprehensive */
 @media print {
+  /* Hide non-essential elements */
   .hero-actions,
   .contact-actions,
   .site-header,
-  .site-footer {
-    display: none;
+  .site-footer,
+  .hamburger,
+  .whatsapp-float,
+  .call-float,
+  .accessibility-btn,
+  .back-to-top,
+  .reading-progress,
+  .breadcrumbs,
+  nav,
+  .cta-box,
+  video,
+  iframe[src*="google.com/maps"],
+  iframe[src*="youtube.com"],
+  .toc-sidebar,
+  .toc-mobile {
+    display: none !important;
   }
-  
+
+  /* Reset background and colors for readability */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  p, li, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Show URLs for external links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+    word-break: break-all;
+  }
+
+  a[href^="tel"]::after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Internal links - don't show URL */
+  a[href^="/"]::after,
+  a[href^="#"]::after,
+  a[href$=".html"]::after {
+    content: none;
+  }
+
+  /* Ensure images print properly */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Section and card styling */
   section {
-    padding: var(--space-4) 0;
+    padding: 16pt 0;
     break-inside: avoid;
   }
-  
-  .card {
+
+  .card, article {
     break-inside: avoid;
-    box-shadow: none;
+    box-shadow: none !important;
     border: 1px solid #ccc;
+    margin-bottom: 16pt;
+  }
+
+  /* FAQ styling for print */
+  details {
+    border: 1px solid #ccc;
+    margin-bottom: 8pt;
+  }
+
+  details summary {
+    font-weight: bold;
+    padding: 8pt;
+    background: #f5f5f5 !important;
+    color: #000 !important;
+  }
+
+  details[open] > div,
+  details[open] > p {
+    padding: 8pt;
+  }
+
+  /* Force details to be open for print */
+  details {
+    display: block !important;
+  }
+
+  details > div,
+  details > p {
+    display: block !important;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* First page header */
+  @page :first {
+    margin-top: 3cm;
   }
 }

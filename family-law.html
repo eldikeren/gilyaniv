@@ -117,47 +117,6 @@
             text-decoration: none; border-radius: 5px; transition: all 0.3s ease;
         }
         .mobile-menu-links a:hover { background: #b8941f; color: #1a1a1a; }
-            /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            background-color: #20BA5A;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-        }
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 56px;
-                height: 56px;
-                bottom: 15px;
-                left: 15px;
-            }
-            .whatsapp-float svg {
-                width: 32px;
-                height: 32px;
-            }
-        }
         /* Accessibility floating button */
         .accessibility-btn {
             position: fixed;
@@ -304,7 +263,13 @@
 }
     </script>
     
-    </head>
+      <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/faq-accordion.css">
+    <link rel="stylesheet" href="css/floating-buttons.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+  </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header (same structure as insolvency.html) -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
@@ -500,6 +465,15 @@
     </header>
 
     <main class="pt-24">
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><span aria-current="page">דיני משפחה</span></li>
+      </ol>
+    </nav>
+  </div>
         <section class="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
@@ -586,39 +560,54 @@
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
-                        <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
-                        <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
-                        <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
-                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
-                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
-                        <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                        <li><a href="index.html" title="דף הבית" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                        <li><a href="index.html#about" title="אודות המשרד" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" title="עורכי דין" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" title="תחומי התמחות" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" title="פרסומים מקצועיים" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                        <li><a href="blog.html" title="בלוג" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                        <li><a href="contact.html" title="צור קשר" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
                     <ul class="space-y-2">
-                        <li><a href="family-law.html" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה וגישור</a></li>
-                        <li><a href="divorce-law.html" class="hover:text-[#b8941f] transition-colors duration-200">גירושין ומשמורת</a></li>
-                        <li><a href="inheritance-wills.html" class="hover:text-[#b8941f] transition-colors duration-200">צוואות וירושה</a></li>
-                        <li><a href="insolvency.html" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון</a></li>
+                        <li><a href="practice-areas.html#family-law" title="דיני משפחה" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה, ירושות וצוואות</a></li>
+                        <li><a href="practice-areas.html#bankruptcy" title="חדלות פירעון" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון והוצאה לפועל</a></li>
+                        <li><a href="practice-areas.html#civil-law" title="סדר דין אזרחי" class="hover:text-[#b8941f] transition-colors duration-200">סדר דין אזרחי ומקרקעין</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
                     <div class="space-y-4">
-                        <p><strong>טלפון ראשי:</strong><br><a href="tel:03-6092414" class="hover:text-[#b8941f]">03-6092414</a></p>
-                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-[#b8941f]">054-8184581</a></p>
+                        <p><strong>טלפון ראשי:</strong><br><a href="tel:03-6092414" title="התקשר 03-6092414" class="hover:text-[#b8941f]">03-6092414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" title="התקשר 054-8184581" class="hover:text-[#b8941f]">054-8184581</a></p>
+                        <p><strong>פקס:</strong><br><a href="tel:03-6092413" title="פקס 03-6092413" class="hover:text-[#b8941f]">03-6092413</a></p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-[#b8941f]">yanivgil@gmail.com</a></p>
                         <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
                         <p class="mt-4">
                             <strong>עקבו אחרינו:</strong><br>
-                            <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-[#b8941f] transition-colors duration-200" aria-label="Facebook">Facebook</a>
+                            <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" title="עקבו אחרינו בפייסבוק" class="hover:text-[#b8941f] transition-colors duration-200 inline-flex items-center gap-2" aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-xs text-gray-500">
+            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <div class="flex flex-col items-center md:items-start">
                 <p>&copy; 2025 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                    <p class="mt-1">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" rel="noopener" class="text-gray-300 hover:text-[#b8941f] transition-colors underline">eladdigital</a></p>
+                </div>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיניות פרטיות</a>
+                    <a href="terms-of-use.html" class="hover:text-[#b8941f] transition-colors duration-200">תנאי שימוש</a>
+                    <a href="accessibility.html" class="hover:text-[#b8941f] transition-colors duration-200">הצהרת נגישות</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -718,14 +707,34 @@
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </a>
-    
+
+  <script src="js/back-to-top.js"></script>
+    <script src="js/progress-bar.js"></script>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <!-- Floating Call Button -->
+    <a href="tel:0548184581" title="התקשר עכשיו" class="call-float" aria-label="התקשר 054-8184581">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    </a>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/972548184581?text=????%2C%20???%20???????%20??????%20?????" class="whatsapp-float" target="_blank" rel="noopener" aria-label="??? WhatsApp">
+    <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" title="שלח WhatsApp" class="whatsapp-float" target="_blank" rel="noopener" aria-label="שלח WhatsApp">
         <svg fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
-</body>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="חזרה לראש הדף" title="חזרה למעלה">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+  </body>
 </html>
 
 

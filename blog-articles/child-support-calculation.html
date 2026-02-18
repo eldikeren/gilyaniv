@@ -13,10 +13,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>חישוב מזונות ילדים - איך זה עובד? | עו"ד יניב גיל - תל אביב</title>
-    <meta name="description" content="מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית ומשמורת משותפת. עו״ד יניב גיל, תל אביב - התקשרו לייעוץ.">
-    <meta name="keywords" content="חישוב מזונות ילדים, מזונות ילדים סכום, מזונות ילדים פסיקה, מזונות ילדים משמורת משותפת, טבלת מזונות ילדים, עורך דין מזונות ילדים תל אביב">
+    <meta name="description" content="מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית וזמני שהות שווים. עו״ד יניב גיל, תל אביב - התקשרו לייעוץ.">
+    <meta name="keywords" content="חישוב מזונות ילדים, מזונות ילדים סכום, מזונות ילדים פסיקה, מזונות ילדים זמני שהות שווים, מזונות ילדים משמורת משותפת, טבלת מזונות ילדים, עורך דין מזונות ילדים תל אביב">
     <meta property="og:title" content="חישוב מזונות ילדים - איך זה עובד? | עו״ד יניב גיל">
-    <meta property="og:description" content="מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית ומשמורת משותפת. עו״ד יניב גיל, תל אביב.">
+    <meta property="og:description" content="מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית וזמני שהות שווים. עו״ד יניב גיל, תל אביב.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.yanivgil.co.il/blog-articles/child-support-calculation.html">
     <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
@@ -31,7 +31,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "חישוב מזונות ילדים - איך זה עובד?",
-      "description": "מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית ומשמורת משותפת. עו״ד יניב גיל, תל אביב.",
+      "description": "מדריך מקיף לחישוב מזונות ילדים בישראל: קריטריונים, סכומים, פסיקה עדכנית וזמני שהות שווים. עו״ד יניב גיל, תל אביב.",
       "author": {"@type": "Person", "name": "עו״ד יניב גיל"},
       "publisher": {"@type": "Organization", "name": "משרד עו״ד יניב גיל ושות'", "logo": {"@type": "ImageObject", "url": "https://www.yanivgil.co.il/images/new-logo.png"}},
       "datePublished": "2025-01-20",
@@ -39,6 +39,8 @@
       "mainEntityOfPage": "https://www.yanivgil.co.il/blog-articles/child-support-calculation.html"
     }
     </script>
+    <link rel="stylesheet" href="../css/floating-buttons.css">
+    <link rel="stylesheet" href="../css/mobile-menu.css">
 
     <style>
         /* CRITICAL: Force content within viewport on mobile */
@@ -113,47 +115,6 @@
         .mobile-menu-links a:hover {
             background: #c9a55c;
             color: #1a1a1a;
-        }
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            background-color: #20BA5A;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-        }
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 56px;
-                height: 56px;
-                bottom: 15px;
-                left: 15px;
-            }
-            .whatsapp-float svg {
-                width: 32px;
-                height: 32px;
-            }
         }
         /* Accessibility floating button */
         .accessibility-btn {
@@ -269,8 +230,14 @@
         }
 
     </style>
-</head>
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="stylesheet" href="../css/progress-bar.css">
+    <link rel="stylesheet" href="../css/faq-accordion.css">
+  </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" role="progressbar" aria-label="התקדמות קריאה"></div>
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
@@ -489,7 +456,7 @@
 
                     <div class="prose prose-lg max-w-none article-content">
 
-                        <p>סוגיית <a href="../child-support.html">מזונות ילדים</a> היא אחת הסוגיות המרכזיות והרגישות ביותר בהליכי <a href="../divorce.html">גירושין</a> ופירוד בישראל. מדובר בחובה משפטית של ההורים לספק את צורכי ילדיהם, גם לאחר הפירוד. השאלה "כמה מזונות אשלם?" או "כמה מזונות אקבל?" היא מהשאלות הנפוצות ביותר שנשאלות בפגישות ייעוץ ראשוניות עם עורכי דין לענייני משפחה. במדריך זה נסביר כיצד מחושבים מזונות ילדים בישראל, מהם הקריטריונים שבית המשפט שוקל, כיצד משמורת משותפת משפיעה על הסכום, ומהם השינויים שחלו בפסיקה בשנים האחרונות.</p>
+                        <p>סוגיית <a href="../child-support.html">מזונות ילדים</a> היא אחת הסוגיות המרכזיות והרגישות ביותר בהליכי <a href="../divorce.html">גירושין</a> ופירוד בישראל. מדובר בחובה משפטית של ההורים לספק את צורכי ילדיהם, גם לאחר הפירוד. השאלה "כמה מזונות אשלם?" או "כמה מזונות אקבל?" היא מהשאלות הנפוצות ביותר שנשאלות בפגישות ייעוץ ראשוניות עם עורכי דין לענייני משפחה. במדריך זה נסביר כיצד מחושבים מזונות ילדים בישראל, מהם הקריטריונים שבית המשפט שוקל, כיצד זמני שהות שווים משפיעה על הסכום, ומהם השינויים שחלו בפסיקה בשנים האחרונות.</p>
 
                         <div class="content-section">
                             <h2>כיצד מחשבים מזונות ילדים בישראל?</h2>
@@ -528,15 +495,15 @@
                         </div>
 
                         <div class="content-section">
-                            <h2>מזונות ילדים במשמורת משותפת</h2>
+                            <h2>מזונות ילדים בזמני שהות שווים</h2>
 
-                            <p>אחד השינויים המשמעותיים ביותר שחלו בתחום דיני המשפחה בישראל בשנים האחרונות הוא המגמה הגוברת לטובת <a href="../child-custody.html">משמורת משותפת</a>. במשמורת משותפת, הילדים מחלקים את זמנם באופן שוויוני או קרוב לשוויוני בין שני ההורים. לשינוי זה יש השלכה ישירה ומשמעותית על חישוב המזונות.</p>
+                            <p>אחד השינויים המשמעותיים ביותר שחלו בתחום דיני המשפחה בישראל בשנים האחרונות הוא המגמה הגוברת לטובת <a href="../child-custody.html">זמני שהות שווים</a>. בזמני שהות שווים, הילדים מחלקים את זמנם באופן שוויוני או קרוב לשוויוני בין שני ההורים. לשינוי זה יש השלכה ישירה ומשמעותית על חישוב המזונות.</p>
 
                             <p>כאשר הילדים שוהים זמן שווה אצל שני ההורים, ההנחה היא שכל הורה נושא בחלק מההוצאות השוטפות בזמן שהילדים אצלו. לפיכך, סכום המזונות שיועבר מהורה אחד לשני עשוי להיות נמוך יותר מאשר במצב של משמורת יחידנית.</p>
 
-                            <p>עם זאת, חשוב להדגיש שמשמורת משותפת אינה שוללת לחלוטין חובת מזונות. גם במשמורת משותפת, כאשר קיים פער משמעותי בהכנסות בין ההורים, ההורה בעל ההכנסה הגבוהה יותר ישלם מזונות להורה בעל ההכנסה הנמוכה יותר - זאת כדי להבטיח רמת חיים דומה לילדים בשני הבתים. העיקרון המנחה הוא שטובת הילדים דורשת שלא יחושו פער משמעותי ברמת החיים בין שני המגורים.</p>
+                            <p>עם זאת, חשוב להדגיש שזמני שהות שווים אינה שוללת לחלוטין חובת מזונות. גם בזמני שהות שווים, כאשר קיים פער משמעותי בהכנסות בין ההורים, ההורה בעל ההכנסה הגבוהה יותר ישלם מזונות להורה בעל ההכנסה הנמוכה יותר - זאת כדי להבטיח רמת חיים דומה לילדים בשני הבתים. העיקרון המנחה הוא שטובת הילדים דורשת שלא יחושו פער משמעותי ברמת החיים בין שני המגורים.</p>
 
-                            <p>בפועל, חישוב המזונות במשמורת משותפת מבוסס על היחס בין הכנסות ההורים ועל חלוקת הזמן בפועל. ככל שחלוקת הזמן שוויונית יותר ופער ההכנסות קטן יותר, כך סכום המזונות שיועבר יהיה נמוך יותר.</p>
+                            <p>בפועל, חישוב המזונות בזמני שהות שווים מבוסס על היחס בין הכנסות ההורים ועל חלוקת הזמן בפועל. ככל שחלוקת הזמן שוויונית יותר ופער ההכנסות קטן יותר, כך סכום המזונות שיועבר יהיה נמוך יותר.</p>
                         </div>
 
                         <div class="content-section">
@@ -605,7 +572,7 @@
 
                             <ul>
                                 <li><strong>ירידה בהכנסות ההורה המשלם</strong> - פיטורין, מחלה, נכות או כל אירוע אחר שגרם לירידה משמעותית בהכנסות עשוי להצדיק הפחתת מזונות.</li>
-                                <li><strong>שינוי בהסדרי המשמורת</strong> - אם חלוקת הזמן בין ההורים השתנתה באופן מהותי, למשל מעבר למשמורת משותפת, הדבר עשוי להצדיק הפחתת מזונות.</li>
+                                <li><strong>שינוי בהסדרי המשמורת</strong> - אם חלוקת הזמן בין ההורים השתנתה באופן מהותי, למשל מעבר לזמני שהות שווים, הדבר עשוי להצדיק הפחתת מזונות.</li>
                                 <li><strong>עלייה בהכנסות ההורה המשמורן</strong> - אם ההורה שמגדל את הילדים זכה לעלייה משמעותית בהכנסותיו, ניתן לטעון שיכולתו לשאת בחלק גדול יותר מצורכי הילדים גדלה.</li>
                                 <li><strong>הולדת ילדים נוספים</strong> - אם להורה המשלם נולדו ילדים נוספים ממערכת יחסים חדשה, הדבר עשוי להשפיע על יכולתו הכלכלית ולהצדיק הפחתת מזונות.</li>
                             </ul>
@@ -763,5 +730,14 @@
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
     </a>
-</body>
+  <script src="../js/back-to-top.js"></script>
+    <script src="../js/progress-bar.js"></script>
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="חזרה לראש הדף">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+  </body>
 </html>

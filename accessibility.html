@@ -66,7 +66,11 @@
 }
     </script>
     
-    </head>
+      <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/faq-accordion.css">
+  </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
@@ -95,6 +99,15 @@
     </header>
 
     <main class="pt-24 pb-16">
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><span aria-current="page">הצהרת נגישות</span></li>
+      </ol>
+    </nav>
+  </div>
         <div class="container mx-auto px-4 max-w-4xl">
             <article class="bg-white rounded-xl shadow-lg p-8 md:p-12">
                 <header class="mb-8">
@@ -205,6 +218,8 @@
             </div>
         </div>
     </footer>
-</body>
+  <script src="js/back-to-top.js"></script>
+    <script src="js/progress-bar.js"></script>
+  </body>
 </html>
 

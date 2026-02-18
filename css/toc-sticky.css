@@ -1,0 +1,323 @@
+/* /css/toc-sticky.css - Sticky table of contents for long content */
+
+/* Anchor offset for sticky header */
+[id^="section-"] {
+  scroll-margin-top: 150px;
+}
+
+/* Fixed sidebar - hidden by default */
+.toc-sidebar-fixed {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  [id^="section-"] {
+    scroll-margin-top: 850px;
+  }
+}
+
+/* Desktop: 2-column layout with sticky sidebar */
+@media (min-width: 1024px) {
+  .article-with-toc {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .toc-sidebar {
+    position: sticky;
+    top: 100px; /* Below sticky header */
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+  }
+
+  /* Fixed sidebar variant - for pages without article-with-toc wrapper */
+  .toc-sidebar-fixed {
+    display: block;
+    position: fixed;
+    left: 24px; /* In RTL, left is the end side */
+    top: 120px;
+    width: 260px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    z-index: 100;
+  }
+
+  .toc-sidebar-fixed h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c9a55c;
+    color: #1a1a1a;
+  }
+
+  .toc-sidebar-fixed nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .toc-sidebar-fixed .toc-link {
+    display: block;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border-right: 3px solid transparent;
+    line-height: 1.4;
+  }
+
+  .toc-sidebar-fixed .toc-link:hover {
+    background: #fefce8;
+    color: #c9a55c;
+  }
+
+  .toc-sidebar-fixed .toc-link.active {
+    background: #fefce8;
+    color: #c9a55c;
+    border-right-color: #c9a55c;
+    font-weight: 600;
+  }
+
+  .toc-sidebar h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #c9a55c;
+    color: #1a1a1a;
+  }
+
+  .toc-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .toc-sidebar .toc-link {
+    display: block;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border-right: 3px solid transparent;
+  }
+
+  .toc-sidebar .toc-link:hover {
+    background: #fefce8;
+    color: #c9a55c;
+  }
+
+  .toc-sidebar .toc-link.active {
+    background: #fefce8;
+    color: #c9a55c;
+    border-right-color: #c9a55c;
+    font-weight: 600;
+  }
+
+  /* Nested TOC items */
+  .toc-sidebar .toc-link[data-level="2"] {
+    padding-right: 24px;
+    font-size: 13px;
+  }
+
+  .toc-sidebar .toc-link[data-level="3"] {
+    padding-right: 36px;
+    font-size: 12px;
+  }
+
+  .article-content {
+    min-width: 0; /* Prevent grid blowout */
+  }
+
+  /* Hide mobile TOC on desktop */
+  .toc-mobile {
+    display: none;
+  }
+}
+
+/* Mobile: Collapsible TOC at top */
+@media (max-width: 1023px) {
+  .toc-sidebar {
+    display: none;
+  }
+
+  .toc-mobile {
+    margin: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #c9a55c;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(201, 165, 92, 0.25);
+  }
+
+  .toc-mobile summary {
+    padding: 18px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+    color: #1a1a1a;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .toc-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .toc-mobile summary::after {
+    content: 'לחץ לפתיחה ▼';
+    font-size: 14px;
+    font-weight: 600;
+    color: #c9a55c;
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid #c9a55c;
+    animation: pulse-toc 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse-toc {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.4);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 8px rgba(201, 165, 92, 0);
+    }
+  }
+
+  .toc-mobile[open] summary::after {
+    content: 'סגור';
+    animation: none;
+    transform: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .toc-mobile[open] summary {
+    background: linear-gradient(135deg, #c9a55c 0%, #d4af37 100%);
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .toc-mobile nav {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fffef7;
+  }
+
+  .toc-mobile .toc-link {
+    display: block;
+    padding: 12px 14px;
+    font-size: 15px;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    border-right: 3px solid transparent;
+  }
+
+  .toc-mobile .toc-link:hover {
+    background: #fefce8;
+    color: #c9a55c;
+    border-right-color: #c9a55c;
+  }
+
+  .toc-mobile .toc-link.active {
+    background: #fefce8;
+    color: #c9a55c;
+    border-right-color: #c9a55c;
+    font-weight: 600;
+  }
+}
+
+/* Back to TOC floating button (mobile only) */
+.back-to-toc-btn {
+  display: none;
+  position: fixed;
+  bottom: 180px; /* Above WhatsApp/call buttons */
+  right: 16px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #c9a55c 0%, #d4af37 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(201, 165, 92, 0.4);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-toc-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1023px) {
+  .back-to-toc-btn {
+    display: block;
+  }
+}
+
+.back-to-toc-btn:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #e5c158 100%);
+  box-shadow: 0 6px 20px rgba(201, 165, 92, 0.5);
+}
+
+.back-to-toc-btn:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar styling for TOC */
+.toc-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toc-sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.toc-sidebar::-webkit-scrollbar-thumb {
+  background: #c9a55c;
+  border-radius: 3px;
+}
+
+.toc-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
+}

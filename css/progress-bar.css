@@ -1,0 +1,48 @@
+/* /css/progress-bar.css - Reading progress indicator */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a55c, #d4af37);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* Account for sticky header - adjust top position */
+.reading-progress.with-header {
+  top: 64px; /* Match header height */
+}
+
+/* RTL: progress bar grows from right */
+[dir="rtl"] .reading-progress {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .reading-progress.with-header {
+    top: 56px; /* Smaller header on mobile */
+  }
+}
+
+/* Optional: Add subtle glow effect */
+.reading-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5));
+  pointer-events: none;
+}
+
+[dir="rtl"] .reading-progress::after {
+  right: auto;
+  left: 0;
+  background: linear-gradient(270deg, transparent, rgba(212, 175, 55, 0.5));
+}
