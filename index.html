@@ -1023,29 +1023,11 @@
             height: 30px;
         }
 
+        /* Mobile: Hide floating buttons - we have the sticky CTA bar */
         @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 56px;
-                height: 56px;
-                bottom: 15px;
-                left: 15px;
-            }
-
-            .whatsapp-float svg {
-                width: 32px;
-                height: 32px;
-            }
-
+            .whatsapp-float,
             .call-float {
-                width: 56px;
-                height: 56px;
-                bottom: 80px;
-                left: 15px;
-            }
-
-            .call-float svg {
-                width: 28px;
-                height: 28px;
+                display: none !important;
             }
         }
 
@@ -1474,7 +1456,7 @@
                         <div class="p-6">
                             <div class="flex items-center justify-end gap-2 mb-2">
                                 <img src="images/icons/YNET.png?v=2" alt="לוגו Ynet"
-                                    style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                    width="60" height="20" style="object-fit:contain;" loading="lazy">
                                 <span class="text-xs text-gray-500">Ynet</span>
                             </div>
                             <h3 class="text-xl font-bold mb-2">פסק דין - בקשה לשקול מחדש החלטה בתיק ניכור הורי</h3>
@@ -1489,8 +1471,8 @@
                         class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
                             <div class="flex items-center justify-end gap-2 mb-2">
-                                <img src="images/icons/WALLA LOGO.png?v=2" alt="לוגו Walla"
-                                    style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                <img src="images/icons/walla-logo.png?v=2" alt="לוגו Walla"
+                                    width="60" height="20" style="object-fit:contain;" loading="lazy">
                                 <span class="text-xs text-gray-500">Walla</span>
                             </div>
                             <h3 class="text-xl font-bold mb-2">ביטול או הפחתת דמי מזונות: הפסיקה שמשפיעה על הורים
@@ -1507,7 +1489,7 @@
                         <div class="p-6">
                             <div class="flex items-center justify-end gap-2 mb-2">
                                 <img src="images/icons/mako-logo.png?v=2" alt="לוגו mako"
-                                    style="height:20px;width:auto;object-fit:contain;" loading="lazy">
+                                    width="60" height="20" style="object-fit:contain;" loading="lazy">
                                 <span class="text-xs text-gray-500">mako</span>
                             </div>
                             <h3 class="text-xl font-bold mb-2">עקב התיישנות: חוב של מאות אלפי שקלים לא ישולם</h3>
