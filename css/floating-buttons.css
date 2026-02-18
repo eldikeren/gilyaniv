@@ -64,30 +64,11 @@
     height: 30px;
 }
 
-/* Mobile responsive adjustments */
+/* Mobile: Hide floating buttons since we have the sticky CTA bar */
 @media (max-width: 768px) {
-    .whatsapp-float {
-        width: 56px;
-        height: 56px;
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .whatsapp-float svg {
-        width: 32px;
-        height: 32px;
-    }
-
+    .whatsapp-float,
     .call-float {
-        width: 56px;
-        height: 56px;
-        bottom: 80px;
-        left: 15px;
-    }
-
-    .call-float svg {
-        width: 28px;
-        height: 28px;
+        display: none !important;
     }
 }
 
