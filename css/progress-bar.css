@@ -24,8 +24,9 @@
 }
 
 @media (max-width: 768px) {
-  .reading-progress.with-header {
-    top: 56px; /* Smaller header on mobile */
+  /* Hide progress bar on mobile - interferes with header CTA button */
+  .reading-progress {
+    display: none !important;
   }
 }
 
