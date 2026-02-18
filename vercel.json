@@ -159,6 +159,15 @@
           "value": "public, max-age=86400"
         }
       ]
+    },
+    {
+      "source": "/images/:path*.mp4",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ]
 }
