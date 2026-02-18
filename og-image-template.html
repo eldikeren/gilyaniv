@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1200px;
+            height: 630px;
+            background-color: #0C1220;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo', sans-serif;
+            color: #c9a55c;
+            border: 15px solid #c9a55c;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            /* Filter to make logo look more golden if it's black/white */
+            filter: drop-shadow(0 0 10px rgba(201, 165, 92, 0.3));
+        }
+
+        .firm-name {
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 36px;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .accent-line {
+            width: 400px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c9a55c, transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-container">
+        <!-- Using the site's logo if possible, or a placeholder -->
+        <img src="images/new-logo.png" class="logo" alt="Logo">
+    </div>
+    <div class="firm-name">משרד עו״ד יניב גיל ושות׳</div>
+    <div class="accent-line"></div>
+    <div class="tagline">דיני משפחה • גירושין • ירושה • חדלות פירעון</div>
+</body>
+
+</html>
