@@ -198,10 +198,10 @@
                 <li><a href="index.html#about" title="אודות המשרד" class="block text-lg text-gray-800 hover:text-[#b8941f] mobile-menu-link">אודות המשרד</a></li>
                 <li><a href="attorneys.html" title="עורכי דין" class="block text-lg text-gray-800 hover:text-[#b8941f] mobile-menu-link">עורכי דין</a></li>
                 <li>
-                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="block w-full text-right text-lg" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem;">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
-                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2" style="background: #2a2a2a; padding: 1rem; border-radius: 8px;">
-                        <div style="margin-bottom: 12px;">
-                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" style="display: flex; width: 100%; background-color: #1a1a1a; color: #c9a55c; border: 2px solid #c9a55c; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-weight: bold; text-align: right; justify-content: space-between; align-items: center; cursor: pointer;"><span style="color: #c9a55c;">דיני משפחה</span><span style="color: #c9a55c;">▼</span></button>
+                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="mobile-category-btn block w-full text-right text-lg">תחומי התמחות <span class="mobile-category-chevron">▼</span></button>
+                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2 mobile-practice-container">
+                        <div class="mb-3">
+                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" class="mobile-category-btn"><span>דיני משפחה</span><span class="mobile-category-chevron">▼</span></button>
                             <div id="mobile-category-family" class="hidden mt-2 pr-4">
                                 <a href="divorce-guide.html" class="block py-2 px-4 text-sm text-yellow-400 font-bold hover:text-[#c9a55c]">המדריך המלא לגירושין</a>
                                 <a href="heskem-gerushin.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">הסכם גירושין</a>
@@ -216,23 +216,23 @@
                                 <a href="divorce.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">גירושין</a>
                             </div>
                         </div>
-                        <div style="margin-bottom: 12px;">
-                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" style="display: flex; width: 100%; background-color: #1a1a1a; color: #c9a55c; border: 2px solid #c9a55c; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-weight: bold; text-align: right; justify-content: space-between; align-items: center; cursor: pointer;"><span style="color: #c9a55c;">ירושות וצוואות</span><span style="color: #c9a55c;">▼</span></button>
+                        <div class="mb-3">
+                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" class="mobile-category-btn"><span>ירושות וצוואות</span><span class="mobile-category-chevron">▼</span></button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
                                 <a href="will-writing.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">עריכת צוואה</a>
                                 <a href="inheritance-order.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">צו ירושה</a>
                                 <a href="will-probate.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">צו קיום צוואה</a>
                             </div>
                         </div>
-                        <div style="margin-bottom: 12px;">
-                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" style="display: flex; width: 100%; background-color: #1a1a1a; color: #c9a55c; border: 2px solid #c9a55c; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-weight: bold; text-align: right; justify-content: space-between; align-items: center; cursor: pointer;"><span style="color: #c9a55c;">חדלות פירעון והוצאה לפועל</span><span style="color: #c9a55c;">▼</span></button>
+                        <div class="mb-3">
+                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" class="mobile-category-btn"><span>חדלות פירעון והוצאה לפועל</span><span class="mobile-category-chevron">▼</span></button>
                             <div id="mobile-category-bankruptcy" class="hidden mt-2 pr-4">
                                 <a href="bankruptcy.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">חדלות פירעון / פשיטת רגל</a>
                                 <a href="execution.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">הוצאה לפועל</a>
                                 <a href="debt-cancellation.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">מחיקת חובות</a>
                             </div>
                         </div>
-                        <div class="mb-2"><a href="practice-areas.html#civil-law" class="block w-full text-right py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700">דיני חוזים ודיני מקרקעין</a></div>
+                        <div class="mb-3"><a href="practice-areas.html#civil-law" class="mobile-category-btn block w-full text-right">דיני חוזים ודיני מקרקעין</a></div>
                     </div>
                 </li>
                 <li><a href="articles.html" title="פרסומים מקצועיים" class="block text-lg text-gray-800 hover:text-[#b8941f] mobile-menu-link">פרסומים מקצועיים</a></li>
