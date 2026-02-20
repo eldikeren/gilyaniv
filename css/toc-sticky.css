@@ -16,6 +16,20 @@
   }
 }
 
+/* Offset main content when fixed sidebar is present */
+@media (min-width: 1024px) {
+  /* Add class has-fixed-toc to main element for pages with fixed TOC */
+  main.has-fixed-toc {
+    padding-left: 300px; /* Account for fixed sidebar width (260px + 24px gap + padding) */
+  }
+
+  main.has-fixed-toc section .container {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
 /* Desktop: 2-column layout with sticky sidebar */
 @media (min-width: 1024px) {
   .article-with-toc {
