@@ -1,11 +1,11 @@
 /* /css/mobile-menu.css - Clean light theme mobile menu styling */
 
-/* Mobile menu overlay */
+/* Mobile menu overlay - light background */
 .mobile-menu-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: #ffffff !important;
     z-index: 9999;
     overflow-y: auto;
 }
@@ -14,132 +14,114 @@
     display: block;
 }
 
-/* Main menu link styling - light theme */
-.mobile-menu-overlay nav ul li a.mobile-menu-link,
-.mobile-menu-overlay nav ul li a {
-    display: block;
-    padding: 1rem;
-    background: transparent !important;
-    color: #1a1a1a !important;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.2);
-}
-
-.mobile-menu-overlay nav ul li a.mobile-menu-link:hover,
-.mobile-menu-overlay nav ul li a:hover {
-    background: rgba(201, 165, 92, 0.1) !important;
-    color: #b8941f !important;
-}
-
-/* Practice Areas dropdown container - light background */
+/* ==========================================
+   PRACTICE AREAS DROPDOWN CONTAINER
+   ========================================== */
+#mobile-practice-dropdown,
 .mobile-practice-container {
     background: #fffef7 !important;
     padding: 1rem !important;
     border-radius: 12px !important;
     border: 1px solid rgba(201, 165, 92, 0.3) !important;
-    margin-top: 0.5rem !important;
 }
 
-/* Category dropdown buttons - clean accordion style */
-.mobile-category-btn,
-.mobile-menu-overlay button[onclick*="toggleCategoryDropdown"],
-.mobile-menu-overlay .mb-2 > button,
-button.mobile-menu-link {
+/* ==========================================
+   CATEGORY BUTTONS (דיני משפחה, ירושות, etc.)
+   ========================================== */
+.mobile-category-btn {
     display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0.875rem 1rem;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0.875rem 1rem !important;
     background: transparent !important;
     color: #1a1a1a !important;
     border: none !important;
     border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
     border-radius: 0 !important;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-align: right !important;
 }
 
-.mobile-category-btn:hover,
-.mobile-menu-overlay button[onclick*="toggleCategoryDropdown"]:hover,
-.mobile-menu-overlay .mb-2 > button:hover,
-button.mobile-menu-link:hover {
+.mobile-category-btn:hover {
     background: rgba(201, 165, 92, 0.1) !important;
     color: #b8941f !important;
 }
 
-/* Category chevron icon */
+/* Chevron icon */
 .mobile-category-chevron {
     color: #c9a55c !important;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    font-size: 1rem !important;
 }
 
-/* Dropdown arrow indicator */
-.mobile-menu-overlay button svg,
-button.mobile-menu-link svg {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-    color: #c9a55c;
-}
+/* ==========================================
+   ALL LINKS INSIDE MOBILE MENU - LIGHT THEME
+   ========================================== */
 
-/* Category content container */
-.mobile-category-content {
-    background: #ffffff !important;
-    padding: 0.5rem 0 !important;
-    margin-top: 0.5rem !important;
-}
-
-/* Sub-menu links - light theme */
-.mobile-menu-overlay .space-y-2 a,
-.mobile-menu-overlay .pl-4 a,
-.mobile-menu-overlay .pr-4 a,
-.mobile-category-content a {
-    display: block;
-    padding: 0.625rem 1rem;
-    padding-right: 1.5rem;
-    background: transparent !important;
+/* Override ALL gray text colors in mobile menu */
+.mobile-menu-overlay a.text-gray-300,
+.mobile-menu-overlay a.text-gray-400,
+.mobile-menu-overlay a.text-gray-500,
+.mobile-menu-overlay .text-gray-300,
+.mobile-menu-overlay .text-gray-400,
+.mobile-menu-overlay .text-gray-500,
+#mobile-practice-dropdown a.text-gray-300,
+#mobile-practice-dropdown a.text-gray-400,
+#mobile-practice-dropdown a {
     color: #4a4a4a !important;
-    text-decoration: none;
-    border-radius: 0;
-    font-size: 0.9rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+    background: transparent !important;
 }
 
-.mobile-menu-overlay .space-y-2 a:hover,
-.mobile-menu-overlay .pl-4 a:hover,
-.mobile-menu-overlay .pr-4 a:hover,
-.mobile-category-content a:hover {
-    background: rgba(201, 165, 92, 0.1) !important;
-    color: #b8941f !important;
-    padding-right: 1.75rem;
-}
-
-/* Featured link styling (pillar pages) */
-.mobile-featured-link {
+/* Override yellow/gold featured links */
+.mobile-menu-overlay a.text-yellow-400,
+#mobile-practice-dropdown a.text-yellow-400 {
     color: #b8941f !important;
     font-weight: 600 !important;
 }
 
-/* Pillar group with expandable sub-items */
-.mobile-pillar-group {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+/* Hover state for all links */
+.mobile-menu-overlay a:hover,
+#mobile-practice-dropdown a:hover {
+    color: #b8941f !important;
+    background: rgba(201, 165, 92, 0.1) !important;
 }
 
-.mobile-pillar-group .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Override dark background classes */
+.mobile-menu-overlay .bg-gray-800,
+.mobile-menu-overlay .bg-gray-900,
+.mobile-menu-overlay div[class*="bg-gray"],
+#mobile-practice-dropdown .bg-gray-800,
+#mobile-practice-dropdown .bg-gray-900,
+#mobile-practice-dropdown div[class*="bg-gray"] {
+    background: rgba(201, 165, 92, 0.05) !important;
+}
+
+/* Override hover backgrounds */
+.mobile-menu-overlay .hover\:bg-gray-800:hover,
+.mobile-menu-overlay .hover\:bg-gray-700:hover,
+#mobile-practice-dropdown .hover\:bg-gray-800:hover,
+#mobile-practice-dropdown .hover\:bg-gray-700:hover {
+    background: rgba(201, 165, 92, 0.1) !important;
+}
+
+/* ==========================================
+   PILLAR GROUP (expandable items)
+   ========================================== */
+.mobile-pillar-group {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    background: transparent !important;
 }
 
 .mobile-pillar-group a {
-    border-bottom: none !important;
+    color: #4a4a4a !important;
+    background: transparent !important;
+}
+
+.mobile-pillar-group a:hover {
+    color: #b8941f !important;
 }
 
 /* Sub-category expand button */
@@ -147,59 +129,117 @@ button.mobile-menu-link svg {
     background: transparent !important;
     color: #c9a55c !important;
     border: none !important;
-    padding: 0.5rem;
-    font-size: 0.75rem;
-    min-width: 32px;
-    min-height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Sub-items container */
-.mobile-pillar-group > div[id^="mobile-sub-"] {
+/* Sub-items container - override bg-gray-900 */
+.mobile-pillar-group div[id^="mobile-sub-"],
+#mobile-practice-dropdown div[id^="mobile-sub-"] {
     background: rgba(201, 165, 92, 0.05) !important;
-    border-radius: 8px;
-    margin: 0.25rem 0;
-    padding: 0.25rem 0;
+    border-radius: 8px !important;
 }
 
-.mobile-pillar-group > div[id^="mobile-sub-"] a {
-    padding: 0.5rem 1rem !important;
-    padding-right: 2rem !important;
-    font-size: 0.8rem !important;
+.mobile-pillar-group div[id^="mobile-sub-"] a,
+#mobile-practice-dropdown div[id^="mobile-sub-"] a {
     color: #666 !important;
-    border-bottom: none !important;
+    background: transparent !important;
 }
 
-.mobile-pillar-group > div[id^="mobile-sub-"] a:hover {
+.mobile-pillar-group div[id^="mobile-sub-"] a:hover,
+#mobile-practice-dropdown div[id^="mobile-sub-"] a:hover {
     color: #b8941f !important;
     background: rgba(201, 165, 92, 0.1) !important;
 }
 
-/* CTA Button at bottom */
-.mobile-menu-overlay .mt-6 a,
+/* ==========================================
+   MAIN MENU LINKS (בית, אודות, etc.)
+   ========================================== */
+.mobile-menu-overlay nav ul li a.mobile-menu-link,
+.mobile-menu-overlay nav > ul > li > a {
+    display: block !important;
+    padding: 1rem !important;
+    background: transparent !important;
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid rgba(201, 165, 92, 0.2) !important;
+    transition: all 0.3s ease !important;
+    font-size: 1rem !important;
+}
+
+.mobile-menu-overlay nav ul li a.mobile-menu-link:hover,
+.mobile-menu-overlay nav > ul > li > a:hover {
+    background: rgba(201, 165, 92, 0.1) !important;
+    color: #b8941f !important;
+}
+
+/* ==========================================
+   CATEGORY CONTENT LINKS
+   ========================================== */
+#mobile-category-family a,
+#mobile-category-inheritance a,
+#mobile-category-bankruptcy a {
+    color: #4a4a4a !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+#mobile-category-family a:hover,
+#mobile-category-inheritance a:hover,
+#mobile-category-bankruptcy a:hover {
+    color: #b8941f !important;
+    background: rgba(201, 165, 92, 0.1) !important;
+}
+
+/* Featured/pillar link (gold color) */
+#mobile-category-family a.text-yellow-400,
+#mobile-category-family a[href="divorce-guide.html"] {
+    color: #b8941f !important;
+    font-weight: 600 !important;
+}
+
+/* ==========================================
+   CTA BUTTON AT BOTTOM
+   ========================================== */
+.mobile-menu-overlay .mt-8 a,
 .mobile-menu-overlay a[href^="tel:"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    padding: 1rem !important;
     background: linear-gradient(135deg, #c9a55c 0%, #d4af37 100%) !important;
     color: #1a1a1a !important;
-    text-decoration: none;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    text-decoration: none !important;
+    border-radius: 9999px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
     border: none !important;
 }
 
-.mobile-menu-overlay .mt-6 a:hover,
+.mobile-menu-overlay .mt-8 a:hover,
 .mobile-menu-overlay a[href^="tel:"]:hover {
     background: linear-gradient(135deg, #d4af37 0%, #e5c158 100%) !important;
 }
 
-/* Header CTA button - centered text */
+/* ==========================================
+   DIRECT LINK (דיני חוזים)
+   ========================================== */
+#mobile-practice-dropdown .mb-2 a,
+#mobile-practice-dropdown .mb-3 > a {
+    background: transparent !important;
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+#mobile-practice-dropdown .mb-2 a:hover,
+#mobile-practice-dropdown .mb-3 > a:hover {
+    background: rgba(201, 165, 92, 0.1) !important;
+    color: #b8941f !important;
+}
+
+/* ==========================================
+   HEADER CTA BUTTON
+   ========================================== */
 .header-cta-btn,
 header a[href^="tel:"],
 .site-header a[href^="tel:"] {
@@ -207,62 +247,4 @@ header a[href^="tel:"],
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-}
-
-/* Override inline styles from HTML */
-.mobile-menu-overlay div[style*="background: #2a2a2a"],
-.mobile-menu-overlay div[style*="background-color: #2a2a2a"] {
-    background: #fffef7 !important;
-    border: 1px solid rgba(201, 165, 92, 0.2) !important;
-    border-radius: 12px !important;
-}
-
-.mobile-menu-overlay button[style*="background-color: #1a1a1a"],
-.mobile-menu-overlay button[style*="background: #1a1a1a"] {
-    background: transparent !important;
-    color: #1a1a1a !important;
-    border: none !important;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
-    border-radius: 0 !important;
-}
-
-.mobile-menu-overlay button[style*="background-color: #1a1a1a"] span,
-.mobile-menu-overlay button[style*="background: #1a1a1a"] span {
-    color: #1a1a1a !important;
-}
-
-.mobile-menu-overlay button[style*="background-color: #1a1a1a"] span:last-child {
-    color: #c9a55c !important;
-}
-
-/* Direct link (no collapse) styling */
-.mobile-menu-overlay .mb-2 a[href*="practice-areas"] {
-    background: transparent !important;
-    color: #1a1a1a !important;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
-    border-radius: 0 !important;
-    font-weight: 600;
-}
-
-.mobile-menu-overlay .mb-2 a[href*="practice-areas"]:hover {
-    background: rgba(201, 165, 92, 0.1) !important;
-    color: #b8941f !important;
-}
-
-/* Gray text overrides */
-.mobile-menu-overlay a.text-gray-300,
-.mobile-menu-overlay a.text-gray-400 {
-    color: #4a4a4a !important;
-}
-
-.mobile-menu-overlay a.text-gray-300:hover,
-.mobile-menu-overlay a.text-gray-400:hover {
-    color: #b8941f !important;
-    background: rgba(201, 165, 92, 0.1) !important;
-}
-
-/* Yellow/featured text overrides */
-.mobile-menu-overlay a.text-yellow-400 {
-    color: #b8941f !important;
-    font-weight: 600;
 }
