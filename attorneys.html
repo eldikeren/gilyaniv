@@ -899,6 +899,21 @@
             }
         }
 
+        // Sub-category (pillar sub-pages) toggle
+        function toggleSubCategory(subCategoryId, event) {
+            if (event) event.stopPropagation();
+            const subCategory = document.getElementById(subCategoryId);
+            if (!subCategory) return;
+            const button = event ? event.target.closest('button') : null;
+            if (subCategory.classList.contains('hidden')) {
+                subCategory.classList.remove('hidden');
+                if (button) button.textContent = '▲';
+            } else {
+                subCategory.classList.add('hidden');
+                if (button) button.textContent = '▼';
+            }
+        }
+
         // Close dropdowns when clicking outside
         document.addEventListener('click', function(event) {
             const practiceButton = event.target.closest('button[onclick*="practice-dropdown"]');

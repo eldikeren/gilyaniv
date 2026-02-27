@@ -938,6 +938,20 @@
             if (category.classList.contains('hidden')) { category.classList.remove('hidden'); if (icon) icon.classList.add('open'); }
             else { category.classList.add('hidden'); if (icon) icon.classList.remove('open'); }
         }
+        // Sub-category (pillar sub-pages) toggle
+        function toggleSubCategory(subCategoryId, event) {
+            if (event) event.stopPropagation();
+            const subCategory = document.getElementById(subCategoryId);
+            if (!subCategory) return;
+            const button = event ? event.target.closest('button') : null;
+            if (subCategory.classList.contains('hidden')) {
+                subCategory.classList.remove('hidden');
+                if (button) button.textContent = '▲';
+            } else {
+                subCategory.classList.add('hidden');
+                if (button) button.textContent = '▼';
+            }
+        }
         document.addEventListener('click', function(event) {
             const practiceButton = event.target.closest('button[onclick*="practice-dropdown"]');
             const practiceDropdown = document.getElementById('practice-dropdown');
