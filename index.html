@@ -577,7 +577,7 @@
         .mobile-menu-links a {
             display: block;
             padding: 1rem;
-            background: #1a1a1a;
+            background: #2d2d2d;
             color: #b8941f;
             text-decoration: none;
             border-radius: 5px;
@@ -594,7 +594,7 @@
         nav button.mobile-menu-link {
             display: block;
             padding: 1rem;
-            background: #1a1a1a;
+            background: #2d2d2d;
             color: #c9a55c;
             text-decoration: none;
             border-radius: 5px;
@@ -981,16 +981,15 @@
             }
         }
 
-        /* CRITICAL: Force 2nd hierarchy category buttons to be visible */
-        #mobile-practice-dropdown .mb-2>button,
-        .mobile-menu-overlay .mb-2>button,
-        button[onclick*="toggleCategoryDropdown"] {
+        /* Category dropdown styling - Mobile only */
+        .mobile-menu-overlay button[onclick*="toggleCategoryDropdown"],
+        #mobile-practice-dropdown .mb-2>button {
             display: flex !important;
             visibility: visible !important;
             opacity: 1 !important;
             width: 100% !important;
             padding: 0.75rem 1rem !important;
-            background-color: transparent !important;
+            background-color: #2d2d2d !important;
             color: #c9a55c !important;
             border: 1px solid #c9a55c !important;
             border-radius: 0.5rem !important;
@@ -1002,9 +1001,8 @@
             align-items: center !important;
         }
 
-        #mobile-practice-dropdown .mb-2>button span,
-        .mobile-menu-overlay .mb-2>button span,
-        button[onclick*="toggleCategoryDropdown"] span {
+        .mobile-menu-overlay button[onclick*="toggleCategoryDropdown"] span,
+        #mobile-practice-dropdown .mb-2>button span {
             color: #c9a55c !important;
             visibility: visible !important;
             opacity: 1 !important;
