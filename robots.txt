@@ -3,11 +3,20 @@
 
 User-agent: *
 Allow: /
+Disallow: /404.html
 
-# Disallow admin or private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /compress-
+User-agent: AdsBot-Google-Mobile
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: dotbot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
 
 # Sitemap location
 Sitemap: https://www.yanivgil.co.il/sitemap.xml
