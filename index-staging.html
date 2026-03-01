@@ -1027,9 +1027,9 @@
     <main id="main-content" class="pt-24" role="main">
         <!-- Hero Section -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <video poster="images/hero-poster.webp" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" preload="none" loading="lazy">
-                <source src="images/index-compressed.mp4" type="video/mp4">
-                <source src="images/index.mp4" type="video/mp4">
+            <video poster="images/hero-poster.webp" muted loop playsinline class="absolute inset-0 w-full h-full object-cover" preload="none">
+                <source data-src="images/index-compressed.mp4" type="video/mp4">
+                <source data-src="images/index.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
@@ -1794,5 +1794,16 @@
         </a>
     </div>
     <script src="js/conversion-tracking.js" defer></script>
+    <script>
+    window.addEventListener('load', function() {
+      document.querySelectorAll('video source[data-src]').forEach(function(source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        var video = source.parentElement;
+        video.load();
+        video.play().catch(function(){});
+      });
+    });
+    </script>
 </body>
 </html>

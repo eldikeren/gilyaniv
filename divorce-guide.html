@@ -341,8 +341,8 @@
   </div>
         <!-- Hero Section -->
         <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <video poster="images/attorney-poster.webp" autoplay muted loop playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
-                <source src="images/attorney-compressed.mp4" type="video/mp4">
+            <video poster="images/attorney-poster.webp" muted loop playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
+                <source data-src="images/attorney-compressed.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 px-4 md:px-0">
@@ -1002,5 +1002,16 @@
         </a>
     </div>
     <script src="js/conversion-tracking.js" defer></script>
+    <script>
+    window.addEventListener('load', function() {
+      document.querySelectorAll('video source[data-src]').forEach(function(source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        var video = source.parentElement;
+        video.load();
+        video.play().catch(function(){});
+      });
+    });
+    </script>
 </body>
 </html>
