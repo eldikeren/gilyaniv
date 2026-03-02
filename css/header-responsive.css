@@ -151,11 +151,6 @@
         position: absolute;
         top: 100%;
         /* Bottom of the header */
-        right: 0px;
-        /* Aligned to right of content */
-        transform: translateY(-50%);
-        top: 100%;
-        /* Bottom of the header */
         left: 20px;
         /* Positioned on the LEFT as requested */
         transform: translateY(-40%) rotate(-12deg);
