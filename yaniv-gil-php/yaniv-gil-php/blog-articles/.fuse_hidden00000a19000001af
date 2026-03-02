@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בלוג משפטי - עו"ד יניב גיל - מאמרים מקצועיים בנושא פשיטת רגל</title>
+    <meta name="description" content="בלוג משפטי מקצועי של עו״ד יניב גיל - מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד. מידע עדכני ומקצועי לקהל הרחב.">
+    <meta name="keywords" content="פשיטת רגל, חדלות פירעון, עורך דין, יניב גיל, בלוג משפטי, דיני משפחה, הוצאה לפועל, משפטים">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta property="og:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.yanivgil.co.il/blog.html">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta name="twitter:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta name="author" content="עו״ד יניב גיל">
+    <link rel="canonical" href="https://www.yanivgil.co.il/blog.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/new-logo.png">
+    <link rel="apple-touch-icon" href="../images/new-logo.png">
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "בלוג משפטי - עו״ד יניב גיל",
+      "description": "בלוג משפטי מקצועי עם מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד",
+      "url": "https://www.yanivgil.co.il/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "עו״ד יניב גיל",
+        "jobTitle": "עורך דין"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "משרד עו״ד יניב גיל ושות'",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yanivgil.co.il/images/new-logo.png"
+        }
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+        .prose p {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .prose ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .prose li {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .mobile-menu-open {
+            display: flex !important;
+        }
+        .header-content {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        .h-80vh {
+            height: 80vh;
+        }
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 60vh;
+            }
+        }
+        .header-logo {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .header-text-logo {
+            width: 220px; 
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .scrolled .header-logo {
+            height: 40px;
+        }
+        .scrolled .header-text-logo {
+            width: 170px;
+        }
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #c9a55c;
+            color: #1a1a1a;
+        }
+        .filter-btn:hover {
+            background-color: #b8941f;
+            color: white;
+        }
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #b8941f;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-links a:hover {
+            background: #b8941f;
+            color: #1a1a1a;
+        }
+        /* Hide video controls on mobile */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video {
+            pointer-events: none;
+        }
+        </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Article Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <!-- Breadcrumb -->
+                <nav class="mb-6 text-sm text-gray-600">
+                    <a href="../index.html" class="hover:text-[#b8941f]">בית</a>
+                    <span class="mx-2">/</span>
+                    <a href="../blog.html" class="hover:text-[#b8941f]">בלוג</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-800">מבוא להליך פשיטת רגל</span>
+                </nav>
+                
+                <!-- Article Header -->
+                <article class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                    <div class="article-meta mb-6">
+                        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">פשיטת רגל</span>
+                            <span>30 בנובמבר 2024</span>
+                            <span>עו״ד יניב גיל</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#1a1a1a]">מבוא להליך פשיטת רגל</h1>
+                    
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none article-content">
+                        <p class="text-gray-600 mb-4">פשיטת רגל (פשט"ר) היא הליך המופעל כלפי אדם חדל פירעון, כלומר: החייב יותר מכפי שביכולתו לפרוע. מדובר בהליך המרכז את כל פעולות הגביה של כל הנושים מהחייב, בפיקוח בית המשפט המחוזי, באמצעות בעל תפקיד המכונה "נאמן בפשיטת רגל".</p>
+                        
+                        <p>עם פתיחת ההליכים של פשיטת הרגל, לא ניתן לבצע פעולות גביה עצמאיות כגון הוצאה לפועל, כנגד פושט הרגל. משמע: כל פעולות הגביה העצמאיות נעצרות.</p>
+                        
+                        <h3>כונס הנכסים הרשמי</h3>
+                        <p>מי הוא כונס הנכסים הרשמי ומה מידת מעורבותו בהליך? כונס הנכסים הרישמי (הכנ"ר) מעורב בהליך, ומהווה צד לכל פניה, בקשה או הליך שנעשה בבית המשפט, וקשור בפשיטת רגל. מדוע עליו להיות צד? כי מדובר בגוף רשמי מרוחק ולא קשור באופן אישי לחוב (בניגוד לנושים). החלטותיו וניסיונו של הכנ"ר הם חשובים בהליכי פשט"ר.</p>
+                        
+                        <h3>הליך פשיטת הרגל יכול להיפתח</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                            <li>לבקשת נושה / נושים.</li>
+                            <li>לבקשת החייב.</li>
+                        </ul>
+                        
+                        <p>המטרה היא להגיע למצב של הפטר - סוף פסוק להליך פשיטת רגל, שעשוי להינתן לחייב וכך הוא פותח "דף חדש" בחייו.</p>
+                        
+                        <h3>מטרת ההליך</h3>
+                        <p>לגרום לכך שכלל נכסי החייב: יכונסו, ימומשו, ותמורתם (לאחר ניכוי שכרו של הנאמן) תחולק לנושים על פי דיני הקדימה של פקודת פשיטת הרגל (שהם שונים מדיני הקדימה בהוצאה לפועל).</p>
+                        
+                        <p>לאחר מימוש הנכסים או סיום התשלום לנושים, או לאחר שיגיע החייב להסדר מאושר יקבל החייב את האפשרות לסיים את הליכי פשיטת הרגל על ידי כך שיינתן לו צו הפטר, לפיו הוא פטור מכלל חובותיו בעבר.</p>
+                        
+                        <p>ניתן לטעון שיש דמיון בין הליך של "איחוד תיקים" ובין הליך של פשיטת רגל, ואולם יש לזכור: הליכי הוצאה לפועל, הייעוד שלהם הוא גביית החוב. הליכי פשיטת רגל הייעוד שלהם הוא "לשים סוף" להליך - גם אם לא תשולם פרוטה.</p>
+                        
+                        <h3>הליך ההכרזה על פשיטת רגל</h3>
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>נעשה "מעשה פשיטת רגל" (סעיף 5 - הרחבה בהמשך), ע"י החייב או על ידי הנושה.</li>
+                            <li>בית המשפט רשאי להורות על עיכוב הליכים תלויים ועומדים (הליכי ההוצאה לפועל).</li>
+                            <li>ממנים כונס נכסים זמני, ומתקיים דיון ראשוני בבקשה. בעקבות הדיון הבקשה תתקבל או תדחה (בשני המקרים יש ערעור בזכות לצד שמרגיש מקופח).</li>
+                            <li>אם הבקשה התקבלה - מתן צו לכינוס נכסי החייב ופרסומו. תוצאות צו הכינוס האפשריות:
+                                <ul class="list-disc list-inside text-gray-600 ml-6 mt-2 space-y-1">
+                                    <li>עיכוב הליכים. לא ניתן לפתוח בהליכים משפטיים נגד החייב ללא רשות בית המשפט.</li>
+                                    <li>כינוס אסיפת נושים על ידי הכנ"ר.</li>
+                                    <li>הגשת תביעות חוב ע"י הנושים תוך 6 חודשים מיום מתן צו הכינוס</li>
+                                    <li>בית המשפט רשאי לצוות על עיכוב יציאת החייב מהארץ</li>
+                                    <li>הכונס הרשמי מתמנה לכונס נכסי החייב. החייב נחקר על ידו, ומוגשת חוות דעתו בדבר ממצאי החקירה: 15 ימים לפני הדיון בבקשת פשט"ר.</li>
+                                </ul>
+                            </li>
+                            <li>דיון בבקשת פשיטת הרגל (לאחר 6 חודשים לפחות מיום מתן צו הכינוס). תוצאות אפשריות לדיון:
+                                <ul class="list-disc list-inside text-gray-600 ml-6 mt-2 space-y-1">
+                                    <li>דחיית הבקשה על ידי בית המשפט.</li>
+                                    <li>דחיית ההחלטה על מנת לאפשר לחייב להסדיר חובותיו בדרך של פשרה / הסדר.</li>
+                                    <li>הכרזה על החייב כפושט רגל.</li>
+                                </ul>
+                            </li>
+                            <li>אם הוכרז החייב כפושט רגל, קיימות מספר תוצאות להכרזה:
+                                <ul class="list-disc list-inside text-gray-600 ml-6 mt-2 space-y-1">
+                                    <li>הודעה על הכרזת פשיטת הרגל תפורסם ברשומות ובעיתון יומי.</li>
+                                    <li>מינוי הכונס הרשמי כנאמן עד למינוי הנאמן. לאחר מינוי הנאמן, נכסי פושט הרגל עוברים לשליטתו לנאמן.</li>
+                                    <li>פושט הרגל אינו רשאי לייסד תאגיד או להיות בעל עניין בו ללא אישור הנאמן או בית המשפט.</li>
+                                    <li>פושט הרגל הופך לקוח מוגבל מיוחד בבנק.</li>
+                                    <li>פושט הרגל לא רשאי לעשות שימוש בכרטיס חיוב ללא אישור הנאמן.</li>
+                                </ul>
+                            </li>
+                            <li>מתן הפטר / הפטר מותנה / ביטול פשיטת רגל ללא הפטר.</li>
+                        </ol>
+                        
+                        <h3>בקשה למתן צו כינוס והכרזת פשיטת רגל</h3>
+                        <p>ההליך מתחיל בבקשה לבית המשפט, בין מטעם החייב ובין מטעם הנושה, למתן צו לכינוס נכסי החייב. מדובר בשלב שבו מכנסים את הנכסים יחד, על מנת שיהיה ניתן לפעול בהם. הצו נועד להגן על נכסי החייב מפני הנושים שרוצים לפעול עצמאית, וכן להגן על הנכסים מפני החייב עצמו שלא יעשה בהם "מעשי מרמה".</p>
+                        
+                        <h3>אסיפת נושים</h3>
+                        <p>לאחר שניתן צו הכינוס, הכנ"ר מכנס אסיפה של נושי החייב. באסיפה מחליטים הנושים בדבר המשכו של ההליך, ומציעים אדם שישמש כנאמן. בהתאם להחלטת האסיפה מוגשת לבית המשפט בקשה להכרזת החייב כפושט רגל, ולמינוי הנאמן.</p>
+                        
+                        <h3>נאמן - סעיף 45 לפקודה</h3>
+                        <p>הנאמן הוא זרועו הארוכה של מערכת המשפט. הנאמן בודק את נסיבות פשיטת הרגל, בוחן אם הוברחו נכסים. אם הנאמן מצא נכסים שהוברחו הוא פועל להשבתם לקופת הכינוס, פועל למימוש הנכסים, מכריע בתביעות החוב של הנושים, פועל לחלוקה בין הנושים - תפקידיו על פי הפקודה רבים. את כל תפקידיו מבצע הנאמן בפיקוח בית המשפט, ולכן כל הבקשות שמגיש הנאמן לבית המשפט הן למעשה "בקשות למתן הוראות".</p>
+                        
+                        <p><strong>הערה:</strong> נאמן שרוצה להבטיח עצמו מפני תביעות רשלנות ישתמש רבות בבקשה למתן הוראות.</p>
+                        
+                        <h3>פשרה או הסדר</h3>
+                        <p>הרעיון הוא: החייב ישלם אחוז מסוים של חובותיו שעליו מסכימים (או נאלצים להסכים) הנושים.</p>
+                        
+                        <h3>מיהו חייב?</h3>
+                        <p><strong>סעיף 2 לפקודת פשט"ר קובע:</strong></p>
+                        <p>(א) חייב, לעניין פקודה זו, הוא אדם בן שמונה עשרה שנה ומעלה, ללא הבדל אזרחות ובין שמקום מושבו בישראל ובין שלא בישראל, אשר בזמן שהוא עשה, או שנעשה לו, מעשה פשיטת רגל נתקיימה בו אחת מאלה:</p>
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>הוא עצמו היה בישראל;</li>
+                            <li>היה גר בישראל או היה לו בה מקום מגורים;</li>
+                            <li>ניהל עסקים בישראל, בעצמו או על ידי מורשה או מנהל;</li>
+                            <li>היה חבר בחבר-בני-אדם או בשותפות שניהלו עסקים בישראל.</li>
+                        </ol>
+                        <p>(ב) אף מי שלא מלאו לו שמונה עשרה שנים יכול שיהיה בגדר חייב אם נתקיימו בו שאר התנאים לכך האמורים בסעיף קטן (א) ואם לדעת בית המשפט סביר הוא שהנושים נשאו ונתנו עמו כאילו מלאו לו שמונה-עשרה שנים.</p>
+                        
+                        <p>כלומר, חייב הוא:</p>
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>אדם בן 18, או אדם שסביר שהנושים חשבו שהוא בן 18 (אדם ולא תאגיד).</li>
+                            <li>שקיים בו אחד מארבעת התנאים המנויים בסעיף (א) בעניין זיקה לישראל.</li>
+                            <li>שעשה או נעשה לו "מעשה פשיטת רגל".</li>
+                        </ol>
+                        
+                        <p>קרי. לצורך הגדרת חייב אנו צריכים לבדוק מהו "מעשה פשיטת רגל".</p>
+                        
+                        <p><strong>הערה:</strong> פשיטת רגל, לא בתאגיד - על פי סעיף 9 לפקודה: לא תוגש בקשת פשיטת רגל נגד תאגיד או חבר בני אדם שניתן לפרקם לפי פקודת החברות או לפי פקודת האגודות השיתופיות.</p>
+                        
+                        <h3>מעשה פשיטת רגל - סעיף 5 לפקודה קובע</h3>
+                        <p>מעשה פשיטת רגל הוא לחייב, אם עשה או נעשתה לו אחת מאלה:</p>
+                        
+                        <p>(1) בישראל או במקום אחר –</p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                            <li>(א) נתן נכס מנכסיו מתנת מרמה או העבירו העברת מרמה;</li>
+                            <li>(ב) העביר או שעבד נכס מנכסיו העברה או שעבוד, שאילו נעשו כשהוא מוכרז פושט רגל היו בטלים משום העדפת מרמה לפי כל דין תקף אותה שעה;</li>
+                        </ul>
+                        
+                        <p>(2) בכוונה להתחמק מנושיו או לדחותם הוא עשה אחת מאלה:</p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                            <li>(א) יצא את הארץ, או בהיותו בחוץ לארץ נשאר שם;</li>
+                            <li>(ב) עזב את בית מגוריו, או הוקיר רגליו ממקום עסקיו או מגוריו הרגיל, או התחמק ממקום אחר שבו מצוי נושה;</li>
+                            <li>(ג) התבודד כדי שלא יוכלו נושיו להתקשר עמו;</li>
+                        </ul>
+                        
+                        <p>(3) עוקל נכס מנכסיו ונמכר בהוצאה לפועל על פי צו בית משפט;</p>
+                        <p>(4) הגיש לבית המשפט הצהרה שאינו יכול לשלם את חובותיו, או בקשה שיוכרז פושט רגל לפי הוראות פקודה זו;</p>
+                        <p>(5) הודיע לנושה מנושיו כי הפסיק, או עומד להפסיק, לשעה או לצמיתות, לשלם את חובו;</p>
+                        <p>(6) לא מילא אחר הדרישות שבהתראת פשיטת רגל לפי פקודה זו תוך שבעה ימים לאחר שהומצאה לו בישראל, או תוך הזמן שנקבע לכך בצו בית המשפט שהתיר את ההמצאה אם הומצאה בחוץ לארץ, ולא הניח את דעת בית המשפט כי יש לו תביעה שכנגד או קיזוז או דרישה שכנגד שאינם פחותים מסך החוב הפסוק ושלא היה בידו לעוררם בתובענה שניתן בה פסק הדין; לעניין זה, "חוב פסוק" – לרבות סכום שניתן צו חלוט לשלמו, ו"תובענה" – לרבות הליכים שבהם ניתן הצו.</p>
+                        
+                        <p>כלומר, מעשה פשיטת רגל הוא אחד מהבאים:</p>
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>הברחת נכסים במרמה (נתן מתנת מרמה, העדיף נושה העדפת מרמה וכו')</li>
+                            <li>מתחמק מנושיו בדרכים שונות (ברח מהארץ, עבר לכתובת אחרת, התבודד במערה...)</li>
+                            <li>עוקל נכס מנכסיו ונמכר בהוצאה לפועל על פי צו בית משפט.</li>
+                            <li>פעולה מיוזמתו של החייב: הגיש לבית משפט הצהרה שאינו יכול לשלם, או הגיש בקשה לפשיטת רגל.</li>
+                            <li>הודיע לנושה כי הוא מפסיק לשלם.</li>
+                            <li>לא מילא אחר הדרישות שבהתראת פשיטת רגל לפי פקודה זו תוך שבעה ימים לאחר שהומצאה לו בישראל, ולא הוכיח שיש לו תביעה שכנגד לקיזוז החוב.</li>
+                        </ol>
+                        
+                        <p>סעיף קטן 6 מתייחס לדרישות שבהתראת פשיטת רגל. מהן? לצורך מתן תשובה על כך עלינו לבדוק בסעיף נוסף בחוק:</p>
+                        
+                        <h3>התראת פשיטת רגל מהי - סעיף 3 לפקודה קובע</h3>
+                        <p>נושה שהשיג נגד חייב פסק דין חלוט לתשלום סכום כסף, והוצאתו לפועל לא עוכבה כדין, זכאי לבקש להמציא לחייב בישראל, או ברשות בית המשפט בחוץ לארץ, התראת פשיטת רגל; לעניין התראת פשיטת רגל –</p>
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>יראו את מי שזכאי אותה שעה לאכוף פסק דין חלוט כמי שהשיגו;</li>
+                            <li>"פסק דין חלוט" – לרבות צו חלוט, ולרבות שטר חליפין, שטר חוב ושיק שהוגשו לביצוע ללשכת ההוצאה לפועל לפי סעיף 81א לחוק ההוצאה לפועל, תשכ"ז-1967, ולא הגיש החייב התנגדות לביצועם או שהתנגדותו נדחתה בפסק דין חלוט או בהחלטה חלוטה.</li>
+                        </ol>
+                        
+                        <h3>תכנה של התראת פשיטת רגל - סעיף 4 לפקודה קובע</h3>
+                        <p>(א) בהתראת פשיטת רגל יידרש החייב לשלם את החוב הפסוק בהתאם להוראות פסק דין חלוט, או להבטיחו או להתפשר עליו להנחת דעתו של הנושה או דעת בית המשפט.</p>
+                        <p>(ב) התראת פשיטת רגל תהיה בטופס שנקבע ותומצא בדרך שנקבעה.</p>
+                        <p>(ג) בהתראת פשיטת רגל אפשר לציין מורשה שיפעל מטעם הנושה לעניין תשלום או דבר אחר שנדרש למסור לנושה או לעשות להנחת דעתו.</p>
+                        <p>(ד) לא יראו התראה כנטולת תוקף מחמת זאת בלבד שהנקוב בה כסכום מגיע עולה על הסכום המגיע למעשה, אלא אם תוך הזמן הניתן לתשלום הודיע החייב לנושה שהוא חולק על תקפות ההתראה על סמך הטעות האמורה; אולם אם החייב לא הודיע כך לנושה יראו כאילו מילא אחרי התראת פשיטת הרגל אם תוך הזמן שניתן הוא נקט אמצעים שהיו מביאים למילויה אילו היה נקוב בה הסכום המגיע למעשה.</p>
+                        
+                        <p>כלומר: לאחר שיש בידי הנושה פסק דין חלוט, יכול הוא לבקש להמציא לחייב התראת פשיטת רגל. הפרוצדורה מפורטת בתקנות פשיטת הרגל -</p>
+                        
+                        <h3>המצאת התראת פשיטת רגל - תקנה 3 קובעת</h3>
+                        <p>בקשה להמצאה של התראת פשיטת רגל לחייב תוגש לבית המשפט (המחוזי) בשני עותקים לפי טופס 1; לבקשה יצורפו התראה לפי טופס 2 והעתק פסק הדין החלוט לתשלום החוב הנתבע.</p>
+                        
+                        <h3>המועד להמצאה - תקנה 4 קובעת</h3>
+                        <p>ההתראה תומצא לחייב בידי פקיד בית המשפט או בידי הנושה או בא כוחו, תוך חודש ימים מיום שאישר בית המשפט את המצאתה. לא ניתן להמציא את האזהרה מבלי לקבל את אישור בית המשפט להמצאתה.</p>
+                        
+                        <h3>התנגדות להתראה - תקנה 5 קובעת</h3>
+                        <p>(א) לפני תום המועד שנקבע בהתראה לתשלום החוב, רשאי החייב להגיש לבית המשפט התנגדות להתראה; ההתנגדות תוגש לפי טופס 3 ותאומת בתצהיר; בית המשפט ידון בהתראה בנוכחות הצדדים.</p>
+                        <p>(ב) כל עוד לא החליט בית המשפט בהתנגדות, לא יהיה באי-מילוי אחר דרישת ההתראה, מעשה פשיטת רגל.</p>
+                        
+                        <p>מחלוקת האם בכלל ניתן היה להגיש התראה. על מחלוקת זו חל הדין הרגיל, בו הצדדים הניצים מגיעים לבית המשפט על מנת לדון בשאלה: האם יאשר בית המשפט את ההמצאה? כל עוד לא החליט בית המשפט בהתנגדות, לא יהיה באי-מילוי אחר דרישות ההתראה, מעשה פשיטת רגל. אם ההתנגדות נדחית, זהו תחילתו של הליך פשיטת הרגל.</p>
+                    </div>
+                    
+                    <!-- Back to Blog Link -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <a href="../blog.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-medium transition-colors">
+                            ← חזרה לבלוג
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Script for the shrinking header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when clicking outside
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function(e) {
+                    if (e.target === mobileMenu) {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

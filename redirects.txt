@@ -1,0 +1,142 @@
+# Redirect Mapping for yanivgil.co.il
+# Generated: 2026-02-23
+#
+# Format: OLD_URL -> NEW_URL (or GONE for 410 status)
+# These are 404 URLs from Google Search Console that need redirects
+#
+# ============================================================
+# CATEGORY 1: Old URLs missing .html extension
+# ============================================================
+/divorce -> /divorce.html
+/mortgage -> /blog-articles/mortgage-execution.html
+
+# ============================================================
+# CATEGORY 2: Old Hebrew transliterated URLs (Wix legacy)
+# ============================================================
+/kones-nechasim -> /blog-articles/receivership-order-request.html
+/ikul-ikulmekarkeien -> /blog-articles/seizure-real-estate.html
+/teviaa-schom-kazov -> /blog-articles/fixed-amount-claims.html
+/hozaalapoalaw -> /execution.html
+/hozaalapoal-2 -> /blog-articles/execution-law-other-laws.html
+/paraati -> /insolvency.html
+/piruk-havarot -> /insolvency.html
+/pshara -> /blog-articles/compromise-after-bankruptcy.html
+/seder-din-ezrachi -> /blog-articles/uniform-civil-procedure.html
+/siruv-get -> /sarvanut-get-agunot.html
+/irur-phshitat-regel -> /blog-articles/bankruptcy-appeals.html
+/civilianmarriage -> /blog-articles/civil-marriage-israel.html
+/civilprocedure -> /blog-articles/uniform-civil-procedure.html
+/hapter -> /discharge.html
+/hapter-1 -> /discharge.html
+/ikuv-yeziaa -> /travel-restriction.html
+
+# ============================================================
+# CATEGORY 3: Old numbered bankruptcy pages
+# ============================================================
+/bankruptcy-1 -> /bankruptcy.html
+/bankruptcy-2 -> /bankruptcy.html
+/bankruptcy-3 -> /bankruptcy.html
+/bankruptcy-limitation -> /discharge.html
+
+# ============================================================
+# CATEGORY 4: Removed/renamed pages
+# ============================================================
+/about.html -> /attorneys.html
+
+# ============================================================
+# CATEGORY 5: Wrong folder paths (blog-articles/ mistakes)
+# ============================================================
+/blog-articles/practice-areas.html -> /practice-areas.html
+/blog-articles/attorneys.html -> /attorneys.html
+/blog-articles/blog.html -> /blog.html
+/blog-articles/index.html -> /index.html
+
+# ============================================================
+# CATEGORY 6: Hebrew encoded URLs
+# ============================================================
+/blog-articles/%D7%94%D7%A4%D7%98%D7%A8-%D7%91%D7%A4%D7%A9.html -> /discharge.html
+
+# ============================================================
+# CATEGORY 7: Wix system junk URLs (should return 410 GONE)
+# ============================================================
+/_api/common-services/notification/invoke -> GONE
+/bolt-performance -> GONE
+
+
+# ============================================================
+# .htaccess Implementation (Apache)
+# ============================================================
+#
+# Add this to your .htaccess file:
+#
+# RewriteEngine On
+#
+# # 301 Redirects for old URLs
+# RewriteRule ^divorce$ /divorce.html [R=301,L]
+# RewriteRule ^mortgage$ /blog-articles/mortgage-execution.html [R=301,L]
+# RewriteRule ^kones-nechasim$ /blog-articles/receivership-order-request.html [R=301,L]
+# RewriteRule ^ikul-ikulmekarkeien$ /blog-articles/seizure-real-estate.html [R=301,L]
+# RewriteRule ^teviaa-schom-kazov$ /blog-articles/fixed-amount-claims.html [R=301,L]
+# RewriteRule ^hozaalapoalaw$ /execution.html [R=301,L]
+# RewriteRule ^hozaalapoal-2$ /blog-articles/execution-law-other-laws.html [R=301,L]
+# RewriteRule ^paraati$ /insolvency.html [R=301,L]
+# RewriteRule ^piruk-havarot$ /insolvency.html [R=301,L]
+# RewriteRule ^pshara$ /blog-articles/compromise-after-bankruptcy.html [R=301,L]
+# RewriteRule ^seder-din-ezrachi$ /blog-articles/uniform-civil-procedure.html [R=301,L]
+# RewriteRule ^siruv-get$ /sarvanut-get-agunot.html [R=301,L]
+# RewriteRule ^irur-phshitat-regel$ /blog-articles/bankruptcy-appeals.html [R=301,L]
+# RewriteRule ^civilianmarriage$ /blog-articles/civil-marriage-israel.html [R=301,L]
+# RewriteRule ^civilprocedure$ /blog-articles/uniform-civil-procedure.html [R=301,L]
+# RewriteRule ^hapter$ /discharge.html [R=301,L]
+# RewriteRule ^hapter-1$ /discharge.html [R=301,L]
+# RewriteRule ^ikuv-yeziaa$ /travel-restriction.html [R=301,L]
+# RewriteRule ^bankruptcy-1$ /bankruptcy.html [R=301,L]
+# RewriteRule ^bankruptcy-2$ /bankruptcy.html [R=301,L]
+# RewriteRule ^bankruptcy-3$ /bankruptcy.html [R=301,L]
+# RewriteRule ^bankruptcy-limitation$ /discharge.html [R=301,L]
+# RewriteRule ^about\.html$ /attorneys.html [R=301,L]
+# RewriteRule ^blog-articles/practice-areas\.html$ /practice-areas.html [R=301,L]
+# RewriteRule ^blog-articles/attorneys\.html$ /attorneys.html [R=301,L]
+# RewriteRule ^blog-articles/blog\.html$ /blog.html [R=301,L]
+# RewriteRule ^blog-articles/index\.html$ /index.html [R=301,L]
+#
+# # 410 Gone for Wix system junk
+# RewriteRule ^_api/ - [G,L]
+# RewriteRule ^bolt-performance - [G,L]
+
+
+# ============================================================
+# Netlify _redirects Implementation
+# ============================================================
+#
+# Add this to your _redirects file:
+#
+# /divorce /divorce.html 301
+# /mortgage /blog-articles/mortgage-execution.html 301
+# /kones-nechasim /blog-articles/receivership-order-request.html 301
+# /ikul-ikulmekarkeien /blog-articles/seizure-real-estate.html 301
+# /teviaa-schom-kazov /blog-articles/fixed-amount-claims.html 301
+# /hozaalapoalaw /execution.html 301
+# /hozaalapoal-2 /blog-articles/execution-law-other-laws.html 301
+# /paraati /insolvency.html 301
+# /piruk-havarot /insolvency.html 301
+# /pshara /blog-articles/compromise-after-bankruptcy.html 301
+# /seder-din-ezrachi /blog-articles/uniform-civil-procedure.html 301
+# /siruv-get /sarvanut-get-agunot.html 301
+# /irur-phshitat-regel /blog-articles/bankruptcy-appeals.html 301
+# /civilianmarriage /blog-articles/civil-marriage-israel.html 301
+# /civilprocedure /blog-articles/uniform-civil-procedure.html 301
+# /hapter /discharge.html 301
+# /hapter-1 /discharge.html 301
+# /ikuv-yeziaa /travel-restriction.html 301
+# /bankruptcy-1 /bankruptcy.html 301
+# /bankruptcy-2 /bankruptcy.html 301
+# /bankruptcy-3 /bankruptcy.html 301
+# /bankruptcy-limitation /discharge.html 301
+# /about.html /attorneys.html 301
+# /blog-articles/practice-areas.html /practice-areas.html 301
+# /blog-articles/attorneys.html /attorneys.html 301
+# /blog-articles/blog.html /blog.html 301
+# /blog-articles/index.html /index.html 301
+# /_api/* /404.html 410
+# /bolt-performance* /404.html 410

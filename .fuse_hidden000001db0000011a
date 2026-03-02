@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גישור גירושין ומשפחתי | עו"ד יניב גיל ושות' - תל אביב</title>
+    <meta name="description" content="גישור גירושין ומשפחתי בתל אביב - פתרון סכסוכים בדרך מכובדת ויעילה. גישור מול ליטיגציה, הסכמי גישור. עו״ד יניב גיל. לייעוץ: 03-6092414">
+    <meta name="keywords" content="גישור גירושין, גישור משפחתי, מגשר גירושין, גישור מול ליטיגציה, גישור בתל אביב, עורך דין גישור">
+    <meta property="og:title" content="גישור גירושין ומשפחתי | עו״ד יניב גיל">
+    <meta property="og:description" content="גישור גירושין ומשפחתי בתל אביב - פתרון סכסוכים בדרך מכובדת ויעילה. גישור מול ליטיגציה, הסכמי גישור.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yanivgil.co.il/mediation.html">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <link rel="canonical" href="https://www.yanivgil.co.il/mediation.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "גישור גירושין ומשפחתי - משרד עו״ד יניב גיל",
+      "description": "שירותי גישור גירושין ומשפחתי בתל אביב - פתרון סכסוכים ללא התדיינות משפטית",
+      "url": "https://www.yanivgil.co.il/mediation.html",
+      "telephone": "+972-3-6092414",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "דרך מנחם בגין 150, קומה 7",
+        "addressLocality": "תל אביב",
+        "addressCountry": "IL"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "תל אביב"},
+        {"@type": "City", "name": "רמת גן"},
+        {"@type": "AdministrativeArea", "name": "גוש דן"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "מהו גישור משפחתי?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "גישור משפחתי הוא הליך חלופי ליישוב סכסוכים שבו מגשר ניטרלי ומוסמך מסייע לבני הזוג להגיע להסכמות בנושאי גירושין, משמורת, מזונות וחלוקת רכוש. הגישור מתנהל בדרך מכובדת, חסויה ויעילה יותר מהליך משפטי."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה היתרונות של גישור מול הליך משפטי?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "היתרונות העיקריים כוללים: חיסכון משמעותי בעלויות, הליך קצר יותר (שבועות במקום חודשים או שנים), שמירה על יחסים תקינים בין הצדדים (חשוב במיוחד כשיש ילדים), גמישות בפתרונות, חיסיון ההליך, ושליטה של הצדדים בתוצאה."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "כמה זמן לוקח הליך גישור?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "הליך גישור ממוצע כולל 4-8 פגישות של כשעה וחצי כל אחת, ונמשך בין חודש לשלושה חודשים. זה משמעותית קצר יותר מהליך משפטי שיכול להימשך שנה ויותר."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם הסכם גישור מחייב משפטית?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "הסכם שנוסח בגישור הופך למחייב משפטית לאחר שמקבל תוקף של פסק דין בבית המשפט לענייני משפחה. מומלץ שכל צד ייוועץ בעורך דין לפני חתימה על ההסכם כדי לוודא שזכויותיו נשמרות."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מתי גישור לא מתאים?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "גישור אינו מתאים במקרים של אלימות במשפחה, חוסר שוויון מהותי בכוחות בין הצדדים, סירוב של אחד הצדדים לשתף פעולה, או כאשר יש חשש להסתרת נכסים. במקרים אלו, הליך משפטי מעניק הגנה טובה יותר."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        /* CRITICAL: Force content within viewport on mobile */
+        html {
+            overflow-x: hidden !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        body {
+            overflow-x: hidden !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            position: relative !important;
+        }
+        * {
+            box-sizing: border-box !important;
+            max-width: 100vw;
+        }
+
+        body { font-family: 'Heebo', sans-serif; direction: rtl; }
+        
+        
+        
+        
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+        }
+        .mobile-menu-content {
+            padding: 2rem;
+            padding-top: 4rem;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #c9a55c;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .mobile-menu-links a:hover {
+            background: #c9a55c;
+            color: #1a1a1a;
+        }
+        /* Accessibility floating button */
+        .accessibility-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background: #005fcc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .accessibility-btn:hover {
+            background: #004499;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+        .accessibility-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+        @media (max-width: 768px) {
+            .accessibility-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .accessibility-btn svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        /* Footer text visibility fix */
+        footer, footer * {
+            color: #d1d5db !important;
+        }
+        footer h3, footer h4 {
+            color: #ffffff !important;
+        }
+        footer a:hover {
+            color: #c9a55c !important;
+        }
+        /* Content styling */
+        .content-section {
+            margin-bottom: 2rem;
+        }
+        .content-section h3 {
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-right: 4px solid #c9a55c;
+            padding-right: 1rem;
+        }
+        .content-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .content-section ul {
+            list-style-type: disc;
+            padding-right: 1.5rem;
+            color: #4a5568;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        /* Desktop dropdown styles */
+        #practice-dropdown {
+            scrollbar-width: thin;
+            scrollbar-color: #c9a55c #f3f4f6;
+        }
+        #practice-dropdown::-webkit-scrollbar {
+            width: 6px;
+        }
+        #practice-dropdown::-webkit-scrollbar-track {
+            background: #f3f4f6;
+            border-radius: 3px;
+        }
+        #practice-dropdown::-webkit-scrollbar-thumb {
+            background: #c9a55c;
+            border-radius: 3px;
+        }
+        .category-icon {
+            transition: transform 0.2s ease;
+        }
+        .category-icon.open {
+            transform: rotate(180deg);
+        }
+
+/* Mobile: Hide floating buttons and progress bar */
+        @media (max-width: 768px) { .whatsapp-float, .call-float, .accessibility-btn, .reading-progress { display: none !important; } }
+    </style>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "בית",
+      "item": "https://www.yanivgil.co.il/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "דיני משפחה",
+      "item": "https://www.yanivgil.co.il/family-law.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "גישור"
+    }
+  ]
+}
+    </script>
+    
+      <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/faq-accordion.css">
+    <link rel="stylesheet" href="css/floating-buttons.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/header-responsive.css">
+      <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/mobile-cta-bar.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html">
+                    <img src="images/new-logo.png" alt="לוגו משרד עו״ד יניב גיל" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="משרד עו״ד יניב גיל ושות׳" class="header-text-logo">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="תפריט ראשי">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="index.html" title="דף הבית" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בית</a></li>
+                    <li><a href="index.html#about" title="אודות המשרד" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">אודות המשרד</a></li>
+                    <li><a href="attorneys.html" title="עורכי דין" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">עורכי דין</a></li>
+                    <li class="relative group">
+                        <button onclick="toggleNavDropdown('practice-dropdown')" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">
+                            תחומי התמחות
+                            <span class="mr-2 text-xs">▼</span>
+                        </button>
+                        <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2" style="max-height: calc(100vh - 120px); overflow-y: auto; overflow-x: hidden;">
+                            <!-- דיני משפחה - Collapsible -->
+                            <div class="border-b border-gray-200">
+                                <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">דיני משפחה</h4>
+                                    <span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span>
+                                </button>
+                                <div id="category-family" class="hidden">
+                                    <a href="divorce-guide.html" class="block px-4 py-2 pr-8 text-sm text-yellow-700 font-bold hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">המדריך המלא לגירושין</a>
+                                    <a href="divorce.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גירושין</a>
+                                    <a href="divorce-agreements.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי גירושין</a>
+                                    <a href="property-agreements.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסכמי ממון</a>
+                                    <a href="child-custody.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">משמורת ילדים</a>
+                                    <a href="visitation-rights.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">זמני שהות</a>
+                                    <a href="child-support.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות ילדים</a>
+                                    <a href="spousal-support.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מזונות אישה</a>
+                                    <a href="guardianship.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">אפוטרופסות</a>
+                                    <a href="property-division.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">חלוקת רכוש</a>
+                                    <a href="mediation.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">גישור משפחתי</a>
+                                    <a href="faq.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">שאלות נפוצות</a>
+                                </div>
+                            </div>
+                            <!-- ירושות וצוואות - Collapsible -->
+                            <div class="border-b border-gray-200 mt-2">
+                                <button onclick="toggleCategoryDropdown('category-inheritance', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4>
+                                    <span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span>
+                                </button>
+                                <div id="category-inheritance" class="hidden">
+                                    <a href="will-writing.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עריכת צוואה</a>
+                                    <a href="inheritance-order.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו ירושה</a>
+                                    <a href="will-probate.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">צו קיום צוואה</a>
+                                    <a href="estate-management.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ניהול עיזבון</a>
+                                    <a href="will-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצוואה</a>
+                                    <a href="inheritance-contest.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">התנגדות לצו ירושה</a>
+                                </div>
+                            </div>
+                            <!-- חדלות פירעון והוצאה לפועל - Collapsible -->
+                            <div class="border-b border-gray-200 mt-2">
+                                <button onclick="toggleCategoryDropdown('category-bankruptcy', event)" class="w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">חדלות פירעון והוצאה לפועל</h4>
+                                    <span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span>
+                                </button>
+                                <div id="category-bankruptcy" class="hidden">
+                                    <a href="bankruptcy.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">חדלות פירעון / פשיטת רגל</a>
+                                    <a href="execution.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הוצאה לפועל</a>
+                                    <a href="case-consolidation.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">איחוד תיקים</a>
+                                    <a href="travel-restriction.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">עיכוב יציאה מהארץ</a>
+                                    <a href="debt-cancellation.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">מחיקת חובות</a>
+                                    <a href="lien-cancellation.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">ביטול עיקולים</a>
+                                    <a href="debt-arrangements.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">הסדרי חוב</a>
+                                    <a href="discharge.html" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors duration-200 text-right">קבלת הפטר</a>
+                                </div>
+                            </div>
+                            <!-- דיני חוזים ודיני מקרקעין - Direct Link (No Collapse) -->
+                            <div class="border-b border-gray-200 mt-2">
+                                <a href="practice-areas.html#civil-law" class="block w-full px-4 py-2 flex items-center justify-between text-right hover:bg-gray-50 transition-colors duration-200">
+                                    <h4 class="font-bold text-[#1a1a1a] text-sm">דיני חוזים ודיני מקרקעין</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="articles.html" title="פרסומים מקצועיים" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">פרסומים מקצועיים</a></li>
+                    <li><a href="blog.html" title="בלוג" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="contact.html" title="צור קשר" class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-4 py-2 text-sm font-medium text-[#c9a55c] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a] focus:outline-none focus:ring-0">צור קשר</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none" aria-label="פתח תפריט">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+            <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="flex justify-between items-center p-6 border-b">
+            <div class="flex items-center gap-2">
+                <a href="index.html" title="דף הבית">
+                    <img src="images/new-logo.png" alt="לוגו משרד עו״ד יניב גיל" class="h-10 w-auto">
+                </a>
+                <a href="index.html" title="דף הבית">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="משרד עו״ד יניב גיל ושות׳" class="h-8 w-auto">
+                </a>
+            </div>
+            <button id="close-mobile-menu" class="text-gray-500 hover:text-gray-700 min-w-[48px] min-h-[48px] flex items-center justify-center" aria-label="סגור תפריט נייד">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="p-6">
+            <ul class="space-y-4">
+                <li><a href="index.html" title="דף הבית" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">בית</a></li>
+                <li><a href="index.html#about" title="אודות המשרד" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">אודות המשרד</a></li>
+                <li><a href="attorneys.html" title="עורכי דין" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">עורכי דין</a></li>
+                <li>
+                    <button onclick="toggleNavDropdown('mobile-practice-dropdown')" class="block w-full text-right text-lg" style="background: #1a1a1a; color: #c9a55c; border: none; cursor: pointer; padding: 1rem; text-align: right; font-size: 1.125rem; line-height: 1.75rem;">תחומי התמחות <span style="margin-right: 0.5rem;">▼</span></button>
+                    <div id="mobile-practice-dropdown" class="hidden w-full mt-2" style="background: #2a2a2a; padding: 1rem; border-radius: 8px;">
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-family', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">דיני משפחה</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
+                            </button>
+                            <div id="mobile-category-family" class="hidden mt-2 pr-4">
+                                <a href="divorce-guide.html" class="block py-2 px-4 text-sm text-yellow-400 font-bold hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">המדריך המלא לגירושין</a>
+                                <a href="divorce.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
+                                <a href="divorce-agreements.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי גירושין</a>
+                                <a href="property-agreements.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסכמי ממון</a>
+                                <a href="child-custody.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">משמורת ילדים</a>
+                                <a href="visitation-rights.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">זמני שהות</a>
+                                <a href="child-support.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות ילדים</a>
+                                <a href="spousal-support.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מזונות אישה</a>
+                                <a href="guardianship.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-inheritance', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">ירושות וצוואות</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
+                            </button>
+                            <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
+                                <a href="will-writing.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת צוואה</a>
+                                <a href="inheritance-order.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו ירושה</a>
+                                <a href="will-probate.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו קיום צוואה</a>
+                                <a href="estate-management.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול עיזבון</a>
+                                <a href="will-contest.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצוואה</a>
+                                <a href="inheritance-contest.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות לצו ירושה</a>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 12px; display: block !important; visibility: visible !important;">
+                            <button onclick="toggleCategoryDropdown('mobile-category-bankruptcy', event)" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; background-color: #1a1a1a !important; color: #c9a55c !important; border: 2px solid #c9a55c !important; border-radius: 8px !important; padding: 14px 16px !important; font-size: 16px !important; font-weight: bold !important; text-align: right !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important;">
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">חדלות פירעון והוצאה לפועל</span>
+                                <span style="color: #c9a55c !important; visibility: visible !important; opacity: 1 !important;">▼</span>
+                            </button>
+                            <div id="mobile-category-bankruptcy" class="hidden mt-2 pr-4">
+                                <a href="bankruptcy.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">חדלות פירעון / פשיטת רגל</a>
+                                <a href="execution.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הוצאה לפועל</a>
+                                <a href="case-consolidation.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">איחוד תיקים</a>
+                                <a href="travel-restriction.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עיכוב יציאה מהארץ</a>
+                                <a href="debt-cancellation.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מחיקת חובות</a>
+                                <a href="lien-cancellation.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ביטול עיקולים</a>
+                                <a href="debt-arrangements.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסדרי חוב</a>
+                                <a href="discharge.html" class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">קבלת הפטר</a>
+                            </div>
+                        </div>
+                        <!-- דיני חוזים ודיני מקרקעין - Direct Link (No Collapse) -->
+                        <div class="mb-2">
+                            <a href="practice-areas.html#civil-law" class="block w-full text-right py-3 px-4 text-white font-bold text-base bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                דיני חוזים ודיני מקרקעין
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="articles.html" title="פרסומים מקצועיים" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">פרסומים מקצועיים</a></li>
+                <li><a href="blog.html" title="בלוג" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">בלוג</a></li>
+                <li><a href="contact.html" title="צור קשר" class="block text-lg text-gray-800 hover:text-[#b8941f] transition-colors duration-200 mobile-menu-link">צור קשר</a></li>
+            </ul>
+            <div class="mt-8">
+                <a class="block w-full text-center py-3 px-4 bg-[#1a1a1a] text-[#b8941f] border border-[#b8941f] rounded-full hover:bg-[#b8941f] hover:text-[#1a1a1a] transition-colors duration-200" href="tel:0548184581" title="התקשר 054-8184581">התקשר עכשיו</a>
+            </div>
+        </nav>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">גישור גירושין ומשפחתי</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">פתרון סכסוכים בדרך מכובדת, יעילה וחסכונית</p>
+            <div class="mt-8">
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#c9a55c] bg-[#c9a55c] px-8 py-4 text-lg font-bold text-[#1a1a1a] shadow-lg transition-all duration-300 hover:bg-transparent hover:text-[#c9a55c]">
+                    לייעוץ ראשוני חינם
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-100 py-3" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center gap-2 text-sm text-gray-600">
+                <li><a href="index.html" class="hover:text-[#c9a55c] transition-colors">בית</a></li>
+                <li>/</li>
+                <li><a href="family-law.html" class="hover:text-[#c9a55c] transition-colors">דיני משפחה</a></li>
+                <li>/</li>
+                <li class="text-gray-900 font-medium">גישור גירושין ומשפחתי</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-16">
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><a href="family-law.html">דיני משפחה</a></li>
+        <li><span aria-current="page">גישור</span></li>
+      </ol>
+    </nav>
+  </div>
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+
+                <div class="content-section">
+                    <h3>מהו גישור משפחתי?</h3>
+                    <p>גישור משפחתי הוא הליך חלופי ליישוב סכסוכים (ADR) שבו מגשר ניטרלי, מוסמך ומקצועי, מסייע לבני זוג או לבני משפחה להגיע להסכמות הדדיות בנושאים שונים הנוגעים לגירושין ולחיי המשפחה. בניגוד להליך משפטי שבו שופט מכריע עבור הצדדים, בגישור הצדדים עצמם הם שמגיעים להחלטות ולהסכמות, תוך ליווי וסיוע מקצועי של המגשר.</p>
+                    <p>הגישור המשפחתי מוכר בחוק הישראלי ומעוגן בתקנות בתי המשפט (גישור), התשנ"ג-1993. בשנים האחרונות חלה עלייה משמעותית בפופולריות של הגישור כחלופה להתדיינות משפטית, וזאת בזכות היתרונות הרבים שהוא מציע לכל הצדדים המעורבים. בתי המשפט לענייני משפחה אף מעודדים באופן פעיל את הצדדים לנסות גישור לפני ניהול הליכים משפטיים.</p>
+                    <p>במסגרת הגישור ניתן להסדיר את כל הסוגיות הקשורות לגירושין: חלוקת רכוש ונכסים, משמורת ילדים וזמני שהות, מזונות ילדים ומזונות אישה, חלוקת זכויות פנסיוניות וסוציאליות, והסדרת כל עניין נוסף שבני הזוג מבקשים להסדיר ביניהם.</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>גישור מול ליטיגציה – יתרונות וחסרונות</h3>
+                    <p>בעת קבלת החלטה כיצד לנהל הליך גירושין, חשוב להבין את ההבדלים המהותיים בין גישור לבין הליך משפטי (ליטיגציה). לכל אחת מהדרכים יתרונות וחסרונות, והבחירה הנכונה תלויה בנסיבות הספציפיות של כל מקרה.</p>
+                    <p><strong>יתרונות הגישור:</strong></p>
+                    <ul>
+                        <li><strong>חיסכון כספי משמעותי</strong> – עלות הגישור נמוכה משמעותית מעלויות ניהול הליך משפטי. בעוד שהליך גירושין בבית המשפט יכול לעלות עשרות אלפי שקלים לכל צד, הגישור עולה לרוב פחות משמעותית.</li>
+                        <li><strong>חיסכון בזמן</strong> – הליך גישור ממוצע נמשך חודש עד שלושה חודשים, לעומת הליך משפטי שיכול להימשך שנה ואף יותר.</li>
+                        <li><strong>שמירה על מערכת יחסים תקינה</strong> – הגישור מאפשר לבני הזוג לשמור על יחסים מכובדים, דבר חשוב במיוחד כאשר יש ילדים משותפים ונדרש שיתוף פעולה הורי לאורך שנים.</li>
+                        <li><strong>חיסיון מלא</strong> – כל מה שנאמר במהלך הגישור חסוי ואינו יכול לשמש כראיה בבית המשפט, מה שמאפשר לצדדים לדבר בחופשיות ובכנות.</li>
+                        <li><strong>גמישות בפתרונות</strong> – בגישור ניתן להגיע לפתרונות יצירתיים ומותאמים אישית שבית המשפט אינו יכול להציע.</li>
+                        <li><strong>שליטה בתוצאה</strong> – הצדדים שולטים בתהליך ובתוצאות, במקום להשאיר את ההחלטה בידי שופט שאינו מכיר את המשפחה מקרוב.</li>
+                    </ul>
+                    <p><strong>מתי הליך משפטי עדיף על גישור:</strong></p>
+                    <ul>
+                        <li><strong>אלימות במשפחה</strong> – כאשר קיימת אלימות פיזית, נפשית או כלכלית, הגישור אינו מתאים כיוון שאין שוויון אמיתי בין הצדדים.</li>
+                        <li><strong>חוסר שוויון קיצוני בכוחות</strong> – כאשר צד אחד שולט באופן מוחלט על הצד השני, הליך משפטי מעניק הגנה טובה יותר לצד החלש.</li>
+                        <li><strong>חשש להסתרת נכסים</strong> – כאשר יש חשד שצד אחד מסתיר נכסים או מידע כלכלי, בית המשפט מספק כלים חקירתיים שאינם קיימים בגישור.</li>
+                        <li><strong>סירוב לשתף פעולה</strong> – גישור דורש נכונות משני הצדדים. אם צד אחד מסרב לשתף פעולה בתום לב, הליך משפטי הוא הדרך היחידה להתקדם.</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>תהליך הגישור שלב אחר שלב</h3>
+                    <p>הליך הגישור המשפחתי הוא תהליך מובנה ומסודר, המורכב ממספר שלבים ברורים:</p>
+                    <ul>
+                        <li><strong>שלב 1 – פגישה ראשונית:</strong> הפגישה הראשונה מוקדשת להיכרות עם המגשר, הסבר מפורט על תהליך הגישור, כללי ההתנהגות והחיסיון. המגשר מוודא שהצדדים מבינים את מהות ההליך ומסכימים להשתתף בו מרצונם החופשי. בשלב זה נחתם הסכם גישור שמגדיר את מסגרת העבודה.</li>
+                        <li><strong>שלב 2 – מיפוי הסוגיות:</strong> המגשר מזהה את כל הנושאים שיש להסדיר בין הצדדים: רכוש, ילדים, מזונות, מגורים, זכויות פנסיוניות, חובות וכל עניין רלוונטי אחר. כל נושא מתועד ומסודר לפי סדרי עדיפויות שהצדדים קובעים יחד.</li>
+                        <li><strong>שלב 3 – דיון ומשא ומתן:</strong> זהו השלב המרכזי בגישור, שבו הצדדים דנים בכל סוגיה ומחפשים פתרונות מוסכמים. המגשר מנחה את הדיון, מוודא שכל צד מביע את עמדתו, ועוזר להציע חלופות יצירתיות. לעיתים נערכים גם מפגשים נפרדים עם כל צד (קוקוסים) כדי לקדם את ההסכמות.</li>
+                        <li><strong>שלב 4 – גיבוש הסכמות:</strong> לאחר שהצדדים הגיעו להסכמות בכל הנושאים, המגשר מסייע בניסוח הסכם מפורט ומקיף שמשקף את כל ההסכמות. מומלץ שכל צד יעביר את ההסכם לבדיקה של עורך דין עצמאי לפני החתימה.</li>
+                        <li><strong>שלב 5 – אישור משפטי:</strong> ההסכם שגובש בגישור מוגש לבית המשפט לענייני משפחה לצורך מתן תוקף של פסק דין. לאחר שבית המשפט מאשר את ההסכם, הוא הופך למחייב משפטית ואכיף ככל פסק דין אחר.</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>מגשר גירושין בתל אביב</h3>
+                    <p>משרד עו"ד יניב גיל ושות' מציע שירותי גישור גירושין ומשפחתי מקצועיים ואיכותיים מהמשרד בתל אביב. הצוות המשפטי שלנו כולל עורכי דין ועורכות דין בעלי הסמכה כמגשרים, עם ניסיון רב בליווי זוגות ומשפחות בהליכי גישור מורכבים.</p>
+                    <p>הגישה שלנו לגישור מבוססת על הקשבה, כבוד הדדי ומקצועיות. אנו מאמינים שגם בזמנים קשים ניתן להגיע לפתרונות הוגנים ומאוזנים, תוך שמירה על כבוד הצדדים ועל טובת הילדים. הניסיון המשפטי הרחב של צוות המשרד בתחום דיני המשפחה מאפשר לנו לסייע בהסדרת כל הסוגיות המשפטיות באופן מקיף ומעמיק.</p>
+                    <p>המשרד ממוקם במגדל WE-TLV בדרך מנחם בגין 150, קומה 7, תל אביב, ומשרת לקוחות מכל אזור גוש דן, כולל רמת גן, גבעתיים, בני ברק, חולון, בת ים, הרצליה, רעננה ועוד. אנו מספקים סביבה נעימה, מכבדת ודיסקרטית לקיום מפגשי הגישור.</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>ישיבות הסכמים משפחתיות</h3>
+                    <p>מעבר לגישור גירושין, משרדנו מציע שירות של ישיבות הסכמים משפחתיות – מפגשים מקצועיים שבהם בני משפחה יכולים להגיע להסכמות בנוגע לסכסוכים שונים, בליווי מקצועי ובסביבה בטוחה ומכבדת.</p>
+                    <p>ישיבות הסכמים מתאימות למגוון רחב של סכסוכים משפחתיים, ולא רק לגירושין. הן יכולות לסייע במקרים של סכסוכי ירושה בין אחים, חילוקי דעות בנוגע לטיפול בהורה מבוגר, סכסוכים על רכוש משפחתי משותף, הסדרת יחסים כלכליים בין בני משפחה, וכל מחלוקת משפחתית אחרת הדורשת פתרון.</p>
+                    <p>היתרון המרכזי של ישיבות ההסכמים הוא שהן מאפשרות לפתור סכסוכים בתוך המשפחה מבלי להגיע לבית המשפט, תוך שמירה על מערכת היחסים המשפחתית. ליווי מקצועי של עורך דין המתמחה בדיני משפחה מבטיח שההסכמות יהיו הוגנות, חוקיות וניתנות לאכיפה.</p>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="mt-12 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-[#1a1a1a]" style="border-right: 4px solid #c9a55c; padding-right: 1rem;">שאלות נפוצות בנושא גישור גירושין ומשפחתי</h2>
+                    <div class="space-y-4">
+                        <details class="bg-white rounded-lg shadow p-4 cursor-pointer">
+                            <summary class="font-semibold text-lg text-[#1a1a1a]">מהו גישור משפחתי?</summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">גישור משפחתי הוא הליך חלופי ליישוב סכסוכים שבו מגשר ניטרלי ומוסמך מסייע לבני הזוג להגיע להסכמות בנושאי גירושין, משמורת, מזונות וחלוקת רכוש. הגישור מתנהל בדרך מכובדת, חסויה ויעילה יותר מהליך משפטי.</p>
+                        </details>
+                        <details class="bg-white rounded-lg shadow p-4 cursor-pointer">
+                            <summary class="font-semibold text-lg text-[#1a1a1a]">מה היתרונות של גישור מול הליך משפטי?</summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">היתרונות העיקריים כוללים: חיסכון משמעותי בעלויות, הליך קצר יותר (שבועות במקום חודשים או שנים), שמירה על יחסים תקינים בין הצדדים (חשוב במיוחד כשיש ילדים), גמישות בפתרונות, חיסיון ההליך, ושליטה של הצדדים בתוצאה.</p>
+                        </details>
+                        <details class="bg-white rounded-lg shadow p-4 cursor-pointer">
+                            <summary class="font-semibold text-lg text-[#1a1a1a]">כמה זמן לוקח הליך גישור?</summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">הליך גישור ממוצע כולל 4-8 פגישות של כשעה וחצי כל אחת, ונמשך בין חודש לשלושה חודשים. זה משמעותית קצר יותר מהליך משפטי שיכול להימשך שנה ויותר.</p>
+                        </details>
+                        <details class="bg-white rounded-lg shadow p-4 cursor-pointer">
+                            <summary class="font-semibold text-lg text-[#1a1a1a]">האם הסכם גישור מחייב משפטית?</summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">הסכם שנוסח בגישור הופך למחייב משפטית לאחר שמקבל תוקף של פסק דין בבית המשפט לענייני משפחה. מומלץ שכל צד ייוועץ בעורך דין לפני חתימה על ההסכם כדי לוודא שזכויותיו נשמרות.</p>
+                        </details>
+                        <details class="bg-white rounded-lg shadow p-4 cursor-pointer">
+                            <summary class="font-semibold text-lg text-[#1a1a1a]">מתי גישור לא מתאים?</summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">גישור אינו מתאים במקרים של אלימות במשפחה, חוסר שוויון מהותי בכוחות בין הצדדים, סירוב של אחד הצדדים לשתף פעולה, או כאשר יש חשש להסתרת נכסים. במקרים אלו, הליך משפטי מעניק הגנה טובה יותר.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="bg-gray-100 rounded-xl p-8 mt-12 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">זקוקים לייעוץ משפטי מקצועי?</h3>
+                    <p class="text-gray-600 mb-6">צוות המשרד ישמח לעמוד לרשותכם ולסייע בכל שאלה</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:0548184581" class="inline-flex items-center justify-center rounded-full bg-[#1a1a1a] px-6 py-3 text-[#c9a55c] font-medium hover:bg-[#c9a55c] hover:text-[#1a1a1a] transition-colors">
+                            054-8184581
+                        </a>
+                        <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-[#1a1a1a] px-6 py-3 text-[#1a1a1a] font-medium hover:bg-[#1a1a1a] hover:text-white transition-colors">
+                            השאירו פרטים
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Pages -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">תחומים נוספים שעשויים לעניין אתכם</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a href="family-law.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">דיני משפחה</span>
+                        </a>
+                        <a href="divorce.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">גירושין</span>
+                        </a>
+                        <a href="divorce-agreements.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">הסכמי גירושין</span>
+                        </a>
+                        <a href="child-custody.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">משמורת ילדים</span>
+                        </a>
+                        <a href="property-division.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">חלוקת רכוש בגירושין</span>
+                        </a>
+                        <a href="faq.html" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                            <span class="text-[#c9a55c] font-medium">שאלות נפוצות</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Services Section -->
+    <section class="py-12 bg-gray-50" aria-labelledby="related-services">
+        <div class="container mx-auto px-4">
+            <h2 id="related-services" class="text-2xl font-bold text-gray-900 mb-6 text-center">שירותים נוספים בתחום דיני משפחה</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <a href="divorce.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">גירושין</span></a>
+                <a href="child-custody.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">משמורת ילדים</span></a>
+                <a href="child-support.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">מזונות ילדים</span></a>
+                <a href="property-division.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">חלוקת רכוש</span></a>
+                <a href="divorce-agreements.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">הסכמי גירושין</span></a>
+                <a href="mediation.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">גישור משפחתי</span></a>
+                <a href="family-law.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">דיני משפחה</span></a>
+                <a href="divorce-guide.html" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center"><span class="block font-semibold text-gray-800 hover:text-[#b8941f]">מדריך גירושין</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">המשרד</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                        <li><a href="index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                        <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                        <li><a href="practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                        <li><a href="articles.html" class="hover:text-[#b8941f] transition-colors duration-200">מאמרים</a></li>
+                        <li><a href="blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                        <li><a href="contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">תחומי התמחות</h3>
+                    <ul class="space-y-2">
+                        <li><a href="family-law.html" class="hover:text-[#b8941f] transition-colors duration-200">דיני משפחה</a></li>
+                        <li><a href="inheritance-wills.html" class="hover:text-[#b8941f] transition-colors duration-200">ירושות וצוואות</a></li>
+                        <li><a href="insolvency.html" class="hover:text-[#b8941f] transition-colors duration-200">חדלות פירעון</a></li>
+                        <li><a href="practice-areas.html#civil-law" class="hover:text-[#b8941f] transition-colors duration-200">דיני מקרקעין</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">יצירת קשר</h3>
+                    <div class="space-y-4">
+                        <p><strong>טלפון:</strong><br><a href="tel:03-6092414" class="hover:text-[#b8941f]">03-6092414</a></p>
+                        <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-[#b8941f]">054-8184581</a></p>
+                        <p><strong>פקס:</strong><br>03-6092413</p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-[#b8941f]">yanivgil@gmail.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">כתובת</h3>
+                    <p>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
+                    <p class="mt-4">
+                        <a href="https://www.facebook.com/people/%D7%99%D7%A0%D7%99%D7%91-%D7%92%D7%99%D7%9C-%D7%95%D7%A9%D7%95%D7%AA-%D7%9E%D7%A9%D7%A8%D7%93-%D7%A2%D7%95%D7%93/100063695315034/" target="_blank" rel="noopener" class="hover:text-[#b8941f] transition-colors duration-200">עקבו אחרינו בפייסבוק</a>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <div class="flex flex-col items-center md:items-start">
+                    <p>&copy; 2026 משרד עו״ד יניב גיל. כל הזכויות שמורות.</p>
+                    <p class="mt-1">האתר נבנה ע"י <a href="https://eladdigital.vercel.app/" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#b8941f] transition-colors">Eladdigital</a></p>
+                </div>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-[#b8941f] transition-colors duration-200">מדיניות פרטיות</a>
+                    <a href="terms-of-use.html" class="hover:text-[#b8941f] transition-colors duration-200">תנאי שימוש</a>
+                    <a href="accessibility.html" class="hover:text-[#b8941f] transition-colors duration-200">הצהרת נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-xl', 'scrolled');
+                header.classList.remove('py-6', 'shadow-md');
+            } else {
+                header.classList.remove('py-3', 'shadow-xl', 'scrolled');
+                header.classList.add('py-6', 'shadow-md');
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu when clicking a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+
+
+        // Desktop navigation dropdown functionality
+        function toggleNavDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (!dropdown) return;
+
+            // Close all other dropdowns first
+            const allDropdowns = document.querySelectorAll('[id$="-dropdown"]');
+            allDropdowns.forEach(dd => {
+                if (dd.id !== dropdownId) {
+                    dd.classList.add('hidden');
+                }
+            });
+
+            // Toggle current dropdown
+            const isHidden = dropdown.classList.contains('hidden');
+            if (isHidden) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+
+        // Desktop category dropdown functionality (nested collapse)
+        function toggleCategoryDropdown(categoryId, event) {
+            if (event) event.stopPropagation();
+            const category = document.getElementById(categoryId);
+            if (!category) return;
+
+            // Find the button that triggered this
+            const button = event ? event.target.closest('button') : null;
+            const icon = button ? button.querySelector('.category-icon') : null;
+
+            // Toggle category
+            if (category.classList.contains('hidden')) {
+                category.classList.remove('hidden');
+                if (icon) icon.classList.add('open');
+            } else {
+                category.classList.add('hidden');
+                if (icon) icon.classList.remove('open');
+            }
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            const practiceButton = event.target.closest('button[onclick*="practice-dropdown"]');
+            const practiceDropdown = document.getElementById('practice-dropdown');
+            const mobileButton = event.target.closest('button[onclick*="mobile-practice-dropdown"]');
+            const mobileDropdown = document.getElementById('mobile-practice-dropdown');
+
+            if (!practiceButton && practiceDropdown && !practiceDropdown.contains(event.target)) {
+                practiceDropdown.classList.add('hidden');
+            }
+
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+    </script>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <!-- Floating Call Button -->
+    <a href="tel:0548184581" title="התקשר עכשיו" class="call-float" aria-label="התקשר 054-8184581">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" title="שלח WhatsApp" class="whatsapp-float" target="_blank" rel="noopener" aria-label="שלח WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="חזרה לראש הדף" title="חזרה למעלה">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <!-- Accessibility Button -->
+    <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות" title="הצהרת נגישות">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+    </a>
+
+    <script src="js/back-to-top.js"></script>
+    <script src="js/progress-bar.js"></script>
+  <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0548184581" class="cta-call" aria-label="התקשר עכשיו">
+            <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+            התקשר עכשיו
+        </a>
+        <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+    <script src="js/conversion-tracking.js" defer></script>
+</body>
+</html>

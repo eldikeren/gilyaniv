@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פנייתך התקבלה – עו"ד יניב גיל</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px 20px;
+            background: #fafafa;
+            margin: 0;
+        }
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 480px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        a {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 20px;
+            background: #1d4ed8;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        a:hover {
+            background: #1e40af;
+        }
+        .whatsapp-link {
+            background: #25D366;
+        }
+        .whatsapp-link:hover {
+            background: #20BA5A;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>✅ פנייתך התקבלה!</h1>
+        <p>תודה רבה על פנייתך.<br>
+        עו"ד יניב גיל יחזור אליך <strong>בקרוב</strong>.<br><br>
+        במידה ודחוף – ניתן ליצור קשר גם ב-WhatsApp.</p>
+        <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" target="_blank" rel="noopener" class="whatsapp-link">שליחת הודעה ב-WhatsApp</a>
+        <br><br>
+        <a href="index.html">חזרה לעמוד הבית</a>
+    </div>
+</body>
+</html>
+

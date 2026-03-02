@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בלוג משפטי - עו"ד יניב גיל - מאמרים מקצועיים בנושא פשיטת רגל</title>
+    <meta name="description" content="בלוג משפטי מקצועי של עו״ד יניב גיל - מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד. מידע עדכני ומקצועי לקהל הרחב.">
+    <meta name="keywords" content="פשיטת רגל, חדלות פירעון, עורך דין, יניב גיל, בלוג משפטי, דיני משפחה, הוצאה לפועל, משפטים">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta property="og:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.yanivgil.co.il/blog.html">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta name="twitter:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta name="author" content="עו״ד יניב גיל">
+    <link rel="canonical" href="https://www.yanivgil.co.il/blog.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/new-logo.png">
+    <link rel="apple-touch-icon" href="../images/new-logo.png">
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "בלוג משפטי - עו״ד יניב גיל",
+      "description": "בלוג משפטי מקצועי עם מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד",
+      "url": "https://www.yanivgil.co.il/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "עו״ד יניב גיל",
+        "jobTitle": "עורך דין"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "משרד עו״ד יניב גיל ושות'",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yanivgil.co.il/images/new-logo.png"
+        }
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+        .prose p {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .prose ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .prose li {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .mobile-menu-open {
+            display: flex !important;
+        }
+        .header-content {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        .h-80vh {
+            height: 80vh;
+        }
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 60vh;
+            }
+        }
+        .header-logo {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .header-text-logo {
+            width: 220px; 
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .scrolled .header-logo {
+            height: 40px;
+        }
+        .scrolled .header-text-logo {
+            width: 170px;
+        }
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #c9a55c;
+            color: #1a1a1a;
+        }
+        .filter-btn:hover {
+            background-color: #b8941f;
+            color: white;
+        }
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #b8941f;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-links a:hover {
+            background: #b8941f;
+            color: #1a1a1a;
+        }
+        /* Hide video controls on mobile */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video {
+            pointer-events: none;
+        }
+        </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Article Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <!-- Breadcrumb -->
+                <nav class="mb-6 text-sm text-gray-600">
+                    <a href="../index.html" class="hover:text-[#b8941f]">בית</a>
+                    <span class="mx-2">/</span>
+                    <a href="../blog.html" class="hover:text-[#b8941f]">בלוג</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-800">סדר הדין האחיד לכל הסמכויות השיפוטיות</span>
+                </nav>
+                
+                <!-- Article Header -->
+                <article class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                    <div class="article-meta mb-6">
+                        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">סדר דין אזרחי</span>
+                            <span>14 בדצמבר 2024</span>
+                            <span>עו״ד יניב גיל</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#1a1a1a]">סדר הדין האחיד לכל הסמכויות השיפוטיות</h1>
+                    
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none article-content">
+                        <p class="text-gray-600 mb-4"><strong>תקנות ההוצל"פ - תקנה 27א, הגשת בקשה לפי סעיפים 19, 25, 48, או 58 לחוק ודיון בה תק' תשס"ט-2009</strong>, קובעת: הגשת בקשה לפי סעיפים 19, 25, 48 או 58 לחוק, ודיון בה יהיו בדרך הקבועה בפרק כ' לתקנות סדר הדין, בשינויים המחויבים, ואולם רשם ההוצאה לפועל רשאי לסטות מסדרי הדין האמורים אם מצא כי הדבר יועיל להכרעה צודקת ויעילה בהליך, וכן רשאי הוא לדחות את הבקשה בלי שקיים דיון.</p>
+                        
+                        <p><strong>פרק כ' לתקנות סדר הדין הוא הפרק בעניין בקשות בכתב (תקנות 240-246).</strong></p>
+                        
+                        <p>מכיוון שמדובר בשיקול דעת, התקנה קובעת:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                            <li>ניתן לסטות מסדרי הדין האמורים (דוגמה: הרשם יכול לקחת מהחייב בקשה בלי תצהיר, כי לחייב אין כסף לערוך תצהיר, ואז יחקר על דוכן העדים). כלומר: רשם ההוצל"פ יכול לסטות, ולעשות פעולות שהן לא בדיוק לפי סדא.</li>
+                            <li>הרשם יכול לדחות בקשה בלי לקיים דיון (זה עניין שלא קורה במקומות אחרים מבחינה שיפוטית, 460ב).</li>
+                        </ul>
+                        
+                        <h3>הכרעה בטענת פרעתי</h3>
+                        <p>רשם ההוצאה לפועל יכול לקבוע אם ובאיזה מידה מוטל על החייב לבצע את פסק הדין.</p>
+                        
+                        <p><strong>סעיף 19 (ב) קובע:</strong> החליט רשם ההוצאה לפועל להורות על עיכוב ביצועו של פסק הדין, יצווה על הפקדת ערובה להבטחת קיום פסק הדין, זולת אם החליט, בהתחשב בנסיבות העניין, שלא לצוות כן.</p>
+                        
+                        <p>כלומר: אם הרשם רואה שיש טעם לעכב את פסק הדין, הוא רשאי להורות על עיכוב הביצוע עד שיכריע בטענת הפרעתי. ועוד: אם יש החלטה לעכב ביצוע, יצווה הרשם על החייב להפקיד ערובה לשם הבטחת ביצוע פסק הדין.</p>
+                        
+                        <p><strong>סעיף 19 (ג) קובע:</strong> דחה רשם ההוצאה לפועל את טענת החייב, יטיל עליו הוצאות מיוחדות אם מצא יסוד לטענתו.</p>
+                        
+                        <p>אם רשם ההוצל"פ דוחה את טענת פרעתי, הוא יכול להטיל על החייב הוצאות מיוחדות אם מצא שלא יסוד לטענתו של החייב (הוצאות מיוחדות זה כמה מאות שקלים).</p>
+                        
+                        <h3>גביית יתר והחזרתה</h3>
+                        <p><strong>סעיף 20 לחוק הוצל"פ קובע:</strong></p>
+                        
+                        <p>(א) כל סכום שנגבה מהחייב מעל לחוב הפסוק ישולם לחייב, ואם נמסר לזוכה, רשאי רשם ההוצאה לפועל לצוות על החזרתו; הצו ניתן להוצאה לפועל כאילו היה פסק דין לטובת החייב נגד הזוכה.</p>
+                        
+                        <p>(ב) שולם סכום כסף בטעות, תוך כדי הליכי הוצאה לפועל, רשאי רשם ההוצאה לפועל, לפי בקשת צד המעוניין, לתת צו לתיקון הטעות; צו כאמור ניתן להוצאה לפועל כאילו היה פסק דין.</p>
+                        
+                        <p>סעיף 20 תוקן לאחרונה, ומשמעותו: כל סכום שנגבה ביתר יוחזר לחייב. הצו ניתן כאילו היה פסק דין נגד הזוכה. דוגמה: אדם היה חייב חצי מיליון ₪. חנותו נמכרה במיליון ₪, והזוכה לקח את כל הכסף - זוהי גביית יתר והחייב (לשעבר) יכול לפתוח הליך נגד הזוכה - ולהפוך אותו לחייב.</p>
+                        
+                        <h3>העמדת נאמן</h3>
+                        <p>זוהי טענה נוספת שהרשם דן בה - חיוב נאמן בתשלום החוב הפסוק. <strong>סעיף 24 קובע:</strong></p>
+                        
+                        <p>(א) מנהל לשכת ההוצאה לפועל רשאי להעמיד אדם שהסכים לכך להיות נאמן על שמירת המיטלטלין המעוקלים, ואם היו בעלי חיים - גם על הזנתם, ולמסור את המיטלטלין לידי מנהל לשכת ההוצאה לפועל באופן, במועד ובמקום שיורה על כך בהודעה שתימסר לנאמן; הוצאותיו ושכרו של הנאמן כאמור יהיו לפי המוסכם בינו לבין מנהל לשכת ההוצאה לפועל, ובאין הסכם - כפי שיקבע רשם ההוצאה לפועל.</p>
+                        
+                        <p>(ב) מנהל לשכת ההוצאה לפועל רשאי להעמיד את החייב עצמו, אף אם לא הסכים לכך נאמן על המיטלטלין, שיהא חייב בכל החובות האמורות בסעיף קטן (א) אך לא יהא זכאי לשכר, ולא להוצאות זולת לפי החלטת רשם ההוצאה לפועל.</p>
+                        
+                        <p>נאמן - מי שבא במקום החייב, להשגיח על הנכסים או הכספים. נאמן יכול להיות גם החייב עצמו. אם הנאמן מבצע את הפעולות "נכון ועל פי ההוראות" (ואכן, ההליך הכי נפוץ הינו "בקשה למתן הוראות", שבעקבותיה בית המשפט או הרשם נותן הוראה), אז הוא לא יעמוד ב"סכנה" של החזר החוב. אם הנאמן מפשל (<strong>סעיף 25</strong>) הוא יצטרך לשלם:</p>
+                        
+                        <p><strong>סעיף 25 קובע:</strong></p>
+                        
+                        <p>(א) נאמן אשר ללא הצדק סביר לא מילא חובה מחובותיו לפי סעיף 24, רשאי רשם ההוצאה לפועל לחייבו בתשלום החוב הפסוק, כולו או מקצתו, במידה שלא שילמו לחייב או שלא נגבה בהליכים לפי חוק זה, ובלבד שחיוב זה לא יעלה על שווי המיטלטלין שהועמד נאמן עליהם.</p>
+                        
+                        <p>(ב) לעניין ההוצאה לפועל, דין החלטת רשם ההוצאה לפועל לפי סעיף זה כדין פסק דין.</p>
+                        
+                        <p>(ג) אין בסעיף זה כדי לגרוע מאחריותו הפלילית או האזרחית של הנאמן על פי כל דין.</p>
+                        
+                        <p>מבחינת סדרי הדין, זה כמו סדר הדין בטענת פרעתי.</p>
+                        
+                        <h3>הטלת עיקול על נכסי צד ג'</h3>
+                        <p><strong>סעיף 43 קובע:</strong> רשם ההוצאה לפועל רשאי לצוות על עיקול כלל נכסי החייב או על עיקול נכס מסויים מנכסיו הנמצאים בידי צד שלישי.</p>
+                        
+                        <p><strong>סעיף 44 קובע:</strong></p>
+                        
+                        <p>(א) צו עיקול בידי צד שלישי על כלל נכסי החייב יחול על נכסי החייב הנמצאים בידי הצד השלישי ביום המצאת הצו או שיגיעו לידו תוך שלושה חדשים מאותו יום.</p>
+                        
+                        <p>(ב) הומה הצו לצד השלישי, יוגש למנהל לשכת ההוצאה לפועל תוך עשרה ימים מהמצאת הצו והודעה המפרטת את נכסי החייב הנמצאים בידו ביום המצאת הצו או על פי ידיעתו יגיעו לידו תוך שלושה חדשים מאותו יום.</p>
+                        
+                        <p>(ג) הגיע לידי הצד השלישי נכס מנכסי החייב תוך שלושה חדשים מהמצאת הצו, יודיע על כך למנהל לשכת ההוצאה לפועל תוך עשרה ימים מהיום שהנכס הגיע לידו.</p>
+                        
+                        <p>אפשר לעקל נכס מסוים. למשל: המעוקל הוא הבנק. מטילים עיקול ב- 1/3.2014 - כל הכסף שנמצא בבנק באותו יום, וכל כסף שיכנס לחשבון ב-90 יום הבאים - יעוקל.</p>
+                        
+                        <h3>חיובו של צד ג' – סעיף 48 קובע:</h3>
+                        
+                        <p>(א) צד שלישי אשר ללא הצדק סביר לא עשה כאמור בסעיף 47, או הוציא מידו נכס או שילם חוב שלא כדין בידעו שיש עליו צו עיקול בידי צד שלישי, רשאי רשם ההוצאה לפועל לחייבו בתשלום החוב הפסוק במידה שלא שילמו החייב, ובלבד שחיוב זה לא יעלה על שווי הנכס הנדון או על סכום החוב הנדון.</p>
+                        
+                        <p>(ב) לעניין ההוצאה לפועל, דין החלטת רשם ההוצאה לפועל לפי סעיף זה כדין פסק דין.</p>
+                        
+                        <p>(ג) אין בהוראות סעיף זה כדי לגרוע מאחריותו של הצד השלישי על פי כל דין.</p>
+                    </div>
+                    
+                    <!-- Back to Blog Link -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <a href="../blog.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-medium transition-colors">
+                            ← חזרה לבלוג
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Script for the shrinking header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when clicking outside
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function(e) {
+                    if (e.target === mobileMenu) {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

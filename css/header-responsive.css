@@ -27,12 +27,15 @@
     .header-logo {
         height: 45px;
     }
+
     .header-text-logo {
         width: 160px;
     }
+
     .scrolled .header-logo {
         height: 35px;
     }
+
     .scrolled .header-text-logo {
         width: 130px;
     }
@@ -43,12 +46,15 @@
     .header-logo {
         height: 50px;
     }
+
     .header-text-logo {
         width: 180px;
     }
+
     .scrolled .header-logo {
         height: 38px;
     }
+
     .scrolled .header-text-logo {
         width: 150px;
     }
@@ -59,12 +65,15 @@
     .header-logo {
         height: 55px;
     }
+
     .header-text-logo {
         width: 200px;
     }
+
     .scrolled .header-logo {
         height: 42px;
     }
+
     .scrolled .header-text-logo {
         width: 165px;
     }
@@ -75,12 +84,15 @@
     .header-logo {
         height: 40px;
     }
+
     .header-text-logo {
         width: 140px;
     }
+
     .scrolled .header-logo {
         height: 32px;
     }
+
     .scrolled .header-text-logo {
         width: 120px;
     }
@@ -91,12 +103,15 @@
     .header-logo {
         height: 52px;
     }
+
     .header-text-logo {
         width: 190px;
     }
+
     .scrolled .header-logo {
         height: 40px;
     }
+
     .scrolled .header-text-logo {
         width: 160px;
     }
@@ -107,13 +122,38 @@
     .header-logo {
         height: 35px;
     }
+
     .header-text-logo {
         width: 120px;
     }
+
     .scrolled .header-logo {
         height: 28px;
     }
+
     .scrolled .header-text-logo {
         width: 100px;
+    }
+}
+
+/* Duns & Bradstreet Seal Styles */
+.duns-seal {
+    height: 75px;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+.scrolled .duns-seal {
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .duns-seal {
+        height: 55px;
+    }
+
+    .scrolled .duns-seal {
+        height: 40px;
     }
 }

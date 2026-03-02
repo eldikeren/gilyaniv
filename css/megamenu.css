@@ -1,0 +1,112 @@
+/* Professional Megamenu for Practice Areas */
+
+/* Desktop Megamenu Container */
+#practice-dropdown {
+    width: 650px !important;
+    max-width: 90vw;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border: 1px solid rgba(201, 165, 92, 0.2);
+}
+
+/* Scrollbar Customization */
+#practice-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+#practice-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#practice-dropdown::-webkit-scrollbar-thumb {
+    background: #c9a55c;
+    border-radius: 10px;
+}
+
+#practice-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #b8941f;
+}
+
+/* Category Grid Layout */
+.megamenu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Category Header */
+.category-header {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.category-header h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0C1220;
+    margin: 0;
+}
+
+/* Menu Items */
+.menu-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin: 4px -12px;
+    border-radius: 6px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.menu-item-link:hover {
+    background: rgba(201, 165, 92, 0.08);
+    color: #c9a55c;
+}
+
+/* Pillar Group Styling */
+.pillar-group {
+    margin-bottom: 8px;
+}
+
+/* The arrow link (replacement for bulky squares) */
+.arrow-link {
+    font-size: 1.1rem;
+    color: #c9a55c;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: all 0.2s ease;
+}
+
+.menu-item-link:hover .arrow-link {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Featured Guide Style */
+.featured-link {
+    color: #c9a55c !important;
+    font-weight: 700 !important;
+    background: #faf7ef !important;
+}
+
+/* Mobile specific overrides to maintain usability */
+@media (max-width: 768px) {
+    #practice-dropdown {
+        width: 100% !important;
+        max-width: none !important;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    .megamenu-grid {
+        display: block;
+    }
+}

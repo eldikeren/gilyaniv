@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>404 - הדף לא נמצא | עו"ד יניב גיל</title>
+    <meta name="description" content="הדף שחיפשת לא נמצא. חזור לאתר משרד עו״ד יניב גיל ושות׳">
+    <meta property="og:title" content="404 - הדף לא נמצא | עו״ד יניב גיל">
+    <meta property="og:description" content="הדף שחיפשת לא נמצא. חזור לאתר משרד עו״ד יניב גיל ושות׳">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/og-share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.yanivgil.co.il/404.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות׳">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/og-share.jpg">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="icon" href="images/new-logo.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+/* Mobile: Hide floating buttons and progress bar */
+        @media (max-width: 768px) { .whatsapp-float, .call-float, .accessibility-btn, .reading-progress { display: none !important; } }
+</style>
+  <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/faq-accordion.css">
+      <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/mobile-cta-bar.css">
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center text-white">
+    <div class="text-center px-4">
+        <div class="mb-8">
+            <img src="images/new-logo.png" alt="יניב גיל ושות'" class="h-24 mx-auto mb-6">
+        </div>
+        
+        <h1 class="text-6xl font-bold mb-4">404</h1>
+        <h2 class="text-3xl font-semibold mb-6">הדף לא נמצא</h2>
+        <p class="text-xl mb-8 text-gray-300">מצטערים, הדף שחיפשת אינו קיים</p>
+        
+        <div class="space-y-4">
+            <a href="/" class="inline-block bg-[#b8941f] hover:bg-[#a07d1a] text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
+                חזרה לעמוד הבית
+            </a>
+            
+            <div class="mt-8">
+                <p class="text-gray-400 mb-4">דפים פופולריים:</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/practice-areas.html" class="text-[#b8941f] hover:underline">תחומי התמחות</a>
+                    <a href="/blog.html" class="text-[#b8941f] hover:underline">בלוג</a>
+                    <a href="/contact.html" class="text-[#b8941f] hover:underline">צור קשר</a>
+                    <a href="/attorneys.html" class="text-[#b8941f] hover:underline">צוות המשרד</a>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <p class="text-gray-400">זקוקים לייעוץ משפטי?</p>
+                <a href="tel:036092414" class="text-2xl font-bold text-[#b8941f] hover:underline">03-6092414</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Smart 404 redirect logic - automatically redirect common old URLs
+        (function() {
+            const path = window.location.pathname.toLowerCase();
+            const redirectMap = {
+                // Family law related
+                'personalstatus': '/family-law.html',
+                'familycourt': '/family-law.html',
+                'beitdinrabani': '/family-law.html',
+                'geirush': '/divorce-law.html',
+                'divorce': '/divorce-law.html',
+                'yerusha': '/inheritance-wills.html',
+                'inheritance': '/inheritance-wills.html',
+                
+                // Bankruptcy/Insolvency related
+                'bankruptcy': '/insolvency.html',
+                'pshitat': '/insolvency.html',
+                'pshita': '/insolvency.html',
+                'chadlut': '/insolvency.html',
+                'to-end-your-dept': '/insolvency.html',
+                'kinus': '/insolvency.html',
+                'nechasim': '/insolvency.html',
+                'hozaa': '/insolvency.html',
+                'execution': '/insolvency.html',
+                
+                // Practice areas
+                'realestate': '/practice-areas.html',
+                'practiceareas': '/practice-areas.html',
+                'mikrakin': '/practice-areas.html',
+                
+                // Other
+                'article': '/articles.html',
+                'media': '/articles.html',
+                'contact': '/contact.html',
+                'attorney': '/attorneys.html',
+                'about': '/index.html#about'
+            };
+            
+            // Check if path contains any of the keywords
+            for (const [keyword, destination] of Object.entries(redirectMap)) {
+                if (path.includes(keyword)) {
+                    console.log('Auto-redirecting from 404:', path, 'to:', destination);
+                    window.location.href = destination;
+                    return;
+                }
+            }
+            
+            // If no redirect found, show the 404 page
+            console.log('404 - No automatic redirect found for:', path);
+        })();
+    </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972548184581?text=????%2C%20???%20???????%20??????%20?????" class="whatsapp-float" target="_blank" rel="noopener" aria-label="??? WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+  <script src="js/back-to-top.js"></script>
+    <script src="js/progress-bar.js"></script>
+  <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0548184581" class="cta-call" aria-label="התקשר עכשיו">
+            <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+            התקשר עכשיו
+        </a>
+        <a href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+    <script src="js/conversion-tracking.js" defer></script>
+</body>
+</html>
+
+

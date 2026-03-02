@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ES9G9LMG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ES9G9LMG6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בלוג משפטי - עו"ד יניב גיל - מאמרים מקצועיים בנושא פשיטת רגל</title>
+    <meta name="description" content="בלוג משפטי מקצועי של עו״ד יניב גיל - מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד. מידע עדכני ומקצועי לקהל הרחב.">
+    <meta name="keywords" content="פשיטת רגל, חדלות פירעון, עורך דין, יניב גיל, בלוג משפטי, דיני משפחה, הוצאה לפועל, משפטים">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta property="og:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.yanivgil.co.il/blog.html">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="משרד עו״ד יניב גיל ושות'">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="בלוג משפטי - עו״ד יניב גיל">
+    <meta name="twitter:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
+    <meta name="twitter:image" content="https://www.yanivgil.co.il/images/new-logo.png">
+    <meta name="author" content="עו״ד יניב גיל">
+    <link rel="canonical" href="https://www.yanivgil.co.il/blog.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/new-logo.png">
+    <link rel="apple-touch-icon" href="../images/new-logo.png">
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "בלוג משפטי - עו״ד יניב גיל",
+      "description": "בלוג משפטי מקצועי עם מאמרים מפורטים בנושא פשיטת רגל, חדלות פירעון, דיני משפחה ועוד",
+      "url": "https://www.yanivgil.co.il/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "עו״ד יניב גיל",
+        "jobTitle": "עורך דין"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "משרד עו״ד יניב גיל ושות'",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yanivgil.co.il/images/new-logo.png"
+        }
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+        .prose p {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .prose ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .prose li {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .mobile-menu-open {
+            display: flex !important;
+        }
+        .header-content {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        .h-80vh {
+            height: 80vh;
+        }
+        @media (max-width: 768px) {
+            .h-80vh {
+                height: 60vh;
+            }
+        }
+        .header-logo {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .header-text-logo {
+            width: 220px; 
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        .scrolled .header-logo {
+            height: 40px;
+        }
+        .scrolled .header-text-logo {
+            width: 170px;
+        }
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #c9a55c;
+            color: #1a1a1a;
+        }
+        .filter-btn:hover {
+            background-color: #b8941f;
+            color: white;
+        }
+        /* Full-screen mobile menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        .mobile-menu-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #b8941f;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-links a:hover {
+            background: #b8941f;
+            color: #1a1a1a;
+        }
+        /* Hide video controls on mobile */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video {
+            pointer-events: none;
+        }
+        </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header with floating/shrinking effect -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
+        <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="../index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="../images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-center">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
+                    <li><a href="../index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
+                    <li><a href="../index.html#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
+                    <li><a href="../attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
+                    <li><a href="../practice-areas.html" class="hover:text-[#b8941f] transition-colors duration-200">תחומי התמחות</a></li>
+                    <li><a href="../articles.html" class="hover:text-[#b8941f] transition-colors duration-200">פרסומים מקצועיים</a></li>
+                    <li><a href="../blog.html" class="hover:text-[#b8941f] transition-colors duration-200">בלוג</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-[#b8941f] transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#b8941f] transition-colors duration-200">צור קשר</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-[#b8941f] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#b8941f] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                    התקשר עכשיו
+                </a>
+            </div>
+        </div>
+        
+        <!-- Full-screen Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="close-mobile-menu" class="mobile-menu-close">&times;</button>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-menu-link">בית</a>
+                    <a href="../index.html#about" class="mobile-menu-link">אודות המשרד</a>
+                    <a href="../attorneys.html" class="mobile-menu-link">עורכי דין</a>
+                    <a href="../practice-areas.html" class="mobile-menu-link">תחומי התמחות</a>
+                    <a href="../articles.html" class="mobile-menu-link">פרסומים מקצועיים</a>
+                    <a href="../blog.html" class="mobile-menu-link">בלוג</a>
+                    <a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="mobile-menu-link" target="_blank" rel="noopener">ביקורות מלקוחות</a>
+                    <a href="../contact.html" class="mobile-menu-link">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Article Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <!-- Breadcrumb -->
+                <nav class="mb-6 text-sm text-gray-600">
+                    <a href="../index.html" class="hover:text-[#b8941f]">בית</a>
+                    <span class="mx-2">/</span>
+                    <a href="../blog.html" class="hover:text-[#b8941f]">בלוג</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-800">עיקול ועיקול מקרקעין</span>
+                </nav>
+                
+                <!-- Article Header -->
+                <article class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                    <div class="article-meta mb-6">
+                        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">הוצאה לפועל</span>
+                            <span>10 בדצמבר 2024</span>
+                            <span>עו״ד יניב גיל</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#1a1a1a]">עיקול ועיקול מקרקעין</h1>
+                    
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none article-content">
+                        <p class="text-gray-600 mb-4">הגדרה של עיקול אינה נמצאת בחוק ואומצה על ידי ביהמ"ש עליון בכמה פסקי דין. מה שאימץ העליון כי העיקול הוא פעולה משפטית נגד בעלים של הנכס או מי שמחזיק בו ופעולה זו באה להגביל את שכירותו של הנכס וגם את השימוש בו כדי שלא יהיה ניתן להבריח את הנכס והזוכה מוכן לגבות את החוב מתוך מימוש נכס זה.</p>
+                        
+                        <p>יש לזכור שעקול זאת דרגה נמוכה ביותר של בטוחות מבחינה זו שהעיקול הוא בעצם זכות חוסמת, כלומר מונעת פעולות, אבל אינה מקנה זכויות קנייניות בנכס זה כמו למשל שיעבוד ולכן היות והעיקול יש לו בעצם הבט דיוני בלבד לכן זה לא משנה מי מעקל ראשון או אחרון וכל מעקלים נהנים ביחד מפירות העיקול כל אחד באופן יחסי לחוב שהוא נושה לו.</p>
+                        
+                        <p>הנכס ממשיך להיות בבעלותו של החייב אבל לא ניתן לעשות בו תיקונים, להזיז אותו מהמקום, כמובן בעיקול מיטלטלין הנכס המעוקל בהתחלה נשאר בבית החייב ואסור לעשות בו דיספוזיציה או להזכיר אותו, עם זאת בטלויזיה ניתן להשתמש במכשיר עד להוצאתו מהבית.</p>
+                        
+                        <p>העיקול יורד כמו מחסום על הנכס וחוסם כל אדם, מלרכוש, וכן את החייב הוא חוסם מלמכור את הנכס ממימוש.</p>
+                        
+                        <h3>עיקול מקרקעין</h3>
+                        <p>עיקול מקרקעין תופס לשלוש שנים ויש צורך במחיקתו ע"י הוצל"פ ובחוק מקרקעין שעיקול שעברו עליו 10 שנים בלי שהוא גובש רשם מקרקעין רשאי לבטלו לאחר שנתן את הודעה בדבר כוונתו לביטול את העיקול.</p>
+                        
+                        <p><strong>מקרקעין – סעיף 33 לחוק הול"פ</strong> עוסק בהגדרה של מקרקעין לרבות זכויות בקרקע שניתנות לרישום בפנקסי רישום מקרקעין. עד היום לא ברור מהן הזכויות הניתנות לרישום? האם דירות הרשומות במנהל האם הן רשומות? הכוונה ככול הנראה לדירות שייהיו בעתיד רשומות כשיפשילו בעתיד. בדרך כלל כשיש הוראת חוק "לרבות" זה אומר שיש לנו בעצם הוראה בסיסית ו"לרבות" בא להוסיף על הוראה זו, אולי כי רוצים לעשות חידוש בחוק, כנראה בא להבהיר ואנו שואלים מה הגדרה הבסיסית ואותה מוצאים בפקודת הפרשנות המנדטורית שהגדרות שלה הועברו לחוק פרשנות ישראלי, יש עוד הגדרות מסוימות בפקודת פרשנות שעומדות בעינן ולכן מוצאים גם את פקודת פרשנות ושם יש לנו הוראה רחבה של מקרקעין. אומרים לנו שמקרקעין זה קרקע, כל מה שבנוי ונטוי זו בסעיף 164 לחוק מקרקעין והגדרה שבחוק מקרקעין זו בחיבור קבע. ההגדרה המצמצמת חלה מי-69 ואילך היא לא חל על חוקים ישנים כמו חוק הוצל"פ מ-67 וכאשר מדובר בחוק הוצל"פ אנו משתמשים כל הזמן בהגדרה הרחבה והישנה של פקודת הפרשנות.</p>
+                        
+                        <h3>עקול מקרקעין פועל בשלוש שלוחות:</h3>
+                        
+                        <h4>א. ראש הוצאה לפועל – פועל בשני מישורים:</h4>
+                        
+                        <ol class="list-decimal list-inside text-gray-600 mb-4 space-y-2">
+                            <li>יכול לעקל מקרקעין שרשומים על שם החייב, זה לא רק בטאבו אלא גם במנהל מקרקעי ישראל ובכל רשות אחרת משכנת, כמו עמידר, וזה ברור שכאשר נכס רשום על שם החייב אין צורך בהרבה בדיקות.</li>
+                            <li>עיקול זכויות המובטחות על ידי הערת אזהרה. חייב הקונה מגרש ורוצה לבנות את ביתו מנסיבות שונות רושם רק הערת אזהרה. סעיף 34 אומר שניתן להטיל עיקול גם על זכויות המגולמות בתוך הערת אזהרה ומימוש על ידי מינוי כונס שמתפקידו לממש את הערה ולבצע את כל הרישומים ולדאוג לתשלום המסים כדי שניתן יהיה לממש את הנכס ולגבות את החוב. במקרה מסוים הייתה הערת אזהרה רשומה על שם חייב אבל חייב המחה את זכויות בהערת אזהרה לאדם אחר שלא היה קשור לחוב. הוכח שהוא רכש זכויות בתום לב ולאחר רכישת זכויות צץ נושה שהטיל עיקול על זכויות של החייב ובא ביהמ"ש עליון ואמר עד כאן – אמנם לא ביצענו כאן פעולה של מכירת מקרקעין אלא המחאת זכויות במקרקעין אבל המחאה זו העבירה את הזכויות מהחייב לקונה ולכן כשהוטל העקול לא היו לחייב זכויות שאפשר היה לעקל אותם והעקול בוטל מכיוון שהקונה מילא את כל התחייבויותיו.</li>
+                        </ol>
+                        
+                        <h4>ב. בית המשפט המחוזי</h4>
+                        <p>מוסמך להטיל עיקול כאשר נכס על שם פלוני שאינו של חייב אבל לזוכה יש מידע שהנכס הוא של חייב ולכן זוכה יכול להגיש תביעה לרישום נכס על שם חייב וניתן יהיה להטיל עיקול כדי לא לסכל ביצוע פס"ד אשר יוכיח כי הנכס הוא על שם של חייב. אין כל ספק שהסמכה זו של המחוזי היא להקלה, ביהמ"ש בכל תביעה כזו עומד בעיקר בפני הקושי להוכיח שהנכס רשום אמנם על שם פלוני אבל הוא על שם של חייב, בתי המשפט בארץ פיתחו דיני ראשיות מיוחדים לעניין סעיף 34ב שעוסק בסמכות מחוזי להצהיר שנכס מסוים הוא של החייב. בדרך כלל לזוכה ברוב המקרים אין מידע מהותי בנושא. וההלכה והפסיקה, אמרה שלא חייבם להוכיח באופן ישיר שהנכס הוא של החייב, די להוכיח אותו מרמה, וככל שאותות המרמה מצד החייב ומצד מי שרשום כבעל הנכס גדולים יותר, כך הנטל עובר על החייב להוכיח שהמצב שונה ממה שהוא מתחזה להיות.</p>
+                        
+                        <p>מה הם אותות מרמה – פסיקה עשתה רשימה לא סגורה: חדלות פירעון של מי שהעביר את הבעלות, כלומר חייב, אם לחייב יש הרבה חובות והעביר נכס מסוים להוריו או לבן משפחה אחר יש לנו כאן אות אחד שאומנם לא יכול להטות את הקו, אבל מדליק לנו נורה אדומה, אות מרמה נוסף, קשרים בין המעביר לנעבר, חשאיות בהליכי העברה - אם זה הועבר בדרך של המחאת זכויות, אם זה במנהל וזה לא נרשם בשום מקום יש לבדוק בתיק האם הייתה שם העברה של זכויות וכפי שאמרנו אם יש כנגד החייב הרבה תביעות, גם אלה אותות מרמה וככל שהן מצטברים כך הנטל עובר לחייב להעביר ראייה לסתור.</p>
+                        
+                        <h3>התוצאה של הטלת עיקול</h3>
+                        <p>העיקול מונע את מכירת הנכס ודיספוזיציות אחרות בפנקסי מקרקעין, העיקול מונע הטלת משכנתא על הנכס. היות והעיקול נרשם בטאבו או במנהל אז זאת הודעה לכל העולם שיש עיקול וכדאי לאנשים להיזהר בעשיית עסקאות בנכס הזה כי יתכן שלא יצליחו להעביר מקרקעין על שמן, במקרה שיש לנו עיקול גם אם הוא הוטל על ידי ראש הוצל"פ לא ניתן לבצע דיספוזיציות בנכס אלא באישור של בית המשפט מחוזי לפי סעיף 37 לחוק. ברור שהטלת העיקול על נכס מקרקעין אומרת לנו שאסור לבצע כל דיספוזיציה בנכס אבל אנו כן יכולים לבצע דיספוזיציה של ביטול משכנתא ככל שהיא קיימת על נכס מכיוון שביטול משכנתא משחרר נכס משעבוד קנייני ומרחיב את זכויות של בעל נכס ולכן לצורך הסרת משכנתא אין צורך באישור של ביהמ"ש בנושא זה.</p>
+                        
+                        <h3>הליכי מכירה</h3>
+                        <p>כאשר מטילים עיקול מקרקעין יש לנו תקופת הכשרה של שישים ושישה ימים שבתחומיה צריך לעשות פעולות מקדמיות למכירת הנכס, אנו מטילים את העיקול וכמובן רושמים אותו בטאבו ואם לא נרשום לא יהיה שום ערך, ממתינים 30 ימים שחייב יפרע את החוב ואז ראש הוצל"פ נותן צו מכירה ראשוני או מקדמי שפותח הליכים לאחר מתן צו זה אנו ממתינים 7 ימים נוספים, בשלב הבא ראש ההוצאה לפועל ממנה שמאי מטעם ההוצאה לפועל והשמאי צריך להכין דו"ח, לקבוע את ערך הנכס ולציין את כל היתרונות והחסרונות שלו כדי שהשומה תהיה מושלמת וחשוב ששמאי ינחה לתת חוות דעת הן לגבי מכירה רגילה והן לגבי מכירה דחופה, ואת כל דברם אלה צריך לציין. חשוב לזכור שכל צד רשאי להגיש חוות דעת שמאי מטעמו, לא רק חוות דעת של שמאי מטעם של הוצל"פ היא הקובעת. ואם יש לנו חוות דעת וראש הוצאה לפועל צריך לשקול מהשומות ומה השומה הניראת לו ויתכן שיעשה שקלול בין השומות ובתנאי שהמרווח ביניהן לא גדול מדי אם הרווח גדל יותר מ-10%-12% יתכן שאחד השומות לא בסדר. (אפשר למנות שמאי מכריע) אם ניתן יש למצוא שכלול מאוזן בין השומות ולהגיע לשומה שהיא סבירה פחות או יותר.</p>
+                        
+                        <p>אנחנו מפרסמים הודעת מכירה פומבית וכל אחד רשאי להגיש הצעה את ההצעות ולצרף עירבון, בדרך כלל בהמחאה בנקאית של 10% מהצהרה שלו. כונס הנכסים המרכז מכירה קובע את מודע המכירה, וכאן זוכה ההצעה גבוהה יותר, כונס נכסים פותח כל הצעות לפני מועד המכירה ואומר מה היא הצעה גבוהה ביותר, ויש להפקיד ערבות של 10% בערבות בנקאית כהפקדה השנייה בגובה של השלמה להצעה גבוה יותר. לראש הוצאה לפועל מותר לחלט פיקדון של אותו אדם שזכה בהתמחרות ולא השלים את התמורה, אם ישאר היחס בין ההפקדות כמו בשלב הראשון, המפקיד יגיד די בכך שהפקיד 10% מהצעה שלי לעומת מי שהפקיד 10% לפי ההצעה הגבוהה יותר.</p>
+                        
+                        <p>ההתמחרות החלה וכל אחד מהמציעים שהעלו הצעה שלהם עד להצעה גבוהה ביותר מתמחרים בעל פה אצל הכונס, כונס הנכסים אומר לכולם את ההצעה הגבוה ביותר לפי העניין היא 400,000 $, מי נותן יותר ואז רצים קדימה עם הצעות. יתכן והכונס יגיד שצריך להעלות הצעות בסכום מסוים, כמובן יש להיזהר שלא לעשות הגבלות בלתי סבירות, כמו לדרוש העלאה בלתי סבירה כל פעם ואנו מגיעים בסופו של דבר לאיש המציע את הצעה הגבוהה ביותר. כונס נכסים מנהל פרוטוקול מפורד של כל הצעה גם כדי להצביע על תקינות ותום לב. ואז כותב שהמכירה הסתיימה ופלוני צריך להעביר את יתר התמורה מעל הפיקדון שמופקד בתיק לכונס בתוך 7 ימים לפי התקנות, כונסי הנכסים כורתים הסכמים ונותנים להם תנאי תשלום לפי כללי היצע וביקוש בשוק וחייבים לעמוד בתנאים וכאשר מסיימים לשלם את כל היתרה מגיש הכונס את פרוטוקול לאישורו של ראש הוצל"פ ואישור זה חוסם את חייב מלפרוע את החוב וזה בעצם מוריד מחסום על כל ההליכים כדי לשמור על אינטרס הסתמכות של הזוכה, שוב תלוי בתנאים שקבועים בחוזה עם כונס, יתכן גם שיקבע שהיתרה או חלק אחרון של היתרה תינתן אחרי האישור של ראש הוצאה לפועל לפי תקנה 68 ב' ואז הקונה פועל במסגרת מוגנת שאינה מאפשרת לחייב לפרוע את החוב ולהגיש הצעות נוספות על ידי מציעים אחרים כדי לא לפגוע באינטרס של הקונה.</p>
+                        
+                        <p>בהנחה ששולמו כל הסכומים וגם המיסים על ידי הכונס לרשויות מגיע השלב האחרון של המכירה וזה של האישור לפי תקנה 69. האישור לפי תקנה זו אישור המופנה לטאבו או למנהל מקרקעי ישראל האומר לנו שהתמלאו כל התנאים בקשר למכירה זו, שולמו המיסים, ועל פי אישור לפי תקנה 69 מעבירים את הנכס בטאבו על שמו של הקונה ובזה המכירה הושלמה יש לזכור שאישור של המכירה מורכב משני שלבים, שלב אחד 68(ב) הנותן הגנה לאינטרס הסתמכות של הקונה המוצע והסתמכות לאותה תקופה שבה מחויבים להביא את יתרת התמורה. והשלב השני הוא אישור לטאבו לפי תקנה 69 המכשירה את הקרקע לרישום הנכס בטאבו.</p>
+                    </div>
+                    
+                    <!-- Back to Blog Link -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <a href="../blog.html" class="inline-flex items-center text-[#c9a55c] hover:text-[#b8941f] font-medium transition-colors">
+                            ← חזרה לבלוג
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Script for the shrinking header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Open menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            // Close menu
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+            
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when clicking outside
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function(e) {
+                    if (e.target === mobileMenu) {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
