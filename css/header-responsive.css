@@ -136,16 +136,46 @@
     }
 }
 
-/* Duns & Bradstreet Seal Styles */
+/* Duns & Bradstreet Seal Styles - Refined Placement */
+.duns-seal-link {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 769px) {
+    .site-header .container {
+        position: relative;
+    }
+
+    .duns-seal-link {
+        position: absolute;
+        top: 100%;
+        /* Bottom of the header */
+        right: 0px;
+        /* Aligned to right of content */
+        transform: translateY(-50%);
+        top: 100%;
+        /* Bottom of the header */
+        left: 20px;
+        /* Positioned on the LEFT as requested */
+        transform: translateY(-40%) rotate(-12deg);
+        /* Half on hero, and tilted */
+        z-index: 1000;
+        pointer-events: auto;
+    }
+}
+
 .duns-seal {
-    height: 75px;
+    height: 100px;
+    /* Slightly larger for better impact */
     width: auto;
     transition: all 0.3s ease-in-out;
     display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 .scrolled .duns-seal {
-    height: 50px;
+    height: 70px;
 }
 
 @media (max-width: 768px) {
@@ -155,5 +185,11 @@
 
     .scrolled .duns-seal {
         height: 40px;
+    }
+
+    /* Mobile: Keep in flex flow to avoid overlap issues with menu */
+    .duns-seal-link {
+        position: static;
+        transform: none;
     }
 }
