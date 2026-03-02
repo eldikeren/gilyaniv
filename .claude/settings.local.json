@@ -10,7 +10,9 @@
       "Bash(curl:*)",
       "Bash(git reset:*)",
       "Bash(git fetch:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(for f in inheritance-wills.html divorce-law.html family-law.html)",
+      "Bash(do)"
     ]
   }
 }
