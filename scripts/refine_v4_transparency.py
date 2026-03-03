@@ -16,19 +16,14 @@ def process_seal_v4(input_path, output_path):
     draw.ellipse((cx - r + 1, cy - r + 1, cx + r - 1, cy + r - 1), fill=255)
     
     # 2. Horizontal White Bar (Rounded Rectangle)
-    # This bar protrudes from the circle. We need to find its coordinates.
-    # Looking at the seal, it's centered vertically. 
-    # Its width is the full width of the seal shape (including the protrusions).
-    
-    # We'll approximate the bar dimensions. 
-    # It accounts for roughly 25-30% of the height in the middle.
-    bar_height = int(height * 0.22) # Slightly larger to be safe
+    # We use a slightly larger rounded rectangle to ensure the corners aren't clipped
+    bar_height = int(height * 0.23) # Adjusted for better fit
     bar_top = (height - bar_height) // 2
     bar_bottom = bar_top + bar_height
     
-    # Draw the bar part of the mask
-    # We use rounded rectangle logic
-    draw.rounded_rectangle((0, bar_top, width, bar_bottom), radius=40, fill=255)
+    # Draw the bar part of the mask with a more precise radius
+    # Using a slightly larger width and radius to fully encapsulate the source bar
+    draw.rounded_rectangle((-5, bar_top, width + 5, bar_bottom), radius=50, fill=255)
     
     # Apply the combined mask
     result = Image.new('RGBA', (width, height), (0, 0, 0, 0))
