@@ -149,12 +149,12 @@
 
     header#site-header .duns-seal-link {
         position: absolute !important;
-        top: calc(100% + 20px) !important;
-        /* Fully below the header edge */
+        top: calc(100% + 70px) !important;
+        /* Increased offset to clear header padding and stay totally on hero */
         left: 20px !important;
         /* Positioned on the LEFT */
         transform: rotate(-12deg) !important;
-        /* Tilted but not overlapping header */
+        /* Tilted and now fully in hero area */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
