@@ -169,6 +169,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
     </div>
     <script src="js/conversion-tracking.js" defer></script>
+<script>
+        // Duns seal: show on load, hide on scroll down, show on scroll up
+        (function() {
+            var lastScroll = 0;
+            function initSeal() {
+                var seal = document.querySelector('.duns-seal-link');
+                if (!seal) return;
+                window.addEventListener('scroll', function() {
+                    var cur = window.scrollY;
+                    if (cur > lastScroll && cur > 80) {
+                        seal.classList.add('seal-hidden');
+                    } else if (cur < lastScroll) {
+                        seal.classList.remove('seal-hidden');
+                    }
+                    lastScroll = cur;
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initSeal);
+            } else {
+                initSeal();
+            }
+        })();
+</script>
 </body>
 </html>
 

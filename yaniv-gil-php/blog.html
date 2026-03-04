@@ -10,11 +10,11 @@
     <meta property="og:title" content="בלוג משפטי - עו״ד יניב גיל">
     <meta property="og:description" content="מאמרים מקצועיים בנושא פשיטת רגל, חדלות פירעון ודיני משפחה">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png?v=2">
+    <meta property="og:image" content="https://gilyaniv.vercel.app/images/new-logo.png">
     <meta property="og:url" content="https://gilyaniv.vercel.app/blog.html">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/new-logo.png?v=2">
-    <link rel="apple-touch-icon" href="images/new-logo.png?v=2">
+    <link rel="icon" type="image/png" href="images/new-logo.png">
+    <link rel="apple-touch-icon" href="images/new-logo.png">
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
     <style>
@@ -67,6 +67,7 @@
             background-color: #b8941f;
             color: white;
         }
+<<<<<<< HEAD
         /* Full-screen mobile menu */
         .mobile-menu-overlay {
             position: fixed;
@@ -121,7 +122,26 @@
             background: #b8941f;
             color: #1a1a1a;
         }
-        /* Floating WhatsApp Button */
+        /* Hide video controls on mobile */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video {
+            pointer-events: none;
+        }
+                /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -162,23 +182,26 @@
                 height: 32px;
             }
         }
+</style>
+=======
     </style>
+>>>>>>> 1c8df82c9bdb26093b27297d07c45a5327428f14
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="shadow-lg sticky top-0 z-50" style="background: linear-gradient(135deg, #0d1b2a 0%, #162040 50%, #0d1b2a 100%);">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center">
-                        <img src="images/new-logo.png?v=2" alt="עו״ד יניב גיל" class="h-12 w-auto">
+                        <img src="images/new-logo.png" alt="עו״ד יניב גיל" class="h-12 w-auto">
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:block">
-                    <ul class="flex gap-6 list-none m-0 p-0 text-[#b8941f] font-medium">
+                    <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
                         <li><a href="index.html" class="hover:text-[#b8941f] transition-colors duration-200">בית</a></li>
                         <li><a href="#about" class="hover:text-[#b8941f] transition-colors duration-200">אודות המשרד</a></li>
                         <li><a href="attorneys.html" class="hover:text-[#b8941f] transition-colors duration-200">עורכי דין</a></li>
@@ -191,7 +214,7 @@
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-200 hover:text-[#b8941f] transition-colors duration-200" onclick="toggleMobileMenu()">
+                <button class="md:hidden text-gray-600 hover:text-[#b8941f] transition-colors duration-200" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -200,7 +223,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t" style="background: linear-gradient(135deg, #0d1b2a 0%, #162040 50%, #0d1b2a 100%);">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-4 py-4">
                 <div class="mobile-menu-links">
                     <a href="index.html" class="mobile-menu-link">בית</a>
@@ -634,7 +657,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div>
-                    <img src="images/new-logo.png?v=2" alt="עו״ד יניב גיל" class="h-12 w-auto mb-4">
+                    <img src="images/new-logo.png" alt="עו״ד יניב גיל" class="h-12 w-auto mb-4">
                     <p class="text-gray-400 mb-4">משרד עורכי דין המתמחה בפשיטת רגל, חדלות פירעון ודיני משפחה</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-[#c9a55c] transition-colors duration-200">

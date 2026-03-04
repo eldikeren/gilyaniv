@@ -35,12 +35,14 @@
             padding: 0.75rem 0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+        .header-logo, .header-text-logo {
             transition: all 0.3s ease-in-out;
         }
         .header-logo {
             height: 60px;
             width: auto;
         }
+        .header-text-logo {
             height: 50px;
             width: auto;
         }
@@ -48,6 +50,7 @@
             height: 40px;
             width: auto;
         }
+        .site-header.scrolled .header-text-logo {
             height: 30px;
             width: auto;
         }
@@ -117,15 +120,18 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
-    <header class="site-header fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header" style="background: linear-gradient(135deg, #0d1b2a 0%, #162040 50%, #0d1b2a 100%);">
+    <header class="site-header fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ease-in-out py-6 shadow-md" role="banner" id="site-header">
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="index.html">
-                    <img src="images/new-logo.png?v=2" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="display: block; height: 80px; width: auto;">
+                    <img src="images/new-logo.png" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                </a>
+                <a href="index.html" class="flex items-center gap-2 text-gray-800 transition-all duration-300 ease-in-out">
+                    <img src="images/Yaniv-Gil-Law-Office-Notary_text.avif" alt="Yaniv Gil Law Office Text" class="header-text-logo" onerror="this.src='https://placehold.co/192x32/1e3a8a/ffffff?text=Yaniv+Gil+Law+Office'">
                 </a>
             </div>
             <nav class="hidden md:flex flex-1 justify-center">
-                <ul class="flex gap-6 list-none m-0 p-0 text-[#b8941f] font-medium">
+                <ul class="flex gap-6 list-none m-0 p-0 text-gray-600 font-medium">
                     <li><a href="index.html" class="hover:text-[#c9a55c] transition-colors duration-200">בית</a></li>
                     <li><a href="index.html#about" class="hover:text-[#c9a55c] transition-colors duration-200">אודות המשרד</a></li>
                     <li><a href="attorneys.html" class="hover:text-[#c9a55c] transition-colors duration-200">עורכי דין</a></li>
@@ -137,7 +143,7 @@
                 </ul>
             </nav>
             <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-200 hover:text-white focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
