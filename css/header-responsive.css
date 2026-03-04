@@ -118,8 +118,8 @@ header#site-header {
         0 2px 15px rgba(0, 0, 0, 0.4),
         0 1px 0 rgba(201, 165, 92, 0.15),
         inset 0 1px 0 rgba(201, 165, 92, 0.08) !important;
-    position: sticky !important;
-    /* Use sticky to avoid white gaps when shrinking */
+    position: fixed !important;
+    /* Use fixed to ensure it floats above everything without relying on overflow */
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
@@ -127,10 +127,18 @@ header#site-header {
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Remove forced padding from main content as sticky header takes up space */
+/* Base padding for main content so it is NOT hidden behind the fixed header */
 main,
 #main-content {
-    padding-top: 0 !important;
+    padding-top: 160px !important;
+}
+
+@media (max-width: 768px) {
+
+    main,
+    #main-content {
+        padding-top: 100px !important;
+    }
 }
 
 /* Subtle diagonal light reflection across header */
@@ -271,15 +279,32 @@ header#site-header .container {
    FIX: Floating Header Overlay for Hero
    ========================================== */
 
-/* Hero sections on home page should overlay the sticky header for a premium 'floating' look */
+/* Hero sections on home page should overlay the fixed header for a premium 'floating' look */
 #main-content>section:first-child.relative.h-80vh,
 main>section:first-child.relative.h-80vh {
-    margin-top: -180px !important;
-    /* Pull up under the large header */
+    margin-top: -160px !important;
+    /* Pull up under the large header on desktop */
+}
+
+@media (max-width: 768px) {
+
+    #main-content>section:first-child.relative.h-80vh,
+    main>section:first-child.relative.h-80vh {
+        margin-top: -100px !important;
+        /* Pull up under the mobile header */
+    }
 }
 
 /* Ensure hero content is properly centered despite the negative margin */
 #main-content>section:first-child.relative.h-80vh>.relative.z-10,
 main>section:first-child.relative.h-80vh>.relative.z-10 {
-    padding-top: 100px !important;
+    padding-top: 160px !important;
+}
+
+@media (max-width: 768px) {
+
+    #main-content>section:first-child.relative.h-80vh>.relative.z-10,
+    main>section:first-child.relative.h-80vh>.relative.z-10 {
+        padding-top: 100px !important;
+    }
 }
