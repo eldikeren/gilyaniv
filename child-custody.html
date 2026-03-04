@@ -265,6 +265,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* Mobile: Hide floating buttons and progress bar */
         @media (max-width: 768px) { .whatsapp-float, .call-float, .accessibility-btn, .reading-progress { display: none !important; } }
+    
+        .header-logo {
+            height: 80px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        @media (min-width: 768px) {
+            .header-logo {
+                height: 160px;
+            }
+        }
+        .scrolled .header-logo {
+            height: 50px;
+        }
+        @media (min-width: 768px) {
+            .scrolled .header-logo {
+                height: 65px;
+            }
+        }
     </style>
 
     <!-- BreadcrumbList Schema -->

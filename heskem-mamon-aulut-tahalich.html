@@ -115,6 +115,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         footer, footer * { color: #d1d5db !important; }
         footer h3, footer h4 { color: #ffffff !important; }
         footer a:hover { color: #c9a55c !important; }
+    
+        .header-logo {
+            height: 80px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        @media (min-width: 768px) {
+            .header-logo {
+                height: 160px;
+            }
+        }
+        .scrolled .header-logo {
+            height: 50px;
+        }
+        @media (min-width: 768px) {
+            .scrolled .header-logo {
+                height: 65px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
