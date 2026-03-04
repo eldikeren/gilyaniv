@@ -260,3 +260,13 @@ header#site-header .container {
         height: 45px;
     }
 }
+
+/* ==========================================
+   FIX: Eliminate gap between fixed header and hero
+   ========================================== */
+
+/* Hero sections (first child of main) overlap the pt-24 padding */
+#main-content > section.relative:first-child,
+main > section.relative:first-child {
+    margin-top: -6rem;
+}
