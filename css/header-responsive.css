@@ -1,11 +1,17 @@
 /* /css/header-responsive.css - Consistent header logo sizing across all pages */
-/* Extracted from index.html to ensure uniform header appearance */
 
-/* Base styles */
+/* Base styles - mobile first */
 .header-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     transition: all 0.3s ease-in-out;
+}
+
+/* Desktop: large logo */
+@media (min-width: 768px) {
+    .header-logo {
+        height: 160px;
+    }
 }
 
 .header-text-logo {
@@ -15,7 +21,13 @@
 }
 
 .scrolled .header-logo {
-    height: 40px;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .scrolled .header-logo {
+        height: 65px;
+    }
 }
 
 .scrolled .header-text-logo {
@@ -25,114 +37,66 @@
 /* iPhone SE (375x667) */
 @media screen and (max-width: 375px) and (max-height: 667px) {
     .header-logo {
-        height: 45px;
-    }
-
-    .header-text-logo {
-        width: 160px;
+        height: 70px;
     }
 
     .scrolled .header-logo {
-        height: 35px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 130px;
+        height: 45px;
     }
 }
 
 /* iPhone 12/13/14 (390x844) */
 @media screen and (min-width: 376px) and (max-width: 390px) and (max-height: 844px) {
     .header-logo {
-        height: 50px;
-    }
-
-    .header-text-logo {
-        width: 180px;
+        height: 75px;
     }
 
     .scrolled .header-logo {
-        height: 38px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 150px;
+        height: 48px;
     }
 }
 
 /* iPhone 12/13/14 Pro Max (428x926) */
 @media screen and (min-width: 391px) and (max-width: 428px) and (max-height: 926px) {
     .header-logo {
-        height: 55px;
-    }
-
-    .header-text-logo {
-        width: 200px;
+        height: 80px;
     }
 
     .scrolled .header-logo {
-        height: 42px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 165px;
+        height: 50px;
     }
 }
 
 /* Galaxy S21/S22/S23 (360x800) */
 @media screen and (max-width: 360px) and (max-height: 800px) {
     .header-logo {
-        height: 40px;
-    }
-
-    .header-text-logo {
-        width: 140px;
+        height: 65px;
     }
 
     .scrolled .header-logo {
-        height: 32px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 120px;
+        height: 42px;
     }
 }
 
 /* Galaxy S21/S22/S23 Ultra (412x915) */
 @media screen and (min-width: 361px) and (max-width: 412px) and (max-height: 915px) {
     .header-logo {
-        height: 52px;
-    }
-
-    .header-text-logo {
-        width: 190px;
+        height: 80px;
     }
 
     .scrolled .header-logo {
-        height: 40px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 160px;
+        height: 48px;
     }
 }
 
 /* Landscape orientation fixes */
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .header-logo {
-        height: 35px;
-    }
-
-    .header-text-logo {
-        width: 120px;
+        height: 50px;
     }
 
     .scrolled .header-logo {
-        height: 28px;
-    }
-
-    .scrolled .header-text-logo {
-        width: 100px;
+        height: 35px;
     }
 }
 
@@ -150,11 +114,8 @@
     header#site-header .duns-seal-link {
         position: absolute !important;
         top: calc(100% + 70px) !important;
-        /* Increased offset to clear header padding and stay totally on hero */
         left: 20px !important;
-        /* Positioned on the LEFT */
         transform: rotate(-12deg) !important;
-        /* Tilted and now fully in hero area */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
@@ -163,7 +124,6 @@
 
 .duns-seal {
     height: 100px;
-    /* Slightly larger for better impact */
     width: auto;
     transition: all 0.3s ease-in-out;
     display: block;
@@ -183,7 +143,6 @@
         height: 40px;
     }
 
-    /* Mobile: Keep in flex flow to avoid overlap issues with menu */
     .duns-seal-link {
         position: static;
         transform: none;
