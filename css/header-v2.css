@@ -11,6 +11,8 @@
 @media (min-width: 768px) {
     .header-logo {
         height: 160px;
+        transform: none !important;
+        /* Fix: ensures the logo box is perfectly level */
     }
 }
 
@@ -265,13 +267,8 @@ header#site-header .container {
     }
 
     header#site-header .duns-seal-link {
-        position: absolute !important;
-        top: calc(100% + 15px) !important;
-        left: 10px !important;
-        transform: rotate(-12deg) !important;
-        z-index: 1000 !important;
-        pointer-events: auto !important;
-        display: block !important;
+        display: none !important;
+        /* Hidden on mobile: seal overlaps hero text */
     }
 
     .duns-seal {
@@ -287,27 +284,26 @@ header#site-header .container {
    FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
-/* On hero-first pages, the first <section> (hero) should fill from top.
-   The fixed header floats on top of it — premium overlay effect.        */
+/* On hero-first pages the hero section starts flush at viewport top.
+   padding-top on the SECTION (the flex container) shifts the centering
+   axis down so ALL content appears below the fixed header.              */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    margin-top: 0 !important;
-    /* no gap – hero starts at very top of page, header floats above */
+    padding-top: 180px !important;
+    /* Match tall unscrolled header (~160px logo + padding) */
 }
 
-/* Ensure hero text content is NOT hidden under the fixed header.
-   Add top padding equal to header height so text starts below it.       */
+/* Reset any inner-div padding — the section handles it now */
 main.has-hero-first>section:first-of-type>.relative.z-10,
 #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
-    padding-top: 90px !important;
-    /* header height on desktop */
+    padding-top: 0 !important;
 }
 
 @media (max-width: 768px) {
 
-    main.has-hero-first>section:first-of-type>.relative.z-10,
-    #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
-        padding-top: 80px !important;
-        /* header height on mobile */
+    main.has-hero-first>section:first-of-type,
+    #main-content.has-hero-first>section:first-of-type {
+        padding-top: 75px !important;
+        /* ≈ header height on mobile */
     }
 }

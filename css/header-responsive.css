@@ -11,6 +11,8 @@
 @media (min-width: 768px) {
     .header-logo {
         height: 160px;
+        transform: none !important;
+        /* Fix: ensures the logo box is perfectly level */
     }
 }
 
@@ -265,13 +267,8 @@ header#site-header .container {
     }
 
     header#site-header .duns-seal-link {
-        position: absolute !important;
-        top: calc(100% + 15px) !important;
-        left: 10px !important;
-        transform: rotate(-12deg) !important;
-        z-index: 1000 !important;
-        pointer-events: auto !important;
-        display: block !important;
+        display: none !important;
+        /* Hidden on mobile: seal overlaps hero text */
     }
 
     .duns-seal {
@@ -291,19 +288,18 @@ header#site-header .container {
    The fixed header floats on top of it — premium overlay effect.        */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    margin-top: 0 !important;
+    padding-top: 180px !important;
 }
 
-/* Ensure hero text content is NOT hidden under the fixed header.         */
 main.has-hero-first>section:first-of-type>.relative.z-10,
 #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
-    padding-top: 90px !important;
+    padding-top: 0 !important;
 }
 
 @media (max-width: 768px) {
 
-    main.has-hero-first>section:first-of-type>.relative.z-10,
-    #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
-        padding-top: 80px !important;
+    main.has-hero-first>section:first-of-type,
+    #main-content.has-hero-first>section:first-of-type {
+        padding-top: 75px !important;
     }
 }

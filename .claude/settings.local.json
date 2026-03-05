@@ -12,7 +12,8 @@
       "Bash(git fetch:*)",
       "Bash(dir:*)",
       "Bash(for f in inheritance-wills.html divorce-law.html family-law.html)",
-      "Bash(do)"
+      "Bash(do)",
+      "WebFetch(domain:www.yanivgil.co.il)"
     ]
   }
 }
