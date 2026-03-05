@@ -127,18 +127,26 @@ header#site-header {
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Base padding for main content so it is NOT hidden behind the fixed header */
+/* Base padding for main content so first content sits below the fixed header.
+   80px = approximate header height (scrolled / compact state) */
 main,
 #main-content {
-    padding-top: 160px !important;
+    padding-top: 80px !important;
 }
 
 @media (max-width: 768px) {
 
     main,
     #main-content {
-        padding-top: 100px !important;
+        padding-top: 70px !important;
     }
+}
+
+/* Pages where the hero is the very first child: remove padding so hero
+   slides flush under the floating header (premium overlay look).        */
+main.has-hero-first,
+#main-content.has-hero-first {
+    padding-top: 0 !important;
 }
 
 /* Subtle diagonal light reflection across header */
@@ -276,35 +284,26 @@ header#site-header .container {
 }
 
 /* ==========================================
-   FIX: Floating Header Overlay for Hero
+   FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
-/* Hero sections on home page should overlay the fixed header for a premium 'floating' look */
-#main-content>section:first-child.relative.h-80vh,
-main>section:first-child.relative.h-80vh {
-    margin-top: -160px !important;
-    /* Pull up under the large header on desktop */
+/* On hero-first pages, the first <section> (hero) should fill from top.
+   The fixed header floats on top of it — premium overlay effect.        */
+main.has-hero-first>section:first-of-type,
+#main-content.has-hero-first>section:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* Ensure hero text content is NOT hidden under the fixed header.         */
+main.has-hero-first>section:first-of-type>.relative.z-10,
+#main-content.has-hero-first>section:first-of-type>.relative.z-10 {
+    padding-top: 90px !important;
 }
 
 @media (max-width: 768px) {
 
-    #main-content>section:first-child.relative.h-80vh,
-    main>section:first-child.relative.h-80vh {
-        margin-top: -100px !important;
-        /* Pull up under the mobile header */
-    }
-}
-
-/* Ensure hero content is properly centered despite the negative margin */
-#main-content>section:first-child.relative.h-80vh>.relative.z-10,
-main>section:first-child.relative.h-80vh>.relative.z-10 {
-    padding-top: 160px !important;
-}
-
-@media (max-width: 768px) {
-
-    #main-content>section:first-child.relative.h-80vh>.relative.z-10,
-    main>section:first-child.relative.h-80vh>.relative.z-10 {
-        padding-top: 100px !important;
+    main.has-hero-first>section:first-of-type>.relative.z-10,
+    #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
+        padding-top: 80px !important;
     }
 }
