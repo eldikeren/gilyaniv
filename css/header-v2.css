@@ -242,8 +242,8 @@ header#site-header .container {
         position: absolute !important;
         top: calc(100% + 70px) !important;
         left: 20px !important;
-        transform: none !important;
-        /* Fixed: perfectly horizontal */
+        transform: rotate(-12deg) !important;
+        /* Restored tilt to the left */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
@@ -268,8 +268,14 @@ header#site-header .container {
     }
 
     header#site-header .duns-seal-link {
-        display: none !important;
-        /* Hidden on mobile: seal overlaps hero text */
+        display: block !important;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 80px !important;
+        /* Above CTA bar */
+        left: 15px !important;
+        transform: rotate(-8deg) !important;
+        z-index: 999 !important;
     }
 
     .duns-seal {
@@ -290,7 +296,7 @@ header#site-header .container {
    axis down so ALL content appears below the fixed header.              */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    padding-top: 180px !important;
+    padding-top: 220px !important;
     /* Match tall unscrolled header (~160px logo + padding) */
 }
 

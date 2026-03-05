@@ -1,14 +1,81 @@
-/* Professional Megamenu for Practice Areas */
+/* Professional Megamenu for Practice Areas - Premium Dark Theme */
 
-/* Desktop Megamenu Container */
 #practice-dropdown {
-    width: 650px !important;
-    max-width: 90vw;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    border: 1px solid rgba(201, 165, 92, 0.2);
+    width: 850px !important;
+    max-width: 95vw;
+    background: rgba(26, 26, 46, 0.98) !important;
+    border-radius: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 50px rgba(201, 165, 92, 0.2);
+    padding: 40px;
+    border: 1px solid rgba(201, 165, 92, 0.4);
+    backdrop-filter: blur(20px);
+    z-index: 10000;
+}
+
+/* Category Grid Layout */
+.megamenu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Category Header */
+.category-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(201, 165, 92, 0.2);
+}
+
+.category-header h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #d4af37 !important;
+    /* Shiny Gold */
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Menu Items */
+.menu-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 5px -15px;
+    border-radius: 10px;
+    color: #cbd5e0 !important;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item-link:hover {
+    background: linear-gradient(90deg, rgba(201, 165, 92, 0.15), transparent) !important;
+    color: #ffffff !important;
+    transform: translateX(-5px);
+}
+
+/* Featured Guide Style */
+.featured-link {
+    color: #d4af37 !important;
+    font-weight: 700 !important;
+    background: linear-gradient(90deg, rgba(201, 165, 92, 0.1), transparent) !important;
+    border-right: 4px solid #d4af37 !important;
+}
+
+/* The arrow link */
+.arrow-link {
+    font-size: 1.2rem;
+    color: #d4af37;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.menu-item-link:hover .arrow-link {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Scrollbar Customization */
@@ -17,83 +84,12 @@
 }
 
 #practice-dropdown::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 #practice-dropdown::-webkit-scrollbar-thumb {
     background: #c9a55c;
     border-radius: 10px;
-}
-
-#practice-dropdown::-webkit-scrollbar-thumb:hover {
-    background: #b8941f;
-}
-
-/* Category Grid Layout */
-.megamenu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-/* Category Header */
-.category-header {
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
-}
-
-.category-header h4 {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #0C1220;
-    margin: 0;
-}
-
-/* Menu Items */
-.menu-item-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
-    margin: 4px -12px;
-    border-radius: 6px;
-    color: #4a5568;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
-}
-
-.menu-item-link:hover {
-    background: rgba(201, 165, 92, 0.08);
-    color: #c9a55c;
-}
-
-/* Pillar Group Styling */
-.pillar-group {
-    margin-bottom: 8px;
-}
-
-/* The arrow link (replacement for bulky squares) */
-.arrow-link {
-    font-size: 1.1rem;
-    color: #c9a55c;
-    opacity: 0;
-    transform: translateX(5px);
-    transition: all 0.2s ease;
-}
-
-.menu-item-link:hover .arrow-link {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Featured Guide Style */
-.featured-link {
-    color: #c9a55c !important;
-    font-weight: 700 !important;
-    background: #faf7ef !important;
 }
 
 /* Mobile specific overrides to maintain usability */
@@ -104,6 +100,7 @@
         box-shadow: none;
         border: none;
         padding: 0;
+        background: transparent !important;
     }
 
     .megamenu-grid {

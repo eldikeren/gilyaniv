@@ -13,7 +13,8 @@
       "Bash(dir:*)",
       "Bash(for f in inheritance-wills.html divorce-law.html family-law.html)",
       "Bash(do)",
-      "WebFetch(domain:www.yanivgil.co.il)"
+      "WebFetch(domain:www.yanivgil.co.il)",
+      "WebFetch(domain:www.lawreviews.co.il)"
     ]
   }
 }

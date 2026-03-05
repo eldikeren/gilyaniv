@@ -242,8 +242,7 @@ header#site-header .container {
         position: absolute !important;
         top: calc(100% + 70px) !important;
         left: 20px !important;
-        transform: none !important;
-        /* Fixed: perfectly horizontal */
+        transform: rotate(-12deg) !important;
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
@@ -289,7 +288,7 @@ header#site-header .container {
    The fixed header floats on top of it — premium overlay effect.        */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    padding-top: 180px !important;
+    padding-top: 220px !important;
 }
 
 main.has-hero-first>section:first-of-type>.relative.z-10,
