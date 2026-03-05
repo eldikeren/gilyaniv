@@ -242,7 +242,8 @@ header#site-header .container {
         position: absolute !important;
         top: calc(100% + 70px) !important;
         left: 20px !important;
-        transform: rotate(-12deg) !important;
+        transform: none !important;
+        /* Fixed: perfectly horizontal */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
