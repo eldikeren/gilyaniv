@@ -61,8 +61,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/mobile-menu.css?v=12">
-    <link rel="stylesheet" href="css/header-v2.css?v=12">
+    <link rel="stylesheet" href="css/mobile-menu.css?v=7">
+    <link rel="stylesheet" href="css/header-v2.css?v=7">
     <style>
     /* CRITICAL: Force content within viewport on mobile */
         html {
@@ -100,11 +100,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             flex-grow: 1;
             justify-content: flex-end;
         }
-        .h-[90vh] {
+        .h-80vh {
             height: 80vh;
     }
     @media (max-width: 768px) {
-            .h-[90vh] {
+            .h-80vh {
                 height: 60vh;
             }
         }
@@ -399,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="index.html">
-                    <img src="images/new-logo.png?v=12" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
+                    <img src="images/new-logo.png?v=2" alt="Yaniv Gil Law Office New Logo" class="header-logo" style="margin-left: 10px; display: block;">
                 </a>
                 <a href="https://www.dunsguide.co.il/business?duns=532460057" target="_blank" rel="noopener noreferrer" class="duns-seal-link" title="Duns & Bradstreet Gold Seal">
                     <img src="images/duns_gold_v5.png" alt="Duns & Bradstreet Gold Seal" class="duns-seal" width="75" height="75">
@@ -457,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li><a href="articles.html" title="פרסומים מקצועיים" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">פרסומים מקצועיים</a></li>
                     <li><a href="blog.html" title="בלוג" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">בלוג</a></li>
-                    <li><a href="reviews.html" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">ביקורות מלקוחות</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" title="צור קשר" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">צור קשר</a></li>
                 </ul>
             </nav>
@@ -480,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="index.html" title="דף הבית">
-                    <img src="images/new-logo.png?v=12" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
+                    <img src="images/new-logo.png?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
                 </a>
             </div>
             <button id="close-mobile-menu"
@@ -800,17 +800,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     </header>
 
-    <main class="has-hero-first">
+    <main class="pt-24">
   <!-- Breadcrumbs -->
-<!-- Hero Section for Articles Page -->
-        <section class="relative h-[90vh] flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><span aria-current="page">פרסומים</span></li>
+      </ol>
+    </nav>
+  </div>
+        <!-- Hero Section for Articles Page -->
+        <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
             <video poster="images/articles-poster.webp" muted loop playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
                 <source data-src="images/artickels-compressed.mp4" type="video/mp4">
                 <source data-src="images/artickels.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
-            <nav aria-label="Breadcrumb" style="width:100%;margin-bottom:0.75rem;"><ol style="display:flex;list-style:none;padding:0;margin:0;gap:0.25rem;justify-content:center;flex-wrap:wrap;align-items:center;"><li style="color:rgba(255,255,255,0.4);font-size:0.75rem;"><a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">בית</a></li><li style="color:rgba(255,255,255,0.3);font-size:0.75rem;">&nbsp;\&nbsp;</li><li style="color:rgba(255,255,255,0.4);font-size:0.75rem;"><span style="color:rgba(255,255,255,0.5);">פרסומים</span></li></ol></nav>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">מאמרים ופרסומים</h1>
                 <p class="text-lg md:text-xl max-w-2xl mx-auto font-light">עיון במאמרים מקצועיים בתחומי המשפט השונים</p>
             </div>
@@ -927,7 +934,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 7 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-22" data-title="חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">חטפה את הילדים כדי שייעדרו מאירוע משפחתי - ותפצה את האב</h3>
                         <p class="text-gray-600 mb-4">ביום חתונת אחיו של האב, האם הרחיקה את הילדים לצפון הארץ - בניגוד להחלטת בית משפט שאישרה את השתתפותם באירוע. זה עלה לה ביוקר</p>
@@ -939,7 +946,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 8 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-23" data-title="ההרגת וגם הופטרת?: דוקר הנער צחי בשה ביקש לפטור אותו מהפיצוי להוריו">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">ההרגת וגם הופטרת?: דוקר הנער צחי בשה ביקש לפטור אותו מהפיצוי להוריו</h3>
                         <p class="text-gray-600 mb-4">מקרה מורכב של דוקר נער שפצע קשה את צחי בשה, וביקש לפטור אותו מהפיצוי להוריו. בית המשפט נדרש להכריע בסוגיה רגישה זו</p>
@@ -963,7 +970,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 10 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-25" data-title="נכנס לנישואין עם דירה, וככה יצא מהם - פסק דין">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">נכנס לנישואין עם דירה, וככה יצא מהם - פסק דין</h3>
                         <p class="text-gray-600 mb-4">פסק דין מעניין העוסק בחלוקת נכסים בין בני זוג שנכנסו לנישואין עם דירה בבעלות אחד מהם, וכיצד בית המשפט מכריע בסוגיות מורכבות אלו</p>
@@ -987,7 +994,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 12 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-27" data-title="עקב התיישנות: חוב של מאות אלפי שקלים לא ישולם">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">עקב התיישנות: חוב של מאות אלפי שקלים לא ישולם</h3>
                         <p class="text-gray-600 mb-4">התובע חיכה 19 שנים עד שתבע החזר הלוואה בהסתמך על סעיף בשטר ההתחייבות שבו נכתב כי אין תחולה לחוק ההתיישנות. אלא שבית המשפט קבע כי הסעיף אינו חוקי וכי ממילא ההתחייבות בעייתית כיוון שחסרים בה פרטים מהותיים</p>
@@ -1011,7 +1018,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 15 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-30" data-title="ההורים נגד הבן, הבן נגד אחותו: מי יזכה בדירה?">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">ההורים נגד הבן, הבן נגד אחותו: מי יזכה בדירה?</h3>
                         <p class="text-gray-600 mb-4">מרבה נכסים, מרבה הליכים: הורים אמידים טענו כי דירה שרשומה על שם בנם למעשה שייכת להם. הבן לעומת זאת טען שזו הדירה שלו, וביקש לפנות ממנה את אחותו שמתגוררת בה. השופטת פסקה לטובתו</p>
@@ -1023,7 +1030,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 16 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-31" data-title="10 ימים לפני החתונה הרבני אסר על אישה להינשא לאהוב ליבה">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">10 ימים לפני החתונה הרבני אסר על אישה להינשא לאהוב ליבה</h3>
                         <p class="text-gray-600 mb-4">מקרה מורכב של אישה שביקשה להינשא לאהוב ליבה, אך הרבני אסר עליה זאת 10 ימים לפני החתונה. פסק דין מעניין העוסק בזכויות נשים ונישואין</p>
@@ -1047,7 +1054,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 18 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-02-02" data-title="בקשה לשקול מחדש החלטה בתיק ניכור הורי - הילדה בתחושת אימה">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">בקשה לשקול מחדש החלטה בתיק ניכור הורי - הילדה בתחושת אימה</h3>
                         <p class="text-gray-600 mb-4">מקרה מורכב של ניכור הורי שבו הילדה נמצאת בתחושת אימה. פסק דין העוסק בהגנה על טובת הילד ובהתמודדות עם תופעת הניכור ההורי</p>
@@ -1071,7 +1078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 20 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-02-04" data-title="איך להתמודד עם מעבר דירה של אחד ההורים אחרי גירושים">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">איך להתמודד עם מעבר דירה של אחד ההורים אחרי גירושים</h3>
                         <p class="text-gray-600 mb-4">מאמר מקצועי על ההתמודדות עם מעבר דירה של אחד ההורים אחרי גירושים, כולל השלכות על הילדים ודרכי טיפול משפטי</p>
@@ -1083,7 +1090,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 21 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-02-05" data-title="חייב המשיך לצבור חוב מזונות – הליך פשיטת הרגל בוטל">
                         <div class="source-logo">
-                            <img src="images/icons/psakdin logo.png?v=12" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
+                            <img src="images/icons/psakdin logo.png?v=2" alt="פסק דין" class="w-20 h-12 object-contain mb-3" style="min-width: 80px; min-height: 48px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=פסק+דין'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">חייב המשיך לצבור חוב מזונות – הליך פשיטת הרגל בוטל</h3>
                         <p class="text-gray-600 mb-4">מקרה מעניין של חייב שהמשיך לצבור חוב מזונות במהלך הליך פשיטת הרגל, מה שהוביל לביטול ההליך. פסק דין העוסק בחובות מזונות ופשיטת רגל</p>
@@ -1095,7 +1102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Yaniv Article 22 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-02-06" data-title="ביקשה לפסול שופטת שלא אישרה לה לעבור דירה עם בנה – ונדחתה">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">ביקשה לפסול שופטת שלא אישרה לה לעבור דירה עם בנה – ונדחתה</h3>
                         <p class="text-gray-600 mb-4">אם לבן 5 עברה איתו מהמרכז לצפון ללא אישור האב. לאחר שבקשתה לרישום זמני של הילד למוסד חינוכי בצפון נדחתה היא דרשה לפסול את השופטת</p>
@@ -1135,7 +1142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Article 6 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="חדלות פירעון" data-date="2024-01-06" data-title="זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">זכה בפיצוי ענק אחרי שקיבל הפטר. יחזיר את החובות?</h3>
                         <p class="text-gray-600 mb-4">חודשים ספורים אחרי שהליך פשיטת הרגל הסתיים, נודע לנאמנת כי החייב זכה בתביעה נזיקית שהעשירה אותו משמעותית. השופט קבע שכ-6% מהפיצוי יעוקל לטובת הנושים</p>
@@ -1148,7 +1155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Article 8 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="סדר דין אזרחי" data-date="2024-01-08" data-title="למרות פסק דין לטובתה: נסגר תיק הוצל"פ של חברת נסיעות נגד חייב">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">למרות פסק דין לטובתה: נסגר תיק הוצל"פ של חברת נסיעות נגד חייב</h3>
                         <p class="text-gray-600 mb-4">החברה הגיעה לפשרה כוללת עם החייב אך מאוחר יותר פתחה נגדו הליך הוצל"פ בעקבות פסק דין לטובתה. החייב העלה טענת "פרעתי" והרשמת קבעה שהסכם הפשרה תופס גם לגבי פסק הדין</p>
@@ -1160,7 +1167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Article 9 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="דיני משפחה" data-date="2024-01-09" data-title="גבר קיבל פטור מכתובה כי אשתו נוחרת">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">גבר קיבל פטור מכתובה כי אשתו נוחרת</h3>
                         <p class="text-gray-600 mb-4">האיש עזב את חדר השינה והאישה הגישה תביעת גירושים. הדיינים קבעו שאי אפשר לבוא אליו בטענות שכן מחסור בשינה פוגע באיכות החיים</p>
@@ -1199,7 +1206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Article 15 -->
                     <article class="card article-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden p-6" data-cat="מאמרים של עו\"ד יניב גיל" data-date="2024-01-15" data-title="הזמני שהות שווים, השכר זהה והאב נשאר כמעט בלי כלום">
                         <div class="source-logo">
-                            <img src="images/icons/mako-logo.png?v=12" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
+                            <img src="images/icons/mako-logo.png?v=1" alt="מאקו" class="w-12 h-8 object-contain mb-3" style="min-width: 48px; min-height: 32px;" onerror="this.src='https://placehold.co/80x30/cccccc/666666?text=מאקו'">
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-[#1a1a1a]">הזמני שהות שווים, השכר זהה והאב נשאר כמעט בלי כלום</h3>
                         <p class="text-gray-600 mb-4">האב הסכים בזמנו לסכום מזונות גבוה יחסית כי לא הייתה ברירה עקב המצב המשפטי. בית המשפט הפחית את המזונות לאור השינויים בהלכה והעובדה שמצבה הכלכלי של האם השתפר</p>
@@ -1298,7 +1305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="index.html" title="דף הבית">
-                    <img src="images/new-logo.png?v=12" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
+                    <img src="images/new-logo.png?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
                 </a>
             </div>
             <button id="close-mobile-menu"

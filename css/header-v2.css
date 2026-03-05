@@ -243,7 +243,7 @@ header#site-header .container {
         top: calc(100% + 70px) !important;
         left: 20px !important;
         transform: rotate(-12deg) !important;
-        /* Restored tilt to the left */
+        /* Counter-clockwise tilt RESTORED */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
@@ -268,14 +268,8 @@ header#site-header .container {
     }
 
     header#site-header .duns-seal-link {
-        display: block !important;
-        position: fixed !important;
-        top: auto !important;
-        bottom: 80px !important;
-        /* Above CTA bar */
-        left: 15px !important;
-        transform: rotate(-8deg) !important;
-        z-index: 999 !important;
+        display: none !important;
+        /* Hidden on mobile: seal overlaps hero text */
     }
 
     .duns-seal {
@@ -291,16 +285,13 @@ header#site-header .container {
    FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
-/* On hero-first pages the hero section starts flush at viewport top.
-   padding-top on the SECTION (the flex container) shifts the centering
-   axis down so ALL content appears below the fixed header.              */
+/* On hero-first pages, the first <section> (hero) should fill from top.
+   The fixed header floats on top of it — premium overlay effect.        */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    padding-top: 220px !important;
-    /* Match tall unscrolled header (~160px logo + padding) */
+    padding-top: 180px !important;
 }
 
-/* Reset any inner-div padding — the section handles it now */
 main.has-hero-first>section:first-of-type>.relative.z-10,
 #main-content.has-hero-first>section:first-of-type>.relative.z-10 {
     padding-top: 0 !important;
@@ -310,7 +301,6 @@ main.has-hero-first>section:first-of-type>.relative.z-10,
 
     main.has-hero-first>section:first-of-type,
     #main-content.has-hero-first>section:first-of-type {
-        padding-top: 75px !important;
-        /* ≈ header height on mobile */
+        padding-top: 100px !important;
     }
 }

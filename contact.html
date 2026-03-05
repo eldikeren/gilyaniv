@@ -41,8 +41,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="canonical" href="https://www.yanivgil.co.il/contact.html">
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/mobile-menu.css?v=12">
-    <link rel="stylesheet" href="css/header-v2.css?v=12">
+    <link rel="stylesheet" href="css/mobile-menu.css?v=7">
+    <link rel="stylesheet" href="css/header-v2.css?v=7">
     <style>
     /* CRITICAL: Force content within viewport on mobile */
         html {
@@ -163,11 +163,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             flex-grow: 1;
             justify-content: flex-end;
         }
-        .h-[90vh] {
+        .h-80vh {
             height: 80vh;
         }
         @media (max-width: 768px) {
-            .h-[90vh] {
+            .h-80vh {
                 height: 60vh;
             }
         }
@@ -392,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="index.html">
-                    <img src="images/new-logo.png?v=12" alt="לוגו משרד עו״ד יניב גיל" class="header-logo" style="margin-left: 10px; display: block;">
+                    <img src="images/new-logo.png?v=2" alt="לוגו משרד עו״ד יניב גיל" class="header-logo" style="margin-left: 10px; display: block;">
                 </a>
                 <a href="https://www.dunsguide.co.il/business?duns=532460057" target="_blank" rel="noopener noreferrer" class="duns-seal-link" title="Duns & Bradstreet Gold Seal">
                     <img src="images/duns_gold_v5.png" alt="Duns & Bradstreet Gold Seal" class="duns-seal" width="75" height="75">
@@ -450,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li><a href="articles.html" title="פרסומים מקצועיים" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">פרסומים מקצועיים</a></li>
                     <li><a href="blog.html" title="בלוג" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">בלוג</a></li>
-                    <li><a href="reviews.html" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">ביקורות מלקוחות</a></li>
+                    <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                     <li><a href="contact.html" title="צור קשר" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">צור קשר</a></li>
                 </ul>
             </nav>
@@ -472,7 +472,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="index.html" title="דף הבית">
-                    <img src="images/new-logo.png?v=12" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
+                    <img src="images/new-logo.png?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
                 </a>
             </div>
             <button id="close-mobile-menu"
@@ -795,17 +795,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Skip to content link -->
     <a href="#main-content" class="skip-link">דלג לתוכן</a>
     
-    <main id="main-content" class="has-hero-first" role="main">
+    <main id="main-content" class="pt-24" role="main">
   <!-- Breadcrumbs -->
-<!-- Hero Section for Contact Page -->
-        <section class="relative h-[90vh] flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+  <div class="breadcrumbs">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">בית</a></li>
+        <li><span aria-current="page">צור קשר</span></li>
+      </ol>
+    </nav>
+  </div>
+        <!-- Hero Section for Contact Page -->
+        <section class="relative h-80vh flex items-center justify-center text-white text-center" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
             <video poster="images/contact-poster.webp" muted loop playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
                 <source data-src="images/contact-compressed.mp4" type="video/mp4">
                 <source data-src="images/contact.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
-            <nav aria-label="Breadcrumb" style="width:100%;margin-bottom:0.75rem;"><ol style="display:flex;list-style:none;padding:0;margin:0;gap:0.25rem;justify-content:center;flex-wrap:wrap;align-items:center;"><li style="color:rgba(255,255,255,0.4);font-size:0.75rem;"><a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">בית</a></li><li style="color:rgba(255,255,255,0.3);font-size:0.75rem;">&nbsp;\&nbsp;</li><li style="color:rgba(255,255,255,0.4);font-size:0.75rem;"><span style="color:rgba(255,255,255,0.5);">צור קשר</span></li></ol></nav>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">צור קשר</h1>
                 <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light">אנחנו כאן לעזור לכם</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1087,7 +1094,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="practice-areas.html" class="hover:text-yellow-400 transition-colors duration-200">תחומי התמחות</a></li>
                         <li><a href="articles.html" class="hover:text-yellow-400 transition-colors duration-200">פרסומים מקצועיים</a></li>
                         <li><a href="blog.html" class="hover:text-yellow-400 transition-colors duration-200">בלוג</a></li>
-                        <li><a href="reviews.html" class="hover:text-yellow-400 transition-colors duration-200">ביקורות מלקוחות</a></li>
+                        <li><a href="https://www.lawreviews.co.il/provider/gil-yaniv#reviews" class="hover:text-yellow-400 transition-colors duration-200" target="_blank" rel="noopener">ביקורות מלקוחות</a></li>
                         <li><a href="contact.html" class="hover:text-yellow-400 transition-colors duration-200">צור קשר</a></li>
                     </ul>
                 </div>
@@ -1136,23 +1143,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const textLogo = header.querySelector('.header-text-logo');
             
             if (window.scrollY > 50) {
-                header.classList.add('py-3', 'shadow-xl');
+                header.classList.add('py-1', 'shadow-xl', 'scrolled');
                 header.classList.remove('py-2', 'shadow-md');
-                if (logo) {
-                    logo.classList.add('scrolled');
-                }
-                if (textLogo) {
-                    textLogo.classList.add('scrolled');
-                }
             } else {
-                header.classList.remove('py-3', 'shadow-xl');
+                header.classList.remove('py-1', 'shadow-xl', 'scrolled');
                 header.classList.add('py-2', 'shadow-md');
-                if (logo) {
-                    logo.classList.remove('scrolled');
-                }
-                if (textLogo) {
-                    textLogo.classList.remove('scrolled');
-                }
             }
         });
         // Duns seal: show on load, hide on scroll down, show on scroll up

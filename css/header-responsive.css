@@ -243,6 +243,7 @@ header#site-header .container {
         top: calc(100% + 70px) !important;
         left: 20px !important;
         transform: rotate(-12deg) !important;
+        /* Counter-clockwise tilt RESTORED */
         z-index: 1000 !important;
         pointer-events: auto !important;
         display: block !important;
@@ -288,7 +289,7 @@ header#site-header .container {
    The fixed header floats on top of it — premium overlay effect.        */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    padding-top: 220px !important;
+    padding-top: 180px !important;
 }
 
 main.has-hero-first>section:first-of-type>.relative.z-10,
@@ -300,6 +301,6 @@ main.has-hero-first>section:first-of-type>.relative.z-10,
 
     main.has-hero-first>section:first-of-type,
     #main-content.has-hero-first>section:first-of-type {
-        padding-top: 75px !important;
+        padding-top: 100px !important;
     }
 }
