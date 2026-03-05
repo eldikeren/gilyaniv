@@ -3,9 +3,9 @@
 .breadcrumbs {
   padding: 12px 0;
   font-size: 14px;
-  color: #666;
-  background: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  color: rgba(255,255,255,0.7);
+  background: #1a1a2e;
+  border-bottom: none;
 }
 
 .breadcrumbs nav {
@@ -35,7 +35,7 @@
 }
 
 .breadcrumbs a {
-  color: #0a3d62;
+  color: rgba(255,255,255,0.8);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -46,13 +46,14 @@
 }
 
 .breadcrumbs [aria-current="page"] {
-  color: #333;
+  color: #c9a55c;
   font-weight: 500;
 }
 
 /* RTL support */
 [dir="rtl"] .breadcrumbs li:not(:last-child)::after {
   content: '\\';
+  color: rgba(255,255,255,0.5);
 }
 
 @media (max-width: 640px) {

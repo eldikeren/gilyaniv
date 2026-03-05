@@ -289,7 +289,7 @@ header#site-header .container {
    The fixed header floats on top of it — premium overlay effect.        */
 main.has-hero-first>section:first-of-type,
 #main-content.has-hero-first>section:first-of-type {
-    padding-top: 180px !important;
+    padding-top: 220px !important;
 }
 
 main.has-hero-first>section:first-of-type>.relative.z-10,
@@ -301,6 +301,6 @@ main.has-hero-first>section:first-of-type>.relative.z-10,
 
     main.has-hero-first>section:first-of-type,
     #main-content.has-hero-first>section:first-of-type {
-        padding-top: 100px !important;
+        padding-top: 130px !important;
     }
 }
