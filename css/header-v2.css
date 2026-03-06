@@ -130,19 +130,21 @@ header#site-header {
 }
 
 /* ===========================================
-   PADDING: main is always 0, children handle spacing
+   PADDING: main has padding for non-hero pages,
+   hero sections pull up with negative margin
    =========================================== */
 
-/* Main always 0 - hero/breadcrumbs handle their own top spacing */
+/* Default: push content below fixed header (non-hero pages) */
 main,
 #main-content {
-    padding-top: 0 !important;
+    padding-top: 200px !important;
 }
 
-/* Hero sections: internal padding clears fixed header */
+/* Hero sections: pull up behind header with negative margin */
 section.h-80vh,
 main > section:first-child,
 #main-content > section:first-child {
+    margin-top: -200px !important;
     padding-top: 280px !important;
 }
 
@@ -151,18 +153,22 @@ section.h-80vh {
     min-height: 80vh !important;
 }
 
-/* Breadcrumbs: internal padding clears fixed header */
+/* Hide breadcrumbs visually (JSON-LD in head preserves SEO) */
 .breadcrumbs {
-    padding-top: 200px !important;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
-    section.h-80vh {
-        padding-top: 160px !important;
+    main,
+    #main-content {
+        padding-top: 130px !important;
     }
 
-    .breadcrumbs {
-        padding-top: 140px !important;
+    section.h-80vh,
+    main > section:first-child,
+    #main-content > section:first-child {
+        margin-top: -130px !important;
+        padding-top: 160px !important;
     }
 }
 
