@@ -241,6 +241,13 @@ header#site-header .container {
     }
 }
 
+/* Pages with fixed TOC sidebar: move seal right so it sits on the hero, not the TOC */
+@media (min-width: 769px) {
+    body:has(.has-fixed-toc) header#site-header .duns-seal-link {
+        left: 300px !important;
+    }
+}
+
 .duns-seal {
     height: 100px;
     width: auto;
