@@ -316,6 +316,100 @@ header#site-header .container {
 }
 
 /* ==========================================
+   DESKTOP DROPDOWN - Dark theme matching mobile
+   ========================================== */
+#practice-dropdown {
+    background: #1a1a2e !important;
+    border: 1px solid rgba(201, 165, 92, 0.3) !important;
+    border-radius: 12px !important;
+    width: 320px !important;
+    padding: 0.5rem !important;
+}
+
+#practice-dropdown > div {
+    background: transparent !important;
+    border-color: rgba(201, 165, 92, 0.2) !important;
+}
+
+#practice-dropdown > div > button,
+#practice-dropdown > div > button[onclick*="toggleCategoryDropdown"] {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
+    padding: 0.875rem 1rem !important;
+}
+
+#practice-dropdown > div > button:hover {
+    background: rgba(201, 165, 92, 0.15) !important;
+}
+
+#practice-dropdown > div > button h4,
+#practice-dropdown .category-icon {
+    color: #c9a55c !important;
+}
+
+#practice-dropdown a {
+    color: #d4c89a !important;
+    background: transparent !important;
+}
+
+#practice-dropdown a:hover {
+    color: #d4af37 !important;
+    background: rgba(201, 165, 92, 0.15) !important;
+}
+
+#practice-dropdown a[href="divorce-guide.html"] {
+    color: #c9a55c !important;
+    font-weight: 700 !important;
+}
+
+#practice-dropdown .pillar-item {
+    border-color: rgba(201, 165, 92, 0.15) !important;
+}
+
+#practice-dropdown .pillar-item a {
+    color: #d4c89a !important;
+}
+
+#practice-dropdown .pillar-item button {
+    color: #c9a55c !important;
+    background: transparent !important;
+}
+
+#practice-dropdown .pillar-item div[id^="sub-"] {
+    background: rgba(201, 165, 92, 0.08) !important;
+    border-radius: 8px !important;
+}
+
+#practice-dropdown .pillar-item div[id^="sub-"] a {
+    color: #b8a870 !important;
+}
+
+#practice-dropdown .pillar-item div[id^="sub-"] a:hover {
+    color: #d4af37 !important;
+}
+
+#practice-dropdown .pillar-item .hover\:bg-gray-50:hover,
+#practice-dropdown .hover\:bg-gray-50:hover {
+    background: rgba(201, 165, 92, 0.15) !important;
+}
+
+#practice-dropdown .bg-gray-50 {
+    background: rgba(201, 165, 92, 0.08) !important;
+}
+
+#practice-dropdown > div > a {
+    background: transparent !important;
+}
+
+#practice-dropdown > div > a h4 {
+    color: #c9a55c !important;
+}
+
+#practice-dropdown > div > a:hover {
+    background: rgba(201, 165, 92, 0.15) !important;
+}
+
+/* ==========================================
    FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
