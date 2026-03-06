@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/mobile-menu.css?v=7">
-    <link rel="stylesheet" href="css/header-v2.css?v=23">
+    <link rel="stylesheet" href="css/header-v2.css?v=24">
     <style>
     /* CRITICAL: Force content within viewport on mobile */
         html {
@@ -378,7 +378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="css/floating-buttons.css">
       <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/mobile-cta-bar.css">
-    <link rel="stylesheet" href="css/scroll-arrow.css?v=23">
+    <link rel="stylesheet" href="css/scroll-arrow.css?v=24">
 </head>
 <body class="bg-gray-50 text-gray-800">
 <!-- Google Tag Manager (noscript) -->
@@ -822,11 +822,125 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- Elfsight Google Reviews Widget -->
-        <section class="py-12 md:py-16 bg-white">
+        <!-- Google Reviews Widget -->
+        <section class="py-12 md:py-16" style="background: transparent;">
             <div class="container mx-auto px-4">
-                <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-e31880ad-b51a-4a3f-a061-302c9ff5fe61" data-elfsight-app-lazy></div>
+                <div class="google-reviews-widget" id="grwReviews" style="max-width: 1000px; margin: 0 auto; font-family: 'Heebo', sans-serif; background: #1c1c1c; border-radius: 12px; padding: 32px 20px;">
+                    <style>
+                        #grwReviews .grw-title { text-align: center; color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 16px; direction: rtl; }
+                        #grwReviews .grw-header { background: #252525; border: 1px solid #333; border-radius: 10px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+                        #grwReviews .grw-header-right { display: flex; align-items: center; gap: 10px; }
+                        #grwReviews .grw-header-right .grw-info h2 { color: #fff; font-size: 15px; font-weight: 700; text-align: right; direction: rtl; margin: 0; }
+                        #grwReviews .grw-header-right .grw-info .grw-rating { display: flex; align-items: center; gap: 4px; justify-content: flex-end; }
+                        #grwReviews .grw-header-right .grw-info .grw-rating .grw-score { color: #fff; font-size: 13px; font-weight: 600; }
+                        #grwReviews .grw-stars { color: #f5b800; font-size: 14px; letter-spacing: 1px; }
+                        #grwReviews .grw-btn { background: #b8860b; color: #fff; border: none; border-radius: 50px; padding: 10px 20px; font-family: 'Heebo', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; white-space: nowrap; transition: background 0.2s; direction: rtl; }
+                        #grwReviews .grw-btn:hover { background: #9a6f00; }
+                        #grwReviews .grw-cards-outer { position: relative; overflow: hidden; }
+                        #grwReviews .grw-cards-track { display: flex; gap: 14px; transition: transform 0.4s ease; }
+                        #grwReviews .grw-card { background: #252525; border: 1px solid #333; border-radius: 10px; padding: 16px 18px; min-width: 0; direction: rtl; }
+                        #grwReviews .grw-reviewer { display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; justify-content: flex-end; }
+                        #grwReviews .grw-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: #fff; flex-shrink: 0; position: relative; }
+                        #grwReviews .grw-g-badge { position: absolute; bottom: -2px; right: -2px; width: 16px; height: 16px; background: #252525; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+                        #grwReviews .grw-g-badge svg { width: 12px; height: 12px; }
+                        #grwReviews .grw-reviewer-info { text-align: right; }
+                        #grwReviews .grw-reviewer-info .grw-name { color: #fff; font-size: 13px; font-weight: 600; }
+                        #grwReviews .grw-reviewer-info .grw-time { color: #888; font-size: 11px; margin-top: 1px; }
+                        #grwReviews .grw-card-stars { color: #f5b800; font-size: 15px; margin: 10px 0 8px; text-align: right; }
+                        #grwReviews .grw-review-text { color: #bbb; font-size: 13px; line-height: 1.65; text-align: right; }
+                        #grwReviews .grw-review-text.grw-collapsed { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+                        #grwReviews .grw-read-more { color: #d4890a; font-size: 12px; font-weight: 500; cursor: pointer; background: none; border: none; padding: 6px 0 0; font-family: 'Heebo', sans-serif; display: block; text-align: right; direction: rtl; }
+                        #grwReviews .grw-read-more:hover { text-decoration: underline; }
+                        #grwReviews .grw-nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: #252525; border: 1px solid #444; color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 5; transition: background 0.15s; }
+                        #grwReviews .grw-nav-btn:hover { background: #333; }
+                        #grwReviews .grw-nav-btn.grw-right-btn { right: -14px; }
+                        #grwReviews .grw-nav-btn.grw-left-btn { left: -14px; }
+                        #grwReviews .grw-nav-btn:disabled { opacity: 0.2; cursor: default; }
+                        #grwReviews .grw-nav-btn.grw-hidden { display: none; }
+                        #grwReviews .grw-g-logo { width: 36px; height: 36px; }
+                        @media (max-width: 779px) { #grwReviews .grw-card { flex: 0 0 calc(50% - 7px) !important; max-width: calc(50% - 7px) !important; } }
+                        @media (max-width: 499px) { #grwReviews .grw-card { flex: 0 0 100% !important; max-width: 100% !important; } }
+                    </style>
+
+                    <h2 class="grw-title">מה הלקוחות שלנו אומרים</h2>
+
+                    <div class="grw-header">
+                        <div class="grw-header-right">
+                            <svg class="grw-g-logo" viewBox="0 0 48 48">
+                                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                            </svg>
+                            <div class="grw-info">
+                                <h2>מצוין ב-Google</h2>
+                                <div class="grw-rating">
+                                    <span class="grw-score">5.0</span>
+                                    <span class="grw-stars">★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://g.page/r/CVVMpZLR3re8EBM/review" target="_blank" class="grw-btn">כתבו לנו ביקורת ב-Google</a>
+                    </div>
+
+                    <div class="grw-cards-outer" id="grwCardsOuterR">
+                        <div class="grw-cards-track" id="grwTrackR"></div>
+                        <button class="grw-nav-btn grw-right-btn" id="grwPrevBtnR" onclick="grwNavR(-1)">›</button>
+                        <button class="grw-nav-btn grw-left-btn grw-hidden" id="grwNextBtnR" onclick="grwNavR(1)">‹</button>
+                    </div>
+                </div>
+
+                <script>
+                (function(){
+                    var GBADGE = '<svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+
+                    var reviews = [
+                        { name: "Tomer Peer", time: "לפני 21 שעות", rating: 5, text: "מומלץ בחום", color: "#1a73e8", initials: "T", long: false },
+                        { name: "Jacob", time: "לפני חודש", rating: 5, text: 'אני רוצה להודות לעו"ד יניב גיל על המקצועיות, הסבלנות והליווי האישי לאורך כל התהליך. תמיד הרגשתי שאני בידיים טובות.', color: "#5f6368", initials: "J", long: true },
+                        { name: "Ran Amir", time: "לפני שנתיים", rating: 5, text: 'הגענו למשרד של יניב אחרי כמה עורכי דין, מדובר על מקרה מורכב של דירה ירושה עם חוב לחברה חיצונית, עו"ד יניב ניהל את הכל בצורה מקצועית ואחראית.', color: "#e67c00", initials: "R", long: true }
+                    ];
+
+                    var cur = 0;
+                    function vis() { var w = window.innerWidth; if (w < 500) return 1; if (w < 780) return 2; return 3; }
+                    function maxSlide() { return Math.max(0, reviews.length - vis()); }
+
+                    function renderCards() {
+                        var track = document.getElementById('grwTrackR');
+                        var v = vis();
+                        var cardPct = v === 1 ? '100%' : v === 2 ? 'calc(50% - 7px)' : 'calc(33.333% - 10px)';
+                        track.innerHTML = reviews.map(function(r, i) {
+                            return '<div class="grw-card" style="flex: 0 0 '+cardPct+'; max-width: '+cardPct+';">' +
+                                '<div class="grw-reviewer"><div class="grw-reviewer-info"><div class="grw-name">'+r.name+'</div><div class="grw-time">'+r.time+'</div></div>' +
+                                '<div class="grw-avatar" style="background:'+r.color+'">'+r.initials+'<div class="grw-g-badge">'+GBADGE+'</div></div></div>' +
+                                '<div class="grw-card-stars">★★★★★</div>' +
+                                '<div class="grw-review-text '+(r.long ? 'grw-collapsed' : '')+'" id="grwRtR'+i+'">'+r.text+'</div>' +
+                                (r.long ? '<button class="grw-read-more" onclick="grwToggleR('+i+', this)">Read more</button>' : '') +
+                                '</div>';
+                        }).join('');
+                        updateNav();
+                    }
+
+                    function updateNav() {
+                        var ms = maxSlide();
+                        var prev = document.getElementById('grwPrevBtnR');
+                        var next = document.getElementById('grwNextBtnR');
+                        prev.disabled = cur === 0;
+                        next.classList.toggle('grw-hidden', ms === 0);
+                        next.disabled = cur >= ms;
+                        var card = document.querySelector('#grwReviews .grw-card');
+                        if (card) {
+                            var step = card.offsetWidth + 14;
+                            document.getElementById('grwTrackR').style.transform = 'translateX(' + (cur * step * -1) + 'px)';
+                        }
+                    }
+
+                    window.grwNavR = function(dir) { cur = Math.max(0, Math.min(maxSlide(), cur + dir)); updateNav(); };
+                    window.grwToggleR = function(i, btn) { var el = document.getElementById('grwRtR' + i); var isCollapsed = el.classList.toggle('grw-collapsed'); btn.textContent = isCollapsed ? 'Read more' : 'Show less'; };
+
+                    renderCards();
+                    window.addEventListener('resize', function() { cur = 0; renderCards(); });
+                })();
+                </script>
             </div>
         </section>
 
@@ -1195,6 +1309,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
     </script>
-<script src="js/scroll-arrow.js?v=23" defer></script>
+<script src="js/scroll-arrow.js?v=24" defer></script>
 </body>
 </html>

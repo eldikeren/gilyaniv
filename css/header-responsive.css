@@ -130,21 +130,22 @@ header#site-header {
 }
 
 /* ===========================================
-   PADDING: main has padding for non-hero pages,
-   hero sections pull up with negative margin
+   PADDING: Same approach as working index page
+   - main: no padding (hero bg covers gap)
+   - hero sections: internal padding clears header
+   - non-hero pages: first div gets padding
    =========================================== */
 
-/* Default: push content below fixed header (non-hero pages) */
+/* Main: no padding - hero backgrounds extend behind header */
 main,
 #main-content {
-    padding-top: 200px !important;
+    padding-top: 0 !important;
 }
 
-/* Hero sections: pull up behind header with negative margin */
+/* Hero sections: internal padding pushes text below header */
 section.h-80vh,
 main > section:first-child,
 #main-content > section:first-child {
-    margin-top: -200px !important;
     padding-top: 280px !important;
 }
 
@@ -153,22 +154,27 @@ section.h-80vh {
     min-height: 80vh !important;
 }
 
+/* Non-hero pages: first div gets padding to clear header */
+main > div:first-child,
+#main-content > div:first-child {
+    padding-top: 200px !important;
+}
+
 /* Hide breadcrumbs visually (JSON-LD in head preserves SEO) */
 .breadcrumbs {
     display: none !important;
 }
 
 @media (max-width: 768px) {
-    main,
-    #main-content {
-        padding-top: 130px !important;
-    }
-
     section.h-80vh,
     main > section:first-child,
     #main-content > section:first-child {
-        margin-top: -130px !important;
         padding-top: 160px !important;
+    }
+
+    main > div:first-child,
+    #main-content > div:first-child {
+        padding-top: 130px !important;
     }
 }
 
