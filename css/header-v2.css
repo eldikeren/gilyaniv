@@ -129,27 +129,7 @@ header#site-header {
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Base padding for main content so first content sits below the fixed header.
-   80px = approximate header height (scrolled / compact state) */
-main,
-#main-content {
-    padding-top: 80px !important;
-}
-
-@media (max-width: 768px) {
-
-    main,
-    #main-content {
-        padding-top: 70px !important;
-    }
-}
-
-/* Pages where the hero is the very first child: remove padding so hero
-   slides flush under the floating header (premium overlay look).        */
-main.has-hero-first,
-#main-content.has-hero-first {
-    padding-top: 0 !important;
-}
+/* Let each page's own pt-24 class handle the top padding for the fixed header */
 
 /* Subtle diagonal light reflection across header */
 header#site-header::before {
@@ -285,22 +265,3 @@ header#site-header .container {
    FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
-/* On hero-first pages, the first <section> (hero) should fill from top.
-   The fixed header floats on top of it — premium overlay effect.        */
-main.has-hero-first>section:first-of-type,
-#main-content.has-hero-first>section:first-of-type {
-    padding-top: 220px !important;
-}
-
-main.has-hero-first>section:first-of-type>.relative.z-10,
-#main-content.has-hero-first>section:first-of-type>.relative.z-10 {
-    padding-top: 0 !important;
-}
-
-@media (max-width: 768px) {
-
-    main.has-hero-first>section:first-of-type,
-    #main-content.has-hero-first>section:first-of-type {
-        padding-top: 130px !important;
-    }
-}
