@@ -130,58 +130,40 @@ header#site-header {
 }
 
 /* ===========================================
-   SMART PADDING: Eliminates white gap for hero pages
-   - Default: 190px on main (for pages without hero/breadcrumbs)
-   - Hero pages: padding moves INSIDE the section (dark bg covers gap)
-   - Breadcrumb pages: padding inside breadcrumbs (dark bg covers gap)
+   PADDING: main is always 0, children handle spacing
    =========================================== */
 
-/* Default: pages without hero or breadcrumbs */
+/* Main always 0 - hero/breadcrumbs handle their own top spacing */
 main,
 #main-content {
-    padding-top: 190px !important;
-}
-
-/* When main starts with a section (hero) or breadcrumbs: no main padding */
-main:has(> section:first-child),
-main:has(> .breadcrumbs:first-child),
-#main-content:has(> section:first-child),
-#main-content:has(> .breadcrumbs:first-child) {
     padding-top: 0 !important;
 }
 
-/* Hero sections: big internal padding to push text below fixed header */
+/* Hero sections: internal padding clears fixed header */
+section.h-80vh,
 main > section:first-child,
 #main-content > section:first-child {
     padding-top: 280px !important;
 }
 
-/* Override h-80vh fixed height so extra padding doesn't squish content */
-main > section.h-80vh:first-child,
-#main-content > section.h-80vh:first-child {
+section.h-80vh {
     height: auto !important;
     min-height: 80vh !important;
 }
 
-/* Breadcrumbs: internal padding to push below header */
-main > .breadcrumbs:first-child,
-#main-content > .breadcrumbs:first-child {
+/* Breadcrumbs: internal padding clears fixed header */
+.breadcrumbs {
     padding-top: 200px !important;
 }
 
 @media (max-width: 768px) {
-    main,
-    #main-content {
-        padding-top: 120px !important;
-    }
-
+    section.h-80vh,
     main > section:first-child,
     #main-content > section:first-child {
         padding-top: 160px !important;
     }
 
-    main > .breadcrumbs:first-child,
-    #main-content > .breadcrumbs:first-child {
+    .breadcrumbs {
         padding-top: 140px !important;
     }
 }
