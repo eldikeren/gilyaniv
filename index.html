@@ -1106,6 +1106,7 @@
     <link rel="stylesheet" href="css/faq-accordion.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/floating-buttons.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/scroll-arrow.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -1388,7 +1389,7 @@
     <main id="main-content" class="pt-24" role="main">
         <!-- Hero Section -->
         <section
-            class="relative h-80vh flex items-start justify-center text-white text-center pt-8"
+            class="relative h-80vh flex items-start justify-center text-white text-center pt-16"
             style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
             <video poster="images/hero-poster.webp" muted loop playsinline
                 class="absolute inset-0 w-full h-full object-cover" preload="none">
@@ -1412,24 +1413,15 @@
                         ולתוצאות מיטביות עבורך.</p>
                 </div>
             </div>
-            <!-- Scroll down arrow -->
-            <button type="button" class="scroll-arrow" onclick="scrollToNextSection()" aria-label="גלול לסעיף הבא">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </button>
         </section>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 py-6"
-            style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-[#1a1a1a] px-8 py-4 text-base font-semibold text-[#b8941f] shadow-lg transition-all duration-300 hover:bg-[#b8941f] hover:text-[#1a1a1a]"
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 py-8 bg-white">
+            <a class="inline-flex items-center justify-center rounded-full border-2 border-[#b8941f] bg-white px-8 py-4 text-base font-semibold text-[#b8941f] shadow-md transition-all duration-300 hover:bg-[#b8941f] hover:text-white"
                 href="tel:0548184581" title="התקשר 054-8184581">
                 התקשר עכשיו
             </a>
-            <a class="inline-flex items-center justify-center rounded-full border-2 border-[#25D366] bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#20BA5A] hover:border-[#20BA5A]"
+            <a class="inline-flex items-center justify-center rounded-full border-2 border-[#25D366] bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#20BA5A] hover:border-[#20BA5A]"
                 href="https://wa.me/972548184581?text=שלום%2C%20אני%20מעוניין%20בייעוץ%20משפטי"
                 title="שלח WhatsApp" target="_blank" rel="noopener">
                 <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
@@ -1439,10 +1431,6 @@
                 שלח WhatsApp
             </a>
         </div>
-
-        <!-- Section Separator -->
-        <div class="section-separator black"></div>
-        <div class="section-separator gold"></div>
 
         <!-- About Section -->
         <section id="about" class="py-16 md:py-24">
@@ -2449,6 +2437,7 @@
             });
         });
     </script>
+<script src="js/scroll-arrow.js" defer></script>
 </body>
 
 </html>

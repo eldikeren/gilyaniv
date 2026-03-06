@@ -1,0 +1,58 @@
+/* Global Scroll Arrow - Fixed on left side */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 24px;
+    z-index: 4000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #c9a55c;
+    background: rgba(26, 26, 46, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    animation: scroll-pulse 2s ease-in-out infinite;
+    box-shadow: 0 2px 12px rgba(201, 165, 92, 0.3);
+}
+
+.scroll-indicator svg {
+    width: 22px;
+    height: 22px;
+    stroke: #fff;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.scroll-indicator:hover {
+    background: rgba(201, 165, 92, 0.9);
+    transform: scale(1.1);
+    animation: none;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+}
+
+@keyframes scroll-pulse {
+    0%, 100% { box-shadow: 0 2px 12px rgba(201, 165, 92, 0.3); }
+    50% { box-shadow: 0 2px 20px rgba(201, 165, 92, 0.7), 0 0 8px rgba(201, 165, 92, 0.4); }
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        width: 40px;
+        height: 40px;
+        bottom: 24px;
+        left: 16px;
+    }
+
+    .scroll-indicator svg {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -129,7 +129,18 @@ header#site-header {
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Let each page's own pt-24 class handle the top padding for the fixed header */
+/* Override pt-24 (96px) — header with 160px logo needs more clearance */
+main,
+#main-content {
+    padding-top: 190px !important;
+}
+
+@media (max-width: 768px) {
+    main,
+    #main-content {
+        padding-top: 120px !important;
+    }
+}
 
 /* Subtle diagonal light reflection across header */
 header#site-header::before {
