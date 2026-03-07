@@ -264,6 +264,11 @@ header a[href^="tel:"],
     border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
 }
 
+/* Logo + seal spacing - more gap between logo and Duns seal */
+.mobile-menu-overlay > .flex.justify-between .flex.items-center {
+    gap: 1.25rem !important;
+}
+
 /* Close button - golden color */
 .mobile-menu-overlay #close-mobile-menu,
 .mobile-menu-overlay button[aria-label*="סגור"] {
