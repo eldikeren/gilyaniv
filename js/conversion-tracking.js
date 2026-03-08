@@ -1,10 +1,14 @@
 /**
  * Google Ads & GA4 Conversion Tracking
  * Tracks: Phone calls, WhatsApp clicks, Form submissions, Thank you page
+ * Updated: 2026-03-08 – Live conversion IDs configured
  */
 
 (function() {
     'use strict';
+
+    // Google Ads conversion ID for "Calls from website visits"
+    var PHONE_CONVERSION_ID = 'AW-17958262413/4EYcCKqj2IQcEI2tlfNC';
 
     // Wait for gtag to be available
     function waitForGtag(callback) {
@@ -27,9 +31,11 @@
                     'value': 1
                 });
 
-                // Google Ads Conversion (will work once you set up conversion ID)
+                // Google Ads Conversion – "Calls from website visits"
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                    'send_to': PHONE_CONVERSION_ID,
+                    'value': 1.0,
+                    'currency': 'ILS',
                     'event_callback': function() {
                         console.log('Phone call conversion tracked');
                     }
@@ -42,7 +48,14 @@
         // Track WhatsApp clicks
         document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(link) {
             link.addEventListener('click', function() {
-                // GA4 Event
+                // GA4 Event – whatsapp_click (importable as Google Ads conversion)
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'contact',
+                    'event_label': 'whatsapp',
+                    'value': 1
+                });
+
+                // GA4 generate_lead event for cross-channel reporting
                 gtag('event', 'generate_lead', {
                     'event_category': 'contact',
                     'event_label': 'whatsapp',
