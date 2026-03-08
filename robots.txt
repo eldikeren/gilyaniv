@@ -4,6 +4,17 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /thanks.html
+Disallow: /_api/
+Disallow: /cdn-cgi/
+Disallow: /bolt-performance
+Disallow: /*?src=
+Disallow: /*?evid=
+Disallow: /*?lightbox=
+Disallow: /*#!
+Disallow: /og-image-generator.html
+Disallow: /og-image-template.html
+Disallow: /index-staging.html
 
 User-agent: AdsBot-Google-Mobile
 User-agent: AdsBot-Google
