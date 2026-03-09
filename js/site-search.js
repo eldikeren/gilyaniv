@@ -222,6 +222,7 @@
     if (header) {
       var h = header.offsetHeight + 8;
       modal.style.top = h + 'px';
+      modal.style.maxHeight = 'calc(100vh - ' + h + 'px)';
     }
 
     backdrop.classList.add('active');
