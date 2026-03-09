@@ -216,6 +216,14 @@
   function openSearch() {
     if (isOpen) return;
     isOpen = true;
+
+    // Position modal dynamically below the header
+    var header = document.getElementById('site-header');
+    if (header) {
+      var h = header.offsetHeight + 8;
+      modal.style.top = h + 'px';
+    }
+
     backdrop.classList.add('active');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
