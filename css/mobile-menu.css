@@ -245,6 +245,20 @@
 }
 
 /* ==========================================
+   MOBILE HAMBURGER BUTTON - Gold color on dark header
+   Fix: Override gray text color on pages that have wrong inline class
+   ========================================== */
+#mobile-menu-button {
+    color: #c9a55c !important;
+}
+
+#mobile-menu-button:hover,
+#mobile-menu-button:focus {
+    color: #b8941f !important;
+    outline: none !important;
+}
+
+/* ==========================================
    HEADER CTA BUTTON
    ========================================== */
 .header-cta-btn,
