@@ -225,7 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="index.html" title="דף הבית">
                     <img src="images/new-logo.png?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;">
                 </a>
-                <a href="https://www.duns100.co.il/" target="_blank" rel="noopener" title="Duns & Bradstreet Gold Seal" style="transform: rotate(-12deg); display: inline-block;">
+                <a href="https://www.dunsguide.co.il/business?duns=532460057" target="_blank" rel="noopener" title="Duns & Bradstreet Gold Seal" style="transform: rotate(-12deg); display: inline-block;">
                     <img loading="lazy" src="images/duns_gold_v5.png" alt="Duns & Bradstreet Gold Seal" style="height: 55px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 </a>
             </div>
@@ -856,7 +856,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
-            if (!e.target.closest('.relative.group') && !e.target.closest('[id$="-dropdown"]')) {
+            if (!e.target.closest('.relative.group') && !e.target.closest('[id$="-dropdown"]') && !e.target.closest('#mobile-menu')) {
                 document.querySelectorAll('[id$="-dropdown"]').forEach(dd => dd.classList.add('hidden'));
             }
         });
