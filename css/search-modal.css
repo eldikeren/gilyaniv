@@ -1,4 +1,5 @@
 /* Search Modal — Dark theme matching site header */
+/* iOS-compatible: no transform centering, no visibility toggling */
 
 /* Trigger button in header */
 .search-trigger-btn {
@@ -10,58 +11,55 @@
   align-items: center;
   justify-content: center;
   color: #c9a55c;
-  transition: color 0.2s, transform 0.2s;
+  transition: color 0.2s;
 }
 .search-trigger-btn:hover {
   color: #e0c373;
-  transform: scale(1.1);
 }
 .search-trigger-btn svg {
   width: 22px;
   height: 22px;
 }
 
-/* Backdrop overlay — must be above header (z-50 = 50) */
+/* Backdrop overlay */
 .search-backdrop {
+  display: none;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.65);
   z-index: 9998;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s, visibility 0.25s;
+  -webkit-tap-highlight-color: transparent;
 }
 .search-backdrop.active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
-/* Modal panel */
+/* Modal panel — centered without transform */
 .search-modal {
+  display: none;
   position: fixed;
-  top: 90px; /* fallback — JS overrides dynamically */
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
+  top: 90px;
+  left: 0;
+  right: 0;
   width: 92%;
   max-width: 600px;
-  max-height: 75vh;
   z-index: 9999;
+  margin: 0 auto;
   background: #1a1a2e;
   border: 1px solid rgba(201, 165, 92, 0.3);
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  display: flex;
   flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
+  overflow: hidden;
   direction: rtl;
   font-family: 'Heebo', sans-serif;
+  -webkit-overflow-scrolling: touch;
 }
 .search-modal.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  display: flex;
 }
 
 /* Search input area */
@@ -71,6 +69,7 @@
   gap: 10px;
   padding: 16px 20px;
   border-bottom: 1px solid rgba(201, 165, 92, 0.2);
+  flex-shrink: 0;
 }
 .search-input-wrap svg {
   width: 20px;
@@ -83,7 +82,7 @@
   background: none;
   border: none;
   outline: none;
-  font-size: 17px;
+  font-size: 16px;
   color: #f0f0f0;
   font-family: 'Heebo', sans-serif;
   direction: rtl;
@@ -91,6 +90,7 @@
   appearance: none;
   touch-action: manipulation;
   min-width: 0;
+  border-radius: 0;
 }
 .search-input::placeholder {
   color: rgba(240, 240, 240, 0.4);
@@ -100,10 +100,11 @@
   border: none;
   cursor: pointer;
   color: rgba(240, 240, 240, 0.5);
-  padding: 4px;
+  padding: 8px;
   display: flex;
   align-items: center;
   transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .search-close-btn:hover {
   color: #f0f0f0;
@@ -118,6 +119,7 @@
   overflow-y: auto;
   padding: 8px 0;
   flex: 1;
+  -webkit-overflow-scrolling: touch;
 }
 .search-results::-webkit-scrollbar {
   width: 6px;
@@ -138,6 +140,7 @@
   color: #f0f0f0;
   transition: background 0.15s;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-tap-highlight-color: transparent;
 }
 .search-result-item:hover,
 .search-result-item:focus {
@@ -178,6 +181,7 @@
   gap: 16px;
   font-size: 12px;
   color: rgba(240, 240, 240, 0.3);
+  flex-shrink: 0;
 }
 .search-hint kbd {
   background: rgba(255, 255, 255, 0.08);
@@ -191,22 +195,18 @@
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .search-modal {
-    top: 70px; /* fallback — JS overrides dynamically */
+    top: 0;
     left: 0;
     right: 0;
-    transform: none;
     width: 100%;
     max-width: 100%;
-    max-height: calc(100vh - 70px);
-    height: auto;
+    margin: 0;
     border-radius: 0;
     border: none;
-  }
-  .search-modal.active {
-    transform: none;
+    max-height: none;
   }
   .search-input {
-    font-size: 18px;
+    font-size: 16px;
   }
   .search-hint {
     display: none;

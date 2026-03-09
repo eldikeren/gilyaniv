@@ -15,6 +15,7 @@
   var searchData = null;
   var isOpen = false;
   var debounceTimer = null;
+  var savedScrollY = 0;
 
   // --- Icons ---
   var ICON_SEARCH = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
@@ -73,8 +74,12 @@
     backdrop = document.createElement('div');
     backdrop.className = 'search-backdrop';
     backdrop.addEventListener('click', closeSearch);
+    backdrop.addEventListener('touchend', function (e) {
+      e.preventDefault();
+      closeSearch();
+    });
 
-    // Modal — stop clicks inside from closing via backdrop
+    // Modal
     modal = document.createElement('div');
     modal.className = 'search-modal';
     modal.setAttribute('role', 'dialog');
@@ -88,11 +93,15 @@
     inputWrap.innerHTML = ICON_SEARCH;
 
     input = document.createElement('input');
-    input.type = 'text';
+    input.type = 'search';
     input.className = 'search-input';
     input.placeholder = 'חיפוש באתר...';
     input.setAttribute('aria-label', 'חיפוש');
     input.setAttribute('autocomplete', 'off');
+    input.setAttribute('autocorrect', 'off');
+    input.setAttribute('autocapitalize', 'off');
+    input.setAttribute('spellcheck', 'false');
+    input.setAttribute('enterkeyhint', 'search');
 
     var closeBtn = document.createElement('button');
     closeBtn.className = 'search-close-btn';
@@ -212,6 +221,25 @@
     }
   }
 
+  // --- iOS scroll lock helpers ---
+  function lockScroll() {
+    savedScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + savedScrollY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+    window.scrollTo(0, savedScrollY);
+  }
+
   // --- Open / Close ---
   function openSearch() {
     if (isOpen) return;
@@ -219,23 +247,28 @@
 
     // Position modal dynamically below the header
     var header = document.getElementById('site-header');
-    if (header) {
+    var isMobile = window.innerWidth <= 640;
+
+    if (isMobile) {
+      // On mobile, position right below header
+      var headerH = header ? header.offsetHeight : 0;
+      modal.style.top = headerH + 'px';
+      modal.style.maxHeight = (window.innerHeight - headerH) + 'px';
+    } else if (header) {
       var h = header.offsetHeight + 8;
       modal.style.top = h + 'px';
-      modal.style.maxHeight = 'calc(100vh - ' + h + 'px)';
+      modal.style.maxHeight = (window.innerHeight - h - 20) + 'px';
     }
 
     backdrop.classList.add('active');
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    lockScroll();
 
     // Init Fuse in background
     initFuse();
 
-    // Focus input immediately (must be synchronous for mobile keyboard)
-    input.focus();
-    // Fallback for browsers that need a tick
-    requestAnimationFrame(function () { input.focus(); });
+    // Focus input — delay slightly for iOS to register the DOM change
+    setTimeout(function () { input.focus(); }, 50);
 
     showStatus('הקלידו לפחות 2 תווים לחיפוש');
   }
@@ -245,8 +278,9 @@
     isOpen = false;
     backdrop.classList.remove('active');
     modal.classList.remove('active');
-    document.body.style.overflow = '';
+    unlockScroll();
     input.value = '';
+    input.blur();
     resultsContainer.innerHTML = '';
     if (triggerBtn) triggerBtn.focus();
   }
