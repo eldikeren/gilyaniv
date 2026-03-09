@@ -299,3 +299,37 @@ header a[href^="tel:"],
     background: #1a1a2e !important;
     flex: 1;
 }
+
+/* ==========================================
+   REMOVE BLUE FOCUS OUTLINE ON TAP (mobile)
+   ========================================== */
+.mobile-menu-overlay a,
+.mobile-menu-overlay button,
+.mobile-menu-overlay a:focus,
+.mobile-menu-overlay button:focus,
+.mobile-menu-overlay a:active,
+.mobile-menu-overlay button:active,
+.mobile-menu-overlay a:focus-visible,
+.mobile-menu-overlay button:focus-visible {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove tap highlight and focus outline site-wide on interactive elements */
+a, button, [role="button"], input, select, textarea {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+/* Duns seal link - remove outline */
+.duns-seal-link,
+.duns-seal-link:focus,
+.duns-seal-link:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
