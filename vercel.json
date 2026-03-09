@@ -86,6 +86,7 @@
     { "source": "/blog-articles/practice-areas.html", "destination": "/practice-areas.html", "permanent": true },
     { "source": "/blog-articles/attorneys.html", "destination": "/attorneys.html", "permanent": true },
     { "source": "/blog-articles/blog.html", "destination": "/blog.html", "permanent": true },
+    { "source": "/blog-articles/execution.html", "destination": "/execution.html", "permanent": true },
 
     { "source": "/_api/:path*", "destination": "/", "permanent": true },
     { "source": "/cdn-cgi/:path*", "destination": "/", "permanent": true },
