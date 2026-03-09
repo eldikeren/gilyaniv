@@ -74,12 +74,13 @@
     backdrop.className = 'search-backdrop';
     backdrop.addEventListener('click', closeSearch);
 
-    // Modal
+    // Modal — stop clicks inside from closing via backdrop
     modal = document.createElement('div');
     modal.className = 'search-modal';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-label', 'חיפוש באתר');
+    modal.addEventListener('click', function (e) { e.stopPropagation(); });
 
     // Input area
     var inputWrap = document.createElement('div');
@@ -222,9 +223,10 @@
     // Init Fuse in background
     initFuse();
 
-    setTimeout(function () {
-      input.focus();
-    }, 100);
+    // Focus input immediately (must be synchronous for mobile keyboard)
+    input.focus();
+    // Fallback for browsers that need a tick
+    requestAnimationFrame(function () { input.focus(); });
 
     showStatus('הקלידו לפחות 2 תווים לחיפוש');
   }

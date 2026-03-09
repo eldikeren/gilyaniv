@@ -87,6 +87,10 @@
   color: #f0f0f0;
   font-family: 'Heebo', sans-serif;
   direction: rtl;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  min-width: 0;
 }
 .search-input::placeholder {
   color: rgba(240, 240, 240, 0.4);
