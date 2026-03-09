@@ -15,6 +15,7 @@ Disallow: /*#!
 Disallow: /og-image-generator.html
 Disallow: /og-image-template.html
 Disallow: /index-staging.html
+Disallow: /js/search-index.json
 
 User-agent: AdsBot-Google-Mobile
 User-agent: AdsBot-Google

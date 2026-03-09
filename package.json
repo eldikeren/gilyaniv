@@ -4,6 +4,7 @@
   "description": "Yaniv Gil Law Office Website",
   "scripts": {
     "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "build:search": "node scripts/generate-search-index.js",
     "build": "npm run build:css"
   },
   "devDependencies": {
