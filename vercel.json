@@ -7,7 +7,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": 
+      "has":  [
         {
           "type": "host",
           "value": "yanivgil.co.il"
