@@ -427,3 +427,55 @@ header#site-header .container {
    FIX: Hero Overlay for pages with has-hero-first
    ========================================== */
 
+/* ==========================================
+   Social Media Icons in Header
+   ========================================== */
+.social-icons-mobile-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 4px;
+}
+.social-icon-header {
+    display: none !important;
+}
+.social-icon-header-mobile {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #b8941f;
+    background: #1a1a1a;
+    color: #b8941f;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.social-icon-header:hover,
+.social-icon-header-mobile:hover {
+    background: #b8941f !important;
+    color: #1a1a1a !important;
+}
+@media (min-width: 768px) {
+    .social-icon-header {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid #b8941f;
+        background: #1a1a1a;
+        color: #b8941f;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    .social-icon-header-mobile {
+        display: none !important;
+    }
+    .social-icons-mobile-container {
+        display: none !important;
+    }
+}
+
