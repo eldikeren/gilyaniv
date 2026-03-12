@@ -32,6 +32,8 @@
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/about", "destination": "/", "permanent": true },
     { "source": "/about.html", "destination": "/", "permanent": true },
+    { "source": "/terms-of-use.html", "destination": "/", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/", "permanent": true },
 
     { "source": "/personalstatus", "destination": "/family-law.html", "permanent": true },
     { "source": "/familycourt", "destination": "/family-law.html", "permanent": true },
