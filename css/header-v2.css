@@ -165,6 +165,14 @@ main > div:first-child,
     display: none !important;
 }
 
+/* When breadcrumbs (hidden) is first child, pad the next sibling instead */
+main > .breadcrumbs + section,
+main > .breadcrumbs + div,
+#main-content > .breadcrumbs + section,
+#main-content > .breadcrumbs + div {
+    padding-top: 200px !important;
+}
+
 @media (max-width: 768px) {
     section.h-80vh,
     main > section:first-child,
@@ -173,7 +181,11 @@ main > div:first-child,
     }
 
     main > div:first-child,
-    #main-content > div:first-child {
+    #main-content > div:first-child,
+    main > .breadcrumbs + section,
+    main > .breadcrumbs + div,
+    #main-content > .breadcrumbs + section,
+    #main-content > .breadcrumbs + div {
         padding-top: 130px !important;
     }
 }
