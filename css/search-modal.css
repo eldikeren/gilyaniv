@@ -192,6 +192,41 @@
   font-size: 11px;
 }
 
+/* Hide search trigger button on mobile - it moves to mobile menu */
+@media (max-width: 768px) {
+  .search-trigger-btn {
+    display: none !important;
+  }
+}
+
+/* Mobile search button inside mobile menu */
+.mobile-menu-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid rgba(201, 165, 92, 0.3);
+  border-radius: 8px;
+  color: #c9a55c;
+  font-size: 1rem;
+  font-family: 'Heebo', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  direction: rtl;
+  text-align: right;
+}
+.mobile-menu-search-btn:hover {
+  background: rgba(201, 165, 92, 0.1);
+  border-color: #c9a55c;
+}
+.mobile-menu-search-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .search-modal {

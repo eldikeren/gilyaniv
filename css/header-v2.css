@@ -325,6 +325,22 @@ header#site-header .container {
     .scrolled .duns-seal {
         height: 45px;
     }
+
+    /* Hide header CTA on mobile - redundant with mobile CTA bar at bottom */
+    header#site-header .flex.items-center.space-x-4 {
+        display: none !important;
+    }
+
+    /* Prevent logo container from being squeezed by flex layout */
+    header#site-header .container > div:first-child {
+        flex-shrink: 0;
+    }
+
+    /* Ensure logo displays at proper size without distortion */
+    .header-logo {
+        flex-shrink: 0;
+        object-fit: contain;
+    }
 }
 
 /* ==========================================
