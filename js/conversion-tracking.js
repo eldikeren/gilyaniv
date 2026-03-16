@@ -133,3 +133,13 @@
     }
 })();
 
+
+// Load SEO enhancements for breadcrumbs, canonical fixes, robots meta, hreflang
+(function() {
+    if (!document.querySelector('script[src*="seo-enhancements"]')) {
+        var s = document.createElement('script');
+        s.src = '/js/seo-enhancements.js';
+        s.defer = true;
+        document.body.appendChild(s);
+    }
+})();
