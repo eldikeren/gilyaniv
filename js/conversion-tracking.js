@@ -112,3 +112,13 @@
         console.log('Conversion tracking initialized');
     });
 })();
+
+// Load internal links for SEO (injected dynamically)
+(function() {
+    if (!document.querySelector('script[src*="internal-links"]')) {
+        var s = document.createElement('script');
+        s.src = '/js/internal-links.js';
+        s.defer = true;
+        document.body.appendChild(s);
+    }
+})();
