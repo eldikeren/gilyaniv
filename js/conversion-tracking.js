@@ -122,3 +122,14 @@
         document.body.appendChild(s);
     }
 })();
+
+// Load schema markup for SEO rich results (injected dynamically)
+(function() {
+    if (!document.querySelector('script[src*="schema-markup"]')) {
+        var s = document.createElement('script');
+        s.src = '/js/schema-markup.js';
+        s.defer = true;
+        document.body.appendChild(s);
+    }
+})();
+
