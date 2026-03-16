@@ -335,7 +335,7 @@
 
     // Search button
     var searchDiv = document.createElement('div');
-    searchDiv.style.cssText = 'margin-top: 1rem; padding: 0 0.5rem;';
+    searchDiv.style.cssText = 'margin-bottom: 1rem; padding: 0 0.5rem;';
 
     var mobileSearchBtn = document.createElement('button');
     mobileSearchBtn.className = 'mobile-menu-search-btn';
@@ -351,7 +351,7 @@
     });
 
     searchDiv.appendChild(mobileSearchBtn);
-    nav.appendChild(searchDiv);
+    nav.insertBefore(searchDiv, nav.firstChild);
 
     // Social links
     var socialDiv = document.createElement('div');
