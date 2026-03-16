@@ -192,13 +192,6 @@
   font-size: 11px;
 }
 
-/* Hide search trigger button on mobile - it moves to mobile menu */
-@media (max-width: 768px) {
-  .search-trigger-btn {
-    display: none !important;
-  }
-}
-
 /* Mobile search button inside mobile menu */
 .mobile-menu-search-btn {
   display: flex;

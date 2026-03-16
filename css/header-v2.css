@@ -326,8 +326,9 @@ header#site-header .container {
         height: 45px;
     }
 
-    /* Hide header CTA on mobile - redundant with mobile CTA bar at bottom */
-    header#site-header .flex.items-center.space-x-4 {
+    /* Hide header CTA phone link on mobile - redundant with mobile CTA bar at bottom */
+    /* Keep the container visible so the search icon remains accessible */
+    header#site-header .flex.items-center.space-x-4 > a[href^="tel:"] {
         display: none !important;
     }
 
