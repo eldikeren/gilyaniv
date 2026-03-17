@@ -1,7 +1,7 @@
 /**
  * Google Ads & GA4 Conversion Tracking
  * Tracks: Phone calls, WhatsApp clicks, Form submissions, Thank you page
- * Updated: 2026-03-08 – Live conversion IDs configured
+ * Updated: 2026-03-08 â Live conversion IDs configured
  */
 
 (function() {
@@ -31,7 +31,7 @@
                     'value': 1
                 });
 
-                // Google Ads Conversion – "Calls from website visits"
+                // Google Ads Conversion â "Calls from website visits"
                 gtag('event', 'conversion', {
                     'send_to': PHONE_CONVERSION_ID,
                     'value': 1.0,
@@ -48,7 +48,7 @@
         // Track WhatsApp clicks
         document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(link) {
             link.addEventListener('click', function() {
-                // GA4 Event – whatsapp_click (importable as Google Ads conversion)
+                // GA4 Event â whatsapp_click (importable as Google Ads conversion)
                 gtag('event', 'whatsapp_click', {
                     'event_category': 'contact',
                     'event_label': 'whatsapp',
@@ -139,6 +139,16 @@
     if (!document.querySelector('script[src*="seo-enhancements"]')) {
         var s = document.createElement('script');
         s.src = '/js/seo-enhancements.js';
+        s.defer = true;
+        document.body.appendChild(s);
+    }
+})();
+
+// Load SEO boost for priceRange fix, AggregateRating, Service schemas
+(function() {
+    if (!document.querySelector('script[src*="seo-boost"]')) {
+        var s = document.createElement('script');
+        s.src = '/js/seo-boost.js';
         s.defer = true;
         document.body.appendChild(s);
     }
