@@ -21,49 +21,49 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/reviews.html</loc>
+    <loc>https://www.yanivgil.co.il/reviews</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/attorneys.html</loc>
+    <loc>https://www.yanivgil.co.il/attorneys</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/practice-areas.html</loc>
+    <loc>https://www.yanivgil.co.il/practice-areas</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/service-areas.html</loc>
+    <loc>https://www.yanivgil.co.il/service-areas</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/articles.html</loc>
+    <loc>https://www.yanivgil.co.il/articles</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog.html</loc>
+    <loc>https://www.yanivgil.co.il/blog</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/contact.html</loc>
+    <loc>https://www.yanivgil.co.il/contact</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/faq.html</loc>
+    <loc>https://www.yanivgil.co.il/faq</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -72,25 +72,25 @@
 
   <!-- Practice Area Category Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/family-law.html</loc>
+    <loc>https://www.yanivgil.co.il/family-law</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/divorce-law.html</loc>
+    <loc>https://www.yanivgil.co.il/divorce-law</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/inheritance-wills.html</loc>
+    <loc>https://www.yanivgil.co.il/inheritance-wills</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/insolvency.html</loc>
+    <loc>https://www.yanivgil.co.il/insolvency</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -98,7 +98,7 @@
 
   <!-- Pillar Page -->
   <url>
-    <loc>https://www.yanivgil.co.il/divorce-guide.html</loc>
+    <loc>https://www.yanivgil.co.il/divorce-guide</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -106,67 +106,67 @@
 
   <!-- Family Law English Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/divorce.html</loc>
+    <loc>https://www.yanivgil.co.il/divorce</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/divorce-agreements.html</loc>
+    <loc>https://www.yanivgil.co.il/divorce-agreements</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/property-agreements.html</loc>
+    <loc>https://www.yanivgil.co.il/property-agreements</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/child-custody.html</loc>
+    <loc>https://www.yanivgil.co.il/child-custody</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/visitation-rights.html</loc>
+    <loc>https://www.yanivgil.co.il/visitation-rights</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/child-support.html</loc>
+    <loc>https://www.yanivgil.co.il/child-support</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/spousal-support.html</loc>
+    <loc>https://www.yanivgil.co.il/spousal-support</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/guardianship.html</loc>
+    <loc>https://www.yanivgil.co.il/guardianship</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/property-division.html</loc>
+    <loc>https://www.yanivgil.co.il/property-division</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mediation.html</loc>
+    <loc>https://www.yanivgil.co.il/mediation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/travel-restriction.html</loc>
+    <loc>https://www.yanivgil.co.il/travel-restriction</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -174,79 +174,79 @@
 
   <!-- Hebrew Pillar Pages - Divorce Agreements (הסכמי גירושין) -->
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mahu-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/mahu-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/shlvei-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/shlvei-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/seifim-hova-heskem.html</loc>
+    <loc>https://www.yanivgil.co.il/seifim-hova-heskem</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/ishur-heskem-beit-din.html</loc>
+    <loc>https://www.yanivgil.co.il/ishur-heskem-beit-din</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/ishur-heskem-beit-mishpat.html</loc>
+    <loc>https://www.yanivgil.co.il/ishur-heskem-beit-mishpat</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-mahir.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin-mahir</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-lelo-od.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin-lelo-od</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/zman-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/zman-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tauyot-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/tauyot-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/shinuy-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/shinuy-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/bitul-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/bitul-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/aulut-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/aulut-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -254,73 +254,73 @@
 
   <!-- Hebrew Pillar Pages - Child Custody (משמורת ילדים) -->
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-meshuteft-tnai.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-meshuteft-tnai</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-blaudit-vsmeshuteft.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-blaudit-vsmeshuteft</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-gil-harach.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-gil-harach</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-em-av.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-em-av</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tovet-hayeled-psika.html</loc>
+    <loc>https://www.yanivgil.co.il/tovet-hayeled-psika</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/shinuy-hesderey-riya.html</loc>
+    <loc>https://www.yanivgil.co.il/shinuy-hesderey-riya</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/maavar-ir-im-yeled.html</loc>
+    <loc>https://www.yanivgil.co.il/maavar-ir-im-yeled</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/horeh-menaker.html</loc>
+    <loc>https://www.yanivgil.co.il/horeh-menaker</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/haaravat-mishmoret.html</loc>
+    <loc>https://www.yanivgil.co.il/haaravat-mishmoret</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/achrayut-horit.html</loc>
+    <loc>https://www.yanivgil.co.il/achrayut-horit</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chavat-daat-pkidat-saad.html</loc>
+    <loc>https://www.yanivgil.co.il/chavat-daat-pkidat-saad</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -328,73 +328,73 @@
 
   <!-- Hebrew Pillar Pages - Child Support (מזונות ילדים) -->
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chishov-mezonot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/chishov-mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-yeladim-gil-0-6.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-yeladim-gil-0-6</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-yeladim-gil-6-18.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-yeladim-gil-6-18</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-mishmoret-meshuteft.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-mishmoret-meshuteft</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hagdalat-mezonot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/hagdalat-mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hafchatat-mezonot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/hafchatat-mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hotzaot-charignot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/hotzaot-charignot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-retroaktivim.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-retroaktivim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-zmaniim.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-zmaniim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/i-tashlum-mezonot.html</loc>
+    <loc>https://www.yanivgil.co.il/i-tashlum-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/keren-mezonot.html</loc>
+    <loc>https://www.yanivgil.co.il/keren-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -402,49 +402,49 @@
 
   <!-- Hebrew Pillar Pages - Spousal Support (מזונות אישה) -->
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/zkaut-mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/zkaut-mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chishov-mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/chishov-mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-isha-nisuin-arochim.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-isha-nisuin-arochim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-isha-nisuin-ktzarim.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-isha-nisuin-ktzarim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-isha-mishmoret.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-isha-mishmoret</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hafchatat-mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/hafchatat-mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/bitul-mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/bitul-mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -452,79 +452,79 @@
 
   <!-- Hebrew Pillar Pages - Property Division (חלוקת רכוש) -->
   <url>
-    <loc>https://www.yanivgil.co.il/chalokat-rechush-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/chalokat-rechush-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/izun-mashabim-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/izun-mashabim-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hafrada-rechushit-muchletet.html</loc>
+    <loc>https://www.yanivgil.co.il/hafrada-rechushit-muchletet</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/nechasim-lo-izun.html</loc>
+    <loc>https://www.yanivgil.co.il/nechasim-lo-izun</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/havchatat-nechasim-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/havchatat-nechasim-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chalokat-dira-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/chalokat-dira-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chalokat-pansiya-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/chalokat-pansiya-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chalokat-esek-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/chalokat-esek-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chalokat-hovot-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/chalokat-hovot-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hagana-al-yerusha.html</loc>
+    <loc>https://www.yanivgil.co.il/hagana-al-yerusha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hagana-al-esek.html</loc>
+    <loc>https://www.yanivgil.co.il/hagana-al-esek</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/piruq-shituf-rechush.html</loc>
+    <loc>https://www.yanivgil.co.il/piruq-shituf-rechush</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tikhnun-klkali-lifney-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/tikhnun-klkali-lifney-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -532,37 +532,37 @@
 
   <!-- Hebrew Pillar Pages - Prenuptial Agreements (הסכם ממון) -->
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-lifney-nisuin.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-lifney-nisuin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-bemashluch.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-bemashluch</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-nisuin-shniyim.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-nisuin-shniyim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-aulut-tahalich.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-aulut-tahalich</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/bitul-heskem-mamon.html</loc>
+    <loc>https://www.yanivgil.co.il/bitul-heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -570,49 +570,49 @@
 
   <!-- Hebrew Pillar Pages - Rabbinical Court (בית דין רבני) -->
   <url>
-    <loc>https://www.yanivgil.co.il/gerushin-beit-din-rabani.html</loc>
+    <loc>https://www.yanivgil.co.il/gerushin-beit-din-rabani</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tahlich-gerushin-beit-din.html</loc>
+    <loc>https://www.yanivgil.co.il/tahlich-gerushin-beit-din</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/smchut-beit-din-rabani.html</loc>
+    <loc>https://www.yanivgil.co.il/smchut-beit-din-rabani</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/gerushin-behaskama-beit-din.html</loc>
+    <loc>https://www.yanivgil.co.il/gerushin-behaskama-beit-din</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/iruv-beit-din-rabani.html</loc>
+    <loc>https://www.yanivgil.co.il/iruv-beit-din-rabani</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-beit-din-rabani.html</loc>
+    <loc>https://www.yanivgil.co.il/od-beit-din-rabani</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hachricha-beit-din.html</loc>
+    <loc>https://www.yanivgil.co.il/hachricha-beit-din</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/gerushin-azrachi-vs-dati.html</loc>
+    <loc>https://www.yanivgil.co.il/gerushin-azrachi-vs-dati</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -620,61 +620,61 @@
 
   <!-- Hebrew Pillar Pages - Get and Agunot (גט ועגונות) -->
   <url>
-    <loc>https://www.yanivgil.co.il/haget-mah-ze.html</loc>
+    <loc>https://www.yanivgil.co.il/haget-mah-ze</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/get-beynleumi.html</loc>
+    <loc>https://www.yanivgil.co.il/get-beynleumi</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/sarvanut-get-agunot.html</loc>
+    <loc>https://www.yanivgil.co.il/sarvanut-get-agunot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/igun-sarvanut-get.html</loc>
+    <loc>https://www.yanivgil.co.il/igun-sarvanut-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/klim-mishpatiyim-sarvan-get.html</loc>
+    <loc>https://www.yanivgil.co.il/klim-mishpatiyim-sarvan-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tviat-neziqin-sarvan-get.html</loc>
+    <loc>https://www.yanivgil.co.il/tviat-neziqin-sarvan-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/pitsuyim-laguna.html</loc>
+    <loc>https://www.yanivgil.co.il/pitsuyim-laguna</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/agunut-ma-laasot.html</loc>
+    <loc>https://www.yanivgil.co.il/agunut-ma-laasot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/zchuyot-baal-sarvanut-get.html</loc>
+    <loc>https://www.yanivgil.co.il/zchuyot-baal-sarvanut-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/isha-mesorevet-get.html</loc>
+    <loc>https://www.yanivgil.co.il/isha-mesorevet-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -682,49 +682,49 @@
 
   <!-- Hebrew Pillar Pages - Common Law Marriage (ידועים בציבור) -->
   <url>
-    <loc>https://www.yanivgil.co.il/yaduyim-batzibur.html</loc>
+    <loc>https://www.yanivgil.co.il/yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/zkuyot-yaduyim-batzibur.html</loc>
+    <loc>https://www.yanivgil.co.il/zkuyot-yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-yaduyim-batzibur.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/prida-yaduyim-batzibur.html</loc>
+    <loc>https://www.yanivgil.co.il/prida-yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yaduyim-batzibur-bituach-leumi.html</loc>
+    <loc>https://www.yanivgil.co.il/yaduyim-batzibur-bituach-leumi</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yerusha-yaduyim-batzibur.html</loc>
+    <loc>https://www.yanivgil.co.il/yerusha-yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yaduyim-lo-yecholim-lehitnashe.html</loc>
+    <loc>https://www.yanivgil.co.il/yaduyim-lo-yecholim-lehitnashe</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/taskir-sotziali.html</loc>
+    <loc>https://www.yanivgil.co.il/taskir-sotziali</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -732,37 +732,37 @@
 
   <!-- Inheritance & Wills Sub-Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/will-writing.html</loc>
+    <loc>https://www.yanivgil.co.il/will-writing</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/inheritance-order.html</loc>
+    <loc>https://www.yanivgil.co.il/inheritance-order</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/will-probate.html</loc>
+    <loc>https://www.yanivgil.co.il/will-probate</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/estate-management.html</loc>
+    <loc>https://www.yanivgil.co.il/estate-management</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/will-contest.html</loc>
+    <loc>https://www.yanivgil.co.il/will-contest</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/inheritance-contest.html</loc>
+    <loc>https://www.yanivgil.co.il/inheritance-contest</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -770,43 +770,43 @@
 
   <!-- Insolvency & Execution Sub-Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/bankruptcy.html</loc>
+    <loc>https://www.yanivgil.co.il/bankruptcy</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/execution.html</loc>
+    <loc>https://www.yanivgil.co.il/execution</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/case-consolidation.html</loc>
+    <loc>https://www.yanivgil.co.il/case-consolidation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/debt-cancellation.html</loc>
+    <loc>https://www.yanivgil.co.il/debt-cancellation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/lien-cancellation.html</loc>
+    <loc>https://www.yanivgil.co.il/lien-cancellation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/debt-arrangements.html</loc>
+    <loc>https://www.yanivgil.co.il/debt-arrangements</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/discharge.html</loc>
+    <loc>https://www.yanivgil.co.il/discharge</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -814,523 +814,523 @@
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-appeals.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-appeals</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/temporary-receiver.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/temporary-receiver</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-discharge.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-discharge</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-declaration.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-declaration</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-restrictions.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-restrictions</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/get-refusal-compensation.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/get-refusal-compensation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/divorce-grounds.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/divorce-grounds</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/travel-restriction-order.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/travel-restriction-order</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/seizure-real-estate.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/seizure-real-estate</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/mortgage-execution.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/mortgage-execution</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/paid-defense.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/paid-defense</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/execution-of-bills.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/execution-of-bills</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/uniform-civil-procedure.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/uniform-civil-procedure</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/fixed-amount-claims.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/fixed-amount-claims</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-introduction.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/bankruptcy-introduction</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-request.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-request</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-debtor.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-debtor</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/compromise-after-bankruptcy.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/compromise-after-bankruptcy</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/civil-marriage-israel.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/civil-marriage-israel</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/rabbinical-court.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/rabbinical-court</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/family-court.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/family-court</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/execution-law-other-laws.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/execution-law-other-laws</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/consensual-divorce.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/consensual-divorce</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/joint-custody-guide.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/joint-custody-guide</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/property-division-divorce.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/property-division-divorce</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/child-support-calculation.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/child-support-calculation</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/financial-agreement-guide.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/financial-agreement-guide</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/family-mediation-vs-court.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/family-mediation-vs-court</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/hague-convention.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/hague-convention</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/relocation-after-divorce.html</loc>
+    <loc>https://www.yanivgil.co.il/blog-articles/relocation-after-divorce</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Cluster A: הסכם גירושין Supporting Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/seif-yetzia-heskem.html</loc>
+    <loc>https://www.yanivgil.co.il/seif-yetzia-heskem</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/megasher-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/megasher-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/nosach-heskem-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/nosach-heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-im-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin-im-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-lelo-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin-lelo-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tikun-taaut-heskem.html</loc>
+    <loc>https://www.yanivgil.co.il/tikun-taaut-heskem</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-chaluka-dira.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-gerushin-chaluka-dira</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/ma-lo-lechnol-heskem.html</loc>
+    <loc>https://www.yanivgil.co.il/ma-lo-lechnol-heskem</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Cluster B: משמורת ילדים Supporting Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/eich-beit-mishpat-machlit-mishmoret.html</loc>
+    <loc>https://www.yanivgil.co.il/eich-beit-mishpat-machlit-mishmoret</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/zimnei-shehut-chaluka.html</loc>
+    <loc>https://www.yanivgil.co.il/zimnei-shehut-chaluka</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tochnit-horut-muskemet.html</loc>
+    <loc>https://www.yanivgil.co.il/tochnit-horut-muskemet</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-gil-hitbagrot.html</loc>
+    <loc>https://www.yanivgil.co.il/mishmoret-gil-hitbagrot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yeled-over-dira-horeh.html</loc>
+    <loc>https://www.yanivgil.co.il/yeled-over-dira-horeh</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/pgiya-zimnei-shehut.html</loc>
+    <loc>https://www.yanivgil.co.il/pgiya-zimnei-shehut</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/av-mesarev-lakaht-yeled.html</loc>
+    <loc>https://www.yanivgil.co.il/av-mesarev-lakaht-yeled</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/nikur-hori-itur.html</loc>
+    <loc>https://www.yanivgil.co.il/nikur-hori-itur</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Cluster C: מזונות ילדים Supporting Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/medad-mehia-idkun-mezonot.html</loc>
+    <loc>https://www.yanivgil.co.il/medad-mehia-idkun-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-horeh-bchutz.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-horeh-bchutz</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-ahar-nisuim-mechadash.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-ahar-nisuim-mechadash</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/atzmaut-yeled-mezonot.html</loc>
+    <loc>https://www.yanivgil.co.il/atzmaut-yeled-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mezonot-yeled-holeh.html</loc>
+    <loc>https://www.yanivgil.co.il/mezonot-yeled-holeh</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/magar-mezonot.html</loc>
+    <loc>https://www.yanivgil.co.il/magar-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Cluster D: הסכם ממון Supporting Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon.html</loc>
+    <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-zugot-mevugarim.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-zugot-mevugarim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-dira-yarasha.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-dira-yarasha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-esek.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-esek</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-yduim-shlvei.html</loc>
+    <loc>https://www.yanivgil.co.il/heskem-mamon-yduim-shlvei</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/bitul-heskem-mamon-mata.html</loc>
+    <loc>https://www.yanivgil.co.il/bitul-heskem-mamon-mata</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Cluster E: חלוקת רכוש Supporting Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/chaluka-bitcoin-matbeot.html</loc>
+    <loc>https://www.yanivgil.co.il/chaluka-bitcoin-matbeot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/keren-hishtalmut-gerushin.html</loc>
+    <loc>https://www.yanivgil.co.il/keren-hishtalmut-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yarasha-benesuin-meshuteft.html</loc>
+    <loc>https://www.yanivgil.co.il/yarasha-benesuin-meshuteft</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/bituah-menahellim-gamel.html</loc>
+    <loc>https://www.yanivgil.co.il/bituah-menahellim-gamel</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/chaluka-zchuyot-sotzialiyot.html</loc>
+    <loc>https://www.yanivgil.co.il/chaluka-zchuyot-sotzialiyot</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/esek-lifney-nisuin.html</loc>
+    <loc>https://www.yanivgil.co.il/esek-lifney-nisuin</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- High Intent Location/Service Pages -->
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-telaviv.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-telaviv</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-merkaz.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-merkaz</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-ramatgan.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-ramatgan</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-gush-dan.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-gush-dan</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-mishmoret-yeladim-telaviv.html</loc>
+    <loc>https://www.yanivgil.co.il/od-mishmoret-yeladim-telaviv</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-mezonot-yeladim.html</loc>
+    <loc>https://www.yanivgil.co.il/od-mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-mezonot-isha.html</loc>
+    <loc>https://www.yanivgil.co.il/od-mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-sarvanut-get.html</loc>
+    <loc>https://www.yanivgil.co.il/od-sarvanut-get</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-heskem-mamon.html</loc>
+    <loc>https://www.yanivgil.co.il/od-heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-chaluka-rechush.html</loc>
+    <loc>https://www.yanivgil.co.il/od-chaluka-rechush</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-yduim-baziber.html</loc>
+    <loc>https://www.yanivgil.co.il/od-yduim-baziber</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/divorce-lawyer-tel-aviv.html</loc>
+    <loc>https://www.yanivgil.co.il/divorce-lawyer-tel-aviv</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-givatayim.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-givatayim</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-herzliya.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-herzliya</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-bat-yam.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-bat-yam</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-holon.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-holon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-petach-tikva.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-petach-tikva</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-rishon.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-rishon</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-kfar-saba.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-kfar-saba</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-netanya.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-netanya</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-gerushin-raanana.html</loc>
+    <loc>https://www.yanivgil.co.il/od-gerushin-raanana</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-        <loc>https://www.yanivgil.co.il/practice-areas-hub.html</loc>
+        <loc>https://www.yanivgil.co.il/practice-areas-hub</loc>
         <lastmod>2026-03-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
