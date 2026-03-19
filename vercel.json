@@ -97,18 +97,10 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/index", "destination": "/index.html" },
-    { "source": "/attorneys", "destination": "/attorneys" },
-    { "source": "/practice-areas", "destination": "/practice-areas" },
-    { "source": "/articles", "destination": "/articles" },
     { "source": "/articles-:num", "destination": "/articles" },
-    { "source": "/blog", "destination": "/blog" },
-    { "source": "/contact", "destination": "/contact" },
     { "source": "/thanks", "destination": "/thanks.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
-    { "source": "/family-law", "destination": "/family-law" },
-    { "source": "/insolvency", "destination": "/insolvency" },
-    { "source": "/divorce-law", "destination": "/divorce-law" },
     { "source": "/inheritance-wills", "destination": "/inheritance-wills.html" },
     { "source": "/blog-articles/:slug", "destination": "/blog-articles/:slug.html" },
     { "source": "/(.*)\\.php", "destination": "/$1.html" }
