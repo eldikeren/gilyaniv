@@ -57,7 +57,7 @@
           data.aggregateRating = {
             '@type': 'AggregateRating',
             'ratingValue': '4.9',
-            'reviewCount': '214',
+            'reviewCount': '20',
             'bestRating': '5',
             'worstRating': '1'
           };
