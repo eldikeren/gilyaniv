@@ -12,6 +12,8 @@ Disallow: /og-image-generator.html
 Disallow: /og-image-template.html
 Disallow: /index-staging.html
 Disallow: /js/search-index.json
+Disallow: /ffmpeg/
+Disallow: /yaniv-gil-php/
 
 User-agent: AdsBot-Google-Mobile
 User-agent: AdsBot-Google
