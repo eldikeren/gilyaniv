@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - Deploy compressed videos and 404 fix - 2025-01-05'",
+  "buildCommand": "echo 'Static site - Ahrefs audit fix phase 3 - 2026-03-20'",
   "installCommand": "echo 'Skipping npm install - static site'",
   "outputDirectory": ".",
   "cleanUrls": true,
   "redirects": [
     {
       "source": "/(.*)",
-      "has":  [
+      "has": [
         {
           "type": "host",
           "value": "yanivgil.co.il"
@@ -27,148 +27,463 @@
       "destination": "https://www.yanivgil.co.il/$1",
       "permanent": true
     },
-
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/about", "destination": "/", "permanent": true },
-    { "source": "/about.html", "destination": "/", "permanent": true },
-    { "source": "/terms-of-use.html", "destination": "/", "permanent": true },
-    { "source": "/privacy-policy.html", "destination": "/", "permanent": true },
-
-    { "source": "/personalstatus", "destination": "/family-law", "permanent": true },
-    { "source": "/familycourt", "destination": "/family-law", "permanent": true },
-    { "source": "/beitdinrabani", "destination": "/divorce-law", "permanent": true },
-    { "source": "/civilianmarriage", "destination": "/family-law", "permanent": true },
-    { "source": "/ikuv-yeziaa", "destination": "/execution", "permanent": true },
-    { "source": "/siruv-get", "destination": "/divorce-law", "permanent": true },
-    { "source": "/divorce", "destination": "/divorce-law", "permanent": true },
-
-    { "source": "/realestate", "destination": "/practice-areas", "permanent": true },
-    { "source": "/practiceareas", "destination": "/practice-areas", "permanent": true },
-    { "source": "/paraati", "destination": "/insolvency", "permanent": true },
-    { "source": "/ikul-ikulmekarkeien", "destination": "/execution", "permanent": true },
-    { "source": "/teviaa-schom-kazov", "destination": "/execution", "permanent": true },
-    { "source": "/seder-din-ezrachi", "destination": "/execution", "permanent": true },
-    { "source": "/civilprocedure", "destination": "/execution", "permanent": true },
-
-    { "source": "/to-end-your-depts", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy-annoucment", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy-1", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy-2", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy-3", "destination": "/insolvency", "permanent": true },
-    { "source": "/bankruptcy-limitation", "destination": "/insolvency", "permanent": true },
-    { "source": "/irur-phshitat-regel", "destination": "/insolvency", "permanent": true },
-    { "source": "/kinus-nechasim", "destination": "/execution", "permanent": true },
-    { "source": "/kones-nechasim", "destination": "/execution", "permanent": true },
-    { "source": "/piruk-havarot", "destination": "/insolvency", "permanent": true },
-    { "source": "/piruk-havaro", "destination": "/insolvency", "permanent": true },
-    { "source": "/pshara", "destination": "/insolvency", "permanent": true },
-    { "source": "/hozaalapoal", "destination": "/execution", "permanent": true },
-    { "source": "/hozaalapoal-2", "destination": "/execution", "permanent": true },
-    { "source": "/hozaalapoalaw", "destination": "/execution", "permanent": true },
-    { "source": "/hozaa", "destination": "/execution", "permanent": true },
-    { "source": "/mortgage", "destination": "/execution", "permanent": true },
-    { "source": "/hapter", "destination": "/insolvency", "permanent": true },
-    { "source": "/hapter-1", "destination": "/insolvency", "permanent": true },
-
-    { "source": "/media", "destination": "/articles", "permanent": true },
-    { "source": "/media.html", "destination": "/articles", "permanent": true },
-    { "source": "/articles-3", "destination": "/articles", "permanent": true },
-    { "source": "/articles-4", "destination": "/articles", "permanent": true },
-    { "source": "/articles-5", "destination": "/articles", "permanent": true },
-    { "source": "/articles-6", "destination": "/articles", "permanent": true },
-
-    { "source": "/", "has": [{ "type": "query", "key": "lightbox" }], "destination": "/", "permanent": true },
-
-    { "source": "/blog-articles/%D7%94%D7%A4%D7%98%D7%A8-%D7%91%D7%A4%D7%A9.html", "destination": "/blog-articles/bankruptcy-discharge", "permanent": true },
-    { "source": "/blog-articles/index.html", "destination": "/", "permanent": true },
-    { "source": "/blog-articles/contact.html", "destination": "/contact", "permanent": true },
-    { "source": "/blog-articles/articles.html", "destination": "/articles", "permanent": true },
-    { "source": "/blog-articles/practice-areas.html", "destination": "/practice-areas", "permanent": true },
-    { "source": "/blog-articles/attorneys.html", "destination": "/attorneys", "permanent": true },
-    { "source": "/blog-articles/blog.html", "destination": "/blog", "permanent": true },
-    { "source": "/blog-articles/execution.html", "destination": "/execution", "permanent": true },
-
-    { "source": "/_api/:path*", "destination": "/", "permanent": true },
-    { "source": "/cdn-cgi/:path*", "destination": "/", "permanent": true },
-    { "source": "/bolt-performance", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-use.html",
+      "destination": "/terms-of-use",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/personalstatus",
+      "destination": "/family-law",
+      "permanent": true
+    },
+    {
+      "source": "/familycourt",
+      "destination": "/family-law",
+      "permanent": true
+    },
+    {
+      "source": "/beitdinrabani",
+      "destination": "/divorce-law",
+      "permanent": true
+    },
+    {
+      "source": "/civilianmarriage",
+      "destination": "/family-law",
+      "permanent": true
+    },
+    {
+      "source": "/ikuv-yeziaa",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/siruv-get",
+      "destination": "/divorce-law",
+      "permanent": true
+    },
+    {
+      "source": "/realestate",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/practiceareas",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/paraati",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/ikul-ikulmekarkeien",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/teviaa-schom-kazov",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/seder-din-ezrachi",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/civilprocedure",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/to-end-your-depts",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-annoucment",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-1",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-2",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-3",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-limitation",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/irur-phshitat-regel",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/kinus-nechasim",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/kones-nechasim",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/piruk-havarot",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/piruk-havaro",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/pshara",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/hozaalapoal",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/hozaalapoal-2",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/hozaalapoalaw",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/hozaa",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/mortgage",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/hapter",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/hapter-1",
+      "destination": "/insolvency",
+      "permanent": true
+    },
+    {
+      "source": "/media",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/media.html",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/articles-3",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/articles-4",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/articles-5",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/articles-6",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lightbox"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/%D7%94%D7%A4%D7%98%D7%A8-%D7%91%D7%A4%D7%A9.html",
+      "destination": "/blog-articles/bankruptcy-discharge",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/articles.html",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/practice-areas.html",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/attorneys.html",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/execution.html",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/_api/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cdn-cgi/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/bolt-performance",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ffmpeg/doc/:path*",
+      "destination": "/404",
+      "permanent": false
+    },
+    {
+      "source": "/yaniv-gil-php/:path*",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/index", "destination": "/index.html" },
-    { "source": "/articles-:num", "destination": "/articles" },
-    { "source": "/thanks", "destination": "/thanks.html" },
-    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
-    { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
-    { "source": "/inheritance-wills", "destination": "/inheritance-wills.html" },
-    { "source": "/blog-articles/:slug", "destination": "/blog-articles/:slug.html" },
-    { "source": "/(.*)\\.php", "destination": "/$1.html" }
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/articles-:num",
+      "destination": "/articles"
+    },
+    {
+      "source": "/thanks",
+      "destination": "/thanks.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/terms-of-use.html"
+    },
+    {
+      "source": "/inheritance-wills",
+      "destination": "/inheritance-wills.html"
+    },
+    {
+      "source": "/blog-articles/:slug",
+      "destination": "/blog-articles/:slug.html"
+    },
+    {
+      "source": "/(.*)\\.php",
+      "destination": "/$1.html"
+    }
   ],
   "headers": [
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "application/xml" },
-                { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain" },
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     },
     {
       "source": "/images/:path*.mp4",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex" },
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/images/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*)\\.woff2",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
-        {
-                "source": "/robots.txt",
-                "headers": [
-                          { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }
-                ]
-        },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://vercel.live https://*.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://static.elfsight.com https://*.elfsight.com https://elfsightcdn.com https://*.elfsightcdn.com; script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://vercel.live https://*.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com https://static.cloudflareinsights.com https://static.elfsight.com https://*.elfsight.com https://elfsightcdn.com https://*.elfsightcdn.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com https://unpkg.com https://*.google.com https://www.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://core.service.elfsight.com https://*.elfsight.com https://*.elfsightcdn.com; frame-src https://vercel.live https://www.google.com https://*.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://googletagmanager.com https://*.elfsight.com https://*.elfsightcdn.com; img-src 'self' data: blob: https://*.google.com https://www.google.com https://*.google.co.il https://www.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://www.googletagmanager.com https://*.googletagmanager.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com;" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://vercel.live https://*.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://static.elfsight.com https://*.elfsight.com https://elfsightcdn.com https://*.elfsightcdn.com; script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://vercel.live https://*.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com https://static.cloudflareinsights.com https://static.elfsight.com https://*.elfsight.com https://elfsightcdn.com https://*.elfsightcdn.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com https://unpkg.com https://*.google.com https://www.google.com https://*.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://core.service.elfsight.com https://*.elfsight.com https://*.elfsightcdn.com; frame-src https://vercel.live https://www.google.com https://*.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://googletagmanager.com https://*.elfsight.com https://*.elfsightcdn.com; img-src 'self' data: blob: https://*.google.com https://www.google.com https://*.google.co.il https://www.google.co.il https://*.googleadservices.com https://*.doubleclick.net https://www.googletagmanager.com https://*.googletagmanager.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com;"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/ffmpeg/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
     }
-  ]
+  ],
+  "trailingSlash": false
 }
