@@ -57,7 +57,7 @@ def generate_legalservice_schema(page_config, url):
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "50",
+            "reviewCount": "20",
             "bestRating": "5",
             "worstRating": "1"
         }
