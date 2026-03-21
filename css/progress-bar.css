@@ -38,12 +38,12 @@
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5));
+  background: linear-gradient(90deg, transparent, rgba(92, 69, 16, 0.5));
   pointer-events: none;
 }
 
 [dir="rtl"] .reading-progress::after {
   right: auto;
   left: 0;
-  background: linear-gradient(270deg, transparent, rgba(212, 175, 55, 0.5));
+  background: linear-gradient(270deg, transparent, rgba(92, 69, 16, 0.5));
 }

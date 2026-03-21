@@ -353,7 +353,7 @@ section {
   font-size: var(--fs-400);
   flex-shrink: 0;
   margin-bottom: var(--space-4);
-  box-shadow: 0 2px 8px rgba(201, 165, 92, 0.3);
+  box-shadow: 0 2px 8px rgba(92, 69, 16, 0.3);
 }
 
 .testimonial-header {

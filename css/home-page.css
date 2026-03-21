@@ -303,7 +303,7 @@
         /* Header section with logo and close button */
         .mobile-menu-overlay>.flex.justify-between {
             background: #1a1a2e;
-            border-bottom: 1px solid rgba(201, 165, 92, 0.3);
+            border-bottom: 1px solid rgba(92, 69, 16, 0.3);
         }
 
         /* Main nav section */
@@ -325,13 +325,13 @@
             color: #5c4510 !important;
             text-decoration: none;
             border-radius: 0;
-            border-bottom: 1px solid rgba(201, 165, 92, 0.2);
+            border-bottom: 1px solid rgba(92, 69, 16, 0.2);
             margin-bottom: 0;
             transition: all 0.3s ease;
         }
 
         .mobile-menu-overlay nav ul li a.mobile-menu-link:hover {
-            background: rgba(201, 165, 92, 0.15) !important;
+            background: rgba(92, 69, 16, 0.15) !important;
             color: #5c4510 !important;
         }
 
@@ -361,12 +361,12 @@
             color: #5c4510;
             text-decoration: none;
             border-radius: 0;
-            border-bottom: 1px solid rgba(201, 165, 92, 0.2);
+            border-bottom: 1px solid rgba(92, 69, 16, 0.2);
             transition: all 0.3s ease;
         }
 
         .mobile-menu-links a:hover {
-            background: rgba(201, 165, 92, 0.15);
+            background: rgba(92, 69, 16, 0.15);
             color: #5c4510;
         }
 

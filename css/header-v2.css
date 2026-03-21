@@ -115,11 +115,11 @@ header#site-header {
             #1e1e38 60%,
             #1a1a2e 80%,
             #1f1f3d 100%) !important;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.25) !important;
+    border-bottom: 1px solid rgba(92, 69, 16, 0.25) !important;
     box-shadow:
         0 2px 15px rgba(0, 0, 0, 0.4),
-        0 1px 0 rgba(201, 165, 92, 0.15),
-        inset 0 1px 0 rgba(201, 165, 92, 0.08) !important;
+        0 1px 0 rgba(92, 69, 16, 0.15),
+        inset 0 1px 0 rgba(92, 69, 16, 0.08) !important;
     position: fixed !important;
     /* Use fixed to ensure it floats above everything without relying on overflow */
     top: 0 !important;
@@ -201,9 +201,9 @@ header#site-header::before {
     background: linear-gradient(115deg,
             transparent 0%,
             transparent 30%,
-            rgba(201, 165, 92, 0.04) 45%,
+            rgba(92, 69, 16, 0.04) 45%,
             rgba(255, 255, 255, 0.03) 50%,
-            rgba(201, 165, 92, 0.04) 55%,
+            rgba(92, 69, 16, 0.04) 55%,
             transparent 70%,
             transparent 100%);
     pointer-events: none;
@@ -220,9 +220,9 @@ header#site-header::after {
     height: 1px;
     background: linear-gradient(90deg,
             transparent 0%,
-            rgba(201, 165, 92, 0.3) 30%,
-            rgba(201, 165, 92, 0.5) 50%,
-            rgba(201, 165, 92, 0.3) 70%,
+            rgba(92, 69, 16, 0.3) 30%,
+            rgba(92, 69, 16, 0.5) 50%,
+            rgba(92, 69, 16, 0.3) 70%,
             transparent 100%);
     pointer-events: none;
     z-index: 1;
@@ -243,15 +243,15 @@ header#site-header nav button {
 
 header#site-header nav a:hover,
 header#site-header nav button:hover {
-    text-shadow: 0 0 12px rgba(201, 165, 92, 0.5), 0 0 4px rgba(201, 165, 92, 0.3) !important;
+    text-shadow: 0 0 12px rgba(92, 69, 16, 0.5), 0 0 4px rgba(92, 69, 16, 0.3) !important;
 }
 
 /* Scrolled state: more subtle effects */
 header#site-header.scrolled {
-    border-bottom: 1px solid rgba(201, 165, 92, 0.15) !important;
+    border-bottom: 1px solid rgba(92, 69, 16, 0.15) !important;
     box-shadow:
         0 2px 10px rgba(0, 0, 0, 0.3),
-        0 1px 0 rgba(201, 165, 92, 0.1) !important;
+        0 1px 0 rgba(92, 69, 16, 0.1) !important;
 }
 
 /* Ensure header doesn't clip the seal */
@@ -349,7 +349,7 @@ header#site-header .container {
    ========================================== */
 #practice-dropdown {
     background: #22223a !important;
-    border: 1px solid rgba(201, 165, 92, 0.3) !important;
+    border: 1px solid rgba(92, 69, 16, 0.3) !important;
     border-radius: 12px !important;
     width: 320px !important;
     max-width: 320px !important;
@@ -377,7 +377,7 @@ header#site-header .container {
 }
 
 #practice-dropdown > div > button:hover {
-    background: rgba(201, 165, 92, 0.15) !important;
+    background: rgba(92, 69, 16, 0.15) !important;
 }
 
 #practice-dropdown > div > button h4,
@@ -393,7 +393,7 @@ header#site-header .container {
 
 #practice-dropdown a:hover {
     color: #5c4510 !important;
-    background: rgba(201, 165, 92, 0.15) !important;
+    background: rgba(92, 69, 16, 0.15) !important;
 }
 
 /* Featured link (★ המדריך המלא לגירושין) */
@@ -404,7 +404,7 @@ header#site-header .container {
 
 /* Pillar items and their sub-category containers */
 #practice-dropdown .pillar-item {
-    border-color: rgba(201, 165, 92, 0.15) !important;
+    border-color: rgba(92, 69, 16, 0.15) !important;
 }
 
 #practice-dropdown .pillar-item a {
@@ -417,7 +417,7 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item div[id^="sub-"] {
-    background: rgba(201, 165, 92, 0.08) !important;
+    background: rgba(92, 69, 16, 0.08) !important;
     border-radius: 8px !important;
 }
 
@@ -432,11 +432,11 @@ header#site-header .container {
 /* Hover state for pillar rows */
 #practice-dropdown .pillar-item .hover\:bg-gray-50:hover,
 #practice-dropdown .hover\:bg-gray-50:hover {
-    background: rgba(201, 165, 92, 0.15) !important;
+    background: rgba(92, 69, 16, 0.15) !important;
 }
 
 #practice-dropdown .bg-gray-50 {
-    background: rgba(201, 165, 92, 0.08) !important;
+    background: rgba(92, 69, 16, 0.08) !important;
 }
 
 /* Direct link (דיני חוזים ודיני מקרקעין) */
@@ -449,7 +449,7 @@ header#site-header .container {
 }
 
 #practice-dropdown > div > a:hover {
-    background: rgba(201, 165, 92, 0.15) !important;
+    background: rgba(92, 69, 16, 0.15) !important;
 }
 
 /* ==========================================

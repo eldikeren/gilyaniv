@@ -16,7 +16,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at center, rgba(212,175,55,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(92, 69, 16,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
     .hr-badge {
@@ -24,14 +24,14 @@
       align-items: center;
       gap: 10px;
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(212,175,55,0.3);
+      border: 1px solid rgba(92, 69, 16,0.3);
       border-radius: 50px;
       padding: 10px 24px;
       margin-bottom: 28px;
     }
-    .hr-badge-stars { color: #d4af37; font-size: 20px; letter-spacing: 2px; }
+    .hr-badge-stars { color: #5c4510; font-size: 20px; letter-spacing: 2px; }
     .hr-badge-text { color: #fff; font-size: 15px; font-weight: 500; }
-    .hr-badge-count { color: #d4af37; font-weight: 700; }
+    .hr-badge-count { color: #5c4510; font-weight: 700; }
     .hr-cards {
       display: flex;
       gap: 20px;
@@ -53,10 +53,10 @@
     }
     .hr-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(212,175,55,0.4);
-      box-shadow: 0 8px 32px rgba(212,175,55,0.08);
+      border-color: rgba(92, 69, 16,0.4);
+      box-shadow: 0 8px 32px rgba(92, 69, 16,0.08);
     }
-    .hr-card-stars { color: #d4af37; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
+    .hr-card-stars { color: #5c4510; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
     .hr-card-text {
       color: rgba(255,255,255,0.85);
       font-size: 15px;
@@ -72,7 +72,7 @@
       padding-top: 14px;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .hr-card-name { color: #d4af37; font-size: 14px; font-weight: 600; }
+    .hr-card-name { color: #5c4510; font-size: 14px; font-weight: 600; }
     .hr-card-loc { color: rgba(255,255,255,0.45); font-size: 12px; }
     .hr-locations {
       display: flex;
@@ -83,8 +83,8 @@
       margin: 0 auto 24px;
     }
     .hr-loc-tag {
-      background: rgba(212,175,55,0.08);
-      border: 1px solid rgba(212,175,55,0.18);
+      background: rgba(92, 69, 16,0.08);
+      border: 1px solid rgba(92, 69, 16,0.18);
       color: rgba(255,255,255,0.65);
       font-size: 13px;
       padding: 5px 16px;
@@ -95,18 +95,18 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #d4af37;
+      color: #5c4510;
       text-decoration: none;
       font-size: 15px;
       font-weight: 500;
       padding: 10px 28px;
-      border: 1px solid rgba(212,175,55,0.3);
+      border: 1px solid rgba(92, 69, 16,0.3);
       border-radius: 30px;
       transition: all 0.3s ease;
     }
     .hr-link:hover {
-      background: rgba(212,175,55,0.12);
-      border-color: #d4af37;
+      background: rgba(92, 69, 16,0.12);
+      border-color: #5c4510;
       color: #fff;
     }
     @media (max-width: 768px) {
