@@ -35,7 +35,7 @@
 .category-header h4 {
     font-size: 1.25rem;
     font-weight: 800;
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     margin: 0;
     letter-spacing: 1px;
 }
@@ -53,7 +53,7 @@
 
 .category-icon {
     font-size: 0.8rem;
-    color: #c9a55c;
+    color: #8B6914;
     transition: transform 0.3s ease;
 }
 
@@ -79,7 +79,7 @@
 
 /* Featured Guide Style */
 .featured-link {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     font-weight: 700 !important;
     background: linear-gradient(90deg, rgba(201, 165, 92, 0.1), transparent) !important;
     border-right: 4px solid #c9a55c !important;
@@ -88,7 +88,7 @@
 /* The arrow link */
 .arrow-link {
     font-size: 1.2rem;
-    color: #c9a55c;
+    color: #8B6914;
     opacity: 0;
     transform: translateX(10px);
     transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 }
 
 .text-gold {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
 }
 
 /* Pillar Subcategories in Megamenu */
@@ -156,7 +156,7 @@
 }
 
 .text-gold {
-    color: #c9a55c;
+    color: #8B6914;
 }
 
 .bg-gold {

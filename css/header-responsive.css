@@ -337,7 +337,7 @@ header#site-header .container {
 #practice-dropdown > div > button,
 #practice-dropdown > div > button[onclick*="toggleCategoryDropdown"] {
     background: #2d2d2d !important;
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     border: 1px solid #c9a55c !important;
     border-radius: 0.5rem !important;
     padding: 0.75rem 1rem !important;
@@ -351,21 +351,21 @@ header#site-header .container {
 
 #practice-dropdown > div > button h4,
 #practice-dropdown .category-icon {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
 }
 
 #practice-dropdown a {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     background: transparent !important;
 }
 
 #practice-dropdown a:hover {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
 #practice-dropdown a[href="divorce-guide.html"] {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     font-weight: 700 !important;
 }
 
@@ -374,11 +374,11 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item a {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
 }
 
 #practice-dropdown .pillar-item button {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
     background: transparent !important;
 }
 
@@ -392,7 +392,7 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item div[id^="sub-"] a:hover {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
 }
 
 #practice-dropdown .pillar-item .hover\:bg-gray-50:hover,
@@ -409,7 +409,7 @@ header#site-header .container {
 }
 
 #practice-dropdown > div > a h4 {
-    color: #c9a55c !important;
+    color: #8B6914 !important;
 }
 
 #practice-dropdown > div > a:hover {
