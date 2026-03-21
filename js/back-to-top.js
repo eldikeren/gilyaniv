@@ -49,3 +49,20 @@
   // Initial check in case page is already scrolled
   toggleVisibility();
 })();
+
+// Fix call button text: ensure all tel: links show "התקשר עכשיו" not the phone number
+(function() {
+  function fixCallButtons() {
+      var links = document.querySelectorAll('a[href="tel:0548184581"]');
+          links.forEach(function(link) {
+                if (link.textContent.trim() !== '\u05D4\u05EA\u05E7\u05E9\u05E8 \u05E2\u05DB\u05E9\u05D9\u05D5') {
+                        link.textContent = '\u05D4\u05EA\u05E7\u05E9\u05E8 \u05E2\u05DB\u05E9\u05D9\u05D5';
+                              }
+                                  });
+                                    }
+                                      if (document.readyState === 'loading') {
+                                          document.addEventListener('DOMContentLoaded', fixCallButtons);
+                                            } else {
+                                                fixCallButtons();
+                                                  }
+                                                  })();

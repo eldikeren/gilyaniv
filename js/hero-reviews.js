@@ -16,7 +16,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at center, rgba(212,175,55,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at centr, rgba(212,175,55,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
     .hr-badge {
@@ -179,5 +179,11 @@
   var heroSection = document.querySelector('section.relative');
   if (heroSection && heroSection.parentNode) {
     heroSection.parentNode.insertBefore(section, heroSection.nextSibling);
+  } else {
+        // Article/blog pages: no hero section, inject reviews before <main>
+            var mainEl = document.querySelector('main');
+                if (mainEl && mainEl.parentNode) {
+                      mainEl.parentNode.insertBefore(section, mainEl);
+                            }
   }
 })();
