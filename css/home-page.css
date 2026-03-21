@@ -181,7 +181,7 @@
             left: 0;
             width: 0%;
             height: 4px;
-            background: #7a5c11;
+            background: #5c4510;
             transition: width 0.3s ease;
         }
 
@@ -208,7 +208,7 @@
             figure::before {
                 height: 3px;
                 /* Slightly smaller border on mobile */
-                background: #7a5c11;
+                background: #5c4510;
             }
 
             .section-header h2,
@@ -249,7 +249,7 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            color: #7a5c11;
+            color: #5c4510;
             font-size: 2rem;
             animation: bounce 2s infinite;
             cursor: pointer;
@@ -718,7 +718,7 @@
         }
 
         .section-separator.gold {
-            background: #7a5c11;
+            background: #5c4510;
         }
 
         /* Floating Call Button */
