@@ -7,7 +7,7 @@
 
   var FUSE_CDN = 'https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.basic.min.js';
   var INDEX_URL = '/js/search-index.json?v=2';
-  var CSS_URL = '/css/search-modal.css?v=3';
+  var CSS_URL = '/css/search-modal.css?v=4';
   var MAX_RESULTS = 8;
   var DEBOUNCE_MS = 200;
 
