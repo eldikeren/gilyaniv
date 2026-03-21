@@ -368,8 +368,8 @@ header#site-header .container {
 #practice-dropdown > div > button,
 #practice-dropdown > div > button[onclick*="toggleCategoryDropdown"] {
     background: #2d2d2d !important;
-    color: #c9a55c !important;
-    border: 1px solid #c9a55c !important;
+    color: #5c4510 !important;
+    border: 1px solid #5c4510 !important;
     border-radius: 0.5rem !important;
     padding: 0.75rem 1rem !important;
     font-size: 1rem !important;
@@ -382,23 +382,23 @@ header#site-header .container {
 
 #practice-dropdown > div > button h4,
 #practice-dropdown .category-icon {
-    color: #c9a55c !important;
+    color: #5c4510 !important;
 }
 
 /* All links inside dropdown */
 #practice-dropdown a {
-    color: #d4c89a !important;
+    color: #5c4510 !important;
     background: transparent !important;
 }
 
 #practice-dropdown a:hover {
-    color: #d4af37 !important;
+    color: #5c4510 !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
 /* Featured link (★ המדריך המלא לגירושין) */
 #practice-dropdown a[href="divorce-guide.html"] {
-    color: #c9a55c !important;
+    color: #5c4510 !important;
     font-weight: 700 !important;
 }
 
@@ -408,11 +408,11 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item a {
-    color: #d4c89a !important;
+    color: #5c4510 !important;
 }
 
 #practice-dropdown .pillar-item button {
-    color: #c9a55c !important;
+    color: #5c4510 !important;
     background: transparent !important;
 }
 
@@ -426,7 +426,7 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item div[id^="sub-"] a:hover {
-    color: #d4af37 !important;
+    color: #5c4510 !important;
 }
 
 /* Hover state for pillar rows */
@@ -445,7 +445,7 @@ header#site-header .container {
 }
 
 #practice-dropdown > div > a h4 {
-    color: #c9a55c !important;
+    color: #5c4510 !important;
 }
 
 #practice-dropdown > div > a:hover {

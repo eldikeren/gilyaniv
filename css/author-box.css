@@ -17,7 +17,7 @@
   height: 96px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #c9a55c;
+  border: 3px solid #5c4510;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,7 +33,7 @@
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c9a55c, #d4af37);
+  background: linear-gradient(135deg, #5c4510, #5c4510);
   color: #fff;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
 }
 
 .author-info .author-link:hover {
-  color: #c9a55c;
+  color: #5c4510;
 }
 
 .author-info .author-link svg {

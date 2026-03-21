@@ -189,7 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transition: all 0.3s ease;
         }
         .filter-btn.active {
-            background-color: #c9a55c;
+            background-color: #5c4510;
             color: #1a1a1a;
         }
         .filter-btn:hover {
@@ -400,26 +400,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="תפריט ראשי">
                 <ul class="flex gap-12 items-center list-none m-0 p-0 text-gray-300 font-medium">
-                    <li><a href="/" title="דף הבית" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">בית</a></li>
-                    <li><a href="/#about" title="אודות המשרד" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">אודות המשרד</a></li>
-                    <li><a href="/attorneys" title="עורכי דין" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">עורכי דין</a></li>
+                    <li><a href="/" title="דף הבית" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">בית</a></li>
+                    <li><a href="/#about" title="אודות המשרד" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">אודות המשרד</a></li>
+                    <li><a href="/attorneys" title="עורכי דין" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">עורכי דין</a></li>
                     <li class="relative group flex items-center">
-                        <button onclick="toggleNavDropdown('practice-dropdown')" class="text-lg font-bold transition-all duration-300 hover:opacity-80 inline-flex items-center" style="color: #c9a55c;">תחומי התמחות <span class="mr-2 text-xs">▼</span></button>
+                        <button onclick="toggleNavDropdown('practice-dropdown')" class="text-lg font-bold transition-all duration-300 hover:opacity-80 inline-flex items-center" style="color: #5c4510;">תחומי התמחות <span class="mr-2 text-xs">▼</span></button>
                         <div id="practice-dropdown" class="hidden absolute top-full mt-2 right-0 w-72 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2" style="max-height: calc(100vh - 120px); overflow-y: auto;">
                             <!-- דיני משפחה - highlighted -->
                             <div class="border-b border-gray-200 bg-amber-50">
-                                <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-3 flex items-center justify-between text-right hover:bg-amber-100" style="background: linear-gradient(90deg, #fef3c7, #fff);"><h4 class="font-bold text-[#5c4510] text-sm">דיני משפחה וגירושין</h4><span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span></button>
+                                <button onclick="toggleCategoryDropdown('category-family', event)" class="w-full px-4 py-3 flex items-center justify-between text-right hover:bg-amber-100" style="background: linear-gradient(90deg, #fef3c7, #fff);"><h4 class="font-bold text-[#5c4510] text-sm">דיני משפחה וגירושין</h4><span class="category-icon text-lg text-[#5c4510] font-bold">▼</span></button>
                                 <div id="category-family" class="hidden">
                                     <a href="/divorce-guide" class="block px-4 py-2 pr-6 text-sm text-[#5c4510] font-bold hover:bg-amber-100 text-right border-b border-gray-100">★ המדריך המלא לגירושין</a>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/heskem-gerushin" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">הסכם גירושין</a><button onclick="toggleSubCategory('sub-heskem-gerushin', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-heskem-gerushin" class="hidden bg-gray-50 pr-10 py-1"><a href="/mahu-heskem-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">מהו הסכם גירושין</a><a href="/shlvei-heskem-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">שלבי הסכם</a><a href="/seifim-hova-heskem" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">סעיפי חובה</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/gerushin-beit-din-rabani" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">בית דין רבני</a><button onclick="toggleSubCategory('sub-beit-din', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-beit-din" class="hidden bg-gray-50 pr-10 py-1"><a href="/haget-mah-ze" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הגט - מה זה</a><a href="/smchut-beit-din-rabani" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">סמכות בית דין</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mishmoret-yeladim" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">זמני שהות (משמורת) ילדים</a><button onclick="toggleSubCategory('sub-mishmoret', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mishmoret" class="hidden bg-gray-50 pr-10 py-1"><a href="/mishmoret-blaudit-vsmeshuteft" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">בלעדית vs משותפת</a><a href="/achrayut-horit" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">אחריות הורית</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mezonot-yeladim" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">מזונות ילדים</a><button onclick="toggleSubCategory('sub-mezonot-yeladim', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mezonot-yeladim" class="hidden bg-gray-50 pr-10 py-1"><a href="/chishov-mezonot-yeladim" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חישוב מזונות</a><a href="/hafchatat-mezonot-yeladim" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הפחתת מזונות</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mezonot-isha" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">מזונות אישה</a><button onclick="toggleSubCategory('sub-mezonot-isha', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mezonot-isha" class="hidden bg-gray-50 pr-10 py-1"><a href="/zkaut-mezonot-isha" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">זכאות למזונות</a><a href="/chishov-mezonot-isha" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חישוב מזונות</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/chalokat-rechush-gerushin" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">חלוקת רכוש</a><button onclick="toggleSubCategory('sub-rechush', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-rechush" class="hidden bg-gray-50 pr-10 py-1"><a href="/izun-mashabim-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">איזון משאבים</a><a href="/chalokat-dira-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חלוקת דירה</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/heskem-mamon" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">הסכם ממון</a><button onclick="toggleSubCategory('sub-mamon', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mamon" class="hidden bg-gray-50 pr-10 py-1"><a href="/heskem-mamon-lifney-nisuin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">לפני נישואין</a><a href="/hagana-al-esek" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הגנה על עסק</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/sarvanut-get-agunot" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">סרבנות גט</a><button onclick="toggleSubCategory('sub-sarvanut', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-sarvanut" class="hidden bg-gray-50 pr-10 py-1"><a href="/klim-mishpatiyim-sarvan-get" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">כלים משפטיים</a><a href="/agunut-ma-laasot" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">עגינות - מה לעשות</a></div></div>
-                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/yaduyim-batzibur" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">ידועים בציבור</a><button onclick="toggleSubCategory('sub-yaduyim', event)" class="px-3 py-2 text-lg text-[#c9a55c] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-yaduyim" class="hidden bg-gray-50 pr-10 py-1"><a href="/zkuyot-yaduyim-batzibur" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">זכויות</a><a href="/heskem-yaduyim-batzibur" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הסכם חיים משותפים</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/heskem-gerushin" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">הסכם גירושין</a><button onclick="toggleSubCategory('sub-heskem-gerushin', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-heskem-gerushin" class="hidden bg-gray-50 pr-10 py-1"><a href="/mahu-heskem-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">מהו הסכם גירושין</a><a href="/shlvei-heskem-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">שלבי הסכם</a><a href="/seifim-hova-heskem" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">סעיפי חובה</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/gerushin-beit-din-rabani" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">בית דין רבני</a><button onclick="toggleSubCategory('sub-beit-din', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-beit-din" class="hidden bg-gray-50 pr-10 py-1"><a href="/haget-mah-ze" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הגט - מה זה</a><a href="/smchut-beit-din-rabani" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">סמכות בית דין</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mishmoret-yeladim" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">זמני שהות (משמורת) ילדים</a><button onclick="toggleSubCategory('sub-mishmoret', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mishmoret" class="hidden bg-gray-50 pr-10 py-1"><a href="/mishmoret-blaudit-vsmeshuteft" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">בלעדית vs משותפת</a><a href="/achrayut-horit" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">אחריות הורית</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mezonot-yeladim" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">מזונות ילדים</a><button onclick="toggleSubCategory('sub-mezonot-yeladim', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mezonot-yeladim" class="hidden bg-gray-50 pr-10 py-1"><a href="/chishov-mezonot-yeladim" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חישוב מזונות</a><a href="/hafchatat-mezonot-yeladim" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הפחתת מזונות</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/mezonot-isha" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">מזונות אישה</a><button onclick="toggleSubCategory('sub-mezonot-isha', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mezonot-isha" class="hidden bg-gray-50 pr-10 py-1"><a href="/zkaut-mezonot-isha" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">זכאות למזונות</a><a href="/chishov-mezonot-isha" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חישוב מזונות</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/chalokat-rechush-gerushin" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">חלוקת רכוש</a><button onclick="toggleSubCategory('sub-rechush', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-rechush" class="hidden bg-gray-50 pr-10 py-1"><a href="/izun-mashabim-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">איזון משאבים</a><a href="/chalokat-dira-gerushin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">חלוקת דירה</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/heskem-mamon" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">הסכם ממון</a><button onclick="toggleSubCategory('sub-mamon', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-mamon" class="hidden bg-gray-50 pr-10 py-1"><a href="/heskem-mamon-lifney-nisuin" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">לפני נישואין</a><a href="/hagana-al-esek" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הגנה על עסק</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/sarvanut-get-agunot" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">סרבנות גט</a><button onclick="toggleSubCategory('sub-sarvanut', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-sarvanut" class="hidden bg-gray-50 pr-10 py-1"><a href="/klim-mishpatiyim-sarvan-get" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">כלים משפטיים</a><a href="/agunut-ma-laasot" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">עגינות - מה לעשות</a></div></div>
+                                    <div class="pillar-item border-b border-gray-100"><div class="flex items-center justify-between pr-6 hover:bg-gray-50"><a href="/yaduyim-batzibur" class="flex-1 py-2 text-sm text-gray-700 hover:text-[#5c4510] font-medium">ידועים בציבור</a><button onclick="toggleSubCategory('sub-yaduyim', event)" class="px-3 py-2 text-lg text-[#5c4510] font-bold hover:text-[#5c4510]">▼</button></div><div id="sub-yaduyim" class="hidden bg-gray-50 pr-10 py-1"><a href="/zkuyot-yaduyim-batzibur" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">זכויות</a><a href="/heskem-yaduyim-batzibur" class="block py-1.5 px-4 text-xs text-gray-600 hover:text-[#5c4510]">הסכם חיים משותפים</a></div></div>
                                     <a href="/divorce" class="block px-4 py-2 pr-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#5c4510] text-right">גירושין</a>
                                     <a href="/guardianship" class="block px-4 py-2 pr-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#5c4510] text-right">אפוטרופסות</a>
                                     <a href="/mediation" class="block px-4 py-2 pr-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#5c4510] text-right">גישור משפחתי</a>
@@ -427,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <!-- ירושות וצוואות -->
                             <div class="border-b border-gray-200 mt-2">
-                                <button onclick="toggleCategoryDropdown('category-inheritance', event)" class="w-full px-4 py-2 flex items-center justify-between text-right bg-white hover:bg-gray-50"><h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4><span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span></button>
+                                <button onclick="toggleCategoryDropdown('category-inheritance', event)" class="w-full px-4 py-2 flex items-center justify-between text-right bg-white hover:bg-gray-50"><h4 class="font-bold text-[#1a1a1a] text-sm">ירושות וצוואות</h4><span class="category-icon text-lg text-[#5c4510] font-bold">▼</span></button>
                                 <div id="category-inheritance" class="hidden">
                                     <a href="/will-writing" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#5c4510] text-right">עריכת צוואה</a>
                                     <a href="/inheritance-order" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#5c4510] text-right">צו ירושה</a>
@@ -439,7 +439,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <!-- חדלות פירעון -->
                             <div class="border-b border-gray-200 mt-2">
-                                <button onclick="toggleCategoryDropdown('category-bankruptcy', event)" class="w-full px-4 py-2 flex items-center justify-between text-right bg-white hover:bg-gray-50"><h4 class="font-bold text-[#1a1a1a] text-sm">חדלות פירעון והוצאה לפועל</h4><span class="category-icon text-lg text-[#c9a55c] font-bold">▼</span></button>
+                                <button onclick="toggleCategoryDropdown('category-bankruptcy', event)" class="w-full px-4 py-2 flex items-center justify-between text-right bg-white hover:bg-gray-50"><h4 class="font-bold text-[#1a1a1a] text-sm">חדלות פירעון והוצאה לפועל</h4><span class="category-icon text-lg text-[#5c4510] font-bold">▼</span></button>
                                 <div id="category-bankruptcy" class="hidden">
                                     <a href="/bankruptcy" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#5c4510] text-right">חדלות פירעון / פשיטת רגל</a>
                                     <a href="/execution" class="block px-4 py-2 pr-8 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#5c4510] text-right">הוצאה לפועל</a>
@@ -450,10 +450,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="mt-2 bg-white"><a href="/practice-areas#civil-law" class="block w-full px-4 py-2 text-right bg-white hover:bg-gray-50"><h4 class="font-bold text-[#1a1a1a] text-sm">דיני חוזים ודיני מקרקעין</h4></a></div>
                         </div>
                     </li>
-                    <li><a href="/articles" title="פרסומים מקצועיים" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">פרסומים מקצועיים</a></li>
-                    <li><a href="/blog" title="בלוג" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">בלוג</a></li>
-                    <li><a href="/reviews" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">ביקורות מלקוחות</a></li>
-                    <li><a href="/contact" title="צור קשר" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #c9a55c;">צור קשר</a></li>
+                    <li><a href="/articles" title="פרסומים מקצועיים" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">פרסומים מקצועיים</a></li>
+                    <li><a href="/blog" title="בלוג" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">בלוג</a></li>
+                    <li><a href="/reviews" title="ביקורות מלקוחות" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">ביקורות מלקוחות</a></li>
+                    <li><a href="/contact" title="צור קשר" class="text-lg font-bold transition-all duration-300 hover:opacity-80" style="color: #5c4510;">צור קשר</a></li>
                 </ul>
             </nav>
             <!-- Mobile menu button -->
@@ -480,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
             </div>
             <div class="flex items-center space-x-4 space-x-reverse">
-                <a class="inline-flex items-center justify-center rounded-full border border-[#c9a55c] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#5c4510] shadow-sm transition-all duration-300 hover:bg-[#c9a55c] hover:text-[#1a1a1a]" href="tel:0548184581">
+                <a class="inline-flex items-center justify-center rounded-full border border-[#5c4510] bg-[#1a1a1a] px-5 py-3 text-base font-medium text-[#5c4510] shadow-sm transition-all duration-300 hover:bg-[#5c4510] hover:text-[#1a1a1a]" href="tel:0548184581">
                     התקשר עכשיו
                 </a>
                 <a href="https://www.instagram.com/yanivgil.co.il" target="_blank" rel="noopener noreferrer"
@@ -509,7 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
             </div>
             <button id="close-mobile-menu"
-                class="min-w-[48px] min-h-[48px] flex items-center justify-center" style="color: #c9a55c;"
+                class="min-w-[48px] min-h-[48px] flex items-center justify-center" style="color: #5c4510;"
                 aria-label="סגור תפריט נייד">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -541,27 +541,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </button>
                             <div id="mobile-category-family" class="hidden mt-2 pr-4">
                                 <a href="/divorce-guide"
-                                    class="block py-2 px-4 text-sm text-yellow-400 font-bold hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">המדריך
+                                    class="block py-2 px-4 text-sm text-yellow-400 font-bold hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">המדריך
                                     המלא לגירושין</a>
 
                                 <!-- Mobile: הסכם גירושין -->
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/heskem-gerushin"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">הסכם
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">הסכם
                                             גירושין</a>
                                         <button onclick="toggleSubCategory('mobile-sub-heskem', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-heskem" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/mahu-heskem-gerushin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">מהו
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">מהו
                                             הסכם גירושין</a>
                                         <a href="/shlvei-heskem-gerushin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">שלבי
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">שלבי
                                             הסכם</a>
                                         <a href="/seifim-hova-heskem"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">סעיפי
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">סעיפי
                                             חובה</a>
                                     </div>
                                 </div>
@@ -570,20 +570,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/gerushin-beit-din-rabani"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">בית דין
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">בית דין
                                             רבני</a>
                                         <button onclick="toggleSubCategory('mobile-sub-beitdin', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-beitdin" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/haget-mah-ze"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">הגט -
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">הגט -
                                             מה זה</a>
                                         <a href="/smchut-beit-din-rabani"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">סמכות
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">סמכות
                                             בית דין</a>
                                         <a href="/tahlich-gerushin-beit-din"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">תהליך
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">תהליך
                                             גירושין</a>
                                     </div>
                                 </div>
@@ -592,20 +592,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/mishmoret-yeladim"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">זמני שהות (משמורת)
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">זמני שהות (משמורת)
                                             ילדים</a>
                                         <button onclick="toggleSubCategory('mobile-sub-mishmoret', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-mishmoret" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/mishmoret-blaudit-vsmeshuteft"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">בלעדית
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">בלעדית
                                             vs משותפת</a>
                                         <a href="/achrayut-horit"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">אחריות
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">אחריות
                                             הורית</a>
                                         <a href="/horeh-menaker"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">הורה
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">הורה
                                             מנכר</a>
                                     </div>
                                 </div>
@@ -614,20 +614,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/mezonot-yeladim"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">מזונות
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">מזונות
                                             ילדים</a>
                                         <button onclick="toggleSubCategory('mobile-sub-mezonot-y', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-mezonot-y" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/chishov-mezonot-yeladim"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">חישוב
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">חישוב
                                             מזונות</a>
                                         <a href="/hafchatat-mezonot-yeladim"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">הפחתת
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">הפחתת
                                             מזונות</a>
                                         <a href="/keren-mezonot"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">קרן
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">קרן
                                             מזונות</a>
                                     </div>
                                 </div>
@@ -636,17 +636,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/mezonot-isha"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">מזונות
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">מזונות
                                             אישה</a>
                                         <button onclick="toggleSubCategory('mobile-sub-mezonot-i', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-mezonot-i" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/zkaut-mezonot-isha"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">זכאות
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">זכאות
                                             למזונות</a>
                                         <a href="/chishov-mezonot-isha"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">חישוב
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">חישוב
                                             מזונות</a>
                                     </div>
                                 </div>
@@ -655,20 +655,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/chalokat-rechush-gerushin"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">חלוקת
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">חלוקת
                                             רכוש</a>
                                         <button onclick="toggleSubCategory('mobile-sub-rechush', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-rechush" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/izun-mashabim-gerushin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">איזון
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">איזון
                                             משאבים</a>
                                         <a href="/chalokat-dira-gerushin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">חלוקת
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">חלוקת
                                             דירה</a>
                                         <a href="/chalokat-pansiya-gerushin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">חלוקת
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">חלוקת
                                             פנסיה</a>
                                     </div>
                                 </div>
@@ -677,17 +677,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/heskem-mamon"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">הסכם
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">הסכם
                                             ממון</a>
                                         <button onclick="toggleSubCategory('mobile-sub-mamon', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-mamon" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/heskem-mamon-lifney-nisuin"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">לפני
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">לפני
                                             נישואין</a>
                                         <a href="/hagana-al-esek"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">הגנה על
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">הגנה על
                                             עסק</a>
                                     </div>
                                 </div>
@@ -696,17 +696,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/sarvanut-get-agunot"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">סרבנות
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">סרבנות
                                             גט</a>
                                         <button onclick="toggleSubCategory('mobile-sub-sarvanut', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-sarvanut" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/klim-mishpatiyim-sarvan-get"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">כלים
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">כלים
                                             משפטיים</a>
                                         <a href="/agunut-ma-laasot"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">עגינות
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">עגינות
                                             - מה לעשות</a>
                                     </div>
                                 </div>
@@ -715,26 +715,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="mobile-pillar-group">
                                     <div class="flex items-center justify-between">
                                         <a href="/yaduyim-batzibur"
-                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c]">ידועים
+                                            class="flex-1 py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510]">ידועים
                                             בציבור</a>
                                         <button onclick="toggleSubCategory('mobile-sub-yaduyim', event)"
-                                            class="px-3 text-lg text-[#c9a55c] font-bold">▼</button>
+                                            class="px-3 text-lg text-[#5c4510] font-bold">▼</button>
                                     </div>
                                     <div id="mobile-sub-yaduyim" class="hidden pr-6 bg-gray-900 rounded">
                                         <a href="/zkuyot-yaduyim-batzibur"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">זכויות</a>
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">זכויות</a>
                                         <a href="/heskem-yaduyim-batzibur"
-                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#c9a55c]">הסכם
+                                            class="block py-1.5 px-4 text-xs text-gray-500 hover:text-[#5c4510]">הסכם
                                             חיים משותפים</a>
                                     </div>
                                 </div>
 
                                 <a href="/divorce"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">גירושין</a>
                                 <a href="/guardianship"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">אפוטרופסות</a>
                                 <a href="/mediation"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">גישור
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">גישור
                                     משפחתי</a>
                             </div>
                         </div>
@@ -746,22 +746,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </button>
                             <div id="mobile-category-inheritance" class="hidden mt-2 pr-4">
                                 <a href="/will-writing"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עריכת
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">עריכת
                                     צוואה</a>
                                 <a href="/inheritance-order"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">צו
                                     ירושה</a>
                                 <a href="/will-probate"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">צו
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">צו
                                     קיום צוואה</a>
                                 <a href="/estate-management"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ניהול
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">ניהול
                                     עיזבון</a>
                                 <a href="/will-contest"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות
                                     לצוואה</a>
                                 <a href="/inheritance-contest"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">התנגדות
                                     לצו ירושה</a>
                             </div>
                         </div>
@@ -773,28 +773,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </button>
                             <div id="mobile-category-bankruptcy" class="hidden mt-2 pr-4">
                                 <a href="/bankruptcy"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">חדלות
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">חדלות
                                     פירעון / פשיטת רגל</a>
                                 <a href="/execution"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הוצאה
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">הוצאה
                                     לפועל</a>
                                 <a href="/case-consolidation"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">איחוד
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">איחוד
                                     תיקים</a>
                                 <a href="/travel-restriction"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">עיכוב
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">עיכוב
                                     יציאה מהארץ</a>
                                 <a href="/debt-cancellation"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">מחיקת
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">מחיקת
                                     חובות</a>
                                 <a href="/lien-cancellation"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">ביטול
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">ביטול
                                     עיקולים</a>
                                 <a href="/debt-arrangements"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">הסדרי
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">הסדרי
                                     חוב</a>
                                 <a href="/discharge"
-                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#c9a55c] hover:bg-gray-800 rounded transition-colors duration-200">קבלת
+                                    class="block py-2 px-4 text-sm text-gray-300 hover:text-[#5c4510] hover:bg-gray-800 rounded transition-colors duration-200">קבלת
                                     הפטר</a>
                             </div>
                         </div>
@@ -843,7 +843,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <article class="bg-white rounded-xl shadow-lg p-8 md:p-12">
                     <div class="article-meta mb-6">
                         <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
-                            <span class="px-3 py-1 bg-[#c9a55c] text-[#1a1a1a] rounded-full font-medium">הוצאה לפועל</span>
+                            <span class="px-3 py-1 bg-[#5c4510] text-[#1a1a1a] rounded-full font-medium">הוצאה לפועל</span>
                             <span>13 בדצמבר 2024</span>
                             <span>עו״ד יניב גיל</span>
                         </div>
@@ -939,7 +939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <!-- FAQ Section -->
                     <div class="mt-12 pt-8 border-t border-gray-200">
-                        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6 pb-2 border-b-2 border-[#c9a55c]">שאלות נפוצות</h2>
+                        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6 pb-2 border-b-2 border-[#5c4510]">שאלות נפוצות</h2>
                         <div class="space-y-4">
         <details class="bg-gray-50 rounded-lg p-4 cursor-pointer">
             <summary class="font-semibold text-lg text-[#1a1a1a]">מהי הוצאה לפועל של שטרות?</summary>
@@ -961,7 +961,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
 <div class="mt-8 pt-6 border-t border-gray-200">
-                        <a href="/blog" class="inline-flex items-center text-[#c9a55c] hover:text-[#5c4510] font-medium transition-colors">
+                        <a href="/blog" class="inline-flex items-center text-[#5c4510] hover:text-[#5c4510] font-medium transition-colors">
                             ← חזרה לבלוג
                         </a>
                     </div>

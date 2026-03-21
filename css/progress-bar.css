@@ -6,7 +6,7 @@
   right: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, #c9a55c, #d4af37);
+  background: linear-gradient(90deg, #5c4510, #5c4510);
   z-index: 999; /* Lower than header (1000) to avoid overlapping buttons */
   transition: width 0.1s linear;
   pointer-events: none;
