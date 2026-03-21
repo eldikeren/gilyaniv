@@ -41,12 +41,12 @@
 }
 
 .breadcrumbs a:hover {
-  color: #5c4510;
+  color: #c9a55c;
   text-decoration: underline;
 }
 
 .breadcrumbs [aria-current="page"] {
-  color: #5c4510;
+  color: #c9a55c;
   font-weight: 500;
 }
 

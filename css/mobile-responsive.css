@@ -157,7 +157,7 @@ body.nav-open .primary-nav{ right: 0; }
   transform: translateY(-50%);
   width: 4px;
   height: 48px;
-  background: linear-gradient(180deg, #5c4510, #5c4510);
+  background: linear-gradient(180deg, #c9a55c, #c9a55c);
   border-radius: 0 4px 4px 0;
   opacity: 0;
   transition: opacity 0.3s ease;

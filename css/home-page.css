@@ -181,7 +181,7 @@
             left: 0;
             width: 0%;
             height: 4px;
-            background: #5c4510;
+            background: #c9a55c;
             transition: width 0.3s ease;
         }
 
@@ -208,7 +208,7 @@
             figure::before {
                 height: 3px;
                 /* Slightly smaller border on mobile */
-                background: #5c4510;
+                background: #c9a55c;
             }
 
             .section-header h2,
@@ -249,7 +249,7 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            color: #5c4510;
+            color: #c9a55c;
             font-size: 2rem;
             animation: bounce 2s infinite;
             cursor: pointer;
@@ -303,7 +303,7 @@
         /* Header section with logo and close button */
         .mobile-menu-overlay>.flex.justify-between {
             background: #1a1a2e;
-            border-bottom: 1px solid rgba(92, 69, 16, 0.3);
+            border-bottom: 1px solid rgba(201, 165, 92, 0.3);
         }
 
         /* Main nav section */
@@ -322,17 +322,17 @@
             display: block;
             padding: 1rem;
             background: transparent !important;
-            color: #5c4510 !important;
+            color: #c9a55c !important;
             text-decoration: none;
             border-radius: 0;
-            border-bottom: 1px solid rgba(92, 69, 16, 0.2);
+            border-bottom: 1px solid rgba(201, 165, 92, 0.2);
             margin-bottom: 0;
             transition: all 0.3s ease;
         }
 
         .mobile-menu-overlay nav ul li a.mobile-menu-link:hover {
-            background: rgba(92, 69, 16, 0.15) !important;
-            color: #5c4510 !important;
+            background: rgba(201, 165, 92, 0.15) !important;
+            color: #c9a55c !important;
         }
 
         /* Mobile menu styles moved to css/mobile-menu.css */
@@ -344,7 +344,7 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: #5c4510;
+            color: #c9a55c;
             cursor: pointer;
         }
 
@@ -358,16 +358,16 @@
             display: block;
             padding: 1rem;
             background: transparent;
-            color: #5c4510;
+            color: #c9a55c;
             text-decoration: none;
             border-radius: 0;
-            border-bottom: 1px solid rgba(92, 69, 16, 0.2);
+            border-bottom: 1px solid rgba(201, 165, 92, 0.2);
             transition: all 0.3s ease;
         }
 
         .mobile-menu-links a:hover {
-            background: rgba(92, 69, 16, 0.15);
-            color: #5c4510;
+            background: rgba(201, 165, 92, 0.15);
+            color: #c9a55c;
         }
 
         /* Mobile menu button styling to match links */
@@ -376,7 +376,7 @@
             display: block;
             padding: 1rem;
             background: #2d2d2d;
-            color: #5c4510;
+            color: #c9a55c;
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s ease;
@@ -390,7 +390,7 @@
 
         .mobile-menu-links button.mobile-menu-link:hover,
         nav button.mobile-menu-link:hover {
-            background: #5c4510;
+            background: #c9a55c;
             color: #1a1a1a;
         }
 
@@ -718,7 +718,7 @@
         }
 
         .section-separator.gold {
-            background: #5c4510;
+            background: #c9a55c;
         }
 
         /* Floating Call Button */
@@ -771,8 +771,8 @@
             width: 100% !important;
             padding: 0.75rem 1rem !important;
             background-color: #2d2d2d !important;
-            color: #5c4510 !important;
-            border: 1px solid #5c4510 !important;
+            color: #c9a55c !important;
+            border: 1px solid #c9a55c !important;
             border-radius: 0.5rem !important;
             font-size: 1rem !important;
             font-weight: 600 !important;
@@ -784,7 +784,7 @@
 
         .mobile-menu-overlay button[onclick*="toggleCategoryDropdown"] span,
         #mobile-practice-dropdown .mb-2>button span {
-            color: #5c4510 !important;
+            color: #c9a55c !important;
             visibility: visible !important;
             opacity: 1 !important;
         }
@@ -803,7 +803,7 @@
         }
 
         footer a:hover {
-            color: #5c4510 !important;
+            color: #c9a55c !important;
         }
 
         /* Mobile: Hide floating buttons and progress bar */

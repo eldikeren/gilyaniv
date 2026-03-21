@@ -5,9 +5,9 @@
     max-width: 95vw;
     background: rgba(26, 26, 46, 0.98) !important;
     border-radius: 20px;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 50px rgba(92, 69, 16, 0.2);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 50px rgba(201, 165, 92, 0.2);
     padding: 35px;
-    border: 1px solid rgba(92, 69, 16, 0.4);
+    border: 1px solid rgba(201, 165, 92, 0.4);
     backdrop-filter: blur(25px);
     z-index: 10000;
 }
@@ -29,13 +29,13 @@
 .category-header {
     margin-bottom: 5px;
     padding-bottom: 8px;
-    border-bottom: 2px solid rgba(92, 69, 16, 0.3);
+    border-bottom: 2px solid rgba(201, 165, 92, 0.3);
 }
 
 .category-header h4 {
     font-size: 1.25rem;
     font-weight: 800;
-    color: #5c4510 !important;
+    color: #c9a55c !important;
     margin: 0;
     letter-spacing: 1px;
 }
@@ -53,7 +53,7 @@
 
 .category-icon {
     font-size: 0.8rem;
-    color: #5c4510;
+    color: #c9a55c;
     transition: transform 0.3s ease;
 }
 
@@ -72,23 +72,23 @@
 }
 
 .menu-item-link:hover {
-    background: linear-gradient(90deg, rgba(92, 69, 16, 0.15), transparent) !important;
+    background: linear-gradient(90deg, rgba(201, 165, 92, 0.15), transparent) !important;
     color: #ffffff !important;
     transform: translateX(-5px);
 }
 
 /* Featured Guide Style */
 .featured-link {
-    color: #5c4510 !important;
+    color: #c9a55c !important;
     font-weight: 700 !important;
-    background: linear-gradient(90deg, rgba(92, 69, 16, 0.1), transparent) !important;
-    border-right: 4px solid #5c4510 !important;
+    background: linear-gradient(90deg, rgba(201, 165, 92, 0.1), transparent) !important;
+    border-right: 4px solid #c9a55c !important;
 }
 
 /* The arrow link */
 .arrow-link {
     font-size: 1.2rem;
-    color: #5c4510;
+    color: #c9a55c;
     opacity: 0;
     transform: translateX(10px);
     transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 }
 
 .text-gold {
-    color: #5c4510 !important;
+    color: #c9a55c !important;
 }
 
 /* Pillar Subcategories in Megamenu */
@@ -118,7 +118,7 @@
 }
 
 #practice-dropdown::-webkit-scrollbar-thumb {
-    background: #5c4510;
+    background: #c9a55c;
     border-radius: 10px;
 }
 
@@ -156,11 +156,11 @@
 }
 
 .text-gold {
-    color: #5c4510;
+    color: #c9a55c;
 }
 
 .bg-gold {
-    background: #5c4510;
+    background: #c9a55c;
 }
 
 .text-navy {
