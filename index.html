@@ -51,7 +51,6 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -371,11 +370,35 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="images/hero-poster.webp" as="image" fetchpriority="high">
     <!-- Tailwind CSS Production Build -->
-    <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/home-page.css">
+    <style>
+    body{margin:0;font-family:'Heebo',sans-serif;background:#f9fafb;color:#1f2937;direction:rtl}
+    *,::after,::before{box-sizing:border-box}
+    .bg-gray-50{background-color:#f9fafb}.text-gray-800{color:#1f2937}
+    .relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}
+    .inset-0{inset:0}.w-full{width:100%}.h-full{height:100%}
+    .object-cover{object-fit:cover}.text-white{color:#fff}
+    .text-center{text-align:center}.font-extrabold{font-weight:800}
+    .leading-tight{line-height:1.25}.z-10{z-index:10}
+    .flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}
+    .min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}
+    .hidden{display:none}.block{display:block}
+    .text-3xl{font-size:1.875rem;line-height:2.25rem}
+    .py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}
+    .rounded-full{border-radius:9999px}.max-w-7xl{max-width:80rem}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    header{position:relative}img{max-width:100%;height:auto}
+    .container{width:100%;margin-right:auto;margin-left:auto;padding-right:1rem;padding-left:1rem}
+    </style>
+    <link rel="preload" href="css/tailwind.css" as="style">
+    <link rel="stylesheet" href="css/tailwind.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/tailwind.css"></noscript>
+    <link rel="stylesheet" href="css/home-page.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/home-page.css"></noscript>
     <!-- Critical CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css?v=9">
-    <link rel="stylesheet" href="css/header-v2.css?v=29">
+    <link rel="stylesheet" href="css/mobile-menu.css?v=9" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/mobile-menu.css?v=9"></noscript>
+    <link rel="stylesheet" href="css/header-v2.css?v=29" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/header-v2.css?v=29"></noscript>
     <link rel="stylesheet" href="css/mobile-cta-bar.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="css/mobile-cta-bar.css"></noscript>
     <link rel="stylesheet" href="css/megamenu.css" media="print" onload="this.media='all'">
@@ -975,7 +998,9 @@
         <!-- Elfsight Google Reviews | Untitled Google Reviews -->
         <section id="testimonials" class="py-16 md:py-24" style="background: transparent;">
             <div class="container mx-auto px-4">
-                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <script>
+    (function(){var l=false;function le(){if(l)return;l=true;var s=document.createElement('script');s.src='https://elfsightcdn.com/platform.js';s.async=true;document.body.appendChild(s);}if('IntersectionObserver' in window){var e=document.querySelector('[class*="elfsight-app"]');if(e){var o=new IntersectionObserver(function(en){if(en[0].isIntersecting){le();o.disconnect();}},{rootMargin:'300px'});o.observe(e);}else{setTimeout(le,5000);}}else{setTimeout(le,3000);}})();
+    </script>
                 <div class="elfsight-app-e31880ad-b51a-4a3f-a061-302c9ff5fe61" data-elfsight-app-lazy></div>
             </div>
         </section>
