@@ -29,9 +29,9 @@
       padding: 10px 24px;
       margin-bottom: 28px;
     }
-    .hr-badge-stars { color: #8B6914; font-size: 20px; letter-spacing: 2px; }
+    .hr-badge-stars { color: #c9a55c; font-size: 20px; letter-spacing: 2px; }
     .hr-badge-text { color: #fff; font-size: 15px; font-weight: 500; }
-    .hr-badge-count { color: #8B6914; font-weight: 700; }
+    .hr-badge-count { color: #c9a55c; font-weight: 700; }
     .hr-cards {
       display: flex;
       gap: 20px;
@@ -56,7 +56,7 @@
       border-color: rgba(201, 165, 92,0.4);
       box-shadow: 0 8px 32px rgba(201, 165, 92,0.08);
     }
-    .hr-card-stars { color: #8B6914; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
+    .hr-card-stars { color: #c9a55c; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
     .hr-card-text {
       color: rgba(255,255,255,0.85);
       font-size: 15px;
@@ -72,7 +72,7 @@
       padding-top: 14px;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .hr-card-name { color: #8B6914; font-size: 14px; font-weight: 600; }
+    .hr-card-name { color: #c9a55c; font-size: 14px; font-weight: 600; }
     .hr-card-loc { color: rgba(255,255,255,0.45); font-size: 12px; }
     .hr-locations {
       display: flex;
@@ -95,7 +95,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #8B6914;
+      color: #c9a55c;
       text-decoration: none;
       font-size: 15px;
       font-weight: 500;
@@ -106,7 +106,7 @@
     }
     .hr-link:hover {
       background: rgba(201, 165, 92,0.12);
-      border-color: #8B6914;
+      border-color: #c9a55c;
       color: #fff;
     }
     @media (max-width: 768px) {

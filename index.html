@@ -54,8 +54,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -371,19 +371,19 @@
     <link rel="preload" href="images/hero-poster.webp" as="image" fetchpriority="high">
     <!-- Tailwind CSS Production Build -->
     <link rel="preload" as="image" href="images/hero-poster.webp" fetchpriority="high">
-    <link rel="stylesheet" href="css/tailwind.css?v=20260321d">
-    <link rel="stylesheet" href="css/home-page.css?v=20260321d">
+    <link rel="stylesheet" href="css/tailwind.css?v=20260321f">
+    <link rel="stylesheet" href="css/home-page.css?v=20260321f">
     <!-- Critical CSS -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-menu.css?v=20260321d">
-    <link rel="stylesheet" href="css/header-v2.css?v=20260321d">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-cta-bar.css?v=20260321d">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/megamenu.css?v=20260321d">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-menu.css?v=20260321f">
+    <link rel="stylesheet" href="css/header-v2.css?v=20260321f">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-cta-bar.css?v=20260321f">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/megamenu.css?v=20260321f">
     <!-- Non-critical CSS - deferred -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/breadcrumbs.css?v=20260321d">    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/progress-bar.css?v=20260321d">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/faq-accordion.css?v=20260321d">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/floating-buttons.css?v=20260321d">
-    <link rel="stylesheet" href="css/print.css?v=20260321d" media="print">
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/scroll-arrow.css?v=20260321d">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/breadcrumbs.css?v=20260321f">    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/progress-bar.css?v=20260321f">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/faq-accordion.css?v=20260321f">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/floating-buttons.css?v=20260321f">
+    <link rel="stylesheet" href="css/print.css?v=20260321f" media="print">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/scroll-arrow.css?v=20260321f">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -398,7 +398,7 @@
         <div class="container mx-auto px-4 flex justify-between items-center transition-all duration-300 ease-in-out">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="/" title="דף הבית">
-                    <img loading="lazy" src="images/new-logo.webp?v=2" alt="לוגו משרד עו״ד יניב גיל" class="header-logo"
+                    <img loading="lazy" width="300" height="200" src="images/new-logo.webp?v=2" alt="לוגו משרד עו״ד יניב גיל" class="header-logo"
                         style="margin-left: 10px; display: block;" loading="eager" width="300" height="200">
                 </a>
                 <a href="https://www.dunsguide.co.il/business?duns=532460057" target="_blank" rel="noopener noreferrer"
@@ -1147,7 +1147,7 @@
         <div class="flex justify-between items-center p-6 border-b">
             <div class="flex items-center gap-2">
                 <a href="/" title="דף הבית">
-                    <img loading="lazy" src="images/new-logo.webp?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;" width="80" height="80">
+                    <img loading="lazy" width="300" height="200" src="images/new-logo.webp?v=2" alt="לוגו משרד עו״ד יניב גיל" style="height: 80px; width: auto;" width="80" height="80">
                 </a>
                 <a href="https://www.dunsguide.co.il/business?duns=532460057" target="_blank" rel="noopener" title="Duns & Bradstreet Gold Seal" style="transform: rotate(-12deg); display: inline-block;">
                     <img loading="lazy" src="images/duns_gold_v5.png" alt="Duns & Bradstreet Gold Seal" style="height: 55px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));" width="55" height="55">
@@ -1749,8 +1749,8 @@
     </script>
 <script src="js/nav-toggle.js?v=27" defer></script>
 <script src="js/scroll-arrow.js?v=27" defer></script>
-<script src="/js/site-search.js?v=20260321d" defer></script>
-    <script src="js/hero-reviews.js?v=20260321d" defer></script>
+<script src="/js/site-search.js?v=20260321f" defer></script>
+    <script src="js/hero-reviews.js?v=20260321f" defer></script>
 </body>
 
 </html>

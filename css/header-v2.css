@@ -368,7 +368,7 @@ header#site-header .container {
 #practice-dropdown > div > button,
 #practice-dropdown > div > button[onclick*="toggleCategoryDropdown"] {
     background: #2d2d2d !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     border: 1px solid #c9a55c !important;
     border-radius: 0.5rem !important;
     padding: 0.75rem 1rem !important;
@@ -382,23 +382,23 @@ header#site-header .container {
 
 #practice-dropdown > div > button h4,
 #practice-dropdown .category-icon {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* All links inside dropdown */
 #practice-dropdown a {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: transparent !important;
 }
 
 #practice-dropdown a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
 /* Featured link (★ המדריך המלא לגירושין) */
 #practice-dropdown a[href="divorce-guide.html"] {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     font-weight: 700 !important;
 }
 
@@ -408,11 +408,11 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item a {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 #practice-dropdown .pillar-item button {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: transparent !important;
 }
 
@@ -426,7 +426,7 @@ header#site-header .container {
 }
 
 #practice-dropdown .pillar-item div[id^="sub-"] a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* Hover state for pillar rows */
@@ -445,7 +445,7 @@ header#site-header .container {
 }
 
 #practice-dropdown > div > a h4 {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 #practice-dropdown > div > a:hover {
@@ -477,7 +477,7 @@ header#site-header .container {
     border-radius: 50%;
     border: 1px solid #c9a55c;
     background: #1a1a1a;
-    color: #8B6914;
+    color: #c9a55c;
     transition: all 0.3s;
     text-decoration: none;
 }
@@ -496,7 +496,7 @@ header#site-header .container {
         border-radius: 50%;
         border: 1px solid #c9a55c;
         background: #1a1a1a;
-        color: #8B6914;
+        color: #c9a55c;
         transition: all 0.3s;
         text-decoration: none;
     }

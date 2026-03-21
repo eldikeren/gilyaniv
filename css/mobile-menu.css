@@ -41,7 +41,7 @@
     width: 100% !important;
     padding: 0.875rem 1rem !important;
     background: transparent !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     border: none !important;
     border-bottom: 1px solid rgba(201, 165, 92, 0.3) !important;
     border-radius: 0 !important;
@@ -54,12 +54,12 @@
 
 .mobile-category-btn:hover {
     background: rgba(201, 165, 92, 0.15) !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* Chevron icon */
 .mobile-category-chevron {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     font-size: 1rem !important;
 }
 
@@ -77,21 +77,21 @@
 #mobile-practice-dropdown a.text-gray-300,
 #mobile-practice-dropdown a.text-gray-400,
 #mobile-practice-dropdown a {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: transparent !important;
 }
 
 /* Override yellow/gold featured links */
 .mobile-menu-overlay a.text-yellow-400,
 #mobile-practice-dropdown a.text-yellow-400 {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     font-weight: 600 !important;
 }
 
 /* Hover state for all links */
 .mobile-menu-overlay a:hover,
 #mobile-practice-dropdown a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
@@ -122,18 +122,18 @@
 }
 
 .mobile-pillar-group a {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: transparent !important;
 }
 
 .mobile-pillar-group a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* Sub-category expand button */
 .mobile-pillar-group button {
     background: transparent !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     border: none !important;
 }
 
@@ -152,7 +152,7 @@
 
 .mobile-pillar-group div[id^="mobile-sub-"] a:hover,
 #mobile-practice-dropdown div[id^="mobile-sub-"] a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
@@ -164,7 +164,7 @@
     display: block !important;
     padding: 1rem !important;
     background: transparent !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     text-decoration: none !important;
     border-radius: 0 !important;
     border-bottom: 1px solid rgba(201, 165, 92, 0.2) !important;
@@ -176,7 +176,7 @@
 .mobile-menu-overlay nav ul li a.mobile-menu-link:hover,
 .mobile-menu-overlay nav > ul > li > a:hover {
     background: rgba(201, 165, 92, 0.15) !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* ==========================================
@@ -185,7 +185,7 @@
 #mobile-category-family a,
 #mobile-category-inheritance a,
 #mobile-category-bankruptcy a {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: transparent !important;
     border-bottom: 1px solid rgba(201, 165, 92, 0.1) !important;
 }
@@ -193,14 +193,14 @@
 #mobile-category-family a:hover,
 #mobile-category-inheritance a:hover,
 #mobile-category-bankruptcy a:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     background: rgba(201, 165, 92, 0.15) !important;
 }
 
 /* Featured/pillar link (gold color) */
 #mobile-category-family a.text-yellow-400,
 #mobile-category-family a[href="divorce-guide.html"] {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     font-weight: 600 !important;
 }
 
@@ -234,14 +234,14 @@
 #mobile-practice-dropdown .mb-2 a,
 #mobile-practice-dropdown .mb-3 > a {
     background: transparent !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     font-weight: 600 !important;
 }
 
 #mobile-practice-dropdown .mb-2 a:hover,
 #mobile-practice-dropdown .mb-3 > a:hover {
     background: rgba(201, 165, 92, 0.15) !important;
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* ==========================================
@@ -249,12 +249,12 @@
    Fix: Override gray text color on pages that have wrong inline class
    ========================================== */
 #mobile-menu-button {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 #mobile-menu-button:hover,
 #mobile-menu-button:focus {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
     outline: none !important;
 }
 
@@ -286,12 +286,12 @@ header a[href^="tel:"],
 /* Close button - golden color */
 .mobile-menu-overlay #close-mobile-menu,
 .mobile-menu-overlay button[aria-label*="סגור"] {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 .mobile-menu-overlay #close-mobile-menu:hover,
 .mobile-menu-overlay button[aria-label*="סגור"]:hover {
-    color: #8B6914 !important;
+    color: #c9a55c !important;
 }
 
 /* Nav section dark bg */
