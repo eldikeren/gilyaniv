@@ -1,4 +1,6 @@
 (function() {
+if(document.querySelector("section.hero-reviews"))return;
+
   'use strict';
 
   var style = document.createElement('style');
