@@ -3895,7 +3895,7 @@ data read from the input file.
 output after its duration reaches <var class="var">duration</var>.
 </p>
 <p><var class="var">duration</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>-to and -t are mutually exclusive and -t has priority.
 </p>
@@ -3903,7 +3903,7 @@ see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax
 <dt><samp class="option">-to <var class="var">position</var> (<em class="emph">input/output</em>)</samp></dt>
 <dd><p>Stop writing the output or reading the input at <var class="var">position</var>.
 <var class="var">position</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>-to and -t are mutually exclusive and -t has priority.
 </p>
@@ -3927,7 +3927,7 @@ will be preserved.
 input until the timestamps reach <var class="var">position</var>.
 </p>
 <p><var class="var">position</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 </dd>
 <dt><samp class="option">-sseof <var class="var">position</var> (<em class="emph">input</em>)</samp></dt>
@@ -3956,7 +3956,7 @@ reference may not itself be synced to any other input.
 <dd><p>Set the input time offset.
 </p>
 <p><var class="var">offset</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>The offset is added to the timestamps of the input files. Specifying
 a positive offset means that the corresponding streams are delayed by
@@ -3971,7 +3971,7 @@ the time duration specified in <var class="var">offset</var>.
 <dd><p>Set the recording timestamp in the container.
 </p>
 <p><var class="var">date</var> must be a date specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#date-syntax">the Date section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#date-syntax">the Date section in the ffmpeg-utils(1) manual</a>.
 </p>
 </dd>
 <dt><samp class="option">-metadata[:metadata_specifier] <var class="var">key</var>=<var class="var">value</var> (<em class="emph">output,per-metadata</em>)</samp></dt>
@@ -4794,7 +4794,7 @@ as the input (or graph output) and automatic conversions are disabled.
 automatically inserted <code class="code">scale</code> filters and those within simple
 filtergraphs, if not overridden within the filtergraph definition.
 </p>
-<p>See the <a data-manual="ffmpeg-scaler" href="./ffmpeg-scaler.html#scaler_005foptions">ffmpeg-scaler manual</a> for a list
+<p>See the <a data-manual="ffmpeg-scaler" href="/./ffmpeg-scaler#scaler_005foptions">ffmpeg-scaler manual</a> for a list
 of scaler options.
 </p>
 </dd>
@@ -8994,7 +8994,7 @@ skips frame IDCT/dequantization, <samp class="option">skip_frame</samp> skips de
 <dt><samp class="option">compression_level <var class="var">integer</var> (<em class="emph">encoding,audio,video</em>)</samp></dt>
 <dt><samp class="option">bits_per_raw_sample <var class="var">integer</var></samp></dt>
 <dt><samp class="option">channel_layout <var class="var">integer</var> (<em class="emph">decoding/encoding,audio</em>)</samp></dt>
-<dd><p>See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
+<dd><p>See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
 for the required syntax.
 </p>
 </dd>
@@ -16485,7 +16485,7 @@ modify any of the remaining packets.
 <h3 class="section">18.26 pcm_rechunk<span class="pull-right"><a class="anchor hidden-xs" href="#pcm_005frechunk" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-pcm_005frechunk" aria-hidden="true">TOC</a></span></h3>
 
 <p>Repacketize PCM audio to a fixed number of samples per packet or a fixed packet
-rate per second. This is similar to the <a data-manual="ffmpeg-filters" href="./ffmpeg-filters.html#asetnsamples">asetnsamples audio
+rate per second. This is similar to the <a data-manual="ffmpeg-filters" href="/./ffmpeg-filters#asetnsamples">asetnsamples audio
 filter</a> but works on audio packets instead of audio frames.
 </p>
 <dl class="table">
@@ -17089,7 +17089,7 @@ some cases.
 <dd><p>Set the output time offset.
 </p>
 <p><var class="var">offset</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>The offset is added by the muxer to the output timestamps.
 </p>
@@ -17177,7 +17177,7 @@ match specific properties.
 <p>The exact semantics of stream specifiers is defined by the
 <code class="code">avformat_match_stream_specifier()</code> function declared in the
 <samp class="file">libavformat/avformat.h</samp> header and documented in the
-<a data-manual="ffmpeg" href="./ffmpeg.html#Stream-specifiers">Stream specifiers section in the ffmpeg(1) manual</a>.
+<a data-manual="ffmpeg" href="/./ffmpeg#Stream-specifiers">Stream specifiers section in the ffmpeg(1) manual</a>.
 </p>
 <a name="Demuxers"></a>
 <h2 class="chapter">20 Demuxers<span class="pull-right"><a class="anchor hidden-xs" href="#Demuxers" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Demuxers" aria-hidden="true">TOC</a></span></h2>
@@ -18383,7 +18383,7 @@ the command:
 
 <p>RCWT (Raw Captions With Time) is a format native to ccextractor, a commonly
 used open source tool for processing 608/708 Closed Captions (CC) sources.
-For more information on the format, see <a data-manual="ffmpeg-formats" href="./ffmpeg-formats.html#rcwtenc">(ffmpeg-formats)rcwtenc</a>.
+For more information on the format, see <a data-manual="ffmpeg-formats" href="/./ffmpeg-formats#rcwtenc">(ffmpeg-formats)rcwtenc</a>.
 </p>
 <p>This demuxer implements the specification as of March 2024, which has
 been stable and unchanged since April 2014.
@@ -19607,7 +19607,7 @@ index space is guessed.
 <p>This option is enabled by default. Disabling the channel mask can be useful in
 specific scenarios, e.g. when merging multiple audio streams into one for
 compatibility with software that only supports a single audio stream in AVI
-(see <a data-manual="ffmpeg-filters" href="./ffmpeg-filters.html#amerge">the &quot;amerge&quot; section in the ffmpeg-filters manual</a>).
+(see <a data-manual="ffmpeg-filters" href="/./ffmpeg-filters#amerge">the &quot;amerge&quot; section in the ffmpeg-filters manual</a>).
 </p></dd>
 </dl>
 
@@ -20189,7 +20189,7 @@ profile, and on the framerate.
 <p>This muxer writes the streams metadata in the &lsquo;<samp class="samp">ffmetadata</samp>&rsquo;
 format.
 </p>
-<p>See <a data-manual="ffmpeg-formats" href="./ffmpeg-formats.html#metadata">the Metadata chapter</a> for
+<p>See <a data-manual="ffmpeg-formats" href="/./ffmpeg-formats#metadata">the Metadata chapter</a> for
 information about the format.
 </p>
 <a name="Example-3"></a>
@@ -20709,7 +20709,7 @@ segmentation.
 <dd><p>Set the initial target segment length. Default value is <var class="var">0</var>.
 </p>
 <p><var class="var">duration</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>Segment will be cut on the next key frame after this time has passed on the
 first m3u8 list. After the initial playlist is filled, <code class="command">ffmpeg</code> will cut
@@ -20720,7 +20720,7 @@ segments at duration equal to <samp class="option">hls_time</samp>.
 <dd><p>Set the target segment length. Default value is 2.
 </p>
 <p><var class="var">duration</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 Segment will be cut on the next key frame after this time has passed.
 </p>
 </dd>
@@ -22662,7 +22662,7 @@ The main example is the <samp class="option">global_header</samp> flag.
 <p>The slave outputs are specified in the file name given to the muxer,
 separated by &rsquo;|&rsquo;. If any of the slave name contains the &rsquo;|&rsquo; separator,
 leading or trailing spaces or any special character, those must be
-escaped (see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
+escaped (see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
 section in the ffmpeg-utils(1) manual</a>).
 </p>
 <a name="Options-88"></a>
@@ -23276,7 +23276,7 @@ a unique resource.
 <p>where <var class="var">URL</var> is the url containing a line break delimited list of
 resources to be concatenated, each one possibly specifying a distinct
 protocol. Special characters must be escaped with backslash or single
-quotes. See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
+quotes. See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
 section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>For example to read a sequence of files <samp class="file">split1.mpeg</samp>,
@@ -27786,7 +27786,7 @@ This will automatically be chosen when it is not explicitly set.
 <dt><samp class="option">ochl, out_chlayout</samp></dt>
 <dd><p>Set the input/output channel layout.
 </p>
-<p>See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
+<p>See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
 for the required syntax.
 </p>
 </dd>
@@ -28456,7 +28456,7 @@ to the filtergraph description.
 <h3 class="section">32.2 Notes on filtergraph escaping<span class="pull-right"><a class="anchor hidden-xs" href="#Notes-on-filtergraph-escaping" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Notes-on-filtergraph-escaping" aria-hidden="true">TOC</a></span></h3>
 
 <p>Filtergraph description composition entails several levels of
-escaping. See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
+escaping. See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
 section in the ffmpeg-utils(1) manual</a> for more
 information about the employed escaping procedure.
 </p>
@@ -28831,7 +28831,7 @@ silent. Default is 44100.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Specify the duration of the cross fade effect. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 By default the duration is determined by <var class="var">nb_samples</var>.
 If set this option is used instead of <var class="var">nb_samples</var>.
@@ -29843,14 +29843,14 @@ the output audio will be silence. Default is 44100.
 <dt><samp class="option">start_time, st</samp></dt>
 <dd><p>Specify the start time of the fade effect. Default is 0.
 The value must be specified as a time duration; see
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 If set this option is used instead of <var class="var">start_sample</var>.
 </p>
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Specify the duration of the fade effect. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 At the end of the fade-in effect the output audio will have the same
 volume as the input audio, at the end of the fade-out transition
@@ -30451,7 +30451,7 @@ negotiate the most appropriate format to minimize conversions.
 <dt><samp class="option">channel_layouts, cl</samp></dt>
 <dd><p>A &rsquo;|&rsquo;-separated list of requested channel layouts.
 </p>
-<p>See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
+<p>See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
 for the required syntax.
 </p></dd>
 </dl>
@@ -31433,13 +31433,13 @@ with <samp class="option">pad_len</samp>.
 </dd>
 <dt><samp class="option">pad_dur</samp></dt>
 <dd><p>Specify the duration of samples of silence to add. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax. Used only if set to non-negative value.
 </p>
 </dd>
 <dt><samp class="option">whole_dur</samp></dt>
 <dd><p>Specify the minimum total duration in the output audio stream. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax. Used only if set to non-negative value. If the value is longer than
 the input audio length, silence is added to the end, until the value is reached.
 This option is mutually exclusive with <samp class="option">pad_dur</samp>
@@ -31683,7 +31683,7 @@ timestamps, do a combination of both or do neither.
 [<var class="var">sample_rate</var>:]<var class="var">resampler_options</var>, where <var class="var">sample_rate</var>
 expresses a sample rate and <var class="var">resampler_options</var> is a list of
 <var class="var">key</var>=<var class="var">value</var> pairs, separated by &quot;:&quot;. See the
-<a data-manual="ffmpeg-resampler" href="./ffmpeg-resampler.html#Resampler-Options">&quot;Resampler Options&quot; section in the
+<a data-manual="ffmpeg-resampler" href="/./ffmpeg-resampler#Resampler-Options">&quot;Resampler Options&quot; section in the
 ffmpeg-resampler(1) manual</a>
 for the complete list of supported options.
 </p>
@@ -32606,7 +32606,7 @@ of seconds.
 
 <p><samp class="option">start</samp>, <samp class="option">end</samp>, and <samp class="option">duration</samp> are expressed as time
 duration specifications; see
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>Note that the first two sets of the start/end options and the <samp class="option">duration</samp>
 option look at the frame timestamp, while the _sample options simply count the
@@ -34806,7 +34806,7 @@ is 1024. Only used if plugin have zero inputs.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the minimum duration of the sourced audio. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 Note that the resulting duration may be greater than the specified duration,
 as the generated audio is always cut at the end of a complete frame.
@@ -35156,7 +35156,7 @@ is 1024. Only used if plugin have zero inputs.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the minimum duration of the sourced audio. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 Note that the resulting duration may be greater than the specified duration,
 as the generated audio is always cut at the end of a complete frame.
@@ -35654,7 +35654,7 @@ specified value) or amplitude ratio. Default is -60dB, or 0.001.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set silence duration until notification (default is 2 seconds). See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 </dd>
@@ -36370,14 +36370,14 @@ channels. Default is 0.3.
 <dt><samp class="option">chl_out</samp></dt>
 <dd><p>Set output channel layout. By default, this is <var class="var">5.1</var>.
 </p>
-<p>See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
+<p>See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
 for the required syntax.
 </p>
 </dd>
 <dt><samp class="option">chl_in</samp></dt>
 <dd><p>Set input channel layout. By default, this is <var class="var">stereo</var>.
 </p>
-<p>See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
+<p>See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#channel-layout-syntax">the Channel Layout section in the ffmpeg-utils(1) manual</a>
 for the required syntax.
 </p>
 </dd>
@@ -37301,7 +37301,7 @@ must be equal to the number of specified expressions.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the minimum duration of the sourced audio. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 Note that the resulting duration may be greater than the specified
 duration, as the generated audio is always cut at the end of a
@@ -37561,7 +37561,7 @@ channel layout values.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced audio. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the audio is
@@ -39618,7 +39618,7 @@ the similarity radius depends on the value of the blend option.
 <dl class="table">
 <dt><samp class="option">color</samp></dt>
 <dd><p>Set the color for which alpha will be set to 0 (full transparency).
-See <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+See <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 Default is <code class="code">black</code>.
 </p>
 </dd>
@@ -42100,7 +42100,7 @@ the input width and height. It defaults to 0.
 </dd>
 <dt><samp class="option">color, c</samp></dt>
 <dd><p>Specify the color of the box to write. For the general syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>. If the special
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>. If the special
 value <code class="code">invert</code> is used, the box edge color is the same as the
 video with inverted luma.
 </p>
@@ -42303,7 +42303,7 @@ value.
 </dd>
 <dt><samp class="option">size</samp></dt>
 <dd><p>Set size of graph video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 The default value is <code class="code">900x256</code>.
 </p>
 </dd>
@@ -42361,7 +42361,7 @@ framed. Default to 0.
 </dd>
 <dt><samp class="option">color, c</samp></dt>
 <dd><p>Specify the color of the grid. For the general syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>. If the special
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>. If the special
 value <code class="code">invert</code> is used, the grid color is the same as the
 video with inverted luma.
 </p>
@@ -42486,7 +42486,7 @@ The value must be specified using one of the following formats:
 </dd>
 <dt><samp class="option">boxcolor</samp></dt>
 <dd><p>The color to be used for drawing box around text. For the syntax of this
-option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 </p>
 <p>The default value of <var class="var">boxcolor</var> is &quot;white&quot;.
 </p>
@@ -42520,7 +42520,7 @@ The default value of <var class="var">borderw</var> is 0.
 </dd>
 <dt><samp class="option">bordercolor</samp></dt>
 <dd><p>Set the color to be used for drawing border around text. For the syntax of this
-option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 </p>
 <p>The default value of <var class="var">bordercolor</var> is &quot;black&quot;.
 </p>
@@ -42544,7 +42544,7 @@ as the second argument.
 </dd>
 <dt><samp class="option">fontcolor</samp></dt>
 <dd><p>The color to be used for drawing fonts. For the syntax of this option, check
-the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 </p>
 <p>The default value of <var class="var">fontcolor</var> is &quot;black&quot;.
 </p>
@@ -42615,7 +42615,7 @@ libfreetype flags.
 </dd>
 <dt><samp class="option">shadowcolor</samp></dt>
 <dd><p>The color to be used for drawing a shadow behind the drawn text. For the
-syntax of this option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the
+syntax of this option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the
 ffmpeg-utils manual</a>.
 </p>
 <p>The default value of <var class="var">shadowcolor</var> is &quot;black&quot;.
@@ -44882,7 +44882,7 @@ Otherwise, the standard frei0r paths are searched, in this order:
 &quot;y&quot; or &quot;n&quot;), a double, a color (specified as
 <var class="var">R</var>/<var class="var">G</var>/<var class="var">B</var>, where <var class="var">R</var>, <var class="var">G</var>, and <var class="var">B</var> are floating point
 numbers between 0.0 and 1.0, inclusive) or a color description as specified in the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>,
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>,
 a position (specified as <var class="var">X</var>/<var class="var">Y</var>, where
 <var class="var">X</var> and <var class="var">Y</var> are floating point numbers) and/or a string.
 </p>
@@ -46686,7 +46686,7 @@ Default is <code class="code">nearest</code>.
 </p></dd>
 <dt><samp class="option">fc</samp></dt>
 <dd><p>Specify the color of the unmapped pixels. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>. Default color is <code class="code">black@0</code>.
 </p></dd>
 </dl>
@@ -46976,7 +46976,7 @@ approaches.
 <dt><samp class="option">fillcolor</samp></dt>
 <dd><p>Set the color used to fill the output area not covered by the output image, for
 example as a result of <samp class="option">normalize_sar</samp>. For the general syntax of this
-option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>. Defaults to <code class="code">black@0</code>.
 </p>
 </dd>
@@ -49990,7 +49990,7 @@ so the input image is centered on the padded area.
 </dd>
 <dt><samp class="option">color</samp></dt>
 <dd><p>Specify the color of the padded area. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>.
 </p>
 <p>The default value of <var class="var">color</var> is &quot;black&quot;.
@@ -51063,7 +51063,7 @@ Text expansion</a> section below for details.
 <var class="var">foreground_color</var> is &quot;black&quot;, the default value of <var class="var">background_color</var>
 is &quot;white&quot;.
 </p>
-<p>For the syntax of the color options, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot;
+<p>For the syntax of the color options, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot;
 section in the ffmpeg-utils manual</a>.
 </p></dd>
 </dl>
@@ -51468,7 +51468,7 @@ Default is <code class="code">color</code>.
 </dd>
 <dt><samp class="option">fill</samp></dt>
 <dd><p>Specify the color of the unmapped pixels. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>. Default color is <code class="code">black</code>.
 </p></dd>
 </dl>
@@ -51764,7 +51764,7 @@ it. Default value is 1.
 <dt><samp class="option">fillcolor, c</samp></dt>
 <dd><p>Set the color used to fill the output area not covered by the rotated
 image. For the general syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 If the special value &quot;none&quot; is selected then no
 background is printed (useful for example if the background is never shown).
 </p>
@@ -51931,7 +51931,7 @@ requested format.
 <p>The filter accepts the following options, any of the options supported
 by the libswscale scaler, as well as any of the <a class="ref" href="#framesync">framesync</a> options.
 </p>
-<p>See <a data-manual="ffmpeg-scaler" href="./ffmpeg-scaler.html#scaler_005foptions">the ffmpeg-scaler manual</a> for
+<p>See <a data-manual="ffmpeg-scaler" href="/./ffmpeg-scaler#scaler_005foptions">the ffmpeg-scaler manual</a> for
 the complete list of scaler options.
 </p>
 <dl class="table">
@@ -51998,7 +51998,7 @@ are flagged as interlaced or not.
 </dd>
 <dt><samp class="option">flags</samp></dt>
 <dd><p>Set libswscale scaling flags. See
-<a data-manual="ffmpeg-scaler" href="./ffmpeg-scaler.html#sws_005fflags">the ffmpeg-scaler manual</a> for the
+<a data-manual="ffmpeg-scaler" href="/./ffmpeg-scaler#sws_005fflags">the ffmpeg-scaler manual</a> for the
 complete list of values. If not explicitly specified the filter applies
 the default flags.
 </p>
@@ -52006,7 +52006,7 @@ the default flags.
 </dd>
 <dt><samp class="option">param0, param1</samp></dt>
 <dd><p>Set libswscale input parameters for scaling algorithms that need them. See
-<a data-manual="ffmpeg-scaler" href="./ffmpeg-scaler.html#sws_005fparams">the ffmpeg-scaler manual</a> for the
+<a data-manual="ffmpeg-scaler" href="/./ffmpeg-scaler#sws_005fparams">the ffmpeg-scaler manual</a> for the
 complete documentation. If not explicitly specified the filter applies
 empty parameters.
 </p>
@@ -52051,7 +52051,7 @@ account the mastering display primaries and any differences in encoding TRC.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the video size. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">in_color_matrix</samp></dt>
@@ -52993,7 +52993,7 @@ Allowed range is from -2 to 2.
 <dt><samp class="option">fillcolor, c</samp></dt>
 <dd><p>Set the color used to fill the output area not covered by the transformed
 video. For the general syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 If the special value &quot;none&quot; is selected then no
 background is printed (useful for example if the background is never shown).
 </p>
@@ -53060,7 +53060,7 @@ seconds.
 </dd>
 <dt><samp class="option">s</samp></dt>
 <dd><p>The size of the input frame. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">i</samp></dt>
@@ -54255,7 +54255,7 @@ Alpha) subtitles format.
 <dt><samp class="option">original_size</samp></dt>
 <dd><p>Specify the size of the original video, the video for which the ASS file
 was composed. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Due to a misdesign in ASS aspect ratio arithmetic, this is necessary to
 correctly scale the fonts if the aspect ratio has been changed.
 </p>
@@ -54683,7 +54683,7 @@ refer to the pad video filter. Range is 0 to 1024. Default is <code class="code"
 </dd>
 <dt><samp class="option">color</samp></dt>
 <dd><p>Specify the color of the unused area. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 The default value of <var class="var">color</var> is &quot;black&quot;.
 </p>
 </dd>
@@ -55320,14 +55320,14 @@ Default is <var class="var">add</var>.
 </dd>
 <dt><samp class="option">start_duration, stop_duration</samp></dt>
 <dd><p>Specify the duration of the start/stop delay. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 These options override <var class="var">start</var> and <var class="var">stop</var>. Default is 0.
 </p>
 </dd>
 <dt><samp class="option">color</samp></dt>
 <dd><p>Specify the color of the padded area. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>.
 </p>
 <p>The default value of <var class="var">color</var> is &quot;black&quot;.
@@ -55464,7 +55464,7 @@ in timebase units instead of seconds.
 
 <p><samp class="option">start</samp>, <samp class="option">end</samp>, and <samp class="option">duration</samp> are expressed as time
 duration specifications; see
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>Note that the first two sets of the start/end options and the <samp class="option">duration</samp>
@@ -55625,7 +55625,7 @@ multiplied by the number of tiles.
 <dt><samp class="option">layout</samp></dt>
 <dd><p>Set the grid size (i.e. the number of lines and columns). For the syntax of
 this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p></dd>
 </dl>
 
@@ -58201,7 +58201,7 @@ expression.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the video size. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">dither, d</samp></dt>
@@ -59836,7 +59836,7 @@ so the input image is centered on the padded area.
 </dd>
 <dt><samp class="option">color</samp></dt>
 <dd><p>Specify the color of the padded area. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>.
 </p>
 </dd>
@@ -60067,7 +60067,7 @@ Default value is <code class="code">linear</code>.
 </dd>
 <dt><samp class="option">fill</samp></dt>
 <dd><p>Specify the color of the unmapped pixels. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>. Default color is <code class="code">black</code>.
 </p></dd>
 </dl>
@@ -60660,7 +60660,7 @@ Moreover, this permits the user to supply output size for each input stream.
 <dd><p>Set output size for each input stream when <samp class="option">grid</samp> is set. If this option
 is not set, this filter will set output size by default to the size of the
 first input stream. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">fill</samp></dt>
@@ -60705,7 +60705,7 @@ so the input image is centered on the padded area.
 </dd>
 <dt><samp class="option">color</samp></dt>
 <dd><p>Specify the color of the padded area. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils
 manual</a>.
 </p>
 </dd>
@@ -60779,7 +60779,7 @@ the input width and height. It defaults to 0.
 </dd>
 <dt><samp class="option">color, c</samp></dt>
 <dd><p>Specify the color of the box to write. For the general syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">thickness, t</samp></dt>
@@ -61408,7 +61408,7 @@ Moreover, this permits the user to supply output size for each input stream.
 <dd><p>Set output size for each input stream when <samp class="option">grid</samp> is set. If this option
 is not set, this filter will set output size by default to the size of the
 first input stream. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">fill</samp></dt>
@@ -61436,7 +61436,7 @@ through the interface defined in <samp class="file">libavfilter/buffersrc.h</sam
 <dt><samp class="option">video_size</samp></dt>
 <dd><p>Specify the size (width and height) of the buffered video frames. For the
 syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">width</samp></dt>
@@ -61563,7 +61563,7 @@ Default value is 110.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the size of the output video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 <p>If <samp class="option">filename</samp> or <samp class="option">pattern</samp> is specified, the size is set
 by default to the width of the specified initial state row, and the
@@ -61645,7 +61645,7 @@ possible minimum and maximum values along with the default values.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the size of the sourced video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 The default value is <code class="code">320x240</code>.
 </p>
 </dd>
@@ -61663,7 +61663,7 @@ number or a valid video frame rate abbreviation. The default value is
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced video. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the video is
@@ -61805,7 +61805,7 @@ by specifying a smaller size and its offsets into the screen:
 </p>
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
-<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video
+<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video
 size&quot; section in the ffmpeg-utils manual</a>. Default value is &quot;640x480&quot;.
 </p>
 </dd>
@@ -61833,7 +61833,7 @@ are picked.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced video. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the video is
@@ -61934,7 +61934,7 @@ value is &quot;25&quot;.
 </p>
 </dd>
 <dt><samp class="option">size, s</samp></dt>
-<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video
+<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video
 size&quot; section in the ffmpeg-utils manual</a>. Default value is &quot;640x480&quot;.
 </p>
 </dd>
@@ -61974,7 +61974,7 @@ number or a valid video frame rate abbreviation. The default value is
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced video. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the video is
@@ -62026,7 +62026,7 @@ header and configure FFmpeg with <code class="code">--enable-frei0r</code>.
 <dl class="table">
 <dt><samp class="option">size</samp></dt>
 <dd><p>The size of the video to generate. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">framerate</samp></dt>
@@ -62125,7 +62125,7 @@ a dead cell.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the size of the output video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 </p>
 <p>If <samp class="option">filename</samp> is specified, the size is set by default to the
 same size of the input file. If <samp class="option">size</samp> is set, it must contain
@@ -62159,7 +62159,7 @@ used to represent a dead cell.
 <dt><samp class="option">mold_color</samp></dt>
 <dd><p>Set mold color, for definitely dead and moldy cells.
 </p>
-<p>For the syntax of these 3 color options, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the
+<p>For the syntax of these 3 color options, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the
 ffmpeg-utils manual</a>.
 </p></dd>
 </dl>
@@ -62212,7 +62212,7 @@ due to boulders in a generated terrain).
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the size (width and height) of the buffered video frames. For the
 syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">320x240</code>.
 </p>
 </dd>
@@ -62384,7 +62384,7 @@ Text expansion</a> section for details.
 <var class="var">foreground_color</var> is &quot;black&quot;, the default value of <var class="var">background_color</var>
 is &quot;white&quot;.
 </p>
-<p>For the syntax of the color options, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot;
+<p>For the syntax of the color options, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot;
 section in the ffmpeg-utils manual</a>.
 </p></dd>
 </dl>
@@ -62492,12 +62492,12 @@ coded on a <code class="code">1/(N*N)</code> scale.
 <dt><samp class="option">color, c</samp></dt>
 <dd><p>Specify the color of the source, only available in the <code class="code">color</code>
 source. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#color-syntax">&quot;Color&quot; section in the ffmpeg-utils manual</a>.
 </p>
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the size of the sourced video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 The default value is <code class="code">320x240</code>.
 </p>
 <p>This option is not available with the <code class="code">allrgb</code>, <code class="code">allyuv</code>, and
@@ -62514,7 +62514,7 @@ number or a valid video frame rate abbreviation. The default value is
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced video. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the video is
@@ -62691,7 +62691,7 @@ the generated output will not be the same.)
 </p>
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
-<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video
+<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video
 size&quot; section in the ffmpeg-utils manual</a>. Default value is &quot;640x480&quot;.
 </p>
 </dd>
@@ -62721,7 +62721,7 @@ value is &quot;25&quot;.
 </p>
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
-<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video
+<dd><p>Set frame size. For the syntax of this option, check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video
 size&quot; section in the ffmpeg-utils manual</a>. Default value is &quot;320x240&quot;.
 </p>
 </dd>
@@ -62732,7 +62732,7 @@ value is &quot;25&quot;.
 </dd>
 <dt><samp class="option">duration, d</samp></dt>
 <dd><p>Set the duration of the sourced video. See
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>
 for the accepted syntax.
 </p>
 <p>If not specified, or the expressed duration is negative, the video is
@@ -62877,7 +62877,7 @@ value is &quot;25&quot;.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">hd720</code>.
 </p>
 </dd>
@@ -62947,7 +62947,7 @@ value is &quot;25&quot;.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">1024x256</code>.
 </p>
 </dd>
@@ -63003,7 +63003,7 @@ value is &quot;25&quot;.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">hd720</code>.
 </p>
 </dd>
@@ -63106,7 +63106,7 @@ and <code class="code">1</code> means channels are in phase.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">800x400</code>.
 </p>
 </dd>
@@ -63205,7 +63205,7 @@ indicates that the left and right channels are out of phase.
 </dd>
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Set the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">400x400</code>.
 </p>
 </dd>
@@ -63494,7 +63494,7 @@ activated. Default is <code class="code">0</code>.
 <dt><samp class="option">size</samp></dt>
 <dd><p>Set the video size. This option is for video only. For the syntax of this
 option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default and minimum resolution is <code class="code">640x480</code>.
 </p>
 </dd>
@@ -64654,7 +64654,7 @@ with musical tone scale, from E0 to D#10.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. It must be even. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">1920x1080</code>.
 </p>
 </dd>
@@ -64976,7 +64976,7 @@ using Continuous Wavelet Transform and Morlet wavelet.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option,
-check the <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+check the <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">640x512</code>.
 </p>
 </dd>
@@ -65130,7 +65130,7 @@ Audio amplitude is on Y-axis while frequency is on X-axis.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify size of video. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default is <code class="code">1024x512</code>.
 </p>
 </dd>
@@ -65290,7 +65290,7 @@ between two channels.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">512x512</code>.
 </p>
 </dd>
@@ -65346,7 +65346,7 @@ spectrum.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">640x512</code>.
 </p>
 </dd>
@@ -65616,7 +65616,7 @@ spectrum.
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">4096x2048</code>.
 </p>
 </dd>
@@ -65926,7 +65926,7 @@ default is: <code class="code">orange</code>
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">600x240</code>.
 </p>
 </dd>
@@ -66045,7 +66045,7 @@ frame rate of 30 frames per second:
 <dl class="table">
 <dt><samp class="option">size, s</samp></dt>
 <dd><p>Specify the video size for the output. For the syntax of this option, check the
-<a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
+<a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#video-size-syntax">&quot;Video size&quot; section in the ffmpeg-utils manual</a>.
 Default value is <code class="code">600x240</code>.
 </p>
 </dd>
@@ -66450,7 +66450,7 @@ postfix. The default value is &quot;0&quot;.
 <dt><samp class="option">streams, s</samp></dt>
 <dd><p>Specifies the streams to read. Several streams can be specified,
 separated by &quot;+&quot;. The source will then have as many outputs, in the
-same order. The syntax is explained in the <a data-manual="ffmpeg" href="./ffmpeg.html#Stream-specifiers">&quot;Stream specifiers&quot;
+same order. The syntax is explained in the <a data-manual="ffmpeg" href="/./ffmpeg#Stream-specifiers">&quot;Stream specifiers&quot;
 section in the ffmpeg manual</a>. Two special names, &quot;dv&quot; and &quot;da&quot; specify
 respectively the default (best suited) video and audio stream. Default
 is &quot;dv&quot;, or &quot;da&quot; if the filter is called as &quot;amovie&quot;.
@@ -67866,17 +67866,17 @@ performance on systems without hardware floating point support).
 <a name="See-Also"></a>
 <h2 class="chapter">51 See Also<span class="pull-right"><a class="anchor hidden-xs" href="#See-Also" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-See-Also" aria-hidden="true">TOC</a></span></h2>
 
-<p><a class="url" href="ffmpeg.html">ffmpeg</a>
-<a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
-<a class="url" href="ffmpeg-utils.html">ffmpeg-utils</a>,
-<a class="url" href="ffmpeg-scaler.html">ffmpeg-scaler</a>,
-<a class="url" href="ffmpeg-resampler.html">ffmpeg-resampler</a>,
-<a class="url" href="ffmpeg-codecs.html">ffmpeg-codecs</a>,
-<a class="url" href="ffmpeg-bitstream-filters.html">ffmpeg-bitstream-filters</a>,
-<a class="url" href="ffmpeg-formats.html">ffmpeg-formats</a>,
-<a class="url" href="ffmpeg-devices.html">ffmpeg-devices</a>,
-<a class="url" href="ffmpeg-protocols.html">ffmpeg-protocols</a>,
-<a class="url" href="ffmpeg-filters.html">ffmpeg-filters</a>
+<p><a class="url" href="/ffmpeg">ffmpeg</a>
+<a class="url" href="/ffplay">ffplay</a>, <a class="url" href="/ffprobe">ffprobe</a>,
+<a class="url" href="/ffmpeg-utils">ffmpeg-utils</a>,
+<a class="url" href="/ffmpeg-scaler">ffmpeg-scaler</a>,
+<a class="url" href="/ffmpeg-resampler">ffmpeg-resampler</a>,
+<a class="url" href="/ffmpeg-codecs">ffmpeg-codecs</a>,
+<a class="url" href="/ffmpeg-bitstream-filters">ffmpeg-bitstream-filters</a>,
+<a class="url" href="/ffmpeg-formats">ffmpeg-formats</a>,
+<a class="url" href="/ffmpeg-devices">ffmpeg-devices</a>,
+<a class="url" href="/ffmpeg-protocols">ffmpeg-protocols</a>,
+<a class="url" href="/ffmpeg-filters">ffmpeg-filters</a>
 </p>
 
 <a name="Authors"></a>

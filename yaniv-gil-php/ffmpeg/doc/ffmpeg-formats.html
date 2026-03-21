@@ -582,7 +582,7 @@ some cases.
 <dd><p>Set the output time offset.
 </p>
 <p><var class="var">offset</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>The offset is added by the muxer to the output timestamps.
 </p>
@@ -670,7 +670,7 @@ match specific properties.
 <p>The exact semantics of stream specifiers is defined by the
 <code class="code">avformat_match_stream_specifier()</code> function declared in the
 <samp class="file">libavformat/avformat.h</samp> header and documented in the
-<a data-manual="ffmpeg" href="./ffmpeg.html#Stream-specifiers">Stream specifiers section in the ffmpeg(1) manual</a>.
+<a data-manual="ffmpeg" href="/./ffmpeg#Stream-specifiers">Stream specifiers section in the ffmpeg(1) manual</a>.
 </p>
 <a name="Demuxers"></a>
 <h2 class="chapter">3 Demuxers<span class="pull-right"><a class="anchor hidden-xs" href="#Demuxers" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Demuxers" aria-hidden="true">TOC</a></span></h2>
@@ -1876,7 +1876,7 @@ the command:
 
 <p>RCWT (Raw Captions With Time) is a format native to ccextractor, a commonly
 used open source tool for processing 608/708 Closed Captions (CC) sources.
-For more information on the format, see <a data-manual="ffmpeg-formats" href="./ffmpeg-formats.html#rcwtenc">(ffmpeg-formats)rcwtenc</a>.
+For more information on the format, see <a data-manual="ffmpeg-formats" href="/./ffmpeg-formats#rcwtenc">(ffmpeg-formats)rcwtenc</a>.
 </p>
 <p>This demuxer implements the specification as of March 2024, which has
 been stable and unchanged since April 2014.
@@ -3100,7 +3100,7 @@ index space is guessed.
 <p>This option is enabled by default. Disabling the channel mask can be useful in
 specific scenarios, e.g. when merging multiple audio streams into one for
 compatibility with software that only supports a single audio stream in AVI
-(see <a data-manual="ffmpeg-filters" href="./ffmpeg-filters.html#amerge">the &quot;amerge&quot; section in the ffmpeg-filters manual</a>).
+(see <a data-manual="ffmpeg-filters" href="/./ffmpeg-filters#amerge">the &quot;amerge&quot; section in the ffmpeg-filters manual</a>).
 </p></dd>
 </dl>
 
@@ -3682,7 +3682,7 @@ profile, and on the framerate.
 <p>This muxer writes the streams metadata in the &lsquo;<samp class="samp">ffmetadata</samp>&rsquo;
 format.
 </p>
-<p>See <a data-manual="ffmpeg-formats" href="./ffmpeg-formats.html#metadata">the Metadata chapter</a> for
+<p>See <a data-manual="ffmpeg-formats" href="/./ffmpeg-formats#metadata">the Metadata chapter</a> for
 information about the format.
 </p>
 <a name="Example-3"></a>
@@ -4202,7 +4202,7 @@ segmentation.
 <dd><p>Set the initial target segment length. Default value is <var class="var">0</var>.
 </p>
 <p><var class="var">duration</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 </p>
 <p>Segment will be cut on the next key frame after this time has passed on the
 first m3u8 list. After the initial playlist is filled, <code class="command">ffmpeg</code> will cut
@@ -4213,7 +4213,7 @@ segments at duration equal to <samp class="option">hls_time</samp>.
 <dd><p>Set the target segment length. Default value is 2.
 </p>
 <p><var class="var">duration</var> must be a time duration specification,
-see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
+see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#time-duration-syntax">the Time duration section in the ffmpeg-utils(1) manual</a>.
 Segment will be cut on the next key frame after this time has passed.
 </p>
 </dd>
@@ -6155,7 +6155,7 @@ The main example is the <samp class="option">global_header</samp> flag.
 <p>The slave outputs are specified in the file name given to the muxer,
 separated by &rsquo;|&rsquo;. If any of the slave name contains the &rsquo;|&rsquo; separator,
 leading or trailing spaces or any special character, those must be
-escaped (see <a data-manual="ffmpeg-utils" href="./ffmpeg-utils.html#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
+escaped (see <a data-manual="ffmpeg-utils" href="/./ffmpeg-utils#quoting_005fand_005fescaping">the &quot;Quoting and escaping&quot;
 section in the ffmpeg-utils(1) manual</a>).
 </p>
 <a name="Options-33"></a>
@@ -6525,8 +6525,8 @@ be done as:
 <a name="See-Also"></a>
 <h2 class="chapter">6 See Also<span class="pull-right"><a class="anchor hidden-xs" href="#See-Also" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-See-Also" aria-hidden="true">TOC</a></span></h2>
 
-<p><a class="url" href="ffmpeg.html">ffmpeg</a>, <a class="url" href="ffplay.html">ffplay</a>, <a class="url" href="ffprobe.html">ffprobe</a>,
-<a class="url" href="libavformat.html">libavformat</a>
+<p><a class="url" href="/ffmpeg">ffmpeg</a>, <a class="url" href="/ffplay">ffplay</a>, <a class="url" href="/ffprobe">ffprobe</a>,
+<a class="url" href="/libavformat">libavformat</a>
 </p>
 
 <a name="Authors"></a>
