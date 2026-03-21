@@ -19,6 +19,7 @@
         gtag('config', 'AW-17958262413');
     </script>
     <meta charset="UTF-8">
+    <link rel="preload" as="image" href="images/hero-poster-mobile.webp" fetchpriority="high">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>עורך דין גירושין ודיני משפחה בתל אביב | עו"ד יניב גיל</title>
     <meta name="description"
@@ -368,7 +369,7 @@
     }
     </script>
     <!-- Preload critical resources -->
-    <link rel="preload" as="image" imagesrcset="images/hero-poster-mobile.webp 480w, images/hero-poster.webp 1920w" imagesizes="100vw" fetchpriority="high">
+    
     <!-- Tailwind CSS Production Build -->
     <link rel="preload" as="image" href="images/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="css/tailwind-home.css?v=20260321m">
@@ -727,7 +728,7 @@
         <section
             class="relative h-80vh flex items-start justify-center text-white text-center pt-16"
             style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <picture class="absolute inset-0 w-full h-full"><source media="(max-width:768px)" srcset="images/hero-poster-mobile.webp" width="480" height="270"><img src="images/hero-poster.webp" srcset="images/hero-poster-mobile.webp 480w, images/hero-poster.webp 1920w" sizes="100vw" alt="" class="w-full h-full object-cover" width="1920" height="1080" fetchpriority="high" decoding="async"></picture>
+            <picture class="absolute inset-0 w-full h-full"><source media="(max-width:768px)" srcset="images/hero-poster-mobile.webp" width="480" height="270"><img src="images/hero-poster-mobile.webp" srcset="images/hero-poster-mobile.webp 480w, images/hero-poster.webp 1920w" sizes="100vw" alt="" class="w-full h-full object-cover" width="1920" height="1080" fetchpriority="high" decoding="sync"></picture>
     <video fetchpriority="high" muted loop playsinline
                 width="1920" height="1080" class="absolute inset-0 w-full h-full object-cover" preload="none">
                 <source data-src="images/index-compressed.mp4" type="video/mp4">
