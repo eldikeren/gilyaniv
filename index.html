@@ -370,19 +370,20 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="images/hero-poster.webp" as="image" fetchpriority="high">
     <!-- Tailwind CSS Production Build -->
-    <link rel="stylesheet" href="css/tailwind.css?v=20260321b">
-    <link rel="stylesheet" href="css/home-page.css?v=20260321b">
+    <link rel="preload" as="image" href="images/hero-poster.webp" fetchpriority="high">
+    <link rel="stylesheet" href="css/tailwind.css?v=20260321c">
+    <link rel="stylesheet" href="css/home-page.css?v=20260321c">
     <!-- Critical CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css?v=20260321b">
-    <link rel="stylesheet" href="css/header-v2.css?v=20260321b">
-    <link rel="stylesheet" href="css/mobile-cta-bar.css?v=20260321b">
-    <link rel="stylesheet" href="css/megamenu.css?v=20260321b">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-menu.css?v=20260321c">
+    <link rel="stylesheet" href="css/header-v2.css?v=20260321c">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/mobile-cta-bar.css?v=20260321c">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/megamenu.css?v=20260321c">
     <!-- Non-critical CSS - deferred -->
-    <link rel="stylesheet" href="css/breadcrumbs.css?v=20260321b">    <link rel="stylesheet" href="css/progress-bar.css?v=20260321b">
-    <link rel="stylesheet" href="css/faq-accordion.css?v=20260321b">
-    <link rel="stylesheet" href="css/floating-buttons.css?v=20260321b">
-    <link rel="stylesheet" href="css/print.css?v=20260321b" media="print">
-    <link rel="stylesheet" href="css/scroll-arrow.css?v=20260321b">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/breadcrumbs.css?v=20260321c">    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/progress-bar.css?v=20260321c">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/faq-accordion.css?v=20260321c">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/floating-buttons.css?v=20260321c">
+    <link rel="stylesheet" href="css/print.css?v=20260321c" media="print">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="css/scroll-arrow.css?v=20260321c">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -713,10 +714,12 @@
         <section
             class="relative h-80vh flex items-start justify-center text-white text-center pt-16"
             style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-            <video poster="images/hero-poster.webp" muted loop playsinline
+            <video poster="images/hero-poster.webp" fetchpriority="high" muted loop playsinline
                 class="absolute inset-0 w-full h-full object-cover" preload="none">
                 <source data-src="images/index-compressed.mp4" type="video/mp4">
                 <source data-src="images/index.mp4" type="video/mp4">
+            
+                <track kind="captions" src="data:text/vtt,WEBVTT" default>
             </video>
             <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12">
@@ -1746,8 +1749,8 @@
     </script>
 <script src="js/nav-toggle.js?v=27" defer></script>
 <script src="js/scroll-arrow.js?v=27" defer></script>
-<script src="/js/site-search.js?v=20260321b" defer></script>
-    <script src="js/hero-reviews.js?v=20260321b" defer></script>
+<script src="/js/site-search.js?v=20260321c" defer></script>
+    <script src="js/hero-reviews.js?v=20260321c" defer></script>
 </body>
 
 </html>
