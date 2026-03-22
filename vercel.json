@@ -248,14 +248,25 @@
       "permanent": true
     },
     {
-      "source": "/:path(.*)",
+      "source": "/",
       "has": [
         {
           "type": "query",
           "key": "lightbox"
         }
       ],
-      "destination": "/:path?",
+      "destination": "https://www.yanivgil.co.il/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "query",
+          "key": "lightbox"
+        }
+      ],
+      "destination": "https://www.yanivgil.co.il/:path",
       "permanent": true
     },
     {
@@ -314,14 +325,25 @@
       "permanent": true
     },
     {
-      "source": "/:path(.*)",
+      "source": "/",
       "has": [
         {
           "type": "query",
           "key": "_escaped_fragment_"
         }
       ],
-      "destination": "/:path?",
+      "destination": "https://www.yanivgil.co.il/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "query",
+          "key": "_escaped_fragment_"
+        }
+      ],
+      "destination": "https://www.yanivgil.co.il/:path",
       "permanent": true
     },
     {
