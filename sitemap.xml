@@ -9,15 +9,15 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.yanivgil.co.il/images/Yaniv-Gil.png</image:loc>
-      <image:title>עורך דין יניב גיל - משרד עורכי דין בתל אביב</image:title>
+      <image:title>×¢××¨× ××× ×× ×× ××× - ××©×¨× ×¢××¨×× ××× ××ª× ××××</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.yanivgil.co.il/images/new-logo.png</image:loc>
-      <image:title>לוגו משרד עורכי דין יניב גיל ושות</image:title>
+      <image:title>×××× ××©×¨× ×¢××¨×× ××× ×× ×× ××× ××©××ª</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.yanivgil.co.il/images/duns_gold_v5.png</image:loc>
-      <image:title>חותם הזהב Duns100 - משרד עורכי דין מוביל</image:title>
+      <image:title>×××ª× ×××× Duns100 - ××©×¨× ×¢××¨×× ××× ×××××</image:title>
     </image:image>
   </url>
   <url>
@@ -151,7 +151,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Divorce Agreements (הסכמי גירושין) -->
+  <!-- Hebrew Pillar Pages - Divorce Agreements (××¡××× ×××¨××©××) -->
   <url>
     <loc>https://www.yanivgil.co.il/heskem-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
@@ -231,7 +231,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Child Custody (משמורת ילדים) -->
+  <!-- Hebrew Pillar Pages - Child Custody (××©×××¨×ª ×××××) -->
   <url>
     <loc>https://www.yanivgil.co.il/mishmoret-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
@@ -305,7 +305,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Child Support (מזונות ילדים) -->
+  <!-- Hebrew Pillar Pages - Child Support (×××× ××ª ×××××) -->
   <url>
     <loc>https://www.yanivgil.co.il/mezonot-yeladim</loc>
     <lastmod>2026-03-17</lastmod>
@@ -379,7 +379,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Spousal Support (מזונות אישה) -->
+  <!-- Hebrew Pillar Pages - Spousal Support (×××× ××ª ×××©×) -->
   <url>
     <loc>https://www.yanivgil.co.il/mezonot-isha</loc>
     <lastmod>2026-03-17</lastmod>
@@ -429,7 +429,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Property Division (חלוקת רכוש) -->
+  <!-- Hebrew Pillar Pages - Property Division (××××§×ª ×¨×××©) -->
   <url>
     <loc>https://www.yanivgil.co.il/chalokat-rechush-gerushin</loc>
     <lastmod>2026-03-17</lastmod>
@@ -509,7 +509,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Prenuptial Agreements (הסכם ממון) -->
+  <!-- Hebrew Pillar Pages - Prenuptial Agreements (××¡×× ××××) -->
   <url>
     <loc>https://www.yanivgil.co.il/heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
@@ -547,7 +547,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Rabbinical Court (בית דין רבני) -->
+  <!-- Hebrew Pillar Pages - Rabbinical Court (×××ª ××× ×¨×× ×) -->
   <url>
     <loc>https://www.yanivgil.co.il/gerushin-beit-din-rabani</loc>
     <lastmod>2026-03-17</lastmod>
@@ -597,7 +597,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Get and Agunot (גט ועגונות) -->
+  <!-- Hebrew Pillar Pages - Get and Agunot (×× ××¢××× ××ª) -->
   <url>
     <loc>https://www.yanivgil.co.il/haget-mah-ze</loc>
     <lastmod>2026-03-17</lastmod>
@@ -659,7 +659,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Hebrew Pillar Pages - Common Law Marriage (ידועים בציבור) -->
+  <!-- Hebrew Pillar Pages - Common Law Marriage (××××¢×× ××¦××××¨) -->
   <url>
     <loc>https://www.yanivgil.co.il/yaduyim-batzibur</loc>
     <lastmod>2026-03-17</lastmod>
@@ -972,7 +972,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Cluster A: הסכם גירושין Supporting Pages -->
+  <!-- Cluster A: ××¡×× ×××¨××©×× Supporting Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/seif-yetzia-heskem</loc>
     <lastmod>2026-03-17</lastmod>
@@ -1021,7 +1021,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Cluster B: משמורת ילדים Supporting Pages -->
+  <!-- Cluster B: ××©×××¨×ª ××××× Supporting Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/eich-beit-mishpat-machlit-mishmoret</loc>
     <lastmod>2026-03-17</lastmod>
@@ -1070,7 +1070,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Cluster C: מזונות ילדים Supporting Pages -->
+  <!-- Cluster C: ×××× ××ª ××××× Supporting Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/medad-mehia-idkun-mezonot</loc>
     <lastmod>2026-03-17</lastmod>
@@ -1107,7 +1107,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Cluster D: הסכם ממון Supporting Pages -->
+  <!-- Cluster D: ××¡×× ×××× Supporting Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon</loc>
     <lastmod>2026-03-17</lastmod>
@@ -1144,7 +1144,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Cluster E: חלוקת רכוש Supporting Pages -->
+  <!-- Cluster E: ××××§×ª ×¨×××© Supporting Pages -->
   <url>
     <loc>https://www.yanivgil.co.il/chaluka-bitcoin-matbeot</loc>
     <lastmod>2026-03-17</lastmod>
@@ -1332,4 +1332,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-    </urlset>
+    
+  <url>
+    <loc>https://www.yanivgil.co.il/child-support</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
