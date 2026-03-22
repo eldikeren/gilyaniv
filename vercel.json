@@ -255,7 +255,7 @@
           "key": "lightbox"
         }
       ],
-      "destination": "/:path",
+      "destination": "/:path?",
       "permanent": true
     },
     {
@@ -321,7 +321,7 @@
           "key": "_escaped_fragment_"
         }
       ],
-      "destination": "/:path",
+      "destination": "/:path?",
       "permanent": true
     },
     {
