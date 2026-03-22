@@ -336,26 +336,6 @@
   "rewrites": [
     {
       "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "lightbox"
-        }
-      ],
-      "destination": "/index.html"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "_escaped_fragment_"
-        }
-      ],
-      "destination": "/index.html"
-    },
-    {
-      "source": "/",
       "destination": "/index.html"
     },
     {
