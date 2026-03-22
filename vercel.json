@@ -248,14 +248,14 @@
       "permanent": true
     },
     {
-      "source": "/",
+      "source": "/:path(.*)",
       "has": [
         {
           "type": "query",
           "key": "lightbox"
         }
       ],
-      "destination": "/",
+      "destination": "/:path",
       "permanent": true
     },
     {
@@ -296,6 +296,32 @@
     {
       "source": "/blog-articles/execution.html",
       "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/mishmoret-savim",
+      "destination": "/mishmoret-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/zkaut-mezonot-isha.html",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/fixed-amount-claims.html",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "query",
+          "key": "_escaped_fragment_"
+        }
+      ],
+      "destination": "/:path",
       "permanent": true
     },
     {
