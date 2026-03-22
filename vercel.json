@@ -322,6 +322,11 @@
       "source": "/yaniv-gil-php/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "rewrites": [
