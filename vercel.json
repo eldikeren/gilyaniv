@@ -351,18 +351,6 @@
       "destination": "/thanks.html"
     },
     {
-      "source": "/privacy-policy",
-      "destination": "/privacy-policy.html"
-    },
-    {
-      "source": "/terms-of-use",
-      "destination": "/terms-of-use.html"
-    },
-    {
-      "source": "/inheritance-wills",
-      "destination": "/inheritance-wills.html"
-    },
-    {
       "source": "/blog-articles/:slug",
       "destination": "/blog-articles/:slug.html"
     },
@@ -394,6 +382,15 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/((?!css|js|images).*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
