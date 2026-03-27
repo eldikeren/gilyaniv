@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/ai-assistance",
