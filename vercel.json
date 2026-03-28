@@ -1,14 +1,16 @@
 {
-  "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
-  "outputDirectory": ".",
-  "rewrites": [
-    {
-      "source": "/ai-assistance",
-      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance"
-    },
-    {
-      "source": "/ai-assistance/:path*",
-      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*"
-    }
-  ]
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
+    "outputDirectory": ".",
+    "rewrites": [
+          {
+                  "source": "/ai-assistance",
+                  "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance"
+          },
+          {
+                  "source": "/ai-assistance/:path*",
+                  "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*"
+          }
+    ]
 }
