@@ -2,3 +2,9 @@
 
 .hr-badge,.hr-card{background-color:rgba(26,26,26,0.95)!important;border-radius:12px}
 .hr-link{color:#8B6914!important}
+/* === DESIGN GOVERNANCE FIX 2026-03-29 === */
+/* INC-001: Gold color accessibility - #c9a55c fails WCAG AA on white bg */
+:root{--brand-gold-accessible:#8B6914}
+[style*="color: #c9a55c"],[style*="color:#c9a55c"],[style*="color: #C9A55C"],[style*="color:#C9A55C"]{color:#8B6914!important}
+main h3[style*="c9a55c"],main h2[style*="c9a55c"],main span[style*="c9a55c"],main a[style*="c9a55c"]{color:#8B6914!important}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #8B6914;outline-offset:2px}
