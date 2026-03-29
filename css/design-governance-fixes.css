@@ -1,0 +1,119 @@
+/* =============================================================
+   Design Governance Fixes - 2026-03-29
+      Addresses INC-001: Gold color accessibility (WCAG AA)
+
+         This file must be loaded AFTER all other CSS files.
+            It overrides #c9a55c text colors with #8B6914 (WCAG AA compliant).
+
+               #c9a55c on white = ~3.5:1 contrast (FAILS WCAG AA 4.5:1)
+                  #8B6914 on white = ~5.3:1 contrast (PASSES WCAG AA 4.5:1)
+
+                     RULE: #c9a55c is ONLY for decorative use (backgrounds, borders)
+                              #8B6914 is for ALL text that must be readable
+                                 ============================================================= */
+
+/* --- Navigation Link Gold Text Fix --- */
+nav a[style*="color: #c9a55c"],
+nav a[style*="color:#c9a55c"],
+.nav-link[style*="color: #c9a55c"],
+.nav-link[style*="color:#c9a55c"],
+header a[style*="color: #c9a55c"],
+header a[style*="color:#c9a55c"] {
+    color: #8B6914 !important;
+}
+
+/* --- Mobile Menu Gold Text Fix --- */
+.mobile-menu a,
+.mobile-nav a,
+.mobile-menu-overlay a,
+#mobile-menu a,
+#mobileMenu a,
+.hamburger-menu a {
+    color: #8B6914 !important;
+}
+
+/* --- Generic text-gold utility class override --- */
+.text-gold,
+[class*="text-gold"] {
+    color: #8B6914 !important;
+}
+
+/* --- TOC (Table of Contents) gold text --- */
+.toc-link,
+.toc-item a,
+.toc-active,
+.toc-sticky a {
+    color: #8B6914 !important;
+}
+
+/* --- Breadcrumb and inline link gold text --- */
+.breadcrumb a[style*="c9a55c"],
+.hr-link {
+    color: #8B6914 !important;
+}
+
+/* --- Hero section gold text (NOT background) --- */
+.hero-subtitle,
+.hero-badge,
+.hero-stat-number {
+    color: #8B6914 !important;
+}
+
+/* --- Section headings with gold --- */
+h1 span[style*="color: #c9a55c"],
+h2 span[style*="color: #c9a55c"],
+h3 span[style*="color: #c9a55c"],
+h4 span[style*="color: #c9a55c"],
+h1 span[style*="color:#c9a55c"],
+h2 span[style*="color:#c9a55c"],
+h3 span[style*="color:#c9a55c"],
+h4 span[style*="color:#c9a55c"] {
+    color: #8B6914 !important;
+}
+
+/* --- Footer gold text --- */
+footer a[style*="c9a55c"],
+.footer-link[style*="c9a55c"] {
+    color: #8B6914 !important;
+}
+
+/* --- CTA and button text gold (text only, not bg) --- */
+.cta-text[style*="c9a55c"],
+.btn-outline-gold,
+a.btn-outline-gold {
+    color: #8B6914 !important;
+    border-color: #8B6914 !important;
+}
+
+/* --- FAQ accordion gold text --- */
+.faq-question[style*="c9a55c"],
+.accordion-header[style*="c9a55c"] {
+    color: #8B6914 !important;
+}
+
+/* --- Trust/review strip gold text --- */
+.trust-strip span[style*="c9a55c"],
+.review-count[style*="c9a55c"],
+.star-rating[style*="c9a55c"] {
+    color: #8B6914 !important;
+}
+
+/* --- General catch-all: any inline style with #c9a55c as text color --- */
+[style*="color: #c9a55c"],
+[style*="color:#c9a55c"],
+[style*="color: #C9A55C"],
+[style*="color:#C9A55C"] {
+    color: #8B6914 !important;
+}
+
+/* --- PRESERVE decorative gold (backgrounds, borders) --- */
+/* background-color and border-color with #c9a55c are fine */
+/* Only text color needs the accessible variant */
+
+/* --- Focus states for accessibility --- */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #8B6914;
+    outline-offset: 2px;
+}
