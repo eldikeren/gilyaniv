@@ -1,4 +1,4 @@
-/**
+src="/images//**
  * inject-ux-improvements.js
  * Batch script to inject UX improvements across all HTML files
  *

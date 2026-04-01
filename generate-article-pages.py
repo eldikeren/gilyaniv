@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+src="/images/#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Script to extract blog articles from blog.html and create individual article pages

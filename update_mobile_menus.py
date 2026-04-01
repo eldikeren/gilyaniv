@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+src="/images/#!/usr/bin/env python3
 """
 Replace mobile menus on all pages with the full subcategory/pillar version from index.html.
 This adds expandable pillar groups (mobile-pillar-group) to all pages.

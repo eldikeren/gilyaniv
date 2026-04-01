@@ -1,4 +1,4 @@
-import os
+src="/js/import os
 import re
 
 root = r"c:\Users\user\Desktop\yaniv"
