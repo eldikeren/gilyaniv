@@ -1,6 +1,6 @@
 /* pages-rtl-enhance.js — progressive enhancement, no text changes */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoded', () => {
   const isAttorneys = /\/attorneys\.html(\?|$)/.test(location.pathname);
   const isContact   = /\/contact\.html(\?|$)/.test(location.pathname);
   const isAbout     = /\/about\.html(\?|$)/.test(location.pathname);
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===== /attorneys.html ===== */
   if (isAttorneys) {
     // 1) Hero styling: find the main H1 and wrap it into a hero section
-    const main = document.querySelector('main') || document.body;
+    const main = document.querySelector('main') || document.body
     const h1 = main.querySelector('h1, h2');
     if (h1 && !document.querySelector('.team-hero')) {
       const hero = document.createElement('section');
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Actions
         const actions = document.createElement('div');
         actions.className = 'lawyer-actions';
-        actions.innerHTML = `<a class="btn primary" href="/contact.html">צור קשר</a>`;
+        actions.innerHTML = `<a class="btn primary" href="/contact">צור קשר</a>`;
         body.appendChild(actions);
 
         card.appendChild(body);
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
             <div class="actions" style="margin-top:10px">
               <a class="btn primary" href="tel:036092414">התקשר עכשיו</a>
-              <a class="btn" href="/contact.html">טופס יצירת קשר</a>
+              <a class="btn" href="/contact">טופס יצירת קשר</a>
             </div>
           </div></aside>
         </div>`;
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       approachH2.remove();
       document.querySelector('main').appendChild(sec);
     }
-  }
+
 
   /* ===== /contact.html ===== */
   if (isContact) {
