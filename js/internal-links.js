@@ -107,7 +107,8 @@
         { url: '/chaluka-zchuyot-sotzialiyot', text: 'חלוקת זכויות סוציאליות' },
         { url: '/chaluka-dira-meshuteft', text: 'חלוקת דירה משותפת' },
         { url: '/chaluka-kesef-bbank', text: 'חלוקת כסף בבנק' },
-        { url: '/chaluka-rechush-yerusha', text: 'חלוקת רכוש ירושה' }
+        { url: '/chaluka-rechush-yerusha', text: 'חלוקת רכוש ירושה' },
+        { url: '/gerushin-hightech', text: 'גירושין בהייטק' }
       ]
     },
     yaduyim: {
