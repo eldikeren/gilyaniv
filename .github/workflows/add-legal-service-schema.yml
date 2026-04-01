@@ -3,6 +3,9 @@ name: Add LegalService Schema to All Pages
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   add-schema:
     runs-on: ubuntu-latest
