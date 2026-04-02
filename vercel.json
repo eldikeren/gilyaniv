@@ -4,14 +4,8 @@
   "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
   "outputDirectory": ".",
   "rewrites": [
-    {
-      "source": "/ai-assistance",
-      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance"
-    },
-    {
-      "source": "/ai-assistance/:path*",
-      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*"
-    }
+    { "source": "/ai-assistance", "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance" },
+    { "source": "/ai-assistance/:path*", "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*" }
   ],
   "redirects": [
     { "source": "/mortgage", "destination": "/debt-arrangements", "permanent": true },
@@ -35,6 +29,19 @@
     { "source": "/ikuv-yeziaa", "destination": "/travel-restriction", "permanent": true },
     { "source": "/civilprocedure", "destination": "/family-law", "permanent": true },
     { "source": "/mishmoret-savim", "destination": "/mishmoret-yeladim", "permanent": true },
+    { "source": "/kinus-nechasim", "destination": "/insolvency", "permanent": true },
+    { "source": "/to-end-your-depts", "destination": "/insolvency", "permanent": true },
+    { "source": "/about", "destination": "/attorneys", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/index", "destination": "/", "permanent": true },
+    { "source": "/realestate", "destination": "/practice-areas", "permanent": true },
+    { "source": "/practiceareas", "destination": "/practice-areas", "permanent": true },
+    { "source": "/media", "destination": "/articles", "permanent": true },
+    { "source": "/personalstatus", "destination": "/family-law", "permanent": true },
+    { "source": "/familycourt", "destination": "/family-law", "permanent": true },
+    { "source": "/beitdinrabani", "destination": "/family-law", "permanent": true },
+    { "source": "/irur-phshitat-regel", "destination": "/practice-areas", "permanent": true },
+    { "source": "/paraati", "destination": "/practice-areas", "permanent": true },
     { "source": "/blog-articles/practice-areas.html", "destination": "/practice-areas", "permanent": true },
     { "source": "/blog-articles/attorneys.html", "destination": "/attorneys", "permanent": true },
     { "source": "/blog-articles/blog.html", "destination": "/blog", "permanent": true },
