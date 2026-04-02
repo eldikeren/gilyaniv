@@ -1,16 +1,47 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
-    "outputDirectory": ".",
-    "rewrites": [
-          {
-                  "source": "/ai-assistance",
-                  "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance"
-          },
-          {
-                  "source": "/ai-assistance/:path*",
-                  "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*"
-          }
-    ]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "buildCommand": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify || true",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/ai-assistance",
+      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance"
+    },
+    {
+      "source": "/ai-assistance/:path*",
+      "destination": "https://yaniv-legal-ai.vercel.app/ai-assistance/:path*"
+    }
+  ],
+  "redirects": [
+    { "source": "/mortgage", "destination": "/debt-arrangements", "permanent": true },
+    { "source": "/hozaalapoalaw", "destination": "/execution", "permanent": true },
+    { "source": "/hozaalapoal-2", "destination": "/execution", "permanent": true },
+    { "source": "/bankruptcy-1", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/bankruptcy-2", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/bankruptcy-3", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/bankruptcy-limitation", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/credit-bankruptcy", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/havarot-1", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/havarot-2", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/piruk-havarot", "destination": "/bankruptcy", "permanent": true },
+    { "source": "/hapter", "destination": "/discharge", "permanent": true },
+    { "source": "/hapter-1", "destination": "/discharge", "permanent": true },
+    { "source": "/shinuy-shem", "destination": "/family-law", "permanent": true },
+    { "source": "/pshara", "destination": "/mediation", "permanent": true },
+    { "source": "/seder-din-ezrachi", "destination": "/family-law", "permanent": true },
+    { "source": "/siruv-get", "destination": "/sarvanut-get-agunot", "permanent": true },
+    { "source": "/civilianmarriage", "destination": "/yaduyim-batzibur", "permanent": true },
+    { "source": "/ikuv-yeziaa", "destination": "/travel-restriction", "permanent": true },
+    { "source": "/civilprocedure", "destination": "/family-law", "permanent": true },
+    { "source": "/mishmoret-savim", "destination": "/mishmoret-yeladim", "permanent": true },
+    { "source": "/blog-articles/practice-areas.html", "destination": "/practice-areas", "permanent": true },
+    { "source": "/blog-articles/attorneys.html", "destination": "/attorneys", "permanent": true },
+    { "source": "/blog-articles/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/blog-articles/index.html", "destination": "/blog", "permanent": true },
+    { "source": "/blog-articles/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/blog-articles/articles.html", "destination": "/articles", "permanent": true },
+    { "source": "/terms-of-use.html", "destination": "/terms-of-use", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true }
+  ]
 }
