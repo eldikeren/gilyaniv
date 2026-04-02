@@ -62,7 +62,7 @@
         { url: '/mishmoret-meshuteft-tnai', text: 'תנאי משמורת משותפת' },
         { url: '/mishmoret-hashlama', text: 'השלמת משמורת' },
         { url: '/shinui-mishmoret', text: 'שינוי משמורת' },
-        { url: '/mishmoret-savim', text: 'משמורת סבים' }
+        { url: '/mishmoret-yeladim', text: 'משמורת סבים' }
       ]
     },
     heskem_gerushin: {
