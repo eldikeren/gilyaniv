@@ -1,0 +1,35 @@
+name: Fix Mobile CTA Bar CSS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-mobile-cta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fix mobile CTA CSS on affected pages
+        run: |
+          CSS_RULE='@media (max-width:768px){.mobile-cta-bar{display:flex}body{padding-bottom:70px}}'
+          for f in *.html; do
+            case "$f" in og-*|index-staging*|_live*) continue;; esac
+            if grep -q 'mobile-cta-bar' "$f" && ! grep -q 'mobile-cta-bar{display:flex}' "$f"; then
+              echo "Fixing: $f"
+              if grep -q '</style>' "$f"; then
+                sed -i "s|</style>|$CSS_RULE</style>|" "$f"
+              fi
+            fi
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "fix: add mobile CTA bar display CSS to pages missing it"
+          git push
