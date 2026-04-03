@@ -1,4 +1,4 @@
-# robots.txt for yanivgil.co.il
+# robots.txt for yanivgil.co.il 
 # Allow all search engines to crawl the site
 
 User-agent: *
