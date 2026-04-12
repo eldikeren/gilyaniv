@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoded', () => {
         <p class="kicker">פרטי התקשרות</p>
         <ul class="info-list">
           <li><strong>טלפון:</strong> 03-609-2414</li>
-          <li><strong>נייד:</strong> 054-8184581</li>
+          <li><strong>נייד:</strong> 054-6003399</li>
           <li><strong>פקס:</strong> 03-609-2413</li>
           <li><strong>שעות פעילות:</strong> א'-ה' 9:00–18:00</li>
         </ul>
