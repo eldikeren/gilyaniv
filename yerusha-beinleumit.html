@@ -257,6 +257,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .faq-question:hover { color: #c9a55c; }
         .faq-arrow { transition: transform 0.3s; font-size: 1.2rem; color: #c9a55c; }
         .faq-answer { padding: 0 0 1.25rem; color: #4b5563; line-height: 1.8; }
+
+        /* Fix seal overlap on hero */
+        section.relative .container.text-center { padding-left: 180px; padding-right: 180px; }
+        @media (max-width: 768px) { section.relative .container.text-center { padding-left: 16px; padding-right: 16px; } }
     </style>
 
     <!-- BreadcrumbList Schema -->
