@@ -1,4 +1,4 @@
-name: Remove AI Artifacts (em-dashes)
+name: Fix HTML issues
 on:
   workflow_dispatch:
 permissions:
@@ -10,22 +10,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Replace mdash entities and literal em-dashes
+      - name: Remove garbage text before DOCTYPE
         run: |
-          echo "Replacing &mdash; HTML entities..."
-          find . -name "*.html" -not -path "./.git/*" -exec grep -l "&mdash;" {} \; | while read f; do
-            sed -i "s/&mdash;/-/g" "$f"
-            echo "Fixed entity in: $f"
+          find . -name "*.html" -not -path "./.git/*" -print0 | while IFS= read -r -d "" f; do
+            if head -c 20 "$f" | grep -qv "<!DOCTYPE\|<!doctype\|<html\|<!--"; then
+              DOCTYPE_POS=$(grep -bo "<!DOCTYPE\|<!doctype" "$f" | head -1 | cut -d: -f1)
+              if [ -n "$DOCTYPE_POS" ] && [ "$DOCTYPE_POS" -gt 0 ]; then
+                tail -c +$((DOCTYPE_POS + 1)) "$f" > "$f.tmp" && mv "$f.tmp" "$f"
+                echo "Fixed garbage in: $f (removed $DOCTYPE_POS bytes)"
+              fi
+            fi
           done
-          echo "Replacing literal em-dash characters..."
-          python3 -c "
-          import glob
-          for f in glob.glob(chr(42)+chr(42)+chr(47)+chr(42)+chr(46)+chr(104)+chr(116)+chr(109)+chr(108), recursive=True):
-            try:
-              t=open(f).read()
-              if chr(8212) in t: open(f,chr(119)).write(t.replace(chr(8212),chr(45)));print(chr(70)+chr(105)+chr(120)+chr(101)+chr(100)+chr(58),f)
-            except: pass
-          "
       - name: Commit and push
         run: |
           git config user.name "github-actions"
@@ -34,6 +29,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Remove em-dash entities and literals from HTML pages"
+            git commit -m "Remove garbage text before DOCTYPE in HTML files"
             git push
           fi
