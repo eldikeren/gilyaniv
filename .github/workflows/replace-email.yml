@@ -1,5 +1,4 @@
-name: Replace Email
-
+name: Clean AI Artifacts and Replace Email
 on:
   workflow_dispatch:
 
@@ -7,17 +6,35 @@ permissions:
   contents: write
 
 jobs:
-  replace:
+  clean:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Replace old email with new email
+        with:
+          fetch-depth: 1
+
+      - name: Remove em-dashes (AI artifact)
         run: |
-          find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.md" -o -name "*.css" -o -name "*.json" -o -name "*.txt" -o -name "*.php" -o -name "*.xml" \) -exec sed -i 's/yanivgil@gmail\.com/yaniv@yanivgil.co.il/g' {} +
+          grep -rl $'\xe2\x80\x94' --include='*.html' . | while read file; do
+            sed -i 's/\xe2\x80\x94/-/g' "$file"
+          done
+          echo "Em-dash replacement complete"
+
+      - name: Replace old email with new
+        run: |
+          grep -rl 'yanivgil@gmail\.com' --include='*.html' --include='*.js' --include='*.css' --include='*.json' --include='*.xml' --include='*.php' --include='*.txt' . | while read file; do
+            sed -i 's/yanivgil@gmail\.com/yaniv@yanivgil.co.il/g' "$file"
+          done
+          echo "Email replacement complete"
+
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "Replace yanivgil@gmail.com with yaniv@yanivgil.co.il across all remaining files"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Clean AI artifacts (em-dashes) and replace email across all files"
+            git push
+          fi
