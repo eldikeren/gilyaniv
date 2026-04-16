@@ -13,31 +13,31 @@ jobs:
           cat > /tmp/fix.py << 'SCRIPT'
 import os, re, glob
 report = []
-fixed = 0
-GERSH = "\u05F4"
-for f in sorted(glob.glob("*.html")):
-    with open(f, "r", encoding="utf-8") as fh:
+fixed_count = 0
+GERSH = chr(0x05F4)
+BSLASH_U0022 = chr(92) + 'u0022'
+for f in sorted(glob.glob('*.html')):
+    with open(f, 'r', encoding='utf-8') as fh:
         c = fh.read()
     orig = c
-    # Fix \u0022 in JSON-LD (escaped quote -> gershayim)
-    c = c.replace("\\u0022", GERSH)
-    # Remove duplicate FAQPage JSON-LD blocks (keep first)
+    if BSLASH_U0022 in c:
+        c = c.replace(BSLASH_U0022, GERSH)
     faq = list(re.finditer(r'<script[^>]*application/ld.json[^>]*>[^<]*?FAQPage[^<]*?</script>', c, re.DOTALL))
     if len(faq) > 1:
-        report.append(f"{f}: removing {len(faq)-1} dup FAQ blocks")
+        report.append(f'{f}: removing {len(faq)-1} dup FAQ blocks')
         for m in reversed(faq[1:]):
             c = c[:m.start()] + c[m.end():]
     if c != orig:
-        with open(f, "w", encoding="utf-8") as fh:
+        with open(f, 'w', encoding='utf-8') as fh:
             fh.write(c)
-        fixed += 1
-        report.append(f"{f}: fixed")
-print(f"Fixed {fixed} files")
+        fixed_count += 1
+        report.append(f'{f}: fixed')
+print(f'Fixed {fixed_count} files')
 for r in report:
     print(r)
 SCRIPT
           python3 /tmp/fix.py
-      - name: Cleanup trigger and commit
+      - name: Commit changes
         run: |
           rm -f trigger-fix.txt
           git config user.name "github-actions"
