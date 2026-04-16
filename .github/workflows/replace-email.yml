@@ -12,16 +12,20 @@ jobs:
           fetch-depth: 1
       - name: Remove em-dashes
         run: |
-          EMDASH=$'\xe2\x80\x94'
-          count=0
-          find . -name '*.html' -not -path './.git/*' -print0 | while IFS= read -r -d '' f; do
-            if grep -q "$EMDASH" "$f"; then
-              sed -i "s/$EMDASH/-/g" "$f"
-              echo "Fixed: $f"
-              count=$((count+1))
-            fi
-          done
-          echo "Done"
+          python3 -c "
+          import glob
+          count = 0
+          for f in glob.glob('**/*.html', recursive=True):
+            try:
+              t = open(f, encoding='utf-8').read()
+              if chr(8212) in t:
+                open(f, 'w', encoding='utf-8').write(t.replace(chr(8212), '-'))
+                count += 1
+                print('Fixed:', f)
+            except Exception as e:
+              print('Error:', f, e)
+          print('Total fixed:', count)
+          "
       - name: Commit and push
         run: |
           git config user.name "github-actions"
