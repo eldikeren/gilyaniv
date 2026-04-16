@@ -1,61 +1,50 @@
-name: Scan broken links and fix fonts
+name: Broken links report
 on:
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  scan:
+  report:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Scan and fix
+      - name: Generate report
         run: |
-          cat > /tmp/scan.py << 'PYEOF'
-          import re, glob, os
+          cat > /tmp/report.py << 'PYEOF'
+          import re, glob
           existing = set()
           for f in glob.glob("*.html"):
               existing.add(f.replace(".html", ""))
-          print("Total HTML files:", len(existing))
           broken = {}
           for f in glob.glob("*.html"):
               try:
                   content = open(f, encoding="utf-8").read()
-                  links = re.findall(r"href=[\x22\x27]/([a-z0-9-]+)", content)
+                  links = re.findall(r"href=[\x22\x27]/?([a-z0-9][a-z0-9-]*?)(?:\.html)?[\x22\x27]", content)
                   for link in links:
-                      slug = link.strip("/").replace(".html", "")
-                      if slug and slug not in existing:
+                      slug = link.strip("/")
+                      if slug and slug not in existing and not slug.startswith("http") and not slug.startswith("tel") and not slug.startswith("mailto") and len(slug) > 2:
                           if slug not in broken:
                               broken[slug] = 0
                           broken[slug] += 1
               except:
                   pass
-          print("Broken internal links:")
-          for slug, count in sorted(broken.items(), key=lambda x: -x[1]):
-              print(f"  MISSING: {slug}.html ({count} refs)")
-          fix = "<style>body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;}</style>"
-          fc = 0
-          for f in glob.glob("*.html"):
-              try:
-                  c = open(f, encoding="utf-8").read()
-                  if "font-smoothing" not in c and "</head>" in c:
-                      c = c.replace("</head>", fix + "</head>")
-                      open(f, "w", encoding="utf-8").write(c)
-                      fc += 1
-              except:
-                  pass
-          print(f"Font smoothing added to {fc} pages")
+          report = f"Broken links report\nTotal HTML files: {len(existing)}\n\n"
+          for slug, count in sorted(broken.items(), key=lambda x: -x[1])[:50]:
+              report += f"MISSING: {slug}.html ({count} references)\n"
+          open("broken-links-report.txt", "w").write(report)
+          print(report)
           PYEOF
-          python3 /tmp/scan.py
-      - name: Commit and push
+          python3 /tmp/report.py
+      - name: Commit report
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add -A
+          git add broken-links-report.txt
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes"
           else
-            git commit -m "Add font smoothing for clarity across all pages"
+            git commit -m "Add broken links report"
             git push
           fi
