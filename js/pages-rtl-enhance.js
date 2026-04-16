@@ -1,4 +1,4 @@
-/* pages-rtl-enhance.js — progressive enhancement, no text changes */
+yaniv@yanivgil.co.ilyaniv@yanivgil.co.il/* pages-rtl-enhance.js — progressive enhancement, no text changes */
 
 document.addEventListener('DOMContentLoded', () => {
   const isAttorneys = /\/attorneys\.html(\?|$)/.test(location.pathname);

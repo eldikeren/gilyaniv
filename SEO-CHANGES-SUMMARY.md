@@ -1,4 +1,4 @@
-# SEO Optimization Changes Summary
+yaniv@yanivgil.co.il# SEO Optimization Changes Summary
 
 **Date**: November 2, 2025  
 **Status**: ✅ Complete
