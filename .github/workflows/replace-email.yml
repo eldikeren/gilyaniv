@@ -10,24 +10,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Create and run cleanup script
+      - name: Replace mdash entities and literal em-dashes
         run: |
-          cat > /tmp/fix_emdash.py << 'SCRIPT'
+          echo "Replacing &mdash; HTML entities..."
+          find . -name "*.html" -not -path "./.git/*" -exec grep -l "&mdash;" {} \; | while read f; do
+            sed -i "s/&mdash;/-/g" "$f"
+            echo "Fixed entity in: $f"
+          done
+          echo "Replacing literal em-dash characters..."
+          python3 -c "
           import glob
-          count = 0
-          emdash = chr(8212)
-          for f in glob.glob("**/*.html", recursive=True):
-              try:
-                  t = open(f, encoding="utf-8").read()
-                  if emdash in t:
-                      open(f, "w", encoding="utf-8").write(t.replace(emdash, "-"))
-                      count += 1
-                      print("Fixed:", f)
-              except Exception as e:
-                  print("Error:", f, e)
-          print("Total fixed:", count)
-          SCRIPT
-          python3 /tmp/fix_emdash.py
+          for f in glob.glob(chr(42)+chr(42)+chr(47)+chr(42)+chr(46)+chr(104)+chr(116)+chr(109)+chr(108), recursive=True):
+            try:
+              t=open(f).read()
+              if chr(8212) in t: open(f,chr(119)).write(t.replace(chr(8212),chr(45)));print(chr(70)+chr(105)+chr(120)+chr(101)+chr(100)+chr(58),f)
+            except: pass
+          "
       - name: Commit and push
         run: |
           git config user.name "github-actions"
@@ -36,6 +34,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Remove em-dashes (AI artifact) from all HTML pages"
+            git commit -m "Remove em-dash entities and literals from HTML pages"
             git push
           fi
