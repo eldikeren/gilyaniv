@@ -15,8 +15,9 @@ jobs:
 
       - name: Remove em-dashes (AI artifact)
         run: |
-          grep -rl $'\xe2\x80\x94' --include='*.html' . | while read file; do
-            sed -i 's/\xe2\x80\x94/-/g' "$file"
+          EMDASH=$'\xe2\x80\x94'
+          grep -rl "$EMDASH" --include='*.html' . | while read file; do
+            sed -i "s/$EMDASH/-/g" "$file"
           done
           echo "Em-dash replacement complete"
 
