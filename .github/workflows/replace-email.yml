@@ -15,18 +15,8 @@ jobs:
 
       - name: Remove em-dashes (AI artifact)
         run: |
-          EMDASH=$'\xe2\x80\x94'
-          grep -rl "$EMDASH" --include='*.html' . | while read file; do
-            sed -i "s/$EMDASH/-/g" "$file"
-          done
+          find . -name '*.html' -not -path './.git/*' -exec perl -pi -e 's/\x{2014}/-/g' {} +
           echo "Em-dash replacement complete"
-
-      - name: Replace old email with new
-        run: |
-          grep -rl 'yanivgil@gmail\.com' --include='*.html' --include='*.js' --include='*.css' --include='*.json' --include='*.xml' --include='*.php' --include='*.txt' . | while read file; do
-            sed -i 's/yanivgil@gmail\.com/yaniv@yanivgil.co.il/g' "$file"
-          done
-          echo "Email replacement complete"
 
       - name: Commit and push
         run: |
@@ -36,6 +26,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Clean AI artifacts (em-dashes) and replace email across all files"
+            git commit -m "Remove em-dashes (AI artifact) from all HTML pages"
             git push
           fi
