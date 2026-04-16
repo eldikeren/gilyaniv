@@ -293,6 +293,27 @@
       "source": "/blog-articles/%D7%94%D7%A4%D7%98%D7%A8-%D7%91%D7%A4%D7%A9.html",
       "destination": "/discharge",
       "permanent": true
+    },
+    {
+      "source": "/articles-3",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/articles-4",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "_escaped_fragment_"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
