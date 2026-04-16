@@ -1,34 +1,97 @@
 name: Rebuild Search Index
-
 on:
-  push:
-    branches: [main]
-    paths:
-      - '*.html'
-      - 'blog-articles/*.html'
   workflow_dispatch:
-
 jobs:
-  rebuild-search:
+  fix:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Rebuild search index
-        run: node scripts/build-search-index.js
-
-      - name: Commit updated search index
+      - name: Fix JSON-LD structured data issues
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add js/search-index.json
-          git diff --staged --quiet || git commit -m "chore: auto-rebuild search index [skip ci]"
-          git pull --rebase origin main
+          cat > /tmp/fix_jsonld.py << 'SCRIPT'
+import os, re, glob
+
+report = []
+files_fixed = 0
+
+for f in sorted(glob.glob("*.html")):
+    with open(f, "r", encoding="utf-8") as fh:
+        content = fh.read()
+    original = content
+    changes = []
+
+    # Fix 1: In JSON-LD blocks replace \u0022 with Hebrew gershayim \u05F4
+    blocks = list(re.finditer(r'(<script[^>]*application/ld\+json[^>]*>)(.*?)(</script>)', content, re.DOTALL))
+    if blocks:
+        new_content = content
+        offset = 0
+        for m in blocks:
+            inner = m.group(2)
+            new_inner = inner.replace('\\u0022', '\u05F4')
+            if new_inner != inner:
+                start = m.start(2) + offset
+                end = m.end(2) + offset
+                new_content = new_content[:start] + new_inner + new_content[end:]
+                offset += len(new_inner) - len(inner)
+                changes.append("fixed \\u0022 in JSON-LD")
+        content = new_content
+
+    # Fix 2: In JSON-LD blocks replace backslash-escaped quotes before Hebrew dalet
+    # The pattern in raw file is: \\"\u05d3 which represents \"d in the JSON string
+    blocks2 = list(re.finditer(r'(<script[^>]*application/ld\+json[^>]*>)(.*?)(</script>)', content, re.DOTALL))
+    if blocks2:
+        new_content = content
+        offset = 0
+        for m in blocks2:
+            inner = m.group(2)
+            # Replace \"\u05d3 pattern (escaped quote before dalet) with gershayim+dalet
+            new_inner = re.sub(r'\\\"(\u05[dD]3)', '\u05F4\\1', inner)
+            # Also \\x22 pattern
+            new_inner = re.sub(r'\\x22(\u05[dD]3)', '\u05F4\\1', new_inner)
+            if new_inner != inner:
+                start = m.start(2) + offset
+                end = m.end(2) + offset
+                new_content = new_content[:start] + new_inner + new_content[end:]
+                offset += len(new_inner) - len(inner)
+                changes.append("fixed escaped quotes in JSON-LD")
+        content = new_content
+
+    # Fix 3: Remove duplicate FAQPage JSON-LD blocks
+    faq_blocks = list(re.finditer(r'<script[^>]*application/ld\+json[^>]*>[^<]*?FAQPage[^<]*?</script>', content, re.DOTALL))
+    if len(faq_blocks) > 1:
+        changes.append(f"removed {len(faq_blocks)-1} duplicate FAQ blocks")
+        for m in reversed(faq_blocks[1:]):
+            content = content[:m.start()] + content[m.end():]
+
+    if content != original:
+        with open(f, "w", encoding="utf-8") as fh:
+            fh.write(content)
+        files_fixed += 1
+    if changes:
+        report.append(f"{f}: {'; '.join(changes)}")
+
+# Verify
+for f in sorted(glob.glob("*.html")):
+    with open(f, "r", encoding="utf-8") as fh:
+        c = fh.read()
+    fcount = len(re.findall(r'"@type"\s*:\s*"FAQPage"', c))
+    if fcount > 1:
+        report.append(f"STILL DUPES: {f} ({fcount})")
+    if '\\u0022' in c:
+        # check if inside JSON-LD
+        for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', c, re.DOTALL):
+            if '\\u0022' in m.group(1):
+                report.append(f"STILL HAS \\u0022: {f}")
+
+print(f"Fixed {files_fixed} files")
+for r in report:
+    print(r)
+SCRIPT
+          python3 /tmp/fix_jsonld.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Fix structured data: JSON-LD quotes and duplicate FAQ blocks"
           git push
