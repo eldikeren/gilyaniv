@@ -1,0 +1,61 @@
+name: Fix sitemap
+on:
+  push:
+    paths:
+      - "trigger-fix.txt"
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate sitemap
+        run: |
+          cat > /tmp/regen_sitemap.py << 'SCRIPT'
+          import os, re, glob, datetime
+          today = datetime.date.today().isoformat()
+          exclude = {'404.html', 'thanks.html', '_live_divorce.html'}
+          urls = []
+          for f in sorted(glob.glob('*.html')):
+              if f in exclude:
+                  continue
+              slug = f.replace('.html', '')
+              urls.append(f'https://www.yanivgil.co.il/{slug}')
+          # Also add homepage
+          if 'index.html' in [os.path.basename(f) for f in glob.glob('*.html')]:
+              pass  # index is already captured as /index
+          # Build sitemap XML
+          xml = ['<?xml version=' + chr(34) + '1.0' + chr(34) + ' encoding=' + chr(34) + 'UTF-8' + chr(34) + '?>']
+          xml.append('<urlset xmlns=' + chr(34) + 'http://www.sitemaps.org/schemas/sitemap/0.9' + chr(34) + '>')
+          for url in urls:
+              xml.append('  <url>')
+              xml.append(f'    <loc>{url}</loc>')
+              xml.append(f'    <lastmod>{today}</lastmod>')
+              xml.append('    <changefreq>weekly</changefreq>')
+              xml.append('  </url>')
+          xml.append('</urlset>')
+          sitemap = chr(10).join(xml) + chr(10)
+          with open('sitemap.xml', 'w', encoding='utf-8') as f:
+              f.write(sitemap)
+          print(f'Sitemap generated with {len(urls)} URLs')
+          # Check for pages that might cause redirects (internal links pointing to old URLs)
+          # Also scan for any noindex tags
+          noindex_files = []
+          for f in sorted(glob.glob('*.html')):
+              with open(f, 'r', encoding='utf-8') as fh:
+                  content = fh.read()
+              if 'noindex' in content.lower():
+                  noindex_files.append(f)
+          if noindex_files:
+              print(f'Files with noindex: {noindex_files}')
+          else:
+              print('No noindex files found')
+          SCRIPT
+          python3 /tmp/regen_sitemap.py
+      - name: Commit changes
+        run: |
+          rm -f trigger-fix.txt
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Regenerate sitemap with lastmod dates, remove junk pages"
+          git push
