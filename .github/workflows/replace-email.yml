@@ -1,0 +1,20 @@
+name: Replace Email
+
+on:
+  workflow_dispatch:
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace old email with new email
+        run: |
+          find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.md" -o -name "*.css" -o -name "*.json" -o -name "*.txt" -o -name "*.php" -o -name "*.xml" \) -exec sed -i 's/yanivgil@gmail\.com/yaniv@yanivgil.co.il/g' {} +
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Replace yanivgil@gmail.com with yaniv@yanivgil.co.il across all remaining files"
+          git push
