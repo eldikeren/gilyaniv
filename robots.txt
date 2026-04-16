@@ -15,6 +15,7 @@ Disallow: /js/search-index.json
 Disallow: /ffmpeg/
 Disallow: /yaniv-gil-php/
 Disallow: /*?lightbox=
+Disallow: /*?_escaped_fragment_=
 Disallow: /?s=
 Disallow: /?p=
 Disallow: /wp-login.php
