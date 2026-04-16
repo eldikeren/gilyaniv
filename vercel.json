@@ -273,6 +273,26 @@
       "source": "/privacy-policy.html",
       "destination": "/privacy-policy",
       "permanent": true
+    },
+    {
+      "source": "/articles-5",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/zkaut-mezonot-isha.html",
+      "destination": "/mezonot-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/execution.html",
+      "destination": "/execution",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/%D7%94%D7%A4%D7%98%D7%A8-%D7%91%D7%A4%D7%A9.html",
+      "destination": "/discharge",
+      "permanent": true
     }
   ]
 }
