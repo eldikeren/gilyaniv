@@ -1,28 +1,75 @@
-name: Replace phone numbers
+name: Fix 404 pages and site issues
 on:
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  replace:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Replace phone numbers with 054-6003399
+      - name: Create missing pages and fix issues
         run: |
-          echo "Replacing 03-6092414..."
-          find . -name "*.html" -not -path "./.git/*" -exec grep -l "03-6092414" {} \; | wc -l
-          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/03-6092414/054-6003399/g" {} +
-          echo "Replacing 03-6092413..."
-          find . -name "*.html" -not -path "./.git/*" -exec grep -l "03-6092413" {} \; | wc -l
-          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/03-6092413/054-6003399/g" {} +
-          echo "Replacing 036092414 (no dash)..."
-          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/036092414/0546003399/g" {} +
-          echo "Replacing 036092413 (no dash)..."
-          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/036092413/0546003399/g" {} +
-          echo "Done"
+          cat > /tmp/fix_site.py << 'PYEOF'
+          import re, shutil, glob, os
+          
+          template = "heskem-mamon.html"
+          with open(template, "r", encoding="utf-8") as f:
+              tmpl = f.read()
+          
+          pages = [
+              {
+                  "file": "heskem-mamon-dugma.html",
+                  "slug": "heskem-mamon-dugma",
+                  "title": "\u05d3\u05d5\u05d2\u05de\u05d4 \u05dc\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df - \u05ea\u05d1\u05e0\u05d9\u05ea \u05d5\u05d3\u05d5\u05d2\u05de\u05d0\u05d5\u05ea \u05de\u05e2\u05e9\u05d9\u05d5\u05ea 2026 | \u05e2\u05d5\u05f4\u05d3 \u05d9\u05e0\u05d9\u05d1 \u05d2\u05d9\u05dc",
+                  "h1": "\u05d3\u05d5\u05d2\u05de\u05d4 \u05dc\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df - \u05ea\u05d1\u05e0\u05d9\u05ea \u05d5\u05d3\u05d5\u05d2\u05de\u05d0\u05d5\u05ea \u05de\u05e2\u05e9\u05d9\u05d5\u05ea 2026",
+                  "desc": "\u05d3\u05d5\u05d2\u05de\u05d4 \u05de\u05dc\u05d0\u05d4 \u05dc\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df \u05e2\u05dd \u05ea\u05d1\u05e0\u05d9\u05ea \u05de\u05e2\u05e9\u05d9\u05ea \u05d5\u05e1\u05e2\u05d9\u05e4\u05d9\u05dd \u05d7\u05d9\u05d5\u05e0\u05d9\u05d9\u05dd"
+              },
+              {
+                  "file": "heskem-mamon-leachar-nisuin.html",
+                  "slug": "heskem-mamon-leachar-nisuin",
+                  "title": "\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df \u05dc\u05d0\u05d7\u05e8 \u05e0\u05d9\u05e9\u05d5\u05d0\u05d9\u05df - \u05d4\u05d0\u05dd \u05d0\u05e4\u05e9\u05e8 \u05d5\u05de\u05ea\u05d9 \u05db\u05d3\u05d0\u05d9? 2026 | \u05e2\u05d5\u05f4\u05d3 \u05d9\u05e0\u05d9\u05d1 \u05d2\u05d9\u05dc",
+                  "h1": "\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df \u05dc\u05d0\u05d7\u05e8 \u05e0\u05d9\u05e9\u05d5\u05d0\u05d9\u05df - \u05d4\u05d0\u05dd \u05d0\u05e4\u05e9\u05e8 \u05d5\u05de\u05ea\u05d9 \u05db\u05d3\u05d0\u05d9? 2026",
+                  "desc": "\u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df \u05dc\u05d0\u05d7\u05e8 \u05e0\u05d9\u05e9\u05d5\u05d0\u05d9\u05df - \u05db\u05dc \u05de\u05d4 \u05e9\u05e6\u05e8\u05d9\u05da \u05dc\u05d3\u05e2\u05ea \u05e2\u05dc \u05e2\u05e8\u05d9\u05db\u05ea \u05d4\u05e1\u05db\u05dd \u05de\u05de\u05d5\u05df \u05d0\u05d7\u05e8\u05d9 \u05d4\u05d7\u05ea\u05d5\u05e0\u05d4"
+              }
+          ]
+          
+          for page in pages:
+              content = tmpl
+              content = re.sub(r"<title>.*?</title>", "<title>" + page["title"] + "</title>", content)
+              content = re.sub(r'<meta name="description" content="[^"]*"', '<meta name="description" content="' + page["desc"] + '"', content)
+              content = content.replace("heskem-mamon.html", page["file"])
+              content = content.replace("heskem-mamon", page["slug"])
+              old_h1 = re.search(r"<h1[^>]*>(.*?)</h1>", content, re.DOTALL)
+              if old_h1:
+                  content = content.replace(old_h1.group(1), page["h1"], 1)
+              with open(page["file"], "w", encoding="utf-8") as f:
+                  f.write(content)
+              print("Created:", page["file"])
+          
+          # Generate sitemap from all HTML files
+          html_files = sorted(glob.glob("*.html"))
+          sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+          sitemap_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">') 
+          for f in html_files:
+              if f.startswith(".") or "ffmpeg" in f or "yaniv-gil-php" in f:
+                  continue
+              slug = f.replace(".html", "")
+              if slug == "index":
+                  url = "https://www.yanivgil.co.il/"
+              else:
+                  url = "https://www.yanivgil.co.il/" + slug
+              sitemap_lines.append("  <url>")
+              sitemap_lines.append("    <loc>" + url + "</loc>")
+              sitemap_lines.append("  </url>")
+          sitemap_lines.append("</urlset>")
+          with open("sitemap.xml", "w", encoding="utf-8") as f:
+              f.write("\n".join(sitemap_lines))
+          print("Sitemap updated with", len(html_files), "URLs")
+          PYEOF
+          python3 /tmp/fix_site.py
       - name: Commit and push
         run: |
           git config user.name "github-actions"
@@ -31,6 +78,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Replace old phone numbers with 054-6003399 across all pages"
+            git commit -m "Create missing pages, update sitemap"
             git push
           fi
