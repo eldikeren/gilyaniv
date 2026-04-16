@@ -1,92 +1,45 @@
 name: Fix structured data
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - "trigger-fix.txt"
 jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fix JSON-LD and meta issues
+      - name: Fix JSON-LD structured data
         run: |
-          cat > /tmp/fix_jsonld.py << 'SCRIPT'
+          cat > /tmp/fix.py << 'SCRIPT'
 import os, re, glob
-
 report = []
-files_fixed = 0
-
+fixed = 0
+GERSH = "\u05F4"
 for f in sorted(glob.glob("*.html")):
     with open(f, "r", encoding="utf-8") as fh:
-        content = fh.read()
-    original = content
-    changes = []
-
-    # Fix 1: In JSON-LD blocks, replace escaped ASCII quotes before Hebrew with gershayim
-    # Handles both \u0022 and backslash-quote patterns
-    def fix_jsonld_block(m):
-        block = m.group(0)
-        orig_block = block
-        # Replace \u0022 with gershayim U+05F4
-        block = block.replace('\\u0022', '\u05F4')
-        # Replace \" followed by Hebrew dalet with gershayim+dalet  
-        block = block.replace('\\\u0022\u05D3', '\u05F4\u05D3')
-        if block != orig_block:
-            changes.append("fixed quotes in JSON-LD")
-        return block
-
-    content = re.sub(
-        r'<script[^>]*application/ld\+json[^>]*>.*?</script>',
-        fix_jsonld_block, content, flags=re.DOTALL
-    )
-
-    # Fix 2: Remove duplicate FAQPage JSON-LD blocks (keep first)
-    faq_matches = list(re.finditer(
-        r'<script[^>]*application/ld\+json[^>]*>[^<]*?FAQPage[^<]*?</script>',
-        content, re.DOTALL
-    ))
-    if len(faq_matches) > 1:
-        changes.append(f"removed {len(faq_matches)-1} duplicate FAQ blocks")
-        # Remove all but first, going backwards to preserve indices
-        for match in reversed(faq_matches[1:]):
-            content = content[:match.start()] + content[match.end():]
-
-    # Fix 3: Fix meta descriptions with unescaped quotes
-    # Pattern: content="text with "quotes" more text">
-    def fix_meta(m):
-        tag = m.group(0)
-        # Extract content attribute value
-        content_match = re.search(r'content="(.*?)"\s*/?>', tag, re.DOTALL)
-        if not content_match:
-            return tag
-        val = content_match.group(1)
-        # If there are unescaped quotes inside, replace with gershayim
-        if '"' in val:
-            # This means the regex already broke - need different approach
-            pass
-        return tag
-
-    if content != original:
+        c = fh.read()
+    orig = c
+    # Fix \u0022 in JSON-LD (escaped quote -> gershayim)
+    c = c.replace("\\u0022", GERSH)
+    # Remove duplicate FAQPage JSON-LD blocks (keep first)
+    faq = list(re.finditer(r'<script[^>]*application/ld.json[^>]*>[^<]*?FAQPage[^<]*?</script>', c, re.DOTALL))
+    if len(faq) > 1:
+        report.append(f"{f}: removing {len(faq)-1} dup FAQ blocks")
+        for m in reversed(faq[1:]):
+            c = c[:m.start()] + c[m.end():]
+    if c != orig:
         with open(f, "w", encoding="utf-8") as fh:
-            fh.write(content)
-        files_fixed += 1
-    if changes:
-        report.append(f"{f}: {'; '.join(changes)}")
-
-# Also scan for files with duplicate FAQ blocks that weren't caught
-for f in sorted(glob.glob("*.html")):
-    with open(f, "r", encoding="utf-8") as fh:
-        content = fh.read()
-    count = len(re.findall(r'"@type"\s*:\s*"FAQPage"', content))
-    if count > 1:
-        report.append(f"STILL HAS DUPES: {f} ({count} FAQPage)")
-
-print(f"Fixed {files_fixed} files")
-for line in report[:50]:
-    print(line)
+            fh.write(c)
+        fixed += 1
+        report.append(f"{f}: fixed")
+print(f"Fixed {fixed} files")
+for r in report:
+    print(r)
 SCRIPT
-          python3 /tmp/fix_jsonld.py
-
-      - name: Commit
+          python3 /tmp/fix.py
+      - name: Cleanup trigger and commit
         run: |
+          rm -f trigger-fix.txt
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A
