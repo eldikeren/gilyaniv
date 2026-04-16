@@ -10,24 +10,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Remove em-dashes using Python
+      - name: Remove em-dashes
         run: |
-          python3 << 'PYEOF'
-          import glob, os
-          count = 0
-          for f in glob.glob('**/*.html', recursive=True):
-              if '.git' in f:
-                  continue
-              with open(f, 'r', encoding='utf-8') as fh:
-                  content = fh.read()
-              if '\u2014' in content:
-                  new_content = content.replace('\u2014', '-')
-                  with open(f, 'w', encoding='utf-8') as fh:
-                      fh.write(new_content)
-                  count += 1
-                  print(f"Fixed: {f}")
-          print(f"Total files fixed: {count}")
-          PYEOF
+          EMDASH=$'\xe2\x80\x94'
+          count=0
+          find . -name '*.html' -not -path './.git/*' -print0 | while IFS= read -r -d '' f; do
+            if grep -q "$EMDASH" "$f"; then
+              sed -i "s/$EMDASH/-/g" "$f"
+              echo "Fixed: $f"
+              count=$((count+1))
+            fi
+          done
+          echo "Done"
       - name: Commit and push
         run: |
           git config user.name "github-actions"
