@@ -1,95 +1,93 @@
-name: Create missing pages from templates
+name: Fix structured data issues
 on:
   workflow_dispatch:
-permissions:
-  contents: write
 jobs:
-  create:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - name: Create pages
+      - name: Fix JSON-LD and meta tag quote issues
         run: |
-          cat > /tmp/create.py << 'PYEOF'
-          import re, glob, os, shutil
-          
-          existing = set()
-          for f in glob.glob("*.html"):
-              existing.add(f.replace(".html", ""))
-          
-          broken = {}
-          for f in glob.glob("*.html"):
-              try:
-                  content = open(f, encoding="utf-8").read()
-                  links = re.findall(r"href=[\x22\x27]/?([a-z0-9][a-z0-9-]*?)(?:\.html)?[\x22\x27]", content)
-                  for link in links:
-                      slug = link.strip("/")
-                      if slug and slug not in existing and not slug.startswith("http") and not slug.startswith("tel") and not slug.startswith("mailto") and len(slug) > 2:
-                          broken[slug] = broken.get(slug, 0) + 1
-              except:
-                  pass
-          
-          def find_template(slug):
-              parts = slug.split("-")
-              for i in range(len(parts)-1, 0, -1):
-                  candidate = "-".join(parts[:i])
-                  if candidate in existing:
-                      return candidate + ".html"
-              for e in sorted(existing):
-                  if parts[0] in e:
-                      return e + ".html"
-              return "index.html"
-          
-          created = 0
-          for slug in sorted(broken.keys()):
-              target = slug + ".html"
-              if os.path.exists(target):
-                  continue
-              tmpl = find_template(slug)
-              try:
-                  content = open(tmpl, encoding="utf-8").read()
-                  old_slug = tmpl.replace(".html", "")
-                  content = re.sub(r"<link[^>]*rel=[\x22\x27]canonical[\x22\x27][^>]*>", 
-                      "<link rel=\x22canonical\x22 href=\x22https://www.yanivgil.co.il/" + slug + "\x22>", content)
-                  old_title = re.search(r"<title>(.*?)</title>", content)
-                  if old_title:
-                      new_t = old_title.group(1)
-                      diff = slug.replace(old_slug, "").strip("-")
-                      if diff:
-                          new_t = new_t.replace("2026", diff + " 2026")
-                  content = content.replace(old_slug + ".html", target)
-                  open(target, "w", encoding="utf-8").write(content)
-                  created += 1
-                  print(f"Created {target} from {tmpl}")
-              except Exception as e:
-                  print(f"Error creating {target}: {e}")
-          
-          # Regenerate sitemap
-          html_files = sorted(f for f in glob.glob("*.html") if not f.startswith("."))
-          sm = ['<?xml version="1.0" encoding="UTF-8"?>']
-          sm.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-          for f in html_files:
-              slug = f.replace(".html", "")
-              if slug == "index":
-                  url = "https://www.yanivgil.co.il/"
-              else:
-                  url = "https://www.yanivgil.co.il/" + slug
-              sm.append("  <url><loc>" + url + "</loc></url>")
-          sm.append('</urlset>')
-          open('sitemap.xml', 'w', encoding='utf-8').write('\n'.join(sm))
-          print(f"\nCreated {created} pages, sitemap updated with {len(html_files)} URLs")
-          PYEOF
-          python3 /tmp/create.py
-      - name: Commit
+          cat > /tmp/fix_jsonld.py << 'SCRIPT'
+import os, re, glob, json
+
+report = []
+files_fixed = 0
+
+for f in sorted(glob.glob("*.html")):
+    with open(f, "r", encoding="utf-8") as fh:
+        content = fh.read()
+    
+    original = content
+    changes = []
+    
+    # 1. Fix JSON-LD: replace \u0022 with Hebrew gershayim
+    if "\\u0022" in content:
+        content = content.replace("\\u0022", "\u05F4")
+        changes.append("fixed \\u0022 -> gershayim in JSON-LD")
+    
+    # 2. Fix JSON-LD: replace \" followed by Hebrew dalet with gershayim+dalet
+    # Pattern: inside JSON-LD blocks, fix escaped quotes before Hebrew chars
+    def fix_jsonld_quotes(m):
+        block = m.group(0)
+        # Replace \" before Hebrew dalet (\u05D3) with gershayim
+        fixed = block.replace('\\\"\u05D3', '\u05F4\u05D3')
+        # Also handle the pattern where it shows as \"d in raw
+        return fixed
+    
+    jsonld_pattern = r'<script[^>]*type=["']application/ld\+json["'][^>]*>.*?</script>'
+    new_content = re.sub(jsonld_pattern, fix_jsonld_quotes, content, flags=re.DOTALL)
+    if new_content != content:
+        content = new_content
+        changes.append("fixed escaped quotes in JSON-LD blocks")
+    
+    # 3. Count FAQPage JSON-LD blocks
+    faq_blocks = re.findall(r'<script[^>]*type=["']application/ld\+json["'][^>]*>[^<]*FAQPage[^<]*</script>', content, re.DOTALL)
+    if len(faq_blocks) > 1:
+        changes.append(f"DUPLICATE FAQ: {len(faq_blocks)} FAQPage blocks found")
+        # Keep only the first FAQ block, remove subsequent ones
+        first_found = False
+        def remove_dup_faq(m):
+            nonlocal first_found
+            if "FAQPage" in m.group(0):
+                if not first_found:
+                    first_found = True
+                    return m.group(0)
+                else:
+                    return ""
+            return m.group(0)
+        content = re.sub(r'<script[^>]*type=["']application/ld\+json["'][^>]*>.*?</script>', remove_dup_faq, content, flags=re.DOTALL)
+        changes.append("removed duplicate FAQ blocks")
+    
+    # 4. Fix meta description with broken quotes
+    # Pattern: content="...text..."text..." -> content="...text&quot;text..."
+    meta_pattern = r'<meta[^>]*(?:name=["']description["']|property=["']og:description["'])[^>]*>'
+    metas = re.findall(meta_pattern, content)
+    for meta in metas:
+        if meta.count('"') > 4:
+            changes.append(f"META QUOTE ISSUE: {meta[:100]}...")
+    
+    if content != original:
+        with open(f, "w", encoding="utf-8") as fh:
+            fh.write(content)
+        files_fixed += 1
+    
+    if changes:
+        report.append(f"{f}: {'; '.join(changes)}")
+
+with open("structured-data-report.txt", "w") as fh:
+    fh.write(f"Files fixed: {files_fixed}\n\n")
+    fh.write("\n".join(report) if report else "No issues found")
+
+print(f"Fixed {files_fixed} files")
+print("\n".join(report[:30]))
+SCRIPT
+          python3 /tmp/fix_jsonld.py
+
+      - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A
-          if git diff --staged --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Create all missing pages from templates, update sitemap"
-            git push
-          fi
+          git diff --cached --quiet || git commit -m "Fix structured data: JSON-LD quotes and duplicate FAQ blocks"
+          git push
