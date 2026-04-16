@@ -1,22 +1,24 @@
-name: Broken links report
+name: Create missing pages from templates
 on:
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  report:
+  create:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Generate report
+      - name: Create pages
         run: |
-          cat > /tmp/report.py << 'PYEOF'
-          import re, glob
+          cat > /tmp/create.py << 'PYEOF'
+          import re, glob, os, shutil
+          
           existing = set()
           for f in glob.glob("*.html"):
               existing.add(f.replace(".html", ""))
+          
           broken = {}
           for f in glob.glob("*.html"):
               try:
@@ -25,26 +27,69 @@ jobs:
                   for link in links:
                       slug = link.strip("/")
                       if slug and slug not in existing and not slug.startswith("http") and not slug.startswith("tel") and not slug.startswith("mailto") and len(slug) > 2:
-                          if slug not in broken:
-                              broken[slug] = 0
-                          broken[slug] += 1
+                          broken[slug] = broken.get(slug, 0) + 1
               except:
                   pass
-          report = f"Broken links report\nTotal HTML files: {len(existing)}\n\n"
-          for slug, count in sorted(broken.items(), key=lambda x: -x[1])[:50]:
-              report += f"MISSING: {slug}.html ({count} references)\n"
-          open("broken-links-report.txt", "w").write(report)
-          print(report)
+          
+          def find_template(slug):
+              parts = slug.split("-")
+              for i in range(len(parts)-1, 0, -1):
+                  candidate = "-".join(parts[:i])
+                  if candidate in existing:
+                      return candidate + ".html"
+              for e in sorted(existing):
+                  if parts[0] in e:
+                      return e + ".html"
+              return "index.html"
+          
+          created = 0
+          for slug in sorted(broken.keys()):
+              target = slug + ".html"
+              if os.path.exists(target):
+                  continue
+              tmpl = find_template(slug)
+              try:
+                  content = open(tmpl, encoding="utf-8").read()
+                  old_slug = tmpl.replace(".html", "")
+                  content = re.sub(r"<link[^>]*rel=[\x22\x27]canonical[\x22\x27][^>]*>", 
+                      "<link rel=\x22canonical\x22 href=\x22https://www.yanivgil.co.il/" + slug + "\x22>", content)
+                  old_title = re.search(r"<title>(.*?)</title>", content)
+                  if old_title:
+                      new_t = old_title.group(1)
+                      diff = slug.replace(old_slug, "").strip("-")
+                      if diff:
+                          new_t = new_t.replace("2026", diff + " 2026")
+                  content = content.replace(old_slug + ".html", target)
+                  open(target, "w", encoding="utf-8").write(content)
+                  created += 1
+                  print(f"Created {target} from {tmpl}")
+              except Exception as e:
+                  print(f"Error creating {target}: {e}")
+          
+          # Regenerate sitemap
+          html_files = sorted(f for f in glob.glob("*.html") if not f.startswith("."))
+          sm = ['<?xml version="1.0" encoding="UTF-8"?>']
+          sm.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+          for f in html_files:
+              slug = f.replace(".html", "")
+              if slug == "index":
+                  url = "https://www.yanivgil.co.il/"
+              else:
+                  url = "https://www.yanivgil.co.il/" + slug
+              sm.append("  <url><loc>" + url + "</loc></url>")
+          sm.append('</urlset>')
+          open('sitemap.xml', 'w', encoding='utf-8').write('\n'.join(sm))
+          print(f"\nCreated {created} pages, sitemap updated with {len(html_files)} URLs")
           PYEOF
-          python3 /tmp/report.py
-      - name: Commit report
+          python3 /tmp/create.py
+      - name: Commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add broken-links-report.txt
+          git add -A
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "Add broken links report"
+            git commit -m "Create all missing pages from templates, update sitemap"
             git push
           fi
