@@ -8,40 +8,54 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fix JSON-LD structured data
+      - name: Fix meta description quotes
         run: |
-          cat > /tmp/fix.py << 'SCRIPT'
+          cat > /tmp/fix_meta.py << 'SCRIPT'
           import os, re, glob
           report = []
           fixed_count = 0
           GERSH = chr(0x05F4)
-          BSLASH_U0022 = chr(92) + 'u0022'
+          QUOTE = chr(34)
           for f in sorted(glob.glob('*.html')):
               with open(f, 'r', encoding='utf-8') as fh:
                   c = fh.read()
               orig = c
-              if BSLASH_U0022 in c:
-                  c = c.replace(BSLASH_U0022, GERSH)
-              faq = list(re.finditer(r'<script[^>]*application/ld.json[^>]*>[^<]*?FAQPage[^<]*?</script>', c, re.DOTALL))
-              if len(faq) > 1:
-                  report.append(f'{f}: removing {len(faq)-1} dup FAQ blocks')
-                  for m in reversed(faq[1:]):
-                      c = c[:m.start()] + c[m.end():]
+              # Fix meta description tags with unescaped quotes
+              # Pattern: content=QUOTE...textQUOTE...QUOTE> where middle QUOTE breaks HTML
+              def fix_meta(m):
+                  tag = m.group(0)
+                  # Find content attribute
+                  cm = re.search(r'content=' + QUOTE + '(.*?)' + QUOTE + r'\s*/?>', tag)
+                  if not cm:
+                      # The regex didn't match properly because of broken quotes
+                      # Try to extract and fix the whole tag
+                      pass
+                  return tag
+              # Simpler approach: in meta tags, replace sequences like
+              # Hebrew-text QUOTE dalet with Hebrew-text gershayim dalet
+              # This targets the specific pattern where QUOTE appears between Hebrew chars
+              dalet = chr(0x05D3)
+              # Fix: any Hebrew char followed by a quote followed by dalet
+              hebrew_range = '[' + chr(0x0590) + '-' + chr(0x05FF) + ']'
+              pattern = re.compile('(' + hebrew_range + ')' + QUOTE + '(' + dalet + ')')
+              new_c = pattern.sub(r'\1' + GERSH + r'\2', c)
+              if new_c != c:
+                  c = new_c
+                  report.append(f'{f}: fixed meta quote issues')
               if c != orig:
                   with open(f, 'w', encoding='utf-8') as fh:
                       fh.write(c)
                   fixed_count += 1
-                  report.append(f'{f}: fixed')
           print(f'Fixed {fixed_count} files')
           for r in report:
               print(r)
           SCRIPT
-          python3 /tmp/fix.py
+          python3 /tmp/fix_meta.py
       - name: Commit changes
         run: |
           rm -f trigger-fix.txt
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "Fix structured data: JSON-LD quotes and duplicate FAQ blocks"
+          git diff --cached --quiet || git commit -m "Fix meta description broken quotes"
           git push
