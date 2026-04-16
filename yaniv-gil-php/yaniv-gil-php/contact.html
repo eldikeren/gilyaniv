@@ -339,10 +339,10 @@
                             <p class="text-gray-600 mb-4">שלחו לנו הודעה ונחזור אליכם בהקדם האפשרי</p>
                         </div>
                         <div class="space-y-2 text-sm text-gray-600 mb-6">
-                            <p><strong>אימייל:</strong> yanivgil@gmail.com</p>
+                            <p><strong>אימייל:</strong> yaniv@yanivgil.co.il</p>
                             <p><strong>זמן תגובה:</strong> עד 24 שעות</p>
                 </div>
-                        <a class="inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-6 py-3 text-base font-medium text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" href="mailto:yanivgil@gmail.com">
+                        <a class="inline-flex items-center justify-center rounded-full border-2 border-yellow-600 bg-yellow-600 px-6 py-3 text-base font-medium text-black transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-700" href="mailto:yaniv@yanivgil.co.il">
                             שלח אימייל
                         </a>
                 </article>
@@ -596,7 +596,7 @@
                         <p><strong>טלפון ראשי:</strong><br><a href="tel:03-6092414" class="hover:text-yellow-400">03-6092414</a></p>
                         <p><strong>נייד:</strong><br><a href="tel:054-8184581" class="hover:text-yellow-400">054-8184581</a></p>
                         <p><strong>פקס:</strong><br><a href="tel:03-6092413" class="hover:text-yellow-400">03-6092413</a></p>
-                        <p><strong>אימייל:</strong><br><a href="mailto:yanivgil@gmail.com" class="hover:text-yellow-400">yanivgil@gmail.com</a></p>
+                        <p><strong>אימייל:</strong><br><a href="mailto:yaniv@yanivgil.co.il" class="hover:text-yellow-400">yaniv@yanivgil.co.il</a></p>
                         <p><strong>כתובת:</strong><br>מגדל "WE-TLV"<br>דרך מנחם בגין 150<br>קומה 7, תל-אביב</p>
                         <p class="mt-4">
                             <strong>עקבו אחרינו:</strong><br>
@@ -771,7 +771,7 @@
                         from_email: formData.get('from_email'),
                         subject: hebrewSubject,
                         message: formData.get('message'),
-                        to_email: 'yanivgil@gmail.com',
+                        to_email: 'yaniv@yanivgil.co.il',
                         reply_to: formData.get('from_email')
                     };
                     
@@ -779,10 +779,10 @@
                     if (typeof emailjs !== 'undefined') {
                         
                         // The template expects 'email' field to be the recipient
-                        // We want to send TO yanivgil@gmail.com, not to the user
+                        // We want to send TO yaniv@yanivgil.co.il, not to the user
                         const emailParams = {
                             ...templateParams,
-                            email: 'yanivgil@gmail.com', // This is the TO field in the template
+                            email: 'yaniv@yanivgil.co.il', // This is the TO field in the template
                             reply_to: templateParams.from_email
                         };
                         
@@ -807,7 +807,7 @@
 בברכה,
 האתר`;
 
-                                const mailtoLink = `mailto:yanivgil@gmail.com?subject=${encodeURIComponent('פנייה חדשה מהאתר - ' + templateParams.subject)}&body=${encodeURIComponent(emailBody)}`;
+                                const mailtoLink = `mailto:yaniv@yanivgil.co.il?subject=${encodeURIComponent('פנייה חדשה מהאתר - ' + templateParams.subject)}&body=${encodeURIComponent(emailBody)}`;
                                 window.location.href = mailtoLink;
                                 alert('תודה על פנייתכם! נפתח עבורכם תוכנת הדואר האלקטרוני. אנא שלחו את ההודעה.');
                             })
