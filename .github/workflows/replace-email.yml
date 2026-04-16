@@ -1,26 +1,28 @@
-name: Fix HTML issues
+name: Replace phone numbers
 on:
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  clean:
+  replace:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Remove garbage text before DOCTYPE
+      - name: Replace phone numbers with 054-6003399
         run: |
-          find . -name "*.html" -not -path "./.git/*" -print0 | while IFS= read -r -d "" f; do
-            if head -c 20 "$f" | grep -qv "<!DOCTYPE\|<!doctype\|<html\|<!--"; then
-              DOCTYPE_POS=$(grep -bo "<!DOCTYPE\|<!doctype" "$f" | head -1 | cut -d: -f1)
-              if [ -n "$DOCTYPE_POS" ] && [ "$DOCTYPE_POS" -gt 0 ]; then
-                tail -c +$((DOCTYPE_POS + 1)) "$f" > "$f.tmp" && mv "$f.tmp" "$f"
-                echo "Fixed garbage in: $f (removed $DOCTYPE_POS bytes)"
-              fi
-            fi
-          done
+          echo "Replacing 03-6092414..."
+          find . -name "*.html" -not -path "./.git/*" -exec grep -l "03-6092414" {} \; | wc -l
+          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/03-6092414/054-6003399/g" {} +
+          echo "Replacing 03-6092413..."
+          find . -name "*.html" -not -path "./.git/*" -exec grep -l "03-6092413" {} \; | wc -l
+          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/03-6092413/054-6003399/g" {} +
+          echo "Replacing 036092414 (no dash)..."
+          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/036092414/0546003399/g" {} +
+          echo "Replacing 036092413 (no dash)..."
+          find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/036092413/0546003399/g" {} +
+          echo "Done"
       - name: Commit and push
         run: |
           git config user.name "github-actions"
@@ -29,6 +31,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Remove garbage text before DOCTYPE in HTML files"
+            git commit -m "Replace old phone numbers with 054-6003399 across all pages"
             git push
           fi
