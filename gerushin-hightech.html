@@ -178,7 +178,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZTTJM5M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="header-placeholder"></div>
+    <div id="site-header-placeholder"></div>
 
     <main class="article-page">
         <div class="container">
@@ -698,10 +698,48 @@
         </a>
     </div>
     <script src="js/conversion-tracking.js" defer></script>
-<script src="js/nav-toggle.js?v=27" defer></script>
 <script src="js/scroll-arrow.js?v=27" defer></script>
-<script src="/js/site-search.js?v=20260321c" defer></script>
 
   <script src="/js/cookie-consent.js" defer></script>
+  <script>
+  /* Dynamic site header/footer loader */
+  (function() {
+    fetch('/')
+      .then(function(r) { return r.text(); })
+      .then(function(html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var srcHeader = doc.getElementById('site-header');
+        var dstHeader = document.getElementById('site-header-placeholder');
+        if (srcHeader && dstHeader) { dstHeader.outerHTML = srcHeader.outerHTML; }
+        var mobileMenu = doc.getElementById('mobile-menu');
+        if (mobileMenu) {
+          var mm = document.createElement('div');
+          mm.innerHTML = mobileMenu.outerHTML;
+          document.body.insertBefore(mm.firstChild, document.body.firstChild);
+        }
+        var searchOverlay = doc.getElementById('search-overlay');
+        if (searchOverlay) {
+          var so = document.createElement('div');
+          so.innerHTML = searchOverlay.outerHTML;
+          document.body.appendChild(so.firstChild);
+        }
+        requestAnimationFrame(function() {
+          var realHeader = document.getElementById('site-header');
+          var mainContent = document.querySelector('main.article-page');
+          if (realHeader && mainContent) {
+            mainContent.style.paddingTop = realHeader.offsetHeight + 'px';
+          }
+        });
+        var s1 = document.createElement('script');
+        s1.src = '/js/nav-toggle.js?v=27';
+        document.body.appendChild(s1);
+        var s2 = document.createElement('script');
+        s2.src = '/js/site-search.js?v=20260323';
+        document.body.appendChild(s2);
+      })
+      .catch(function(e) { console.warn('Site header load failed:', e); });
+  })();
+  </script>
 </body>
 </html>
