@@ -5,19 +5,28 @@
     {
       "source": "/(.*)\\.html",
       "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
       ]
     },
     {
       "source": "/",
       "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
       ]
     },
     {
       "source": "/:path((?!ai-assistance|_next|api|css|js|images|fonts|icons|static).*)",
       "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
       ]
     }
   ],
@@ -330,6 +339,32 @@
         {
           "type": "query",
           "key": "_escaped_fragment_"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy.html",
+      "destination": "/bankruptcy",
+      "permanent": true
+    },
+    {
+      "source": "/bankruptcy-annoucment",
+      "destination": "/bankruptcy",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "s"
         }
       ],
       "destination": "/",
