@@ -105,6 +105,8 @@
 
   <style>
     body { font-family: 'Heebo', sans-serif; }
+    /* Padding to account for fixed site header — updated dynamically after load */
+    #page-content { padding-top: 80px; }
     .sticky-phone {
       position: fixed;
       bottom: 90px;
@@ -144,23 +146,18 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZTTJM5M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Navigation -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="/" class="text-xl font-bold text-blue-800">עו״ד יניב גיל ושות׳</a>
-      <a href="tel:03-6092414" class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition">
-        03-6092414
-      </a>
-    </div>
-  </nav>
+  <!-- Site Header — dynamically loaded from homepage to ensure consistent design -->
+  <div id="site-header-placeholder"></div>
+
+  <div id="page-content">
 
   <!-- Hero -->
-  <header class="bg-blue-900 text-white py-14 px-4">
+  <section class="bg-blue-900 text-white py-14 px-4">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">חלוקת כסף בבנק בגירושין</h1>
       <p class="text-lg text-blue-100">חשבונות, פיקדונות, חסכונות וקרנות — מה מגיע לכם ואיך מגנים על הכסף שלכם</p>
     </div>
-  </header>
+  </section>
 
   <!-- Main Content -->
   <main class="max-w-3xl mx-auto px-4 py-12">
@@ -222,7 +219,7 @@
 
         <div class="border-r-4 border-blue-600 pr-5">
           <h3 class="font-bold text-gray-900 text-lg mb-2">תיקי השקעות וקרנות נאמנות</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">תיק השקעות שנוהל במהלך הנישואין — אם מומן מהכנסות הזוג — נכנס לאיזון המשאבים. שווי התיק נקבע לפי מועד הקרע. עליות ערך לאחר מועד הקרע וייכות לבעל התיק בלבד.</p>
+          <p class="text-gray-700 leading-relaxed text-sm">תיק השקעות שנוהל במהלך הנישואין — אם מומן מהכנסות הזוג — נכנס לאיזון המשאבים. שווי התיק נקבע לפי מועד הקרע. עליות ערך לאחר מועד הקרע שייכות לבעל התיק בלבד.</p>
         </div>
 
         <div class="border-r-4 border-blue-600 pr-5">
@@ -278,7 +275,7 @@
 
     <section class="mb-10">
       <h2 class="text-2xl font-bold text-blue-900 mb-5">חשבון בנק בחו"ל — הכסף הנסתר</h2>
-      <p class="mb-4 leading-relaxed">על הגלובליזציה, לא מעט זוגות ישראלים מחזיקים כספים בחו"ל — בחשבונות בנק זרים, בארנקי מט"ח, בנכסים פיננסיים בחו"ל. מבחינת הדין הישראלי, חשבונות אלה כפופים לאותם כללי חלוקה כמו חשבונות מקומיים.</p>
+      <p class="mb-4 leading-relaxed">עם הגלובליזציה, לא מעט זוגות ישראלים מחזיקים כספים בחו"ל — בחשבונות בנק זרים, בארנקי מט"ח, בנכסים פיננסיים בחו"ל. מבחינת הדין הישראלי, חשבונות אלה כפופים לאותם כללי חלוקה כמו חשבונות מקומיים.</p>
       <p class="leading-relaxed">הסתרת חשבון בחו"ל היא עבירה על חוק, ובית המשפט מתייחס אליה בחומרה. ניתן להגיש בקשות לגילוי נכסים בינלאומי ולשתף פעולה עם רשויות זרות במקרים מסוימים.</p>
     </section>
 
@@ -336,13 +333,10 @@
 
   </main>
 
-  <footer class="bg-gray-900 text-gray-400 py-8 px-4 mt-12">
-    <div class="max-w-3xl mx-auto text-center text-sm">
-      <p class="mb-2 font-medium text-white">עו״ד יניב גיל ושות׳ — דיני משפחה, גירושין, מזונות, ירושות</p>
-      <p class="mb-2">תל אביב | <a href="tel:03-6092414" class="text-blue-400 hover:underline">03-6092414</a></p>
-      <p class="text-xs text-gray-500 mt-4">האמור באתר זה הוא מידע כללי בלבד ואינו מהווה ייעוץ משפטי.</p>
-    </div>
-  </footer>
+  <!-- Site footer — loaded dynamically -->
+  <div id="site-footer-placeholder"></div>
+
+  </div><!-- /#page-content -->
 
   <a href="tel:03-6092414" class="sticky-phone" aria-label="התקשרו עכשיו">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -355,6 +349,68 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
+
+  <!-- Dynamic header & footer loader: fetches real site header/footer for consistent design -->
+  <script>
+  (function() {
+    fetch('/')
+      .then(function(r) { return r.text(); })
+      .then(function(html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+
+        // Inject site header
+        var srcHeader = doc.getElementById('site-header');
+        var dstHeader = document.getElementById('site-header-placeholder');
+        if (srcHeader && dstHeader) {
+          dstHeader.outerHTML = srcHeader.outerHTML;
+        }
+
+        // Inject site footer
+        var srcFooter = doc.querySelector('footer.bg-gray-900');
+        var dstFooter = document.getElementById('site-footer-placeholder');
+        if (srcFooter && dstFooter) {
+          dstFooter.outerHTML = srcFooter.outerHTML;
+        }
+
+        // Inject mobile menu overlay if present
+        var mobileMenu = doc.getElementById('mobile-menu');
+        if (mobileMenu) {
+          var mm = document.createElement('div');
+          mm.innerHTML = mobileMenu.outerHTML;
+          document.body.insertBefore(mm.firstChild, document.body.firstChild);
+        }
+
+        // Inject search overlay if present
+        var searchOverlay = doc.getElementById('search-overlay');
+        if (searchOverlay) {
+          var so = document.createElement('div');
+          so.innerHTML = searchOverlay.outerHTML;
+          document.body.appendChild(so.firstChild);
+        }
+
+        // Adjust page-content padding-top to match real header height
+        requestAnimationFrame(function() {
+          var realHeader = document.getElementById('site-header');
+          var pageContent = document.getElementById('page-content');
+          if (realHeader && pageContent) {
+            pageContent.style.paddingTop = realHeader.offsetHeight + 'px';
+          }
+        });
+
+        // Load nav-toggle.js (dropdown & mobile menu behaviour)
+        var s1 = document.createElement('script');
+        s1.src = '/js/nav-toggle.js?v=27';
+        document.body.appendChild(s1);
+
+        // Load site-search.js
+        var s2 = document.createElement('script');
+        s2.src = '/js/site-search.js?v=20260323';
+        document.body.appendChild(s2);
+      })
+      .catch(function(e) { console.warn('Site header/footer load failed:', e); });
+  })();
+  </script>
 
 </body>
 </html>
