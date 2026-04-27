@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.yanivgil.co.il/about</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.yanivgil.co.il/accessibility</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -512,6 +517,11 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/index-staging</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.yanivgil.co.il/index</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -1201,73 +1211,4 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/hague-convention</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/joint-custody-guide</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/mortgage-execution</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/paid-defense</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/pension-division-divorce</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/property-division-divorce</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/rabbinical-court</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-debtor</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/receivership-order-request</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/relocation-after-divorce</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/seizure-real-estate</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/temporary-receiver</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/travel-restriction-order</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/blog-articles/uniform-civil-procedure</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-</urlset>
+    <loc>https://www.yanivg
