@@ -1,4 +1,38 @@
+# robots.txt for yanivgil.co.il
+# Allow all search engines to crawl the site
+
 User-agent: *
 Allow: /
+Disallow: /404.html
+Disallow: /thanks.html
+Disallow: /_api/
+Disallow: /cdn-cgi/
+Disallow: /bolt-performance
+Disallow: /og-image-generator.html
+Disallow: /og-image-template.html
+Disallow: /index-staging.html
+Disallow: /js/search-index.json
+Disallow: /ffmpeg/
+Disallow: /yaniv-gil-php/
+Disallow: /*?lightbox=
+Disallow: /*?_escaped_fragment_=
+Disallow: /?s=
+Disallow: /?p=
+Disallow: /wp-login.php
+Disallow: /wp-admin/
 
-Sitemap: https://gilyaniv.co.il/sitemap.xml
+User-agent: AdsBot-Google-Mobile
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: dotbot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.yanivgil.co.il/sitemap.xml
