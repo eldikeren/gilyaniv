@@ -347,6 +347,511 @@
       "source": "/bankruptcy-annoucment",
       "destination": "/bankruptcy",
       "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mediation.html",
+      "destination": "/mediation",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/divorce.html",
+      "destination": "/divorce",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/bankruptcy.html",
+      "destination": "/bankruptcy",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/discharge.html",
+      "destination": "/discharge",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/guardianship.html",
+      "destination": "/guardianship",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mezonot-isha.html",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mezonot-yeladim.html",
+      "destination": "/mezonot-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mishmoret-yeladim.html",
+      "destination": "/mishmoret-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/yaduyim-batzibur.html",
+      "destination": "/yaduyim-batzibur",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/sarvanut-get-agunot.html",
+      "destination": "/sarvanut-get-agunot",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/heskem-gerushin.html",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/heskem-mamon.html",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/divorce-guide.html",
+      "destination": "/divorce-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/chalokat-rechush-gerushin.html",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/chalokat-dira-gerushin.html",
+      "destination": "/chalokat-dira-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/agunut-ma-laasot.html",
+      "destination": "/agunut-ma-laasot",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/achrayut-horit.html",
+      "destination": "/achrayut-horit",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/gerushin-beit-din-rabani.html",
+      "destination": "/gerushin-beit-din-rabani",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/will-writing.html",
+      "destination": "/will-writing",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/will-probate.html",
+      "destination": "/will-probate",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/inheritance-order.html",
+      "destination": "/inheritance-order",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/inheritance-contest.html",
+      "destination": "/inheritance-contest",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/estate-management.html",
+      "destination": "/estate-management",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/heskem-mamon-lifney-nisuin.html",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mishmoret-blaudit-vsmeshuteft.html",
+      "destination": "/mishmoret-blaudit-vsmeshuteft",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/izun-mashabim-gerushin.html",
+      "destination": "/izun-mashabim-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/mahu-heskem-gerushin.html",
+      "destination": "/mahu-heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/shlvei-heskem-gerushin.html",
+      "destination": "/shlvei-heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/seifim-hova-heskem.html",
+      "destination": "/seifim-hova-heskem",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/haget-mah-ze.html",
+      "destination": "/haget-mah-ze",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/smchut-beit-din-rabani.html",
+      "destination": "/smchut-beit-din-rabani",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/chishov-mezonot-isha.html",
+      "destination": "/chishov-mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/hafchatat-mezonot-yeladim.html",
+      "destination": "/hafchatat-mezonot-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/zkuyot-yaduyim-batzibur.html",
+      "destination": "/zkuyot-yaduyim-batzibur",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/klim-mishpatiyim-sarvan-get.html",
+      "destination": "/klim-mishpatiyim-sarvan-get",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/hagana-al-esek.html",
+      "destination": "/chalokat-esek-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/debt-cancellation.html",
+      "destination": "/debt-cancellation",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/temporary-receiver",
+      "destination": "/blog-articles/temporary-receiver.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-articles/paid-defense",
+      "destination": "/blog-articles/paid-defense.html",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-zchuyot-sotzialiyot",
+      "destination": "/chaluka-zchuyot-sotzialiyot",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-bitcoin",
+      "destination": "/chaluka-bitcoin-matbeot",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-gerushin-hafarat",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-gerushin-batel",
+      "destination": "/bitul-heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-gerushin-dugma",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-gerushin-shinui",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/shinuy-heskem-gerushin",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/nosach-heskem-gerushin",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-gerushin-mahir",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-tluyim",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-yerusha",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-hashlama",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-gdola",
+      "destination": "/mezonot-isha-nisuin-arochim",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-hozer",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/mezonot-isha-beit-din",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/od-mezonot-isha",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/magar-mezonot",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/i-tashlum-mezonot",
+      "destination": "/mezonot-isha",
+      "permanent": true
+    },
+    {
+      "source": "/isha-mesorevet-get",
+      "destination": "/sarvanut-get-agunot",
+      "permanent": true
+    },
+    {
+      "source": "/yaduyim-lo-yecholim-lehitnashe",
+      "destination": "/yaduyim-batzibur",
+      "permanent": true
+    },
+    {
+      "source": "/od-sarvanut-get",
+      "destination": "/sarvanut-get-agunot",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-zugot-mevugarim",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-esek",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-nisuin-shniyim",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/ma-kolel-heskem-mamon",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/ma-kolel-heskem-mamon-dugma",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-mamon-dira-yarasha",
+      "destination": "/heskem-mamon",
+      "permanent": true
+    },
+    {
+      "source": "/heskem-yaduyim-batzibur",
+      "destination": "/yaduyim-batzibur",
+      "permanent": true
+    },
+    {
+      "source": "/od-gerushin-ramatgan",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/od-gerushin-holon",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/od-gerushin-herzliya",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/od-gerushin-bat-yam",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/od-gerushin-petach-tikva",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/divorce-law",
+      "destination": "/family-law",
+      "permanent": true
+    },
+    {
+      "source": "/horeh-menaker",
+      "destination": "/achrayut-horit",
+      "permanent": true
+    },
+    {
+      "source": "/property-division",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/divorce-lawyer-tel-aviv",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/visitation-rights",
+      "destination": "/achrayut-horit",
+      "permanent": true
+    },
+    {
+      "source": "/child-support",
+      "destination": "/mezonot-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/hafrada-rechushit-muchletet",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/tahlich-gerushin-beit-din",
+      "destination": "/gerushin-beit-din-rabani",
+      "permanent": true
+    },
+    {
+      "source": "/lien-cancellation",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/foreclosure-cancellation",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/piruq-shituf-rechush",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/od-chaluka-rechush",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/havchatat-nechasim-gerushin",
+      "destination": "/chalokat-rechush-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/eich-beit-mishpat-machlit-mishmoret",
+      "destination": "/mishmoret-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/mishmoret-gil-harach",
+      "destination": "/mishmoret-yeladim",
+      "permanent": true
+    },
+    {
+      "source": "/igun-sarvanut-get",
+      "destination": "/sarvanut-get-agunot",
+      "permanent": true
+    },
+    {
+      "source": "/iruv-beit-din-rabani",
+      "destination": "/gerushin-beit-din-rabani",
+      "permanent": true
+    },
+    {
+      "source": "/pgiya-zimnei-shehut",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/zimnei-shehut-chaluka",
+      "destination": "/practice-areas",
+      "permanent": true
+    },
+    {
+      "source": "/tochnit-horut-muskemet",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/ishur-heskem-beit-din",
+      "destination": "/heskem-gerushin",
+      "permanent": true
+    },
+    {
+      "source": "/nikur-hori-itur",
+      "destination": "/achrayut-horit",
+      "permanent": true
+    },
+    {
+      "source": "/pitsuyim-laguna",
+      "destination": "/sarvanut-get-agunot",
+      "permanent": true
+    },
+    {
+      "source": "/hagana-al-yerusha",
+      "destination": "/inheritance-contest",
+      "permanent": true
+    },
+    {
+      "source": "/inheritance-wills",
+      "destination": "/inheritance-order",
+      "permanent": true
     }
   ]
 }
