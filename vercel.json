@@ -774,11 +774,6 @@
       "permanent": true
     },
     {
-      "source": "/reviews",
-      "destination": "/attorneys",
-      "permanent": true
-    },
-    {
       "source": "/piruq-shituf-rechush",
       "destination": "/chalokat-rechush-gerushin",
       "permanent": true
