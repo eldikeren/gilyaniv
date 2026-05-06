@@ -847,6 +847,11 @@
       "source": "/inheritance-wills",
       "destination": "/inheritance-order",
       "permanent": true
-    }
+    },
+        {
+                "source": "/blog-articles/:path*",
+                "destination": "/blog",
+                "permanent": true
+        }
   ]
 }
