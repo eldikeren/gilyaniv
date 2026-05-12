@@ -699,28 +699,13 @@
       "permanent": true
     },
     {
-      "source": "/od-gerushin-ramatgan",
-      "destination": "/attorneys",
+      "source": "/inheritance",
+      "destination": "/inheritance-wills",
       "permanent": true
     },
     {
-      "source": "/od-gerushin-holon",
-      "destination": "/attorneys",
-      "permanent": true
-    },
-    {
-      "source": "/od-gerushin-herzliya",
-      "destination": "/attorneys",
-      "permanent": true
-    },
-    {
-      "source": "/od-gerushin-bat-yam",
-      "destination": "/attorneys",
-      "permanent": true
-    },
-    {
-      "source": "/od-gerushin-petach-tikva",
-      "destination": "/attorneys",
+      "source": "/mezonot",
+      "destination": "/mezonot-yeladim",
       "permanent": true
     },
     {
@@ -842,16 +827,6 @@
       "source": "/hagana-al-yerusha",
       "destination": "/inheritance-contest",
       "permanent": true
-    },
-    {
-      "source": "/inheritance-wills",
-      "destination": "/inheritance-order",
-      "permanent": true
-    },
-        {
-                "source": "/blog-articles/:path*",
-                "destination": "/blog",
-                "permanent": true
-        }
+    }
   ]
 }
