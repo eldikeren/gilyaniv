@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.yanivgil.co.il/about</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/accessibility</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -391,12 +385,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/child-support</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/chishov-mezonot-isha</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -445,28 +433,10 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/divorce-law</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/divorce-lawyer-tel-aviv</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/divorce</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/eich-beit-mishpat-machlit-mishmoret</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/esek-lifney-nisuin</loc>
@@ -559,19 +529,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/hafrada-rechushit-muchletet</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/hagana-al-esek</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/hagana-al-yerusha</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -584,12 +542,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/haget-mah-ze</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/havchatat-nechasim-gerushin</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -619,12 +571,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-gerushin-mahir</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/heskem-gerushin</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -638,12 +584,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/heskem-mamon-bemashluch</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-dira-yarasha</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -698,12 +638,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/heskem-mamon-dugma</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-esek</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -769,19 +703,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-nisuin-shniyim</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/heskem-mamon-yduim-shlvei</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/heskem-mamon-zugot-mevugarim</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -793,31 +715,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/heskem-yaduyim-batzibur</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/horeh-menaker</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/hotzaot-charignot-yeladim</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/i-tashlum-mezonot</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/igun-sarvanut-get</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -853,24 +751,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/iruv-beit-din-rabani</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/isha-mesorevet-get</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/ishur-heskem-beit-din</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/ishur-heskem-beit-mishpat</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -901,25 +781,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/lien-cancellation</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon-dugma</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon-leachar-nisuin</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/ma-kolel-heskem-mamon</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -932,12 +794,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/maavar-ir-im-yeled</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/magar-mezonot</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1069,12 +925,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/mishmoret-gil-harach</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/mishmoret-gil-hitbagrot</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1105,25 +955,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/nikur-hori-itur</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/nosach-heskem-gerushin</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/od-beit-din-rabani</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/od-chaluka-rechush</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1225,12 +1057,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-mezonot-isha</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/od-mezonot-yeladim</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1243,34 +1069,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/od-sarvanut-get</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/od-yduim-baziber</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/pgiya-zimnei-shehut</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/piruq-shituf-rechush</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/pitsuyim-laguna</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/practice-areas-hub</loc>
@@ -1298,12 +1100,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/property-agreements</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/property-division</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1345,12 +1141,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/shinuy-heskem-gerushin</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/shlvei-heskem-gerushin</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1364,12 +1154,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/spousal-support</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/tahlich-gerushin-beit-din</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1405,12 +1189,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/tochnit-horut-muskemet</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/tovet-hayeled-psika</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1424,12 +1202,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/tviat-neziqin-sarvan-get</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/visitation-rights</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1465,12 +1237,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yanivgil.co.il/yaduyim-lo-yecholim-lehitnashe</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.yanivgil.co.il/yarasha-benesuin-meshuteft</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1496,12 +1262,6 @@
   </url>
   <url>
     <loc>https://www.yanivgil.co.il/zchuyot-baal-sarvanut-get</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.yanivgil.co.il/zimnei-shehut-chaluka</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

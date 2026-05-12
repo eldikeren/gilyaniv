@@ -549,16 +549,6 @@
       "permanent": true
     },
     {
-      "source": "/blog-articles/temporary-receiver",
-      "destination": "/blog-articles/temporary-receiver.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-articles/paid-defense",
-      "destination": "/blog-articles/paid-defense.html",
-      "permanent": true
-    },
-    {
       "source": "/heskem-mamon-zchuyot-sotzialiyot",
       "destination": "/chaluka-zchuyot-sotzialiyot",
       "permanent": true

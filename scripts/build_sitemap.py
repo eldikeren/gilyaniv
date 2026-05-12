@@ -6,6 +6,7 @@
 """
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 from datetime import datetime, timezone
@@ -13,6 +14,25 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 BASE = "https://www.yanivgil.co.il"
+
+
+def load_redirect_sources() -> set[str]:
+    """Parse vercel.json and return the set of source paths (slug without leading /)
+    that are configured as 301/308 redirects — these should be excluded from sitemap."""
+    try:
+        cfg = json.loads((REPO / "vercel.json").read_text())
+        out = set()
+        for r in cfg.get("redirects", []):
+            src = r.get("source", "").lstrip("/")
+            # Strip leading slash and ignore wildcards
+            if ":" in src or "*" in src:
+                continue
+            out.add(src)
+        return out
+    except Exception:
+        return set()
+
+REDIRECT_SOURCES = load_redirect_sources()
 
 # Pages we never want in the sitemap
 EXCLUDE_NAMES = {
@@ -85,6 +105,10 @@ def should_include(path: Path) -> bool:
         if pat.search(rel):
             return False
     if not path.suffix == ".html":
+        return False
+    # Skip if this URL is a redirect source (would 301/308)
+    slug = url_path(path)
+    if slug in REDIRECT_SOURCES:
         return False
     return True
 
