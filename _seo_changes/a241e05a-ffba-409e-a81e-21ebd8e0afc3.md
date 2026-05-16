@@ -1,0 +1,19 @@
+# SEO Change Proposal
+
+**Page:** https://www.yanivgil.co.il/
+**Type:** image_alt
+**Priority:** medium
+**Proposed by:** AI Growth OS
+**Date:** 2026-04-16T11:56:25.646Z
+
+## Reason
+כיסוי טקסט אלטרנטיבי לתמונות נמוך מ-90% (88%) לפי סריקת האתר.
+
+## Change
+
+**Current:** `88%`
+
+**Proposed:** `הוספת טקסט אלטרנטיבי לכל התמונות החסרות, לדוג' 'עו"ד יניב גיל - עורך דין גירושין ומשפחה בתל אביב' עבור תמונות משרד, צוות, או לוגו.`
+
+## Why no automatic edit?
+AI Growth OS couldn't locate the target element in common source file locations for this change type. Apply manually and merge.
